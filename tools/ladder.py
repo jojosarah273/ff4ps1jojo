@@ -9,6 +9,7 @@ from pathlib import Path
 
 name = sys.argv[1]
 rung = sys.argv[2] if len(sys.argv) > 2 else "gcc-2.95.2-psx"
+g0 = "-G0" if (len(sys.argv) > 3 and sys.argv[3] == "-G0") else "-G8"
 ROOT = Path(".").resolve()
 CC1 = ROOT / "tools" / "gcc-ladder" / f"{rung}.cc1.exe"
 DIFF = Path(os.path.expanduser("~/.venvs/ff4_decomp/bin/asm-differ"))
@@ -20,7 +21,7 @@ i, s, o = ROOT/"build/psx"/f"{name}.i", ROOT/"build/psx"/f"{name}.s", ROOT/"buil
 (ROOT/"build/ladder-run").mkdir(parents=True, exist_ok=True)
 if run(f"mipsel-linux-gnu-gcc-13 -E -P -Iinclude src/{name}.c -o build/psx/{name}.i").returncode:
     print(f"{name}: PREPROC_FAIL"); sys.exit(1)
-r = run(f'wine "{CC1}" -quiet -O2 -fschedule-insns -G8 -mgpOPT -fgnu-linker {i} -o {s}')
+r = run(f'wine "{CC1}" -quiet -O2 -fschedule-insns {g0} -mgpOPT -fgnu-linker {i} -o {s}')
 if r.returncode or not s.exists():
     print(f"{name}: CC1FAIL"); sys.exit(1)
 r = run(f"python3 tools/maspsx/maspsx.py --run-assembler --dont-expand-li -G8 -Iinclude -o {o} < {s}")
