@@ -7,7 +7,7 @@ Pipeline: mipsel-linux-gnu-gcc-13 -S -> maspsx (patched) -> GNU as -> .o
 Verify:  asm-differ -o -f build/<f>.o -F build/expected/<f>.o  (0 = match)
 
 ## Status
-- Matched: 122 / 2516 (4.8%) (4.5%)
+- Matched: 123 / 2516 (4.8%) (4.5%)
 - Blocked/deferred: ~16 (see below)
 - Remaining nonmatchings: 2483
 
@@ -121,3 +121,11 @@ Open items queued:
   but naming helps.
 - 2-jal+3-jal callers with argument chaining remain (133+): gen wave cover
   nop/const shapes only; addu-a0-family needs per-fn C.
+
+## Window RMW family (found late in session)
+- func_800F5B2C MATCHED (era+sched; the andi-sink is CC1PSX's move).
+- 5D24/5DA0/6240 (+/-1 window RMW, D50 window store), 5D58/6274 (16-bit
+  split ±1): C solved in src/; score 580-920 (ra-interleave + D-store reg
+  choice flavor). Same class as port-family: rung-bound.
+- Table accessors func_800F9410/95A0/960C (D_800D0001 idx advance + u16
+  combine): C solved; 2460 (base+%lo fold flavor).
