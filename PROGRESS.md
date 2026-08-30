@@ -7,7 +7,7 @@ Pipeline: mipsel-linux-gnu-gcc-13 -S -> maspsx (patched) -> GNU as -> .o
 Verify:  asm-differ -o -f build/<f>.o -F build/expected/<f>.o  (0 = match)
 
 ## Status
-- Matched: 113 / 2516 (4.5%)
+- Matched: 122 / 2516 (4.8%) (4.5%)
 - Blocked/deferred: ~16 (see below)
 - Remaining nonmatchings: 2483
 
@@ -83,3 +83,9 @@ see exFAT notes in git history / earlier reports).
   reuse + epilogue-slot scheduler deltas); C is in src/.
 - Wrapper callers with stale/uninit first args pass the arg through with NO
   setup: declare the callee `(void)` or use an uninitialized local.
+
+## Bulk caller generator (tools/emit/scan working notes)
+- wave1 (pure single-callers, nop/andi args): 54/65 matched via era+sched.
+- wave2 (g(0)/g(a0+*D)/g(u16)/two-jal): 9/198; the arg-threading and
+  result-use shapes hit the register/scheduler flavor floor (120-1780).
+- Two-byte zero-clears: `**p=0; p[1]=0` (two sb's) — updated.
