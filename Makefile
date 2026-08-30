@@ -15,7 +15,7 @@ SPLAT  := $(shell command -v splat 2>/dev/null || echo $$HOME/.venvs/ff4_decomp/
 DIFF   := $(shell command -v asm-differ 2>/dev/null || echo $$HOME/.venvs/ff4_decomp/bin/asm-differ)
 
 # PSX-standard flags; '-mfp32' is required on GCC>=10 when using -mips1.
-CFLAGS := -mips1 -mfp32 -G0 -O2 -fno-common -fno-builtin -ffreestanding \
+CFLAGS := -mips1 -mfp32 -G8 -O2 -fno-common -fno-builtin -ffreestanding \
           -mno-abicalls -fno-pic -Iinclude -g -gdwarf-2
 
 .PHONY: all diag diff clean
@@ -41,8 +41,23 @@ build/expected:
 	mkdir -p build/expected
 
 # Assemble a splat-split nonmatching .s (with macro context) as the reference.
+# Files are written in aspsx/PsyQ layout: literal order incl. delay slots,
+# so assemble in .set noreorder mode (aspsx-style, no auto scheduling).
 build/expected/%.o: asm/nonmatchings/main/%.s | build/expected
-	(printf '.include "macro.inc"\n'; cat $<) | $(AS) -G0 -Iinclude -o $@ -
+	(printf '.set noreorder\n.include "macro.inc"\n'; cat $<) | $(AS) -G0 -Iinclude -o $@ -
+
+# Absolute-addressed global accessors: original used lui/%lo (not sdata),
+# so compile these per-file with -G0 (no gp-relative small-data classification).
+build/func_80188240.o: src/func_80188240.c | build
+	$(GCC) $(subst -G8,-G0,$(CFLAGS)) -S $< -o - | $(MASPSX) --run-assembler -o $@
+build/func_8018DF90.o: src/func_8018DF90.c | build
+	$(GCC) $(subst -G8,-G0,$(CFLAGS)) -S $< -o - | $(MASPSX) --run-assembler -o $@
+build/func_80192718.o: src/func_80192718.c | build
+	$(GCC) $(subst -G8,-G0,$(CFLAGS)) -S $< -o - | $(MASPSX) --run-assembler -o $@
+build/func_80192728.o: src/func_80192728.c | build
+	$(GCC) $(subst -G8,-G0,$(CFLAGS)) -S $< -o - | $(MASPSX) --run-assembler -o $@
+build/func_80191530.o: src/func_80191530.c | build
+	$(GCC) $(subst -G8,-G0,$(CFLAGS)) -S $< -o - | $(MASPSX) --run-assembler -o $@
 
 # Convenience: build + diff one function's candidate against its split asm.
 FUNC ?=
