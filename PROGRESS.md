@@ -7,7 +7,7 @@ Pipeline: mipsel-linux-gnu-gcc-13 -S -> maspsx (patched) -> GNU as -> .o
 Verify:  asm-differ -o -f build/<f>.o -F build/expected/<f>.o  (0 = match)
 
 ## Status
-- Matched: 36 / 2516 (1.4%)
+- Matched: 42 / 2516 (1.7%)
 - Blocked/deferred: ~16 (see below)
 - Remaining nonmatchings: 2483
 
@@ -39,10 +39,24 @@ vendored in tools/maspsx).
   (`addiu $t2,$zero,C; jr $t2` — jump-through-register trampolines)
 - func_80191618 (data blob misdetected inside code; fix rodata boundaries)
 
-## Notes for the era-correct compiler
-zeldin's build instruction set (gcc 2.8.1 native cross for mipsel-linux-gnu)
-is the documented maspsx path (decompals/old-gcc). When available, switch
-CC in the Makefile; the loop and diff plumbing is compiler-agnostic.
+## Toolchain findings (result-bearing)
+- ASPSX 2.56+ semantics: `li <small const>` expands to `addiu` in the ROM,
+  not `ori`. Fix = `--dont-expand-li` on BOTH maspsx lanes (done in
+  Makefile). Unblocked func_8018600C / func_80187C9C immediately.
+- CC1PSX (PsyQ 4.4) = gcc 2.8.1-family; matches *g=*p, getter-and, branches.
+  BUT merges address+accumulator registers on `lw X; op X` chains (emits
+  $v0 for both), while ROM getters keep a separate $v1 address. No -O level
+  or -f flag on 4.4 changes this => those TUs used an older/newer rung
+  (gcc-ladder: 2.6/2.7.x or SN32 4.5). Pending items below are rung-blocked,
+  not semantics-blocked.
+
+## Blocked — semantics known, byte-blocked on compiler rung
+- getter_and_ret x4 + copy_dup x4 (base $v1 vs $v0 accumulator merge)
+- func_80188240 (abs return, $v1 base), func_80191530 / func_80197A78
+  (abs store, $at base), all same class: gcc2.x per-TU allocation nuance.
+- func_8018F068..func_80190088 (10x jr $t2 trampolines; non-C)
+- func_80191618 (data blob mis-split; fix config rodata boundaries)
+- func_800F3A68 (single-nop slot alignment; splat boundary artifact)
 
 ## Remote
 Add a GitHub/GitLab remote and push `main` (exFAT has no journaling;
