@@ -197,7 +197,6 @@ INCLUDE_ASM("asm/nonmatchings/main", func_800F59F4);
 
 INCLUDE_ASM("asm/nonmatchings/main", func_800F5A90);
 
-INCLUDE_ASM("asm/nonmatchings/main", func_800F5B2C);
 
 INCLUDE_ASM("asm/nonmatchings/main", func_800F5B4C);
 
