@@ -55,6 +55,15 @@ def classify(name):
             return ("load_u16", None, "int f(u16 *p) { return *p; }")
         if (m := re.match(r"lw \$v0,0x0\(\$a0\)", first)):
             return ("load_u32", None, "int f(u32 *p) { return *p; }")
+        if (m := re.match(r"lw \$v0, %gp_rel\(([^)]+)\)\(\$gp\)", first)):
+            return ("return_gp_global", m.group(1), f"int f(void) {{ return {m.group(1)}; }}")
+        if (m := re.match(r"lui \$(v0|v1), %hi\(([^)]+)\)", first)):
+            return ("return_abs_global", m.group(2), f"int f(void) {{ return {m.group(2)}; }}")
+    # zero-store leaves (often with a store in the jr delay slot)
+    if insns[0].startswith("sb $zero, 0x0($a0)") and len(insns) >= 2 and insns[-1].endswith("sb $zero, 0x1($a0)"):
+        return ("zero2", None, "void f(u8 *p) { p[0] = 0; p[1] = 0; }")
+    if len(insns) == 2 and insns[0] == "jr $ra" and insns[1] == "sb $zero, 0x0($a0)":
+        return ("zero1", None, "void f(u8 *p) { *p = 0; }")
     return None
 
 
