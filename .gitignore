@@ -23,3 +23,8 @@ venv*/
 build/
 *.o
 *.elf
+# PsyQ SDK binaries (wine; not tracked)
+/tools/psyq/
+
+# build outputs
+/build/

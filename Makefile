@@ -10,7 +10,7 @@
 
 GCC    := mipsel-linux-gnu-gcc-13
 AS     := mipsel-linux-gnu-as
-MASPSX := $(shell command -v maspsx 2>/dev/null || echo $$HOME/.venvs/ff4_decomp/bin/maspsx)
+MASPSX := $(CURDIR)/tools/maspsx/maspsx.py
 SPLAT  := $(shell command -v splat 2>/dev/null || echo $$HOME/.venvs/ff4_decomp/bin/splat)
 DIFF   := $(shell command -v asm-differ 2>/dev/null || echo $$HOME/.venvs/ff4_decomp/bin/asm-differ)
 
@@ -36,6 +36,29 @@ build:
 build/%.o: src/%.c | build
 	$(GCC) $(CFLAGS) -S $< -o - | $(MASPSX) --run-assembler -o $@
 	@echo "built $@"
+
+# --- Era-accurate lane: PsyQ CC1PSX.EXE under wine ("only when needed") ---
+# src/x.c -> gcc -E -> .i -> wine CC1PSX.EXE (-G8) -> .s -> maspsx -> .o
+PSYX     := $(CURDIR)/tools/psyq/bin
+CC1PSX   := wine $(PSYX)/CC1PSX.EXE
+PSXFLAGS := -quiet -O2 -G8 -mgpOPT -fgnu-linker
+
+build/psx:
+	mkdir -p build/psx
+
+build/psx/%.i: src/%.c | build/psx
+	$(GCC) -E -P -Iinclude $< -o $@
+
+build/psx/%.s: build/psx/%.i | build/psx
+	$(CC1PSX) $(PSXFLAGS) $< -o $@ 2>/dev/null
+
+build/psx/%.o: build/psx/%.s | build/psx
+	$(MASPSX) --run-assembler -G8 -Iinclude -o $@ < $<
+
+# Convenience: era-lane build + diff (make psx FUNC=func_XXXX)
+psx: FUNC ?= func_800F63E8
+psx: build/psx/$(FUNC).o build/expected/$(FUNC).o
+	$(DIFF) $(FUNC) -o -f build/psx/$(FUNC).o -F build/expected/$(FUNC).o -1
 
 build/expected:
 	mkdir -p build/expected
