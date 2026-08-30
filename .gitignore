@@ -1,0 +1,25 @@
+# --- Large / copyrighted binary assets (do NOT track) ---
+# Game ISO and BIOS dumps
+ff4.iso
+SCPH1001.BIN
+*.iso
+*.BIN
+
+# Raw extracted ISO contents (incl. slus_013.60 game binary)
+# If you want the baserom tracked for splat: git add -f ISODUMP/slus_013.60
+/ISODUMP/
+
+# Memcard save dump + stray 0-byte file
+memo.bin
+/To
+
+# --- Python ---
+__pycache__/
+*.pyc
+venv*/
+.venv/
+
+# --- Decomp build artifacts ---
+build/
+*.o
+*.elf

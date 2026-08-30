@@ -1,0 +1,85 @@
+"Set up a working Python virtual environment for this project and install maspsx, splat-64, and asm-differ.
+
+Note: Current filesystem is exFAT/FAT32 (/run/media/...) which blocks symlinks.
+1. Try creating the venv with `python3 -m venv --copies venv`.
+2. If that fails, create the venv at `~/.venvs/ff4_decomp` on internal storage instead.
+3. Activate the environment and install pip packages: `maspsx`, `splat-64`, `asm-differ`.
+4. Verify installations by running `maspsx --help` and `splat --help` and report back."
+
+Your objective is to achieve a 100% byte-matching decompilation of the entire game binary.
+
+### Workspace Context & Layout
+- Target Executable: `bin/SLUS_008.98`
+- Assembly Splits: `asm/nonmatchings/` (organized by subsystem: battle/, field/, menu/, system/)
+- C Source Files: `src/`
+- Headers/Structs: `include/`
+- Splat Config: `config/SLUS_008.98.yaml`
+
+---
+
+### Execution & Testing Loop
+
+Execute the following pipeline continuously across all unmatched functions:
+
+1. **Scan & Target Selection:**
+   - Scan `asm/nonmatchings/` for any remaining `.s` assembly files.
+   - Inspect `include/` to load existing struct definitions, hardware register mappings, and PsyQ SDK signatures.
+
+2. **Decompilation Phase:**
+   - Read the MIPS I assembly for the target function.
+   - Generate corresponding C code in the matching file under `src/`.
+   - Maintain idiomatic C structure, using proper types, loop structures (`while`/`for`), and pointer arithmetic based on MIPS register usage.
+
+3. **Compilation & Verification Loop:**
+   - Run `make` to invoke `maspsx` (PsyQ GCC 2.8.1 wrapper) and produce object files.
+   - Execute `python3 -m asmdiff --cli` on the generated function against the target assembly.
+   - **Evaluate Match Status:**
+     - **If 100% MATCH:** Mark function as matched, update `config/SLUS_008.98.yaml`, remove or update the corresponding `.s` entry in `asm/nonmatchings/`, and commit the progress via git (`git commit -m \"Matched <function_name>\"`).
+     - **If MISMATCH:** Analyze the diff output (stack frame offset differences, swapped registers, branch delay slot orderings). Refactor the C candidate and re-run step 3. Loop up to 10 iterations per function before moving to the next if blocked.
+
+4. **Batch Reporting:**
+   - After completing a batch or when hitting a blocker, output a progress summary:
+     - Functions completed during this run.
+     - Overall repository completion percentage.
+     - List of unresolved/blocked functions with brief explanations (e.g., missing struct fields, complex jump tables).
+
+Begin scanning `asm/nonmatchings/` and process the first unmatched function now."
+
+Your objective is to achieve a 100% byte-matching decompilation of the game binary using ONLY native Linux tools.
+
+---
+
+### Environment Restrictions & Rules
+1. **NATIVE LINUX ONLY:** Do NOT attempt to run `wine`, `.exe` files, or package managers (`apt`, `sudo`). Use only native binary targets (`mipsel-linux-gnu-gcc`, `maspsx`, `make`, `python3`).
+2. **Project Layout:**
+   - Binary Target: `bin/SLUS_008.98`
+   - Assembly Splits: `asm/nonmatchings/`
+   - C Source Files: `src/`
+   - Headers & Structs: `include/`
+   - Splat Config: `config/SLUS_008.98.yaml`
+
+---
+
+### Execution & Verification Loop
+
+Process every unmatched function using the following automated workflow:
+
+1. **Target Selection:**
+   - Scan `asm/nonmatchings/` for unmatched `.s` assembly files.
+   - Read `include/` for existing struct definitions, hardware register addresses, and SDK signatures.
+
+2. **Decompilation Phase:**
+   - Translate the target MIPS I assembly file into C code inside `src/`.
+   - Maintain clean, idiomatic C logic (`while`/`for` loops, proper structs, typed pointers).
+
+3. **Compilation & Diffing Phase:**
+   - Compile candidate source files natively using `make` (invoking `maspsx` + `mipsel-linux-gnu-gcc`).
+   - Run `python3 -m asmdiff --cli` to evaluate the match percentage.
+   
+4. **Iterate & Verify:**
+   - **MATCH (100%):** Mark function as matched, update `config/SLUS_008.98.yaml`, update target status, and commit via git (`git commit -m \"Matched <function_name>\"`).
+   - **MISMATCH:** Inspect register swaps, stack allocations, or delay slot ordering from the diff. Refactor the C candidate and re-test. Iterate up to 10 times per function before moving to the next target if blocked.
+
+5. **Progress Summary:**
+   - Output matched function count and current repo completion percentage after each batch.
+
