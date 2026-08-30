@@ -95,3 +95,29 @@ see exFAT notes in git history / earlier reports).
 - Lane metadata in expected/lanes.txt (modern / psx / psxs).
 - Integrity checker gotcha: always test all three lanes before declaring a
   regression. Wave-2 (psxs) matches re-verified fine when checked on psxs.
+
+## RESUME NOTES (next session)
+Milestone: 122/2516 matched (4.8%), all integrity-verified, pushed.
+Remaining: 2394.
+
+Proven recipes (in order of preference):
+1. gcc-13 modern lane (no wine): void empties, gp accessors/setters,
+   zero-stores, getter-and masks, or-imm, address/abs globals. `make FUNC=`
+2. CC1PSX era lane: bitop masks, *g=*p, store batches. `make psx FUNC=`
+3. era+sched lane (CC1PSX -O2 -fschedule-insns): jal-wrapper callers and
+   pure single-callers (54+9 matched this session). `make psxs FUNC=`
+
+Open items queued:
+- port-family 0x1F8003C8 (20 fns, scores 120-660): compiler register/
+  scheduler flavor — needs the true game compiler rung (NOT 4.4/2.7.2/
+  2.6.0/2.7.2-cdk; all tested). One expression-order trick solved the
+  offset-fold: port as local declared AFTER the call.
+- rung hunt remains THE unlock for ~50+ functions: candidates: ladders at
+  decompals/old-gcc, NFSHS nfs4 gcc-ladder refs, pkgs.secrets... believable:
+  "SN32" branded cc1 (PsyQ 4.5-era). Try func_800F8F94 as the oracle.
+- helpers func_800F3B04/3B9C/3C3C/3A70/3AB4 (322/85/406/35/20 callers):
+  decoded C in src/ (address-base calculators); internal codegen needs the
+  rung too. Matching them unlocks nothing extra for callers (jal = symbol),
+  but naming helps.
+- 2-jal+3-jal callers with argument chaining remain (133+): gen wave cover
+  nop/const shapes only; addu-a0-family needs per-fn C.
