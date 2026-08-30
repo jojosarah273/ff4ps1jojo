@@ -51,7 +51,9 @@ vendored in tools/maspsx).
   not semantics-blocked.
 
 ## Blocked — semantics known, byte-blocked on compiler rung
-- getter_and_ret x4 + copy_dup x4 (base $v1 vs $v0 accumulator merge)
+- getter_and_ret x4 + copy_dup x4 + byte-pair copy func_800F6488 /
+  func_800F710C (base $v1/$a1 vs $v0 accumulator merge; C solved, src files
+  present in repo)
 - func_80188240 (abs return, $v1 base), func_80191530 / func_80197A78
   (abs store, $at base), all same class: gcc2.x per-TU allocation nuance.
 - func_8018F068..func_80190088 (10x jr $t2 trampolines; non-C)
