@@ -1,0 +1,51 @@
+name: slus_013.60
+sha1: 863f09d317884591bb945e51e0881dafe6b58d1c
+options:
+  basename: slus_013.60
+  target_path: ISODUMP/slus_013.60
+  elf_path: build/slus_013.60.elf
+  base_path: .
+  platform: psx
+  compiler: PSYQ
+
+  asm_path: asm
+  src_path: src
+  build_path: build
+  ld_script_path: slus_013.60.ld
+  ld_dependencies: True
+
+  find_file_boundaries: False
+  disasm_unknown: True
+  gp_value: 0x8019ECFC
+
+  use_legacy_include_asm: False
+  section_order: [".rodata", ".text", ".data", ".bss"]
+
+  symbol_addrs_path:
+    - symbol_addrs.txt
+  reloc_addrs_path:
+    - reloc_addrs.txt
+
+  subalign: 2
+
+  string_encoding: ASCII
+  data_string_encoding: ASCII
+  rodata_string_guesser_level: 2
+  data_string_guesser_level: 2
+segments:
+  - name: header
+    type: header
+    start: 0x0
+
+  - name: main
+    type: code
+    start: 0x800
+    vram: 0x800F2400
+    subsegments:
+      # initial coarse boundaries from `splat create_config` heuristics:
+      #   rodata 0x800-0x1E68, code 0x1E68-0xA6E54, data 0xA6E54-0xAD800
+      # refine rodata chunk splits (0xA64/0xDB0/0x112C/0x1270) once code is matched
+      - [0x800, rodata, rodata_800]
+      - [0x1E68, c, main]
+      - [0xA6E54, data, data_A6E54]
+  - [0xAD800]

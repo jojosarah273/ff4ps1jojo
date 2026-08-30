@@ -83,3 +83,21 @@ Process every unmatched function using the following automated workflow:
 5. **Progress Summary:**
    - Output matched function count and current repo completion percentage after each batch.
 
+
+-----------------
+
+I am setting up a PS1 matching decompilation repository for Final Fantasy IV (SLUS_008.98).
+
+Please study these reference specifications for our project workflow:
+1. Target CPU: MIPS I (R3000 Little Endian).
+2. Binary Splitter: `splat` (decompals/splat YAML configuration format).
+3. Compiler: PsyQ GCC 2.8.1 invoked natively via `maspsx` (mkst/maspsx).
+4. Hardware Architecture: Memory-mapped I/O at 0x1F80xxxx, RAM base at 0x80000000 (referencing PSX-SpX hardware documentation).
+5. Reference Repositories for Code Style: silent-hill-decomp and xenogears-decomp.
+
+When decompiling MIPS functions to C:
+- Recognize PsyQ SDK standard library signatures and struct types.
+- Account for MIPS load and branch delay slots when structuring control loops.
+- Avoid inline assembly; force matching through variable types, explicit temp assignments, and pointer casting.
+
+
