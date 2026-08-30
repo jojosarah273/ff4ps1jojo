@@ -32,7 +32,6 @@ INCLUDE_ASM("asm/nonmatchings/main", func_800F4008);
 
 INCLUDE_ASM("asm/nonmatchings/main", func_800F4064);
 
-INCLUDE_ASM("asm/nonmatchings/main", func_800F40CC);
 
 INCLUDE_ASM("asm/nonmatchings/main", func_800F40E8);
 
@@ -134,13 +133,11 @@ INCLUDE_ASM("asm/nonmatchings/main", func_800F4E88);
 
 INCLUDE_ASM("asm/nonmatchings/main", func_800F4ED8);
 
-INCLUDE_ASM("asm/nonmatchings/main", func_800F4F28);
 
 INCLUDE_ASM("asm/nonmatchings/main", func_800F4F4C);
 
 INCLUDE_ASM("asm/nonmatchings/main", func_800F4FAC);
 
-INCLUDE_ASM("asm/nonmatchings/main", func_800F5024);
 
 INCLUDE_ASM("asm/nonmatchings/main", func_800F5050);
 
@@ -228,7 +225,6 @@ INCLUDE_ASM("asm/nonmatchings/main", func_800F5E74);
 
 INCLUDE_ASM("asm/nonmatchings/main", func_800F5EA0);
 
-INCLUDE_ASM("asm/nonmatchings/main", func_800F5ECC);
 
 INCLUDE_ASM("asm/nonmatchings/main", func_800F5EE8);
 
@@ -447,7 +443,6 @@ INCLUDE_ASM("asm/nonmatchings/main", func_800F7864);
 
 INCLUDE_ASM("asm/nonmatchings/main", func_800F7894);
 
-INCLUDE_ASM("asm/nonmatchings/main", func_800F78C4);
 
 INCLUDE_ASM("asm/nonmatchings/main", func_800F78E0);
 
@@ -499,7 +494,6 @@ INCLUDE_ASM("asm/nonmatchings/main", func_800F8058);
 
 INCLUDE_ASM("asm/nonmatchings/main", func_800F80D0);
 
-INCLUDE_ASM("asm/nonmatchings/main", func_800F814C);
 
 INCLUDE_ASM("asm/nonmatchings/main", func_800F8160);
 
@@ -591,11 +585,9 @@ INCLUDE_ASM("asm/nonmatchings/main", func_800F8BC8);
 
 INCLUDE_ASM("asm/nonmatchings/main", func_800F8C08);
 
-INCLUDE_ASM("asm/nonmatchings/main", func_800F8C48);
 
 INCLUDE_ASM("asm/nonmatchings/main", func_800F8C5C);
 
-INCLUDE_ASM("asm/nonmatchings/main", func_800F8C84);
 
 INCLUDE_ASM("asm/nonmatchings/main", func_800F8C98);
 
@@ -627,7 +619,6 @@ INCLUDE_ASM("asm/nonmatchings/main", func_800F8F30);
 
 INCLUDE_ASM("asm/nonmatchings/main", func_800F8F74);
 
-INCLUDE_ASM("asm/nonmatchings/main", func_800F8F94);
 
 INCLUDE_ASM("asm/nonmatchings/main", func_800F8FB8);
 
@@ -641,9 +632,7 @@ INCLUDE_ASM("asm/nonmatchings/main", func_800F905C);
 
 INCLUDE_ASM("asm/nonmatchings/main", func_800F9090);
 
-INCLUDE_ASM("asm/nonmatchings/main", func_800F90C4);
 
-INCLUDE_ASM("asm/nonmatchings/main", func_800F90EC);
 
 INCLUDE_ASM("asm/nonmatchings/main", func_800F9114);
 
@@ -693,7 +682,6 @@ INCLUDE_ASM("asm/nonmatchings/main", func_800F960C);
 
 INCLUDE_ASM("asm/nonmatchings/main", func_800F967C);
 
-INCLUDE_ASM("asm/nonmatchings/main", func_800F9690);
 
 INCLUDE_ASM("asm/nonmatchings/main", func_800F96A4);
 
@@ -701,13 +689,11 @@ INCLUDE_ASM("asm/nonmatchings/main", func_800F96B8);
 
 INCLUDE_ASM("asm/nonmatchings/main", func_800F96CC);
 
-INCLUDE_ASM("asm/nonmatchings/main", func_800F96E0);
 
 INCLUDE_ASM("asm/nonmatchings/main", func_800F96F4);
 
 INCLUDE_ASM("asm/nonmatchings/main", func_800F9708);
 
-INCLUDE_ASM("asm/nonmatchings/main", func_800F971C);
 
 INCLUDE_ASM("asm/nonmatchings/main", func_800F9730);
 
@@ -4204,7 +4190,6 @@ INCLUDE_ASM("asm/nonmatchings/main", func_80187C34);
 INCLUDE_ASM("asm/nonmatchings/main", func_80187C54);
 
 
-INCLUDE_ASM("asm/nonmatchings/main", func_80187CB8);
 
 INCLUDE_ASM("asm/nonmatchings/main", func_80187CD0);
 
