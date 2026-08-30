@@ -129,3 +129,14 @@ Open items queued:
   choice flavor). Same class as port-family: rung-bound.
 - Table accessors func_800F9410/95A0/960C (D_800D0001 idx advance + u16
   combine): C solved; 2460 (base+%lo fold flavor).
+
+## Session-end state
+- func_800F3D48 (MMIO swap): C solved with the 0x1F8003C0+8/9 normalization;
+  score 60 (last-store delay-slot placement — flavor-bound).
+- func_800F5024/4F28, table trio 9410/95A0/960C, RMW 5D24-family: C solved
+  in src/ (scores 460-2460, flavor-bound).
+- Core lesson: the game's compiler flavor (ra-interleave scheduling, fresh-
+  register reloads, hi/lo folds, slot-store placement) is reproduced by
+  NONE of CC1PSX-4.4 / gcc-2.6.0 / 2.7.2 / 2.7.2-cdk at ANY -O/-f combo.
+  Remaining path to ~100%: identify the true rung (SN32/4.5-era target) or
+  per-TU flag tuning; everything else is class-grinding with the 3 lanes.
