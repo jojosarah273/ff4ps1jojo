@@ -10,7 +10,7 @@
 
 GCC    := mipsel-linux-gnu-gcc-13
 AS     := mipsel-linux-gnu-as
-MASPSX := $(CURDIR)/tools/maspsx/maspsx.py
+MASPSX := python3 $(CURDIR)/tools/maspsx/maspsx.py
 SPLAT  := $(shell command -v splat 2>/dev/null || echo $$HOME/.venvs/ff4_decomp/bin/splat)
 DIFF   := $(shell command -v asm-differ 2>/dev/null || echo $$HOME/.venvs/ff4_decomp/bin/asm-differ)
 

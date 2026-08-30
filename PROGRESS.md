@@ -7,7 +7,7 @@ Pipeline: mipsel-linux-gnu-gcc-13 -S -> maspsx (patched) -> GNU as -> .o
 Verify:  asm-differ -o -f build/<f>.o -F build/expected/<f>.o  (0 = match)
 
 ## Status
-- Matched: 33 / 2516 (1.3%)  — all leaf/trivial functions
+- Matched: 36 / 2516 (1.4%)
 - Blocked/deferred: ~16 (see below)
 - Remaining nonmatchings: 2483
 
@@ -23,12 +23,15 @@ void empties: func_800F9C90 func_8011F67C func_8011F6A4 func_8013A8C4
 Zero-stores: func_800F8CC0 func_800F8CC8
 Global accessors: func_80188B28 (gp) func_8018DF90 func_80192718 func_80192728 (abs, -G0 group)
 
-## Blocked — register allocation / scheduling deltas (needs old gcc 2.8.1)
-All semantic C is known; gcc-13's allocator/scheduler differs from the
-original PsyQ-era compiler on these patterns:
-- func_800F63E8 func_800F7074 func_800F7398  (*g = *p; wants lw-gp first, ptr in $v1)
-- func_80188240 (absolute return: address base in $v1 not $v0)
-- func_80191530 (absolute store: base in $at not $v0)
+## Era lane (make psx FUNC=...) now unblocks the gcc-13 register/order deltas
+PsyQ 4.4 CC1PSX.EXE under wine -> maspsx -> GNU as reproduces the original
+codegen on the two-pointer patterns, INCLUDING gp-relative externs (maspsx
+patch: `.extern sym,size` <= -G threshold -> gp-relative sbss member,
+vendored in tools/maspsx).
+- MATCHED via era lane: func_800F63E8 func_800F7074 func_800F7398 (*g = *p)
+- Pending (compiler version/-f tuning): func_80188240 (abs return, base $v1
+  vs $v0) func_80191530 (abs store, base $at vs $v0). Next: try -fforce-addr
+  / other -f flags or the 2.8.1-SN / 4.5 cc1 variants.
 
 ## Deferred — non-C patterns
 - func_8018F068 func_8018F0C8 func_8018F0D8 func_8018F148 func_8018F158
