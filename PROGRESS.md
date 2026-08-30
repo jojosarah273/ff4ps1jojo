@@ -140,3 +140,16 @@ Open items queued:
   NONE of CC1PSX-4.4 / gcc-2.6.0 / 2.7.2 / 2.7.2-cdk at ANY -O/-f combo.
   Remaining path to ~100%: identify the true rung (SN32/4.5-era target) or
   per-TU flag tuning; everything else is class-grinding with the 3 lanes.
+
+## SAFETY PROTOCOL (applies from here on)
+1. NO destructive cleanup without first: `git add -A && git commit && git push`.
+2. NEVER delete src/ files with broad grep patterns (the `; }` cleanup
+   deleted 100+ candidates; 85 were recovered from git). Deletions of src
+   files require an explicit list recorded at generation time.
+3. Run `bash tools/check_integrity.sh` before ANY destructive step; it
+   exits 1 on: matched-without-src, 'extern void jal' leaks, staged or
+   uncommitted src deletions. The never-broken rule: any staging of src/
+   deletions is a hard stop.
+4. Match-time deletion is limited to: asm/nonmatchings/main/<f>.s (after
+   the INCLUDE_ASM line removal and CURRENT (0) verification) and only via
+   the explicit f-loop, never a grep.
