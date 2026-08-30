@@ -60,6 +60,20 @@ psx: FUNC ?= func_800F63E8
 psx: build/psx/$(FUNC).o build/expected/$(FUNC).o
 	$(DIFF) $(FUNC) -o -f build/psx/$(FUNC).o -F build/expected/$(FUNC).o -1
 
+# Era + scheduler lane: needed for jal-wrapper / prologue-insns code shapes
+# (CC1PSX -fschedule-insns selected by wrapper-matching evidence).
+build/psxs/$(FUNC).o: src/$(FUNC).c | psxs_src
+	$(GCC) -E -P -Iinclude src/$(FUNC).c -o build/psx/$(FUNC).i
+	wine tools/psyq/bin/CC1PSX.EXE -O2 -fschedule-insns -G8 -mgpOPT -fgnu-linker build/psx/$(FUNC).i -o build/psx/$(FUNC).s 2>/dev/null
+	$(MASPSX) --run-assembler --dont-expand-li -G8 -Iinclude -o $@ < build/psx/$(FUNC).s
+
+psxs_src:
+	mkdir -p build/psx
+
+psxs: FUNC ?= func_8011EA9C
+psxs: build/psxs/$(FUNC).o build/expected/$(FUNC).o
+	$(DIFF) $(FUNC) -o -f build/psxs/$(FUNC).o -F build/expected/$(FUNC).o -1
+
 build/expected:
 	mkdir -p build/expected
 

@@ -7,7 +7,7 @@ Pipeline: mipsel-linux-gnu-gcc-13 -S -> maspsx (patched) -> GNU as -> .o
 Verify:  asm-differ -o -f build/<f>.o -F build/expected/<f>.o  (0 = match)
 
 ## Status
-- Matched: 53 / 2516 (2.1%)
+- Matched: 59 / 2516 (2.3%)
 - Blocked/deferred: ~16 (see below)
 - Remaining nonmatchings: 2483
 
@@ -73,3 +73,13 @@ vendored in tools/maspsx).
 ## Remote
 Add a GitHub/GitLab remote and push `main` (exFAT has no journaling;
 see exFAT notes in git history / earlier reports).
+## Toolchain findings v3 (era+sched lane)
+- CC1PSX needs `-O2 -fschedule-insns` to reproduce jal-wrapper functions
+  (tail-calls on gcc-13 vs real frames in the ROM). Added `make psxs FUNC=`.
+- MMIO 0x1F8003C8 byte-port family (47 fns): the ROM folds `lui/base-reg +
+  offset` loads; that fold requires the C to express the port as a local
+  declared AFTER the call (`volatile u8 *port = (volatile u8*)0x1F800000;
+  *dst = port[0x3C8];`). Port-family currently sits at 180-1200 (register
+  reuse + epilogue-slot scheduler deltas); C is in src/.
+- Wrapper callers with stale/uninit first args pass the arg through with NO
+  setup: declare the callee `(void)` or use an uninitialized local.
