@@ -90,3 +90,9 @@ diff: build/$(FUNC).o build/expected/$(FUNC).o
 
 clean:
 	rm -rf build
+
+build/func_80192C4C.o: src/func_80192C4C.c | build
+	$(GCC) $(subst -G8,-G0,$(CFLAGS)) -S $< -o - | $(MASPSX) --run-assembler --dont-expand-li -o $@
+
+build/func_80192738.o: src/func_80192738.c | build
+	$(GCC) $(subst -G8,-G0,$(CFLAGS)) -S $< -o - | $(MASPSX) --run-assembler --dont-expand-li -o $@
