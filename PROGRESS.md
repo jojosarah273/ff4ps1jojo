@@ -7,7 +7,7 @@ Pipeline: mipsel-linux-gnu-gcc-13 -S -> maspsx (patched) -> GNU as -> .o
 Verify:  asm-differ -o -f build/<f>.o -F build/expected/<f>.o  (0 = match)
 
 ## Status
-- Matched: 59 / 2516 (2.3%)
+- Matched: 113 / 2516 (4.5%)
 - Blocked/deferred: ~16 (see below)
 - Remaining nonmatchings: 2483
 
