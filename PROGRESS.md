@@ -7,7 +7,7 @@ Pipeline: mipsel-linux-gnu-gcc-13 -S -> maspsx (patched) -> GNU as -> .o
 Verify:  asm-differ -o -f build/<f>.o -F build/expected/<f>.o  (0 = match)
 
 ## Status
-- Matched: 42 / 2516 (1.7%)
+- Matched: 53 / 2516 (2.1%)
 - Blocked/deferred: ~16 (see below)
 - Remaining nonmatchings: 2483
 
@@ -49,6 +49,16 @@ vendored in tools/maspsx).
   or -f flag on 4.4 changes this => those TUs used an older/newer rung
   (gcc-ladder: 2.6/2.7.x or SN32 4.5). Pending items below are rung-blocked,
   not semantics-blocked.
+
+## Toolchain findings v2
+- Xenogears-decomp vendors native-Linux gcc rungs (2.6.0 / 2.7.2 / 2.7.2-cdk,
+  tools/gcc-2xx). None reproduce the ROM's fresh-register reloads (`$a1`)
+  on multi-store functions => that register shape is rung-independent here;
+  assign to the per-TU allocator artifact class, not to a specific version.
+- Classified-and-matched patterns so far (modern lane): void empties,
+  gp accessors (returns/setters), zero stores, getter-and masks,
+  or-imm stores, address-of-global, abs-u16. (era lane): *g=*p copies,
+  bitop-mask (&=|^=|&=~ with param), store batches.
 
 ## Blocked — semantics known, byte-blocked on compiler rung
 - getter_and_ret x4 + copy_dup x4 + byte-pair copy func_800F6488 /
