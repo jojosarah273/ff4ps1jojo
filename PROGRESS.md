@@ -89,3 +89,9 @@ see exFAT notes in git history / earlier reports).
 - wave2 (g(0)/g(a0+*D)/g(u16)/two-jal): 9/198; the arg-threading and
   result-use shapes hit the register/scheduler flavor floor (120-1780).
 - Two-byte zero-clears: `**p=0; p[1]=0` (two sb's) — updated.
+
+## Integrity / lanes
+- All matched functions re-verified CURRENT (0) on their correct lanes.
+- Lane metadata in expected/lanes.txt (modern / psx / psxs).
+- Integrity checker gotcha: always test all three lanes before declaring a
+  regression. Wave-2 (psxs) matches re-verified fine when checked on psxs.
