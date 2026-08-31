@@ -101,3 +101,9 @@ When decompiling MIPS functions to C:
 - Avoid inline assembly; force matching through variable types, explicit temp assignments, and pointer casting.
 
 
+-------------
+
+I have wine. can we run the era-compiler through that? only when needed? i set up a git:
+https://github.com/jojosarah273/ff4ps1jojo
+
+what do you need to use it?
