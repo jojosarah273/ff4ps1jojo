@@ -195,7 +195,6 @@ INCLUDE_ASM("asm/nonmatchings/main", func_800F5B4C);
 
 INCLUDE_ASM("asm/nonmatchings/main", func_800F5B8C);
 
-INCLUDE_ASM("asm/nonmatchings/main", func_800F5BE8);
 
 INCLUDE_ASM("asm/nonmatchings/main", func_800F5C14);
 
@@ -488,7 +487,6 @@ INCLUDE_ASM("asm/nonmatchings/main", func_800F8058);
 INCLUDE_ASM("asm/nonmatchings/main", func_800F80D0);
 
 
-INCLUDE_ASM("asm/nonmatchings/main", func_800F8160);
 
 INCLUDE_ASM("asm/nonmatchings/main", func_800F8188);
 
@@ -579,10 +577,8 @@ INCLUDE_ASM("asm/nonmatchings/main", func_800F8BC8);
 INCLUDE_ASM("asm/nonmatchings/main", func_800F8C08);
 
 
-INCLUDE_ASM("asm/nonmatchings/main", func_800F8C5C);
 
 
-INCLUDE_ASM("asm/nonmatchings/main", func_800F8C98);
 
 
 
