@@ -110,3 +110,33 @@ build/func_80192C4C.o: src/func_80192C4C.c | build
 
 build/func_80192738.o: src/func_80192738.c | build
 	$(GCC) $(subst -G8,-G0,$(CFLAGS)) -S $< -o - | $(MASPSX) --run-assembler --dont-expand-li -o $@
+
+build/func_8019428C.o: src/func_8019428C.c | build
+	$(GCC) $(subst -G8,-G0,$(CFLAGS)) -S $< -o - | $(MASPSX) --run-assembler --dont-expand-li -o $@
+
+build/func_80197458.o: src/func_80197458.c | build
+	$(GCC) $(subst -G8,-G0,$(CFLAGS)) -S $< -o - | $(MASPSX) --run-assembler --dont-expand-li -o $@
+
+build/func_80197A84.o: src/func_80197A84.c | build
+	$(GCC) $(subst -G8,-G0,$(CFLAGS)) -S $< -o - | $(MASPSX) --run-assembler --dont-expand-li -o $@
+
+build/func_80196018.o: src/func_80196018.c | build
+	$(GCC) $(subst -G8,-G0,$(CFLAGS)) -S $< -o - | $(MASPSX) --run-assembler --dont-expand-li -o $@
+
+build/func_80192C5C.o: src/func_80192C5C.c | build
+	$(GCC) $(subst -G8,-G0,$(CFLAGS)) -S $< -o - | $(MASPSX) --run-assembler --dont-expand-li -o $@
+
+build/func_80192C74.o: src/func_80192C74.c | build
+	$(GCC) $(subst -G8,-G0,$(CFLAGS)) -S $< -o - | $(MASPSX) --run-assembler --dont-expand-li -o $@
+
+build/func_80195834.o: src/func_80195834.c | build
+	$(GCC) $(subst -G8,-G0,$(CFLAGS)) -S $< -o - | $(MASPSX) --run-assembler --dont-expand-li -o $@
+
+build/func_8018DFA0.o: src/func_8018DFA0.c | build
+	$(GCC) $(subst -G8,-G0,$(CFLAGS)) -S $< -o - | $(MASPSX) --run-assembler --dont-expand-li -o $@
+
+build/func_8018DFC4.o: src/func_8018DFC4.c | build
+	$(GCC) $(subst -G8,-G0,$(CFLAGS)) -S $< -o - | $(MASPSX) --run-assembler --dont-expand-li -o $@
+
+build/func_8018DFE8.o: src/func_8018DFE8.c | build
+	$(GCC) $(subst -G8,-G0,$(CFLAGS)) -S $< -o - | $(MASPSX) --run-assembler --dont-expand-li -o $@
