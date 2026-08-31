@@ -3,7 +3,7 @@
 Byte-matching decompilation of **Final Fantasy IV** (PlayStation, USA) main
 executable `ISODUMP/slus_013.60`, with the explicit goal of 100% match.
 
-**Status: 36 / 2516 functions matched (1.4%)** — see `PROGRESS.md`.
+**Status: 171 / 2516 functions matched (6.8%)** — see `PROGRESS.md`.
 
 ## Layout
 

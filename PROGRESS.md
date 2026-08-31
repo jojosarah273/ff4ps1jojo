@@ -7,7 +7,7 @@ Pipeline: mipsel-linux-gnu-gcc-13 -S -> maspsx (patched) -> GNU as -> .o
 Verify:  asm-differ -o -f build/<f>.o -F build/expected/<f>.o  (0 = match)
 
 ## Status
-- Matched: 123 / 2516 (4.8%) (4.5%)
+- Matched: 171 / 2516 (6.8%) (4.8%) (4.5%)
 - Blocked/deferred: ~16 (see below)
 - Remaining nonmatchings: 2483
 
@@ -153,3 +153,9 @@ Open items queued:
 4. Match-time deletion is limited to: asm/nonmatchings/main/<f>.s (after
    the INCLUDE_ASM line removal and CURRENT (0) verification) and only via
    the explicit f-loop, never a grep.
+
+## Bookkeeping (173 vs 171)
+Archived expected objects were once back-filled for ALL built functions;
+2 strays (func_80191530, func_80197A78) were never verified. Authoritative
+count = asm/nonmatchings/main/*.s removed = 2516 - remaining. Commits (#)
+≠ functions matched (#): matches are batched per commit.
