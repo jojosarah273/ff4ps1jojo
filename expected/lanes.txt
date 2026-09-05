@@ -240,3 +240,4 @@ psx func_8012E700
 psx func_80148BE0
 psx func_8016762C
 psx func_80170084
+psx func_80102444
