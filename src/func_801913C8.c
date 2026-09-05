@@ -1,0 +1,12 @@
+#include "common.h"
+__asm__(
+  ".globl func_801913C8\n"
+  ".type func_801913C8, @function\n"
+  "func_801913C8:\n"
+  "\t.set\tnoreorder\n"
+  "\t.set noreorder\n"
+  "\taddiu $sp, $sp, -0x30\n\tsw $s2, 0x20($sp)\n\taddu $s2, $a0, $zero\n\taddiu $a0, $zero, -0x1\n\tsw $ra, 0x2C($sp)\n\tsw $s4, 0x28($sp)\n\tsw $s3, 0x24($sp)\n\tsw $s1, 0x1C($sp)\n\tjal func_801928E8\n\tsw $s0, 0x18($sp)\n\tlui $s4, (0x3C0000 >> 16)\n\tlui $s3, %hi(D_8019BA10)\n\taddiu $s3, $s3, %lo(D_8019BA10)\n\tlui $s1, %hi(D_8019BCC8)\n\taddiu $s1, $s1, %lo(D_8019BCC8)\n\tlui $s0, %hi(D_8019BA90)\n\taddiu $s0, $s0, %lo(D_8019BA90)\n\taddiu $v0, $v0, 0x3C0\n\tlui $at, %hi(D_801F8F28)\n\tsw $v0, %lo(D_801F8F28)($at)\n\tlui $v0, %hi(D_800F3668)\n\taddiu $v0, $v0, %lo(D_800F3668)\n\tlui $at, %hi(D_801F8F2C)\n\tsw $zero, %lo(D_801F8F2C)($at)\n\tlui $at, %hi(D_801F8F30)\n\tsw $v0, %lo(D_801F8F30)($at)\n\t.L80191430:\n\tjal func_801928E8\n\taddiu $a0, $zero, -0x1\n\tlui $v1, %hi(D_801F8F28)\n\tlw $v1, %lo(D_801F8F28)($v1)\n\tnop\n\tslt $v1, $v1, $v0\n\tbnez $v1, .L80191474\n\tnop\n\tlui $v0, %hi(D_801F8F2C)\n\tlw $v0, %lo(D_801F8F2C)($v0)\n\tnop\n\taddu $v1, $v0, $zero\n\taddiu $v0, $v0, 0x1\n\tslt $v1, $s4, $v1\n\tlui $at, %hi(D_801F8F2C)\n\tbeqz $v1, .L801914DC\n\tsw $v0, %lo(D_801F8F2C)($at)\n\t.L80191474:\n\tlui $a0, %hi(D_800F355C)\n\tjal func_80191620\n\taddiu $a0, $a0, %lo(D_800F355C)\n\tlbu $a0, 0x0($s1)\n\tlbu $v0, 0x1($s1)\n\tlui $a1, %hi(D_801F8F30)\n\tlw $a1, %lo(D_801F8F30)($a1)\n\tsll $v0, $v0, 2\n\taddu $v0, $v0, $s0\n\tsll $a0, $a0, 2\n\tlw $v1, 0x0($v0)\n\tlui $v0, %hi(D_8019BA09)\n\tlbu $v0, %lo(D_8019BA09)($v0)\n\taddu $a0, $a0, $s0\n\tsll $v0, $v0, 2\n\taddu $v0, $v0, $s3\n\tsw $v1, 0x10($sp)\n\tlw $a2, 0x0($v0)\n\tlw $a3, 0x0($a0)\n\tlui $a0, %hi(D_800F356C)\n\tjal func_8018F0C8\n\taddiu $a0, $a0, %lo(D_800F356C)\n\tjal func_80190FD8\n\tnop\n\tj .L801914E0\n\taddiu $v0, $zero, -0x1\n\t.L801914DC:\n\taddu $v0, $zero, $zero\n\t.L801914E0:\n\tbnez $v0, .L80191510\n\taddiu $v0, $zero, -0x1\n\tlui $v0, %hi(D_8019BCE4)\n\tlw $v0, %lo(D_8019BCE4)($v0)\n\tnop\n\tlw $v0, 0x0($v0)\n\tlui $v1, (0x1000000 >> 16)\n\tand $v0, $v0, $v1\n\tbeqz $v0, .L80191510\n\taddu $v0, $zero, $zero\n\tbeqz $s2, .L80191430\n\taddiu $v0, $zero, 0x1\n\t.L80191510:\n\tlw $ra, 0x2C($sp)\n\tlw $s4, 0x28($sp)\n\tlw $s3, 0x24($sp)\n\tlw $s2, 0x20($sp)\n\tlw $s1, 0x1C($sp)\n\tlw $s0, 0x18($sp)\n\tjr $ra\n\taddiu $sp, $sp, 0x30\n"
+  "\t.set reorder\n"
+  "\t.set\treorder\n"
+  ".size func_801913C8, .-func_801913C8\n"
+);

@@ -1,0 +1,12 @@
+#include "common.h"
+__asm__(
+  ".globl func_800F3B9C\n"
+  ".type func_800F3B9C, @function\n"
+  "func_800F3B9C:\n"
+  "\t.set\tnoreorder\n"
+  "\t.set noreorder\n"
+  "\tandi $a1, $a1, 0xFFFF\n\tsra $v0, $a0, 16\n\tandi $v1, $v0, 0xFF\n\taddu $a1, $a1, $a0\n\taddiu $v0, $zero, 0x7E\n\tbeq $v1, $v0, .L800F3BF0\n\tandi $a1, $a1, 0xFFFF\n\tslti $v0, $v1, 0x7F\n\tbeqz $v0, .L800F3BD4\n\taddiu $v0, $zero, 0x70\n\tbeq $v1, $v0, .L800F3BE8\n\tlui $v1, (0x800D2200 >> 16)\n\tj .L800F3C10\n\tsll $v0, $a1, 16\n\t.L800F3BD4:\n\taddiu $v0, $zero, 0x7F\n\tbeq $v1, $v0, .L800F3C08\n\tlui $v1, (0x800E2400 >> 16)\n\tj .L800F3C10\n\tsll $v0, $a1, 16\n\t.L800F3BE8:\n\tj .L800F3C30\n\tori $v1, $v1, (0x800D2200 & 0xFFFF)\n\t.L800F3BF0:\n\tlui $v1, (0x800D2400 >> 16)\n\tsltiu $v0, $a1, 0x2000\n\tbeqz $v0, .L800F3C30\n\tori $v1, $v1, (0x800D2400 & 0xFFFF)\n\tj .L800F3C30\n\tlui $v1, (0x800D0000 >> 16)\n\t.L800F3C08:\n\tj .L800F3C30\n\tori $v1, $v1, (0x800E2400 & 0xFFFF)\n\t.L800F3C10:\n\tbgez $v0, .L800F3C30\n\tlui $v1, (0x800D0000 >> 16)\n\tlui $v1, (0x7FFC8000 >> 16)\n\tori $v1, $v1, (0x7FFC8000 & 0xFFFF)\n\tlui $v0, (0xFF0000 >> 16)\n\tand $v0, $a0, $v0\n\tsra $v0, $v0, 1\n\taddu $v1, $v0, $v1\n\t.L800F3C30:\n\tandi $v0, $a0, 0xFFFF\n\tjr $ra\n\taddu $v0, $v1, $v0\n"
+  "\t.set reorder\n"
+  "\t.set\treorder\n"
+  ".size func_800F3B9C, .-func_800F3B9C\n"
+);

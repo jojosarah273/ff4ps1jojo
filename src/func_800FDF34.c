@@ -1,0 +1,12 @@
+#include "common.h"
+__asm__(
+  ".globl func_800FDF34\n"
+  ".type func_800FDF34, @function\n"
+  "func_800FDF34:\n"
+  "\t.set\tnoreorder\n"
+  "\t.set noreorder\n"
+  "\taddiu $sp, $sp, -0x18\n\taddiu $a0, $zero, 0x80\n\tsw $ra, 0x14($sp)\n\tjal func_800F654C\n\tsw $s0, 0x10($sp)\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x2115\n\tjal func_800F6630\n\taddiu $a0, $zero, 0x7C\n\tjal func_800F7864\n\tlui $s0, %hi(D_80198AA4)\n\tjal func_800F4248\n\taddiu $a0, $zero, 0xF\n\tjal func_800F9690\n\taddiu $s0, $s0, %lo(D_80198AA4)\n\tlw $v1, %gp_rel(D_8019ED54)($gp)\n\tnop\n\tlhu $v0, 0x0($v1)\n\tlw $a0, %gp_rel(D_8019ED40)($gp)\n\taddu $v0, $v0, $s0\n\tlbu $v1, 0x0($v0)\n\tjal func_800F9690\n\tsb $v1, 0x0($a0)\n\tlw $v0, %gp_rel(D_8019ED40)($gp)\n\tnop\n\tlbu $a0, 0x0($v0)\n\tjal func_800FDA9C\n\tori $a0, $a0, 0x3800\n\tjal func_800F6630\n\taddiu $a0, $zero, 0x7C\n\tjal func_800F7864\n\tnop\n\tjal func_800F4248\n\taddiu $a0, $zero, 0xF\n\tjal func_800F9690\n\tnop\n\tlw $v1, %gp_rel(D_8019ED54)($gp)\n\tnop\n\tlhu $v0, 0x0($v1)\n\tlw $a0, %gp_rel(D_8019ED40)($gp)\n\taddu $v0, $v0, $s0\n\tlbu $v1, 0x0($v0)\n\tjal func_800F5410\n\tsb $v1, 0x0($a0)\n\tjal func_800F4008\n\taddiu $a0, $zero, 0x40\n\tjal func_800F9690\n\tnop\n\tlw $v0, %gp_rel(D_8019ED40)($gp)\n\tnop\n\tlbu $a0, 0x0($v0)\n\tjal func_800FDA9C\n\tori $a0, $a0, 0x3800\n\tjal func_8018226C\n\taddiu $a0, $zero, 0x3800\n\tjal func_800F62BC\n\taddiu $a0, $zero, 0x7C\n\tlw $ra, 0x14($sp)\n\tlw $s0, 0x10($sp)\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
+  "\t.set reorder\n"
+  "\t.set\treorder\n"
+  ".size func_800FDF34, .-func_800FDF34\n"
+);

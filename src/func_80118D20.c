@@ -1,0 +1,12 @@
+#include "common.h"
+__asm__(
+  ".globl func_80118D20\n"
+  ".type func_80118D20, @function\n"
+  "func_80118D20:\n"
+  "\t.set\tnoreorder\n"
+  "\t.set noreorder\n"
+  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x10($sp)\n\tjal func_80117594\n\tnop\n\tjal func_800F5574\n\taddiu $a0, $zero, 0xFE\n\tjal func_800F53D4\n\tnop\n\tbnez $v0, .L80118E40\n\tnop\n\tjal func_800F824C\n\taddiu $a0, $zero, 0x18\n\tjal func_800F8FB8\n\taddiu $a0, $zero, 0x19\n\tjal func_800F654C\n\taddiu $a0, $zero, 0xA\n\tjal func_800F824C\n\taddiu $a0, $zero, 0x1A\n\tjal func_800F8FB8\n\taddiu $a0, $zero, 0x1B\n\tjal func_80174F0C\n\tnop\n\tjal func_800F71DC\n\taddu $a0, $zero, $zero\n\t.L80118D80:\n\tjal func_800F6B68\n\taddiu $a0, $zero, 0x1003\n\tjal func_800F6434\n\taddiu $a0, $zero, 0x80\n\tbnez $v0, .L80118E10\n\tnop\n\tjal func_800F9644\n\taddiu $a0, $zero, 0x20\n\tjal func_800F6BE0\n\taddiu $a0, $zero, 0x100B\n\tjal func_800F5410\n\tnop\n\tjal func_800F3C3C\n\taddiu $a0, $zero, 0x30\n\tjal func_800F3F94\n\taddu $a0, $v0, $zero\n\tlui $v0, %hi(D_8019ED54)\n\tlw $v0, %lo(D_8019ED54)($v0)\n\tnop\n\tlhu $a0, 0x0($v0)\n\tjal func_800F3B04\n\taddiu $a0, $a0, 0x100D\n\tjal func_800F5520\n\taddu $a0, $v0, $zero\n\tjal func_800F53C0\n\tnop\n\tbeqz $v0, .L80118DF8\n\tnop\n\tjal func_800F6BE0\n\taddiu $a0, $zero, 0x100D\n\t.L80118DF8:\n\tjal func_800F87DC\n\taddiu $a0, $zero, 0x100B\n\tjal func_800F6558\n\taddu $a0, $zero, $zero\n\tjal func_800F9660\n\taddiu $a0, $zero, 0x20\n\t.L80118E10:\n\tjal func_80117DF8\n\tnop\n\tjal func_800F5958\n\taddiu $a0, $zero, 0x140\n\tjal func_800F53D4\n\tnop\n\tbeqz $v0, .L80118D80\n\tnop\n\tjal func_8011EA5C\n\tnop\n\tj .L80118EB0\n\tnop\n\t.L80118E40:\n\tjal func_800F71DC\n\taddu $a0, $zero, $zero\n\t.L80118E48:\n\tjal func_800F6B68\n\taddiu $a0, $zero, 0x1003\n\tjal func_800F6434\n\taddiu $a0, $zero, 0x80\n\tbnez $v0, .L80118E88\n\tnop\n\tjal func_800F9644\n\taddiu $a0, $zero, 0x20\n\tjal func_800F6BE0\n\taddiu $a0, $zero, 0x100D\n\tjal func_800F87DC\n\taddiu $a0, $zero, 0x100B\n\tjal func_800F6558\n\taddu $a0, $zero, $zero\n\tjal func_800F9660\n\taddiu $a0, $zero, 0x20\n\t.L80118E88:\n\tjal func_80117DF8\n\tnop\n\tjal func_800F5958\n\taddiu $a0, $zero, 0x140\n\tjal func_800F53D4\n\tnop\n\tbeqz $v0, .L80118E48\n\tnop\n\tjal func_8011EA5C\n\tnop\n\t.L80118EB0:\n\tlw $ra, 0x10($sp)\n\tnop\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
+  "\t.set reorder\n"
+  "\t.set\treorder\n"
+  ".size func_80118D20, .-func_80118D20\n"
+);

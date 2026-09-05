@@ -1,0 +1,12 @@
+#include "common.h"
+__asm__(
+  ".globl func_80178730\n"
+  ".type func_80178730, @function\n"
+  "func_80178730:\n"
+  "\t.set\tnoreorder\n"
+  "\t.set noreorder\n"
+  "\taddiu $sp, $sp, -0x30\n\tsw $s1, 0x1C($sp)\n\tlui $s1, %hi(D_801A0A90)\n\taddiu $s1, $s1, %lo(D_801A0A90)\n\taddu $a0, $s1, $zero\n\taddu $a1, $zero, $zero\n\taddu $a2, $zero, $zero\n\taddiu $a3, $zero, 0x100\n\tsw $s2, 0x20($sp)\n\taddiu $s2, $zero, 0xF0\n\tsw $ra, 0x2C($sp)\n\tsw $s4, 0x28($sp)\n\tsw $s3, 0x24($sp)\n\tsw $s0, 0x18($sp)\n\tjal func_801970A8\n\tsw $s2, 0x10($sp)\n\tlui $s3, %hi(D_801B57A0)\n\taddiu $s3, $s3, %lo(D_801B57A0)\n\taddu $a0, $s3, $zero\n\taddu $a1, $zero, $zero\n\taddiu $a2, $zero, 0xF0\n\taddiu $a3, $zero, 0x100\n\tjal func_801970A8\n\tsw $s2, 0x10($sp)\n\taddiu $a0, $s1, 0x5C\n\taddu $a1, $zero, $zero\n\taddiu $a2, $zero, 0xF0\n\taddiu $a3, $zero, 0x100\n\tjal func_80197168\n\tsw $s2, 0x10($sp)\n\tlui $a0, %hi(D_801B57FC)\n\taddiu $a0, $a0, %lo(D_801B57FC)\n\taddu $a1, $zero, $zero\n\taddu $a2, $zero, $zero\n\taddiu $a3, $zero, 0x100\n\tjal func_80197168\n\tsw $s2, 0x10($sp)\n\tlui $s0, %hi(D_801A0A30)\n\taddiu $s0, $s0, %lo(D_801A0A30)\n\taddu $a0, $s0, $zero\n\taddiu $a1, $zero, 0x100\n\taddu $a2, $zero, $zero\n\taddiu $a3, $zero, 0x100\n\tjal func_801970A8\n\tsw $s2, 0x10($sp)\n\taddu $s2, $zero, $zero\n\tlui $v0, %hi(D_801DFD68)\n\taddiu $s4, $v0, %lo(D_801DFD68)\n\taddiu $v1, $zero, 0x8\n\taddiu $a0, $zero, 0xE0\n\taddiu $a1, $zero, -0x2\n\tlui $v0, (0x14D28 >> 16)\n\taddu $v0, $s1, $v0\n\tsh $v1, 0x66($s1)\n\tsh $a0, 0x6A($s1)\n\tsh $a1, 0x64($s1)\n\tsh $a0, (0x14D7A & 0xFFFF)($v0)\n\taddiu $a0, $zero, 0x1\n\tsh $v1, (0x14D76 & 0xFFFF)($v0)\n\tsh $a1, (0x14D74 & 0xFFFF)($v0)\n\tsb $a0, 0x18($s1)\n\tsb $v1, 0x19($s1)\n\tsb $v1, 0x1A($s1)\n\tsb $v1, 0x1B($s1)\n\tsb $a0, (0x14D28 & 0xFFFF)($v0)\n\tsb $v1, 0x19($s3)\n\tsb $v1, 0x1A($s3)\n\tsb $v1, 0x1B($s3)\n\tsb $zero, 0x18($s0)\n\tsb $zero, 0x19($s0)\n\tsb $zero, 0x1A($s0)\n\tsb $zero, 0x1B($s0)\n\t.L80178850:\n\taddiu $a0, $zero, 0x200\n\tjal func_801971E8\n\taddiu $a1, $s2, 0x1C0\n\tsh $v0, 0x0($s4)\n\taddiu $s2, $s2, 0x1\n\tslti $v0, $s2, 0x40\n\tbnez $v0, .L80178850\n\taddiu $s4, $s4, 0x2\n\tlw $ra, 0x2C($sp)\n\tlw $s4, 0x28($sp)\n\tlw $s3, 0x24($sp)\n\tlw $s2, 0x20($sp)\n\tlw $s1, 0x1C($sp)\n\tlw $s0, 0x18($sp)\n\tjr $ra\n\taddiu $sp, $sp, 0x30\n"
+  "\t.set reorder\n"
+  "\t.set\treorder\n"
+  ".size func_80178730, .-func_80178730\n"
+);

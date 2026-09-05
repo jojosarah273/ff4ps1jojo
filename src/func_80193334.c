@@ -1,0 +1,12 @@
+#include "common.h"
+__asm__(
+  ".globl func_80193334\n"
+  ".type func_80193334, @function\n"
+  "func_80193334:\n"
+  "\t.set\tnoreorder\n"
+  "\t.set noreorder\n"
+  "\tlui $v0, %hi(D_8019CF44)\n\tlw $v0, %lo(D_8019CF44)($v0)\n\taddiu $sp, $sp, -0x30\n\tsw $ra, 0x28($sp)\n\tsw $s5, 0x24($sp)\n\tsw $s4, 0x20($sp)\n\tsw $s3, 0x1C($sp)\n\tsw $s2, 0x18($sp)\n\tsw $s1, 0x14($sp)\n\tsw $s0, 0x10($sp)\n\tlw $v0, 0x0($v0)\n\tnop\n\tsrl $v0, $v0, 24\n\tandi $s1, $v0, 0x7F\n\tbeqz $s1, .L80193410\n\tnop\n\taddiu $s4, $zero, 0x1\n\tlui $s3, (0xFFFFFF >> 16)\n\tori $s3, $s3, (0xFFFFFF & 0xFFFF)\n\tlui $s5, %hi(D_8019CF48)\n\taddiu $s5, $s5, %lo(D_8019CF48)\n\t.L80193388:\n\tbeqz $s1, .L801933EC\n\taddu $s0, $zero, $zero\n\taddu $s2, $s5, $zero\n\t.L80193394:\n\tslti $v0, $s0, 0x7\n\tbeqz $v0, .L801933EC\n\tandi $v0, $s1, 0x1\n\tbeqz $v0, .L801933DC\n\taddiu $v0, $s0, 0x18\n\tlui $a0, %hi(D_8019CF44)\n\tlw $a0, %lo(D_8019CF44)($a0)\n\tsllv $v0, $s4, $v0\n\tlw $v1, 0x0($a0)\n\tor $v0, $v0, $s3\n\tand $v1, $v1, $v0\n\tsw $v1, 0x0($a0)\n\tlw $v0, 0x0($s2)\n\tnop\n\tbeqz $v0, .L801933DC\n\tnop\n\tjalr $v0\n\tnop\n\t.L801933DC:\n\taddiu $s2, $s2, 0x4\n\tsrl $s1, $s1, 1\n\tbnez $s1, .L80193394\n\taddiu $s0, $s0, 0x1\n\t.L801933EC:\n\tlui $v0, %hi(D_8019CF44)\n\tlw $v0, %lo(D_8019CF44)($v0)\n\tnop\n\tlw $v0, 0x0($v0)\n\tnop\n\tsrl $v0, $v0, 24\n\tandi $s1, $v0, 0x7F\n\tbnez $s1, .L80193388\n\tnop\n\t.L80193410:\n\tlui $a1, %hi(D_8019CF44)\n\tlw $a1, %lo(D_8019CF44)($a1)\n\tnop\n\tlw $v0, 0x0($a1)\n\tlui $v1, (0xFF000000 >> 16)\n\tand $v0, $v0, $v1\n\tlui $v1, (0x80000000 >> 16)\n\tbeq $v0, $v1, .L80193448\n\tnop\n\tlw $v0, 0x0($a1)\n\tnop\n\tandi $v0, $v0, 0x8000\n\tbeqz $v0, .L80193490\n\tnop\n\t.L80193448:\n\tlui $a0, %hi(D_800F3750)\n\taddiu $a0, $a0, %lo(D_800F3750)\n\tlw $a1, 0x0($a1)\n\tjal func_8018F0C8\n\taddu $s0, $zero, $zero\n\t.L8019345C:\n\tlui $a0, %hi(D_800F376C)\n\taddiu $a0, $a0, %lo(D_800F376C)\n\taddu $a1, $s0, $zero\n\tlui $v0, %hi(D_8019CF68)\n\tlw $v0, %lo(D_8019CF68)($v0)\n\tsll $v1, $s0, 4\n\taddu $v1, $v1, $v0\n\tlw $a2, 0x0($v1)\n\tjal func_8018F0C8\n\taddiu $s0, $s0, 0x1\n\tslti $v0, $s0, 0x7\n\tbnez $v0, .L8019345C\n\tnop\n\t.L80193490:\n\tlw $ra, 0x28($sp)\n\tlw $s5, 0x24($sp)\n\tlw $s4, 0x20($sp)\n\tlw $s3, 0x1C($sp)\n\tlw $s2, 0x18($sp)\n\tlw $s1, 0x14($sp)\n\tlw $s0, 0x10($sp)\n\tjr $ra\n\taddiu $sp, $sp, 0x30\n"
+  "\t.set reorder\n"
+  "\t.set\treorder\n"
+  ".size func_80193334, .-func_80193334\n"
+);

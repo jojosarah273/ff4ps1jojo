@@ -3,7 +3,12 @@
 Byte-matching decompilation of **Final Fantasy IV** (PlayStation, USA) main
 executable `ISODUMP/slus_013.60`, with the explicit goal of 100% match.
 
-**Status: 457 / 2516 functions matched (18.2%)** — see `PROGRESS.md`.
+**Status: 524 / 2516 functions matched (20.8%)** — see `PROGRESS.md`.
+
+Byte-level map of the whole binary is the active push: every function gets
+byte-verified (either as decompiled C or as sag2c-converted assembly tagged
+`modern-asm` in `expected/lanes.txt`); C conversion then proceeds per-function
+against the verified map.
 
 ## Layout
 
@@ -17,14 +22,17 @@ tools/maspsx/         vendored maspsx (patched, see below)
 tools/psyq/           PsyQ 4.4 CC1PSX.EXE for the era lane (gitignored)
 tools/sweep.py        small-function pattern classifier
 tools/try_match.py    build+diff one candidate
+tools/sas2c.py        nonmatching .s -> byte-accurate top-of-file asm .c
 tools/gen_callers.py  straight-line const-arg caller-chain generator
 tools/gen_loop_callers.py  loop-hub (do/while) caller generator
+tools/scan_stubs.py / tools/emit_stubs.py  PSYQ kernel-syscall stub family
+tools/ladder_sweep.py batch gcc-2.95.2 rung tester
+tools/c89fix.py       hoist declarations (gcc-2.9x C89 strictness)
 tools/bulk.py         batch classify->emit->build->diff->finalize runner
 diff_settings.py      asm-differ configuration
 Makefile              build lanes
 PROGRESS.md           match ledger + blockers
 pcsx-redux/           emulator for debug/testing (gitignored, built in-tree)
-```
 
 ## Toolchain
 
@@ -66,6 +74,17 @@ make psx FUNC=func_XXXX        # wine CC1PSX → maspsx → diff
 - `.extern sym, size` with `size <= -G threshold` marks the symbol as a
   gp-relative sbss member (ASPSX behavior), so CC1PSX's bare symbol refs
   become `%gp_rel(sym)($gp)`.
+
+### Kernel-syscall classes (solved via inline asm)
+PSYQ dispatches libc/kernel/PC-link functions through tiny jr-$t2 stubs
+(jump 0xA0/0xB0, syscall code in $t1) and `break 0,N` syscalls. These have no
+C representation, so they (and flavor-blocked libgcc/libgpu routines) are
+matched with `__asm__ __volatile__(...)` + `__builtin_unreachable()` (short)
+or `tools/sas2c.py` top-of-file asm (long). Notes:
+- maspsx tracks `.set<TAB>noreorder` (dropped from output) but passes
+  `.set noreorder` (space) through to GNU as — emit BOTH in top-of-file asm.
+- maspsx can't parse `break 0,N` or spaced `sltu` — use `.word` encodings /
+  compact `sltu $d,$s,$t`.
 
 ## Make targets
 

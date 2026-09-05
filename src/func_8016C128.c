@@ -1,0 +1,12 @@
+#include "common.h"
+__asm__(
+  ".globl func_8016C128\n"
+  ".type func_8016C128, @function\n"
+  "func_8016C128:\n"
+  "\t.set\tnoreorder\n"
+  "\t.set noreorder\n"
+  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x10($sp)\n\tjal func_800F71DC\n\taddiu $a0, $zero, 0x6\n\tjal func_8016C6FC\n\tnop\n\tjal func_800F9644\n\taddiu $a0, $zero, 0x20\n\tjal func_800F6658\n\taddiu $a0, $zero, 0x80\n\tjal func_800F5410\n\tnop\n\tjal func_800F3C3C\n\taddiu $a0, $zero, 0x70\n\tjal func_800F3F94\n\taddu $a0, $v0, $zero\n\tjal func_800F8274\n\taddiu $a0, $zero, 0x4B\n\tjal func_800F6658\n\taddiu $a0, $zero, 0x82\n\tjal func_800F5410\n\tnop\n\tjal func_800F3C3C\n\taddiu $a0, $zero, 0x72\n\tjal func_800F3F94\n\taddu $a0, $v0, $zero\n\tjal func_800F4064\n\taddiu $a0, $zero, 0xC\n\tjal func_800F8274\n\taddiu $a0, $zero, 0x4D\n\tjal func_800F971C\n\tnop\n\tjal func_800F9660\n\taddiu $a0, $zero, 0x20\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x4\n\tjal func_800F824C\n\taddiu $a0, $zero, 0x51\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x2\n\tjal func_8016AA54\n\tnop\n\tjal func_800F71DC\n\taddiu $a0, $zero, 0x8\n\tjal func_8016C6FC\n\tnop\n\tjal func_800F9644\n\taddiu $a0, $zero, 0x20\n\tjal func_800F6658\n\taddiu $a0, $zero, 0x84\n\tjal func_800F5410\n\tnop\n\tjal func_800F3C3C\n\taddiu $a0, $zero, 0x70\n\tjal func_800F3F94\n\taddu $a0, $v0, $zero\n\tjal func_800F8274\n\taddiu $a0, $zero, 0x4B\n\tjal func_800F6658\n\taddiu $a0, $zero, 0x86\n\tjal func_800F5410\n\tnop\n\tjal func_800F3C3C\n\taddiu $a0, $zero, 0x72\n\tjal func_800F3F94\n\taddu $a0, $v0, $zero\n\tjal func_800F4064\n\taddiu $a0, $zero, 0xC\n\tjal func_800F8274\n\taddiu $a0, $zero, 0x4D\n\tjal func_800F971C\n\tnop\n\tjal func_800F9660\n\taddiu $a0, $zero, 0x20\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x4\n\tjal func_800F824C\n\taddiu $a0, $zero, 0x51\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x3\n\tjal func_8016AA54\n\tnop\n\tlw $ra, 0x10($sp)\n\tnop\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
+  "\t.set reorder\n"
+  "\t.set\treorder\n"
+  ".size func_8016C128, .-func_8016C128\n"
+);
