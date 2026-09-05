@@ -127,9 +127,22 @@ Both requested tasks done:
   store order flavor), plus the bigger libgpu funcs (ResetGraph/DrawSync/...)
   which dispatch through the softgpu function table (D_8019DB50).
 
+### 2025-09-05 — soft-float set complete + SDK GPU funcs via sas2c
+- **libgcc soft-float COMPLETE**: __eqsf2 (naked asm + `.set<TAB>noreorder`
+  trick: maspsx only tracks TAB form), __fixsfsi, __ltsf2, __subsf3,
+  __addsf3 (105 insns, auto-converted) + _err_math (kernel-error→DeliverEvent
+  dispatcher). All via inline-asm/top-asm where C is flavor-blocked.
+- **tools/sas2c.py** converts a nonmatching .s to byte-accurate top-of-file
+  asm .c (labels placed by vaddr, sltu compacted for maspsx's parser).
+  Applied to 10 small SDK funcs (SetDefDispEnv, SetDumpFnt, OpenTIM,
+  SYS/INTR attributions).
+- maspsx quirk: `.set\tnoreorder` (TAB) is tracked by maspsx and DROPPED
+  from output; `.set noreorder` (SPACE) passes through to GNU as. Use BOTH.
+- Remaining medium/large SDK funcs (CdRead/CdControl/ResetGraph/DrawOTag/
+  FntOpen/FntFlush/ratan2/DsIntToPos...) = proper C work, next session.
+
 ## Status
-- Matched: 508 / 2516 (20.2%) — session 3 adds: 39 kernel stubs, 3 break
-  syscalls, 4 SDK funcs + earlier this session: 462 baseline — this session: +270 (201 hub callers, 48
+- Matched: 524 / 2516 (20.8%) — this session: 192 -> 524 (+332) — this session: +270 (201 hub callers, 48
   straights, 14+1 loop callers, 5 ladder-2.95.2, 1 bitpack)
 - Blocked/deferred: ~16 known classes (many now named/understood via SDK)
 - Remaining nonmatchings: 2059
