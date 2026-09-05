@@ -56,9 +56,19 @@ server. Verified the FULL toolchain builds and diffs end-to-end on all 3 lanes.
 - `bash tools/check_integrity.sh`  -> OK
 
 ## Status
-- Matched: 188 / 2516 (7.5%) (6.8%) (4.8%) (4.5%)
+- Matched: 193 -> 394 / 2516 (15.7%) — 202 matched this session on new machine
 - Blocked/deferred: ~16 (see below)
-- Remaining nonmatchings: 2483
+- Remaining nonmatchings: 2122
+
+### 2025-09-05 — bulk finalize: 201 hub sequence-callers (psx lane) + func_801971E8
+Previous session left ~600 bulk-generated caller candidates in src/ unverified.
+Verified ALL 504 candidates on modern+psx+psxs lanes:
+- 201 hub sequence-callers (jal chains w/ constants) verify CURRENT(0) on the
+  psx lane — finalized (INCLUDE_ASM stripped, nonmatchings deleted, lanes.txt).
+- func_801971E8 (bit-packing) matched on psx (getter shape).
+- Remaining blockers confirmed: abs getset/accessors (£v0-£at merge), byte-pair
+  fresh-register reloads (£a1), table lui+addu folds, jr-£t2 trampolines — all
+  still rung-flavored/blocked as before.
 
 ## Matched (33)
 Initial: func_80169148
