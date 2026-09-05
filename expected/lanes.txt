@@ -24,3 +24,4 @@ psx func_800F9660
 psx func_800F9644
 psx func_80187AEC
 psx func_80187C20
+psx func_801971E8
