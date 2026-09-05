@@ -4238,8 +4238,6 @@ INCLUDE_ASM("asm/nonmatchings/main", func_801987B0);
 
 INCLUDE_ASM("asm/nonmatchings/main", func_80198860);
 
-INCLUDE_ASM("asm/nonmatchings/main", func_80198910);
-
 INCLUDE_ASM("asm/nonmatchings/main", func_80198970);
 
 INCLUDE_ASM("asm/nonmatchings/main", func_80198990);
