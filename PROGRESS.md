@@ -6,6 +6,55 @@ Splitter: splat 0.50.0 (`slus_013.60.yaml`), 2516 initial functions
 Pipeline: mipsel-linux-gnu-gcc-13 -S -> maspsx (patched) -> GNU as -> .o
 Verify:  asm-differ -o -f build/<f>.o -F build/expected/<f>.o  (0 = match)
 
+## 2025-09-05 — Toolchain reinstall on new machine (Vultr Debian 12, amd64)
+Migrated the working tree from the old exFAT setup to ext4 (home fs) on a fresh
+server. Verified the FULL toolchain builds and diffs end-to-end on all 3 lanes.
+
+### Packages installed (apt, with `sudo`)
+- `git make python3-pip python3-venv`
+- `gcc-mipsel-linux-gnu binutils-mipsel-linux-gnu`  (gcc 12.2.0 / binutils 2.40)
+- `wine64 wine32 winbind`  (+ enabled i386 dpkg arch for wine32)
+- `dpkg --add-architecture i386` was required before wine32 would install.
+
+### Compiler-name compatibility
+- Debian 12 only ships `mipsel-linux-gnu-gcc-12`; the Makefile calls
+  `mipsel-linux-gnu-gcc-13`. Created a shim:
+  `sudo ln -sf /usr/bin/mipsel-linux-gnu-gcc /usr/local/bin/mipsel-linux-gnu-gcc-13`
+  (12.2.0 target; identical `-mips1 -mfp32 -G8` PSX codegen class).
+
+### Python venv (`~/.venvs/ff4_decomp`)
+- `python3 -m venv ~/.venvs/ff4_decomp`
+- `pip install splat64==0.50.0` then, to satisfy splat's import chain:
+  `spimdisasm n64img pygfxd crunch64` (older splat needs these optional deps
+  manually; keep them installed or `splat` fails to import).
+- `pip install git+https://github.com/simonlindholm/asm-differ.git`
+  (NOT on PyPI under `asm-differ`; install from the git repo).
+
+### Native gcc rungs
+- `tools/gcc-260/cc1`, `tools/gcc-272/{cc1,cpp,gcc}`, `tools/gcc-272cdk/cc1`
+  needed `chmod +x` (exFAT source had no exec bits; ext4 requires them).
+
+### Git / remote
+- Repo re-initialized from `origin` = https://github.com/jojosarah273/ff4ps1jojo
+- Restored 2 missing `asm/data/*.s` and 14 missing `src/*.c` from origin/main
+  (they were absent from the copied working tree).
+- Kept 3 local-only src candidates: `func_80179248`, `func_8018F688`,
+  `func_80190F50` (not yet pushed upstream).
+- `tools/maspsx` = vendored patched copy from origin/main (confirmed `%gp_rel`
+  passthrough + `.extern<=-G` sbss patches present).
+- `.gitignore` + `pcsx-redux/` (emulator, built from source, untracked).
+
+### Makefile fix
+- `psxs_src:` target only created `build/psx`, but the `psxs` lane writes to
+  `build/psxs/` -> added `mkdir -p build/psxs` so `make psxs FUNC=...` works
+  from a clean tree.
+
+### Verified lanes (all build + diff cleanly)
+- `make build/func_XXX.o`     (modern gcc-13 shim -> maspsx)  OK
+- `make psx FUNC=...`         (wine CC1PSX.EXE -O2)          OK
+- `make psxs FUNC=...`        (wine CC1PSX -O2 -fschedule)   OK
+- `bash tools/check_integrity.sh`  -> OK
+
 ## Status
 - Matched: 188 / 2516 (7.5%) (6.8%) (4.8%) (4.5%)
 - Blocked/deferred: ~16 (see below)

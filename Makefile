@@ -69,6 +69,7 @@ build/psxs/$(FUNC).o: src/$(FUNC).c | psxs_src
 
 psxs_src:
 	mkdir -p build/psx
+	mkdir -p build/psxs
 
 psxs: FUNC ?= func_8011EA9C
 psxs: build/psxs/$(FUNC).o build/expected/$(FUNC).o

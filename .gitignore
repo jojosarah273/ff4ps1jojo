@@ -26,5 +26,8 @@ build/
 # PsyQ SDK binaries (wine; not tracked)
 /tools/psyq/
 
+# pcsx-redux emulator (debug/testing, built from source, not tracked)
+/pcsx-redux/
+
 # build outputs
 /build/
