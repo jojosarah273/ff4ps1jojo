@@ -289,3 +289,8 @@ psx func_80122A24
 psx func_80128750
 psx func_8012D204
 psx func_800FE5D4
+ladder-2.95.2 func_800F516C
+ladder-2.95.2 func_800F5CCC
+ladder-2.95.2 func_800F6214
+ladder-2.95.2 func_8016B650
+ladder-2.95.2 func_80179500
