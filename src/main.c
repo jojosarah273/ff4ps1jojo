@@ -4007,8 +4007,6 @@ INCLUDE_ASM("asm/nonmatchings/main", func_8019307C);
 
 INCLUDE_ASM("asm/nonmatchings/main", func_8019311C);
 
-INCLUDE_ASM("asm/nonmatchings/main", func_80193194);
-
 INCLUDE_ASM("asm/nonmatchings/main", func_801931C8);
 
 INCLUDE_ASM("asm/nonmatchings/main", func_80193220);
@@ -4022,10 +4020,6 @@ INCLUDE_ASM("asm/nonmatchings/main", func_801932E8);
 INCLUDE_ASM("asm/nonmatchings/main", func_80193334);
 
 INCLUDE_ASM("asm/nonmatchings/main", func_801934B4);
-
-INCLUDE_ASM("asm/nonmatchings/main", func_80193560);
-
-INCLUDE_ASM("asm/nonmatchings/main", func_80193588);
 
 INCLUDE_ASM("asm/nonmatchings/main", func_801935C8);
 
@@ -4088,13 +4082,9 @@ INCLUDE_ASM("asm/nonmatchings/main", func_801951E0);
 
 INCLUDE_ASM("asm/nonmatchings/main", func_801953D8);
 
-INCLUDE_ASM("asm/nonmatchings/main", func_80195648);
-
 INCLUDE_ASM("asm/nonmatchings/main", func_80195668);
 
 INCLUDE_ASM("asm/nonmatchings/main", func_80195700);
-
-INCLUDE_ASM("asm/nonmatchings/main", func_80195798);
 
 INCLUDE_ASM("asm/nonmatchings/main", func_801957B4);
 
@@ -4107,12 +4097,8 @@ INCLUDE_ASM("asm/nonmatchings/main", func_80195B5C);
 
 INCLUDE_ASM("asm/nonmatchings/main", func_80195D98);
 
-INCLUDE_ASM("asm/nonmatchings/main", func_80196018);
-
 void func_8019602C(void) {
 }
-
-INCLUDE_ASM("asm/nonmatchings/main", func_80196034);
 
 INCLUDE_ASM("asm/nonmatchings/main", func_80196074);
 
@@ -4127,8 +4113,6 @@ INCLUDE_ASM("asm/nonmatchings/main", func_801963C0);
 INCLUDE_ASM("asm/nonmatchings/main", func_80196620);
 
 INCLUDE_ASM("asm/nonmatchings/main", func_8019675C);
-
-INCLUDE_ASM("asm/nonmatchings/main", func_80196898);
 
 INCLUDE_ASM("asm/nonmatchings/main", func_801968CC);
 
@@ -4156,8 +4140,6 @@ INCLUDE_ASM("asm/nonmatchings/main", func_80197038);
 
 INCLUDE_ASM("asm/nonmatchings/main", func_801970A8);
 
-INCLUDE_ASM("asm/nonmatchings/main", func_80197168);
-
 INCLUDE_ASM("asm/nonmatchings/main", func_801971A8);
 
 
@@ -4170,8 +4152,6 @@ INCLUDE_ASM("asm/nonmatchings/main", func_80197308);
 
 
 INCLUDE_ASM("asm/nonmatchings/main", func_801973B8);
-
-INCLUDE_ASM("asm/nonmatchings/main", func_80197458);
 
 INCLUDE_ASM("asm/nonmatchings/main", func_80197468);
 

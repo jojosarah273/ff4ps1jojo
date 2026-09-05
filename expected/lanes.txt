@@ -346,3 +346,13 @@ modern-asm func_80198910
 modern-asm func_80198860
 modern-asm func_80198990
 modern-asm func_80198300
+modern-asm func_80197458
+modern-asm func_80196018
+modern-asm func_80195798
+modern-asm func_80195648
+modern-asm func_80193194
+modern-asm func_80193560
+modern-asm func_80196898
+modern-asm func_80197168
+modern-asm func_80193588
+modern-asm func_80196034
