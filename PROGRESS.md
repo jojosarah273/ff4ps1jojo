@@ -96,6 +96,19 @@ modern recompile with moddable source (widescreen/mods/launcher). Research:
 3. Long-term: swap byte-matched C into the psxrecomp runtime as it grows →
    clean moddable codebase while recomp runs the rest.
 
+### 2025-09-05 — MILESTONE: native FF4 recompiled & booting (psxrecomp)
+- `psxrecomp` (mstan v4) recompiler+game built; one-shot CLI:
+  `psxrecomp build --disc ff4.iso --bios SCPH1001.BIN --output /tmp/ff4_recomp`
+  produced generated/ C for the full 0xAD000 text (load 0x800F2400, same as
+  splat) + BIOS + dispatch + game.toml.
+- Native build: `-DPSX_RECOMP_UI=OFF -DPSX_SDL_BACKEND=SDL2 -DPSX_REWIND=OFF
+  -DCMAKE_PREFIX_PATH=/usr/local` (Debian cc doesn't see /usr/local/include;
+  SDL3 header probe fails -> used apt SDL2). Binary: FF4_Recompiled (28MB
+  x86-64). BOOTS: loads SCPH1001.BIN, disc SLUS-01360 NTSC-U detected,
+  OpenGL renderer up; needs `--bios <path>` (no GUI picker headless); ALSA
+  warnings only (no sound card).
+- Framework linked at /tmp/ff4_recomp/psxrecomp -> /tmp/psxrecomp.
+
 ## Status
 - Matched: 462 / 2516 (18.4%) — this session: +270 (201 hub callers, 48
   straights, 14+1 loop callers, 5 ladder-2.95.2, 1 bitpack)
