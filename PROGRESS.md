@@ -109,8 +109,27 @@ modern recompile with moddable source (widescreen/mods/launcher). Research:
   warnings only (no sound card).
 - Framework linked at /tmp/ff4_recomp/psxrecomp -> /tmp/psxrecomp.
 
+### 2025-09-05 — PSYQ kernel-syscall classes SOLVED (Task 1+2)
+Both requested tasks done:
+- **jr-$t2 stubs = PSYQ kernel dispatch** (jump 0xA0/0xB0/0xC0, syscall code
+  in $t1): 39 matched via inline asm + __builtin_unreachable(). Covers the
+  event API (DeliverEvent/OpenEvent/...), libc-in-kernel (memcpy/strlen/
+  strncmp were stubs!), GPU/SPU flush stubs, OPEN/CLOSE/etc wrappers, and
+  multi-stub tables (func_80197718 = POSIX fn table). tools/{scan,emit}_stubs.py.
+- **break 0,N = PSYQ PC-link syscalls**: func_80198208 (PClseek, break 263),
+  981D8 (259), 982E8 (261) matched as naked fn + `.word` encoding +
+  `return (v0==0) ? v1 : -1` shape. (maspsx can't parse `break 0, 263` -> emit
+  `.word 0x0000XXCD`.)
+- **SDK source funcs**: CD_set_test_parmnum (inline asm), AddPrim/AddPrims
+  (ladder 2.95.2), CatPrim (psx lane) matched.
+  Lanes: stub classes = modern asm; prim ops = ladder/psx.
+- Deferred: _err_math (kernel-error→DeliverEvent dispatcher; D_8019ECF4/8 abs
+  store order flavor), plus the bigger libgpu funcs (ResetGraph/DrawSync/...)
+  which dispatch through the softgpu function table (D_8019DB50).
+
 ## Status
-- Matched: 462 / 2516 (18.4%) — this session: +270 (201 hub callers, 48
+- Matched: 508 / 2516 (20.2%) — session 3 adds: 39 kernel stubs, 3 break
+  syscalls, 4 SDK funcs + earlier this session: 462 baseline — this session: +270 (201 hub callers, 48
   straights, 14+1 loop callers, 5 ladder-2.95.2, 1 bitpack)
 - Blocked/deferred: ~16 known classes (many now named/understood via SDK)
 - Remaining nonmatchings: 2059
