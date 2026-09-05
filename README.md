@@ -3,7 +3,7 @@
 Byte-matching decompilation of **Final Fantasy IV** (PlayStation, USA) main
 executable `ISODUMP/slus_013.60`, with the explicit goal of 100% match.
 
-**Status: 188 / 2516 functions matched (7.5%)** — see `PROGRESS.md`.
+**Status: 457 / 2516 functions matched (18.2%)** — see `PROGRESS.md`.
 
 ## Layout
 
@@ -17,9 +17,13 @@ tools/maspsx/         vendored maspsx (patched, see below)
 tools/psyq/           PsyQ 4.4 CC1PSX.EXE for the era lane (gitignored)
 tools/sweep.py        small-function pattern classifier
 tools/try_match.py    build+diff one candidate
+tools/gen_callers.py  straight-line const-arg caller-chain generator
+tools/gen_loop_callers.py  loop-hub (do/while) caller generator
+tools/bulk.py         batch classify->emit->build->diff->finalize runner
 diff_settings.py      asm-differ configuration
 Makefile              build lanes
 PROGRESS.md           match ledger + blockers
+pcsx-redux/           emulator for debug/testing (gitignored, built in-tree)
 ```
 
 ## Toolchain
@@ -32,6 +36,19 @@ PROGRESS.md           match ledger + blockers
 | verify | `asm-differ -o -f … -F …` (`CURRENT (0)` = match) |
 
 Load map: EXE code at file `0x800` → vram `0x800F2400`; `gp = 0x8019ECFC`.
+
+### Three lanes (order of preference: modern → psx → psxs)
+- `make diff FUNC=...` — gcc-13 native, no wine. Matches void empties, gp
+  accessors, zero-stores, getter/mask/simple arithmetic.
+- `make psx FUNC=...` — wine CC1PSX.EXE `-O2 -G8`. Matches store batches,
+  *g=*p copies, hub sequence-callers (jal chains with consts), loop callers.
+- `make psxs FUNC=...` — CC1PSX `-O2 -fschedule-insns`. Matches wrapper/prologue
+  shapes where scheduling matters.
+
+Real-world finding: bulk-generated caller candidates often need their args and
+loop structure corrected by hand before they build. See tools/gen_callers.py
+and tools/gen_loop_callers.py. Always verify CURRENT(0) on the exact lane
+recorded in `expected/lanes.txt`.
 
 ### Why two lanes
 The original binary was built with the PsyQ gcc 2.8.1-era compiler. Modern
@@ -68,11 +85,9 @@ splat split slus_013.60.yaml       # re-split / refresh asm
 4. Non-zero → try the era lane once; still stuck → note in `PROGRESS.md`.
 
 ## Filesystem / git notes
-Working tree lives on **exFAT**: no symlinks/exec-bits (invoke scripts via
-`python3`/`bash`), case-insensitive filenames (keep names lowercase),
-128 KB clusters (small-file slack is fine, 61 GB free). exFAT has no
-journaling — push to GitHub regularly:
-`git push origin main` (credential helper configured).
+Working tree is on **ext4** (was exFAT on the original machine). Push to
+GitHub regularly: `git push origin main` (credential helper configured,
+classic PAT in `~/.git-credentials`).
 
 ## References
 - [maspsx](https://github.com/mkst/maspsx) — ASPSX emulation for GNU as
