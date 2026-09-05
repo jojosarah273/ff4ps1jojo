@@ -63,9 +63,43 @@ server. Verified the FULL toolchain builds and diffs end-to-end on all 3 lanes.
 - `make psxs FUNC=...`        (wine CC1PSX -O2 -fschedule)   OK
 - `bash tools/check_integrity.sh`  -> OK
 
+### 2025-09-05 — tool-stack research: Ghidra + psx_ldr + psxrecomp + psyq-obj-parser
+Goal reframed by user: byte-matching is the path, but the END goal is a
+modern recompile with moddable source (widescreen/mods/launcher). Research:
+
+- **ghidra_psx_ldr (lab313ru)** — INSTALLED. Ghidra 12.0.4 (/opt) +
+  openjdk-21 (Temurin, /opt/java) + extension (user Extensions dir).
+  Headless import of ISODUMP/slus_013.60 + BIOS SCPH1001.BIN works; dumps
+  decompiled C for all 2518 funcs to /tmp/ff4_ghidra/ALL.txt.
+  - Named 227 funcs (PSYQ/BIOS/kernel: main, memcpy, strlen, CdReset,
+    CdRead, ClearOTagR, DrawOTag, FntPrint, SpuInitM, __addsf3...) and
+    attributed 322 more to SDK lib objects (SYS_OBJ_*, CDR_OBJ_* etc.).
+  - **Solved the jr-$t2 trampoline class**: func_80197648..777A8 are PSYQ
+    BIOS kernel EVENT stubs (DeliverEvent/OpenEvent/CloseEvent/WaitEvent/
+    TestEvent/EnableEvent) hopping to kernel dispatch at 0xB0 — was
+    documented as 'non-C pattern'.
+- **psxrecomp (mstan, v4)** — recompiler + runtime building from source
+  (/tmp/psxrecomp; cmake+inja; no Ghidra needed for basic runs — its own
+  disabler). Target: native FF4 exe for modding. Its per-func C is a
+  correctness oracle (it must RUN the game), usable as seeds.
+- **psyq-obj-parser** (pcsx-redux tree; also decomp.me's backend): parses
+  shipped PsyQ .lib .obj files → ELF; gives byte-truth SDK sources for the
+  227+322 named funcs (verify they're stock, or source them for matching).
+
+### Byte-match supplement loop (new)
+1. Candidate stuck on a lane (400-2000): grab Ghidra decomp from
+   /tmp/ff4_ghidra/ALL.txt as semantic truth (it matched our hand-verified
+   func_80179500 exactly); rewrite src/<f>.c to express those semantics;
+   retry modern/psx/psxs/ladder-2.95.2.
+2. Names for new funcs come from symbols/ghidra_psx_names.txt (commit at
+   each progress point).
+3. Long-term: swap byte-matched C into the psxrecomp runtime as it grows →
+   clean moddable codebase while recomp runs the rest.
+
 ## Status
-- Matched: 457 / 2516 (18.2%) — 265 matched this session on new machine
-- Blocked/deferred: ~16 (see below)
+- Matched: 462 / 2516 (18.4%) — this session: +270 (201 hub callers, 48
+  straights, 14+1 loop callers, 5 ladder-2.95.2, 1 bitpack)
+- Blocked/deferred: ~16 known classes (many now named/understood via SDK)
 - Remaining nonmatchings: 2059
 
 ### 2025-09-05 — session 2: +265 matches to 457 (18.2%)
