@@ -29,7 +29,7 @@ for name in sys.argv[1:]:
         r1 = run(f'wine "{CC1}" -quiet -O2 -fschedule-insns {g0} -mgpOPT -fgnu-linker {i} -o {s}')
         if r1.returncode or not s.exists():
             continue
-        r2 = run(f"python3 tools/maspsx/maspsx.py --run-assembler --dont-expand-li -G8 -Iinclude -o {o} < {s}")
+        r2 = run(f"python3 tools/maspsx/maspsx.py --run-assembler --dont-expand-li {g0} -Iinclude -o {o} < {s}")
         if r2.returncode or not o.exists():
             continue
         n = score(name, o)
