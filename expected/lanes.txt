@@ -333,3 +333,7 @@ modern-asm func_80197D28
 modern-asm func_80197D38
 modern-asm func_80197D48
 modern-asm func_80197E68
+asm func_80191530
+psx func_80197288
+ladder-2.95.2 func_80197208
+ladder-2.95.2 func_80197248
