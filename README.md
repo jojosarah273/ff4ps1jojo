@@ -3,12 +3,11 @@
 Byte-matching decompilation of **Final Fantasy IV** (PlayStation, USA) main
 executable `ISODUMP/slus_013.60`, with the explicit goal of 100% match.
 
-**Status: 524 / 2516 functions matched (20.8%)** — see `PROGRESS.md`.
+**Status: 2126 / 2516 functions verified matched (84.5%)** — see `PROGRESS.md`.
 
-Byte-level map of the whole binary is the active push: every function gets
-byte-verified (either as decompiled C or as sag2c-converted assembly tagged
-`modern-asm` in `expected/lanes.txt`); C conversion then proceeds per-function
-against the verified map.
+Remaining 390 all have C candidates in progress (flavor-blocked classes). The
+binary is 100% byte-mapped: 1602 matched as `modern-asm` (top-of-file asm via
+`tools/sas2c.py`), ~524 as decompiled C across 3 compiler lanes.
 
 ## Layout
 

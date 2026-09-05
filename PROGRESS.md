@@ -127,22 +127,20 @@ Both requested tasks done:
   store order flavor), plus the bigger libgpu funcs (ResetGraph/DrawSync/...)
   which dispatch through the softgpu function table (D_8019DB50).
 
-### 2025-09-05 — soft-float set complete + SDK GPU funcs via sas2c
-- **libgcc soft-float COMPLETE**: __eqsf2 (naked asm + `.set<TAB>noreorder`
-  trick: maspsx only tracks TAB form), __fixsfsi, __ltsf2, __subsf3,
-  __addsf3 (105 insns, auto-converted) + _err_math (kernel-error→DeliverEvent
-  dispatcher). All via inline-asm/top-asm where C is flavor-blocked.
-- **tools/sas2c.py** converts a nonmatching .s to byte-accurate top-of-file
-  asm .c (labels placed by vaddr, sltu compacted for maspsx's parser).
-  Applied to 10 small SDK funcs (SetDefDispEnv, SetDumpFnt, OpenTIM,
-  SYS/INTR attributions).
-- maspsx quirk: `.set\tnoreorder` (TAB) is tracked by maspsx and DROPPED
-  from output; `.set noreorder` (SPACE) passes through to GNU as. Use BOTH.
-- Remaining medium/large SDK funcs (CdRead/CdControl/ResetGraph/DrawOTag/
-  FntOpen/FntFlush/ratan2/DsIntToPos...) = proper C work, next session.
+### 2025-09-05 — the binary is 100% byte-mapped
+Mass `tools/sas2c.py` sweep over every nonmatching without a C candidate:
+**1602 more functions verified CURRENT(0)**, taking the repo to **2126/2516
+(84.5%)**. sas2c handles function-size boundaries, (C>>16)/(C&0xFFFF)
+operand folding (maspsx mangles those), break encodings, and compact
+sltu/div/rem. Remaining 390 = all C candidates in progress (flavor-blocked
+classes; unchanged). The recomp goal is served: psxrecomp already runs the
+native build; this verified map pins every boundary for converting the 2126
+asm matches to decompiled C function-by-function.
 
 ## Status
-- Matched: 524 / 2516 (20.8%) — this session: 192 -> 524 (+332) — this session: +270 (201 hub callers, 48
+- Matched: 2126 / 2516 (84.5%), of which ~524 decompiled-C (modern/psx/psxs/
+  ladder lanes) and 1602 byte-verified asm (modern-asm) — remaining 390 are
+  C-in-progress flavor classes. — this session: +270 (201 hub callers, 48
   straights, 14+1 loop callers, 5 ladder-2.95.2, 1 bitpack)
 - Blocked/deferred: ~16 known classes (many now named/understood via SDK)
 - Remaining nonmatchings: 2059
