@@ -345,3 +345,4 @@ modern-asm func_80198630
 modern-asm func_80198910
 modern-asm func_80198860
 modern-asm func_80198990
+modern-asm func_80198300
