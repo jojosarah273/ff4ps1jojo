@@ -337,3 +337,6 @@ asm func_80191530
 psx func_80197288
 ladder-2.95.2 func_80197208
 ladder-2.95.2 func_80197248
+modern-asm func_80198208
+modern-asm func_801981D8
+modern-asm func_801982E8

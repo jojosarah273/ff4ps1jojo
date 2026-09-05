@@ -4224,15 +4224,9 @@ INCLUDE_ASM("asm/nonmatchings/main", func_80197FB8);
 
 INCLUDE_ASM("asm/nonmatchings/main", func_80198058);
 
-INCLUDE_ASM("asm/nonmatchings/main", func_801981D8);
-
 INCLUDE_ASM("asm/nonmatchings/main", func_801981F8);
 
-INCLUDE_ASM("asm/nonmatchings/main", func_80198208);
-
 INCLUDE_ASM("asm/nonmatchings/main", func_8019822C);
-
-INCLUDE_ASM("asm/nonmatchings/main", func_801982E8);
 
 INCLUDE_ASM("asm/nonmatchings/main", func_80198300);
 
