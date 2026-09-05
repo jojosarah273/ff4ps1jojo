@@ -226,3 +226,17 @@ psx func_80176F60
 psx func_801771AC
 psx func_80177224
 psx func_80177284
+psx func_80102E78
+psx func_80106860
+psx func_80129EF4
+psx func_8014202C
+psx func_80188EA8
+psx func_80102ED8
+psx func_80103B38
+psx func_801068B0
+psx func_80106908
+psx func_80116398
+psx func_8012E700
+psx func_80148BE0
+psx func_8016762C
+psx func_80170084
