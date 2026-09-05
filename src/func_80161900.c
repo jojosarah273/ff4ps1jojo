@@ -1,0 +1,40 @@
+#include "common.h"
+extern void func_800F8F74(u32 v0);
+extern void func_800F71DC(u32 v0);
+extern void func_800F8D00(u32 v0);
+extern void func_800F6240(u32 v0);
+extern void func_800F654C(u32 v0);
+extern void func_800F8188(u32 v0);
+extern void func_800F824C(u32 v0);
+extern void func_800F6630(u32 v0);
+extern void func_8015A374(void);
+extern void func_80153374(void);
+extern void func_800F8768(u32 v0);
+extern void func_800F7270(u32 v0);
+extern void func_8015329C(void);
+void func_80161900(void) {
+    func_800F8F74(0x357C);
+    func_800F71DC(0xA);
+    func_800F8D00(0x357D);
+    func_800F6240(0x390A);
+    func_800F654C(0x19);
+    func_800F8188(0x34C8);
+    func_800F654C(0x10);
+    func_800F8188(0x34C7);
+    func_800F654C(0x22);
+    func_800F8188(0x397B);
+    func_800F654C(0xC);
+    func_800F824C(0xD6);
+    func_800F6630(0xCD);
+    func_8015A374();
+    func_800F654C(0x3);
+    func_80153374();
+    func_800F654C(0x8);
+    func_800F8768(0x2A06);
+    func_800F7270(0xA6);
+    func_800F654C(0x22);
+    func_800F8768(0x2051);
+    func_8015329C();
+    func_800F654C(0x36);
+    func_800F8188(0x34CA);;
+}
