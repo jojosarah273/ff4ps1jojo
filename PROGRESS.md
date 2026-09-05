@@ -6,6 +6,14 @@ Splitter: splat 0.50.0 (`slus_013.60.yaml`), 2516 initial functions
 Pipeline: mipsel-linux-gnu-gcc-13 -S -> maspsx (patched) -> GNU as -> .o
 Verify:  asm-differ -o -f build/<f>.o -F build/expected/<f>.o  (0 = match)
 
+### 2025-09-05 — pcsx-redux built & installed (`pcsx-redux/`, gitignored)
+- Fresh recursive clone (the copied tree was missing submodules); Debian 12
+  has no SDL3, so built `third_party/SDL` (cmake, prefix /usr/local) so
+  `pkg-config sdl3` resolves; then `make` + `make install` (fonts+resources
+  to /usr/local/share/pcsx-redux, binary at pcsx-redux/pcsx-redux).
+- GUI verified by user (X + Chrome Remote Desktop; window opens).
+- Headless flags: `--cli`, `--testmode`, `--no-ui` (see src/core/arguments.cc).
+
 ## 2025-09-05 — Toolchain reinstall on new machine (Vultr Debian 12, amd64)
 Migrated the working tree from the old exFAT setup to ext4 (home fs) on a fresh
 server. Verified the FULL toolchain builds and diffs end-to-end on all 3 lanes.
@@ -56,19 +64,22 @@ server. Verified the FULL toolchain builds and diffs end-to-end on all 3 lanes.
 - `bash tools/check_integrity.sh`  -> OK
 
 ## Status
-- Matched: 193 -> 394 / 2516 (15.7%) — 202 matched this session on new machine
+- Matched: 457 / 2516 (18.2%) — 265 matched this session on new machine
 - Blocked/deferred: ~16 (see below)
-- Remaining nonmatchings: 2122
+- Remaining nonmatchings: 2059
 
-### 2025-09-05 — bulk finalize: 201 hub sequence-callers (psx lane) + func_801971E8
-Previous session left ~600 bulk-generated caller candidates in src/ unverified.
-Verified ALL 504 candidates on modern+psx+psxs lanes:
-- 201 hub sequence-callers (jal chains w/ constants) verify CURRENT(0) on the
-  psx lane — finalized (INCLUDE_ASM stripped, nonmatchings deleted, lanes.txt).
-- func_801971E8 (bit-packing) matched on psx (getter shape).
-- Remaining blockers confirmed: abs getset/accessors (£v0-£at merge), byte-pair
-  fresh-register reloads (£a1), table lui+addu folds, jr-£t2 trampolines — all
-  still rung-flavored/blocked as before.
+### 2025-09-05 — session 2: +265 matches to 457 (18.2%)
+Big haul from the previous session's leftover candidates + new generators:
+- **201 hub sequence-callers finalized** (bulk candidates existed in src/ but
+  were never lane-verified; ALL confirm CURRENT(0) on the psx lane). The prior
+  session's modern-lane-only testing missed them.
+- **14 loop-hub callers**: the old generator lost do-while loops + had wrong
+  arg arity. New tools/gen_loop_callers.py emits prelude + do{}while(cond).
+- **48 straight-line const-arg callers** via tools/gen_callers.py (fixed the
+  missing-semicolon bug) — all psx-lane CURRENT(0).
+- func_801971E8 (bit-packing), func_80102444 (do-while hub) individually.
+- Confirmed blocked once more: abs getset/accessors, byte-pair fresh-register
+  reloads, table lui+addu folds, jr-$t2 trampolines, epilogue-slot nop shapes.
 
 ## Matched (33)
 Initial: func_80169148
