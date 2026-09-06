@@ -1,0 +1,43 @@
+
+void FUN_80178c14(void)
+
+{
+  DAT_801a0018 = 0;
+  DAT_801a0016 = 0;
+  DAT_801a001a = 0x100;
+  DAT_801a0038 = 0xf0;
+  DAT_801a001c = 0xf0;
+  DAT_801a001f = 1;
+  DAT_801a00e3 = 1;
+  DAT_801a0225 = 1;
+  DAT_801a0012 = DAT_8019ee64;
+  DAT_801a0014 = DAT_8019ee6c;
+  DAT_801a00da = DAT_8019ffec;
+  DAT_801a00dc = DAT_8019ffee;
+  DAT_801a00de = DAT_8019fff0;
+  DAT_801a00e0 = DAT_8019fff2;
+  DAT_801a00d6 = DAT_8019ee62;
+  DAT_801a00d8 = DAT_8019ee6a;
+  DAT_801a021c = DAT_8019ffec;
+  DAT_801a021e = DAT_8019ffee;
+  DAT_801a0220 = DAT_8019fff0;
+  DAT_801a0222 = DAT_8019fff2;
+  DAT_801a0218 = DAT_8019ee66;
+  DAT_801a021a = DAT_8019ee6e;
+  DAT_801a022a = DAT_8019ffec;
+  DAT_801a022c = DAT_8019ffee;
+  DAT_801a0233 = 1;
+  DAT_801a022e = DAT_8019fff0;
+  DAT_801a0230 = DAT_8019fff2;
+  DAT_801e01b8 = 0x2a;
+  DAT_801e01bc = 0x12;
+  DAT_801e01c0 = 6;
+  DAT_801dfde8 = 0xffff;
+  DAT_8019ee26 = 0;
+  DAT_801a0226 = DAT_8019ee60;
+  DAT_801a0228 = DAT_8019ee68;
+  return;
+}
+
+
+

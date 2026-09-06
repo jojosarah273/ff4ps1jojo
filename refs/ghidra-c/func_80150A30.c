@@ -1,0 +1,37 @@
+
+void FUN_80150a30(void)
+
+{
+  FUN_800f8210(0x7e3975);
+  (&DAT_800d0000)[*DAT_8019ed4c] = *DAT_8019ed68;
+  *DAT_8019ed4c = *DAT_8019ed4c - 1;
+  FUN_800f9644(0x30);
+  FUN_800f926c();
+  FUN_800f9298();
+  FUN_800f922c();
+  FUN_800f9330();
+  FUN_800f939c();
+  FUN_800f54b8();
+  FUN_800f6558(0);
+  FUN_800f9660(0x20);
+  FUN_800f9644(0x10);
+  FUN_800f71dc(0);
+  FUN_800f9330();
+  FUN_800f94b8();
+  FUN_800f654c(0x7e);
+  FUN_800f9200();
+  FUN_800f9448();
+  FUN_801582d8();
+  FUN_800f9644(0x30);
+  FUN_800f960c();
+  FUN_800f95a0();
+  FUN_800f9410();
+  FUN_800f94b8();
+  FUN_800f9448();
+  *DAT_8019ed4c = *DAT_8019ed4c + 1;
+  *DAT_8019ed68 = (&DAT_800d0000)[*DAT_8019ed4c];
+  return;
+}
+
+
+

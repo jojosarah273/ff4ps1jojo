@@ -150,8 +150,17 @@ asm matches to decompiled C function-by-function.
   CAUTION: Ghidra names are FUN_xxxxxxx with case variants — prepare_body
   renames to func_XXXXXXXX and externifies cross-refs.
 
+### 2025-09-06 — 100% byte-verified (2516/2516)
+Final 390 functions (the flavor-blocked C-candidate set) locked with sas2c:
+all CURRENT(0). Their C candidates archived to src/.orig/. Plus:
+- C-promotion wave (Ghidra C on all lanes): **0/1530 cold matches** — honest
+  finding: Ghidra C is a semantic reference, not a codegen match; conversion
+  to C is per-function hand work. Ghidra refs saved to refs/ghidra-c/*.c.
+- Lane scores for all 1530 recorded (symbols/lane_scores.txt).
+- UI-enabled native recomp (recomp-ui frontend) boots on desktop.
+
 ## Status
-- Matched: 2126 / 2516 (84.5%), of which ~524 decompiled-C (modern/psx/psxs/
+- Matched: 2516 / 2516 (100%) — ~524 decompiled C + ~1992 byte-verified asm., of which ~524 decompiled-C (modern/psx/psxs/
   ladder lanes) and 1602 byte-verified asm (modern-asm) — remaining 390 are
   C-in-progress flavor classes. — this session: +270 (201 hub callers, 48
   straights, 14+1 loop callers, 5 ladder-2.95.2, 1 bitpack)

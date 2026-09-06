@@ -1,0 +1,24 @@
+
+void FUN_8010f08c(void)
+
+{
+  FUN_800f71dc(0x2713);
+  FUN_800f8d00(0x170c);
+  FUN_800f654c(0);
+  FUN_800f8188(0x1700);
+  FUN_800f654c(1);
+  FUN_800f824c(0xc3);
+  FUN_801035b0();
+  FUN_800f654c(0xff);
+  FUN_800f824c(0xa2);
+  FUN_80102494();
+  FUN_800f654c(2);
+  FUN_800f8188(0x1727);
+  FUN_800f71dc(0x2713);
+  FUN_800f8d00(0x1725);
+  FUN_8011ea5c();
+  return;
+}
+
+
+

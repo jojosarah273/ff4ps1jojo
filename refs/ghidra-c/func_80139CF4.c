@@ -1,0 +1,44 @@
+
+void FUN_80139cf4(void)
+
+{
+  FUN_800f654c(0x30);
+  FUN_800f824c(0x3f);
+  FUN_801266f0();
+  FUN_800f71dc(0xfffc);
+  FUN_800f8d6c(0x8d);
+  FUN_800f8d6c(0x8a);
+  FUN_8016ea7c();
+  FUN_80126610();
+  FUN_800f654c(0x13);
+  FUN_800f81e8(0x212c);
+  FUN_800f71dc(0x4040);
+  FUN_800f8d6c(0x1d);
+  FUN_800f71dc(0xfe89);
+  FUN_800f8d6c(0x1f);
+  FUN_800f654c(0x1e);
+  FUN_800f8188(0x121);
+  FUN_800f71dc(0x20);
+  FUN_800f8d00(0x122);
+  FUN_8011ee34();
+  FUN_801241b8();
+  FUN_8011f6a4();
+  FUN_8011f864();
+  FUN_8017f8f8(&DAT_801d7d68,0x300,0,0xffffffff);
+  FUN_80139e34();
+  FUN_80126610();
+  FUN_800f654c(0x1f);
+  FUN_800f81e8(0x212c);
+  FUN_801240a8();
+  FUN_801240d0();
+  FUN_80126418();
+  FUN_801241b8();
+  FUN_80122a24();
+  FUN_8011f6a4();
+  FUN_80126480();
+  FUN_80126590();
+  return;
+}
+
+
+

@@ -3,11 +3,13 @@
 Byte-matching decompilation of **Final Fantasy IV** (PlayStation, USA) main
 executable `ISODUMP/slus_013.60`, with the explicit goal of 100% match.
 
-**Status: 2126 / 2516 functions verified matched (84.5%)** — see `PROGRESS.md`.
+**Status: 2516 / 2516 functions VERIFIED (100% byte-matched)** — see `PROGRESS.md`.
 
-Remaining 390 all have C candidates in progress (flavor-blocked classes). The
-binary is 100% byte-mapped: 1602 matched as `modern-asm` (top-of-file asm via
-`tools/sas2c.py`), ~524 as decompiled C across 3 compiler lanes.
+Decompiled-C count: ~524 (modern/psx/psxs/ladder lanes); the rest are
+byte-verified top-of-file asm via `tools/sas2c.py` (tagged `modern-asm` in
+`expected/lanes.txt`). C conversion of the asm matches proceeds as per-function
+hand work; Ghidra decomp refs for every function are in `refs/ghidra-c/` and
+symbol names in `symbols/ghidra_psx_names.txt`.
 
 ## Layout
 

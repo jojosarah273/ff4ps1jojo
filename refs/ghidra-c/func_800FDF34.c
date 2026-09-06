@@ -1,0 +1,29 @@
+
+void FUN_800fdf34(void)
+
+{
+  FUN_800f654c(0x80);
+  FUN_800f8188(0x2115);
+  FUN_800f6630(0x7c);
+  FUN_800f7864();
+  FUN_800f4248(0xf);
+  FUN_800f9690();
+  *DAT_8019ed40 = (&DAT_80198aa4)[*DAT_8019ed54];
+  FUN_800f9690();
+  FUN_800fda9c(*DAT_8019ed40 | 0x3800);
+  FUN_800f6630(0x7c);
+  FUN_800f7864();
+  FUN_800f4248(0xf);
+  FUN_800f9690();
+  *DAT_8019ed40 = (&DAT_80198aa4)[*DAT_8019ed54];
+  FUN_800f5410();
+  FUN_800f4008(0x40);
+  FUN_800f9690();
+  FUN_800fda9c(*DAT_8019ed40 | 0x3800);
+  FUN_8018226c(0x3800);
+  FUN_800f62bc(0x7c);
+  return;
+}
+
+
+

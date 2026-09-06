@@ -1,0 +1,170 @@
+
+void FUN_8010eb14(void)
+
+{
+  short *psVar1;
+  short sVar2;
+  undefined2 *puVar3;
+  undefined4 uVar4;
+  uint uVar5;
+  short *psVar6;
+  int iVar7;
+  short *psVar8;
+  RECT local_18;
+  
+  FUN_80176060();
+  FUN_800f654c(9);
+  FUN_800f8188(0x2105);
+  FUN_800f71dc(0x2000);
+  FUN_800f8d6c(0x47);
+  FUN_800f71dc(0x1000);
+  FUN_800f8d6c(0x45);
+  FUN_800f654c(10);
+  FUN_800f824c(0x3c);
+  FUN_800f71dc(0xf000);
+  FUN_800f8d6c(0x3d);
+  iVar7 = 0x3ff;
+  FUN_801766b0();
+  FUN_800f654c(0x80);
+  FUN_800f8188(0x2115);
+  puVar3 = &DAT_801d5d66;
+  do {
+    *puVar3 = 0x20ff;
+    iVar7 = iVar7 + -1;
+    puVar3 = puVar3 + -1;
+  } while (-1 < iVar7);
+  FUN_800f654c(0x6a);
+  FUN_800f824c(0xb2);
+  FUN_80108330();
+  FUN_800f8fb8(0xba);
+  FUN_80108458();
+  FUN_800f62bc(0xed);
+  FUN_80109b08();
+  FUN_80108458();
+  FUN_800f62bc(0xed);
+  FUN_80109b08();
+  FUN_800f8fb8(0xdd);
+  FUN_800f8fb8(0xed);
+  FUN_800f654c(0x80);
+  FUN_800f8188(0x2115);
+  FUN_800f71dc(0);
+  uVar5 = 0x2c00;
+  do {
+    FUN_800f9644(0x20);
+    *DAT_8019ed44 = *DAT_8019ed54;
+    FUN_800f4264(0x1c0);
+    *DAT_8019ed44 = *DAT_8019ed44 >> 4;
+    *DAT_8019ed44 = *DAT_8019ed44 | 0x20;
+    FUN_800f9660(0x20);
+    (&DAT_801cfd68)[uVar5] = CONCAT11(*DAT_8019ed40,*(undefined1 *)(&DAT_801cfd68 + uVar5));
+    FUN_800f6364();
+    FUN_800f5958(0x200);
+    iVar7 = FUN_800f53d4();
+    uVar5 = uVar5 + 1 & 0xffff;
+  } while (iVar7 == 0);
+  FUN_800f654c(0);
+  FUN_800f3d48();
+  FUN_8017f8f8(&DAT_801d3d68,0x200,0x100,2);
+  psVar8 = &DAT_8019a7fe;
+  psVar6 = &DAT_8019a774;
+  iVar7 = 0x10;
+  do {
+    psVar1 = psVar8 + -1;
+    sVar2 = *psVar8;
+    psVar8 = psVar8 + 2;
+    local_18.x = *psVar6;
+    local_18.y = psVar6[1];
+    local_18.w = psVar6[2];
+    local_18.h = psVar6[3];
+    psVar6 = psVar6 + 4;
+    iVar7 = iVar7 + -1;
+    MoveImage(&local_18,(int)*psVar1,(int)sVar2);
+    DrawSync(0);
+  } while (-1 < iVar7);
+  FUN_800f71dc(0);
+  do {
+    FUN_800f654c(0);
+    FUN_800f8768(0xcdd);
+    FUN_800f8768(0xce1);
+    FUN_800f654c(0x40);
+    FUN_800f8768(0xcde);
+    FUN_800f8768(0xce2);
+    *DAT_8019ed40 = *DAT_8019ed5c;
+    FUN_800f5410();
+    FUN_800f4008(8);
+    *DAT_8019ed54 = *DAT_8019ed44;
+    FUN_800f5574(0x40);
+    iVar7 = FUN_800f53d4();
+  } while (iVar7 == 0);
+  DAT_8019ee64 = 0x100;
+  DAT_8019ee6c = 0xffc8;
+  FUN_800f654c(0x81);
+  FUN_800f8188(0x4200);
+  FUN_800f654c(3);
+  FUN_800fd85c();
+  FUN_800f8fb8(0x2e);
+  FUN_800f8fb8(0x2f);
+  do {
+    FUN_800f8fb8(0x20);
+    FUN_800f8fb8(0x21);
+    do {
+      FUN_800fe7b0();
+      FUN_800f6630(0x2e);
+      FUN_800f5140();
+      *DAT_8019ed54 = *DAT_8019ed44;
+      FUN_800f9644(0x20);
+      FUN_800f6658(0x20);
+      *DAT_8019ed44 = *DAT_8019ed44 >> 3;
+      FUN_800f8274(0x22);
+      *DAT_8019ed44 = *DAT_8019ed44 << 5;
+      uVar4 = FUN_800f3c3c(0x22);
+      FUN_800f7968(uVar4);
+      iVar7 = FUN_800f3b9c(0x14f996,*DAT_8019ed54);
+      FUN_800f7968(iVar7 + (uint)*DAT_8019ed54);
+      FUN_800f8274(0x22);
+      *DAT_8019ed44 = *DAT_8019ed54;
+      *DAT_8019ed44 = *DAT_8019ed44 << 2;
+      *DAT_8019ed54 = *DAT_8019ed44;
+      FUN_800f6658(0x22);
+      FUN_800f87dc(0xce1);
+      FUN_800f6558(0);
+      FUN_800f9660(0x20);
+      FUN_800f62bc(0x20);
+      iVar7 = FUN_800f60a8(0x202);
+    } while (iVar7 != 0);
+    FUN_800f62bc(0x2e);
+    FUN_800f6630(0x2e);
+    FUN_800f5574(8);
+    iVar7 = FUN_800f53d4();
+  } while (iVar7 == 0);
+  FUN_800f654c(3);
+  iVar7 = 0x10;
+  FUN_800fd914();
+  DAT_8019ee64 = 0;
+  DAT_8019ee6c = 0;
+  FUN_80174710();
+  FUN_801745f4();
+  FUN_800f654c(0x81);
+  FUN_800f8188(0x4200);
+  FUN_8011ea5c();
+  FUN_8017f8f8(&DAT_801d3d68,0x200,0x100,2);
+  psVar8 = &DAT_8019a7fe;
+  psVar6 = &DAT_8019a774;
+  do {
+    psVar1 = psVar8 + -1;
+    sVar2 = *psVar8;
+    psVar8 = psVar8 + 2;
+    local_18.x = *psVar6;
+    local_18.y = psVar6[1];
+    local_18.w = psVar6[2];
+    local_18.h = psVar6[3];
+    psVar6 = psVar6 + 4;
+    iVar7 = iVar7 + -1;
+    MoveImage(&local_18,(int)*psVar1,(int)sVar2);
+    DrawSync(0);
+  } while (-1 < iVar7);
+  return;
+}
+
+
+

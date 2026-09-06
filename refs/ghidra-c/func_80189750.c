@@ -1,0 +1,13 @@
+
+undefined4 FUN_80189750(void)
+
+{
+  FUN_80191838(DAT_8019ef50);
+  FUN_801928a8(DAT_8019ef58);
+  FUN_80191858(DAT_8019ef54);
+  DAT_8019ed28 = 0;
+  return 0;
+}
+
+
+

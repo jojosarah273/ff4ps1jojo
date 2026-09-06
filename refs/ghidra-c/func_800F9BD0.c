@@ -1,0 +1,26 @@
+
+void FUN_800f9bd0(void)
+
+{
+  DAT_8019ed6c = &DAT_1f8003c0;
+  DAT_8019ed50 = &DAT_1f8003c4;
+  DAT_8019ed40 = &DAT_1f8003c8;
+  DAT_8019ed44 = &DAT_1f8003c8;
+  DAT_8019ed5c = &DAT_1f8003ca;
+  DAT_8019ed54 = &DAT_1f8003ca;
+  DAT_8019ed60 = &DAT_1f8003cc;
+  DAT_8019ed58 = &DAT_1f8003cc;
+  DAT_8019ed4c = &DAT_1f8003ce;
+  DAT_8019ed48 = &DAT_1f8003d0;
+  DAT_8019ed70 = &DAT_1f8003d2;
+  DAT_8019ed68 = &DAT_1f8003d3;
+  DAT_8019ed64 = &DAT_1f8003d4;
+  FUN_800f9c98();
+  *DAT_8019ed68 = 4;
+  *DAT_8019ed4c = 0x1ff;
+  FUN_800f9ce8();
+  return;
+}
+
+
+

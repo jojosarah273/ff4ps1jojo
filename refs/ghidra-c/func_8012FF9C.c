@@ -1,0 +1,21 @@
+
+void FUN_8012ff9c(void)
+
+{
+  FUN_800f6564(0x1b83);
+  *DAT_8019ed40 = *DAT_8019ed40 << 3;
+  FUN_800f5140();
+  FUN_800f4f4c();
+  FUN_800f4008(0x56);
+  FUN_800f824c(0x46);
+  FUN_800f6564(0x1b84);
+  FUN_800f9660(0x10);
+  *DAT_8019ed5c = *DAT_8019ed40;
+  *DAT_8019ed40 = (&DAT_80199328)[*DAT_8019ed5c];
+  FUN_800f9644(0x10);
+  FUN_800f824c(0x45);
+  return;
+}
+
+
+
