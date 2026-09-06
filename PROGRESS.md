@@ -170,6 +170,12 @@ lacks the target symbol (nm-gate required); expected objects are the only
 valid refs (old build/ artifacts stale); ladder promos verify with -G8.
 Original asm backups kept in src/.asm/.
 
+### 2025-09-06 — recomp boot fix
+The generated game.toml shipped `bios_hle = false`, which runs the full LLE
+BIOS boot (disc read via CD server) and stalls on the BIOS screen. Setting
+`bios_hle = true` skips the shell: `bios_boot=HLE (shell skipped)` -> GL
+pipeline up -> game loop. Verified with a UI-off build headless.
+
 ## Status
 - Matched: 2516 / 2516 (100% byte-verified)
 - Decompiled C: 653 (psx 454, modern ~, psxs 15, ladder 18); asm-backed 1863
