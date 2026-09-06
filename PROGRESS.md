@@ -172,8 +172,10 @@ Original asm backups kept in src/.asm/.
 
 ### 2025-09-06 — recomp boot fix
 The generated game.toml shipped `bios_hle = false`, which runs the full LLE
-BIOS boot (disc read via CD server) and stalls on the BIOS screen. Setting
-`bios_hle = true` skips the shell: `bios_boot=HLE (shell skipped)` -> GL
+BIOS boot and stalls on the BIOS/disc screen. The LAUNCHER also writes
+`build/settings.toml` (overrides game.toml) with `bios_hle=false` +
+`fast_boot=false` — set BOTH to true (`bios_hle = true` skips the shell:
+`bios_boot=HLE (shell skipped)` -> GL)
 pipeline up -> game loop. Verified with a UI-off build headless.
 
 ## Status
