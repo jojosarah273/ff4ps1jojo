@@ -137,6 +137,19 @@ classes; unchanged). The recomp goal is served: psxrecomp already runs the
 native build; this verified map pins every boundary for converting the 2126
 asm matches to decompiled C function-by-function.
 
+### 2025-09-06 — native recomp with UI (recomp-ui frontend) + C-promotion wave
+- UI-enabled FF4_Recompiled built: PSX_RECOMP_UI=ON + recomp-ui submodule
+  (was FORCE-OFF in generated CMakeLists; patched). 29.8MB x86-64, ImGui
+  frontend (1030 symbols), boots with SCPH1001.BIN on the desktop.
+  Build: /tmp/ff4_recomp; run: `./build/FF4_Recompiled --bios SCPH1001.BIN`.
+- C-promotion wave (Wave 1): use Ghidra decomp as candidates for the ~1530
+  symbol-free functions; promote to real C only after CURRENT(0) on a lane
+  AND symbol presence (asm-differ prints CURRENT (0) when the current object
+  lacks the target symbol — a false positive; gated with nm). Set A = 203
+  leftover nonmatchings, Set B = 1327 asm-matched.
+  CAUTION: Ghidra names are FUN_xxxxxxx with case variants — prepare_body
+  renames to func_XXXXXXXX and externifies cross-refs.
+
 ## Status
 - Matched: 2126 / 2516 (84.5%), of which ~524 decompiled-C (modern/psx/psxs/
   ladder lanes) and 1602 byte-verified asm (modern-asm) — remaining 390 are
