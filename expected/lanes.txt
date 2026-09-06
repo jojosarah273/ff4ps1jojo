@@ -639,7 +639,6 @@ modern-asm func_80121124
 modern-asm func_80121678
 modern-asm func_801217EC
 modern-asm func_801218EC
-modern-asm func_801219EC
 modern-asm func_80121A9C
 modern-asm func_80121B5C
 modern-asm func_80121C4C
@@ -1558,7 +1557,6 @@ modern-asm func_8018E4E8
 modern-asm func_8018EAE8
 modern-asm func_8018EBB8
 modern-asm func_8018ECE8
-modern-asm func_8018F168
 modern-asm func_8018F1F8
 modern-asm func_8018F298
 modern-asm func_8018F2DC
@@ -1682,7 +1680,6 @@ modern-asm func_801974CC
 modern-asm func_801976E8
 modern-asm func_801976F8
 modern-asm func_80197708
-modern-asm func_801977A8
 modern-asm func_80197964
 modern-asm func_80197A94
 modern-asm func_80197B24
@@ -2001,7 +1998,6 @@ modern-asm func_8018DFA0
 modern-asm func_8018DFC4
 modern-asm func_8018DFE8
 modern-asm func_8018F0E8
-modern-asm func_8018F240
 modern-asm func_8018F538
 modern-asm func_8018F688
 modern-asm func_80190F50
@@ -2024,7 +2020,6 @@ modern-asm func_80196F18
 modern-asm func_80196F2C
 modern-asm func_801977B8
 modern-asm func_80197A78
-modern-asm func_80197BB4
 modern-asm func_80197DF8
 modern-asm func_80197E30
 modern-asm func_80198970
@@ -2348,3 +2343,8 @@ psx func_801220A4
 psx func_8011F320
 psx func_80129D2C
 psx func_80131DF8
+psx func_8018F240
+psx func_80197BB4
+psx func_8018F168
+psx func_801977A8
+psx func_801219EC
