@@ -640,7 +640,6 @@ modern-asm func_80121678
 modern-asm func_801217EC
 modern-asm func_801218EC
 modern-asm func_80121A9C
-modern-asm func_80121B5C
 modern-asm func_80121C4C
 modern-asm func_80121D8C
 modern-asm func_80121E0C
@@ -2348,3 +2347,4 @@ psx func_80197BB4
 psx func_8018F168
 psx func_801977A8
 psx func_801219EC
+psx func_80121B5C
