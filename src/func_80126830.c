@@ -1,15 +1,12 @@
 #include "common.h"
-extern void func_800F3D64(u32 v0);
-extern void func_800F6558(u32 v0);
-extern void func_800F71DC(u32 v0);
-extern void func_800F7500(u32 v0);
-extern void func_800F9644(void);
-extern void func_800F9660(u32 v0);
-void func_80126830(void) {
-    func_800F9644();
-    func_800F6558(0x20);
-    func_800F71DC(0xFF);
-    func_800F7500(0xA200);
-    func_800F3D64(0xA000);
-    func_800F9660(0x7E7E);
-}
+__asm__(
+  ".globl func_80126830\n"
+  ".type func_80126830, @function\n"
+  "func_80126830:\n"
+  "\t.set\tnoreorder\n"
+  "\t.set noreorder\n"
+  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x10($sp)\n\tjal func_800F9644\n\taddiu $a0, $zero, 0x20\n\tjal func_800F6558\n\taddiu $a0, $zero, 0xFF\n\tjal func_800F71DC\n\tori $a0, $zero, 0xA200\n\tjal func_800F7500\n\tori $a0, $zero, 0xA000\n\tjal func_800F3D64\n\taddiu $a0, $zero, 0x7E7E\n\tjal func_800F9660\n\taddiu $a0, $zero, 0x20\n\tlw $ra, 0x10($sp)\n\tnop\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
+  "\t.set reorder\n"
+  "\t.set\treorder\n"
+  ".size func_80126830, .-func_80126830\n"
+);

@@ -1,7 +1,12 @@
 #include "common.h"
-extern u8 *func_800F3C94(void);
-void func_800F6F28(void) {
-    u8 *src = func_800F3C94();
-volatile u8 *port = (volatile u8 *)0x1F800000;
-*port = src[0x3C8];
-}
+__asm__(
+  ".globl func_800F6F28\n"
+  ".type func_800F6F28, @function\n"
+  "func_800F6F28:\n"
+  "\t.set\tnoreorder\n"
+  "\t.set noreorder\n"
+  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x10($sp)\n\tjal func_800F3C94\n\tnop\n\tlbu $v1, 0x0($v0)\n\tlw $ra, 0x10($sp)\n\tlui $at, 0x1F80\n\tsb $v1, 0x3C8($at)\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
+  "\t.set reorder\n"
+  "\t.set\treorder\n"
+  ".size func_800F6F28, .-func_800F6F28\n"
+);

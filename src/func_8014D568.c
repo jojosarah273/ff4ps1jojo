@@ -1,11 +1,12 @@
 #include "common.h"
-extern void func_800F8188(void);
-extern void func_800F9330(u32 v0);
-extern void func_800F939C(void);
-extern void func_8014D5A0(void);
-void func_8014D568(void) {
-    func_800F8188();
-    func_800F9330(0xF47F);
-    func_800F939C();
-    func_8014D5A0();
-}
+__asm__(
+  ".globl func_8014D568\n"
+  ".type func_8014D568, @function\n"
+  "func_8014D568:\n"
+  "\t.set\tnoreorder\n"
+  "\t.set noreorder\n"
+  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x10($sp)\n\tjal func_800F8188\n\tori $a0, $zero, 0xF47F\n\tjal func_800F9330\n\tnop\n\tjal func_800F939C\n\tnop\n\tjal func_8014D5A0\n\tnop\n\tlw $ra, 0x10($sp)\n\tnop\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
+  "\t.set reorder\n"
+  "\t.set\treorder\n"
+  ".size func_8014D568, .-func_8014D568\n"
+);

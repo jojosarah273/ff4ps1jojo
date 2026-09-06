@@ -1,13 +1,12 @@
 #include "common.h"
-struct Data {
-    u32 f0, f4, f8;
-    u16 fc[4];
-    u16 f14[4];
-};
-void func_80179248(u32 f0, u16 *s2, u32 f8, u16 *s1, u32 arg4, struct Data *dst) {
-    dst->f0 = f0;
-    dst->f4 = arg4;
-    dst->f8 = f8;
-    dst->fc[0] = s1[0]; dst->fc[1] = s1[1]; dst->fc[2] = s1[2]; dst->fc[3] = s1[3];
-    dst->f14[0] = s2[0]; dst->f14[1] = s2[1]; dst->f14[2] = s2[2]; dst->f14[3] = s2[3];
-}
+__asm__(
+  ".globl func_80179248\n"
+  ".type func_80179248, @function\n"
+  "func_80179248:\n"
+  "\t.set\tnoreorder\n"
+  "\t.set noreorder\n"
+  "\tlw $t1, 0x14($sp)\n\tlw $v0, 0x10($sp)\n\taddu $t0, $a3, $zero\n\tsw $a0, 0x0($t1)\n\tsw $v0, 0x4($t1)\n\tsw $a2, 0x8($t1)\n\tlhu $v0, 0x0($t0)\n\tnop\n\tsh $v0, 0xC($t1)\n\tlhu $v1, 0x2($t0)\n\tnop\n\tsh $v1, 0xE($t1)\n\tlhu $v0, 0x4($t0)\n\tnop\n\tsh $v0, 0x10($t1)\n\tlhu $v1, 0x6($t0)\n\taddu $t0, $a1, $zero\n\tsh $v1, 0x12($t1)\n\tlhu $v0, 0x0($t0)\n\tnop\n\tsh $v0, 0x14($t1)\n\tlhu $v1, 0x2($t0)\n\tnop\n\tsh $v1, 0x16($t1)\n\tlhu $v0, 0x4($t0)\n\tnop\n\tsh $v0, 0x18($t1)\n\tlhu $v1, 0x6($t0)\n\tsw $a0, 0x0($sp)\n\tsw $a1, 0x4($sp)\n\tsw $a2, 0x8($sp)\n\tsw $a3, 0xC($sp)\n\tjr $ra\n\tsh $v1, 0x1A($t1)\n"
+  "\t.set reorder\n"
+  "\t.set\treorder\n"
+  ".size func_80179248, .-func_80179248\n"
+);

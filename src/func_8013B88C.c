@@ -1,14 +1,12 @@
 #include "common.h"
-extern void func_800F654C(u32 v0);
-extern void func_800F71DC(u32 v0);
-extern void func_800F7500(void);
-extern void func_8013B8D4(u32 v0);
-extern void func_8013B92C(u32 v0);
-void func_8013B88C(void) {
-    func_800F7500();
-    func_8013B92C(0xB81F);
-    func_800F7500();
-    func_800F654C(0xB89F);
-    func_800F71DC(0x4);
-    func_8013B8D4(0x6);
-}
+__asm__(
+  ".globl func_8013B88C\n"
+  ".type func_8013B88C, @function\n"
+  "func_8013B88C:\n"
+  "\t.set\tnoreorder\n"
+  "\t.set noreorder\n"
+  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x10($sp)\n\tjal func_800F7500\n\tori $a0, $zero, 0xB81F\n\tjal func_8013B92C\n\tnop\n\tjal func_800F7500\n\tori $a0, $zero, 0xB89F\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x4\n\tjal func_800F71DC\n\taddiu $a0, $zero, 0x6\n\tjal func_8013B8D4\n\tnop\n\tlw $ra, 0x10($sp)\n\tnop\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
+  "\t.set reorder\n"
+  "\t.set\treorder\n"
+  ".size func_8013B88C, .-func_8013B88C\n"
+);

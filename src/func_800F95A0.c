@@ -1,9 +1,12 @@
 #include "common.h"
-extern u16 *D_8019ED4C;
-extern u16 *D_8019ED54;
-extern u8 D_800D0001[];
-void func_800F95A0(void) {
-    u16 idx = *D_8019ED4C;
-    *D_8019ED4C = idx + 2;
-    *D_8019ED54 = (u16)((D_800D0001[idx] << 8) | D_800D0001[idx + 1]);
-}
+__asm__(
+  ".globl func_800F95A0\n"
+  ".type func_800F95A0, @function\n"
+  "func_800F95A0:\n"
+  "\t.set\tnoreorder\n"
+  "\t.set noreorder\n"
+  "\tlw $a2, %gp_rel(D_8019ED4C)($gp)\n\tnop\n\tlhu $v1, 0x0($a2)\n\tlui $v0, %hi(D_800D0001)\n\taddu $v0, $v1, $v0\n\tlbu $a0, %lo(D_800D0001)($v0)\n\tlbu $a1, %lo(D_800D0002)($v0)\n\taddiu $v1, $v1, 0x2\n\tsh $v1, 0x0($a2)\n\tlw $v0, %gp_rel(D_8019ED54)($gp)\n\tsll $a0, $a0, 8\n\tor $a1, $a1, $a0\n\tjr $ra\n\tsh $a1, 0x0($v0)\n"
+  "\t.set reorder\n"
+  "\t.set\treorder\n"
+  ".size func_800F95A0, .-func_800F95A0\n"
+);

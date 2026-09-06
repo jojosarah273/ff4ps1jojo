@@ -1,26 +1,12 @@
 #include "common.h"
-extern void func_800F654C(u32 v0);
-extern void func_800F71DC(u32 v0);
-extern void func_800F824C(u32 v0);
-extern void func_800F8D6C(u32 v0);
-extern void func_800F9200(void);
-extern void func_800F9330(void);
-extern void func_800F93DC(void);
-extern void func_800F95A0(u32 v0);
-extern void func_80124130(void);
-void func_80120E9C(void) {
-    u32 tS;
-    func_80124130();
-    func_800F9200();
-    func_800F9330();
-    func_800F71DC(tS);
-    func_800F8D6C(0xC600);
-    func_800F71DC(0x29);
-    func_800F8D6C(0x7800);
-    func_800F654C(0x35);
-    func_800F824C(0x2);
-    func_800F654C(0xC3);
-    func_800F824C(0x20);
-    func_800F95A0(0x34);
-    func_800F93DC();
-}
+__asm__(
+  ".globl func_80120E9C\n"
+  ".type func_80120E9C, @function\n"
+  "func_80120E9C:\n"
+  "\t.set\tnoreorder\n"
+  "\t.set noreorder\n"
+  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x10($sp)\n\tjal func_80124130\n\tnop\n\tjal func_800F9200\n\tnop\n\tjal func_800F9330\n\tnop\n\tjal func_800F71DC\n\tori $a0, $zero, 0xC600\n\tjal func_800F8D6C\n\taddiu $a0, $zero, 0x29\n\tjal func_800F71DC\n\taddiu $a0, $zero, 0x7800\n\tjal func_800F8D6C\n\taddiu $a0, $zero, 0x35\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x2\n\tjal func_800F824C\n\taddiu $a0, $zero, 0xC3\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x20\n\tjal func_800F824C\n\taddiu $a0, $zero, 0x34\n\tjal func_800F95A0\n\tnop\n\tjal func_800F93DC\n\tnop\n\tlw $ra, 0x10($sp)\n\tnop\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
+  "\t.set reorder\n"
+  "\t.set\treorder\n"
+  ".size func_80120E9C, .-func_80120E9C\n"
+);

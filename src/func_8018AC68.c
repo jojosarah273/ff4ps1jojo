@@ -1,3 +1,12 @@
 #include "common.h"
-extern u32 *D_8019B128;
-void func_8018AC68(void) { *D_8019B128 = (*D_8019B128 & 0xF0FFFFFF) | 0x22000000; }
+__asm__(
+  ".globl func_8018AC68\n"
+  ".type func_8018AC68, @function\n"
+  "func_8018AC68:\n"
+  "\t.set\tnoreorder\n"
+  "\t.set noreorder\n"
+  "\tlui $a0, %hi(D_8019B128)\n\tlw $a0, %lo(D_8019B128)($a0)\n\tlui $v1, 0xF0FF\n\tlw $v0, 0x0($a0)\n\tori $v1, $v1, 0xFFFF\n\tand $v0, $v0, $v1\n\tlui $v1, 0x2200\n\tor $v0, $v0, $v1\n\tjr $ra\n\tsw $v0, 0x0($a0)\n"
+  "\t.set reorder\n"
+  "\t.set\treorder\n"
+  ".size func_8018AC68, .-func_8018AC68\n"
+);

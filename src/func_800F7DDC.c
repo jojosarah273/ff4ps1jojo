@@ -1,10 +1,12 @@
 #include "common.h"
-extern u8 *D_8019ED68;
-extern u32 *D_8019ED50;
-void func_800F7DDC(u8 *p) {
-    s32 v = (p[0] | (p[1] << 8)) | ((*D_8019ED68 & 0x1) << 16);
-    u16 r = (u16)(v >> 1);
-    p[0] = r;
-    p[1] = r >> 8;
-    *D_8019ED50 = v;
-}
+__asm__(
+  ".globl func_800F7DDC\n"
+  ".type func_800F7DDC, @function\n"
+  "func_800F7DDC:\n"
+  "\t.set\tnoreorder\n"
+  "\t.set noreorder\n"
+  "\tlbu $a2, 0x0($a0)\n\tlbu $v0, 0x1($a0)\n\tlw $a1, %gp_rel(D_8019ED68)($gp)\n\tsll $v0, $v0, 8\n\tlbu $v1, 0x0($a1)\n\tor $a2, $a2, $v0\n\tandi $v1, $v1, 0x1\n\tsll $v1, $v1, 16\n\taddu $a2, $a2, $v1\n\tsrl $v0, $a2, 1\n\tandi $v0, $v0, 0xFFFF\n\tsb $v0, 0x0($a0)\n\tsrl $v0, $v0, 8\n\tsb $v0, 0x1($a0)\n\tlw $v1, %gp_rel(D_8019ED50)($gp)\n\tjr $ra\n\tsw $a2, 0x0($v1)\n"
+  "\t.set reorder\n"
+  "\t.set\treorder\n"
+  ".size func_800F7DDC, .-func_800F7DDC\n"
+);

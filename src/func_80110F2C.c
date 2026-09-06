@@ -1,21 +1,12 @@
 #include "common.h"
-extern void func_800F654C(u32 v0);
-extern void func_800F8188(u32 v0);
-extern void func_800F824C(u32 v0);
-extern void func_800F8FB8(u32 v0);
-extern void func_80111BBC(u32 v0);
-void func_80110F2C(void) {
-    u32 tS;
-    func_800F654C(tS);
-    func_800F8188(0x6);
-    func_800F654C(0x1704);
-    func_800F8188(0x3);
-    func_800F654C(0x1705);
-    func_800F824C(0x58);
-    func_800F654C(0x2C);
-    func_800F824C(0x60);
-    func_80111BBC(0x2E);
-    func_800F8FB8(tS);
-    func_800F8FB8(0x79);
-    func_800F8FB8(0x7A);
-}
+__asm__(
+  ".globl func_80110F2C\n"
+  ".type func_80110F2C, @function\n"
+  "func_80110F2C:\n"
+  "\t.set\tnoreorder\n"
+  "\t.set noreorder\n"
+  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x10($sp)\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x6\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x1704\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x3\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x1705\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x58\n\tjal func_800F824C\n\taddiu $a0, $zero, 0x2C\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x60\n\tjal func_800F824C\n\taddiu $a0, $zero, 0x2E\n\tjal func_80111BBC\n\tnop\n\tjal func_800F8FB8\n\taddiu $a0, $zero, 0x79\n\tjal func_800F8FB8\n\taddiu $a0, $zero, 0x7A\n\tjal func_800F8FB8\n\taddiu $a0, $zero, 0x24\n\tlw $ra, 0x10($sp)\n\tnop\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
+  "\t.set reorder\n"
+  "\t.set\treorder\n"
+  ".size func_80110F2C, .-func_80110F2C\n"
+);

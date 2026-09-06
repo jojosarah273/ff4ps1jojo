@@ -1,33 +1,12 @@
 #include "common.h"
-extern void func_800F654C(u32 v0);
-extern void func_800F71DC(void);
-extern void func_800F8188(u32 v0);
-extern void func_800F824C(u32 v0);
-extern void func_800F8D00(u32 v0);
-extern void func_800F8F74(void);
-extern void func_800FB09C(u32 v0);
-extern void func_800FE870(void);
-extern void func_80111BBC(u32 v0);
-extern void func_80111C2C(void);
-extern void func_80176060(u32 v0);
-void func_80111B14(void) {
-    u32 tS;
-    func_800F71DC();
-    func_800F8D00(0x90A8);
-    func_800F654C(0x1706);
-    func_800F824C(0x10);
-    func_800F654C(0x2C);
-    func_800F824C(0x58);
-    func_80176060(0x2E);
-    func_800F8F74();
-    func_800F654C(0x1700);
-    func_800F8188(0x7);
-    func_800F654C(0x1704);
-    func_800F8188(0x1);
-    func_800FB09C(0x1728);
-    func_800F654C(tS);
-    func_800F824C(0x10);
-    func_80111BBC(0xAD);
-    func_800FE870();
-    func_80111C2C();
-}
+__asm__(
+  ".globl func_80111B14\n"
+  ".type func_80111B14, @function\n"
+  "func_80111B14:\n"
+  "\t.set\tnoreorder\n"
+  "\t.set noreorder\n"
+  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x10($sp)\n\tjal func_800F71DC\n\tori $a0, $zero, 0x90A8\n\tjal func_800F8D00\n\taddiu $a0, $zero, 0x1706\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x10\n\tjal func_800F824C\n\taddiu $a0, $zero, 0x2C\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x58\n\tjal func_800F824C\n\taddiu $a0, $zero, 0x2E\n\tjal func_80176060\n\tnop\n\tjal func_800F8F74\n\taddiu $a0, $zero, 0x1700\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x7\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x1704\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x1\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x1728\n\tjal func_800FB09C\n\tnop\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x10\n\tjal func_800F824C\n\taddiu $a0, $zero, 0xAD\n\tjal func_80111BBC\n\tnop\n\tjal func_800FE870\n\tnop\n\tjal func_80111C2C\n\tnop\n\tlw $ra, 0x10($sp)\n\tnop\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
+  "\t.set reorder\n"
+  "\t.set\treorder\n"
+  ".size func_80111B14, .-func_80111B14\n"
+);
