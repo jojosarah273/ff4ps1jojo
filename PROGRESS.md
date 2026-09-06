@@ -161,8 +161,20 @@ all CURRENT(0). Their C candidates archived to src/.orig/. Plus:
   0 failures) — the byte-verified state is certified from source.
 - UI-enabled native recomp (recomp-ui frontend) boots on desktop.
 
+### 2025-09-06 — C-promotion wave landed (Ghidra decomp -> matching C)
+Fixed pipeline: Ghidra C prepared (func_* naming + externs) and tested on
+modern/psx/psxs/ladder lanes against build/expected (git-HEAD asm fallback).
+**320 functions verified CURRENT(0)** -> now 653 C-backed / 1863 asm-backed.
+Key gotchas logged: asm-differ prints CURRENT(0) when the current object
+lacks the target symbol (nm-gate required); expected objects are the only
+valid refs (old build/ artifacts stale); ladder promos verify with -G8.
+Original asm backups kept in src/.asm/.
+
 ## Status
-- Matched: 2516 / 2516 (100%) — ~524 decompiled C + ~1992 byte-verified asm., of which ~524 decompiled-C (modern/psx/psxs/
+- Matched: 2516 / 2516 (100% byte-verified)
+- Decompiled C: 653 (psx 454, modern ~, psxs 15, ladder 18); asm-backed 1863
+- lanes: modern-asm 1862, psx 454, psxs 15, ladder-2.95.2 18, asm 1
+- Full-repo build certified clean (2516 objects) after the wave., of which ~524 decompiled-C (modern/psx/psxs/
   ladder lanes) and 1602 byte-verified asm (modern-asm) — remaining 390 are
   C-in-progress flavor classes. — this session: +270 (201 hub callers, 48
   straights, 14+1 loop callers, 5 ladder-2.95.2, 1 bitpack)
