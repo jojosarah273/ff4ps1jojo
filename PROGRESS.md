@@ -157,6 +157,8 @@ all CURRENT(0). Their C candidates archived to src/.orig/. Plus:
   finding: Ghidra C is a semantic reference, not a codegen match; conversion
   to C is per-function hand work. Ghidra refs saved to refs/ghidra-c/*.c.
 - Lane scores for all 1530 recorded (symbols/lane_scores.txt).
+- Full-repo validation: ALL 2516 function objects build clean (6-way sweep,
+  0 failures) — the byte-verified state is certified from source.
 - UI-enabled native recomp (recomp-ui frontend) boots on desktop.
 
 ## Status
