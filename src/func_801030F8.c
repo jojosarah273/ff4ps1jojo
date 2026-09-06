@@ -1,12 +1,55 @@
 #include "common.h"
-__asm__(
-  ".globl func_801030F8\n"
-  ".type func_801030F8, @function\n"
-  "func_801030F8:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x10($sp)\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x10\n\tjal func_800F8188\n\taddiu $a0, $zero, 0xACF\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x3\n\tjal func_800F8188\n\taddiu $a0, $zero, 0xAD0\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x3\n\tjal func_800F8188\n\taddiu $a0, $zero, 0xAD1\n\tjal func_800F71DC\n\taddiu $a0, $zero, 0x7070\n\tjal func_800F8D00\n\taddiu $a0, $zero, 0xAD4\n\tjal func_800F71DC\n\taddiu $a0, $zero, 0x28\n\tjal func_800F8D00\n\taddiu $a0, $zero, 0xAD2\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x6\n\tjal func_800F8188\n\taddiu $a0, $zero, 0xACD\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x2\n\tjal func_800F8188\n\taddiu $a0, $zero, 0xACE\n\tjal func_80115BCC\n\tnop\n\t.L80103178:\n\tjal func_800FE7D8\n\tnop\n\tjal func_80115D2C\n\tnop\n\tjal func_800F7210\n\taddiu $a0, $zero, 0xAD2\n\tjal func_800F5958\n\taddiu $a0, $zero, 0x8\n\tjal func_800F53C0\n\tnop\n\tbnez $v0, .L801031C0\n\tnop\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x1\n\tjal func_800F824C\n\taddiu $a0, $zero, 0xE5\n\tjal func_800FF024\n\tnop\n\t.L801031C0:\n\tjal func_800F7210\n\taddiu $a0, $zero, 0xAD2\n\tjal func_800F5958\n\taddu $a0, $zero, $zero\n\tjal func_800F53D4\n\tnop\n\tbeqz $v0, .L80103178\n\tnop\n\tlw $ra, 0x10($sp)\n\tnop\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_801030F8, .-func_801030F8\n"
-);
+extern int func_800F53C0();
+extern int func_800F53D4();
+extern int func_800F5958();
+extern int func_800F654C();
+extern int func_800F71DC();
+extern int func_800F7210();
+extern int func_800F8188();
+extern int func_800F824C();
+extern int func_800F8D00();
+extern int func_800FE7D8();
+extern int func_800FF024();
+extern int func_80115BCC();
+extern int func_80115D2C();
+
+void func_801030F8(void)
+
+{
+  int iVar1;
+  
+  func_800F654C(0x10);
+  func_800F8188(0xacf);
+  func_800F654C(3);
+  func_800F8188(0xad0);
+  func_800F654C(3);
+  func_800F8188(0xad1);
+  func_800F71DC(0x7070);
+  func_800F8D00(0xad4);
+  func_800F71DC(0x28);
+  func_800F8D00(0xad2);
+  func_800F654C(6);
+  func_800F8188(0xacd);
+  func_800F654C(2);
+  func_800F8188(0xace);
+  func_80115BCC();
+  do {
+    func_800FE7D8();
+    func_80115D2C();
+    func_800F7210(0xad2);
+    func_800F5958(8);
+    iVar1 = func_800F53C0();
+    if (iVar1 == 0) {
+      func_800F654C(1);
+      func_800F824C(0xe5);
+      func_800FF024();
+    }
+    func_800F7210(0xad2);
+    func_800F5958(0);
+    iVar1 = func_800F53D4();
+  } while (iVar1 == 0);
+  return;
+}
+
+
+

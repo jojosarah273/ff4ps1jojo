@@ -1,12 +1,54 @@
 #include "common.h"
-__asm__(
-  ".globl func_8011356C\n"
-  ".type func_8011356C, @function\n"
-  "func_8011356C:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x10($sp)\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x20\n\tjal func_800F8188\n\taddiu $a0, $zero, 0xACF\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x2\n\tjal func_800F8188\n\taddiu $a0, $zero, 0xAD0\n\tjal func_800F8188\n\taddiu $a0, $zero, 0xAD1\n\tjal func_800F71DC\n\taddiu $a0, $zero, 0x30\n\tjal func_800F8D00\n\taddiu $a0, $zero, 0xAD2\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x6\n\tjal func_800F8188\n\taddiu $a0, $zero, 0xACD\n\tjal func_800F8F74\n\taddiu $a0, $zero, 0xACE\n\tjal func_80115BCC\n\tnop\n\t.L801135CC:\n\tjal func_800FE7D8\n\tnop\n\tjal func_80119AC8\n\tnop\n\tjal func_80115D2C\n\tnop\n\tjal func_800F6630\n\taddiu $a0, $zero, 0x7A\n\tjal func_800F4248\n\taddiu $a0, $zero, 0x3F\n\tjal func_800F4120\n\taddiu $a0, $zero, 0x202\n\tbnez $v0, .L80113614\n\tnop\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x23\n\tjal func_800FD804\n\tnop\n\t.L80113614:\n\tjal func_800F7210\n\taddiu $a0, $zero, 0xAD2\n\tjal func_800F7170\n\taddiu $a0, $zero, 0x202\n\tbnez $v0, .L801135CC\n\tnop\n\tjal func_800FE8B4\n\tnop\n\tlw $ra, 0x10($sp)\n\tnop\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_8011356C, .-func_8011356C\n"
-);
+extern int func_800F4120();
+extern int func_800F4248();
+extern int func_800F654C();
+extern int func_800F6630();
+extern int func_800F7170();
+extern int func_800F71DC();
+extern int func_800F7210();
+extern int func_800F8188();
+extern int func_800F8D00();
+extern int func_800F8F74();
+extern int func_800FD804();
+extern int func_800FE7D8();
+extern int func_800FE8B4();
+extern int func_80115BCC();
+extern int func_80115D2C();
+extern int func_80119AC8();
+
+void func_8011356C(void)
+
+{
+  int iVar1;
+  
+  func_800F654C(0x20);
+  func_800F8188(0xacf);
+  func_800F654C(2);
+  func_800F8188(0xad0);
+  func_800F8188(0xad1);
+  func_800F71DC(0x30);
+  func_800F8D00(0xad2);
+  func_800F654C(6);
+  func_800F8188(0xacd);
+  func_800F8F74(0xace);
+  func_80115BCC();
+  do {
+    func_800FE7D8();
+    func_80119AC8();
+    func_80115D2C();
+    func_800F6630(0x7a);
+    func_800F4248(0x3f);
+    iVar1 = func_800F4120(0x202);
+    if (iVar1 == 0) {
+      func_800F654C(0x23);
+      func_800FD804();
+    }
+    func_800F7210(0xad2);
+    iVar1 = func_800F7170(0x202);
+  } while (iVar1 != 0);
+  func_800FE8B4();
+  return;
+}
+
+
+

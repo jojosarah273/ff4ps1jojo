@@ -1,12 +1,33 @@
 #include "common.h"
-__asm__(
-  ".globl func_8015CEA0\n"
-  ".type func_8015CEA0, @function\n"
-  "func_8015CEA0:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x10($sp)\n\tjal func_800F53D4\n\tnop\n\tbeqz $v0, .L8015CEE8\n\tnop\n\tjal func_800F5EA0\n\tnop\n\tjal func_800F971C\n\tnop\n\tjal func_800F82EC\n\taddiu $a0, $zero, 0x80\n\tjal func_800F5EA0\n\tnop\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x80\n\tjal func_800F82EC\n\taddiu $a0, $zero, 0x80\n\t.L8015CEE8:\n\tjal func_800F6564\n\taddiu $a0, $zero, 0x3939\n\tjal func_800F824C\n\taddiu $a0, $zero, 0x1\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x6\n\tjal func_80150C38\n\tnop\n\tlw $ra, 0x10($sp)\n\tnop\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_8015CEA0, .-func_8015CEA0\n"
-);
+extern int func_800F53D4();
+extern int func_800F5EA0();
+extern int func_800F654C();
+extern int func_800F6564();
+extern int func_800F824C();
+extern int func_800F82EC();
+extern int func_800F971C();
+extern int func_80150C38();
+
+void func_8015CEA0(void)
+
+{
+  int iVar1;
+  
+  iVar1 = func_800F53D4();
+  if (iVar1 != 0) {
+    func_800F5EA0();
+    func_800F971C();
+    func_800F82EC(0x80);
+    func_800F5EA0();
+    func_800F654C(0x80);
+    func_800F82EC(0x80);
+  }
+  func_800F6564(0x3939);
+  func_800F824C(1);
+  func_800F654C(6);
+  func_80150C38();
+  return;
+}
+
+
+

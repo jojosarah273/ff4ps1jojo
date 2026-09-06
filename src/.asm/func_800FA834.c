@@ -1,0 +1,12 @@
+#include "common.h"
+__asm__(
+  ".globl func_800FA834\n"
+  ".type func_800FA834, @function\n"
+  "func_800FA834:\n"
+  "\t.set\tnoreorder\n"
+  "\t.set noreorder\n"
+  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x10($sp)\n\tjal func_800F8F74\n\taddiu $a0, $zero, 0x1700\n\tjal func_800F8F74\n\taddiu $a0, $zero, 0x1701\n\tjal func_800F8F74\n\taddiu $a0, $zero, 0x1703\n\tjal func_800F8F74\n\taddiu $a0, $zero, 0x170F\n\tjal func_800F8F74\n\taddiu $a0, $zero, 0x1712\n\tjal func_800F8F74\n\taddiu $a0, $zero, 0x1718\n\tjal func_800F8F74\n\taddiu $a0, $zero, 0x171C\n\tjal func_800F8F74\n\taddiu $a0, $zero, 0x1720\n\tjal func_800F8F74\n\taddiu $a0, $zero, 0x1724\n\tjal func_800F8F74\n\taddiu $a0, $zero, 0x1728\n\tjal func_800F8F74\n\taddiu $a0, $zero, 0x172B\n\tjal func_800F8F74\n\taddiu $a0, $zero, 0x171B\n\tjal func_800F8F74\n\taddiu $a0, $zero, 0x171F\n\tjal func_800F8F74\n\taddiu $a0, $zero, 0x1723\n\tjal func_800F8F74\n\taddiu $a0, $zero, 0x1727\n\tjal func_800F71DC\n\taddu $a0, $zero, $zero\n\tjal func_800F8D00\n\taddiu $a0, $zero, 0x172C\n\tjal func_800F71DC\n\taddu $a0, $zero, $zero\n\t.L800FA8CC:\n\tlui $a0, (0x12F200 >> 16)\n\tjal func_800F6C68\n\tori $a0, $a0, (0x12F200 & 0xFFFF)\n\tjal func_800F8768\n\taddiu $a0, $zero, 0x12E0\n\tjal func_800F6364\n\tnop\n\tjal func_800F5958\n\taddiu $a0, $zero, 0x40\n\tjal func_800F53D4\n\tnop\n\tbeqz $v0, .L800FA8CC\n\tnop\n\tjal func_800F71DC\n\taddu $a0, $zero, $zero\n\tlui $a0, (0x12F240 >> 16)\n\t.L800FA90C:\n\tjal func_800F6C68\n\tori $a0, $a0, (0x12F240 & 0xFFFF)\n\tjal func_800F8768\n\taddiu $a0, $zero, 0x1280\n\tjal func_800F6364\n\tnop\n\tjal func_800F5958\n\taddiu $a0, $zero, 0x20\n\tjal func_800F53D4\n\tnop\n\tbeqz $v0, .L800FA90C\n\tlui $a0, (0x12F240 >> 16)\n\tjal func_800F71DC\n\taddu $a0, $zero, $zero\n\t.L800FA944:\n\tjal func_800F90EC\n\taddiu $a0, $zero, 0x12A0\n\tjal func_800F6364\n\tnop\n\tjal func_800F5958\n\taddiu $a0, $zero, 0x20\n\tjal func_800F53D4\n\tnop\n\tbeqz $v0, .L800FA944\n\tnop\n\tjal func_800F654C\n\taddiu $a0, $zero, 0xFE\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x149C\n\tjal func_800F654C\n\taddiu $a0, $zero, 0xFF\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x149E\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x1\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x149D\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x149F\n\tlw $ra, 0x10($sp)\n\tnop\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
+  "\t.set reorder\n"
+  "\t.set\treorder\n"
+  ".size func_800FA834, .-func_800FA834\n"
+);

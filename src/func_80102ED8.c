@@ -1,20 +1,30 @@
 #include "common.h"
-extern void func_800F654C(u32 v0);
-extern void func_800F8188(u32 v0);
-extern void func_800FE870(void);
-extern void func_800FF024(void);
-extern void func_800FE7D8(void);
-extern void func_800F6630(u32 v0);
-extern void func_800F4248(u32 v0);
-extern int func_800F4120(u32 v0);
-void func_80102ED8(void) {
-    func_800F654C(0x3);
-    func_800F8188(0x1705);
-    do {
-        func_800FE870();
-        func_800FF024();
-        func_800FE7D8();
-        func_800F6630(0x7A);
-        func_800F4248(0x7);
-    } while (func_800F4120(0x202) != 0);
+extern int func_800F4120();
+extern int func_800F4248();
+extern int func_800F654C();
+extern int func_800F6630();
+extern int func_800F8188();
+extern int func_800FE7D8();
+extern int func_800FE870();
+extern int func_800FF024();
+
+void func_80102ED8(void)
+
+{
+  int iVar1;
+  
+  func_800F654C(3);
+  func_800F8188(0x1705);
+  do {
+    func_800FE870();
+    func_800FF024();
+    func_800FE7D8();
+    func_800F6630(0x7a);
+    func_800F4248(7);
+    iVar1 = func_800F4120(0x202);
+  } while (iVar1 != 0);
+  return;
 }
+
+
+

@@ -1,12 +1,42 @@
 #include "common.h"
-__asm__(
-  ".globl func_80176B6C\n"
-  ".type func_80176B6C, @function\n"
-  "func_80176B6C:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x10($sp)\n\tjal func_800F6630\n\taddiu $a0, $zero, 0xE2\n\tjal func_800F5574\n\taddiu $a0, $zero, 0x11\n\tjal func_800F53D4\n\tnop\n\tbnez $v0, .L80176BEC\n\tnop\n\tjal func_800F654C\n\taddiu $a0, $zero, 0xA\n\tjal func_800F824C\n\taddiu $a0, $zero, 0x45\n\tjal func_800F6564\n\taddiu $a0, $zero, 0x1BB2\n\tjal func_800F5CCC\n\tnop\n\t.L80176BB4:\n\tjal func_800F9200\n\tnop\n\tjal func_80176C6C\n\tnop\n\tjal func_800F93DC\n\tnop\n\tjal func_800F61E8\n\tnop\n\tjal func_800F5DA0\n\taddiu $a0, $zero, 0x45\n\tjal func_800F5B8C\n\taddiu $a0, $zero, 0x202\n\tbnez $v0, .L80176BB4\n\tnop\n\t.L80176BEC:\n\tlw $ra, 0x10($sp)\n\tnop\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_80176B6C, .-func_80176B6C\n"
-);
+extern int func_800F53D4();
+extern int func_800F5574();
+extern int func_800F5B8C();
+extern int func_800F5CCC();
+extern int func_800F5DA0();
+extern int func_800F61E8();
+extern int func_800F654C();
+extern int func_800F6564();
+extern int func_800F6630();
+extern int func_800F824C();
+extern int func_800F9200();
+extern int func_800F93DC();
+extern int func_80176C6C();
+
+void func_80176B6C(void)
+
+{
+  int iVar1;
+  
+  func_800F6630(0xe2);
+  func_800F5574(0x11);
+  iVar1 = func_800F53D4();
+  if (iVar1 == 0) {
+    func_800F654C(10);
+    func_800F824C(0x45);
+    func_800F6564(0x1bb2);
+    func_800F5CCC();
+    do {
+      func_800F9200();
+      func_80176C6C();
+      func_800F93DC();
+      func_800F61E8();
+      func_800F5DA0(0x45);
+      iVar1 = func_800F5B8C(0x202);
+    } while (iVar1 != 0);
+  }
+  return;
+}
+
+
+

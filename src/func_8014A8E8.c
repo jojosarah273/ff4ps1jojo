@@ -1,12 +1,18 @@
 #include "common.h"
-__asm__(
-  ".globl func_8014A8E8\n"
-  ".type func_8014A8E8, @function\n"
-  "func_8014A8E8:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x10($sp)\n\tjal func_800F71DC\n\taddiu $a0, $zero, 0x10\n\tjal func_800996A8\n\tnop\n\tjal func_800F8F74\n\tori $a0, $zero, 0xEF87\n\tjal func_8014B98C\n\tnop\n\tlw $ra, 0x10($sp)\n\tnop\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_8014A8E8, .-func_8014A8E8\n"
-);
+extern int func_800996A8();
+extern int func_800F71DC();
+extern int func_800F8F74();
+extern int func_8014B98C();
+
+void func_8014A8E8(void)
+
+{
+  func_800F71DC(0x10);
+  func_800996A8();
+  func_800F8F74(0xef87);
+  func_8014B98C();
+  return;
+}
+
+
+

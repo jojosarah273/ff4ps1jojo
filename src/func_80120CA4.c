@@ -1,12 +1,60 @@
 #include "common.h"
-__asm__(
-  ".globl func_80120CA4\n"
-  ".type func_80120CA4, @function\n"
-  "func_80120CA4:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x10($sp)\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x19\n\tjal func_800F824C\n\taddiu $a0, $zero, 0x45\n\tjal func_800F9644\n\taddiu $a0, $zero, 0x20\n\tjal func_800F6658\n\taddiu $a0, $zero, 0x35\n\tjal func_800F5410\n\tnop\n\tjal func_800F4064\n\taddiu $a0, $zero, 0x600\n\tjal func_800F8274\n\taddiu $a0, $zero, 0x1D\n\tjal func_800F6658\n\taddiu $a0, $zero, 0x29\n\tjal func_800F5410\n\tnop\n\tjal func_800F4064\n\taddiu $a0, $zero, 0xC00\n\tjal func_800F8274\n\taddiu $a0, $zero, 0x1F\n\tjal func_800F9660\n\taddiu $a0, $zero, 0x20\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x7E\n\tjal func_800F824C\n\taddiu $a0, $zero, 0x21\n\tjal func_800F71DC\n\taddiu $a0, $zero, 0x80\n\tjal func_800F8D6C\n\taddiu $a0, $zero, 0x22\n\t.L80120D2C:\n\tjal func_8011F320\n\tnop\n\tjal func_8011EE34\n\tnop\n\tjal func_800F9644\n\taddiu $a0, $zero, 0x20\n\tjal func_800F6658\n\taddiu $a0, $zero, 0x1D\n\tjal func_800F5480\n\tnop\n\tjal func_800F80D0\n\taddiu $a0, $zero, 0x40\n\tjal func_800F8274\n\taddiu $a0, $zero, 0x1D\n\tjal func_800F6658\n\taddiu $a0, $zero, 0x1F\n\tjal func_800F5480\n\tnop\n\tjal func_800F80D0\n\taddiu $a0, $zero, 0x80\n\tjal func_800F8274\n\taddiu $a0, $zero, 0x1F\n\tjal func_800F9660\n\taddiu $a0, $zero, 0x20\n\tjal func_800F5DA0\n\taddiu $a0, $zero, 0x45\n\tjal func_800F5B8C\n\taddiu $a0, $zero, 0x202\n\tbnez $v0, .L80120D2C\n\tnop\n\tlw $ra, 0x10($sp)\n\tnop\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_80120CA4, .-func_80120CA4\n"
-);
+extern int func_800F4064();
+extern int func_800F5410();
+extern int func_800F5480();
+extern int func_800F5B8C();
+extern int func_800F5DA0();
+extern int func_800F654C();
+extern int func_800F6658();
+extern int func_800F71DC();
+extern int func_800F80D0();
+extern int func_800F824C();
+extern int func_800F8274();
+extern int func_800F8D6C();
+extern int func_800F9644();
+extern int func_800F9660();
+extern int func_8011EE34();
+extern int func_8011F320();
+
+void func_80120CA4(void)
+
+{
+  int iVar1;
+  
+  func_800F654C(0x19);
+  func_800F824C(0x45);
+  func_800F9644(0x20);
+  func_800F6658(0x35);
+  func_800F5410();
+  func_800F4064(0x600);
+  func_800F8274(0x1d);
+  func_800F6658(0x29);
+  func_800F5410();
+  func_800F4064(0xc00);
+  func_800F8274(0x1f);
+  func_800F9660(0x20);
+  func_800F654C(0x7e);
+  func_800F824C(0x21);
+  func_800F71DC(0x80);
+  func_800F8D6C(0x22);
+  do {
+    func_8011F320();
+    func_8011EE34();
+    func_800F9644(0x20);
+    func_800F6658(0x1d);
+    func_800F5480();
+    func_800F80D0(0x40);
+    func_800F8274(0x1d);
+    func_800F6658(0x1f);
+    func_800F5480();
+    func_800F80D0(0x80);
+    func_800F8274(0x1f);
+    func_800F9660(0x20);
+    func_800F5DA0(0x45);
+    iVar1 = func_800F5B8C(0x202);
+  } while (iVar1 != 0);
+  return;
+}
+
+
+

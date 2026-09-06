@@ -1,0 +1,12 @@
+#include "common.h"
+__asm__(
+  ".globl func_801533BC\n"
+  ".type func_801533BC, @function\n"
+  "func_801533BC:\n"
+  "\t.set\tnoreorder\n"
+  "\t.set noreorder\n"
+  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x10($sp)\n\tjal func_800F71DC\n\tori $a0, $zero, 0xFE67\n\tjal func_800F8D6C\n\taddiu $a0, $zero, 0xAB\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x13\n\tjal func_800F824C\n\taddiu $a0, $zero, 0xAD\n\tjal func_801533FC\n\tnop\n\tlw $ra, 0x10($sp)\n\tnop\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
+  "\t.set reorder\n"
+  "\t.set\treorder\n"
+  ".size func_801533BC, .-func_801533BC\n"
+);

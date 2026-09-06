@@ -1,12 +1,26 @@
 #include "common.h"
-__asm__(
-  ".globl func_801162F8\n"
-  ".type func_801162F8, @function\n"
-  "func_801162F8:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x10($sp)\n\tjal func_800F71DC\n\taddu $a0, $zero, $zero\n\tjal func_800F654C\n\taddiu $a0, $zero, 0xAA\n\t.L80116310:\n\tjal func_800F8768\n\taddiu $a0, $zero, 0x500\n\tjal func_800F6364\n\tnop\n\tjal func_800F5958\n\taddiu $a0, $zero, 0x8\n\tjal func_800F53D4\n\tnop\n\tbeqz $v0, .L80116310\n\tnop\n\tlw $ra, 0x10($sp)\n\tnop\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_801162F8, .-func_801162F8\n"
-);
+extern int func_800F53D4();
+extern int func_800F5958();
+extern int func_800F6364();
+extern int func_800F654C();
+extern int func_800F71DC();
+extern int func_800F8768();
+
+void func_801162F8(void)
+
+{
+  int iVar1;
+  
+  func_800F71DC(0);
+  func_800F654C(0xaa);
+  do {
+    func_800F8768(0x500);
+    func_800F6364();
+    func_800F5958(8);
+    iVar1 = func_800F53D4();
+  } while (iVar1 == 0);
+  return;
+}
+
+
+

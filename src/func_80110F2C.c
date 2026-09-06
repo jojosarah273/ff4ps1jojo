@@ -1,12 +1,27 @@
 #include "common.h"
-__asm__(
-  ".globl func_80110F2C\n"
-  ".type func_80110F2C, @function\n"
-  "func_80110F2C:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x10($sp)\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x6\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x1704\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x3\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x1705\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x58\n\tjal func_800F824C\n\taddiu $a0, $zero, 0x2C\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x60\n\tjal func_800F824C\n\taddiu $a0, $zero, 0x2E\n\tjal func_80111BBC\n\tnop\n\tjal func_800F8FB8\n\taddiu $a0, $zero, 0x79\n\tjal func_800F8FB8\n\taddiu $a0, $zero, 0x7A\n\tjal func_800F8FB8\n\taddiu $a0, $zero, 0x24\n\tlw $ra, 0x10($sp)\n\tnop\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_80110F2C, .-func_80110F2C\n"
-);
+extern int func_800F654C();
+extern int func_800F8188();
+extern int func_800F824C();
+extern int func_800F8FB8();
+extern int func_80111BBC();
+
+void func_80110F2C(void)
+
+{
+  func_800F654C(6);
+  func_800F8188(0x1704);
+  func_800F654C(3);
+  func_800F8188(0x1705);
+  func_800F654C(0x58);
+  func_800F824C(0x2c);
+  func_800F654C(0x60);
+  func_800F824C(0x2e);
+  func_80111BBC();
+  func_800F8FB8(0x79);
+  func_800F8FB8(0x7a);
+  func_800F8FB8(0x24);
+  return;
+}
+
+
+

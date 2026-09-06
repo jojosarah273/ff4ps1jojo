@@ -1,12 +1,51 @@
 #include "common.h"
-__asm__(
-  ".globl func_800FB160\n"
-  ".type func_800FB160, @function\n"
-  "func_800FB160:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x10($sp)\n\tjal func_800FA460\n\tnop\n\tjal func_800FB2E8\n\tnop\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x1\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x1701\n\tjal func_800F8F74\n\taddiu $a0, $zero, 0x6FA\n\tjal func_800FDD28\n\tnop\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x14\n\tjal func_800F71DC\n\tori $a0, $zero, 0x8980\n\tjal func_800FE978\n\tnop\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x14\n\tjal func_800F7500\n\tori $a0, $zero, 0x8200\n\tjal func_8011C1F8\n\tnop\n\tjal func_800F71DC\n\taddu $a0, $zero, $zero\n\tlui $a0, (0x148B80 >> 16)\n\t.L800FB1D4:\n\tjal func_800F6C68\n\tori $a0, $a0, (0x148B80 & 0xFFFF)\n\tjal func_800F8768\n\taddiu $a0, $zero, 0xEDB\n\tjal func_800F6364\n\tnop\n\tjal func_800F5958\n\taddiu $a0, $zero, 0x100\n\tjal func_800F53D4\n\tnop\n\tbeqz $v0, .L800FB1D4\n\tlui $a0, (0x148B80 >> 16)\n\tjal func_800FFADC\n\tnop\n\tjal func_8011D218\n\tnop\n\tlw $ra, 0x10($sp)\n\tnop\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_800FB160, .-func_800FB160\n"
-);
+extern int func_800F53D4();
+extern int func_800F5958();
+extern int func_800F6364();
+extern int func_800F654C();
+extern int func_800F6C68();
+extern int func_800F71DC();
+extern int func_800F7500();
+extern int func_800F8188();
+extern int func_800F8768();
+extern int func_800F8F74();
+extern int func_800FA460();
+extern int func_800FB2E8();
+extern int func_800FDD28();
+extern int func_800FE978();
+extern int func_800FFADC();
+extern int func_8011C1F8();
+extern int func_8011D218();
+
+void func_800FB160(void)
+
+{
+  int iVar1;
+  
+  func_800FA460();
+  func_800FB2E8();
+  func_800F654C(1);
+  func_800F8188(0x1701);
+  func_800F8F74(0x6fa);
+  func_800FDD28();
+  func_800F654C(0x14);
+  func_800F71DC(0x8980);
+  func_800FE978();
+  func_800F654C(0x14);
+  func_800F7500(0x8200);
+  func_8011C1F8();
+  func_800F71DC(0);
+  do {
+    func_800F6C68(0x148b80);
+    func_800F8768(0xedb);
+    func_800F6364();
+    func_800F5958(0x100);
+    iVar1 = func_800F53D4();
+  } while (iVar1 == 0);
+  func_800FFADC();
+  func_8011D218();
+  return;
+}
+
+
+

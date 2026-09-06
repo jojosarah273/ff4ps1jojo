@@ -1,5 +1,20 @@
 #include "common.h"
-extern void func_800F654C(u32 v);
-extern void func_800F824C(u32 v);
-extern void func_80121A74(u32 v);
-void func_80121F8C(void) { func_800F654C(0xF8); func_800F824C(0x1E); func_800F654C(0xFF); func_800F824C(0x1F); func_800F654C(0xFD); func_800F824C(0x20); func_80121A74(); }
+extern int func_800F654C();
+extern int func_800F824C();
+extern int func_80121A74();
+
+void func_80121F8C(void)
+
+{
+  func_800F654C(0xf8);
+  func_800F824C(0x1e);
+  func_800F654C(0xff);
+  func_800F824C(0x1f);
+  func_800F654C(0xfd);
+  func_800F824C(0x20);
+  func_80121A74();
+  return;
+}
+
+
+
