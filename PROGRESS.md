@@ -178,6 +178,17 @@ BIOS boot and stalls on the BIOS/disc screen. The LAUNCHER also writes
 `bios_boot=HLE (shell skipped)` -> GL)
 pipeline up -> game loop. Verified with a UI-off build headless.
 
+### 2025-09-07 — recomp fixes for a slow/target machine
+- Black screen root cause: target couldn't read the disc (bad/truncated sync —
+  verify sha256 ab9e79c6...) AND no local EXE. Kit now ships
+  recomp/input/SLUS_013.60 (local EXE -> text guard armed, boots w/o disc EXE).
+- Weak-GL fallback exists: `--renderer software` (SDL2) or vulkan.
+- FMV skip is MOD-OWNED on PSX: the [video] auto_skip_fmv key is ignored by
+  design. Added framework builtin `mod_builtin_skip.c` (activation plugin
+  psx.skip-fmv -> psx_mod_set_auto_skip_fmv(1)) + manifest
+  psx.enhancement.skip-fmv (default_enabled=true); runtime.cmake list updated.
+  Rebuilt UI binary; mod catalog now stages 5 packages.
+
 ## Status
 - Matched: 2516 / 2516 (100% byte-verified)
 - Decompiled C: 653 (psx 454, modern ~, psxs 15, ladder 18); asm-backed 1863

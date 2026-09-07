@@ -31,3 +31,9 @@ if [ ! -x "$ROOT/build/FF4_Recompiled" ]; then
   exit 1
 fi
 exec "$ROOT/build/FF4_Recompiled" --bios "$BIOS" "$@"
+# FMV-skip is a BUILT-IN MOD plugin now (psx.skip-fmv, staged in
+# recomp/build/mods/bundled/psx.enhancement.skip-fmv). PS1 skips are mod-
+# owned: the [video] auto_skip_fmv key is ignored by design. Default-enabled.
+# Black screen? verify ff4.iso (sha256 ab9e79c66e1f8342e34bf1a8565ad828f2b27dd8d6cb05c3f9e67d2640d2c86c)
+# then try: --renderer software
+# (the kit ships the local EXE in recomp/input/SLUS_013.60 and relative paths)
