@@ -217,6 +217,13 @@ NTSC-U + text guard armed + mod FMV skip all present.
   extern u32 D_x[8]); slot-scheduling residue (store-in-jr-delay-slot) stays
   open for those few. detectors: chain-like scan (72 candidates) ready for next
   batch; register via cp expected o + rm .s + sed lanes.
+- PHASE A SESSION 2: chain family bulk-mined via tools/chain_emit.py —
+  auto-parse verified spec -> candidate C -> era-lane (CC1PSX) verify ->
+  register on CURRENT(0). 39 new byte-verified matches (matched 198->237),
+  C-written 26.6%->28.1%. 29 chain-shaped funcs failed auto-match (re-shelled;
+  manual packets: arg forms $a0=$v0+const, lui+ori 32-bit args, non-`addiu
+  $a0,$zero` slots). Remaining families for future sessions: arithmetic/
+  control-flow, data-access, era-psx `modern-asm` misc.
 ### 2025-09-07 — PROJECT SCOPE: full C decomp -> native port (SoH/SM64 model)
 - Direction confirmed with user: goal = Ship-of-Harkinian-class native FF4
   (PS1), NOT an emulator and NOT a machine-translated recomp (the recomp

@@ -1,12 +1,51 @@
 #include "common.h"
-__asm__(
-  ".globl func_80168F1C\n"
-  ".type func_80168F1C, @function\n"
-  "func_80168F1C:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x10($sp)\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x64\n\tjal func_800F8188\n\tori $a0, $zero, 0xF43C\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x28\n\tjal func_800F8188\n\tori $a0, $zero, 0xF43E\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x1\n\tjal func_800F8188\n\tori $a0, $zero, 0xF440\n\tjal func_800F8F74\n\tori $a0, $zero, 0xF441\n\tjal func_800F8F74\n\tori $a0, $zero, 0xF442\n\tjal func_800F926C\n\tnop\n\tjal func_800F971C\n\tnop\n\tjal func_800F9200\n\tnop\n\tjal func_800F9448\n\tnop\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x43\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x4300\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x4310\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x4320\n\tjal func_800F654C\n\taddiu $a0, $zero, 0xD\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x4301\n\tjal func_800F654C\n\taddiu $a0, $zero, 0xF\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x4311\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x11\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x4321\n\tjal func_800F71DC\n\taddiu $a0, $zero, 0x75FD\n\tjal func_800F8D00\n\taddiu $a0, $zero, 0x4302\n\tjal func_800F71DC\n\taddiu $a0, $zero, 0x7604\n\tjal func_800F8D00\n\taddiu $a0, $zero, 0x4312\n\tjal func_800F71DC\n\taddiu $a0, $zero, 0x760B\n\tjal func_800F8D00\n\taddiu $a0, $zero, 0x4322\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x7E\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x4304\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x4314\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x4324\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x4307\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x4317\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x4327\n\tjal func_800F654C\n\taddu $a0, $zero, $zero\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x4370\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x31\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x4371\n\tjal func_800F71DC\n\tori $a0, $zero, 0xF43C\n\tjal func_800F8D00\n\taddiu $a0, $zero, 0x4372\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x7E\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x4377\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x4374\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x87\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x420C\n\tjal func_800F9448\n\tnop\n\tlw $ra, 0x10($sp)\n\tnop\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_80168F1C, .-func_80168F1C\n"
-);
+void func_80168F1C(void)
+{
+    func_800F654C(100);
+    func_800F8188(62524);
+    func_800F654C(40);
+    func_800F8188(62526);
+    func_800F654C(1);
+    func_800F8188(62528);
+    func_800F8F74(62529);
+    func_800F8F74(62530);
+    func_800F926C();
+    func_800F971C();
+    func_800F9200();
+    func_800F9448();
+    func_800F654C(67);
+    func_800F8188(17152);
+    func_800F8188(17168);
+    func_800F8188(17184);
+    func_800F654C(13);
+    func_800F8188(17153);
+    func_800F654C(15);
+    func_800F8188(17169);
+    func_800F654C(17);
+    func_800F8188(17185);
+    func_800F71DC(30205);
+    func_800F8D00(17154);
+    func_800F71DC(30212);
+    func_800F8D00(17170);
+    func_800F71DC(30219);
+    func_800F8D00(17186);
+    func_800F654C(126);
+    func_800F8188(17156);
+    func_800F8188(17172);
+    func_800F8188(17188);
+    func_800F8188(17159);
+    func_800F8188(17175);
+    func_800F8188(17191);
+    func_800F654C(0);
+    func_800F8188(17264);
+    func_800F654C(49);
+    func_800F8188(17265);
+    func_800F71DC(62524);
+    func_800F8D00(17266);
+    func_800F654C(126);
+    func_800F8188(17271);
+    func_800F8188(17268);
+    func_800F654C(135);
+    func_800F8188(16908);
+    func_800F9448();
+}
