@@ -178,6 +178,17 @@ BIOS boot and stalls on the BIOS/disc screen. The LAUNCHER also writes
 `bios_boot=HLE (shell skipped)` -> GL)
 pipeline up -> game loop. Verified with a UI-off build headless.
 
+### 2025-09-07 — recomp: black screen ROOT CAUSE (project-relative paths)
+game.toml/settings.toml paths are anchored by find_project_root() to the
+first ancestor holding .git/.gitignore (the FF4_PS1_DECOMP folder), NOT the
+exe dir or cwd. Our `../ff4.iso` resolved to the wrong file -> "No CD001"
+-> no disc, no local EXE -> black screen. Fixed configs:
+  game.toml:            disc = "ff4.iso", exe = "recomp/input/SLUS_013.60"
+  build/settings.toml:  [disc] path = "ff4.iso", [bios] path = "SCPH1001.BIN"
+run.sh now pre-flights the binary, exec bit, and ISO sha256, and launches with
+--bios SCPH1001.BIN (resolved via find_upward). Verified locally: disc region
+NTSC-U + text guard armed + mod FMV skip all present.
+
 ### 2025-09-07 — recomp fixes for a slow/target machine
 - Black screen root cause: target couldn't read the disc (bad/truncated sync —
   verify sha256 ab9e79c6...) AND no local EXE. Kit now ships
