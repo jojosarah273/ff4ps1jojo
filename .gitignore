@@ -31,3 +31,9 @@ build/
 
 # build outputs
 /build/
+
+# native recomp kit (binary + configs, synced out-of-band)
+/recomp/
+
+# recomp atexit report (runtime artifact)
+tools/psx_last_run_report.json
