@@ -208,6 +208,15 @@ NTSC-U + text guard armed + mod FMV skip all present.
   psx.enhancement.skip-fmv (default_enabled=true); runtime.cmake list updated.
   Rebuilt UI binary; mod catalog now stages 5 packages.
 
+- PHASE A SESSION 1: bulk loop proven. Era lane (CC1PSX via wine, `make psx`)
+  is the reliable lane for the 72-strong const-arg caller-chain family; modern
+  lane fails their li-vs-ori/frame forms. 6 functions byte-verified this session
+  (func_8010F254, func_80103A28, func_8014ED88, func_8012B050, func_8014ED40,
+  func_80139694) -> matched 192->198, C-written 26.3%->26.6%. Data-class blocker
+  cracked for absolute-address stores ($at form = symbol >8 bytes, e.g.
+  extern u32 D_x[8]); slot-scheduling residue (store-in-jr-delay-slot) stays
+  open for those few. detectors: chain-like scan (72 candidates) ready for next
+  batch; register via cp expected o + rm .s + sed lanes.
 ### 2025-09-07 — PROJECT SCOPE: full C decomp -> native port (SoH/SM64 model)
 - Direction confirmed with user: goal = Ship-of-Harkinian-class native FF4
   (PS1), NOT an emulator and NOT a machine-translated recomp (the recomp
