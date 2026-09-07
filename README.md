@@ -23,7 +23,7 @@ path — the same recipe used by every modern decomp-port.
 | C — Expansion | Widescreen, hi-res, new modes, randomizer/mod framework, cross-platform (DC-class portability = plain C) | — |
 
 **Phase A milestones** (tracked in `decomp/STATUS.md` via `tools/decomp_status.py`):
-- [ ] 25% C-written (~630 funcs)
+- [x] 25% C-written (~630 funcs) — DONE 2025-09-07 (708 funcs, 28.1%)
 - [ ] 50% C-written (~1260 funcs)
 - [ ] 75% C-written (~1890 funcs)
 - [ ] 100% C-written, with ≥50% byte-verified (matched)
