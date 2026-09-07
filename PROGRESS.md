@@ -178,6 +178,14 @@ BIOS boot and stalls on the BIOS/disc screen. The LAUNCHER also writes
 `bios_boot=HLE (shell skipped)` -> GL)
 pipeline up -> game loop. Verified with a UI-off build headless.
 
+### 2025-09-07 — recomp: run.sh now passes ABSOLUTE --disc/--bios
+find_project_root() anchors relative config paths to the first ancestor with
+.git/.gitignore/CMakeLists.txt; a sync missing those markers mis-roots paths
+(the user's second run hit the "select game disc" prompt). CLI args override
+all config anchoring, so both launchers now compute absolute paths:
+  --bios <projRoot>/SCPH1001.BIN  --disc <projRoot>/ff4.iso
+Verified from an arbitrary cwd: disc region NTSC-U + guard armed + FMV mod.
+
 ### 2025-09-07 — recomp: black screen ROOT CAUSE (project-relative paths)
 game.toml/settings.toml paths are anchored by find_project_root() to the
 first ancestor holding .git/.gitignore (the FF4_PS1_DECOMP folder), NOT the
