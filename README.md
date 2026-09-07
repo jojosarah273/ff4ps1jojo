@@ -1,116 +1,71 @@
-# FF4 PS1 (SLUS_013.60) — Decompilation
+# FF4 (PS1, SLUS_013.60) — Full C Decompilation → Native Port
 
-Byte-matching decompilation of **Final Fantasy IV** (PlayStation, USA) main
-executable `ISODUMP/slus_013.60`, with the explicit goal of 100% match.
+The end goal is a **Ship of Harkinian / SM64-PC / Zeld64Recomp-class native
+port of Final Fantasy IV (PlayStation, USA)**: the game rebuilt from
+verified C source — readable, moddable, widescreen/hi-res, portable — not an
+emulator, not a machine-translated recomp.
 
-**Status: 2516 / 2516 VERIFIED (100% byte-matched)** — see `PROGRESS.md`.
+The PS1 FF4 is a **C-compiled R3000 game** (Tose's original PS1 rebuild —
+compiler-confirmed per-function by lane classification: PSY-Q CC1PSX /
+gcc-2.95.2). That makes a true C decompilation the correct and achievable
+path — the same recipe used by every modern decomp-port.
 
-Decompiled-C count: **653** (psx 454, psxs 15, ladder 18, modern ~166); the
-remaining 1863 are byte-verified top-of-file asm (`modern-asm`). C conversion
-runs off Ghidra decomp refs (`refs/ghidra-c/`) + `tools/sas2c.py`; names in
-`symbols/ghidra_psx_names.txt`.
+**Byte-verified coverage of the entire main EXE text: 2516 / 2516.**
+**C-written: 26.3% (662 funcs) — the Phase A mission is the rest.**
 
-## Layout
+## Phases
+
+| Phase | Goal | State |
+|---|---|---|
+| 0 — Verified disassembly | Full text coverage byte-verified (maspsx lanes, splat, asm-differ) | ✅ done (2516/2516) |
+| A — Complete C decomp | Every function as harness-verified C (byte-match where the compiler reproduces it; runtime-verified where it doesn't) | ▶ in progress (662/2516 C-written, 192 byte-verified) |
+| B — Interpretation | Rename/restructure into modern readable C; native host: SDL, stdio assets, no BIOS; native renderer/audio swap | — |
+| C — Expansion | Widescreen, hi-res, new modes, randomizer/mod framework, cross-platform (DC-class portability = plain C) | — |
+
+**Phase A milestones** (tracked in `decomp/STATUS.md` via `tools/decomp_status.py`):
+- [ ] 25% C-written (~630 funcs)
+- [ ] 50% C-written (~1260 funcs)
+- [ ] 75% C-written (~1890 funcs)
+- [ ] 100% C-written, with ≥50% byte-verified (matched)
+- [ ] All stubborn functions runtime-verified against the recomp oracle
+
+The reference `psxrecomp` build (see `recomp/`) keeps the game **playable
+today** and acts as the correctness oracle; its `gpu.c`/`spu.c`/`cdrom.c`
+become the native device-layer semantics for Phase B.
+
+## FMV policy
+
+The bundled FMVs (intro-only, unrelated to *Chrono Trigger*-style in-story
+cutscenes) are **removed by design**: copyrighted, zero gameplay value. The
+recomp's `psx.skip-fmv` mod (default-on) skips them now; the native port will
+not ship FMV playback at all.
+
+## Phase A tooling
+
+- `tools/decomp_work.py NAME…` — emit a work-packet (`decomp/work/<n>.md`):
+  byte-verified specs + psxrecomp oracle + toolchain lane + verify recipe.
+- `tools/decomp_status.py` — progress report → `decomp/STATUS.md`.
+- `tools/re_shell.py NAME…` — restore the verified-asm shell for a candidate
+  that failed byte-match (keep the tree truthful).
+- Vertex: `make build/<n>.o` (modern lane) → `asm-differ` `-j .text` vs
+  `build/expected/<n>.o`; era lanes via `make psx FUNC=<n>` (wine CC1PSX).
+  Register a match: `cp build/expected/<n>.o expected/matched/` + delete the
+  `.s`. Names for Phase B come from `everything8215/ff4` (SNES disasm, the
+  same game's data lineage) + `symbols/`.
+
+## Layout (condensed)
 
 ```
-ISODUMP/slus_013.60   original EXE (baserom, gitignored)
-slus_013.60.yaml      splat split config
-asm/nonmatchings/main split disassembly (splat-generated)
-src/*.c               per-function C candidates (matched or in progress)
-include/              common.h + splat macro includes
-tools/maspsx/         vendored maspsx (patched, see below)
-tools/psyq/           PsyQ 4.4 CC1PSX.EXE for the era lane (gitignored)
-tools/sweep.py        small-function pattern classifier
-tools/try_match.py    build+diff one candidate
-tools/sas2c.py        nonmatching .s -> byte-accurate top-of-file asm .c
-tools/gen_callers.py  straight-line const-arg caller-chain generator
-tools/gen_loop_callers.py  loop-hub (do/while) caller generator
-tools/scan_stubs.py / tools/emit_stubs.py  PSYQ kernel-syscall stub family
-tools/ladder_sweep.py batch gcc-2.95.2 rung tester
-tools/c89fix.py       hoist declarations (gcc-2.9x C89 strictness)
-tools/bulk.py         batch classify->emit->build->diff->finalize runner
-diff_settings.py      asm-differ configuration
-Makefile              build lanes
-PROGRESS.md           match ledger + blockers
-pcsx-redux/           emulator for debug/testing (gitignored, built in-tree)
-
-## Toolchain
-
-| Stage | Tool |
-|---|---|
-| split | `splat 0.50.0` (venv `~/.venvs/ff4_decomp`) |
-| modern lane | `mipsel-linux-gnu-gcc-13 -G8 …` → maspsx → GNU as |
-| era lane | `wine tools/psyq/bin/CC1PSX.EXE (-G8)` → maspsx → GNU as |
-| verify | `asm-differ -o -f … -F …` (`CURRENT (0)` = match) |
-
-Load map: EXE code at file `0x800` → vram `0x800F2400`; `gp = 0x8019ECFC`.
-
-### Three lanes (order of preference: modern → psx → psxs)
-- `make diff FUNC=...` — gcc-13 native, no wine. Matches void empties, gp
-  accessors, zero-stores, getter/mask/simple arithmetic.
-- `make psx FUNC=...` — wine CC1PSX.EXE `-O2 -G8`. Matches store batches,
-  *g=*p copies, hub sequence-callers (jal chains with consts), loop callers.
-- `make psxs FUNC=...` — CC1PSX `-O2 -fschedule-insns`. Matches wrapper/prologue
-  shapes where scheduling matters.
-
-Real-world finding: bulk-generated caller candidates often need their args and
-loop structure corrected by hand before they build. See tools/gen_callers.py
-and tools/gen_loop_callers.py. Always verify CURRENT(0) on the exact lane
-recorded in `expected/lanes.txt`.
-
-### Why two lanes
-The original binary was built with the PsyQ gcc 2.8.1-era compiler. Modern
-gcc-13 matches simple functions but diverges on load ordering, register
-allocation, and sdata classification. When a candidate compiles but
-asm-differ shows register/order deltas, rebuild it through the **era lane**:
-
-```sh
-make psx FUNC=func_XXXX        # wine CC1PSX → maspsx → diff
+asm/nonmatchings/main/   byte-verified split disassembly (the spec)
+src/*.c                  per-function C (matched / candidate / verified-asm shell)
+expected/lanes.txt       per-function toolchain lane (psx/psxs/modern/ladder/asm)
+expected/matched/        byte-verified C registrations
+include/  tools/         maspsx, psyq(CC1PSX), sweep, bulk, sas2c, decomp_*
+Makefile                 build lanes + diff targets
+decomp/                  STATUS.md, work packets, manifest
+recomp/                  reference psxrecomp build (playable today)
+refs/  symbols/          Ghidra/SNES naming references
+PROGRESS.md              session ledger
 ```
 
-### maspsx patches (vendored in tools/maspsx)
-- `%gp_rel` / `%lo` / `%got(…)(base)` load/store operands are passed through
-  to GNU as instead of being mangled into `lui $at,%hi(%gp_rel)`.
-- `.extern sym, size` with `size <= -G threshold` marks the symbol as a
-  gp-relative sbss member (ASPSX behavior), so CC1PSX's bare symbol refs
-  become `%gp_rel(sym)($gp)`.
-
-### Kernel-syscall classes (solved via inline asm)
-PSYQ dispatches libc/kernel/PC-link functions through tiny jr-$t2 stubs
-(jump 0xA0/0xB0, syscall code in $t1) and `break 0,N` syscalls. These have no
-C representation, so they (and flavor-blocked libgcc/libgpu routines) are
-matched with `__asm__ __volatile__(...)` + `__builtin_unreachable()` (short)
-or `tools/sas2c.py` top-of-file asm (long). Notes:
-- maspsx tracks `.set<TAB>noreorder` (dropped from output) but passes
-  `.set noreorder` (space) through to GNU as — emit BOTH in top-of-file asm.
-- maspsx can't parse `break 0,N` or spaced `sltu` — use `.word` encodings /
-  compact `sltu $d,$s,$t`.
-
-## Make targets
-
-```sh
-make build/func_XXXX.o             # modern lane object
-make build/expected/func_XXXX.o    # reference object from the split .s
-make psx FUNC=func_XXXX            # era lane + diff (single-shot)
-make diff FUNC=func_XXXX           # modern lane + diff
-splat split slus_013.60.yaml       # re-split / refresh asm
-```
-
-## Matching protocol
-1. `python3 tools/sweep.py` — classify trivials (extended regularly).
-2. Write the deduced C in `src/<func>.c`, `python3 tools/try_match.py <func> '<body>'`.
-3. `CURRENT (0)` → remove its `INCLUDE_ASM` line from `src/main.c`, delete
-   `asm/nonmatchings/main/<func>.s`, commit.
-4. Non-zero → try the era lane once; still stuck → note in `PROGRESS.md`.
-
-## Filesystem / git notes
-Working tree is on **ext4** (was exFAT on the original machine). Push to
-GitHub regularly: `git push origin main` (credential helper configured,
-classic PAT in `~/.git-credentials`).
-
-## References
-- [maspsx](https://github.com/mkst/maspsx) — ASPSX emulation for GNU as
-- [splat](https://github.com/ethteck/splat) — binary splitter
-- [asm-differ](https://github.com/simonlindholm/asm-differ) — diff UI
-- PSX-SpX hardware docs — MMIO at `0x1F80xxxx`
-- Style: silent-hill-decomp / xenogears-decomp (psyq, splat-based)
+More detail: `PROGRESS.md`. Verification harness: `tools/check_integrity.sh`.

@@ -37,3 +37,4 @@ build/
 
 # recomp atexit report (runtime artifact)
 tools/psx_last_run_report.json
+/.debris/

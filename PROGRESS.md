@@ -208,6 +208,29 @@ NTSC-U + text guard armed + mod FMV skip all present.
   psx.enhancement.skip-fmv (default_enabled=true); runtime.cmake list updated.
   Rebuilt UI binary; mod catalog now stages 5 packages.
 
+### 2025-09-07 — PROJECT SCOPE: full C decomp -> native port (SoH/SM64 model)
+- Direction confirmed with user: goal = Ship-of-Harkinian-class native FF4
+  (PS1), NOT an emulator and NOT a machine-translated recomp (the recomp
+  remains the playable reference + oracle). FMVs dropped by design (policy in
+  README).
+- Phase A baseline (decomp_status.py): 2516 total | 192 byte-verified (7.6%) |
+  470 real-C match-pending (18.7%) | 1854 asm shells (73.7%) | C-written 26.3%.
+- New tooling shipped:
+  - tools/decomp_status.py  -> decomp/STATUS.md progress report
+  - tools/decomp_work.py    -> per-function work packets (spec+oracle+lane+recipe)
+  - tools/re_shell.py       -> restore verified-asm shell (reject bad candidates)
+- Loop validated end-to-end: src C -> make build/<n>.o (gcc-13+maspsx, modern
+  lane) -> asm-differ -j .text vs build/expected/<n>.o (calibrated against
+  expected/matched/func_800F40CC.o -> clean). Era lanes ready (make psx, wine
+  CC1PSX). asm-differ needs -j .text (CURRENT(n) counts full objects otherwise).
+- First probes (func_800F3B9C save-bank mapper, func_80197A78/80191530 setters,
+  func_800F41E8): semantics recovered; byte-match blocked by data-class
+  ($at vs gp_rel — declare data in proper section/class) and delay-slot
+  scheduling (era lane); re-shelled, parked as work packets. Known TODO:
+  re_shell emit explicit .L labels so branch-target relocs pretty-print identically.
+- SNES disasm (../FF4_FROM_SOURCE/ff4, everything8215/ff4) = Phase B naming source.
+
+## 2025-09-07 — recomp: single self-contained 349MB binary (overlay capture WIP)
 ### 2025-09-07 — the recomp IS the game (single self-contained binary)
 - Full-seed rebuild: all 2516 functions compiled (interpreter 4% -> 0.1%).
 - Disc embedded into the executable (ld -r -b binary ff4.iso; objcopy
