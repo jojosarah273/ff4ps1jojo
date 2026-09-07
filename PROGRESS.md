@@ -208,6 +208,19 @@ NTSC-U + text guard armed + mod FMV skip all present.
   psx.enhancement.skip-fmv (default_enabled=true); runtime.cmake list updated.
   Rebuilt UI binary; mod catalog now stages 5 packages.
 
+### 2025-09-07 — the recomp IS the game (single self-contained binary)
+- Full-seed rebuild: all 2516 functions compiled (interpreter 4% -> 0.1%).
+- Disc embedded into the executable (ld -r -b binary ff4.iso; objcopy
+  renamed symbols; runtime hooks: ISOReader BinSegment->mem + cdrom iso_open
+  exists-gate + resolve_disc_for_runtime 'embedded:' sentinel). Boot EXE
+  extracted from the embedded disc when input/ is absent. Verified headless:
+  guard armed (disc SLUS_013.60), no mount errors.
+- Result: one 349 MB ELF containing game code + full disc; only external
+  file = 512 KB SCPH1001.BIN (retail BIOS, licensing).
+- FMV skip = builtin mod (psx.skip-fmv) + [video] fmv_skip_no_xa.
+- Earlier false positive: a cached build/disc.cfg masked the embed tests;
+  removed + retested honestly.
+
 ## Status
 - Matched: 2516 / 2516 (100% byte-verified)
 - Decompiled C: 653 (psx 454, modern ~, psxs 15, ladder 18); asm-backed 1863
