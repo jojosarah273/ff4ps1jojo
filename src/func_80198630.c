@@ -1,57 +1,17 @@
 #include "common.h"
-__asm__(
-  ".globl func_80198630\n"
-  ".type func_80198630, @function\n"
-  "func_80198630:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x18\n"
-  "\tlui $v0, (0x7FFFFFFF >> 16)\n"
-  "\tori $v0, $v0, (0x7FFFFFFF & 0xFFFF)\n"
-  "\tand $v0, $a0, $v0\n"
-  "\tbnez $v0, .Lst50\n"
-  "\tsw $ra, 0x10($sp)\n"
-  ".Lst48:\n"
-  "\tj .LstC4\n"
-  "\taddu $v0, $zero, $zero\n"
-  ".Lst50:\n"
-  "\tsra $v0, $a0, 23\n"
-  "\tandi $a1, $v0, 0xFF\n"
-  "\taddiu $a2, $a1, -0x9D\n"
-  "\tblez $a2, .Lst88\n"
-  "\tlui $v1, (0x800000 >> 16)\n"
-  "\tbltz $a0, .Lst80\n"
-  "\taddiu $a0, $zero, 0x22\n"
-  "\tjal func_80198990\n"
-  "\taddiu $a1, $zero, 0x12\n"
-  "\tlui $v0, (0x7FFFFFFF >> 16)\n"
-  "\tj .LstC4\n"
-  "\tori $v0, $v0, (0x7FFFFFFF & 0xFFFF)\n"
-  ".Lst80:\n"
-  "\tj .LstC4\n"
-  "\tlui $v0, (0x80000000 >> 16)\n"
-  ".Lst88:\n"
-  "\tlui $v0, (0x7FFFFF >> 16)\n"
-  "\tori $v0, $v0, (0x7FFFFF & 0xFFFF)\n"
-  "\tand $v0, $a0, $v0\n"
-  "\tor $v0, $v0, $v1\n"
-  "\tsll $v1, $v0, 7\n"
-  "\taddiu $v0, $a1, -0x7E\n"
-  "\tsltiu $v0, $v0, 0x20\n"
-  "\tbeqz $v0, .Lst48\n"
-  "\tnop\n"
-  "\tbeqz $v1, .Lst48\n"
-  "\tnegu $v0, $a2\n"
-  "\tsrav $v1, $v1, $v0\n"
-  "\tbgez $a0, .LstC4\n"
-  "\taddu $v0, $v1, $zero\n"
-  "\tnegu $v0, $v0\n"
-  ".LstC4:\n"
-  "\tlw $ra, 0x10($sp)\n"
-  "\taddiu $sp, $sp, 0x18\n"
-  "\tjr $ra\n"
-  "\tnop\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_80198630, .-func_80198630\n"
-);
+void func_80198630(void)
+{
+    /* event: v0 gates; 80198990(0x22) row; returns L1986C4. */
+    if (func_800F53D4() != 0)
+        goto L198650;
+    goto L198648;
+    func_80198990(0x22);
+    return;
+L198650:
+    func_80198990(0x22);
+    goto L1986C4;
+L198648:
+    goto L1986C4;
+L1986C4:
+    return;
+}
