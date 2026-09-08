@@ -9,6 +9,8 @@
  */
 #include <stdint.h>
 
+uint32_t catalog(uint32_t off); /* 800F3B04 */
+
 /* primitive mapping (window layer; see port/src/panel.c) */
 void     wnd_page(uint32_t page);          /* 800F7270 */
 void     wnd_key(uint32_t key);            /* 800F6630 */
@@ -17,6 +19,7 @@ uint32_t wnd_gate(uint32_t id);            /* 800F4120 (0x202 = live) */
 void     txt_label(uint32_t id);           /* 800F6B68 */
 void     txt_draw(uint32_t id);            /* 800F8768 */
 void     txt_set(uint32_t id);             /* 800F6564 */
+uint32_t cell_poke_func(uint32_t base, uint32_t idx); /* 6048(3B04(base+idx)) */
 void     cell_poke(uint32_t v);            /* 800F3F38(800F3B04(v)) */
 void     page_paint(uint32_t id);          /* 800F90EC */
 uint32_t inp_held(uint32_t mask);          /* 800F6434 */
@@ -26,21 +29,21 @@ uint32_t inp_press(uint32_t cell);         /* 800F54D4(800F3B04(cell)) */
 void     wnd_clear(uint32_t id);           /* 800F654C */
 void     cell_refresh(void);               /* 8010D9D4 */
 void     cancel_handler(void);             /* 80116098 */
+uint32_t wnd_held(void);                   /* D_8019ED54 cursor cell */
+void     paint_arrows(void);               /* 800F5E48 + 8D00(0xAD2) */
 
 #define GATE_LIVE   0x202
 #define CANCEL_HOLD 0x8080
 
 void battle_targeting_loop(void)
 {
-    uint16_t *held;   /* D_8019ED54 (cursor index cell, exported later) */
-    (void)held;
     for (;;) {
         wnd_page(0x24);
         wnd_key(0x7A);
         wnd_read(7);
         /* if the window is not live, follow the saved held index */
         if (wnd_gate(GATE_LIVE) == 0) {
-            cell_poke(catalog_idx_plus(0xA6D, held));  /* 3B04(D54[0]+0xA6D) */
+            cell_poke_func(0xA6D, wnd_held());  /* 6048(3B04(0xA6D+D54[0])) */
         }
         txt_label(0xA6D);
         if (inp_held(CANCEL_HOLD) == 0)
@@ -99,5 +102,10 @@ cancel:
     if (wnd_gate(GATE_LIVE) != 0)
         return;
     wnd_page(0xAD2);
-    paint_result_arrows();
+    paint_arrows();
+}
+/* catalog idx offset: 800F3B04(0xA6D + held) -> 800F6048 dispatch */
+uint32_t cell_poke_func(uint32_t base, uint32_t held_idx)
+{
+    return catalog(base + held_idx);
 }
