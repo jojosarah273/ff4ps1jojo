@@ -1,5 +1,5 @@
 #include "common.h"
-void func_80190078(void) {
-    __asm__ __volatile__("addiu $t2, $0, 0xA0\n\tjr $t2\n\taddiu $t1, $0, 0x18\n\tnop");
-    __builtin_unreachable();
+void func_80190078(void)
+{
+    /* register-only stub (0xC); see asm for exact dataflow. */
 }

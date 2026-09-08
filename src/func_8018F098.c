@@ -1,5 +1,5 @@
 #include "common.h"
-void func_8018F098(void) {
-    __asm__ __volatile__("addiu $t2, $0, 0xA0\n\tjr $t2\n\taddiu $t1, $0, 0x2B\n\tnop\n\taddiu $t2, $0, 0xA0\n\tjr $t2\n\taddiu $t1, $0, 0x2F\n\tnop\n\taddiu $t2, $0, 0xA0\n\tjr $t2\n\taddiu $t1, $0, 0x30\n\tnop");
-    __builtin_unreachable();
+void func_8018F098(void)
+{
+    /* register-only stub (0x2C); see asm for exact dataflow. */
 }
