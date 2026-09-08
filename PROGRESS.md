@@ -333,6 +333,21 @@ the 2C7B info screen (152CDC), the 1440/1441 + 321B/32DB twin data pages
 count-down screen (654C(0x1A/0x1B), 9330/95A0/5DA0/4064/8274), and the
 29B5 confirm with ED44/ED54 hword + ED5C/ED40 byte moves, 3B04(0x3540+sel)
 -> 6048 -> 1548F4 exit. All 30+ gates + loops from spec; C-written 1395.
+### BIG-SCREEN CHAIN II: func_80150C58 (1005 rows) decoded + committed
+The party/status MASTER screen — calls the just-decoded func_801539C4 and
+the queued giant func_80163F68. 47 label-blocks: 0x1900 boot wait + 3B04
+(0x600+hw(ED54)) draw loop; 1802/1801/1800 option window (38EF/38E5/38BE
+prompts, 53C0/55C0 gates, 658C/81B0/6558 helpers); the 299C/29AD/29CA party
+view chain (90EC/4F28/4F4C/7A40+3B04(0x29CA+hw(ED54)) sprite draw, the
+view30 54D4/3F38 gates on 3B04(0x29AD/0x29CA+hw(ED58))), 29B5/29BD confirm,
+29A1/29A5 dialog (8015240C), 29CF screen -> 801539C4(), then the 16AC/38D9/
+38D7/3581 option screens (78C4+3B04(0x38DA), 7918/6434/4120 gates -> the
+654C(2/3/4) selector -> 80150C38), the 3601/352E/38E5/388B config pages
+(80157AD0/80150B88/8015D9A8/8015AC7C/8015DCA4/8015BD34/80157F30/80158190/
+80151C0C/8005F188/8016E560/8016E500/80153518/8016571C/801533BC/801534D8/
+80153608), the 1804 confirm (78C4+3C3C(0xAB)) and the 1B34 sound gate
+(6564(0x35F3)+8188(0x1E00)+80169128) -> final 62BC/5DA0/6630(0xAA) loop
+-> 654C(0)+81E8(0x2106) re-arm, return. C-written 1396 (55.5%).
 ### 2025-09-08 — LARGE-FUNCTION SESSION (as directed: "target a larger function")
 Six big ones decoded: func_80114194 (90r, 3-phase menu state machine),
 func_80152F0C (90r, dual-phase screen-switch), func_80144344 (110r, nested
