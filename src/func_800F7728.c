@@ -1,13 +1,13 @@
 #include "common.h"
-extern u8 *D_D_8019ED68;
-extern u8 *D_D_8019ED50;
+extern u8 *D_8019ED68;
+extern u8 *D_8019ED50;
 void func_800F7728(void)
 {
-    u8 x = *D_D_8019ED68;
-    u8 r = (u8)((x & 0x7C) | (*D_D_8019ED50 & 0xFF));
-    if (*D_D_8019ED50 != 0)
+    u8 x = *D_8019ED68;
+    u8 r = (u8)((x & 0x7C) | (*D_8019ED50 & 0xFF));
+    if (*D_8019ED50 != 0)
         r = (u8)((x & 0x7C) | 0x2);
     else
         r &= 0xFF;
-    *D_D_8019ED68 = r;
+    *D_8019ED68 = r;
 }
