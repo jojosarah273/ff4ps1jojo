@@ -13,7 +13,7 @@ L19677C:
 L196794:
     /* v1/v0 gate -> L1967C8 / L19677C */
     goto L19677C; /* v1/v0 gate (fall: 801963C0 row) */
-    /* L1967B8 loop */
+L1967B8:
     func_801968CC();
     if (func_800F53D4() != 0)
         goto L196888;
