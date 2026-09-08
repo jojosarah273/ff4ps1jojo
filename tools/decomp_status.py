@@ -77,32 +77,45 @@ md = [
 ]
 (ROOT / "decomp").mkdir(exist_ok=True)
 (ROOT / "decomp" / "STATUS.md").write_text("\n".join(md) + "\n")
-# --- refresh README status block (monitoring via GitHub) -------------
-rd = (ROOT / "README.md")
+# --- refresh README status (monitoring via GitHub) -------------
+cw = states['matched'] + states['real-C']
+pctw = f"{100.0 * cw / total:.1f}%"
+rd = ROOT / "README.md"
 txt = rd.read_text()
-block = "\n".join([f"| {k} | {states[k]} | {pct(k)} |" for k in
-                    ("matched", "real-C", "shell")])
 frag = (
-    "\n**Phase A progress** — see `decomp/STATUS.md` for the full table.\n\n"
+    "\n**Phase A progress** — full table in `decomp/STATUS.md`.\n\n"
     "<!-- STATUS:BEGIN -->\n"
-    f"| state | count | % |\n|---|---|---|\n{block}\n"
-    f"| total | {total} | 100% |\n"
-    "| **C-written** | **{0}** | **{1:.1f}%** |\n".format(
-        states['matched'] + states['real-C'],
-        100.0 * (states['matched'] + states['real-C']) / total) +
+    "| state | count | % |\n|---|---|---|\n"
+    f"| byte-verified (matched) | {states['matched']} | {pct('matched')} |\n"
+    f"| real-C (match pending) | {states['real-C']} | {pct('real-C')} |\n"
+    f"| asm shell (to do) | {states['shell']} | {pct('shell')} |\n"
+    f"| **total** | {total} | 100% |\n"
+    f"| **C-written** | **{cw}** | **{pctw}** |\n"
     "<!-- STATUS:END -->\n"
 )
-b0 = txt.find("<!-- STATUS:BEGIN -->")
-b1 = txt.find("<!-- STATUS:END -->")
+b0, b1 = txt.find("<!-- STATUS:BEGIN -->"), txt.find("<!-- STATUS:END -->")
 if b0 != -1 and b1 != -1 and b1 > b0:
     txt = txt[:b0] + "<!-- STATUS:BEGIN -->\n" + frag + txt[b1 + len("<!-- STATUS:END -->"):]
-else:
-    txt = txt.replace("# More detail: `PROGRESS.md`. Verification harness: `tools/check_integrity.sh`.",
-        "# More detail: `PROGRESS.md`. Verification harness: `tools/check_integrity.sh`."
-        "\n\n" + frag)
+m = re.search(r"\*\*C-written: [0-9.]+% \([0-9]+ funcs\)", txt)
+if m:
+    txt = txt.replace(m.group(0), f"**C-written: {pctw} ({cw} funcs)")
+m = re.search(r"\([0-9]+/2516 C-written, [0-9]+ byte-verified\)", txt)
+if m:
+    txt = txt.replace(m.group(0), f"({cw}/2516 C-written, {states['matched']} byte-verified)")
+mb0, mb1 = txt.find("<!-- MILESTONES:BEGIN -->"), txt.find("<!-- MILESTONES:END -->")
+if mb0 != -1 and mb1 != -1 and mb1 > mb0:
+    def mk(p, base):
+        hit = cw >= base
+        return ("- [x]" if hit else "- [ ]") + \
+               f" {p}% C-written (~{base} funcs)" + \
+               (f" \u2014 DONE ({cw} funcs, {pctw})" if hit else f" ({cw} so far)")
+    block = "\n".join([
+        "<!-- MILESTONES:BEGIN -->",
+        mk(25, 629), mk(50, 1258), mk(75, 1887),
+        "- [ ] 100% C-written, with \u226550% byte-verified (matched)",
+        "- [ ] All stubborn functions runtime-verified against the recomp oracle",
+        "<!-- MILESTONES:END -->",
+    ])
+    txt = txt[:mb0] + block + txt[mb1 + len("<!-- MILESTONES:END -->"):]
 rd.write_text(txt)
-print(f"TOTAL {total} | matched {states['matched']} | "
-      f"real-C {states['real-C']} | shell {states['shell']} | "
-      f"(C complete: {states['matched'] + states['real-C']} = "
-      f"{pct('matched')} matched, {100.0 * (states['matched'] + states['real-C']) / total:.1f}% C-written)")
 print("wrote decomp/STATUS.md")

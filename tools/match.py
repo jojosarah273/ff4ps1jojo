@@ -104,13 +104,13 @@ def main():
     ap.add_argument("--bincmp", action="store_true",
                     help="use byte-exact .text compare instead of asm-differ")
     a = ap.parse_args()
-    lanes = ["MODERN", "PSX", "L26", "L27", "L28", "L295"]
+    lanes = ["MODERN", "PSX", "PSXS", "L26", "L27", "L28", "L295"]
     if a.lane == "ALL":
         want = lanes
     elif a.lane in lanes:
         want = [a.lane]
     else:
-        sys.exit(f"bad lane {a.lane}; use ALL/MODERN/PSX/L26/L27/L28/L295")
+        sys.exit(f"bad lane {a.lane}; use ALL/MODERN/PSX/PSXS/L26/L27/L28/L295")
     for name in a.names:
         src = SRC / f"{name}.c"
         if not src.exists():
@@ -127,6 +127,16 @@ def main():
             elif ln == "PSX":
                 build_psx(name)
                 obj = f"build/psx/{name}.o"
+            elif ln == "PSXS":
+                run(f"mipsel-linux-gnu-gcc-13 -E -P -Iinclude src/{name}.c"
+                    f" -o build/psx/{name}.i")
+                run(f"wine tools/psyq/bin/CC1PSX.EXE -quiet -O2 -fschedule-insns "
+                    f"-G8 -mgpOPT -fgnu-linker build/psx/{name}.i "
+                    f"-o /tmp/psxs_{name}.s")
+                run(f"python3 tools/maspsx/maspsx.py --run-assembler "
+                    f"--dont-expand-li -G8 -Iinclude -o build/psx/psxs_{name}.o "
+                    f"< /tmp/psxs_{name}.s")
+                obj = f"build/psx/psxs_{name}.o"
             else:
                 obj = build_ladder(name, ln)
             if obj and os.path.exists(obj):

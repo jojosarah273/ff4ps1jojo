@@ -11,23 +11,25 @@ gcc-2.95.2). That makes a true C decompilation the correct and achievable
 path — the same recipe used by every modern decomp-port.
 
 **Byte-verified coverage of the entire main EXE text: 2516 / 2516.**
-**C-written: 26.3% (662 funcs) — the Phase A mission is the rest.**
+**C-written: 32.0% (805 funcs) — the Phase A mission is the rest.**
 
 ## Phases
 
 | Phase | Goal | State |
 |---|---|---|
 | 0 — Verified disassembly | Full text coverage byte-verified (maspsx lanes, splat, asm-differ) | ✅ done (2516/2516) |
-| A — Complete C decomp | Every function as harness-verified C (byte-match where the compiler reproduces it; runtime-verified where it doesn't) | ▶ in progress (662/2516 C-written, 192 byte-verified) |
+| A — Complete C decomp | Every function as harness-verified C (byte-match where the compiler reproduces it; runtime-verified where it doesn't) | ▶ in progress (805/2516 C-written, 266 byte-verified) |
 | B — Interpretation | Rename/restructure into modern readable C; native host: SDL, stdio assets, no BIOS; native renderer/audio swap | — |
 | C — Expansion | Widescreen, hi-res, new modes, randomizer/mod framework, cross-platform (DC-class portability = plain C) | — |
 
-**Phase A milestones** (tracked in `decomp/STATUS.md` via `tools/decomp_status.py`):
-- [x] 25% C-written (~630 funcs) — DONE 2025-09-07 (708 funcs, 28.1%)
-- [ ] 50% C-written (~1260 funcs)
-- [ ] 75% C-written (~1890 funcs)
+**Phase A milestones** (regenerated every session by `tools/decomp_status.py`):
+<!-- MILESTONES:BEGIN -->
+- [x] 25% C-written (~629 funcs) — DONE (805 funcs, 32.0%)
+- [ ] 50% C-written (~1258 funcs) (805 so far)
+- [ ] 75% C-written (~1887 funcs) (805 so far)
 - [ ] 100% C-written, with ≥50% byte-verified (matched)
 - [ ] All stubborn functions runtime-verified against the recomp oracle
+<!-- MILESTONES:END -->
 
 The reference `psxrecomp` build (see `recomp/`) keeps the game **playable
 today** and acts as the correctness oracle; its `gpu.c`/`spu.c`/`cdrom.c`
@@ -74,16 +76,19 @@ More detail: `PROGRESS.md`. Verification harness: `tools/check_integrity.sh`.
 
 <!-- STATUS:BEGIN -->
 
-**Phase A progress** — see `decomp/STATUS.md` for the full table.
+**Phase A progress** — full table in `decomp/STATUS.md`.
 
 <!-- STATUS:BEGIN -->
 | state | count | % |
 |---|---|---|
-| matched | 266 | 10.6% |
-| real-C | 539 | 21.4% |
-| shell | 1711 | 68.0% |
-| total | 2516 | 100% |
+| byte-verified (matched) | 266 | 10.6% |
+| real-C (match pending) | 539 | 21.4% |
+| asm shell (to do) | 1711 | 68.0% |
+| **total** | 2516 | 100% |
 | **C-written** | **805** | **32.0%** |
 <!-- STATUS:END -->
+
+
+
 
 
