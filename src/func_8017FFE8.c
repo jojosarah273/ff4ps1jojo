@@ -1,12 +1,18 @@
 #include "common.h"
-__asm__(
-  ".globl func_8017FFE8\n"
-  ".type func_8017FFE8, @function\n"
-  "func_8017FFE8:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x88\n\tsw $a0, 0x88($sp)\n\tlui $a0, (0x80012000 >> 16)\n\tori $a0, $a0, (0x80012000 & 0xFFFF)\n\taddu $a3, $zero, $zero\n\taddiu $v0, $sp, 0x50\n\taddiu $v1, $sp, 0x10\n\tsw $s5, 0x74($sp)\n\tlui $s5, (0x800E6D00 >> 16)\n\tori $s5, $s5, (0x800E6D00 & 0xFFFF)\n\tsw $s4, 0x70($sp)\n\tlui $s4, (0x800E6D80 >> 16)\n\tori $s4, $s4, (0x800E6D80 & 0xFFFF)\n\tsw $s3, 0x6C($sp)\n\tlui $s3, (0x800E6C00 >> 16)\n\tori $s3, $s3, (0x800E6C00 & 0xFFFF)\n\tsw $s1, 0x64($sp)\n\tlui $s1, (0x800E6C80 >> 16)\n\tori $s1, $s1, (0x800E6C80 & 0xFFFF)\n\tsw $fp, 0x80($sp)\n\tandi $fp, $a1, 0xFFFF\n\tsw $s2, 0x68($sp)\n\tandi $s2, $a2, 0xFFFF\n\tsw $v0, 0x58($sp)\n\taddiu $v0, $zero, 0x80\n\tsw $v1, 0x5C($sp)\n\taddiu $v1, $zero, 0x8\n\tsh $v0, %gp_rel(D_8019EE94)($gp)\n\taddiu $v0, $fp, 0x80\n\tsh $v0, 0x50($sp)\n\taddiu $v0, $zero, 0x40\n\tsh $v1, %gp_rel(D_8019EE96)($gp)\n\taddiu $v1, $zero, 0x4\n\tsh $v0, 0x54($sp)\n\tlui $v0, %hi(D_801E01C8)\n\taddiu $v0, $v0, %lo(D_801E01C8)\n\tsw $ra, 0x84($sp)\n\tsw $s7, 0x7C($sp)\n\tsw $s6, 0x78($sp)\n\tsw $s0, 0x60($sp)\n\tsh $fp, %gp_rel(D_8019EE90)($gp)\n\tsh $s2, %gp_rel(D_8019EE92)($gp)\n\tsh $s2, 0x52($sp)\n\tsh $v1, 0x56($sp)\n\tsw $v0, %gp_rel(D_8019EEA8)($gp)\n\tsw $a0, %gp_rel(D_8019EEAC)($gp)\n\taddu $s0, $zero, $zero\n\t.L801800A4:\n\tsll $t5, $a3, 3\n\tsll $s6, $a3, 2\n\taddiu $s7, $a3, 0x1\n\tandi $t0, $a3, 0x1\n\tsrl $v0, $a3, 31\n\taddu $v0, $a3, $v0\n\tsra $v0, $v0, 1\n\tsll $a2, $v0, 4\n\taddiu $a1, $sp, 0x10\n\t.L801800C8:\n\tbeqz $t0, .L801800EC\n\tsrl $v0, $s0, 31\n\taddu $v0, $s0, $v0\n\tsra $v0, $v0, 1\n\taddu $v0, $a2, $v0\n\taddu $v1, $v0, $s5\n\tlbu $a0, 0x0($v1)\n\tj .L80180104\n\taddu $v0, $v0, $s4\n\t.L801800EC:\n\taddu $v0, $s0, $v0\n\tsra $v0, $v0, 1\n\taddu $v0, $a2, $v0\n\taddu $v1, $v0, $s3\n\tlbu $a0, 0x0($v1)\n\taddu $v0, $v0, $s1\n\t.L80180104:\n\tsh $a0, 0x0($a1)\n\tlbu $v1, 0x0($v0)\n\tnop\n\tsh $v1, 0x2($a1)\n\taddiu $s0, $s0, 0x2\n\tslti $v0, $s0, 0x20\n\tbnez $v0, .L801800C8\n\taddiu $a1, $a1, 0x4\n\taddu $t0, $zero, $zero\n\tlw $t2, 0x5C($sp)\n\t.L8018012C:\n\taddu $a2, $zero, $zero\n\tsll $t3, $t0, 3\n\tlhu $v0, 0x0($t2)\n\tlw $v1, 0x88($sp)\n\tandi $a0, $v0, 0x1F\n\tsrl $a1, $v0, 5\n\tsll $v0, $a1, 12\n\taddu $v0, $v1, $v0\n\tsll $v1, $a0, 7\n\taddu $t4, $v0, $v1\n\tsh $a0, %gp_rel(D_8019EE9A)($gp)\n\tsh $a1, %gp_rel(D_8019EE9C)($gp)\n\taddu $a1, $zero, $zero\n\t.L80180160:\n\taddiu $t1, $a2, 0x1\n\tsll $a3, $a2, 8\n\tsll $v0, $a2, 4\n\taddu $a0, $v0, $t4\n\t.L80180170:\n\tlhu $v0, 0x0($a0)\n\tlw $v1, %gp_rel(D_8019EEA8)($gp)\n\tsrl $v0, $v0, 8\n\taddu $v1, $a3, $v1\n\taddu $v1, $t3, $v1\n\taddu $v1, $v1, $a1\n\taddiu $a1, $a1, 0x1\n\tsb $v0, 0x0($v1)\n\tslti $v0, $a1, 0x8\n\tbnez $v0, .L80180170\n\taddiu $a0, $a0, 0x2\n\taddu $a2, $t1, $zero\n\tslti $v0, $a2, 0x8\n\tbnez $v0, .L80180160\n\taddu $a1, $zero, $zero\n\taddiu $t0, $t0, 0x1\n\tslti $v0, $t0, 0x20\n\tbnez $v0, .L8018012C\n\taddiu $t2, $t2, 0x2\n\taddiu $a0, $gp, %gp_rel(D_8019EE90)\n\tlw $a1, %gp_rel(D_8019EEA8)($gp)\n\taddu $v0, $s2, $t5\n\tsh $v0, %gp_rel(D_8019EE92)($gp)\n\tjal func_80194640\n\taddu $s0, $zero, $zero\n\taddu $t0, $zero, $zero\n\t.L801801D8:\n\tsll $a3, $s0, 7\n\tsll $a2, $s0, 9\n\t.L801801E0:\n\tsll $v1, $t0, 1\n\tlw $a1, %gp_rel(D_8019EEAC)($gp)\n\tlw $v0, %gp_rel(D_8019EEA8)($gp)\n\taddu $a1, $a3, $a1\n\taddu $a1, $a1, $t0\n\taddu $v0, $a2, $v0\n\taddu $v1, $v1, $v0\n\taddiu $t0, $t0, 0x1\n\tlbu $a0, 0x0($v1)\n\tslti $v0, $t0, 0x80\n\tbnez $v0, .L801801E0\n\tsb $a0, 0x0($a1)\n\taddiu $s0, $s0, 0x1\n\tslti $v0, $s0, 0x4\n\tbnez $v0, .L801801D8\n\taddu $t0, $zero, $zero\n\tlw $a0, 0x58($sp)\n\tlw $a1, %gp_rel(D_8019EEAC)($gp)\n\taddu $v0, $s2, $s6\n\tjal func_80194640\n\tsh $v0, 0x52($sp)\n\taddu $a3, $s7, $zero\n\tslti $v0, $a3, 0x10\n\tbnez $v0, .L801800A4\n\taddu $s0, $zero, $zero\n\taddiu $v0, $zero, -0x1\n\tsh $v0, %gp_rel(D_8019EE98)($gp)\n\tlui $a0, %hi(D_800E6C00)\n\taddiu $v1, $zero, 0x7A\n\taddu $v0, $s0, $a0\n\t.L80180258:\n\tlbu $v0, %lo(D_800E6C00)($v0)\n\tnop\n\tbne $v0, $v1, .L8018026C\n\tnop\n\tsh $s0, %gp_rel(D_8019EE98)($gp)\n\t.L8018026C:\n\taddiu $s0, $s0, 0x1\n\tslti $v0, $s0, 0x80\n\tbnez $v0, .L80180258\n\taddu $v0, $s0, $a0\n\tlui $v1, %hi(D_800D1700)\n\tlbu $v1, %lo(D_800D1700)($v1)\n\taddiu $v0, $zero, 0x1\n\tbne $v1, $v0, .L801802A0\n\tnop\n\tjal func_8017FC50\n\taddiu $a0, $zero, 0xE0\n\tj .L801802AC\n\tlui $v0, %hi(D_801A0A10)\n\t.L801802A0:\n\tjal func_8017FC50\n\taddiu $a0, $zero, 0x80\n\tlui $v0, %hi(D_801A0A10)\n\t.L801802AC:\n\taddiu $v0, $v0, %lo(D_801A0A10)\n\taddiu $s1, $v0, 0x10\n\taddiu $s0, $zero, 0x3\n\t.L801802B8:\n\taddiu $a0, $zero, 0x1\n\taddu $a1, $zero, $zero\n\taddu $a2, $fp, $zero\n\tjal func_801971A8\n\taddu $a3, $s2, $zero\n\tsh $v0, 0x0($s1)\n\taddiu $s0, $s0, -0x1\n\tbgez $s0, .L801802B8\n\taddiu $s1, $s1, 0x2\n\tjal func_8017F9FC\n\tnop\n\tlw $ra, 0x84($sp)\n\tlw $fp, 0x80($sp)\n\tlw $s7, 0x7C($sp)\n\tlw $s6, 0x78($sp)\n\tlw $s5, 0x74($sp)\n\tlw $s4, 0x70($sp)\n\tlw $s3, 0x6C($sp)\n\tlw $s2, 0x68($sp)\n\tlw $s1, 0x64($sp)\n\tlw $s0, 0x60($sp)\n\tjr $ra\n\taddiu $sp, $sp, 0x88\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_8017FFE8, .-func_8017FFE8\n"
-);
+void func_8017FFE8(void)
+{
+    /* battle anim: v0 spin loops with 2x 80194640; 8017FC50(0xE0/
+       0x80) row via v1/v0 gate; 801971A8(1)/8017F9FC tail. */
+    /* spin loops L1800A4/L180160/L1801D8 */
+    func_80194640();
+    func_80194640();
+    /* v0/v1 latch -> L18026C; v1/v0 gate -> L1802A0 */
+    func_8017FC50(0xE0);
+L1802AC:
+    func_801971A8(1);
+    func_8017F9FC();
+    return;
+L1802A0:
+    func_8017FC50(0x80);
+    goto L1802AC;
+}

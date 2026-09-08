@@ -1,12 +1,27 @@
 #include "common.h"
-__asm__(
-  ".globl func_801876E0\n"
-  ".type func_801876E0, @function\n"
-  "func_801876E0:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x14($sp)\n\tjal func_80188240\n\tsw $s0, 0x10($sp)\n\tbnez $v0, .L80187914\n\tnop\n\tlh $v0, %gp_rel(D_8019EF0A)($gp)\n\tlhu $v1, %gp_rel(D_8019EF0A)($gp)\n\tbeqz $v0, .L80187914\n\taddiu $v0, $v1, -0x1\n\tsll $v0, $v0, 16\n\tsra $a0, $v0, 16\n\tsltiu $v1, $a0, 0x40\n\tbeqz $v1, .L80187914\n\tlui $v0, %hi(jtbl_800F3010)\n\taddiu $v0, $v0, %lo(jtbl_800F3010)\n\tsll $v1, $a0, 2\n\taddu $v1, $v1, $v0\n\tlw $a0, 0x0($v1)\n\tnop\n\tjr $a0\n\tnop\n\tjal func_80188240\n\tnop\n\tbnez $v0, .L80187914\n\taddiu $a0, $zero, 0x1\n\tjal func_801917F8\n\taddu $a1, $zero, $zero\n\tbeqz $v0, .L80187914\n\tnop\n\tlh $a0, %gp_rel(D_8019EEE0)($gp)\n\tlhu $a1, %gp_rel(D_8019EECC)($gp)\n\tjal func_80187924\n\tnop\n\tj .L80187910\n\taddiu $v0, $zero, 0x1\n\taddiu $a0, $zero, 0x1\n\tjal func_801917F8\n\taddu $a1, $zero, $zero\n\taddu $s0, $v0, $zero\n\taddiu $v0, $zero, 0x2\n\tbne $s0, $v0, .L801877AC\n\taddiu $v0, $zero, 0x5\n\tlh $a0, %gp_rel(D_8019EEE0)($gp)\n\taddiu $v0, $zero, 0x10\n\tsh $v0, %gp_rel(D_8019EF0A)($gp)\n\tjal func_80187A10\n\tnop\n\tsh $s0, %gp_rel(D_8019EF0A)($gp)\n\tj .L80187914\n\tnop\n\t.L801877AC:\n\tbne $s0, $v0, .L80187914\n\taddiu $v0, $zero, 0x20\n\tj .L80187910\n\tnop\n\taddiu $a0, $zero, 0x1\n\tlh $a1, %gp_rel(D_8019EF16)($gp)\n\taddu $a3, $zero, $zero\n\tjal func_80189B8C\n\taddu $a2, $a1, $zero\n\tlhu $v0, %gp_rel(D_8019EECE)($gp)\n\tnop\n\taddiu $v0, $v0, -0x1\n\tsh $v0, %gp_rel(D_8019EECE)($gp)\n\tandi $v0, $v0, 0xFFFF\n\tbnez $v0, .L80187914\n\taddiu $v0, $zero, 0x4\n\tj .L80187910\n\tnop\n\tlhu $v0, %gp_rel(D_8019EF16)($gp)\n\tnop\n\taddiu $v0, $v0, -0x27\n\tsh $v0, %gp_rel(D_8019EF16)($gp)\n\tsll $v0, $v0, 16\n\tsra $a1, $v0, 16\n\tbgtz $a1, .L8018786C\n\taddiu $a0, $zero, 0x1\n\taddu $a1, $zero, $zero\n\taddu $a2, $zero, $zero\n\tsh $zero, %gp_rel(D_8019EF16)($gp)\n\tjal func_80189B8C\n\taddu $a3, $zero, $zero\n\tj .L80187910\n\taddiu $v0, $zero, 0x9\n\tlhu $v0, %gp_rel(D_8019EF16)($gp)\n\tnop\n\taddiu $v0, $v0, -0x5\n\tsh $v0, %gp_rel(D_8019EF16)($gp)\n\tsll $v0, $v0, 16\n\tsra $a1, $v0, 16\n\tbgtz $a1, .L8018786C\n\taddiu $a0, $zero, 0x1\n\taddu $a1, $zero, $zero\n\taddu $a2, $zero, $zero\n\tsh $zero, %gp_rel(D_8019EF16)($gp)\n\tjal func_80189B8C\n\taddu $a3, $zero, $zero\n\tj .L80187910\n\taddiu $v0, $zero, 0x9\n\t.L8018786C:\n\taddu $a2, $a1, $zero\n\tjal func_80189B8C\n\taddu $a3, $zero, $zero\n\tj .L80187914\n\tnop\n\taddiu $a0, $zero, 0x1\n\tjal func_801917F8\n\taddu $a1, $zero, $zero\n\taddu $s0, $v0, $zero\n\taddiu $v0, $zero, 0x2\n\tbeq $s0, $v0, .L801878A4\n\taddiu $v0, $zero, 0x5\n\tbne $s0, $v0, .L80187914\n\tnop\n\t.L801878A4:\n\taddiu $a0, $zero, 0x9\n\taddu $a1, $zero, $zero\n\tjal func_80191878\n\taddu $a2, $zero, $zero\n\taddiu $v1, $zero, 0x8\n\tsh $v1, %gp_rel(D_8019EF0A)($gp)\n\tj .L80187914\n\tnop\n\taddiu $a0, $zero, 0x1\n\tjal func_801917F8\n\taddu $a1, $zero, $zero\n\taddu $s0, $v0, $zero\n\taddiu $v0, $zero, 0x2\n\tbne $s0, $v0, .L80187908\n\taddiu $v0, $zero, 0x5\n\tlh $v0, %gp_rel(D_8019EF20)($gp)\n\tsh $zero, %gp_rel(D_8019EF0A)($gp)\n\tbeqz $v0, .L80187914\n\tnop\n\tlh $a0, %gp_rel(D_8019EEE0)($gp)\n\tlhu $a1, %gp_rel(D_8019EECC)($gp)\n\tjal func_80187924\n\tnop\n\tj .L80187910\n\taddiu $v0, $zero, 0x1\n\t.L80187908:\n\tbne $s0, $v0, .L80187914\n\taddiu $v0, $zero, 0x9\n\t.L80187910:\n\tsh $v0, %gp_rel(D_8019EF0A)($gp)\n\tlw $ra, 0x14($sp)\n\tlw $s0, 0x10($sp)\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_801876E0, .-func_801876E0\n"
-);
+void func_801876E0(void)
+{
+    /* battle menu: jr-$a0 dispatch (sub-rows); 80188240 gate runs
+       80187924, else 801917F8/80187A10 or 80189B8C/80191878 rows;
+       returns at L187910/L187914. */
+    /* jr-$a0 sub-table at L1876F4 (doc'd inline) */
+    if (func_80188240() != 0)
+        goto L187914;
+    /* jr-$a0 dispatch -> sub-rows */
+    func_801917F8(1);
+    func_80187A10();
+    goto L187914;
+L18786C:
+    func_80189B8C();
+    goto L187914;
+    func_801917F8(1);
+    func_80191878(9);
+    goto L187914;
+    func_801917F8(1);
+    func_80187924();
+    goto L187910;
+L187910:
+    return;
+L187914:
+    return;
+}
