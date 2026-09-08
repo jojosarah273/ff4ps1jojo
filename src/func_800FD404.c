@@ -1,47 +1,17 @@
 #include "common.h"
-__asm__(
-  ".globl func_800FD404\n"
-  ".type func_800FD404, @function\n"
-  "func_800FD404:\n"
-	".set\tnoreorder\n"
-	".set noreorder\n"
-  "\taddiu $sp, $sp, -0x18\n"
-  "\tsw $ra, 0x10($sp)\n"
-  "\tjal func_800F6630\n"
-  "\taddiu $a0, $zero, 0xA2\n"
-  "\tjal func_800F4248\n"
-  "\taddiu $a0, $zero, 0x20\n"
-  "\tjal func_800F5140\n"
-  "\tnop\n"
-  "\tjal func_800F824C\n"
-  "\taddiu $a0, $zero, 0x6\n"
-  "\tjal func_800F6564\n"
-  "\taddiu $a0, $zero, 0xFDB\n"
-  "\tjal func_800F4248\n"
-  "\taddiu $a0, $zero, 0x40\n"
-  "\tjal func_800F7864\n"
-  "\tnop\n"
-  "\tjal func_800F3C3C\n"
-  "\taddiu $a0, $zero, 0x6\n"
-  "\tjal func_800F78C4\n"
-  "\taddu $a0, $v0, $zero\n"
-  "\tjal func_800F824C\n"
-  "\taddiu $a0, $zero, 0x6\n"
-  "\tjal func_800F6564\n"
-  "\taddiu $a0, $zero, 0xFDB\n"
-  "\tjal func_800F4248\n"
-  "\taddiu $a0, $zero, 0x8F\n"
-  "\tjal func_800F3C3C\n"
-  "\taddiu $a0, $zero, 0x6\n"
-  "\tjal func_800F78C4\n"
-  "\taddu $a0, $v0, $zero\n"
-  "\tjal func_800F8188\n"
-  "\taddiu $a0, $zero, 0x1802\n"
-  "\tlw $ra, 0x10($sp)\n"
-  "\tnop\n"
-  "\tjr $ra\n"
-  "\taddiu $sp, $sp, 0x18\n"
-	".set reorder\n"
-	".set\treorder\n"
-  ".size func_800FD404, .-func_800FD404\n"
-);
+void func_800FD404(void)
+{
+    func_800F6630(162);
+    func_800F4248(32);
+    func_800F5140();
+    func_800F824C(6);
+    func_800F6564(4059);
+    func_800F4248(64);
+    func_800F7864();
+    func_800F78C4(func_800F3C3C(6));
+    func_800F824C(6);
+    func_800F6564(4059);
+    func_800F4248(143);
+    func_800F78C4(func_800F3C3C(6));
+    func_800F8188(6146);
+}

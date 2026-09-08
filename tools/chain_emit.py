@@ -105,19 +105,21 @@ def candidate_c(name, rows):
     seq = parse_chain(rows)
     if seq is None:
         return None
-    exprs, stack = [], []
+    stmts, pstack = [], []
     for t in seq:
         callee, c = t[0], t[1]
         if len(t) > 2 and t[2]:            # thread previous call result
-            prev = stack.pop()
-            exprs.append(f"    {callee}({prev});")
+            expr, idx = pstack.pop()
+            nest = f"{callee}({expr})"
+            stmts[idx] = f"    {nest};"
+            pstack.append((nest, idx))
         else:
             arg = str(c) if c is not None else ""
-            e = f"{callee}({arg})"
-            exprs.append(f"    {e};")
-            stack.append(e)
+            expr = f"{callee}({arg})"
+            stmts.append(f"    {expr};")
+            pstack.append((expr, len(stmts) - 1))
     return f'#include "common.h"\nvoid {name}(void)\n{{\n' + \
-        "\n".join(exprs) + "\n}\n"
+        "\n".join(stmts) + "\n}\n"
 
 
 def score(obj):

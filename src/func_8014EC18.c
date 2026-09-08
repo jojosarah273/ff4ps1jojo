@@ -1,31 +1,10 @@
 #include "common.h"
-__asm__(
-  ".globl func_8014EC18\n"
-  ".type func_8014EC18, @function\n"
-  "func_8014EC18:\n"
-	".set\tnoreorder\n"
-	".set noreorder\n"
-  "\taddiu $sp, $sp, -0x18\n"
-  "\tsw $ra, 0x10($sp)\n"
-  "\tjal func_800F971C\n"
-  "\tnop\n"
-  "\tjal func_800F5480\n"
-  "\tnop\n"
-  "\tjal func_800F3C3C\n"
-  "\taddiu $a0, $zero, 0x8\n"
-  "\tjal func_800F7F48\n"
-  "\taddu $a0, $v0, $zero\n"
-  "\tjal func_800F824C\n"
-  "\taddiu $a0, $zero, 0x6\n"
-  "\tjal func_800F6630\n"
-  "\taddiu $a0, $zero, 0x8\n"
-  "\tjal func_800F824C\n"
-  "\taddiu $a0, $zero, 0x7\n"
-  "\tlw $ra, 0x10($sp)\n"
-  "\tnop\n"
-  "\tjr $ra\n"
-  "\taddiu $sp, $sp, 0x18\n"
-	".set reorder\n"
-	".set\treorder\n"
-  ".size func_8014EC18, .-func_8014EC18\n"
-);
+void func_8014EC18(void)
+{
+    func_800F971C();
+    func_800F5480();
+    func_800F7F48(func_800F3C3C(8));
+    func_800F824C(6);
+    func_800F6630(8);
+    func_800F824C(7);
+}

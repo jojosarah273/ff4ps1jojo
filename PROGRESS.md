@@ -224,6 +224,11 @@ NTSC-U + text guard armed + mod FMV skip all present.
   manual packets: arg forms $a0=$v0+const, lui+ori 32-bit args, non-`addiu
   $a0,$zero` slots). Remaining families for future sessions: arithmetic/
   control-flow, data-access, era-psx `modern-asm` misc.
+- PHASE A SESSION 3: threading fix in chain_emit.py (nested calls emitted
+  once, not standalone+nested): 26 more byte-verified (237->263), C-written
+  28.1%->28.9%. Chain family nearly exhausted (2 stragglers, func_8014EC18/
+  8014ECC8 re-shelled for manual). Next: arithmetic/control-flow + data-access
+  families, lane-first.
 ### 2025-09-07 — PROJECT SCOPE: full C decomp -> native port (SoH/SM64 model)
 - Direction confirmed with user: goal = Ship-of-Harkinian-class native FF4
   (PS1), NOT an emulator and NOT a machine-translated recomp (the recomp

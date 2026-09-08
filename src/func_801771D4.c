@@ -1,31 +1,10 @@
 #include "common.h"
-__asm__(
-  ".globl func_801771D4\n"
-  ".type func_801771D4, @function\n"
-  "func_801771D4:\n"
-	".set\tnoreorder\n"
-	".set noreorder\n"
-  "\taddiu $sp, $sp, -0x18\n"
-  "\tsw $ra, 0x10($sp)\n"
-  "\tjal func_800F5140\n"
-  "\tnop\n"
-  "\tjal func_800F824C\n"
-  "\taddiu $a0, $zero, 0x45\n"
-  "\tjal func_800F5140\n"
-  "\tnop\n"
-  "\tjal func_800F4F4C\n"
-  "\tnop\n"
-  "\tjal func_800F3C3C\n"
-  "\taddiu $a0, $zero, 0x45\n"
-  "\tjal func_800F3F38\n"
-  "\taddu $a0, $v0, $zero\n"
-  "\tjal func_801773D4\n"
-  "\tnop\n"
-  "\tlw $ra, 0x10($sp)\n"
-  "\tnop\n"
-  "\tjr $ra\n"
-  "\taddiu $sp, $sp, 0x18\n"
-	".set reorder\n"
-	".set\treorder\n"
-  ".size func_801771D4, .-func_801771D4\n"
-);
+void func_801771D4(void)
+{
+    func_800F5140();
+    func_800F824C(69);
+    func_800F5140();
+    func_800F4F4C();
+    func_800F3F38(func_800F3C3C(69));
+    func_801773D4();
+}

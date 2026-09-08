@@ -1,35 +1,12 @@
 #include "common.h"
-__asm__(
-  ".globl func_8012E160\n"
-  ".type func_8012E160, @function\n"
-  "func_8012E160:\n"
-	".set\tnoreorder\n"
-	".set noreorder\n"
-  "\taddiu $sp, $sp, -0x18\n"
-  "\tsw $ra, 0x10($sp)\n"
-  "\tjal func_800F654C\n"
-  "\taddiu $a0, $zero, 0x1\n"
-  "\tjal func_800F3B04\n"
-  "\taddiu $a0, $zero, 0x16A8\n"
-  "\tjal func_800F5ECC\n"
-  "\taddu $a0, $v0, $zero\n"
-  "\tjal func_800F8188\n"
-  "\taddiu $a0, $zero, 0x16A8\n"
-  "\tjal func_800F62BC\n"
-  "\taddiu $a0, $zero, 0x84\n"
-  "\tjal func_80122A9C\n"
-  "\tnop\n"
-  "\tjal func_80122538\n"
-  "\tnop\n"
-  "\tjal func_80126528\n"
-  "\tnop\n"
-  "\tjal func_8011EF0C\n"
-  "\tnop\n"
-  "\tlw $ra, 0x10($sp)\n"
-  "\tnop\n"
-  "\tjr $ra\n"
-  "\taddiu $sp, $sp, 0x18\n"
-	".set reorder\n"
-	".set\treorder\n"
-  ".size func_8012E160, .-func_8012E160\n"
-);
+void func_8012E160(void)
+{
+    func_800F654C(1);
+    func_800F5ECC(func_800F3B04(5800));
+    func_800F8188(5800);
+    func_800F62BC(132);
+    func_80122A9C();
+    func_80122538();
+    func_80126528();
+    func_8011EF0C();
+}
