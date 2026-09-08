@@ -43,7 +43,8 @@ L1B244:
 L1b264:
     for (;;) {
         func_800F3C3C(0x40);
-        if (func_800F56AC(func_800F53D4()) != 0)
+        func_800F56AC();
+        if (func_800F53D4() != 0)
             goto L1B2B0;
         func_800F6C68();
         func_800F8960(0xA49);
