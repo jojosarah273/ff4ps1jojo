@@ -1,12 +1,26 @@
 #include "common.h"
-__asm__(
-  ".globl func_8015B3F4\n"
-  ".type func_8015B3F4, @function\n"
-  "func_8015B3F4:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x30\n\taddu $a0, $zero, $zero\n\tsw $ra, 0x28($sp)\n\tsw $s5, 0x24($sp)\n\tsw $s4, 0x20($sp)\n\tsw $s3, 0x1C($sp)\n\tsw $s2, 0x18($sp)\n\tsw $s1, 0x14($sp)\n\tjal func_800F3C3C\n\tsw $s0, 0x10($sp)\n\taddu $a0, $zero, $zero\n\tjal func_800F3B04\n\taddu $s1, $v0, $zero\n\taddiu $a0, $zero, 0x2000\n\tjal func_800F3B04\n\taddu $s5, $v0, $zero\n\tlbu $s0, 0xA6($s1)\n\tlbu $v1, 0xA7($s1)\n\taddu $s3, $v0, $zero\n\tsb $zero, 0xA9($s1)\n\tsb $zero, 0xAA($s1)\n\tsb $zero, 0xAB($s1)\n\tsb $zero, 0xAC($s1)\n\tsll $v1, $v1, 8\n\tor $s0, $s0, $v1\n\taddu $v1, $s0, $s3\n\tlbu $v0, 0x3($v1)\n\tnop\n\tandi $v0, $v0, 0x4\n\tbeqz $v0, .L8015B474\n\taddiu $v0, $zero, 0x80\n\tsb $v0, 0xA9($s1)\n\t.L8015B474:\n\tlbu $v0, 0x3($v1)\n\tnop\n\tandi $v0, $v0, 0x20\n\tbeqz $v0, .L8015B48C\n\taddiu $v0, $zero, 0x80\n\tsb $v0, 0xAB($s1)\n\t.L8015B48C:\n\tlbu $v0, 0x3($v1)\n\tnop\n\tandi $v0, $v0, 0x8\n\tbeqz $v0, .L8015B4A4\n\taddiu $v0, $zero, 0x80\n\tsb $v0, 0xAC($s1)\n\t.L8015B4A4:\n\tlbu $v0, 0xB($v1)\n\tnop\n\tsb $v0, 0xAD($s1)\n\tlbu $v1, 0xC($v1)\n\tnop\n\tbeqz $v1, .L8015B4C4\n\taddiu $v0, $zero, 0xFF\n\tsb $v0, 0xAD($s1)\n\t.L8015B4C4:\n\tlbu $v0, 0xA7($s1)\n\tlbu $s0, 0xA6($s1)\n\tsll $v0, $v0, 8\n\tor $s0, $s0, $v0\n\taddu $v1, $s0, $s3\n\tlbu $v0, 0x6($v1)\n\tnop\n\tandi $v0, $v0, 0x80\n\tbnez $v0, .L8015B544\n\tnop\n\taddiu $s2, $zero, 0x5\n\taddiu $s4, $zero, 0xFF\n\tlbu $v0, 0x1535($s3)\n\tlbu $s0, 0x1534($s3)\n\tsll $v0, $v0, 8\n\tor $s0, $s0, $v0\n\t.L8015B504:\n\taddu $v0, $s0, $s3\n\tlbu $a0, 0x1303($v0)\n\tnop\n\tbeq $a0, $s4, .L8015B528\n\tnop\n\tlui $v0, %hi(D_8019ED54)\n\tlw $v0, %lo(D_8019ED54)($v0)\n\tnop\n\tsh $s0, 0x0($v0)\n\t.L8015B528:\n\tjal func_8015B6FC\n\tnop\n\taddiu $v0, $s2, -0x1\n\tandi $s2, $v0, 0xFFFF\n\taddiu $v1, $s0, 0x4\n\tbnez $s2, .L8015B504\n\tandi $s0, $v1, 0xFFFF\n\t.L8015B544:\n\tlbu $v0, 0xAA($s1)\n\tnop\n\tbeqz $v0, .L8015B574\n\tnop\n\tlbu $v0, 0x1822($s5)\n\tnop\n\tsb $v0, 0x0($s1)\n\tlui $v1, %hi(D_8019ED40)\n\tlw $v1, %lo(D_8019ED40)($v1)\n\taddiu $v0, $zero, 0x9\n\tjal func_80150C38\n\tsb $v0, 0x0($v1)\n\t.L8015B574:\n\tlbu $v0, 0x1536($s3)\n\tnop\n\tsb $v0, 0xAF($s1)\n\tlbu $v1, 0x1537($s3)\n\tnop\n\tsb $v1, 0xB0($s1)\n\tlui $v0, %hi(D_8019ED48)\n\tlw $v0, %lo(D_8019ED48)($v0)\n\tnop\n\tlhu $s0, 0x0($v0)\n\tnop\n\tsrl $v0, $s0, 8\n\tsb $s0, 0xB1($s1)\n\tsb $v0, 0xB2($s1)\n\t.L8015B5AC:\n\tlbu $v0, 0xB0($s1)\n\tlbu $s0, 0xAF($s1)\n\tsll $v0, $v0, 8\n\tor $s0, $s0, $v0\n\taddu $a1, $s0, $s3\n\tlbu $a2, 0xC7B($a1)\n\tnop\n\tbeqz $a2, .L8015B66C\n\tnop\n\tlbu $v0, 0xC7A($a1)\n\tlbu $v1, 0xA9($s1)\n\tandi $a0, $v0, 0x7F\n\tor $a0, $v1, $a0\n\tlbu $v0, 0xAB($s1)\n\tlbu $v1, 0xAC($s1)\n\tor $a0, $v0, $a0\n\tor $a0, $v1, $a0\n\tsb $a0, 0xC7A($a1)\n\tlbu $v0, 0xA9($s1)\n\tnop\n\tbnez $v0, .L8015B63C\n\tnop\n\tlbu $v0, 0xAB($s1)\n\tnop\n\tandi $v0, $v0, 0x80\n\tbnez $v0, .L8015B62C\n\taddiu $v0, $zero, 0x19\n\tlbu $v0, 0xAC($s1)\n\tnop\n\tandi $v0, $v0, 0x80\n\tbeqz $v0, .L8015B63C\n\taddiu $v0, $zero, 0x1A\n\t.L8015B62C:\n\tbne $a2, $v0, .L8015B640\n\taddu $v1, $s0, $s3\n\tandi $v0, $a0, 0x7F\n\tsb $v0, 0xC7A($a1)\n\t.L8015B63C:\n\taddu $v1, $s0, $s3\n\t.L8015B640:\n\tlbu $a0, 0xC7D($v1)\n\tlbu $v0, 0xAD($s1)\n\tnop\n\tbeq $a0, $v0, .L8015B66C\n\tsltu $v0,$a0,$v0\n\tbnez $v0, .L8015B66C\n\tnop\n\tlbu $v0, 0xC7A($v1)\n\tnop\n\tori $v0, $v0, 0x80\n\tsb $v0, 0xC7A($v1)\n\t.L8015B66C:\n\tlbu $v0, 0xB0($s1)\n\tlbu $s0, 0xAF($s1)\n\tsll $v0, $v0, 8\n\tor $s0, $s0, $v0\n\taddiu $v1, $s0, 0x4\n\tandi $s0, $v1, 0xFFFF\n\tlbu $v0, 0xB1($s1)\n\tsrl $v1, $s0, 8\n\tsb $v1, 0xB0($s1)\n\taddiu $v1, $zero, 0x48\n\tsb $s0, 0xAF($s1)\n\taddiu $v0, $v0, 0x1\n\tsb $v0, 0xB1($s1)\n\tandi $v0, $v0, 0xFF\n\tbne $v0, $v1, .L8015B5AC\n\tnop\n\tlbu $v0, 0x1822($s5)\n\tnop\n\tsb $v0, 0x0($s1)\n\tlui $a0, %hi(D_8019ED40)\n\tlw $a0, %lo(D_8019ED40)($a0)\n\taddiu $v0, $zero, 0xE\n\tsb $v0, 0x0($a0)\n\tlui $v1, %hi(D_8019ED54)\n\tlw $v1, %lo(D_8019ED54)($v1)\n\tjal func_80150C38\n\tsh $s0, 0x0($v1)\n\tlw $ra, 0x28($sp)\n\tlw $s5, 0x24($sp)\n\tlw $s4, 0x20($sp)\n\tlw $s3, 0x1C($sp)\n\tlw $s2, 0x18($sp)\n\tlw $s1, 0x14($sp)\n\tlw $s0, 0x10($sp)\n\tjr $ra\n\taddiu $sp, $sp, 0x30\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_8015B3F4, .-func_8015B3F4\n"
-);
+void func_8015B3F4(void)
+{
+    /* options: 3C3C/3B04(0x2000)/3B04 gates; 8015B6FC rows and the
+       regcmp-loop with 80150C38 icon rows. */
+    func_800F3C3C();
+    func_800F3B04(0x2000);
+    if (func_800F3B04() == 0)
+        goto L15B474;
+    goto L15B48C;
+L15B474:
+    func_800F3C3C();
+    goto L15B48C;
+L15B48C:
+    /* v0 gates -> L15B4A4 / L15B4C4 */
+L15B4C4:
+    /* v0 gate -> L15B544 */
+    /* a0/s4 latch -> L15B528 */
+    func_8015B6FC();
+L15B544:
+    /* v0 gates */
+    func_80150C38();
+    /* L15B5AC loop: regcmp latches */
+    func_80150C38();
+    return;
+}
