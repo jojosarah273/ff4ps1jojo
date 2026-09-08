@@ -308,6 +308,12 @@ NTSC-U + text guard armed + mod FMV skip all present.
   - Next levers: rmerge-family sweep 2, s0-MMIO byte family (multiple siblings
     exist at 0x800F5-82xx), switch-cascade pattern, hand batches on call-heavy
     controllers.
+- PHASE A TWO-SESSION SPRINT: 1079 -> 1183 C-written (47.0%). Landed:
+  mmio_emit.py family (+24), lifter slot-extensions (store-slots/2-reg/a1 args)
+  mass lift (+70), mapper_emit.py (+3), hand mapper/merge family batch (+7).
+  50% target at 1258: +75 remaining — next session: mapper-family sweep 2 +
+  hand batch + the 2-way ifelse resurrection.
+  (Progress rails auto-refresh the README at every commit.)
 ### 2025-09-07 — PROJECT SCOPE: full C decomp -> native port (SoH/SM64 model)
 - Direction confirmed with user: goal = Ship-of-Harkinian-class native FF4
   (PS1), NOT an emulator and NOT a machine-translated recomp (the recomp

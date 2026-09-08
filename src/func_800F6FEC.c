@@ -1,12 +1,8 @@
 #include "common.h"
-__asm__(
-  ".globl func_800F6FEC\n"
-  ".type func_800F6FEC, @function\n"
-  "func_800F6FEC:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\tlw $v0, %gp_rel(D_8019ED60)($gp)\n\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x14($sp)\n\tsw $s0, 0x10($sp)\n\tlbu $a1, 0x0($v0)\n\tjal func_800F3CC4\n\tlui $s0, (0x1F8003C0 >> 16)\n\tlbu $a0, 0x0($v0)\n\tlw $ra, 0x14($sp)\n\tori $s0, $s0, (0x1F8003C0 & 0xFFFF)\n\tsb $a0, 0x8($s0)\n\tlbu $v1, 0x1($v0)\n\tnop\n\tsb $v1, 0x9($s0)\n\tlw $s0, 0x10($sp)\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_800F6FEC, .-func_800F6FEC\n"
-);
+void func_800F6FEC(void)
+{
+    u8 *p = (u8 *)func_800F3CC4;
+    ((volatile u8 *)0x1F8003C0u)[0] = p[0];
+    ((volatile u8 *)0x1F8003C0u)[0] = p[0];
+    ((volatile u8 *)0x1F8003C0u)[1] = p[1];
+}

@@ -98,9 +98,30 @@ def lift(name, mode_b=False):
             sm = slot[0]
             sa = (slot[1] if len(slot) > 1 else "").replace("$", "")
             callee = args.split()[0]
+            if sm in ("sb", "sh", "sw") and "(" in sa:
+                # store in the call delay slot: helper(); store;
+                aex = R.get("a0")
+                cexpr = f"{callee}({aex})" if (aex and not aex.startswith(("0x", "("))) else f"{callee}()"
+                R["v0"] = cexpr
+                v0_expr = cexpr
+                R["a0"] = None
+                i += 1
+                continue                       # let the store row process
+            if sm == "addu" and sa.replace(" ", "").startswith("a1,"):
+                mt = re.search(r"(0x[0-9A-F]+|\d+)", sa)
+                a1v = int(mt.group(1), 16) if mt else 0
+                aex = R.get("a0")
+                cexpr = f"{callee}({aex or '0'}, {a1v})" if aex else f"{callee}(0, {a1v})"
+                R["v0"] = cexpr
+                v0_expr = cexpr
+                R["a0"] = None
+                i += 2
+                continue
+            if sm == "addu" and re.match(r"a0,\s*a0", sa) and "+" not in sa:
+                pass                             # handled below via general
             if sm == "nop":
                 aex = R.get("a0")
-                if aex is not None and not aex.startswith(("0x", "(")):
+                if aex is not None and not aex.startswith("0x"):
                     cexpr = f"{callee}({aex})"
                 else:
                     cexpr = f"{callee}()"
