@@ -1,12 +1,23 @@
 #include "common.h"
-__asm__(
-  ".globl func_80195B5C\n"
-  ".type func_80195B5C, @function\n"
-  "func_80195B5C:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x30\n\tsw $s1, 0x14($sp)\n\taddu $s1, $a0, $zero\n\tsw $s2, 0x18($sp)\n\taddu $s2, $a1, $zero\n\tsw $ra, 0x28($sp)\n\tsw $s5, 0x24($sp)\n\tsw $s4, 0x20($sp)\n\tsw $s3, 0x1C($sp)\n\tjal func_80196898\n\tsw $s0, 0x10($sp)\n\tlh $a1, 0x4($s1)\n\tlhu $v1, 0x4($s1)\n\tbltz $a1, .L80195BC0\n\taddu $s5, $zero, $zero\n\taddu $a0, $v1, $zero\n\tlui $v0, %hi(D_8019DB58)\n\tlh $v0, %lo(D_8019DB58)($v0)\n\tlui $v1, %hi(D_8019DB58)\n\tlhu $v1, %lo(D_8019DB58)($v1)\n\tslt $v0, $v0, $a1\n\tbeqz $v0, .L80195BC4\n\tnop\n\tj .L80195BC4\n\taddu $a0, $v1, $zero\n\t.L80195BC0:\n\taddu $a0, $zero, $zero\n\t.L80195BC4:\n\tlh $a1, 0x6($s1)\n\tlhu $v1, 0x6($s1)\n\tbltz $a1, .L80195BFC\n\tsh $a0, 0x4($s1)\n\taddu $a0, $v1, $zero\n\tlui $v0, %hi(D_8019DB5A)\n\tlh $v0, %lo(D_8019DB5A)($v0)\n\tlui $v1, %hi(D_8019DB5A)\n\tlhu $v1, %lo(D_8019DB5A)($v1)\n\tslt $v0, $v0, $a1\n\tbeqz $v0, .L80195C04\n\tsll $v0, $a0, 16\n\tj .L80195C00\n\taddu $a0, $v1, $zero\n\t.L80195BFC:\n\taddu $a0, $zero, $zero\n\t.L80195C00:\n\tsll $v0, $a0, 16\n\t.L80195C04:\n\tlh $v1, 0x4($s1)\n\tsra $v0, $v0, 16\n\tmult $v1, $v0\n\tsh $a0, 0x6($s1)\n\tmflo $a2\n\taddiu $v1, $a2, 0x1\n\tsrl $v0, $v1, 31\n\taddu $v1, $v1, $v0\n\tsra $a0, $v1, 1\n\tbgtz $a0, .L80195C38\n\tsra $s0, $v1, 5\n\tj .L80195D74\n\taddiu $v0, $zero, -0x1\n\t.L80195C38:\n\taddu $v1, $s0, $zero\n\tsll $v0, $v1, 4\n\tsubu $s0, $a0, $v0\n\tlui $v0, %hi(D_8019DC5C)\n\tlw $v0, %lo(D_8019DC5C)($v0)\n\taddu $s4, $v1, $zero\n\tlw $v0, 0x0($v0)\n\tlui $v1, (0x4000000 >> 16)\n\tand $v0, $v0, $v1\n\tbnez $v0, .L80195C98\n\tlui $a0, (0xA0000000 >> 16)\n\tlui $s3, (0x4000000 >> 16)\n\t.L80195C68:\n\tjal func_801968CC\n\tnop\n\tbnez $v0, .L80195D74\n\taddiu $v0, $zero, -0x1\n\tlui $v0, %hi(D_8019DC5C)\n\tlw $v0, %lo(D_8019DC5C)($v0)\n\tnop\n\tlw $v0, 0x0($v0)\n\tnop\n\tand $v0, $v0, $s3\n\tbeqz $v0, .L80195C68\n\tlui $a0, (0xA0000000 >> 16)\n\t.L80195C98:\n\tlui $v1, %hi(D_8019DC5C)\n\tlw $v1, %lo(D_8019DC5C)($v1)\n\tlui $v0, (0x4000000 >> 16)\n\tsw $v0, 0x0($v1)\n\tlui $v1, %hi(D_8019DC58)\n\tlw $v1, %lo(D_8019DC58)($v1)\n\tlui $v0, (0x1000000 >> 16)\n\tsw $v0, 0x0($v1)\n\tlui $v0, %hi(D_8019DC58)\n\tlw $v0, %lo(D_8019DC58)($v0)\n\tbeqz $s5, .L80195CCC\n\tnop\n\tlui $a0, (0xB0000000 >> 16)\n\t.L80195CCC:\n\tsw $a0, 0x0($v0)\n\tlui $v1, %hi(D_8019DC58)\n\tlw $v1, %lo(D_8019DC58)($v1)\n\tlw $v0, 0x0($s1)\n\tnop\n\tsw $v0, 0x0($v1)\n\tlui $v1, %hi(D_8019DC58)\n\tlw $v1, %lo(D_8019DC58)($v1)\n\tlw $v0, 0x4($s1)\n\taddiu $s0, $s0, -0x1\n\tsw $v0, 0x0($v1)\n\taddiu $v0, $zero, -0x1\n\tbeq $s0, $v0, .L80195D24\n\tnop\n\taddiu $a0, $zero, -0x1\n\t.L80195D08:\n\tlw $v1, 0x0($s2)\n\taddiu $s2, $s2, 0x4\n\tlui $v0, %hi(D_8019DC58)\n\tlw $v0, %lo(D_8019DC58)($v0)\n\taddiu $s0, $s0, -0x1\n\tbne $s0, $a0, .L80195D08\n\tsw $v1, 0x0($v0)\n\t.L80195D24:\n\tbeqz $s4, .L80195D70\n\tlui $v1, (0x4000002 >> 16)\n\tlui $v0, %hi(D_8019DC5C)\n\tlw $v0, %lo(D_8019DC5C)($v0)\n\tori $v1, $v1, (0x4000002 & 0xFFFF)\n\tsw $v1, 0x0($v0)\n\tlui $v0, %hi(D_8019DC60)\n\tlw $v0, %lo(D_8019DC60)($v0)\n\tlui $a0, (0x1000201 >> 16)\n\tsw $s2, 0x0($v0)\n\tsll $v0, $s4, 16\n\tlui $v1, %hi(D_8019DC64)\n\tlw $v1, %lo(D_8019DC64)($v1)\n\tori $v0, $v0, 0x10\n\tsw $v0, 0x0($v1)\n\tlui $v0, %hi(D_8019DC68)\n\tlw $v0, %lo(D_8019DC68)($v0)\n\tori $a0, $a0, (0x1000201 & 0xFFFF)\n\tsw $a0, 0x0($v0)\n\t.L80195D70:\n\taddu $v0, $zero, $zero\n\t.L80195D74:\n\tlw $ra, 0x28($sp)\n\tlw $s5, 0x24($sp)\n\tlw $s4, 0x20($sp)\n\tlw $s3, 0x1C($sp)\n\tlw $s2, 0x18($sp)\n\tlw $s1, 0x14($sp)\n\tlw $s0, 0x10($sp)\n\tjr $ra\n\taddiu $sp, $sp, 0x30\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_80195B5C, .-func_80195B5C\n"
-);
+void func_80195B5C(void)
+{
+    /* event: 80196898 gates; 801968CC spin rows (L195C68) + s0
+       latches; returns L195D74. */
+    func_80196898();
+    if (func_800F53D4() == 0)
+        goto L195BC4;
+    goto L195BC4;
+L195BC4:
+    /* v0 gates -> L195C04 / L195C00 */
+    goto L195D74;
+L195C38:
+    do {
+        func_801968CC();
+        if (func_800F53D4() != 0)
+            goto L195D74;
+    } while (func_800F53D4() != 0);
+    /* s0/v0 + s0/a0 latches -> L195D24/L195D08 */
+    return;
+L195D74:
+    return;
+}
