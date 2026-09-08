@@ -1,13 +1,17 @@
 #include "common.h"
 void func_8016571C(void)
 {
+    /* options stat screen: 0x2041/0x203D/0x38BF/0x2003/0x2004/0x2006
+       texts, 8015330C row; loops L165764 (5A90(0xF)), L165838
+       (scroll), L16593C (0x321B/0x1440 gate), ending with the 0x16A8/
+       0x2001/0x2081/0x2101/0x2181 row-pair fill. */
     func_800F971C();
-L764:
+L165764:
     for (;;) {
         func_800F6B68(0x2041);
-        func_800F8768(0x202D);
+        func_800F8768(0x203D);
         func_800F6B68(0x2042);
-        func_800F8768(0x202E);
+        func_800F8768(0x203E);
         func_800F6D70(0x38BF);
         func_800F8768(0x2003);
         func_800F6D70(0x38C0);
@@ -19,13 +23,16 @@ L764:
         func_800F63BC();
         func_800F63BC();
         func_800F5A90(0xF);
-        if (func_800F53D4() != 0)
-            break;
+        if (func_800F53D4() == 0)
+            continue;
+        break;
     }
     func_800F971C();
     func_800F8FB8(0xA9);
-L830:
+L165830:
     func_800F8FB8(0xAB);
+    goto L165838;
+L165838:
     for (;;) {
         func_800F6B68(0x2000);
         func_800F8960(0x1000);
@@ -34,8 +41,9 @@ L830:
         func_800F62BC(0xAB);
         func_800F6630(0xAB);
         func_800F5574(0x40);
-        if (func_800F53D4() != 0)
-            break;
+        if (func_800F53D4() == 0)
+            continue;
+        break;
     }
     func_800F9644(0x20);
     func_800F5410();
@@ -45,34 +53,32 @@ L830:
     func_800F62BC(0xA9);
     func_800F6630(0xA9);
     func_800F5574(5);
-    if (func_800F53D4() == 0)
-        goto L830;
     func_800F971C();
     func_800F8D6C(0xA9);
-L93c:
+L16593c:
     for (;;) {
         func_800F6B68(0x321B);
         func_800F8960(0x1440);
         if (func_800F6434(2) != 0)
-            goto L974;
+            goto L165974;
         func_800F5574(0x60);
         if (func_800F53D4() == 0)
-            goto L994;
-    L974:
+            goto L165994;
+    L165974:
         func_800F971C();
         func_800F64A8();
         func_800F8960(0x1440);
-        goto L9a4;
-    L994:
+        goto L1659A4;
+    L165994:
         func_800F6B68(0x321C);
         func_800F63F8();
-    L9a4:
+    L1659A4:
         func_800F8960(0x1441);
-        if (func_800F53D4() == 0)
-            goto L9cc;
+        if (func_800F53D4() != 0)
+            goto L1659CC;
         func_800F971C();
         func_800F8960(0x1440);
-    L9cc:
+    L1659CC:
         func_800F6364();
         func_800F6364();
         func_800F6364();
@@ -88,7 +94,7 @@ L93c:
     }
     func_800F6564(0x16A8);
     if (func_800F6434(0x202) != 0)
-        goto L5adc;
+        goto L165ADC;
     func_800F6564(0x2001);
     func_800F4248(0x7F);
     func_800F8188(0x2001);
@@ -103,7 +109,7 @@ L93c:
     func_800F6564(0x2201);
     func_800F8188(0x2201);
     return;
-L5adc:
+L165ADC:
     func_800F6564(0x2001);
     func_800F8188(0x2001);
     func_800F6564(0x2081);
