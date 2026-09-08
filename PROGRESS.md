@@ -725,7 +725,16 @@ Open items queued:
 Archived expected objects were once back-filled for ALL built functions;
 2 strays (func_80191530, func_80197A78) were never verified. Authoritative
 count = asm/nonmatchings/main/*.s removed = 2516 - remaining. Commits (#)
-≠ functions matched (#): matches are batched per commit.### HEADLESS GRIND — 78.0% -> 80.0% (1962 -> 2013)
+≠ functions matched (#): matches are batched per commit.### HEADLESS GRIND — 80.0% -> 82.8% (2013 -> 2083, in progress)
+Post-80% leg: +70 functions. Highlights: 80140598 (14-entry battle
+magic-judge jr-a0 table), 8014EAE4 (9-entry battle item-cast table),
+8015D1C8 (6-entry options table), the shop-choose pair 801069E0/80109774,
+dispatcher twins 800FE7D8/800FF024/80119DE4, the anim rows 80178DD0/
+80178F20/80184AF8, and ~60 tiny screens. The remaining ~430 shells are
+mostly <0x200; the 3 deep-pass monsters stay queued. Next boundary: 90%.
+
+
+### HEADLESS GRIND — 78.0% -> 80.0% (1962 -> 2013)
 **MILESTONE: 80.0% C-WRITTEN (2013/2516) REACHED** — the "keep going" run
 passes its fourth boundary. +51 this leg: 80140598 (14-entry battle
 magic-judge jr-a0 table), the battle-loop set 80145168/801450B8/801449D0,
