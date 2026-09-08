@@ -107,6 +107,17 @@ def lift(name, mode_b=False):
                 R["a0"] = None
                 i += 1
                 continue                       # let the store row process
+            if sm in ("addiu", "ori") and re.match(r"a1,\s*zero", sa) and \
+                    "0x" in sa:
+                mt = re.search(r"0x([0-9A-F]+)", sa)
+                a1v = int(mt.group(1), 16) if mt else 0
+                aex = R.get("a0")
+                cexpr = f"{callee}({aex or '0'}, 0x{a1v:X})" if aex else f"{callee}(0, 0x{a1v:X})"
+                R["v0"] = cexpr
+                v0_expr = cexpr
+                R["a0"] = None
+                i += 2
+                continue
             if sm == "addu" and sa.replace(" ", "").startswith("a1,"):
                 mt = re.search(r"(0x[0-9A-F]+|\d+)", sa)
                 a1v = int(mt.group(1), 16) if mt else 0
