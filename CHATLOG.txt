@@ -159,3 +159,8 @@ HEADLESS GRIND LEG 3 — MILESTONE 75.0% C-WRITTEN (1887/2516)
 boundary. Callgraph continues past 18k edges. The 75% checkbox is now flipped.
 Three big deep-pass monsters + ~620 tiny shells remain before 100%.
 ================================================================================
+
+================================================================================
+HEADLESS GRIND LEG 4 — 78.0% C-WRITTEN (1962/2516)
+Since 75%: +75 more functions. All pushed. Next boundary: 80% (2013).
+================================================================================
