@@ -1,25 +1,15 @@
 #include "common.h"
-extern u32 D_8019ED4C;
-extern u32 D_8019ED50;
-void func_800F3CC4(u32 a0, u32 a1, u32 a2)
+extern u8 *D_8019ED4C;
+extern u32 *D_8019ED50;
+s32 func_800F3CC4(u32 a0, s32 a1)
 {
-    return (if (((s32)((zero + 0x7FFF)) < (s32)(((u16)((volatile u8 *)(D_8019ED4C))[0x0] + a0)))) {
-        if (((s32)((zero + 0x7FFF)) < (s32)(((u16)((volatile u8 *)(D_8019ED4C))[0x0] + a0)))) {
-    ((volatile u8 *)(D_8019ED50))[0x0] = (u8)((volatile u8 *)(0x800D0000))[0x0];
-    ((volatile u8 *)(D_8019ED50))[0x0] = (((volatile u32 *)(D_8019ED50))[0x0] | ((u8)((volatile u8 *)(0x800D0000))[0x1] << 8));
-    } else {
-    ((volatile u8 *)(D_8019ED50))[0x0] = (u8)((volatile u8 *)(0x800D0000))[0x0];
-    ((volatile u8 *)(D_8019ED50))[0x0] = (((volatile u32 *)(D_8019ED50))[0x0] | ((u8)((volatile u8 *)(0x800D0000))[0x1] << 8));
-    }
-
-    } else {
-        if (((s32)((zero + 0x7FFF)) < (s32)(((u16)((volatile u8 *)(D_8019ED4C))[0x0] + a0)))) {
-    ((volatile u8 *)(D_8019ED50))[0x0] = (u8)((volatile u8 *)(0x800D0000))[0x0];
-    ((volatile u8 *)(D_8019ED50))[0x0] = (((volatile u32 *)(D_8019ED50))[0x0] | ((u8)((volatile u8 *)(0x800D0000))[0x1] << 8));
-    } else {
-    ((volatile u8 *)(D_8019ED50))[0x0] = (u8)((volatile u8 *)(0x800D0000))[0x0];
-    ((volatile u8 *)(D_8019ED50))[0x0] = (((volatile u32 *)(D_8019ED50))[0x0] | ((u8)((volatile u8 *)(0x800D0000))[0x1] << 8));
-    }
-
-    });
+    /* menu cell: base 0x7FFC8000, upgrades to ROM 0x800D0000 when
+       the cursor offset overflows 0x7FFF; merges 2 bytes into D50,
+       catalog callback + offset. */
+    u32 base = 0x7FFC8000;
+    if (0x7FFF < (u32)(D_8019ED4C[0] + a0))
+        base = 0x800D0000;
+    D_8019ED50[0] = *(volatile u8 *)base;
+    D_8019ED50[0] |= (u32)(*(volatile u8 *)(base + 1)) << 8;
+    return func_800F3B04(D_8019ED50[0]) + a1;
 }

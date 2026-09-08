@@ -1,4 +1,5 @@
 #include "common.h"
+extern int func_800F3B04(void);
 void func_800F6BE0(void)
 {
     u8 *p = (u8 *)func_800F3B04;

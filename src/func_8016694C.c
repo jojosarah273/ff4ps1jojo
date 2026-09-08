@@ -1,9 +1,15 @@
 #include "common.h"
-extern u32 D_8019ED40[8];
-extern u32 D_8019ED44[8];
-extern u32 D_8019ED54[8];
-void func_8016694C(u32 a1)
+extern u16 *D_8019ED40;
+extern u16 *D_8019ED44;
+extern u16 *D_8019ED54;
+extern u8 D_8019A12C[];
+void func_8016694C(void)
 {
-    ((volatile u8 *)(D_8019ED54[0]))[0x0] = (u16)((volatile u8 *)(D_8019ED44[0]))[0x0];
-    return (((volatile u8 *)(None))[0x0] = ((u8)func_8014D528(D_8019ED40[0])));
+    /* shop rows: 0x13 window + 0x03 cells; D54 <- D44 copy then
+       D40 <- D_8019A12C[D54] via 8014D528. */
+    func_800F6630(0x13);
+    func_800F4248(3);
+    D_8019ED54[0] = D_8019ED44[0];
+    D_8019ED40[0] = D_8019A12C[D_8019ED54[0]];
+    func_8014D528();
 }

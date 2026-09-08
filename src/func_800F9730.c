@@ -1,17 +1,12 @@
 #include "common.h"
-extern u32 D_8019ED40;
-extern u32 D_8019ED68;
-void func_800F9730(u32 a0, u32 a1)
+extern u8 *D_8019ED40;
+extern u8 *D_8019ED68;
+u8 func_800F9730(u8 *a0)
 {
-    return (((volatile u8 *)(a0))[0x0] = ((u8)((u8)((volatile u8 *)(a0))[0x0] & ~(zero | (u8)((volatile u8 *)(D_8019ED40))[0x0])));
-    ((volatile u8 *)(D_8019ED68))[0x0] = ((u8)((u8)((volatile u8 *)(D_8019ED68))[0x0] & 0xFD));
-    if ((u8)((volatile u8 *)(a0))[0x0]) {
-    ((volatile u8 *)(D_8019ED68))[0x0] = ((u8)((u8)((volatile u8 *)(D_8019ED68))[0x0] | 0x2));
-    } else {
-    ((volatile u8 *)(D_8019ED68))[0x0] = ((u8)((u8)((volatile u8 *)(D_8019ED68))[0x0] | 0x2));
-    }
-
-    if ((u8)((volatile u8 *)(a0))[0x0]) {
-    } else {
-    });
+    /* window state (clear): clear D40-masked bits of *a0; flag. */
+    a0[0] &= ~D_8019ED40[0];
+    D_8019ED68[0] &= 0xFD;
+    if (a0[0] == 0)
+        D_8019ED68[0] |= 2;
+    return D_8019ED68[0];
 }

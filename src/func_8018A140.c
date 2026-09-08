@@ -1,4 +1,5 @@
 #include "common.h"
+extern int func_8018A5F8(void);
 extern u32 *D_8019B104;
 extern u32 *D_8019B09C;
 void func_8018A140(void)

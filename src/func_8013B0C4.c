@@ -1,4 +1,5 @@
 #include "common.h"
+extern u32 D_8019A098[8];
 extern u32 D_8019ED40[8];
 extern u32 D_8019ED54[8];
 void func_8013B0C4(u32 a0)

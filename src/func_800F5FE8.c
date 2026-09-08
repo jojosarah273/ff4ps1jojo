@@ -1,4 +1,6 @@
 #include "common.h"
+extern u32 D_8019ED40[8];
+extern u32 D_8019ED44[8];
 extern u8 *D_8019ED68;
 void func_800F5FE8(void)
 {

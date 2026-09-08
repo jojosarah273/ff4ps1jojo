@@ -1,4 +1,6 @@
 #include "common.h"
+extern int func_8018F2DC(void);
+extern int func_8018F34C(void);
 void func_8018F478(void)
 {
     u32 *s = (u32 *)func_8018F2DC;

@@ -1,7 +1,12 @@
 #include "common.h"
-extern u32 D_8019ED44[8];
-extern u32 D_8019ED54[8];
+extern u16 *D_8019ED44;
+extern u16 *D_8019ED54;
 void func_8014D490(void)
 {
-    return (((volatile u8 *)(None))[0x0] = (u16)((volatile u8 *)(D_8019ED44[0]))[0x0]);
+    /* battle rows: 0x1813 text + 0x07 cells; D54 <- D44 copy then
+       8014D4D4. */
+    func_800F6564(0x1813);
+    func_800F4248(7);
+    D_8019ED54[0] = D_8019ED44[0];
+    func_8014D4D4();
 }

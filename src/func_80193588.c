@@ -1,4 +1,5 @@
 #include "common.h"
+extern int func_80193C40(void);
 extern s32 D_8019D0F4[8];
 extern u32 D_8019D0F8[8];
 extern u32 D_8019DB50[8];

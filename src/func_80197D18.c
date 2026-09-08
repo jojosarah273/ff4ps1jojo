@@ -1,5 +1,5 @@
 #include "common.h"
 void func_80197D18(void) {
-    __asm__ __volatile__("addiu $t2, $zero, 0xB0\n\tjr $t2\n\taddiu $t1, $zero, 0x13\n\tnop");
+    __asm__ __volatile__("addiu $t2, $0, 0xB0\n\tjr $t2\n\taddiu $t1, $0, 0x13\n\tnop");
     __builtin_unreachable();
 }

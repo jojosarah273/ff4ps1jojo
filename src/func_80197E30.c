@@ -2,5 +2,5 @@
 
 void func_80197E30(u32 a1)
 {
-    return (zero + 0x1);
+    return (0 + 0x1);
 }

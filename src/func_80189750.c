@@ -5,5 +5,5 @@ extern u32 D_8019EF54;
 extern u32 D_8019EF58;
 void func_80189750(void)
 {
-    return (D_8019ED28 = zero);
+    return (D_8019ED28 = 0);
 }

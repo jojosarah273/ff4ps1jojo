@@ -1,13 +1,9 @@
 #include "common.h"
-
-void func_8016B68C(u32 a0, u32 a2)
+void func_8016B68C(void)
 {
-    return (if ((((zero + zero) + 0x1) & 0xFFFF)) {
-        if ((((zero + zero) + 0x1) & 0xFFFF)) {
-    ((volatile u8 *)(((func_800F3B04(768) + zero) + (zero + zero))))[0x0] = ((u8)(zero + 0xF0));
-    } else {
-    }
-
-    } else {
-    });
+    /* battle prep: 0x118 x 0xF0 bytes at buffer(0x300). */
+    u8 *buf = (u8 *)func_800F3B04(0x300);
+    s32 i;
+    for (i = 0; i < 0x118; i++)
+        buf[i] = 0xF0;
 }

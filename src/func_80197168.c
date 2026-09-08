@@ -1,17 +1,17 @@
 #include "common.h"
-
-void func_80197168(u32 a0, u32 a1, u32 a2, u32 a3)
+void func_80197168(u16 *dst, u16 a1, u16 a2, u16 a3, u16 a4)
 {
-    ((volatile u8*)((a0 + zero)))[0x0] = a1;
-    ((volatile u8*)((a0 + zero)))[0x2] = a2;
-    ((volatile u8*)((a0 + zero)))[0x4] = a3;
-    ((volatile u8*)((a0 + zero)))[0x8] = zero;
-    ((volatile u8*)((a0 + zero)))[0xA] = zero;
-    ((volatile u8*)((a0 + zero)))[0xC] = zero;
-    ((volatile u8*)((a0 + zero)))[0xE] = zero;
-    ((volatile u8*)((a0 + zero)))[0x11] = ((u8)zero);
-    ((volatile u8*)((a0 + zero)))[0x10] = ((u8)zero);
-    ((volatile u8*)((a0 + zero)))[0x13] = ((u8)zero);
-    ((volatile u8*)((a0 + zero)))[0x12] = ((u8)zero);
-    return (((volatile u8*)((a0 + zero)))[0x6] = ((volatile u32*)(sp))[0x10]);
+    /* anim struct init: 8 u16s + 4 u8s zero run. */
+    dst[0] = a1;
+    dst[1] = a2;
+    dst[2] = a3;
+    dst[3] = a4;
+    dst[4] = 0;
+    dst[5] = 0;
+    dst[6] = 0;
+    dst[7] = 0;
+    ((u8 *)dst)[0x10] = 0;
+    ((u8 *)dst)[0x11] = 0;
+    ((u8 *)dst)[0x12] = 0;
+    ((u8 *)dst)[0x13] = 0;
 }

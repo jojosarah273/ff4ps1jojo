@@ -2,5 +2,5 @@
 
 void func_80191C38(void)
 {
-    return (zero + 0x1);
+    return (0 + 0x1);
 }

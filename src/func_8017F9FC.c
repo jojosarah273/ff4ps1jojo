@@ -1,4 +1,5 @@
 #include "common.h"
+extern u16 D_801B57A0;
 
 void func_8017F9FC(void)
 {

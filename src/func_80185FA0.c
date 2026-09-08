@@ -1,4 +1,5 @@
 #include "common.h"
+extern u8 D_801F6260;
 extern u16 *D_8019EF36;
 extern u16 *D_8019EF30;
 extern u16 *D_8019EEB8;

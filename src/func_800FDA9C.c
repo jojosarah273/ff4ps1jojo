@@ -1,14 +1,21 @@
 #include "common.h"
-extern u32 D_8019ED54;
-void func_800FDA9C(u32 a0, u32 a1, u32 a2, u32 a3)
+extern u16 D_801CFD68[];
+extern u16 *D_8019ED54;
+void func_800FDA9C(u16 a0)
 {
-    return (((volatile u8 *)((((a0 & 0xFFFF) << 1) + D_801CFD68)))[0x0] = (u8)((volatile u8 *)((((a0 & 0xFFFF) << 1) + D_801CFD68)))[0x0];
-    if (((s32)(((zero + 0x7) + -0x1)) >= 0)) {
-    ((volatile u8 *)((((a0 & 0xFFFF) << 1) + D_801CFD68)))[0x0] = ((u8)((volatile u8 *)((((a0 & 0xFFFF) << 1) + D_801CFD68)))[0x0] | ((u8)((volatile u8 *)(((u16)((volatile u8 *)(D_8019ED54))[0x0] + (0x800E0000 | 0x800E7C00))))[0x0] << 8));
-    } else {
+    /* table builder: 8 iterations, each writes the u16 formed by
+       (D_801CFD68[a2*2] | D_8019ED54[0]+0x800E7C00 byte) into
+       D_801CFD68[a2*2]; a2 walks a0..a0+7. */
+    u16 a2 = a0;
+    u8 *tbl = (u8 *)D_801CFD68;
+    u8 *q = (u8 *)(D_8019ED54[0] + 0x800E7C00);
+    s32 i;
+    for (i = 0; i < 8; i++) {
+        u8 *dst = tbl + (a2 * 2);
+        u16 v = dst[0] | ((u16)q[0] << 8);
+        dst[0] = v & 0xFF;
+        dst[1] = v >> 8;
+        a2 = (a2 + 1) & 0xFFFF;
+        q++;
     }
-
-    if (((s32)(((zero + 0x7) + -0x1)) >= 0)) {
-    } else {
-    });
 }

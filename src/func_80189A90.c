@@ -1,13 +1,13 @@
 #include "common.h"
-
-void func_80189A90(u32 a0, u32 a1)
+extern u32 D_801F66E8[];
+s32 func_80189A90(s16 a0)
 {
-    return (if (((volatile u32 *)(((((((s32)((a0 << 16)) >> 16) << 2) + a0) << 2) + a1)))[0x0]) {
-        if (((volatile u32 *)(((((((s32)((a0 << 16)) >> 16) << 2) + a0) << 2) + a1)))[0x0]) {
-    ((volatile u8 *)(((((((s32)((a0 << 16)) >> 16) << 2) + a0) << 2) + a1)))[0x0] = zero;
-    } else {
+    /* event registry (free): clears slot a0 (stride 20) and runs
+       8018B4C8 on its payload. */
+    u32 *slot = &D_801F66E8[a0 * 5];
+    if (slot[0] != 0) {
+        slot[0] = 0;
+        func_8018B4C8(slot[1]);
     }
-
-    } else {
-    });
+    return 0;
 }

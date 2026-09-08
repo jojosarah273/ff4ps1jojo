@@ -1,13 +1,12 @@
 #include "common.h"
-
-void func_80189A4C(u32 a0, u32 a1, u32 a2, u32 a3)
+extern u32 D_801F66E8[];
+s32 func_80189A4C(u32 a0, s16 a1)
 {
-    return (if (((volatile u32 *)(((((((s32)((a1 << 16)) >> 16) << 2) + a1) << 2) + a3)))[0x0]) {
-        if (((volatile u32 *)(((((((s32)((a1 << 16)) >> 16) << 2) + a1) << 2) + a3)))[0x0]) {
-    ((volatile u8 *)((D_801F66E8 + a2)))[0x4] = a0;
-    } else {
-    }
-
-    } else {
-    });
+    /* event registry: registers a0 at slot a1 (stride 20); returns
+       the slot or -1 when taken already. */
+    u32 *slot = &D_801F66E8[a1 * 5];
+    if (slot[0] != 0)
+        return -1;
+    slot[1] = a0;
+    return a1;
 }

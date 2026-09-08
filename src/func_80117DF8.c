@@ -1,8 +1,14 @@
 #include "common.h"
-extern u32 D_8019ED44[8];
-extern u32 D_8019ED54[8];
+extern u16 *D_8019ED44;
+extern u16 *D_8019ED54;
 void func_80117DF8(void)
 {
-    ((volatile u8 *)(None))[0x0] = func_800F5410(D_8019ED44[0]);
-    return (((volatile u8 *)(D_8019ED54[0]))[0x0] = (u16)((volatile u8 *)(D_8019ED44[0]))[0x0]);
+    /* rows: u16 D44<->D54 swap chain with 5410/6558(0). */
+    func_800F9644(0x20);
+    D_8019ED44[0] = D_8019ED54[0];
+    func_800F5410();
+    func_800F4064(0x40);
+    D_8019ED54[0] = D_8019ED44[0];
+    func_800F6558(0);
+    func_800F9660(0x20);
 }
