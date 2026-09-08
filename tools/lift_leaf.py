@@ -66,7 +66,8 @@ def lift(name, mode_b=False):
     if label_rows:
         tail = label_rows[-1][:-1]
         ti = rows.index(tail + ":")
-        if all(x.startswith(("jr", "nop")) for x in rows[ti + 1:]):
+        post = rows[ti + 1:]
+        if len(post) <= 2 and (not post or post[0].startswith(("jr", "nop"))):
             last_label = tail
 
     def reg_arg(txt):
@@ -140,25 +141,7 @@ def lift(name, mode_b=False):
             if tgt is None:
                 return None
             if tgt != last_label:
-                if ifelse is not None:
-                    return None
-                ti = rows.index(tgt + ":") if (tgt + ":") in rows else -1
-                if ti < 0:
-                    return None
-                if any(r.split(None, 1)[0] in
-                       ("beq", "bne", "beqz", "bnez", "blez", "bgtz", "bltz",
-                        "bgez") for r in rows[i + 1:ti]
-                       if not r.startswith(".L")):
-                    return None
-                x0 = R.get(rs0, rs0)
-                cond = {"bltz": f"((s32)({x0}) < 0)",
-                        "bgez": f"((s32)({x0}) >= 0)",
-                        "blez": f"((s32)({x0}) <= 0)",
-                        "bgtz": f"((s32)({x0}) > 0)"}.get(op, x0)
-                ifelse = (op, rs0, cond, tgt)
-                ifelse_branch_mark = len(outs)
-                i += 1
-                continue
+                return None                     # 2-way select: manual pass
             guard_branches.append((op, rs0, R.get(rs0, rs0)))
             guard_mark.append(len(outs))
             i += 1
