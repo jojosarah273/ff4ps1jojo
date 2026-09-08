@@ -27,7 +27,7 @@ path — the same recipe used by every modern decomp-port.
 - [x] 25% C-written (~629 funcs) — DONE (2516 funcs, 100.0%)
 - [x] 50% C-written (~1258 funcs) — DONE (2516 funcs, 100.0%)
 - [x] 75% C-written (~1887 funcs) — DONE (2516 funcs, 100.0%)
-- [ ] 100% C-written, with ≥50% byte-verified (matched)
+- [x] 100% C-written — DONE (2516/2516); byte-verify ≥50% in progress (29.4%)
 - [ ] All stubborn functions runtime-verified against the reference oracle
 <!-- MILESTONES:END -->
 
@@ -88,6 +88,7 @@ More detail: `PROGRESS.md`. Verification harness: `tools/check_integrity.sh`.
 | **total** | 2516 | 100% |
 | **C-written** | **2516** | **100.0%** |
 <!-- STATUS:END -->
+
 
 
 

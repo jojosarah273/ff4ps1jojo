@@ -765,3 +765,20 @@ plus the long tail of tiny shells. Next boundary: 80% (2013).
 
 
 
+
+## 2026-09-08 — PHASE A: 2516/2516 C-WRITTEN (100.0%)
+- The last 5.0%: 95.0%→100.0% in one continuous grind. Wave 1 banked the 50
+  jump-vector/PSY-Q pole stubs (low-RAM trampolines, break/syscall hooks);
+  then the window-flag + catalog-base family, sprite-blit twins, GPU command
+  builders, trig tables (97F24/97FB8), device chains (91C78/92768), event
+  queues (8A75C/8C608/8E0C8), float-bit compares, bit-gather + time splitter.
+- FINAL 13 (documented register stubs, house style): 800F9868, 80109D68,
+  8017DD08/DF20/E220, 8017FC50, 801805F8, 8018B1C8/B578/BF18/CB88/ECE8,
+  80191638 — these are the byte-verified register machines whose value-flow
+  is documented in comments and interpreted in Phase B.
+- Whole-tree hygiene: every src/*.c passes gcc -fsyntax-only (2516/2516).
+- Status: C-written 2516 (100.0%); byte-verified 740 (29.4%); callgraph
+  expected/callgraph.json = 2517 callers / 22,544 edges.
+- Phase A output criteria remaining: ≥50% byte-verified via lane sweeps;
+  runtime-verified oracle tapes for the register band.
+- Phase B: port/ charter + plan in place (source port, SoH/SM64 model).

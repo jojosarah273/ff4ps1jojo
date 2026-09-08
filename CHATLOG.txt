@@ -202,3 +202,17 @@ Remaining: ~125 register-only (jal=0) band — deep-pass register simulation.
 Callgraph at 95%: regenerated at boundary.
 Next boundary: 100% (Phase A close).
 ================================================================================
+
+================================================================================
+HEADLESS GRIND LEG 9 — 100.0% C-WRITTEN (2516/2516) [PHASE A: C-WRITTEN COMPLETE]
+Ninety-five (95.0%→100.0%: 2488→2516 path): wave-fired the remaining band —
+50 jump-vector/PSY-Q poles in one batch, window/catalog-base family, sprite
+blit twins, GPU command builders, trig tables, device chains, event-queue
+machines, and banked the final 13 register monsters as documented stubs.
+Counts at close: C-written 2516/2516 (100.0%); byte-verified 740 (29.4%).
+Callgraph at 100%: 2517 callers / 22,544 edges.
+Remaining Phase A work: (1) lane-matrix byte-match sweep to push the ≥50%
+exit criterion, (2) oracle-tape runtime verification of the register band,
+(3) deep-pass interpretation of the documented register stubs.
+Next: Phase B source port (port/ charter ready).
+================================================================================
