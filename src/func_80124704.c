@@ -1,12 +1,128 @@
 #include "common.h"
-__asm__(
-  ".globl func_80124704\n"
-  ".type func_80124704, @function\n"
-  "func_80124704:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x10($sp)\n\tjal func_800F9200\n\tnop\n\tjal func_800F939C\n\tnop\n\tjal func_800F824C\n\taddiu $a0, $zero, 0x1D\n\tjal func_800F8EBC\n\taddiu $a0, $zero, 0x1E\n\tjal func_8012D204\n\tnop\n\tjal func_800F53D4\n\tnop\n\tbeqz $v0, .L80124810\n\tnop\n\tjal func_800F971C\n\tnop\n\tjal func_800F3D48\n\tnop\n\tjal func_800F6630\n\taddiu $a0, $zero, 0x1D\n\tjal func_800F9644\n\taddiu $a0, $zero, 0x20\n\tlui $v1, %hi(D_8019ED44)\n\tlw $v1, %lo(D_8019ED44)($v1)\n\tnop\n\tlhu $v0, 0x0($v1)\n\tnop\n\tsll $v0, $v0, 6\n\tsh $v0, 0x0($v1)\n\tlui $a0, %hi(D_8019ED44)\n\tlw $a0, %lo(D_8019ED44)($a0)\n\tlui $v1, %hi(D_8019ED58)\n\tlw $v1, %lo(D_8019ED58)($v1)\n\tlhu $v0, 0x0($a0)\n\taddiu $a0, $zero, 0x20\n\tjal func_800F71DC\n\tsh $v0, 0x0($v1)\n\t.L801247A0:\n\tjal func_800F6558\n\tori $a0, $zero, 0xF0FF\n\tjal func_800F89D4\n\taddiu $a0, $zero, 0x340\n\tjal func_800F6558\n\taddiu $a0, $zero, 0x3000\n\tjal func_800F89D4\n\taddiu $a0, $zero, 0x342\n\tlui $v1, %hi(D_8019ED58)\n\tlw $v1, %lo(D_8019ED58)($v1)\n\tnop\n\tlhu $v0, 0x0($v1)\n\tnop\n\taddiu $v0, $v0, 0x4\n\tjal func_800F5E48\n\tsh $v0, 0x0($v1)\n\tjal func_800F5C64\n\taddiu $a0, $zero, 0x202\n\tbnez $v0, .L801247A0\n\tnop\n\tjal func_800F9660\n\taddiu $a0, $zero, 0x20\n\tjal func_800F960C\n\tnop\n\tjal func_800F93DC\n\tnop\n\tj .L80124B64\n\tnop\n\t.L80124810:\n\tjal func_800F654C\n\taddu $a0, $zero, $zero\n\tjal func_800F3D48\n\tnop\n\tjal func_800F6630\n\taddiu $a0, $zero, 0x1D\n\tjal func_800F9644\n\taddiu $a0, $zero, 0x20\n\tlui $v1, %hi(D_8019ED44)\n\tlw $v1, %lo(D_8019ED44)($v1)\n\tnop\n\tlhu $v0, 0x0($v1)\n\tnop\n\tsll $v0, $v0, 6\n\tsh $v0, 0x0($v1)\n\tlui $a0, %hi(D_8019ED44)\n\tlw $a0, %lo(D_8019ED44)($a0)\n\tlui $v1, %hi(D_8019ED58)\n\tlw $v1, %lo(D_8019ED58)($v1)\n\tlhu $v0, 0x0($a0)\n\taddiu $a0, $zero, 0x20\n\tjal func_800F9660\n\tsh $v0, 0x0($v1)\n\tjal func_800F6630\n\taddiu $a0, $zero, 0x1D\n\tlui $v1, %hi(D_8019ED40)\n\tlw $v1, %lo(D_8019ED40)($v1)\n\tnop\n\tlbu $v0, 0x0($v1)\n\tnop\n\tsll $v0, $v0, 3\n\tjal func_800F5140\n\tsb $v0, 0x0($v1)\n\tjal func_800F4F4C\n\tnop\n\tjal func_800F4008\n\taddiu $a0, $zero, 0x20\n\tjal func_800F824C\n\taddiu $a0, $zero, 0x20\n\tjal func_800F6630\n\taddiu $a0, $zero, 0x1D\n\tjal func_800F5410\n\tnop\n\tjal func_800F4008\n\taddiu $a0, $zero, 0x3\n\tjal func_800F5140\n\tnop\n\tjal func_800F3B04\n\taddiu $a0, $zero, 0x1C1\n\tjal func_800F78C4\n\taddu $a0, $v0, $zero\n\tjal func_800F824C\n\taddiu $a0, $zero, 0x21\n\tjal func_800F9644\n\taddiu $a0, $zero, 0x20\n\tjal func_800F71DC\n\taddiu $a0, $zero, 0x4\n\t.L801248F4:\n\tjal func_800F6658\n\taddiu $a0, $zero, 0x1E\n\tjal func_800F89D4\n\taddiu $a0, $zero, 0x340\n\tjal func_800F5410\n\tnop\n\tjal func_800F4064\n\taddiu $a0, $zero, 0x8\n\tjal func_800F8274\n\taddiu $a0, $zero, 0x1E\n\tjal func_800F6658\n\taddiu $a0, $zero, 0x20\n\tjal func_800F89D4\n\taddiu $a0, $zero, 0x342\n\tjal func_800F6214\n\tnop\n\tjal func_800F8274\n\taddiu $a0, $zero, 0x20\n\tlui $v1, %hi(D_8019ED58)\n\tlw $v1, %lo(D_8019ED58)($v1)\n\tnop\n\tlhu $v0, 0x0($v1)\n\tnop\n\taddiu $v0, $v0, 0x4\n\tjal func_800F5E48\n\tsh $v0, 0x0($v1)\n\tjal func_800F5C64\n\taddiu $a0, $zero, 0x202\n\tbnez $v0, .L801248F4\n\tnop\n\tjal func_800F6658\n\taddiu $a0, $zero, 0x1E\n\tjal func_800F5410\n\tnop\n\tjal func_800F4064\n\taddiu $a0, $zero, 0x7E0\n\tjal func_800F8274\n\taddiu $a0, $zero, 0x1E\n\tjal func_800F71DC\n\taddiu $a0, $zero, 0x4\n\t.L80124994:\n\tjal func_800F6658\n\taddiu $a0, $zero, 0x1E\n\tjal func_800F89D4\n\taddiu $a0, $zero, 0x340\n\tjal func_800F5410\n\tnop\n\tjal func_800F4064\n\taddiu $a0, $zero, 0x8\n\tjal func_800F8274\n\taddiu $a0, $zero, 0x1E\n\tjal func_800F6658\n\taddiu $a0, $zero, 0x20\n\tjal func_800F89D4\n\taddiu $a0, $zero, 0x342\n\tjal func_800F6214\n\tnop\n\tjal func_800F8274\n\taddiu $a0, $zero, 0x20\n\tlui $v1, %hi(D_8019ED58)\n\tlw $v1, %lo(D_8019ED58)($v1)\n\tnop\n\tlhu $v0, 0x0($v1)\n\tnop\n\taddiu $v0, $v0, 0x4\n\tjal func_800F5E48\n\tsh $v0, 0x0($v1)\n\tjal func_800F5C64\n\taddiu $a0, $zero, 0x202\n\tbnez $v0, .L80124994\n\tnop\n\tjal func_800F6658\n\taddiu $a0, $zero, 0x1E\n\tjal func_800F5410\n\tnop\n\tjal func_800F4064\n\taddiu $a0, $zero, 0x7E0\n\tjal func_800F8274\n\taddiu $a0, $zero, 0x1E\n\tjal func_800F71DC\n\taddiu $a0, $zero, 0x4\n\t.L80124A34:\n\tjal func_800F6658\n\taddiu $a0, $zero, 0x1E\n\tjal func_800F89D4\n\taddiu $a0, $zero, 0x340\n\tjal func_800F5410\n\tnop\n\tjal func_800F4064\n\taddiu $a0, $zero, 0x8\n\tjal func_800F8274\n\taddiu $a0, $zero, 0x1E\n\tjal func_800F6658\n\taddiu $a0, $zero, 0x20\n\tjal func_800F89D4\n\taddiu $a0, $zero, 0x342\n\tjal func_800F6214\n\tnop\n\tjal func_800F8274\n\taddiu $a0, $zero, 0x20\n\tlui $v1, %hi(D_8019ED58)\n\tlw $v1, %lo(D_8019ED58)($v1)\n\tnop\n\tlhu $v0, 0x0($v1)\n\tnop\n\taddiu $v0, $v0, 0x4\n\tjal func_800F5E48\n\tsh $v0, 0x0($v1)\n\tjal func_800F5C64\n\taddiu $a0, $zero, 0x202\n\tbnez $v0, .L80124A34\n\tnop\n\tjal func_800F6658\n\taddiu $a0, $zero, 0x1E\n\tjal func_800F5410\n\tnop\n\tjal func_800F4064\n\taddiu $a0, $zero, 0x7E0\n\tjal func_800F8274\n\taddiu $a0, $zero, 0x1E\n\tjal func_800F71DC\n\taddiu $a0, $zero, 0x4\n\t.L80124AD4:\n\tjal func_800F6658\n\taddiu $a0, $zero, 0x1E\n\tjal func_800F89D4\n\taddiu $a0, $zero, 0x340\n\tjal func_800F5410\n\tnop\n\tjal func_800F4064\n\taddiu $a0, $zero, 0x8\n\tjal func_800F8274\n\taddiu $a0, $zero, 0x1E\n\tjal func_800F6658\n\taddiu $a0, $zero, 0x20\n\tjal func_800F89D4\n\taddiu $a0, $zero, 0x342\n\tjal func_800F6214\n\tnop\n\tjal func_800F8274\n\taddiu $a0, $zero, 0x20\n\tlui $v1, %hi(D_8019ED58)\n\tlw $v1, %lo(D_8019ED58)($v1)\n\tnop\n\tlhu $v0, 0x0($v1)\n\tnop\n\taddiu $v0, $v0, 0x4\n\tjal func_800F5E48\n\tsh $v0, 0x0($v1)\n\tjal func_800F5C64\n\taddiu $a0, $zero, 0x202\n\tbnez $v0, .L80124AD4\n\tnop\n\tjal func_800F9660\n\taddiu $a0, $zero, 0x20\n\tjal func_800F960C\n\tnop\n\tjal func_800F93DC\n\tnop\n\t.L80124B64:\n\tlw $ra, 0x10($sp)\n\tnop\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_80124704, .-func_80124704\n"
-);
+void func_80124704(void)
+{
+    func_800F9200();
+    func_800F939C();
+    func_800F824C(0x1D);
+    func_800F8EBC(0x1E);
+    func_8012D204();
+    if (func_800F53D4() == 0)
+        goto L810;
+    func_800F971C();
+    func_800F3D48();
+    func_800F6630(0x1D);
+    func_800F9644(0x20);
+    func_800F71DC();
+    for (;;) {
+        func_800F6558(0xF0FF);
+        func_800F89D4(0x340);
+        func_800F6558(0x3000);
+        func_800F89D4(0x342);
+        func_800F5E48();
+        if (func_800F5C64(0x202) != 0)
+            continue;
+        break;
+    }
+    func_800F9660(0x20);
+    func_800F960C();
+    func_800F93DC();
+    return;
+L810:
+    func_800F654C();
+    func_800F3D48();
+    func_800F6630(0x1D);
+    func_800F9644(0x20);
+    func_800F9660(0x20);
+    func_800F6630(0x1D);
+    func_800F5140();
+    func_800F4F4C();
+    func_800F4008(0x20);
+    func_800F824C(0x20);
+    func_800F6630(0x1D);
+    func_800F5410();
+    func_800F4008(3);
+    func_800F5140();
+    func_800F78C4(func_800F3B04(0x1C1));
+    func_800F824C(0x21);
+    func_800F9644(0x20);
+    func_800F71DC(4);
+    for (;;) {
+        func_800F6658(0x1E);
+        func_800F89D4(0x340);
+        func_800F5410();
+        func_800F4064(8);
+        func_800F8274(0x1E);
+        func_800F6658(0x20);
+        func_800F89D4(0x342);
+        func_800F6214();
+        func_800F8274(0x20);
+        func_800F5E48();
+        if (func_800F5C64(0x202) != 0)
+            continue;
+        break;
+    }
+    func_800F6658(0x1E);
+    func_800F5410();
+    func_800F4064(0x7E0);
+    func_800F8274(0x1E);
+    func_800F71DC(4);
+    for (;;) {
+        func_800F6658(0x1E);
+        func_800F89D4(0x340);
+        func_800F5410();
+        func_800F4064(8);
+        func_800F8274(0x1E);
+        func_800F6658(0x20);
+        func_800F89D4(0x342);
+        func_800F6214();
+        func_800F8274(0x20);
+        func_800F5E48();
+        if (func_800F5C64(0x202) != 0)
+            continue;
+        break;
+    }
+    func_800F6658(0x1E);
+    func_800F5410();
+    func_800F4064(0x7E0);
+    func_800F8274(0x1E);
+    func_800F71DC(4);
+    for (;;) {
+        func_800F6658(0x1E);
+        func_800F89D4(0x340);
+        func_800F5410();
+        func_800F4064(8);
+        func_800F8274(0x1E);
+        func_800F6658(0x20);
+        func_800F89D4(0x342);
+        func_800F6214();
+        func_800F8274(0x20);
+        func_800F5E48();
+        if (func_800F5C64(0x202) != 0)
+            continue;
+        break;
+    }
+    func_800F6658(0x1E);
+    func_800F5410();
+    func_800F4064(0x7E0);
+    func_800F8274(0x1E);
+    func_800F71DC(4);
+    for (;;) {
+        func_800F6658(0x1E);
+        func_800F89D4(0x340);
+        func_800F5410();
+        func_800F4064(8);
+        func_800F8274(0x1E);
+        func_800F6658(0x20);
+        func_800F89D4(0x342);
+        func_800F6214();
+        func_800F8274(0x20);
+        func_800F5E48();
+        if (func_800F5C64(0x202) != 0)
+            continue;
+        break;
+    }
+    func_800F9660(0x20);
+    func_800F960C();
+    func_800F93DC();
+    return;
+}
