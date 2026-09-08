@@ -1,13 +1,10 @@
 #!/usr/bin/env python3
-"""lift_leaf.py — auto-lift straight-line leaf functions (no branches) to C.
+"""lift_leaf.py — auto-lift leaf functions (no calls) to C.
 
-Handles: gp-relative + absolute global access, MMIO fixed-address access,
-argument registers, pointer derefs, ALU chains, final store/return.
-Emitted src/<n>.c candidates are verified/registered with tools/match.py.
---mode-b regenerates functions ending in a store using the temp-return shape
-(reads v0 as a statement, returns it; use when mode A fails byte-match).
-
-Usage: python3 tools/lift_leaf.py [--mode-b] [NAME...]  (default: all leaves)
+Handles: gp-relative + absolute globals, MMIO bases, arg regs, pointer
+derefs, ALU chains, straight-line stores/returns, guard branches (any number
+of conditional forward branches to the single tail label => nested ifs),
+and mode A/B return shapes. Emits src/<n>.c; verify/register with match.py.
 """
 import re
 import sys
@@ -19,18 +16,22 @@ SRC = ROOT / "src"
 MATCHED = ROOT / "expected" / "matched"
 
 ROWS = re.compile(r"^\s*/\* [0-9A-F]+ [0-9A-F]+ ([0-9A-F]{8}) \*/\s*(.+?)\s*$")
+LABEL = re.compile(r"^\s*\.L[0-9A-F]+:\s*$")
 GP = re.compile(r"%gp_rel\((\w+)\)\(gp\)")
 ABS = re.compile(r"%hi\((\w+)\)")
 LO = re.compile(r"%lo\((\w+)\)\((\w+)\)")
 OFFSET = re.compile(r"(\w+),\s*([\w\-]+)\((\w+)\)")
 ALU = re.compile(r"(\w+),\s*(\w+),\s*(.+)")
-
-MAX_ROWS = 26
+UNCOND = ("beq", "bne", "beqz", "bnez", "blez", "bgtz", "bltz", "bgez")
+MAX_ROWS = 34
 
 
 def rows_of(name):
     out = []
     for raw in (ASM / f"{name}.s").read_text(errors="replace").splitlines():
+        if LABEL.match(raw):
+            out.append(raw.strip())
+            continue
         m = ROWS.match(raw)
         if m:
             out.append(m.group(2).strip())
@@ -45,26 +46,34 @@ def lift(name, mode_b=False):
     rows = rows_of(name)
     if len(rows) > MAX_ROWS:
         return None
-    labels_used = set(r.split()[-1] for r in rows
-                      if re.match(r"\w+", r) and ".L" in r)
-    loop_tail = []
-    R = {}
-    ABSBASE = {}
-    decls = {}
-    sourced = set()
-    outs = []
-    last_kind = None
-    last_store = None        # (stmt_text, lhs, rhs) for mode A return
-    v0_expr = None
+    R, ABSBASE, decls, sourced = {}, {}, {}, set()
+    outs, v0_expr = [], None
+    last_store = None
+    guard_branches, guard_mark = [], []
 
     def decl(sym, abs_, op):
-        w = "u32" if op in ("sw", "lw", "lh", "lhu") else (
-            "u16" if op in ("sh", "lhu", "lh") else "u8")
+        w = "u8"
+        if op in ("sw", "lw", "lh", "lhu"):
+            w = "u16" if op in ("sh", "lh", "lhu") else "u32"
         decls.setdefault(sym, (w, abs_))
+
+    label_rows = [r for r in rows if r.startswith(".L")]
+    last_label = None
+    if label_rows:
+        tail = label_rows[-1][:-1]
+        ti = rows.index(tail + ":")
+        if all(x.startswith(("jr", "nop")) for x in rows[ti + 1:]):
+            last_label = tail
+
+    def reg_arg(txt):
+        return txt if txt.startswith(("a0", "a1", "a2", "a3")) else txt
 
     i = 0
     while i < len(rows):
         insn = rows[i]
+        if insn.startswith(".L"):
+            i += 1
+            continue
         m = insn.split(None, 1)
         op = m[0]
         args = (m[1] if len(m) > 1 else "").replace("$", "")
@@ -74,25 +83,58 @@ def lift(name, mode_b=False):
         if op == "jr" and args.strip() == "ra":
             i += 1
             continue
-        if op in ("beq", "bne", "blez", "bgtz", "bltz", "bgez", "beqz", "bnez",
-                  "jal", "j", "jalr"):
-            # single backward branch = do/while loop tail
-            mm = re.match(r"(\w+),(\w+),(\.L[0-9A-F]+)", args)
-            if op in ("bne", "beq", "blez", "bgtz", "bltz", "bgez") and mm:
-                tgt = mm.group(3)
-                if tgt not in labels_used:
+        if op == "jal":
+            if i + 1 >= len(rows):
+                return None
+            slot = rows[i + 1].replace("$", "").split(None, 1)
+            sm = slot[0]
+            sa = (slot[1] if len(slot) > 1 else "").replace("$", "")
+            callee = args.split()[0]
+            if sm == "nop":
+                cexpr = f"{callee}()"
+            elif sm in ("addiu", "ori") and re.match(r"a0,\s*zero", sa):
+                c = int(re.search(r"0x[0-9A-F]+", sa).group(0), 16)
+                cexpr = f"{callee}({c})"
+            elif sm == "andi" and re.match(r"a0,\s*a0", sa):
+                sourced.add("a0")
+                cexpr = f"{callee}((u16)a0)"
+            elif sm == "addu" and sa.replace(" ", "") == "a0,zero,zero":
+                cexpr = f"{callee}(0)"
+            elif sm == "addu" and sa.replace(" ", "") == "a0,v0,zero":
+                prev = v0_expr
+                if prev is None:
                     return None
-                loop_tail.append((op, mm.group(1), mm.group(2), tgt))
-                i += 1
-                continue
-            return None
+                cexpr = f"{callee}({prev})"
+            else:
+                return None
+            R["v0"] = cexpr
+            v0_expr = cexpr
+            i += 2
+            continue
+        if op in UNCOND or op in ("j", "jalr"):
+            if op in ("jal", "jalr", "j"):
+                return None
+            tgt = rs0 = None
+            mm = re.match(r"(\w+),\s*(\w+),\s*(\.L[0-9A-F]+)", args)
+            if op in ("beq", "bne") and mm:
+                tgt, rs0 = mm.group(3), mm.group(1)
+            else:
+                mm = re.match(r"(\w+),\s*(\.L[0-9A-F]+)", args)
+                if mm:
+                    tgt, rs0 = mm.group(2), mm.group(1)
+            if tgt is None or tgt != last_label:
+                return None
+            guard_branches.append((op, rs0, R.get(rs0, rs0)))
+            guard_mark.append(len(outs))
+            i += 1
+            continue
         if op == "lui":
             g = ABS.search(args)
             m32 = re.match(r"(\w+),\s*\(0x([0-9A-F]+) >> 16\)", args)
             if g and m32 is None:
                 ABSBASE[re.match(r"(\w+),", args).group(1)] = g.group(1)
             elif m32:
-                R[m32.group(1)] = f"0x{int(m32.group(2), 16) << 16:X}"
+                R[m32.group(1)] = f"0x{int(m32.group(2), 16) & 0xFFFF0000:X}"
             elif re.match(r"\w+,\s*\(0x[0-9A-F]+ & 0xFFFF\)", args):
                 mm = re.match(r"(\w+),\s*\(0x([0-9A-F]+) & 0xFFFF\)", args)
                 R[mm.group(1)] = "0x" + mm.group(2)
@@ -118,20 +160,33 @@ def lift(name, mode_b=False):
             else:
                 mm = OFFSET.match(args)
                 if not mm:
-                    return None
+                    mm2 = re.match(r"(\w+),\s*\((0x[0-9A-F]+) & 0xFFFF\)\((\w+)\)", args)
+                    if not mm2:
+                        return None
+                    dst, lo, base = mm2.group(1), int(mm2.group(2), 16), mm2.group(3)
+                    bx = R.get(base, base)
+                    if op in ("lbu", "lb", "lhu", "lh"):
+                        cast = {"lbu": "u8", "lb": "s8", "lhu": "u16", "lh": "s16"}[op]
+                        e = f"({cast})*((volatile u8 *)(({bx}) | 0x{lo:X}))"
+                    else:
+                        e = f"*((volatile u32 *)(({bx}) | 0x{lo:X}))"
+                    R[dst] = e
+                    if dst == "v0":
+                        v0_expr = e
+                    i += 1
+                    continue
                 dst, off, base = mm.group(1), mm.group(2), mm.group(3)
                 bx = R.get(base, base)
                 if base in ("a0", "a1", "a2", "a3"):
                     sourced.add(base)
                 if op in ("lbu", "lb", "lhu", "lh"):
                     cast = {"lbu": "u8", "lb": "s8", "lhu": "u16", "lh": "s16"}[op]
-                    e = f"({cast})((volatile u8*)({bx}))[{off}]"
+                    e = f"({cast})((volatile u8 *)({bx}))[{off}]"
                 else:
-                    e = f"((volatile u32*)({bx}))[{off}]"
+                    e = f"((volatile u32 *)({bx}))[{off}]"
             R[dst] = e
             if dst == "v0":
                 v0_expr = e
-            last_kind = "load"
             i += 1
             continue
         if op in ("sw", "sb", "sh"):
@@ -141,7 +196,7 @@ def lift(name, mode_b=False):
                 decl(sym, False, op)
                 if src in ("a0", "a1", "a2", "a3"):
                     sourced.add(src)
-                lhs, rhs = sym, _store_str(op, R.get(src, src))
+                rhs = _store_str(op, R.get(src, src))
                 outs.append(f"{sym} = {rhs};")
             elif "%lo(" in args:
                 lm = LO.search(args)
@@ -153,26 +208,35 @@ def lift(name, mode_b=False):
                 decl(sym, True, op)
                 if src in ("a0", "a1", "a2", "a3"):
                     sourced.add(src)
-                lhs, rhs = sym + "[0]", _store_str(op, R.get(src, src))
-                outs.append(f"{sym}[0] = {rhs};")
+                outs.append(f"{sym}[0] = {_store_str(op, R.get(src, src))};")
             else:
+                if args.endswith("(sp)"):
+                    i += 1
+                    continue                       # frame save/restore
                 mm = OFFSET.match(args)
                 if not mm:
-                    return None
+                    mm2 = re.match(r"(\w+),\s*\((0x[0-9A-F]+) & 0xFFFF\)\((\w+)\)", args)
+                    if not mm2:
+                        return None
+                    src, lo, base = mm2.group(1), int(mm2.group(2), 16), mm2.group(3)
+                    bx = R.get(base, base)
+                    outs.append(f"*((volatile u8 *)(({bx}) | 0x{lo:X})) = "
+                                f"{_store_str(op, R.get(src, src))};")
+                    i += 1
+                    continue
                 src, off, base = mm.group(1), mm.group(2), mm.group(3)
                 bx = R.get(base, base)
                 if src in ("a0", "a1", "a2", "a3"):
                     sourced.add(src)
-                lhs, rhs = f"((volatile u8*)({bx}))[{off}]", _store_str(
-                    op, R.get(src, src))
-                outs.append(f"{lhs} = {rhs};")
-            last_kind = "store"
-            last_store = (lhs, rhs)
+                outs.append(f"((volatile u8 *)({bx}))[{off}] = "
+                            f"{_store_str(op, R.get(src, src))};")
+            last_store = outs[-1]
             i += 1
             continue
         ma = ALU.match(args)
         if op in ("addiu", "addu", "subu", "and", "or", "xor", "andi", "ori",
-                  "sll", "srl", "sra", "slt", "sltu", "move", "nor"):
+                  "sll", "srl", "sra", "slt", "sltu", "move", "nor", "xori",
+                  "sllv"):
             if not ma:
                 return None
             d, s1, s2 = ma.group(1), ma.group(2), ma.group(3)
@@ -180,9 +244,19 @@ def lift(name, mode_b=False):
                 sourced.add(s1)
             e1 = R.get(s1, s1)
             mc = re.match(r"\(0x([0-9A-F]+) & 0xFFFF\)", s2)
-            e2 = ("0x" + mc.group(1)) if mc else (
-                s2 if s2.lstrip("-").lower().startswith("0x")
-                or s2.lstrip("-").isdigit() else R.get(s2, s2))
+            if mc:
+                e2 = "0x" + mc.group(1)
+            elif s2.lstrip("-").lower().startswith("0x") or s2.lstrip("-").isdigit():
+                e2 = s2
+            elif s2 in ("a0", "a1", "a2", "a3"):
+                sourced.add(s2)
+                e2 = s2
+            else:
+                e2 = R.get(s2, s2)
+            if s2.startswith("%lo(") and s1 in ABSBASE:
+                R[d] = ABSBASE[s1]
+                i += 1
+                continue
             expr = {
                 "addiu": f"({e1} + {e2})",
                 "addu": f"({e1} + {e2})",
@@ -193,43 +267,61 @@ def lift(name, mode_b=False):
                 "nor": f"~({e1} | {e2})",
                 "andi": f"({e1} & {e2})",
                 "ori": f"({e1} | {e2})",
+                "xori": f"({e1} ^ {e2})",
                 "sll": f"({e1} << {e2})",
+                "sllv": f"({e1} << {e2})",
                 "srl": f"((u32)({e1}) >> {e2})",
                 "sra": f"((s32)({e1}) >> {e2})",
                 "slt": f"((s32)({e1}) < (s32)({e2}))",
                 "sltu": f"((u32)({e1}) < (u32)({e2}))",
                 "move": e1,
-            }[op]
+            }.get(op)
+            if expr is None:
+                return None
             R[d] = expr
             if d == "v0":
                 v0_expr = expr
-            last_kind = "alu"
             i += 1
             continue
         return None
+
     if not outs and not v0_expr:
         return None
-    # return shape
+
+    # guard wrapping: nested if(!cond){ block }
+    if guard_branches:
+        marks = [0] + guard_mark + [len(outs)]
+        segs = []
+        for k, (op, rs0, x) in enumerate(guard_branches):
+            cond = {"bltz": f"((s32)({x}) < 0)", "bgez": f"((s32)({x}) >= 0)",
+                    "blez": f"((s32)({x}) <= 0)", "bgtz": f"((s32)({x}) > 0)"
+                    }.get(op, x)
+            neg = op in ("bne", "bnez", "blez", "bgtz", "bltz", "bgez")
+            mid = "".join(f"    {o}\n" for o in outs[marks[k + 1]:marks[k + 2]])
+            segs.append(f"    if ({'!' if neg else ''}({cond})) {{\n{mid}    }}\n")
+        head = "".join(f"    {o}\n" for o in outs[:marks[1]])
+        outs = [head + "".join(segs)]
+
     retline = ""
-    if outs and last_kind == "store":
+    if outs and last_store and not guard_branches:
         if mode_b:
-            tmp = v0_expr if v0_expr else R.get("v0", None)
+            tmp = v0_expr
             if tmp is None:
                 return None
-            stmts = [f"    u32 tmp = {tmp};"] + [o for o in outs] + \
-                    [f"    return tmp;"]
-            retline = ""
+            stmts = [f"    u32 tmp = {tmp};"] + outs + [f"    return tmp;"]
             body = "".join(o + "\n" for o in stmts)
         else:
-            lhs, rhs = last_store
-            outs[-1] = ""                      # last store becomes return
-            body = "".join(f"    {o}\n" for o in outs if o)
+            lhs = outs[-1].split("=", 1)[0].strip()
+            rhs = outs[-1].split("=", 1)[1].strip().rstrip(";")
+            outs = outs[:-1]
+            body = "".join(f"    {o}\n" for o in outs)
             retline = f"    return ({lhs} = {rhs});\n"
-    elif v0_expr:
-        body = "".join(f"    {o}\n" for o in outs)
+    elif v0_expr and not outs:
+        body = ""
         retline = f"    return {v0_expr};\n"
     else:
         body = "".join(f"    {o}\n" for o in outs)
+
     dlines = "\n".join(
         f"extern {w}{' ' + s + '[8]' if abs_ else ' ' + s};"
         for s, (w, abs_) in sorted(decls.items()))
@@ -254,7 +346,6 @@ def main():
             continue
         (SRC / f"{n}.c").write_text(c)
         lifted += 1
-        print(f"  lifted {n}")
     print(f"lift_leaf done: lifted={lifted} failed={failed}")
 
 

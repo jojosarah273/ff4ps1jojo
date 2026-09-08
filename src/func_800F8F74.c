@@ -1,19 +1,6 @@
 #include "common.h"
-__asm__(
-  ".globl func_800F8F74\n"
-  ".type func_800F8F74, @function\n"
-  "func_800F8F74:\n"
-	".set\tnoreorder\n"
-	".set noreorder\n"
-  "\taddiu $sp, $sp, -0x18\n"
-  "\tsw $ra, 0x10($sp)\n"
-  "\tjal func_800F3B04\n"
-  "\tnop\n"
-  "\tlw $ra, 0x10($sp)\n"
-  "\tsb $zero, 0x0($v0)\n"
-  "\tjr $ra\n"
-  "\taddiu $sp, $sp, 0x18\n"
-	".set reorder\n"
-	".set\treorder\n"
-  ".size func_800F8F74, .-func_800F8F74\n"
-);
+
+void func_800F8F74(void)
+{
+    return (((volatile u8 *)(func_800F3B04()))[0x0] = ((u8)zero));
+}

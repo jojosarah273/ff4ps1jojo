@@ -1,12 +1,6 @@
 #include "common.h"
-__asm__(
-  ".globl func_800F902C\n"
-  ".type func_800F902C, @function\n"
-  "func_800F902C:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x10($sp)\n\tjal func_800F3C3C\n\tandi $a0, $a0, 0xFFFF\n\tlw $v1, %gp_rel(D_8019ED54)($gp)\n\tnop\n\tlhu $a0, 0x0($v1)\n\tlw $ra, 0x10($sp)\n\taddu $v0, $v0, $a0\n\tsb $zero, 0x0($v0)\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_800F902C, .-func_800F902C\n"
-);
+extern u32 D_8019ED54;
+void func_800F902C(u32 a0)
+{
+    return (((volatile u8 *)((func_800F3C3C((u16)a0) + a0)))[0x0] = ((u8)zero));
+}
