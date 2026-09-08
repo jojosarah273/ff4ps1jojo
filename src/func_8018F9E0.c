@@ -1,12 +1,5 @@
 #include "common.h"
-__asm__(
-  ".globl func_8018F9E0\n"
-  ".type func_8018F9E0, @function\n"
-  "func_8018F9E0:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x10($sp)\n\tjal func_80190078\n\taddiu $a2, $zero, 0xC\n\tlw $ra, 0x10($sp)\n\tsltiu $v0, $v0, 0x1\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_8018F9E0, .-func_8018F9E0\n"
-);
+u32 func_8018F9E0(void)
+{
+    return func_80190078(0, 0, 0xC) < 1;
+}

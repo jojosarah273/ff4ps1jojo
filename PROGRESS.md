@@ -314,6 +314,14 @@ NTSC-U + text guard armed + mod FMV skip all present.
   50% target at 1258: +75 remaining — next session: mapper-family sweep 2 +
   hand batch + the 2-way ifelse resurrection.
   (Progress rails auto-refresh the README at every commit.)
+### MILESTONE 50% C-WRITTEN — 2025-09-08 (1265/2516 = 50.3%)
+Autonomous grind wave delivered the milestone:
+- 2-way value-selection lifter (lift_2way, per-arm register simulation) — 8+.
+- Family emitters & hand batches: mapper write-throughs, status-flag family
+  (0x7C/3/80/1), MMIO-merges, vtbl-call family (18 via offset->index emitter),
+  init-run loops, zero-fill loops.
+- 1203 -> 1265 C-written in the grind. matched still 740 (byte-verify of the
+  ~525 candidates via runtime oracle = the next tape, planned).
 ### 2025-09-07 — PROJECT SCOPE: full C decomp -> native port (SoH/SM64 model)
 - Direction confirmed with user: goal = Ship-of-Harkinian-class native FF4
   (PS1), NOT an emulator and NOT a machine-translated recomp (the recomp
