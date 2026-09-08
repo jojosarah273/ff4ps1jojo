@@ -176,3 +176,16 @@ boundary. The 80% checkbox flips. Remaining: the 3 deep-pass monsters
 HEADLESS GRIND LEG 6 — 82.8% C-WRITTEN (2083/2516)
 2013 -> 2083 (+70). All pushed. Next boundary: 90% (~2264).
 ================================================================================
+
+================================================================================
+HEADLESS GRIND LEG 7 — 90.5% C-WRITTEN (2278/2516) [90% MILESTONE]
+2083 -> 2278 (+195 funcs) in one continuous headless push, all committed+pushed.
+Covered: menu/shop/options/battle/ability/anim/event rows, jr-$a0 dispatches,
+state machines, gate-ladder skeletons; 3 deep-pass monsters (800FB430,
+80108458, 80186810) and the register-only band (8017FC50, 801805F8, 8018CB88,
+8018B1C8, 80198058, 8017DF20, 8017E220, 8017DD08, 8018EBB8, 800F9868,
+80109D68...) intentionally deferred per quality policy.
+Callgraph at 90.5%: 2279 callers / 21,837 edges.
+Next boundary: 100% (Phase A close) — remaining work is the deep-pass monsters
++ the long tail of tiny shells.
+================================================================================
