@@ -375,6 +375,21 @@ callgraph rebuilt each time (expected/callgraph.json now 1410 callers, 6481 edge
 C-written 1410 = 56.0%. 3B04 arg patterns standardized: 0x1440/0x1441+hw(ED58/ED54),
 3A70(0x60) window chains. Registered-heavy monsters 80108458 (968r) + 80186810
 (765r, jump-table dispatch) remain queued for register-simulated deep passes.
+### GRIND-TO-60% SESSION 1 (1393 -> 1442, +49 funcs, 57.3%)
+KEY CATCH: func_800F9CE8 (502r) = the MAIN SYSTEM MENU dispatcher — calls
+many decoded funcs (800FCCDC, 80104934, 80170C14) + 800FB430/800FFE0C etc.
+Also decoded 48 more screen functions this session:
+800FCCDC, 80162DF8, 801571DC (shared status window), 80155778 (status-scan),
+8011C768/8011C2C8 (shop twins), 80106370, 80104934, 8011A690 (1690-1728 item
+set), 8016AE94 (battle HUD), 80161C88 (spell-cast confirm), 8011D218 (forge),
+8015FE98 (command menu), 80116DA0 (bottom-menu cmds), 8013C554 (ability),
+8012A190 (equip), 801324F8 (shop config), 800FFEFC (battle item-use),
+8010CB08 (battle action), 80112A68 (shop upgrade dialog), 80170C14 (battle-
+options), 8013327C (config), 8015C604 (status/config), 80173008 + 80173780
+(buy/sell pair), 800F9CE8 (MAIN MENU).
+STILL GRINDING toward 60% (1510): +49 of the needed ~117 functions banked this
+session. Remaining large clean shells staged: 8013FA08(520), 8016CA94,
+8014BB94, 80136494 + the whole 400-500 band. Callgraph edges now ~6600.
 ### 2025-09-08 — LARGE-FUNCTION SESSION (as directed: "target a larger function")
 Six big ones decoded: func_80114194 (90r, 3-phase menu state machine),
 func_80152F0C (90r, dual-phase screen-switch), func_80144344 (110r, nested
