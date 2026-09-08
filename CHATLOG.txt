@@ -152,3 +152,10 @@ big work: the register-heavy deep passes (80108458 0xF20, 80186810 0xBF4,
 800FB430 0xA14) and the long tail of tiny shells. Next official target: 75%
 (1887).
 ================================================================================
+
+================================================================================
+HEADLESS GRIND LEG 3 — MILESTONE 75.0% C-WRITTEN (1887/2516)
+1787 -> 1887 (+100). All pushed; README/PROGRESS/callgraph refreshed at every
+boundary. Callgraph continues past 18k edges. The 75% checkbox is now flipped.
+Three big deep-pass monsters + ~620 tiny shells remain before 100%.
+================================================================================

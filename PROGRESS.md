@@ -725,4 +725,15 @@ Open items queued:
 Archived expected objects were once back-filled for ALL built functions;
 2 strays (func_80191530, func_80197A78) were never verified. Authoritative
 count = asm/nonmatchings/main/*.s removed = 2516 - remaining. Commits (#)
-≠ functions matched (#): matches are batched per commit.
+≠ functions matched (#): matches are batched per commit.### HEADLESS GRIND — 71.0% -> 75.0% (1787 -> 1887)
+**MILESTONE: 75.0% C-WRITTEN (1887/2516) REACHED** — third boundary of the
+"keep going" run. 30+ commits pushed. Notable: 8015A374 (10-entry jr-a0
+options table), 801774B4 (battle-anim chain calling 801799F0/80179670/
+801847D8/80185030), 80131534 (80120070 wrapper), 801920F0 (battle-cmd
+maps), the icon-grid pairs 8016A390/80169DE8/80169C7C, shop/options twins
+801621D0/801622F0/801626B8/801627F8, and ~110 low-band menu screens.
+Remaining: the three register-heavy deep passes (80108458/80186810/800FB430)
+plus the long tail of tiny shells. Next boundary: 80% (2013).
+
+
+
