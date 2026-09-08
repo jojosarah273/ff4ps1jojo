@@ -237,6 +237,21 @@ NTSC-U + text guard armed + mod FMV skip all present.
   MMIO base-pointer form fixes lui+ori materialization; trailing-pad nops in
   .s specs trip asm-differ on 12-16B getters (parked as candidates).
   expected/matched_lanes.txt now records per-match toolchain lane.
+- PHASE A SESSION 5-7: leaf/arithmetic tooling + batch.
+  - tools/match.py: lane-sweeping verifier (MODERN/PSX/L26/L27/L28/L295) with
+    --bincmp byte-exact .text compare (circumvents asm-differ reloc-crash
+    noise on tiny objects — func_80196F2C matched via bincmp) + registration.
+  - tools/lift_leaf.py: straight-line lifter (gp_rel/absolute/MMIO globals,
+    arg params, ALU chains, store/return with mode A (return-store) / mode B
+    (tmp-read) shapes). 65 leaf candidates lifted with correct semantics.
+  - Session byte-verified: +1 (func_80196F2C) -> matched 265, C-written
+    29.4%->31.7% (real-C 476->540, shells 1776->1711).
+  - Findings: leaves are the slow tail — auto-emitted C is semantically right
+    but register allocation (v0 vs at, v1 vs a1) differs on ALL six lanes for
+    most; byte-verify needs per-function register-forcing or luck. psxs lane
+    (-fschedule-insns CC1PSX) currently emits empty objects (investigate).
+    Chain family remains the auto-match winner (38 this week). Next: focused
+    per-leaf register tuning, psxs repair, and branchy-function hand-decomp.
 ### 2025-09-07 — PROJECT SCOPE: full C decomp -> native port (SoH/SM64 model)
 - Direction confirmed with user: goal = Ship-of-Harkinian-class native FF4
   (PS1), NOT an emulator and NOT a machine-translated recomp (the recomp
