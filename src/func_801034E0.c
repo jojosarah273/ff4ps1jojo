@@ -5,7 +5,7 @@ void func_801034E0(void)
        80102E78/8017559C rows. */
     func_800F8FB8(0x7A);
     func_800F8FB8(0xB8);
-L1034f8:
+L1034F8:
     for (;;) {
         func_80102E78();
         func_800F6630(0x79);
