@@ -1,12 +1,33 @@
 #include "common.h"
-__asm__(
-  ".globl func_8017D898\n"
-  ".type func_8017D898, @function\n"
-  "func_8017D898:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\tlw $a3, 0x4($a2)\n\tnop\n\tlhu $v0, 0x6($a3)\n\tlh $v1, 0xA($a3)\n\tsll $v0, $v0, 16\n\tsra $a2, $v0, 19\n\tsra $v0, $v0, 16\n\taddu $v0, $v0, $v1\n\taddiu $t1, $v0, 0x10\n\tslti $v0, $t1, 0xF9\n\tbnez $v0, .L8017D8CC\n\taddu $t7, $a0, $0\n\taddiu $t1, $0, 0xF8\n\t.L8017D8CC:\n\tsra $t1, $t1, 3\n\tlh $v0, 0x2($a3)\n\tsll $v1, $a2, 5\n\tsll $v0, $v0, 2\n\tandi $a0, $v0, 0x3E0\n\tlhu $v0, 0x0($a3)\n\taddu $a0, $a0, $v1\n\tsll $v0, $v0, 16\n\tsra $v1, $v0, 19\n\tandi $t6, $v1, 0x1F\n\tsra $v0, $v0, 24\n\tslt $v1, $a2, $t1\n\tbeqz $v1, .L8017D978\n\tandi $t5, $v0, 0x1\n\t.L8017D904:\n\taddu $a3, $t6, $0\n\taddiu $t3, $a2, 0x1\n\taddiu $t4, $a0, 0x20\n\tandi $t2, $a0, 0x3E0\n\tsll $v0, $a2, 5\n\taddu $v0, $v0, $a2\n\tsll $v0, $v0, 1\n\taddu $a2, $v0, $t7\n\taddiu $t0, $0, 0x20\n\t.L8017D928:\n\taddiu $t0, $t0, -0x1\n\tsra $v0, $a3, 5\n\tandi $v0, $v0, 0x1\n\taddu $v0, $t5, $v0\n\tandi $v0, $v0, 0x1\n\tandi $v1, $a3, 0x1F\n\tor $v1, $v1, $t2\n\tsll $v1, $v1, 1\n\tsll $v0, $v0, 11\n\taddu $v0, $v0, $a1\n\taddu $v1, $v1, $v0\n\tlhu $a0, 0x0($v1)\n\taddiu $a3, $a3, 0x1\n\tsh $a0, 0x0($a2)\n\tbgez $t0, .L8017D928\n\taddiu $a2, $a2, 0x2\n\taddu $a2, $t3, $0\n\tslt $v0, $a2, $t1\n\tbnez $v0, .L8017D904\n\taddu $a0, $t4, $0\n\t.L8017D978:\n\tjr $ra\n\tnop\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_8017D898, .-func_8017D898\n"
-);
+void func_8017D898(u32 a0, u16 *src, u32 a2, u32 a3)
+{
+    /* battle sprite blit (plane variant): mirrors 8017D7D8 with the
+       source plane select bit from rec[0]. */
+    u8 *rec = *(u8 **)(a2 + 4);
+    s32 col0 = (u32)(*(u16 *)&rec[6]) >> 3;
+    s32 top = (s32)(s16)*(s16 *)&rec[6] + *(s16 *)&rec[0xA] + 0x10;
+    s32 bit;
+    s32 i;
+    u8 v;
+    u32 sel0;
+    if (top >= 0xF9)
+        top = 0xF8;
+    top >>= 3;
+    bit = (col0 << 5) + (((s32)*(s16 *)&rec[2] << 2) & 0x3E0);
+    v = (u8)(((u32)*(u16 *)&rec[0] >> 3) & 0x1F);
+    sel0 = ((u32)*(u16 *)&rec[0] >> 8) & 1;
+    if (col0 >= top)
+        return;
+    for (i = col0; i < top; i++) {
+        u32 t = (u32)bit & 0x3E0;
+        u16 *dst = (u16 *)(a0 + i * 66);
+        s32 j;
+        u8 cur = v;
+        for (j = 0; j < 0x20; j++) {
+            u32 sel = ((cur >> 5) & 1) + sel0;
+            *dst++ = src[(cur & 0x1F) | t + ((sel & 1) << 11)];
+            cur++;
+        }
+        bit += 0x20;
+    }
+}

@@ -1,12 +1,41 @@
 #include "common.h"
-__asm__(
-  ".globl func_8013813C\n"
-  ".type func_8013813C, @function\n"
-  "func_8013813C:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x8\n\tlui $v0, (0x800D28A4 >> 16)\n\tori $v0, $v0, (0x800D28A4 & 0xFFFF)\n\tlui $a0, (0x800D28A5 >> 16)\n\tori $a0, $a0, (0x800D28A5 & 0xFFFF)\n\tlui $v1, (0x800D28A6 >> 16)\n\tlh $a2, %gp_rel(D_8019EDA4)($gp)\n\tori $v1, $v1, (0x800D28A6 & 0xFFFF)\n\tsll $a2, $a2, 11\n\taddu $v0, $a2, $v0\n\tlbu $a1, 0x0($v0)\n\taddu $a0, $a2, $a0\n\tsb $a1, 0x1($sp)\n\tlbu $v0, 0x0($a0)\n\tlbu $a0, 0x1($sp)\n\taddu $v1, $a2, $v1\n\tsb $v0, 0x2($sp)\n\tlbu $v0, 0x0($v1)\n\tlbu $a1, 0x2($sp)\n\tlui $v1, (0x91A2B3C5 >> 16)\n\tori $v1, $v1, (0x91A2B3C5 & 0xFFFF)\n\tsll $a1, $a1, 8\n\tsb $v0, 0x3($sp)\n\tandi $v0, $v0, 0xFF\n\taddu $a0, $a0, $a1\n\tsll $v0, $v0, 16\n\taddu $a0, $a0, $v0\n\tmultu $a0, $v1\n\tmfhi $v1\n\tlui $v0, (0x88888889 >> 16)\n\tori $v0, $v0, (0x88888889 & 0xFFFF)\n\tmultu $a0, $v0\n\tlui $a1, (0x800D2200 >> 16)\n\tori $a1, $a1, (0x800D2200 & 0xFFFF)\n\taddu $a2, $a2, $a1\n\tsrl $v1, $v1, 11\n\tsll $v0, $v1, 4\n\tsubu $v0, $v0, $v1\n\tsll $v0, $v0, 2\n\tsw $v1, %gp_rel(D_8019EDB4)($gp)\n\tmfhi $a0\n\tsrl $a0, $a0, 5\n\tsubu $a0, $a0, $v0\n\tsw $a0, %gp_rel(D_8019EDAC)($gp)\n\tlbu $v1, 0x0($a2)\n\taddiu $v0, $0, 0x81\n\tbeq $v1, $v0, .L80138238\n\taddu $a3, $0, $0\n\taddiu $v0, $0, 0x8B\n\tbeq $v1, $v0, .L80138238\n\taddiu $a0, $0, 0x81\n\taddiu $v1, $0, 0x8B\n\taddiu $a3, $a3, 0x1\n\t.L80138210:\n\tslti $v0, $a3, 0x5\n\tbeqz $v0, .L80138238\n\taddiu $a2, $a2, 0x40\n\tlbu $v0, 0x0($a2)\n\tnop\n\tbeq $v0, $a0, .L80138238\n\tnop\n\tbne $v0, $v1, .L80138210\n\taddiu $a3, $a3, 0x1\n\taddiu $a3, $a3, -0x1\n\t.L80138238:\n\tlui $v1, (0x800D2207 >> 16)\n\tori $v1, $v1, (0x800D2207 & 0xFFFF)\n\tlui $a1, (0x800D2208 >> 16)\n\tori $a1, $a1, (0x800D2208 & 0xFFFF)\n\tlui $a2, (0x800D2209 >> 16)\n\tsll $a0, $a3, 6\n\tlh $v0, %gp_rel(D_8019EDA4)($gp)\n\tori $a2, $a2, (0x800D2209 & 0xFFFF)\n\tsll $v0, $v0, 11\n\taddu $a0, $a0, $v0\n\taddu $v1, $a0, $v1\n\taddu $a1, $a0, $a1\n\tlbu $v0, 0x0($v1)\n\taddu $a2, $a0, $a2\n\tsb $v0, 0x0($sp)\n\tlui $v0, (0x800D220A >> 16)\n\tori $v0, $v0, (0x800D220A & 0xFFFF)\n\taddu $a0, $a0, $v0\n\tlbu $v1, 0x0($a1)\n\tlbu $v0, 0x0($sp)\n\tsb $v1, 0x1($sp)\n\tandi $v1, $v1, 0xFF\n\tsll $v1, $v1, 8\n\tlbu $a1, 0x0($a2)\n\taddu $v0, $v0, $v1\n\tsb $a1, 0x2($sp)\n\tlbu $a1, 0x0($a0)\n\tlbu $v1, 0x2($sp)\n\tsw $v0, %gp_rel(D_8019EDA0)($gp)\n\tsb $a1, 0x3($sp)\n\tandi $v0, $a1, 0xFF\n\tsll $v0, $v0, 8\n\taddu $v1, $v1, $v0\n\tsw $v1, %gp_rel(D_8019EDBC)($gp)\n\tjr $ra\n\taddiu $sp, $sp, 0x8\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_8013813C, .-func_8013813C\n"
-);
+extern s16 D_8019EDA4;
+extern u32 D_8019EDA0;
+extern u32 D_8019EDAC;
+extern u32 D_8019EDB4;
+extern u32 D_8019EDBC;
+void func_8013813C(void)
+{
+    /* stat table header: hash the 3-byte code, hash cell, relocate to
+       the 0x81/0x8B-marked tile and pack its two 2-byte pairs. */
+    u8 *base = (u8 *)(0x800D28A4 + (D_8019EDA4 << 11));
+    u32 packed = (u32)base[0] | ((u32)base[1] << 8) | ((u32)base[2] << 16);
+    u32 q = (u32)(((unsigned long long)packed * 0x91A2B3C5ULL) >> 43);
+    u32 r = (u32)(((unsigned long long)packed * 0x88888889ULL) >> 37);
+    D_8019EDB4 = q;
+    D_8019EDAC = r - q * 60;
+    {
+        u8 *t = (u8 *)(0x800D2200 + (D_8019EDA4 << 11));
+        s32 idx = 0;
+        if (t[0] != 0x81 && t[0] != 0x8B) {
+            s32 k;
+            for (k = 1; k < 5; k++) {
+                u8 c = t[k * 0x40];
+                if (c == 0x81) {
+                    idx = k;
+                    break;
+                }
+                if (c == 0x8B) {
+                    idx = k - 1;
+                    break;
+                }
+                idx = k + 1;
+            }
+        }
+        {
+            u8 *p = (u8 *)(0x800D2207 + (idx << 6) + (D_8019EDA4 << 11));
+            D_8019EDA0 = (u32)p[0] | ((u32)p[1] << 8);
+            D_8019EDBC = (u32)p[2] | ((u32)p[3] << 8);
+        }
+    }
+}

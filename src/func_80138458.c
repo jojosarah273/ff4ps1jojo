@@ -1,12 +1,42 @@
 #include "common.h"
-__asm__(
-  ".globl func_80138458\n"
-  ".type func_80138458, @function\n"
-  "func_80138458:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddu $a0, $0, $0\n\tlui $t0, D_801DED8C\n\tlui $v0, D_801CFD68\n\taddiu $a3, $v0, D_801CFD68\n\taddiu $a2, $0, 0x20FF\n\taddiu $a1, $a0, 0x1\n\t.L80138470:\n\taddiu $v1, $0, 0x6\n\tsll $v0, $a0, 5\n\taddiu $v0, $v0, 0x7837\n\tsll $v0, $v0, 1\n\taddu $v0, $v0, $a3\n\taddiu $v0, $v0, 0xC\n\t.L80138488:\n\tsh $a2, 0x0($v0)\n\taddiu $v1, $v1, -0x1\n\tbgez $v1, .L80138488\n\taddiu $v0, $v0, -0x2\n\taddu $a0, $a1, $0\n\tslti $v0, $a0, 0x8\n\tbnez $v0, .L80138470\n\taddiu $a1, $a0, 0x1\n\taddiu $v1, $0, 0x20F7\n\taddiu $v0, $t0, D_801DED8C\n\taddiu $a0, $0, 0x20F8\n\tsh $v1, D_801DED8C($t0)\n\taddiu $v1, $0, 0x20FA\n\taddiu $a1, $0, 0x20FF\n\tsh $a0, 0x2($v0)\n\taddiu $a0, $0, 0x20FC\n\tsh $v1, 0x40($v0)\n\tsh $v1, 0x80($v0)\n\tsh $v1, 0xC0($v0)\n\tsh $v1, 0x100($v0)\n\tsh $v1, 0x140($v0)\n\tsh $v1, 0x180($v0)\n\tsh $v1, 0x1C0($v0)\n\tsh $v1, 0x200($v0)\n\taddiu $v1, $0, 0x20FD\n\tsh $a0, 0x240($v0)\n\taddiu $a0, $0, 0x204F\n\taddiu $a3, $0, 0x206A\n\tsh $v1, 0x242($v0)\n\taddiu $v1, $0, 0x2072\n\tsh $v1, 0x86($v0)\n\taddiu $v1, $0, 0x2054\n\taddiu $t0, $0, 0x205C\n\taddiu $t2, $0, 0x2071\n\tsh $v1, 0x8A($v0)\n\taddiu $v1, $0, 0x2064\n\taddiu $t1, $0, 0x2069\n\tsh $v1, 0x90($v0)\n\taddiu $v1, $0, 0x2062\n\tsh $a0, 0x82($v0)\n\taddiu $a0, $0, 0x207F\n\tsh $v1, 0x94($v0)\n\taddiu $v1, $0, 0x2051\n\tsh $a0, 0x96($v0)\n\taddiu $a0, $0, 0x2067\n\taddiu $a2, $0, 0x2060\n\tsh $v1, 0x102($v0)\n\taddiu $v1, $0, 0x206E\n\tsh $v1, 0x10A($v0)\n\taddiu $v1, $0, 0x205F\n\tsh $a1, 0x42($v0)\n\tsh $a1, 0xC2($v0)\n\tsh $a1, 0x142($v0)\n\tsh $a1, 0x1C2($v0)\n\tsh $a3, 0x84($v0)\n\tsh $a1, 0x88($v0)\n\tsh $t0, 0x8C($v0)\n\tsh $t2, 0x8E($v0)\n\tsh $t1, 0x92($v0)\n\tsh $a0, 0x104($v0)\n\tsh $a2, 0x106($v0)\n\tsh $t0, 0x108($v0)\n\tsh $a2, 0x10C($v0)\n\tsh $a1, 0x10E($v0)\n\tsh $v1, 0x110($v0)\n\taddiu $v1, $0, 0x206F\n\tsh $v1, 0x186($v0)\n\taddiu $v1, $0, 0x206D\n\tsh $v1, 0x18A($v0)\n\taddiu $v1, $0, 0x2068\n\taddiu $a0, $0, 0x204E\n\tsh $v1, 0x18E($v0)\n\taddiu $v1, $0, 0x2046\n\tsh $v1, 0x204($v0)\n\taddiu $v1, $0, 0x2050\n\tsh $a2, 0x18C($v0)\n\tsh $a2, 0x194($v0)\n\taddiu $a2, $0, 0x2053\n\tsh $v1, 0x208($v0)\n\taddiu $v1, $0, 0x205A\n\tsh $v1, 0x20C($v0)\n\taddiu $v1, $0, 0x2044\n\tsh $a0, 0x202($v0)\n\tsh $a0, 0x206($v0)\n\taddiu $a0, $0, 0x2042\n\tsh $v1, 0x210($v0)\n\taddiu $v1, $0, 0x2045\n\tsh $a3, 0x112($v0)\n\tsh $a1, 0x114($v0)\n\tsh $a1, 0x116($v0)\n\tsh $t1, 0x182($v0)\n\tsh $a3, 0x184($v0)\n\tsh $a1, 0x188($v0)\n\tsh $a3, 0x190($v0)\n\tsh $t2, 0x192($v0)\n\tsh $a1, 0x196($v0)\n\tsh $a2, 0x20A($v0)\n\tsh $a1, 0x20E($v0)\n\tsh $a0, 0x212($v0)\n\tsh $a2, 0x214($v0)\n\tjr $ra\n\tsh $v1, 0x216($v0)\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_80138458, .-func_80138458\n"
-);
+extern u16 D_801CFD68[];
+extern u16 D_801DED8C[];
+static void w(u8 *p, s32 off, u16 v)
+{
+    *(u16 *)(p + off) = v;
+}
+void func_80138458(void)
+{
+    /* menu text-grid: clears 8 slots then writes the status-pane
+       label recipe. */
+    s32 i;
+    u8 *p = (u8 *)D_801DED8C;
+    for (i = 0; i < 8; i++) {
+        u16 *q = (u16 *)((u8 *)D_801CFD68 + i * 0x40 + 0xF06C);
+        s32 j;
+        for (j = 1; j <= 6; j++)
+            q[j] = 0x20FF;
+    }
+    w(p, 0x000, 0x20F7); w(p, 0x002, 0x20F8);
+    w(p, 0x040, 0x20FA); w(p, 0x080, 0x20FA); w(p, 0x0C0, 0x20FA);
+    w(p, 0x100, 0x20FA); w(p, 0x140, 0x20FA); w(p, 0x180, 0x20FA);
+    w(p, 0x1C0, 0x20FA); w(p, 0x200, 0x20FA); w(p, 0x240, 0x20FC);
+    w(p, 0x242, 0x20FD);
+    w(p, 0x086, 0x2072); w(p, 0x08A, 0x2054); w(p, 0x090, 0x2064);
+    w(p, 0x082, 0x204F); w(p, 0x094, 0x2062); w(p, 0x096, 0x207F);
+    w(p, 0x102, 0x2051); w(p, 0x10A, 0x206E); w(p, 0x110, 0x205F);
+    w(p, 0x042, 0x20FF); w(p, 0x0C2, 0x20FF); w(p, 0x142, 0x20FF);
+    w(p, 0x1C2, 0x20FF); w(p, 0x084, 0x206A); w(p, 0x088, 0x20FF);
+    w(p, 0x08C, 0x205C); w(p, 0x08E, 0x2071); w(p, 0x092, 0x2069);
+    w(p, 0x104, 0x2067); w(p, 0x106, 0x2060); w(p, 0x108, 0x205C);
+    w(p, 0x10C, 0x2060); w(p, 0x10E, 0x20FF); w(p, 0x186, 0x206F);
+    w(p, 0x18A, 0x206D); w(p, 0x18E, 0x2068);
+    w(p, 0x204, 0x2046); w(p, 0x18C, 0x2060); w(p, 0x194, 0x2060);
+    w(p, 0x208, 0x2050); w(p, 0x20C, 0x205A); w(p, 0x202, 0x204E);
+    w(p, 0x206, 0x204E); w(p, 0x210, 0x2044);
+    w(p, 0x112, 0x206A); w(p, 0x114, 0x20FF); w(p, 0x116, 0x20FF);
+    w(p, 0x182, 0x2069); w(p, 0x184, 0x206A); w(p, 0x188, 0x20FF);
+    w(p, 0x190, 0x206A); w(p, 0x192, 0x2071); w(p, 0x196, 0x20FF);
+    w(p, 0x20A, 0x2053); w(p, 0x20E, 0x20FF); w(p, 0x212, 0x2042);
+    w(p, 0x214, 0x2053); w(p, 0x216, 0x2045);
+}
