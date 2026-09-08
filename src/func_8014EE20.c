@@ -51,7 +51,7 @@ L14EE88:
             continue;
         break;
     }
-    return;
+    goto L14F0AC;
 L14EFF0:
     func_800F6564();
     func_800F5574(3);
@@ -74,5 +74,7 @@ L14F030:
     func_800F81B0();
     func_800F971C();
     func_800F9660(0x20);
+
+L14F0AC:
     return;
 }
