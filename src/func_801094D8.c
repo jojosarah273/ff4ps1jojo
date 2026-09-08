@@ -1,12 +1,25 @@
 #include "common.h"
-__asm__(
-  ".globl func_801094D8\n"
-  ".type func_801094D8, @function\n"
-  "func_801094D8:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x10($sp)\n\tjal func_800F7210\n\taddiu $a0, $zero, 0x772\n\tjal func_800F6630\n\taddiu $a0, $zero, 0xDD\n\tjal func_800F6434\n\taddiu $a0, $zero, 0x202\n\tbnez $v0, .L80109600\n\tnop\n\tlbu $v0, %gp_rel(D_8019ECFD)($gp)\n\tnop\n\tbeqz $v0, .L80109560\n\tlui $v0, %hi(D_80198CC0)\n\taddiu $v0, $v0, %lo(D_80198CC0)\n\tlbu $v1, %gp_rel(D_8019ECFD)($gp)\n\tlui $a1, %hi(D_8019ED40)\n\tlw $a1, %lo(D_8019ED40)($a1)\n\taddu $v1, $v1, $v0\n\tlbu $a0, -0x1($v1)\n\tnop\n\tsb $a0, 0x0($a1)\n\tlbu $v0, %gp_rel(D_8019ECFD)($gp)\n\taddiu $v1, $zero, 0xB\n\taddiu $v0, $v0, 0x1\n\tsb $v0, %gp_rel(D_8019ECFD)($gp)\n\tandi $v0, $v0, 0xFF\n\tbne $v0, $v1, .L801096E0\n\taddiu $v0, $zero, 0xD7\n\tlui $at, %hi(D_800D0772)\n\tsb $v0, %lo(D_800D0772)($at)\n\tsb $zero, %gp_rel(D_8019ECFD)($gp)\n\tj .L801096E0\n\tnop\n\t.L80109560:\n\tlui $v1, %hi(D_8019ED54)\n\tlw $v1, %lo(D_8019ED54)($v1)\n\tnop\n\tlhu $a0, 0x0($v1)\n\tnop\n\tsltiu $v0, $a0, 0x7D00\n\tbnez $v0, .L801095EC\n\tori $v0, $zero, 0x80FF\n\tsltu $v0,$v0,$a0\n\tbeqz $v0, .L801095B8\n\taddu $a2, $a0, $zero\n\taddiu $v0, $a2, 0x7F00\n\tsh $v0, 0x0($v1)\n\tlui $a1, %hi(D_8019ED54)\n\tlw $a1, %lo(D_8019ED54)($a1)\n\tnop\n\tlhu $v0, 0x0($a1)\n\tlui $v1, %hi(D_800414A0)\n\taddu $v0, $v0, $v1\n\tlbu $a0, %lo(D_800414A0)($v0)\n\tj .L801096C8\n\tnop\n\t.L801095B8:\n\tlhu $a2, 0x0($v1)\n\tnop\n\taddiu $v0, $a2, -0x7D00\n\tsh $v0, 0x0($v1)\n\tlui $a1, %hi(D_8019ED54)\n\tlw $a1, %lo(D_8019ED54)($a1)\n\tlui $v0, (0x80038000 >> 16)\n\tlhu $v1, 0x0($a1)\n\tori $v0, $v0, (0x80038000 & 0xFFFF)\n\taddu $v1, $v1, $v0\n\tlbu $a0, 0x6400($v1)\n\tj .L801096C8\n\tnop\n\t.L801095EC:\n\tlui $a0, (0x118300 >> 16)\n\tjal func_800F6C68\n\tori $a0, $a0, (0x118300 & 0xFFFF)\n\tj .L801096E0\n\tnop\n\t.L80109600:\n\tjal func_800F5574\n\taddiu $a0, $zero, 0x1\n\tjal func_800F53D4\n\tnop\n\tbeqz $v0, .L8010967C\n\tnop\n\tlui $v1, %hi(D_8019ED54)\n\tlw $v1, %lo(D_8019ED54)($v1)\n\tnop\n\tlhu $v0, 0x0($v1)\n\tnop\n\tsltiu $v0, $v0, 0x7C00\n\tbnez $v0, .L8010966C\n\tlui $a0, (0x108400 >> 16)\n\tlhu $a2, 0x0($v1)\n\tnop\n\taddiu $v0, $a2, -0x7C00\n\tsh $v0, 0x0($v1)\n\tlui $a1, %hi(D_8019ED54)\n\tlw $a1, %lo(D_8019ED54)($a1)\n\tlui $v0, (0x80038000 >> 16)\n\tlhu $v1, 0x0($a1)\n\tori $v0, $v0, (0x80038000 & 0xFFFF)\n\taddu $v1, $v1, $v0\n\tlbu $a0, 0x6900($v1)\n\tj .L801096C8\n\tnop\n\t.L8010966C:\n\tjal func_800F6C68\n\tori $a0, $a0, (0x108400 & 0xFFFF)\n\tj .L801096E0\n\tnop\n\t.L8010967C:\n\tlui $v1, %hi(D_8019ED54)\n\tlw $v1, %lo(D_8019ED54)($v1)\n\tnop\n\tlhu $v0, 0x0($v1)\n\tnop\n\tsltiu $v0, $v0, 0x2500\n\tbnez $v0, .L801096D8\n\tlui $a0, (0x13A700 >> 16)\n\tlhu $a2, 0x0($v1)\n\tnop\n\taddiu $v0, $a2, -0x2500\n\tsh $v0, 0x0($v1)\n\tlui $a1, %hi(D_8019ED54)\n\tlw $a1, %lo(D_8019ED54)($a1)\n\tlui $v0, (0x80048000 >> 16)\n\tlhu $v1, 0x0($a1)\n\tori $v0, $v0, (0x80048000 & 0xFFFF)\n\taddu $v1, $v1, $v0\n\tlbu $a0, 0x4F50($v1)\n\t.L801096C8:\n\tlui $at, (0x1F8003C8 >> 16)\n\tsb $a0, (0x1F8003C8 & 0xFFFF)($at)\n\tj .L801096E0\n\tsh $a2, 0x0($a1)\n\t.L801096D8:\n\tjal func_800F6C68\n\tori $a0, $a0, (0x13A700 & 0xFFFF)\n\t.L801096E0:\n\tlw $ra, 0x10($sp)\n\tnop\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_801094D8, .-func_801094D8\n"
-);
+void func_801094D8(void)
+{
+    /* shop rows: 0x776/0xDD windows, gates 6434(0x202) route the
+       0x6C68 read chains; register latches pick the tails. */
+    func_800F7210(0x776);
+    func_800F6630(0xDD);
+    if (func_800F6434(0x202) != 0)
+        goto L109600;
+    /* v0/v1 gates -> L109560 / L1096E0 */
+    func_800F6C68();
+    return;
+    /* L109560: gates -> L1095B8 / L1095EC / L1096C8 */
+L109600:
+    func_800F5574(1);
+    if (func_800F53D4() == 0)
+        goto L10967C;
+    /* v0 gate -> L10966C */
+    func_800F6C68();
+    return;
+L10967C:
+    /* v0 gate -> L1096D8 */
+    func_800F6C68();
+    return;
+}

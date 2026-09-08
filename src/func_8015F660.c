@@ -1,12 +1,20 @@
 #include "common.h"
-__asm__(
-  ".globl func_8015F660\n"
-  ".type func_8015F660, @function\n"
-  "func_8015F660:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x10($sp)\n\tjal func_800F71DC\n\taddu $a0, $zero, $zero\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x1\n\tjal func_80152224\n\tnop\n\tlui $v0, %hi(D_8019ED44)\n\tlw $v0, %lo(D_8019ED44)($v0)\n\tlui $a1, %hi(D_8019ED54)\n\tlw $a1, %lo(D_8019ED54)($a1)\n\tlhu $v1, 0x0($v0)\n\taddiu $a0, $zero, 0x202\n\tjal func_800F70BC\n\tsh $v1, 0x0($a1)\n\tbnez $v0, .L8015F6C8\n\tnop\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x80\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x28A3\n\tjal func_80065534\n\tnop\n\tj .L8015F6E0\n\tnop\n\t.L8015F6C8:\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x20\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x28A4\n\tjal func_80065774\n\tnop\n\t.L8015F6E0:\n\tlw $ra, 0x10($sp)\n\tnop\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_8015F660, .-func_8015F660\n"
-);
+void func_8015F660(void)
+{
+    /* options: 0x28A3/0x28A4 texts; 70BC(0x202) gate picks
+       80065534/80065774. */
+    func_800F71DC();
+    func_800F654C(1);
+    func_80152224();
+    if (func_800F70BC(0x202) != 0)
+        goto L15F6C8;
+    func_800F654C(0x80);
+    func_800F8188(0x28A3);
+    func_80065534();
+    return;
+L15F6C8:
+    func_800F654C(0x20);
+    func_800F8188(0x28A4);
+    func_80065774();
+    return;
+}
