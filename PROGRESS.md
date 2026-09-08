@@ -324,6 +324,15 @@ memory screens (0D9D4/7864/7728 2C-2E windows, 5574(0x10) loop, 3C3C/3F38
 compute, 171608/171194 save, tail FD718+FF024+FE778/FE870 reset). All
 constants extracted from spec; C-written 1394 (55.4%).
 
+### BIG-SCREEN CHAIN: func_801539C4 (972 rows) decoded + committed
+FULL main "information/config" chain: 0x1800/0x1801 gate (3881/38E5/388B
+prompts), the 3975 master loop (583FC draw), the 2001/2000 confirmation
+menu with 0xAB/0xAC/0xB7/0xB5 windows + dialog (15240C/1526F8 helpers),
+the 2C7B info screen (152CDC), the 1440/1441 + 321B/32DB twin data pages
+(six 1526F8 window chains, 3C3C/3F38 compute, 78C4/7864 draw), the 3303
+count-down screen (654C(0x1A/0x1B), 9330/95A0/5DA0/4064/8274), and the
+29B5 confirm with ED44/ED54 hword + ED5C/ED40 byte moves, 3B04(0x3540+sel)
+-> 6048 -> 1548F4 exit. All 30+ gates + loops from spec; C-written 1395.
 ### 2025-09-08 — LARGE-FUNCTION SESSION (as directed: "target a larger function")
 Six big ones decoded: func_80114194 (90r, 3-phase menu state machine),
 func_80152F0C (90r, dual-phase screen-switch), func_80144344 (110r, nested
