@@ -1,12 +1,51 @@
 #include "common.h"
-__asm__(
-  ".globl func_8015D6C0\n"
-  ".type func_8015D6C0, @function\n"
-  "func_8015D6C0:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x10($sp)\n\tjal func_800F7270\n\taddiu $a0, $zero, 0xA6\n\tjal func_800F6B68\n\taddiu $a0, $zero, 0x2005\n\tjal func_800F4248\n\taddiu $a0, $zero, 0x2\n\tjal func_800F4120\n\taddiu $a0, $zero, 0x202\n\tbnez $v0, .L8015D868\n\tnop\n\tjal func_800F6B68\n\taddiu $a0, $zero, 0x2006\n\tjal func_800F6434\n\taddiu $a0, $zero, 0x80\n\tbnez $v0, .L8015D868\n\tnop\n\tjal func_800F6B68\n\taddiu $a0, $zero, 0x2004\n\tjal func_800F4248\n\taddiu $a0, $zero, 0x3\n\tjal func_800F61E8\n\tnop\n\tjal func_800F824C\n\taddiu $a0, $zero, 0xA9\n\tjal func_800F5574\n\taddiu $a0, $zero, 0x4\n\tjal func_800F53D4\n\tnop\n\tbeqz $v0, .L8015D7C8\n\tnop\n\tjal func_800F6B68\n\taddiu $a0, $zero, 0x2004\n\tjal func_800F4248\n\taddiu $a0, $zero, 0xFC\n\tjal func_800F8768\n\taddiu $a0, $zero, 0x2004\n\tjal func_800F6B68\n\taddiu $a0, $zero, 0x2003\n\tlui $v1, %hi(D_8019ED40)\n\tlw $v1, %lo(D_8019ED40)($v1)\n\tnop\n\tlbu $v0, 0x0($v1)\n\taddiu $a0, $zero, 0x2003\n\tori $v0, $v0, 0x40\n\tjal func_800F8768\n\tsb $v0, 0x0($v1)\n\tjal func_800F6630\n\taddiu $a0, $zero, 0xD2\n\tjal func_800F5140\n\tnop\n\tlui $v0, %hi(D_8019ED44)\n\tlw $v0, %lo(D_8019ED44)($v0)\n\tlui $a1, %hi(D_8019ED54)\n\tlw $a1, %lo(D_8019ED54)($a1)\n\tlhu $v1, 0x0($v0)\n\taddiu $a0, $zero, 0x29EB\n\tjal func_800F6564\n\tsh $v1, 0x0($a1)\n\tjal func_800F4248\n\taddiu $a0, $zero, 0xF7\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x29EB\n\tj .L8015D868\n\tnop\n\t.L8015D7C8:\n\tjal func_800F6B68\n\taddiu $a0, $zero, 0x2004\n\tjal func_800F3C3C\n\taddiu $a0, $zero, 0xA9\n\tjal func_800F78C4\n\taddu $a0, $v0, $zero\n\tjal func_800F8768\n\taddiu $a0, $zero, 0x2004\n\tjal func_800F6630\n\taddiu $a0, $zero, 0xD2\n\tjal func_800F5140\n\tnop\n\tlui $v0, %hi(D_8019ED44)\n\tlw $v0, %lo(D_8019ED44)($v0)\n\tlui $a1, %hi(D_8019ED54)\n\tlw $a1, %lo(D_8019ED54)($a1)\n\tlhu $v1, 0x0($v0)\n\taddiu $a0, $zero, 0x2B44\n\tjal func_800F6B68\n\tsh $v1, 0x0($a1)\n\tjal func_800F824C\n\taddiu $a0, $zero, 0xA9\n\tjal func_800F6B68\n\taddiu $a0, $zero, 0x2B45\n\tjal func_800F824C\n\taddiu $a0, $zero, 0xAA\n\tjal func_800F7210\n\taddiu $a0, $zero, 0x3555\n\tjal func_800F6630\n\taddiu $a0, $zero, 0xA9\n\tjal func_800F8768\n\taddiu $a0, $zero, 0x2A04\n\tjal func_800F6630\n\taddiu $a0, $zero, 0xAA\n\tjal func_800F8768\n\taddiu $a0, $zero, 0x2A05\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x40\n\tjal func_800F8768\n\taddiu $a0, $zero, 0x2A06\n\t.L8015D868:\n\tlw $ra, 0x10($sp)\n\tnop\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_8015D6C0, .-func_8015D6C0\n"
-);
+void func_8015D6C0(void)
+{
+    /* options detail: 0xA6/0xA9/0xAA/0xD2 windows, 0x2005/0x2006/0x2004
+       gates, 0x29EB/0x29E4 texts, 0x29C4/0x29F4 cells + 0x3535 title;
+       confirm path draws via 3C3C(0xA9). */
+    func_800F7270(0xA6);
+    func_800F6B68(0x2005);
+    func_800F4248(2);
+    if (func_800F4120(0x202) != 0)
+        return;
+    func_800F6B68(0x2006);
+    if (func_800F6434(0x80) != 0)
+        return;
+    func_800F6B68(0x2004);
+    func_800F4248(3);
+    func_800F61E8();
+    func_800F824C(0xA9);
+    func_800F5574(4);
+    if (func_800F53D4() == 0)
+        goto L15D7C8;
+    func_800F6B68(0x2004);
+    func_800F4248(0xFC);
+    func_800F8768(0x2004);
+    func_800F6B68(0x2003);
+    func_800F8768();
+    func_800F6630(0xD2);
+    func_800F5140();
+    func_800F6564(0x29EB);
+    func_800F4248(0xF7);
+    func_800F8188(0x29EB);
+    return;
+L15D7C8:
+    func_800F6B68(0x2004);
+    func_800F78C4(func_800F3C3C(0xA9));
+    func_800F8768(0x2004);
+    func_800F6630(0xD2);
+    func_800F5140();
+    func_800F6B68(0x2A44);
+    func_800F824C(0xA9);
+    func_800F6B68(0x2A45);
+    func_800F824C(0xAA);
+    func_800F7210(0x3535);
+    func_800F6630(0xA9);
+    func_800F8768(0x2A04);
+    func_800F6630(0xAA);
+    func_800F8768(0x2A05);
+    func_800F654C(0x40);
+    func_800F8768(0x2A06);
+    return;
+}
