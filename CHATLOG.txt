@@ -189,3 +189,16 @@ Callgraph at 90.5%: 2279 callers / 21,837 edges.
 Next boundary: 100% (Phase A close) — remaining work is the deep-pass monsters
 + the long tail of tiny shells.
 ================================================================================
+
+================================================================================
+HEADLESS GRIND LEG 8 — 95.0% C-WRITTEN (2391/2516) [95% MILESTONE]
+2278 -> 2391 (+113) since 90% boundary, all pushed.
+Covered: full options/web (80151C0C dispatch, 8015240C family), battle row
+drivers (80147AA8 root, 80185AC8, 8018CD58 dispatchers), event/anim state
+machines, and banked ALL THREE deep-pass monsters with ordered call chains:
+800FB430 (0xA14 main-system-menu root, 226 calls), 80186810 (0xBF4 battle
+FSM, 45), 80108458 (0xF20 status-table/modulo FSM, 204).
+Remaining: ~125 register-only (jal=0) band — deep-pass register simulation.
+Callgraph at 95%: regenerated at boundary.
+Next boundary: 100% (Phase A close).
+================================================================================
