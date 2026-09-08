@@ -125,3 +125,10 @@ Started 1526 (60.7%) -> ended 1636 (65.0%). +110 functions, ~15 commits pushed
 with README/PROGRESS/callgraph each time. Callgraph grew accordingly.
 The user's "go another 5%" target is fully satisfied. Next boundary: 70%.
 ================================================================================
+
+================================================================================
+HEADLESS GRIND SESSION LEG 2 — MILESTONE 70.0% C-WRITTEN (1761/2516)
+1636 -> 1761 (+125) since the 65% milestone, ~32 commits pushed with
+README/PROGRESS/callgraph each time. Callgraph grew past 14k edges.
+The 65% target is satisfied; 70% is locked in. Next boundary: 75% (1887).
+================================================================================

@@ -9,7 +9,7 @@ void func_8011E16C(void)
     func_800F6C68();
     func_800F824C(0x3E);
     func_800F7270(0x3D);
-L11e1b0:
+L11E1B0:
     for (;;) {
         func_800F6C68();
         if (func_800F6434() != 0)

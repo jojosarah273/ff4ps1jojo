@@ -407,6 +407,26 @@ ability menus (80127808/8013AB18/8013B270/80136494/8013C554), config screens
 (80132CFC/80132F40/8012DD58/8015EC70/8015DCA4/8015C220/8015BD34/8015AC7C/
 8015C604/8015FE98), cutscenes (8013FA08 text scroll), plus 30+ more.
 Callgraph edges now ~8300. NEXT: 60%->75% (1887) toward full 100% coverage.
+### HEADLESS GRIND SESSION — 65% -> 70% (1636 -> 1761, +125)
+**MILESTONE: 70.0% C-WRITTEN (1761/2516) REACHED** — second boundary of the
+"keep going" run. 30+ commits, all pushed.
+Highlights this leg:
+- 8014A154/8014A4DC: twin 46-entry battle item jr-a0 master tables mapped.
+- Roots calling decoded family: 80126BB8 (calls 80126E08), 80157948 (
+  8015E158...), 8015DFE0, 80138A6C (calls 80138D24), 80134C74 (calls
+  80134FF4), 8013B270/8013C094/8013C554/80137B18 (ability web), 8012A8A8
+  (calls 8012AE00/8012AB18), 801136D4/801126A0/8011285C (call 80115D2C),
+  80167BA0 (calls 80167E44), 8015B6FC (calls 8015B8E4), 8016E668 etc.
+- ~120 low/mid-band menu screens decoded: shop 801709E4/8016AB14/800FDBBC/
+  800FF978/801769B4/80170458/801060A8, config 8015D4C8/801615D0/80162918/
+  80162A70/801652FC/8016046C/80158190/8015D9A8, battle 801428FC/80144050/
+  801449D0/80144C78/8013E2F8/80149394/8014EE20/8014F0BC/8014F7A8...
+- Guard rails: fixed stray label-case and control-flow slips (80167BA0,
+  8016571C, 80170458, 8011DA88, 801187C0, 8010A2AC, 80151F28 hex consts).
+Remaining big three queued for deep passes: 80108458 (0xF20), 80186810
+(0xBF4), 800FB430 (0xA14). Next boundary: 75% (1887).
+
+
 ### HEADLESS GRIND-TO-65% SESSION (1526 -> 1636, +110 functions)
 **MILESTONE: 65.0% C-WRITTEN (1636/2516) REACHED** — target set by the user
 ("go another 5%") is now checked off. 20+ commits, every one pushed.
