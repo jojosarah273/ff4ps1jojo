@@ -1,12 +1,39 @@
 #include "common.h"
-__asm__(
-  ".globl func_8011F118\n"
-  ".type func_8011F118, @function\n"
-  "func_8011F118:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x10($sp)\n\tjal func_800F939C\n\tnop\n\tjal func_800F824C\n\taddiu $a0, $zero, 0x30\n\tjal func_800F6630\n\taddiu $a0, $zero, 0x30\n\tjal func_800F8960\n\taddu $a0, $zero, $zero\n\tjal func_800F63BC\n\tnop\n\tjal func_800F6630\n\taddiu $a0, $zero, 0x2F\n\tjal func_800F8960\n\taddu $a0, $zero, $zero\n\tjal func_800F63BC\n\tnop\n\tjal func_800F6630\n\taddiu $a0, $zero, 0x2D\n\tjal func_800F824C\n\taddiu $a0, $zero, 0x31\n\tjal func_800F62BC\n\taddiu $a0, $zero, 0x30\n\t.L8011F178:\n\tjal func_800F6630\n\taddiu $a0, $zero, 0x30\n\tjal func_800F8960\n\taddu $a0, $zero, $zero\n\tjal func_800F63BC\n\tnop\n\tjal func_800F6630\n\taddiu $a0, $zero, 0x2F\n\tjal func_800F8960\n\taddu $a0, $zero, $zero\n\tjal func_800F63BC\n\tnop\n\tjal func_800F5DA0\n\taddiu $a0, $zero, 0x31\n\tjal func_800F5B8C\n\taddiu $a0, $zero, 0x202\n\tbnez $v0, .L8011F178\n\tnop\n\tjal func_800F62BC\n\taddiu $a0, $zero, 0x30\n\tjal func_800F6630\n\taddiu $a0, $zero, 0x30\n\tjal func_800F8960\n\taddu $a0, $zero, $zero\n\tjal func_800F63BC\n\tnop\n\tjal func_800F6630\n\taddiu $a0, $zero, 0x2F\n\tjal func_800F8960\n\taddu $a0, $zero, $zero\n\tjal func_800F960C\n\tnop\n\tjal func_80122334\n\tnop\n\tlw $ra, 0x10($sp)\n\tnop\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_8011F118, .-func_8011F118\n"
-);
+void func_8011F118(void)
+{
+    /* column cells: 0x30/0x2F/0x2D/0x31 windows, 80122334 row;
+       loop L11F178 on 5DA0(0x31)/5B8C(0x202). */
+    func_800F939C();
+    func_800F824C(0x30);
+    func_800F6630(0x30);
+    func_800F8960();
+    func_800F63BC();
+    func_800F6630(0x2F);
+    func_800F8960();
+    func_800F63BC();
+    func_800F6630(0x2D);
+    func_800F824C(0x31);
+    func_800F62BC(0x30);
+L11f178:
+    for (;;) {
+        func_800F6630(0x30);
+        func_800F8960();
+        func_800F63BC();
+        func_800F6630(0x2F);
+        func_800F8960();
+        func_800F63BC();
+        func_800F5DA0(0x31);
+        if (func_800F5B8C(0x202) != 0)
+            continue;
+        break;
+    }
+    func_800F62BC(0x30);
+    func_800F6630(0x30);
+    func_800F8960();
+    func_800F63BC();
+    func_800F6630(0x2F);
+    func_800F8960();
+    func_800F960C();
+    func_80122334();
+    return;
+}
