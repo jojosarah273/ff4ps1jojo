@@ -364,6 +364,17 @@ rebuilt each commit (excludes signature self-edges). C-written 1400 (55.6%).
 status-table state machine (s0-s3 + sp[0x10]/[0x11] spill, modulo-48 multu
 0xAAAAAAAB division into D_80198D54/8E30/8F30/9030 status tables, per-index
 submenus). Head + dispatch mapped; needs register-simulated full write.
+### TEN HUGE FUNCTIONS committed (5943 rows) — menu-family wave 3
+1. func_8013389C (736r) battle-skills menu      2. func_80128D4C (687r) shop menu
+3. func_80139E34 (676r) abilities menu          4. func_8016EF88 (637r) battle event chain
+5. func_8014DA2C (600r) formation/status        6. func_8012D23C (588r) screen draw chain
+7. func_80155C88 (510r) char status/equip-sum   8. func_80130058 (523r) skill sub-menu
+9. func_8012B190 (496r) equip/inventory         10. func_8012EC48 (490r) item/equip screen
+All decoded via callee-family + spec-constant extraction, committed individually,
+callgraph rebuilt each time (expected/callgraph.json now 1410 callers, 6481 edges).
+C-written 1410 = 56.0%. 3B04 arg patterns standardized: 0x1440/0x1441+hw(ED58/ED54),
+3A70(0x60) window chains. Registered-heavy monsters 80108458 (968r) + 80186810
+(765r, jump-table dispatch) remain queued for register-simulated deep passes.
 ### 2025-09-08 — LARGE-FUNCTION SESSION (as directed: "target a larger function")
 Six big ones decoded: func_80114194 (90r, 3-phase menu state machine),
 func_80152F0C (90r, dual-phase screen-switch), func_80144344 (110r, nested
