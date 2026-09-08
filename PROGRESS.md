@@ -252,6 +252,29 @@ NTSC-U + text guard armed + mod FMV skip all present.
     (-fschedule-insns CC1PSX) currently emits empty objects (investigate).
     Chain family remains the auto-match winner (38 this week). Next: focused
     per-leaf register tuning, psxs repair, and branchy-function hand-decomp.
+- PHASE A SESSIONS 8-11: branchy/MMIO families + monitoring automation.
+  - README now FULLY auto-refreshed at every session end (intro %, phase row,
+    milestone checkboxes, status table) via tools/decomp_status.py.
+  - match.py gained the PSXS lane (CC1PSX -fschedule-insns; pipeline repaired).
+  - S9: func_800F3C94 byte-verified (PSX lane) — key idiom: PSY-Q hoists the
+    default-base lui, so `u32 base=default; if(...) base=alt; return base;`
+    beats ternaries. 6 branchy candidates parked (80198600/8018CA18/800F40E8/
+    800F5EE8/800F3C3C/8018F478).
+  - S10: mapper->MMIO family (800F6564/6630/6F28/6B38/6D40/5D24) = correct
+    candidates; codegen scheduling (lui-at early vs late) blocks auto-match.
+  - Chain stragglers resolved: func_8014EC18/8014ECC8 registered (267 total).
+
+### PHASE A SESSION PLAN (S11-S17) — queued work items
+- S11: switch/choice patterns (>=2 compares, beqz/bne chains) — hand, lane-first.
+- S12: func_80198600/8018CA18/800F40E8 rework with PSY-Q idioms (outer-branch
+  order, |= folds) — inspect asm-differ leftovers per function, 2 tries max.
+- S13: stack-local functions (24-60 insns) batch; frame forms %hi/%lo of sp.
+- S14: bigger engine funcs + one full ALL-lane bincmp re-sweep of every real-C
+  candidate (auto-register new matches).
+- S15: kernel/syscall-adjacent cluster 0x800F3B-5F (often mapper+MMIO shapes).
+- S16: data-heavy/struct table cluster (event/script data access via D_ refs).
+- S17: consolidation: integrity + STATUS + README refresh + milestone check
+  (50% at 1258) + final push.
 ### 2025-09-07 — PROJECT SCOPE: full C decomp -> native port (SoH/SM64 model)
 - Direction confirmed with user: goal = Ship-of-Harkinian-class native FF4
   (PS1), NOT an emulator and NOT a machine-translated recomp (the recomp
