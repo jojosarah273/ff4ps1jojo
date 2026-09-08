@@ -1,12 +1,75 @@
 #include "common.h"
-__asm__(
-  ".globl func_8018A75C\n"
-  ".type func_8018A75C, @function\n"
-  "func_8018A75C:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\tsw $a0, 0x0($sp)\n\tsw $a1, 0x4($sp)\n\tsw $a2, 0x8($sp)\n\tsw $a3, 0xC($sp)\n\taddiu $sp, $sp, -0x18\n\tsw $s0, 0x10($sp)\n\taddiu $s0, $sp, 0x1C\n\taddiu $a2, $0, 0x1\n\tsw $ra, 0x14($sp)\n\tbeq $a0, $a2, .L8018A7E8\n\tsw $a0, 0x18($sp)\n\tslti $v0, $a0, 0x2\n\tbeqz $v0, .L8018A7A4\n\taddiu $v0, $0, 0x2\n\tbeqz $a0, .L8018A854\n\taddu $v0, $0, $0\n\tj .L8018A9CC\n\tnop\n\t.L8018A7A4:\n\tbeq $a0, $v0, .L8018A7BC\n\taddiu $v0, $0, 0x3\n\tbeq $a0, $v0, .L8018A8BC\n\taddu $v0, $0, $0\n\tj .L8018A9CC\n\tnop\n\t.L8018A7BC:\n\tlw $a0, 0x1C($sp)\n\tlui $v0, D_8019B13C\n\tlw $v0, D_8019B13C($v0)\n\tlui $v1, D_8019B114\n\tlw $v1, D_8019B114($v1)\n\tsrlv $v0, $a0, $v0\n\tlui $at, D_8019B12C\n\tsh $v0, D_8019B12C($at)\n\tsh $v0, 0x1A6($v1)\n\tj .L8018A9CC\n\taddu $v0, $0, $0\n\t.L8018A7E8:\n\tlui $a1, D_8019B114\n\tlw $a1, D_8019B114($a1)\n\tlui $a0, D_8019B12C\n\tlhu $a0, D_8019B12C($a0)\n\tlhu $v0, 0x1A6($a1)\n\tlui $at, D_8019B164\n\tsw $0, D_8019B164($at)\n\tbeq $v0, $a0, .L8018A82C\n\taddu $v1, $0, $0\n\taddiu $v1, $v1, 0x1\n\t.L8018A810:\n\tsltiu $v0, $v1, 0xF01\n\tbeqz $v0, .L8018A9CC\n\taddiu $v0, $0, -0x2\n\tlhu $v0, 0x1A6($a1)\n\tnop\n\tbne $v0, $a0, .L8018A810\n\taddiu $v1, $v1, 0x1\n\t.L8018A82C:\n\tlui $v1, D_8019B114\n\tlw $v1, D_8019B114($v1)\n\tnop\n\tlhu $v0, 0x1AA($v1)\n\tnop\n\tandi $v0, $v0, 0xFFCF\n\tori $v0, $v0, 0x20\n\tsh $v0, 0x1AA($v1)\n\tj .L8018A9CC\n\taddu $v0, $0, $0\n\t.L8018A854:\n\tlui $a1, D_8019B114\n\tlw $a1, D_8019B114($a1)\n\tlui $a0, D_8019B12C\n\tlhu $a0, D_8019B12C($a0)\n\tlhu $v0, 0x1A6($a1)\n\tlui $at, D_8019B164\n\tsw $a2, D_8019B164($at)\n\tbeq $v0, $a0, .L8018A898\n\taddu $v1, $0, $0\n\taddiu $v1, $v1, 0x1\n\t.L8018A87C:\n\tsltiu $v0, $v1, 0xF01\n\tbeqz $v0, .L8018A9CC\n\taddiu $v0, $0, -0x2\n\tlhu $v0, 0x1A6($a1)\n\tnop\n\tbne $v0, $a0, .L8018A87C\n\taddiu $v1, $v1, 0x1\n\t.L8018A898:\n\tlui $v1, D_8019B114\n\tlw $v1, D_8019B114($v1)\n\tnop\n\tlhu $v0, 0x1AA($v1)\n\tnop\n\tori $v0, $v0, 0x30\n\tsh $v0, 0x1AA($v1)\n\tj .L8018A9CC\n\taddu $v0, $0, $0\n\t.L8018A8BC:\n\tlui $v0, D_8019B164\n\tlw $v0, D_8019B164($v0)\n\tnop\n\tbne $v0, $a2, .L8018A8D4\n\taddiu $a0, $0, 0x20\n\taddiu $a0, $0, 0x30\n\t.L8018A8D4:\n\tlui $a1, D_8019B114\n\tlw $a1, D_8019B114($a1)\n\taddu $v1, $0, $0\n\tlhu $v0, 0x1AA($a1)\n\tandi $a0, $a0, 0xFFFF\n\tandi $v0, $v0, 0x30\n\tbeq $v0, $a0, .L8018A914\n\taddiu $v1, $v1, 0x1\n\t.L8018A8F4:\n\tsltiu $v0, $v1, 0xF01\n\tbeqz $v0, .L8018A9CC\n\taddiu $v0, $0, -0x2\n\tlhu $v0, 0x1AA($a1)\n\tnop\n\tandi $v0, $v0, 0x30\n\tbne $v0, $a0, .L8018A8F4\n\taddiu $v1, $v1, 0x1\n\t.L8018A914:\n\tlui $v1, D_8019B164\n\tlw $v1, D_8019B164($v1)\n\taddiu $v0, $0, 0x1\n\tbne $v1, $v0, .L8018A938\n\tnop\n\tjal func_8018AC68\n\taddiu $s0, $s0, 0x4\n\tj .L8018A944\n\tlui $a2, (0x1000201 >> 16)\n\t.L8018A938:\n\tjal func_8018AC40\n\taddiu $s0, $s0, 0x4\n\tlui $a2, (0x1000201 >> 16)\n\t.L8018A944:\n\tlw $a0, -0x4($s0)\n\tlui $at, D_8019B168\n\tsw $a0, D_8019B168($at)\n\tlw $a0, 0x0($s0)\n\tlui $a1, D_8019B118\n\tlw $a1, D_8019B118($a1)\n\tsrl $v1, $a0, 6\n\tandi $v0, $a0, 0x3F\n\tsltu $v0,$0,$v0\n\tlui $a0, D_8019B168\n\tlw $a0, D_8019B168($a0)\n\taddu $v1, $v1, $v0\n\tlui $at, D_8019B16C\n\tsw $v1, D_8019B16C($at)\n\tsw $a0, 0x0($a1)\n\tlui $v0, D_8019B16C\n\tlw $v0, D_8019B16C($v0)\n\tlui $v1, D_8019B11C\n\tlw $v1, D_8019B11C($v1)\n\tsll $v0, $v0, 16\n\tori $v0, $v0, 0x10\n\tsw $v0, 0x0($v1)\n\tlui $v1, D_8019B164\n\tlw $v1, D_8019B164($v1)\n\taddiu $v0, $0, 0x1\n\tbne $v1, $v0, .L8018A9B8\n\tori $a2, $a2, (0x1000201 & 0xFFFF)\n\tlui $a2, (0x1000200 >> 16)\n\tori $a2, $a2, (0x1000200 & 0xFFFF)\n\t.L8018A9B8:\n\tlui $v0, D_8019B120\n\tlw $v0, D_8019B120($v0)\n\tnop\n\tsw $a2, 0x0($v0)\n\taddu $v0, $0, $0\n\t.L8018A9CC:\n\tlw $ra, 0x14($sp)\n\tlw $s0, 0x10($sp)\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_8018A75C, .-func_8018A75C\n"
-);
+extern u32 D_8019B11C;
+extern u32 D_8019B118;
+extern u32 D_8019B120;
+extern u16 D_8019B12C;
+extern u32 D_8019B13C;
+extern u16 *D_8019B114;
+extern u32 D_8019B164;
+extern u32 D_8019B168;
+extern u32 D_8019B16C;
+static s32 await_cell(u16 want)
+{
+    s32 v1 = 0;
+    if (D_8019B114[0xD3] != want) {
+        for (v1 = 1; v1 < 0xF01; v1++) {
+            if (D_8019B114[0xD3] == want)
+                return 0;
+        }
+        return -2;
+    }
+    return 0;
+}
+static s32 await_flag(u16 want)
+{
+    s32 v1 = 0;
+    if ((D_8019B114[0xD5] & 0x30) != want) {
+        for (v1 = 1; v1 < 0xF01; v1++) {
+            if ((D_8019B114[0xD5] & 0x30) == want)
+                return 0;
+        }
+        return -2;
+    }
+    return 0;
+}
+s32 func_8018A75C(u32 a0, u32 a1, u32 a2, u32 a3)
+{
+    /* drive-event queue dispatch: modes 0..3 select which slot is
+       armed, then wait for the cell latch and signal completion. */
+    switch (a0) {
+    case 0:
+        D_8019B164 = a2;
+        if (await_cell(D_8019B12C) != 0)
+            return -2;
+        D_8019B114[0xD5] |= 0x30;
+        return 0;
+    case 1:
+        D_8019B164 = 0;
+        if (await_cell(D_8019B12C) != 0)
+            return -2;
+        D_8019B114[0xD5] = (D_8019B114[0xD5] & 0xFFCF) | 0x20;
+        return 0;
+    case 2:
+        D_8019B12C = (u16)(a1 >> D_8019B13C);
+        D_8019B114[0xD3] = D_8019B12C;
+        return 0;
+    case 3:
+        if (await_flag((D_8019B164 == a2) ? 0x30 : 0x20) != 0)
+            return -2;
+        if (D_8019B164 == 1)
+            func_8018AC68();
+        else
+            func_8018AC40();
+        D_8019B168 = a0;
+        {
+            u32 sa1 = a1;
+            u32 *slot = (u32 *)D_8019B118;
+            D_8019B16C = (sa1 >> 6) + ((sa1 & 0x3F) != 0);
+            slot[0] = a0;
+            D_8019B11C = (D_8019B16C << 16) | 0x10;
+            D_8019B120 = (D_8019B164 == 1) ? 0x1000200 : 0x1000201;
+        }
+        return 0;
+    }
+    return 0;
+}

@@ -1,12 +1,48 @@
 #include "common.h"
-__asm__(
-  ".globl func_8018E0C8\n"
-  ".type func_8018E0C8, @function\n"
-  "func_8018E0C8:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddu $a1, $a0, $0\n\taddu $a2, $0, $0\n\tbeqz $a1, .L8018E0E4\n\taddu $a3, $a1, $0\n\tandi $v0, $a1, 0x2\n\tbeqz $v0, .L8018E138\n\tnop\n\t.L8018E0E4:\n\tlui $v0, D_8019B0CC\n\tlw $v0, D_8019B0CC($v0)\n\tnop\n\tandi $v0, $v0, 0x2\n\tbeqz $v0, .L8018E138\n\taddiu $v1, $0, -0x3\n\tlui $v0, D_8019B0CC\n\tlw $v0, D_8019B0CC($v0)\n\tlui $a0, D_8019B114\n\tlw $a0, D_8019B114($a0)\n\tand $v0, $v0, $v1\n\tlui $v1, D_801F6790\n\taddiu $v1, $v1, D_801F6790\n\tlui $at, D_8019B0CC\n\tsw $v0, D_8019B0CC($at)\n\tlhu $v0, 0x0($v1)\n\tnop\n\tsh $v0, 0x190($a0)\n\tlhu $v0, 0x2($v1)\n\taddiu $a2, $0, 0x2\n\tsh $v0, 0x192($a0)\n\t.L8018E138:\n\tbeqz $a3, .L8018E148\n\tandi $v0, $a1, 0x4\n\tbeqz $v0, .L8018E19C\n\tnop\n\t.L8018E148:\n\tlui $v0, D_8019B0CC\n\tlw $v0, D_8019B0CC($v0)\n\tnop\n\tandi $v0, $v0, 0x4\n\tbeqz $v0, .L8018E19C\n\taddiu $v1, $0, -0x5\n\tlui $v0, D_8019B0CC\n\tlw $v0, D_8019B0CC($v0)\n\tlui $a0, D_8019B114\n\tlw $a0, D_8019B114($a0)\n\tand $v0, $v0, $v1\n\tlui $v1, D_801F6794\n\taddiu $v1, $v1, D_801F6794\n\tlui $at, D_8019B0CC\n\tsw $v0, D_8019B0CC($at)\n\tlhu $v0, 0x0($v1)\n\tnop\n\tsh $v0, 0x194($a0)\n\tlhu $v0, 0x2($v1)\n\tori $a2, $a2, 0x4\n\tsh $v0, 0x196($a0)\n\t.L8018E19C:\n\tbeqz $a3, .L8018E1AC\n\tandi $v0, $a1, 0x8\n\tbeqz $v0, .L8018E200\n\tnop\n\t.L8018E1AC:\n\tlui $v0, D_8019B0CC\n\tlw $v0, D_8019B0CC($v0)\n\tnop\n\tandi $v0, $v0, 0x8\n\tbeqz $v0, .L8018E200\n\taddiu $v1, $0, -0x9\n\tlui $v0, D_8019B0CC\n\tlw $v0, D_8019B0CC($v0)\n\tlui $a0, D_8019B114\n\tlw $a0, D_8019B114($a0)\n\tand $v0, $v0, $v1\n\tlui $v1, D_801F6798\n\taddiu $v1, $v1, D_801F6798\n\tlui $at, D_8019B0CC\n\tsw $v0, D_8019B0CC($at)\n\tlhu $v0, 0x0($v1)\n\tnop\n\tsh $v0, 0x198($a0)\n\tlhu $v0, 0x2($v1)\n\tori $a2, $a2, 0x8\n\tsh $v0, 0x19A($a0)\n\t.L8018E200:\n\tbeqz $a3, .L8018E210\n\tandi $v0, $a1, 0x1\n\tbeqz $v0, .L8018E2BC\n\tnop\n\t.L8018E210:\n\tlui $v0, D_8019B0CC\n\tlw $v0, D_8019B0CC($v0)\n\tnop\n\tandi $v0, $v0, 0x1\n\tbeqz $v0, .L8018E2BC\n\tnop\n\taddiu $v1, $0, -0x2\n\tlui $v0, D_8019B0CC\n\tlw $v0, D_8019B0CC($v0)\n\tlui $a0, D_8019B114\n\tlw $a0, D_8019B114($a0)\n\tand $v0, $v0, $v1\n\tlui $v1, D_801F6788\n\taddiu $v1, $v1, D_801F6788\n\tlui $at, D_8019B0CC\n\tsw $v0, D_8019B0CC($at)\n\tlhu $v0, 0x0($v1)\n\tnop\n\tsh $v0, 0x188($a0)\n\tlhu $v0, 0x2($v1)\n\tnop\n\tsh $v0, 0x18A($a0)\n\tlhu $v0, 0x4($v1)\n\tnop\n\tsh $v0, 0x18C($a0)\n\tlhu $v0, 0x6($v1)\n\taddu $a1, $0, $0\n\tsh $v0, 0x18E($a0)\n\t.L8018E280:\n\tsh $0, 0x0($v1)\n\taddiu $a1, $a1, 0x1\n\tslti $v0, $a1, 0x4\n\tbnez $v0, .L8018E280\n\taddiu $v1, $v1, 0x2\n\tlui $v0, D_8019B100\n\tlw $v0, D_8019B100($v0)\n\tnop\n\tandi $v0, $v0, 0x1\n\tbeqz $v0, .L8018E2BC\n\tori $a2, $a2, 0x1\n\tlui $v0, D_8019B0C8\n\tlw $v0, D_8019B0C8($v0)\n\tlui $at, D_8019B0A0\n\tsw $v0, D_8019B0A0($at)\n\t.L8018E2BC:\n\tjr $ra\n\taddu $v0, $a2, $0\n\tnop\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_8018E0C8, .-func_8018E0C8\n"
-);
+extern u32 D_8019B0CC;
+extern u16 *D_8019B114;
+extern u16 D_801F6788[8];
+extern u16 D_801F6790[8];
+extern u16 D_801F6794[8];
+extern u16 D_801F6798[8];
+s32 func_8018E0C8(u32 a0)
+{
+    /* waiter: latch up to four pending u16 pairs from the F67xx
+       queue into B114 and clear their busy bits (gated on a0). */
+    u32 a1 = a0;
+    u32 a2 = 0;
+    u32 a3 = a0;
+    if (a1 == 0 || (a1 & 2)) {
+        if (D_8019B0CC & 2) {
+            D_8019B0CC &= ~2;
+            D_8019B114[0xC8] = D_801F6790[0];
+            D_8019B114[0xC9] = D_801F6790[1];
+            a2 |= 2;
+        }
+    }
+    if (a3 == 0 || (a1 & 4)) {
+        if (D_8019B0CC & 4) {
+            D_8019B0CC &= ~4;
+            D_8019B114[0xCA] = D_801F6794[0];
+            D_8019B114[0xCB] = D_801F6794[1];
+            a2 |= 4;
+        }
+    }
+    if (a3 == 0 || (a1 & 8)) {
+        if (D_8019B0CC & 8) {
+            D_8019B0CC &= ~8;
+            D_8019B114[0xCC] = D_801F6798[0];
+            D_8019B114[0xCD] = D_801F6798[1];
+            a2 |= 8;
+        }
+    }
+    if (a3 == 0 || (a1 & 1)) {
+        if (D_8019B0CC & 1) {
+            D_8019B0CC &= ~1;
+            D_8019B114[0xC4] = D_801F6788[0];
+            D_8019B114[0xC5] = D_801F6788[1];
+            a2 |= 1;
+        }
+    }
+    return a2;
+}

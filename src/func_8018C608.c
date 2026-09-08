@@ -1,12 +1,47 @@
 #include "common.h"
-__asm__(
-  ".globl func_8018C608\n"
-  ".type func_8018C608, @function\n"
-  "func_8018C608:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\tlui $v0, (0xFFFFFF >> 16)\n\tori $v0, $v0, (0xFFFFFF & 0xFFFF)\n\tand $a1, $a1, $v0\n\tbeqz $a0, .L8018C6EC\n\tsrl $a2, $a1, 16\n\taddiu $v0, $0, 0x1\n\tbne $a0, $v0, .L8018C7BC\n\tnop\n\tlui $v0, D_8019B100\n\tlw $v0, D_8019B100($v0)\n\tnop\n\tandi $v0, $v0, 0x1\n\tbeqz $v0, .L8018C6CC\n\tnop\n\tlui $a0, D_801F6788\n\taddiu $a0, $a0, D_801F6788\n\tsh $a1, 0x0($a0)\n\tsh $a2, 0x2($a0)\n\tlui $v0, D_8019B0CC\n\tlw $v0, D_8019B0CC($v0)\n\tnop\n\tori $v0, $v0, 0x1\n\tlui $at, D_8019B0CC\n\tsw $v0, D_8019B0CC($at)\n\tlui $v0, D_8019B0C8\n\tlw $v0, D_8019B0C8($v0)\n\tnop\n\tor $v0, $v0, $a1\n\tlui $at, D_8019B0C8\n\tsw $v0, D_8019B0C8($at)\n\tlhu $v0, 0x4($a0)\n\tnop\n\tand $v0, $v0, $a1\n\tbeqz $v0, .L8018C6A4\n\tnop\n\tlhu $v0, 0x4($a0)\n\tnor $v1, $0, $a1\n\tand $v0, $v0, $v1\n\tsh $v0, 0x4($a0)\n\t.L8018C6A4:\n\tlhu $v0, 0x6($a0)\n\tnop\n\tand $v0, $v0, $a2\n\tbeqz $v0, .L8018C7BC\n\tnop\n\tlhu $v0, 0x6($a0)\n\tnor $v1, $0, $a2\n\tand $v0, $v0, $v1\n\tj .L8018C7BC\n\tsh $v0, 0x6($a0)\n\t.L8018C6CC:\n\tlui $v0, D_8019B0A0\n\tlw $v0, D_8019B0A0($v0)\n\tlui $v1, D_8019B114\n\tlw $v1, D_8019B114($v1)\n\tor $v0, $v0, $a1\n\tsh $a1, 0x188($v1)\n\tj .L8018C7B4\n\tsh $a2, 0x18A($v1)\n\t.L8018C6EC:\n\tlui $v0, D_8019B100\n\tlw $v0, D_8019B100($v0)\n\tnop\n\tandi $v0, $v0, 0x1\n\tbeqz $v0, .L8018C790\n\tnop\n\tlui $a0, D_801F6788\n\taddiu $a0, $a0, D_801F6788\n\tsh $a1, 0x4($a0)\n\tsh $a2, 0x6($a0)\n\tlui $v0, D_8019B0CC\n\tlw $v0, D_8019B0CC($v0)\n\tnop\n\tori $v0, $v0, 0x1\n\tlui $at, D_8019B0CC\n\tsw $v0, D_8019B0CC($at)\n\tlui $v0, D_8019B0C8\n\tlw $v0, D_8019B0C8($v0)\n\tnor $v1, $0, $a1\n\tand $v0, $v0, $v1\n\tlui $at, D_8019B0C8\n\tsw $v0, D_8019B0C8($at)\n\tlhu $v0, 0x0($a0)\n\tnop\n\tand $v0, $v0, $a1\n\tbeqz $v0, .L8018C768\n\tnop\n\tlhu $v0, 0x0($a0)\n\tnop\n\tand $v0, $v0, $v1\n\tsh $v0, 0x0($a0)\n\t.L8018C768:\n\tlhu $v0, 0x2($a0)\n\tnop\n\tand $v0, $v0, $a2\n\tbeqz $v0, .L8018C7BC\n\tnop\n\tlhu $v0, 0x2($a0)\n\tnor $v1, $0, $a2\n\tand $v0, $v0, $v1\n\tj .L8018C7BC\n\tsh $v0, 0x2($a0)\n\t.L8018C790:\n\tlui $v0, D_8019B114\n\tlw $v0, D_8019B114($v0)\n\tnop\n\tsh $a1, 0x18C($v0)\n\tsh $a2, 0x18E($v0)\n\tlui $v0, D_8019B0A0\n\tlw $v0, D_8019B0A0($v0)\n\tnor $v1, $0, $a1\n\tand $v0, $v0, $v1\n\t.L8018C7B4:\n\tlui $at, D_8019B0A0\n\tsw $v0, D_8019B0A0($at)\n\t.L8018C7BC:\n\tjr $ra\n\tnop\n\tnop\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_8018C608, .-func_8018C608\n"
-);
+extern u16 *D_8019B114;
+extern u32 D_8019B0A0;
+extern u32 D_8019B0C8;
+extern u32 D_8019B0CC;
+extern u32 D_8019B100;
+extern u16 D_801F6788[8];
+void func_8018C608(u32 a0, u32 a1, u32 a2, u32 a3)
+{
+    /* event-mask queue: arm/park a u16 pair (packed 24-bit) against
+       the DMA record or the direct B114 cells. */
+    u16 p = (u16)(a1 & 0xFFFFFF);
+    u16 q = (u16)((a1 & 0xFFFFFF) >> 16);
+    if (a0 == 1) {
+        if (D_8019B100 & 1) {
+            u16 *r = D_801F6788;
+            r[0] = p;
+            r[1] = q;
+            D_8019B0CC |= 1;
+            D_8019B0C8 |= p;
+            if (r[2] & p)
+                r[2] = (u16)(r[2] & ~p);
+            if (r[3] & q)
+                r[3] = (u16)(r[3] & ~q);
+        } else {
+            D_8019B0A0 |= p;
+            D_8019B114[0xC4] = p;
+            D_8019B114[0xC5] = q;
+        }
+    } else if (a0 == 0) {
+        if (D_8019B100 & 1) {
+            u16 *r = D_801F6788;
+            r[2] = p;
+            r[3] = q;
+            D_8019B0CC |= 1;
+            D_8019B0C8 &= ~p;
+            if (r[0] & p)
+                r[0] = (u16)(r[0] & ~p);
+            if (r[1] & q)
+                r[1] = (u16)(r[1] & ~q);
+        } else {
+            D_8019B114[0xC6] = p;
+            D_8019B114[0xC7] = q;
+            D_8019B0A0 &= ~p;
+        }
+    }
+}
