@@ -140,3 +140,15 @@ pushed with README/PROGRESS/callgraph at every boundary. Callgraph is at
 ~16k edges. Two big boundaries this run: 65.0% and 70.0% C-WRITTEN.
 Next stop: 75% (1887).
 ================================================================================
+
+================================================================================
+HEADLESS GRIND — FINAL LEG: 71.0% C-WRITTEN (1787/2516)
+FULL SESSION: 1526 (60.7%) -> 1787 (71.0%), +261 functions, ~55 commits
+pushed with README/PROGRESS/callgraph at every boundary.
+Milestones: 65.0% (1636) and 70.0% (1761), then banked to 71.0%.
+Callgraph: ~16.5k edges (up from 10.2k at session start).
+The mid/low menu band (~0x120-0x2FC) is now nearly exhausted; remaining
+big work: the register-heavy deep passes (80108458 0xF20, 80186810 0xBF4,
+800FB430 0xA14) and the long tail of tiny shells. Next official target: 75%
+(1887).
+================================================================================

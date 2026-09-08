@@ -302,6 +302,28 @@
   "func_800F93DC",
   "func_80134AB0"
  ],
+ "func_8010E158": [
+  "func_800F4008",
+  "func_800F53C0",
+  "func_800F5410",
+  "func_800F5574",
+  "func_800F5C64",
+  "func_800F5E48",
+  "func_800F654C",
+  "func_800F6630",
+  "func_800F71DC",
+  "func_800F7270",
+  "func_800F824C",
+  "func_800F8D6C",
+  "func_800F8FB8",
+  "func_800FE778",
+  "func_800FE870",
+  "func_80102770",
+  "func_8010543C",
+  "func_8010E158",
+  "func_8011EA5C",
+  "func_80172BA8"
+ ],
  "func_800FB160": [
   "func_800F53D4",
   "func_800F5958",
@@ -587,6 +609,26 @@
   "func_80178BB4",
   "func_80194394",
   "func_80194518"
+ ],
+ "func_80107FC4": [
+  "func_800F3C3C",
+  "func_800F4F4C",
+  "func_800F5140",
+  "func_800F5574",
+  "func_800F5C64",
+  "func_800F5EA0",
+  "func_800F62BC",
+  "func_800F6364",
+  "func_800F6434",
+  "func_800F6564",
+  "func_800F6630",
+  "func_800F6C68",
+  "func_800F7270",
+  "func_800F7A40",
+  "func_800F824C",
+  "func_800F8D00",
+  "func_800F8FB8",
+  "func_80107FC4"
  ],
  "func_80140C8C": [
   "func_80140C8C"
@@ -1916,6 +1958,30 @@
  ],
  "func_800F42F8": [
   "func_800F42F8"
+ ],
+ "func_80179670": [
+  "func_80178730",
+  "func_80178988",
+  "func_80178BB4",
+  "func_80178DD0",
+  "func_80179500",
+  "func_8017953C",
+  "func_801795BC",
+  "func_80179670",
+  "func_80185FA0",
+  "func_8018F538",
+  "func_801928C8",
+  "func_801928E8",
+  "func_80192AF8",
+  "func_80192BEC",
+  "func_80194018",
+  "func_8019418C",
+  "func_801942FC",
+  "func_80194394",
+  "func_801975F8",
+  "func_80197668",
+  "func_801976E8",
+  "func_801976F8"
  ],
  "func_80141530": [
   "func_800F3B04",
@@ -7466,6 +7532,28 @@
   "func_800FC5A8",
   "func_800FD914"
  ],
+ "func_8013E5D0": [
+  "func_800F3B9C",
+  "func_800F3C3C",
+  "func_800F3F38",
+  "func_800F4248",
+  "func_800F53D4",
+  "func_800F5410",
+  "func_800F5480",
+  "func_800F5958",
+  "func_800F6364",
+  "func_800F6630",
+  "func_800F76BC",
+  "func_800F7728",
+  "func_800F8058",
+  "func_800F824C",
+  "func_800F8768",
+  "func_800F9330",
+  "func_800F95A0",
+  "func_800F971C",
+  "func_8013E588",
+  "func_8013E5D0"
+ ],
  "func_800F6AF4": [
   "func_800F3C3C",
   "func_800F6AF4"
@@ -8770,6 +8858,29 @@
   "func_800F95A0",
   "func_801462DC"
  ],
+ "func_8010D894": [
+  "func_800F4008",
+  "func_800F4248",
+  "func_800F53D4",
+  "func_800F5410",
+  "func_800F5A90",
+  "func_800F5EA0",
+  "func_800F6434",
+  "func_800F654C",
+  "func_800F6564",
+  "func_800F6630",
+  "func_800F6C68",
+  "func_800F7270",
+  "func_800F76E8",
+  "func_800F7864",
+  "func_800F824C",
+  "func_800F8FB8",
+  "func_800F9200",
+  "func_800F939C",
+  "func_800F93DC",
+  "func_800F960C",
+  "func_8010D894"
+ ],
  "func_8014D728": [
   "func_8014D728",
   "func_8014D748"
@@ -9161,6 +9272,24 @@
   "func_8011B4A4",
   "func_8011B744"
  ],
+ "func_8012E33C": [
+  "func_800F3D48",
+  "func_800F5140",
+  "func_800F53C0",
+  "func_800F5480",
+  "func_800F6558",
+  "func_800F6630",
+  "func_800F7270",
+  "func_800F7594",
+  "func_800F80D0",
+  "func_800F81B0",
+  "func_800F824C",
+  "func_800F926C",
+  "func_800F9448",
+  "func_800F9644",
+  "func_800F9660",
+  "func_8012E33C"
+ ],
  "func_80109A28": [
   "func_800F6434",
   "func_800F654C",
@@ -9327,6 +9456,25 @@
   "func_80150364",
   "func_80150400"
  ],
+ "func_80111FCC": [
+  "func_800F4248",
+  "func_800F53C0",
+  "func_800F5480",
+  "func_800F5574",
+  "func_800F654C",
+  "func_800F6B68",
+  "func_800F7210",
+  "func_800F8058",
+  "func_800F8188",
+  "func_800F8F74",
+  "func_800F8FB8",
+  "func_800F9200",
+  "func_800F93DC",
+  "func_800FD718",
+  "func_80111FCC",
+  "func_8011AB18",
+  "func_80169128"
+ ],
  "func_8011356C": [
   "func_800F4120",
   "func_800F4248",
@@ -9396,6 +9544,21 @@
  "func_800F8EFC": [
   "func_800F3C3C",
   "func_800F8EFC"
+ ],
+ "func_801100BC": [
+  "func_800F3C3C",
+  "func_800F3F38",
+  "func_800F4120",
+  "func_800F4248",
+  "func_800F53C0",
+  "func_800F53D4",
+  "func_800F5410",
+  "func_800F5A90",
+  "func_800F6630",
+  "func_800F6D70",
+  "func_800F7500",
+  "func_800F8960",
+  "func_801100BC"
  ],
  "func_800F73A8": [
   "func_800F73A8"
@@ -10031,6 +10194,29 @@
   "func_800F3A70",
   "func_800F3B04",
   "func_800F6698"
+ ],
+ "func_8016EABC": [
+  "func_800F3B04",
+  "func_800F3B9C",
+  "func_800F3C3C",
+  "func_800F6364",
+  "func_800F63BC",
+  "func_800F654C",
+  "func_800F71DC",
+  "func_800F7500",
+  "func_800F9200",
+  "func_800F926C",
+  "func_800F9298",
+  "func_800F9330",
+  "func_800F939C",
+  "func_800F9448",
+  "func_800F94B8",
+  "func_800F95A0",
+  "func_800F960C",
+  "func_800F9644",
+  "func_800F9660",
+  "func_8016EABC",
+  "func_80170198"
  ],
  "func_800F8990": [
   "func_800F8990"
@@ -11926,6 +12112,26 @@
  "func_80124EAC": [
   "func_80124EAC"
  ],
+ "func_801330F8": [
+  "func_800F5B8C",
+  "func_800F5C64",
+  "func_800F5D24",
+  "func_800F5E48",
+  "func_800F63BC",
+  "func_800F654C",
+  "func_800F6D70",
+  "func_800F71DC",
+  "func_800F8188",
+  "func_800F824C",
+  "func_800F9200",
+  "func_800F926C",
+  "func_800F9298",
+  "func_800F9330",
+  "func_800F9448",
+  "func_800F94B8",
+  "func_801330F8",
+  "func_80139AFC"
+ ],
  "func_8017AAC4": [
   "func_8017AAC4"
  ],
@@ -12743,6 +12949,22 @@
   "func_800F6630",
   "func_80176BFC",
   "func_80176C6C"
+ ],
+ "func_801031F0": [
+  "func_800F4120",
+  "func_800F4248",
+  "func_800F6434",
+  "func_800F654C",
+  "func_800F6564",
+  "func_800F6630",
+  "func_800F8188",
+  "func_800F824C",
+  "func_800F8FB8",
+  "func_800FD718",
+  "func_801030F8",
+  "func_801031F0",
+  "func_80103310",
+  "func_8017559C"
  ],
  "func_801287B8": [
   "func_800F3D48",
@@ -13630,6 +13852,26 @@
  "func_80160774": [
   "func_80160774"
  ],
+ "func_8011AB18": [
+  "func_800F53D4",
+  "func_800F5574",
+  "func_800F62BC",
+  "func_800F6434",
+  "func_800F654C",
+  "func_800F6630",
+  "func_800F8188",
+  "func_800F9200",
+  "func_800F93DC",
+  "func_800FAA04",
+  "func_800FB09C",
+  "func_800FB160",
+  "func_800FB224",
+  "func_800FD914",
+  "func_800FEC74",
+  "func_800FED3C",
+  "func_8011AB18",
+  "func_8017F9A8"
+ ],
  "func_80196110": [
   "func_80196110"
  ],
@@ -14054,6 +14296,14 @@
  "func_801690AC": [
   "func_800F9448",
   "func_801690AC"
+ ],
+ "func_801847D8": [
+  "func_801847D8",
+  "func_801854A0",
+  "func_80185540",
+  "func_801970A8",
+  "func_80197288",
+  "func_801972B8"
  ],
  "func_8016AB14": [
   "func_800F53D4",
@@ -18193,6 +18443,27 @@
   "func_800F971C",
   "func_8014ED88"
  ],
+ "func_80103660": [
+  "func_800F4008",
+  "func_800F53C0",
+  "func_800F53D4",
+  "func_800F5410",
+  "func_800F5574",
+  "func_800F62BC",
+  "func_800F6434",
+  "func_800F6564",
+  "func_800F6630",
+  "func_800F7864",
+  "func_800F8188",
+  "func_800F824C",
+  "func_800F8F74",
+  "func_800F8FB8",
+  "func_80102E78",
+  "func_80103660",
+  "func_80103790",
+  "func_801038D4",
+  "func_8017559C"
+ ],
  "func_8013EAFC": [
   "func_800F7270",
   "func_800F824C",
@@ -19268,6 +19539,22 @@
  "func_800F81E8": [
   "func_800F3B9C",
   "func_800F81E8"
+ ],
+ "func_80103790": [
+  "func_800F654C",
+  "func_800F71DC",
+  "func_800F7210",
+  "func_800F8188",
+  "func_800F8D00",
+  "func_800F8D6C",
+  "func_800FB224",
+  "func_80103790",
+  "func_80103A28",
+  "func_80103B98",
+  "func_80103DD8",
+  "func_80103F40",
+  "func_8017559C",
+  "func_8017F8F8"
  ],
  "func_801183B0": [
   "func_800F654C",
