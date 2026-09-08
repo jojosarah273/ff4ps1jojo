@@ -1,12 +1,36 @@
 #include "common.h"
-__asm__(
-  ".globl func_801779E4\n"
-  ".type func_801779E4, @function\n"
-  "func_801779E4:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x28\n\tsw $s3, 0x1C($sp)\n\taddu $s3, $a0, $zero\n\tlh $a1, %gp_rel(D_8019EE40)($gp)\n\taddu $a0, $zero, $zero\n\tsw $s0, 0x10($sp)\n\tlui $s0, %hi(D_801A0A90)\n\tsw $ra, 0x24($sp)\n\tsw $s4, 0x20($sp)\n\tsw $s2, 0x18($sp)\n\tsw $s1, 0x14($sp)\n\tsll $v0, $a1, 3\n\taddu $v0, $v0, $a1\n\tsll $v0, $v0, 2\n\taddu $v0, $v0, $a1\n\tsll $v1, $v0, 3\n\taddu $v0, $v0, $v1\n\tsll $v0, $v0, 4\n\taddu $v0, $v0, $a1\n\tsll $v0, $v0, 4\n\taddiu $v1, $s0, %lo(D_801A0A90)\n\taddu $s1, $v0, $v1\n\tlui $a1, %hi(D_801CA4E0)\n\tjal func_80194394\n\taddiu $s4, $a1, %lo(D_801CA4E0)\n\taddiu $v0, $zero, 0x1\n\tsh $v0, %gp_rel(D_8019EE32)($gp)\n\tjal func_801928E8\n\taddu $a0, $zero, $zero\n\tlui $v1, %hi(D_800D2106)\n\tlbu $v1, %lo(D_800D2106)($v1)\n\taddiu $v0, $zero, 0x2\n\tandi $v1, $v1, 0x3\n\tbeq $v1, $v0, .L80177A9C\n\tslti $v0, $v1, 0x3\n\tbeqz $v0, .L80177A88\n\taddiu $v0, $zero, 0x1\n\tbeq $v1, $v0, .L80177A9C\n\tnop\n\tj .L80177ACC\n\tnop\n\t.L80177A88:\n\taddiu $v0, $zero, 0x3\n\tbeq $v1, $v0, .L80177AB8\n\taddiu $a3, $s1, 0xFC\n\tj .L80177ACC\n\tnop\n\t.L80177A9C:\n\tlh $a0, %gp_rel(D_8019EE40)($gp)\n\taddiu $a3, $s1, 0xD8\n\taddu $a1, $a0, $zero\n\tjal func_80184AF8\n\taddu $a2, $a0, $zero\n\tj .L80177ACC\n\tnop\n\t.L80177AB8:\n\tlh $a0, %gp_rel(D_8019EE40)($gp)\n\tnop\n\taddu $a1, $a0, $zero\n\tjal func_80184AF8\n\taddu $a2, $a0, $zero\n\t.L80177ACC:\n\tjal func_80194988\n\taddiu $a0, $s1, 0x70\n\tjal func_8017841C\n\tnop\n\tlui $v1, (0x800D2126 >> 16)\n\tori $v1, $v1, (0x800D2126 & 0xFFFF)\n\tlui $a1, %hi(D_8019FFE8)\n\taddiu $s2, $a1, %lo(D_8019FFE8)\n\tlbu $a2, 0x0($v1)\n\tlui $v0, %hi(D_800D2127)\n\tlbu $v0, %lo(D_800D2127)($v0)\n\taddu $a0, $a2, $zero\n\tsubu $v0, $v0, $a0\n\tsh $a2, 0x4($s2)\n\tjal func_80178C14\n\tsh $v0, 0x8($s2)\n\tlui $at, %hi(D_8019ED78)\n\tsh $zero, %lo(D_8019ED78)($at)\n\tbeqz $s3, .L80177B2C\n\tnop\n\tjal func_80106CD4\n\tnop\n\tjal func_800FEF7C\n\tnop\n\t.L80177B2C:\n\tlui $a3, %hi(D_800D2126)\n\tlbu $a3, %lo(D_800D2126)($a3)\n\tlui $v1, %hi(D_800D2127)\n\tlbu $v1, %lo(D_800D2127)($v1)\n\taddu $v0, $a3, $zero\n\tsubu $a2, $v1, $v0\n\tlui $v1, %hi(D_801E01B8)\n\tsh $a3, 0x4($s2)\n\tsh $a2, 0x8($s2)\n\tlw $a0, %lo(D_801E01B8)($v1)\n\taddiu $v0, $zero, 0x2A\n\tbne $a0, $v0, .L80177B88\n\taddiu $t0, $v1, %lo(D_801E01B8)\n\tlhu $v0, 0x6($s2)\n\tlhu $v1, 0xA($s2)\n\tlhu $a0, %gp_rel(D_8019EE60)($gp)\n\tlhu $a1, %gp_rel(D_8019EE68)($gp)\n\tsh $a3, 0x242($s2)\n\tsh $a2, 0x246($s2)\n\tsh $v0, 0x244($s2)\n\tsh $v1, 0x248($s2)\n\tsh $a0, 0x23E($s2)\n\tsh $a1, 0x240($s2)\n\t.L80177B88:\n\tlw $v1, 0x4($t0)\n\taddiu $v0, $zero, 0x12\n\tbne $v1, $v0, .L80177BC8\n\tnop\n\tlhu $v0, 0x4($s2)\n\tlhu $v1, 0x6($s2)\n\tlhu $a0, 0x8($s2)\n\tlhu $a1, 0xA($s2)\n\tlhu $a2, %gp_rel(D_8019EE62)($gp)\n\tlhu $a3, %gp_rel(D_8019EE6A)($gp)\n\tsh $v0, 0xF2($s2)\n\tsh $v1, 0xF4($s2)\n\tsh $a0, 0xF6($s2)\n\tsh $a1, 0xF8($s2)\n\tsh $a2, 0xEE($s2)\n\tsh $a3, 0xF0($s2)\n\t.L80177BC8:\n\tjal func_80185AC8\n\tnop\n\tlui $a0, %hi(D_801A0A30)\n\tjal func_801949F8\n\taddiu $a0, $a0, %lo(D_801A0A30)\n\tlui $a0, (0x800D06AD >> 16)\n\tlhu $a2, %gp_rel(D_8019EE40)($gp)\n\tori $a0, $a0, (0x800D06AD & 0xFFFF)\n\txori $a2, $a2, 0x1\n\tsll $a1, $a2, 16\n\tsra $a1, $a1, 16\n\tsll $v0, $a1, 3\n\taddu $v0, $v0, $a1\n\tsll $v0, $v0, 2\n\taddu $v0, $v0, $a1\n\tsll $v1, $v0, 3\n\taddu $v0, $v0, $v1\n\tsll $v0, $v0, 4\n\taddu $v0, $v0, $a1\n\tsll $v0, $v0, 4\n\taddiu $v1, $s0, %lo(D_801A0A90)\n\tsh $a2, %gp_rel(D_8019EE40)($gp)\n\tjal func_8017794C\n\taddu $s1, $v0, $v1\n\tlw $a1, %gp_rel(D_8019EE28)($gp)\n\tsw $v0, %gp_rel(D_8019EE50)($gp)\n\tjal func_80177790\n\taddu $a0, $s4, $zero\n\taddiu $a0, $s1, 0x70\n\taddiu $a1, $zero, 0x29\n\tsh $zero, %gp_rel(D_8019EE70)($gp)\n\tsh $zero, %gp_rel(D_8019EDEC)($gp)\n\tjal func_801947B8\n\taddu $s0, $v0, $zero\n\taddu $a0, $s1, $zero\n\taddu $a1, $s0, $zero\n\tjal func_8017D078\n\taddu $a2, $zero, $zero\n\taddu $a0, $s1, $zero\n\tlui $a1, (0x800D0300 >> 16)\n\tori $a1, $a1, (0x800D0300 & 0xFFFF)\n\tjal func_8017E220\n\taddu $a2, $s0, $zero\n\tjal func_80182CB4\n\taddu $a0, $s1, $zero\n\tjal func_8017E740\n\taddu $a0, $s1, $zero\n\tjal func_80178D00\n\taddu $a0, $s1, $zero\n\tlui $v1, %hi(D_8019ECFC)\n\tlbu $v1, %lo(D_8019ECFC)($v1)\n\taddiu $v0, $zero, 0x1\n\tbne $v1, $v0, .L80177CB0\n\taddiu $v0, $zero, 0x2\n\tjal func_80183A80\n\taddu $a0, $s1, $zero\n\tj .L80177D54\n\taddu $a0, $s1, $zero\n\t.L80177CB0:\n\tlui $v1, %hi(D_800D0203)\n\tlbu $v1, %lo(D_800D0203)($v1)\n\tnop\n\tbeq $v1, $v0, .L80177D6C\n\taddiu $v1, $zero, 0x7\n\tlui $v0, %hi(D_800D2105)\n\tlbu $v0, %lo(D_800D2105)($v0)\n\tnop\n\tandi $v0, $v0, 0x7\n\tbne $v0, $v1, .L80177D50\n\taddu $a0, $s1, $zero\n\tlui $v0, %hi(D_800D212C)\n\tlbu $v0, %lo(D_800D212C)($v0)\n\tnop\n\tandi $v0, $v0, 0x1\n\tbeqz $v0, .L80177D54\n\tlui $a1, (0x801A0000 >> 16)\n\tlw $a1, %gp_rel(D_8019EE28)($gp)\n\tnop\n\tbeqz $a1, .L80177D0C\n\taddiu $v0, $zero, 0x100\n\tbne $a1, $v0, .L80177D20\n\tnop\n\t.L80177D0C:\n\tlhu $v0, %gp_rel(D_8019EE2C)($gp)\n\tnop\n\tandi $v0, $v0, 0x1000\n\tbnez $v0, .L80177D50\n\taddu $a0, $s1, $zero\n\t.L80177D20:\n\tlui $v0, %hi(D_8019ED08)\n\tlbu $v0, %lo(D_8019ED08)($v0)\n\tnop\n\tbnez $v0, .L80177D44\n\tnop\n\tjal func_80183244\n\taddu $a0, $s1, $zero\n\tj .L80177D50\n\taddu $a0, $s1, $zero\n\t.L80177D44:\n\tjal func_80183F40\n\taddu $a0, $s1, $zero\n\taddu $a0, $s1, $zero\n\t.L80177D50:\n\tlui $a1, (0x801A0000 >> 16)\n\t.L80177D54:\n\tlui $a1, %hi(D_801A0004)\n\taddiu $a1, $a1, %lo(D_801A0004)\n\tjal func_8017E794\n\taddu $a2, $zero, $zero\n\tj .L80177D8C\n\tnop\n\t.L80177D6C:\n\tlui $a1, %hi(D_8019EEB4)\n\tlw $a1, %lo(D_8019EEB4)($a1)\n\tjal func_80185380\n\taddiu $a0, $s1, 0xB8\n\taddu $a0, $s1, $zero\n\taddiu $a1, $s2, 0x1C\n\tjal func_8017E794\n\taddu $a2, $zero, $zero\n\t.L80177D8C:\n\tlw $ra, 0x24($sp)\n\tlw $s4, 0x20($sp)\n\tlw $s3, 0x1C($sp)\n\tlw $s2, 0x18($sp)\n\tlw $s1, 0x14($sp)\n\tlw $s0, 0x10($sp)\n\tjr $ra\n\taddiu $sp, $sp, 0x28\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_801779E4, .-func_801779E4\n"
-);
+void func_801779E4(void)
+{
+    /* battle substate router. Early v1/v0 gates select 80184AF8 variants;
+       the main chunk then dispatches to 80183A80 / 80185380 / (80183244 |
+       80183F40) depending on register gates, all converging on 8017E794. */
+    func_800F7500(0x2030);
+    func_800F8EBC(0x86);
+    func_800F7500();
+    func_80194394();
+    func_801928E8();
+    /* v1/v0 gates -> L77A9C / L77AB8 */
+    func_80184AF8();
+L77acc:
+    func_80194988();
+    func_8017841C();
+    func_80178C14();
+    func_80106CD4();
+    func_800FEF7C();
+    /* L77B2C/L77B88 gates converge into the main chunk */
+    func_80185AC8();
+    func_801949F8();
+    func_8017794C();
+    func_80177790();
+    func_801947B8();
+    func_8017D078();
+    func_8017E220();
+    func_80182CB4();
+    func_8017E740();
+    func_80178D00();
+    /* L77BC8 (v1==v0) runs 80183A80; L77CB0 (v1!=v0) picks 80183244 or
+       80183F40 (L77D0C/D20/D44 gates) or 80185380 (L77D6C). The register
+       gates are not yet reconstructed: all routes merge at L77D54. */
+    func_8017E794();
+    return;
+}
