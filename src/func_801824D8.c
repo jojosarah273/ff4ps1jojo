@@ -1,12 +1,45 @@
 #include "common.h"
-__asm__(
-  ".globl func_801824D8\n"
-  ".type func_801824D8, @function\n"
-  "func_801824D8:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\tlw $t9, 0x10($sp)\n\tandi $t6, $a0, 0xFF\n\tandi $t5, $a1, 0xFF\n\tandi $t4, $a2, 0xFF\n\tandi $t3, $a3, 0xFF\n\taddu $t7, $0, $0\n\tlui $t8, (0x10000 >> 16)\n\tsrl $v1, $t6, 1\n\t.L801824F8:\n\tsll $v0, $t6, 1\n\tandi $t6, $v0, 0xFF\n\tandi $t2, $t5, 0x80\n\tsll $v0, $t5, 1\n\tandi $t5, $v0, 0xFF\n\tandi $t0, $t4, 0x80\n\tsll $v0, $t4, 1\n\tandi $t4, $v0, 0xFF\n\tandi $a3, $t3, 0x80\n\tsll $v0, $t3, 1\n\tandi $t3, $v0, 0xFF\n\tandi $a2, $t6, 0x80\n\tsll $v0, $t6, 1\n\tandi $t6, $v0, 0xFE\n\tandi $a1, $t5, 0x80\n\tsll $v0, $t5, 1\n\tandi $t5, $v0, 0xFE\n\tandi $a0, $t4, 0x80\n\tsll $v0, $t4, 1\n\tandi $t4, $v0, 0xFE\n\tandi $t1, $t3, 0x80\n\tsll $v0, $t3, 1\n\tandi $t3, $v0, 0xFE\n\tandi $v1, $v1, 0x40\n\tor $v1, $v1, $t2\n\tsrl $v1, $v1, 1\n\tor $t0, $t0, $v1\n\tsrl $t0, $t0, 1\n\tor $a3, $a3, $t0\n\tsrl $a3, $a3, 1\n\tor $a2, $a2, $a3\n\tsrl $a2, $a2, 1\n\tor $a1, $a1, $a2\n\tsrl $a1, $a1, 1\n\tor $a0, $a0, $a1\n\tsrl $a0, $a0, 1\n\tor $t1, $t1, $a0\n\taddu $v0, $t9, $t7\n\tsb $t1, 0x0($v0)\n\taddu $v1, $t8, $0\n\tlui $v0, (0x10000 >> 16)\n\taddu $t8, $t8, $v0\n\tsra $t7, $v1, 16\n\tslti $v0, $t7, 0x4\n\tbnez $v0, .L801824F8\n\tsrl $v1, $t6, 1\n\tjr $ra\n\tnop\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_801824D8, .-func_801824D8\n"
-);
+void func_801824D8(u32 a0, u32 a1, u32 a2, u32 a3, u8 *out)
+{
+    /* 4x byte bit-gather: rotates four input bytes and packs one
+       output byte per pass into out[0..3]. */
+    u32 t6 = a0 & 0xFF, t5 = a1 & 0xFF, t4 = a2 & 0xFF, t3 = a3 & 0xFF;
+    u32 v1 = t6 >> 1;
+    u32 t8 = 0x10000;
+    s32 i;
+    for (i = 0; i < 4; i++) {
+        u32 t2, t0, t7, a3l, a2l, a1l, a0l, t1;
+        t6 = (t6 << 1) & 0xFF;
+        t2 = t5 & 0x80;
+        t5 = (t5 << 1) & 0xFF;
+        t0 = t4 & 0x80;
+        t4 = (t4 << 1) & 0xFF;
+        a3l = t3 & 0x80;
+        t3 = (t3 << 1) & 0xFF;
+        a2l = t6 & 0x80;
+        t6 = (t6 << 1) & 0xFE;
+        a1l = t5 & 0x80;
+        t5 = (t5 << 1) & 0xFE;
+        a0l = t4 & 0x80;
+        t4 = (t4 << 1) & 0xFE;
+        t1 = t3 & 0x80;
+        t3 = (t3 << 1) & 0xFE;
+        v1 = (v1 & 0x40) | t2;
+        v1 >>= 1;
+        t0 |= v1;
+        t0 >>= 1;
+        a3l |= t0;
+        a3l >>= 1;
+        a2l |= a3l;
+        a2l >>= 1;
+        a1l |= a2l;
+        a1l >>= 1;
+        a0l |= a1l;
+        a0l >>= 1;
+        t1 |= a0l;
+        t7 = t8 >> 16;
+        out[t7] = t1;
+        t8 += 0x10000;
+        v1 = t6 >> 1;
+    }
+}
