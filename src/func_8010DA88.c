@@ -1,12 +1,26 @@
 #include "common.h"
-__asm__(
-  ".globl func_8010DA88\n"
-  ".type func_8010DA88, @function\n"
-  "func_8010DA88:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x10($sp)\n\tjal func_80117594\n\tnop\n\tjal func_800F8FB8\n\taddiu $a0, $zero, 0x3E\n\tjal func_800F5140\n\tnop\n\tjal func_800F4F4C\n\tnop\n\tjal func_800F3C3C\n\taddiu $a0, $zero, 0x3E\n\tjal func_800F7A40\n\taddu $a0, $v0, $zero\n\tjal func_800F7A68\n\tnop\n\tjal func_800F824C\n\taddiu $a0, $zero, 0x3D\n\tjal func_800F7270\n\taddiu $a0, $zero, 0x3D\n\tlui $v0, %hi(D_8019ED54)\n\tlw $v0, %lo(D_8019ED54)($v0)\n\tnop\n\tlhu $a0, 0x0($v0)\n\tnop\n\tsltiu $v1, $a0, 0x81\n\tbeqz $v1, .L8010DF88\n\tlui $v0, %hi(jtbl_800F2460)\n\taddiu $v0, $v0, %lo(jtbl_800F2460)\n\tsll $v1, $a0, 2\n\taddu $v1, $v1, $v0\n\tlw $a0, 0x0($v1)\n\tnop\n\tjr $a0\n\tnop\n\tjal func_80114194\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_801142FC\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_80113CCC\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_80112A68\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_8011285C\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_801120F4\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_80113DCC\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_80113E04\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_8011383C\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_801121C4\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_80111F34\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_80111F94\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_801136D4\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_80111EF4\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_801126A0\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_801118CC\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_801115F0\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_8011124C\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_801147C0\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_80114880\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_80114938\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_80114788\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_801151BC\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_80114DC8\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_80114EBC\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_801110CC\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_80111134\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_8011117C\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_8011102C\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_80110FE4\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_80113644\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_801109A8\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_8010F254\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_8010F2F4\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_8010F944\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_8010FB58\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_8010FD30\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_8010FEEC\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_801101E4\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_80110334\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_8011107C\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_801107A0\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_80110CFC\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_80114AF0\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_80114BC0\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_8010F1D4\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_8010F11C\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_8010F144\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_8010F08C\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_801133B0\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_8010EB14\n\tnop\n\tj .L8010DF88\n\tnop\n\taddiu $v0, $zero, 0x1\n\tlui $at, %hi(D_8019EE00)\n\tsh $v0, %lo(D_8019EE00)($at)\n\tjal func_8010E98C\n\tnop\n\tlui $at, %hi(D_8019EE00)\n\tsh $zero, %lo(D_8019EE00)($at)\n\tj .L8010DF88\n\tnop\n\tjal func_8010E58C\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_80110818\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_8010E388\n\tnop\n\tj .L8010DF88\n\tnop\n\taddiu $v0, $zero, 0x1\n\taddiu $v1, $zero, 0x35\n\tsb $v0, %gp_rel(D_8019ED00)($gp)\n\taddiu $v0, $zero, 0x1\n\tlui $at, %hi(D_8019EF28)\n\tsw $v1, %lo(D_8019EF28)($at)\n\tlui $at, %hi(D_8019EF24)\n\tsw $v0, %lo(D_8019EF24)($at)\n\tjal func_8010E278\n\tnop\n\tj .L8010DF88\n\tnop\n\taddiu $v0, $zero, 0x2\n\tsb $v0, %gp_rel(D_8019ED00)($gp)\n\tjal func_8010E2B8\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_801798F0\n\tnop\n\tjal func_80179670\n\taddiu $a0, $zero, 0x1\n\taddiu $v0, $zero, 0x37\n\taddiu $v1, $zero, 0x1\n\tlui $at, %hi(D_8019EF28)\n\tsw $v0, %lo(D_8019EF28)($at)\n\tlui $at, %hi(D_8019EF24)\n\tsw $v1, %lo(D_8019EF24)($at)\n\tjal func_80179930\n\tnop\n\tjal func_8010E2F8\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_8011368C\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_8010E158\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_8010E050\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_8010E0A8\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_8010E100\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_8010DF98\n\tnop\n\tj .L8010DF88\n\tnop\n\tjal func_80110664\n\tnop\n\tlw $ra, 0x10($sp)\n\tnop\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_8010DA88, .-func_8010DA88\n"
-);
+void func_8010DA88(void)
+{
+    func_80117594();
+    func_800F8FB8(0x3E);
+    func_800F5140();
+    func_800F4F4C();
+    func_800F7A40(func_800F3C3C(0x3E));
+    func_800F7A68();
+    func_800F824C(0x3D);
+    func_800F7270(0x3D);
+    /* jr $a0 : the ~73-entry master battle-command jump table (invoked by
+       func_80116720). Each entry calls one battle-command screen then jumps
+       to L8010DF88 (return). Handlers in index order:
+       80114194, 801142FC, 80113CCC, 80112A68, 8011285C, 801120F4, 80113DCC,
+       80113E04, 8011383C, 801121C4, 80111F34, 80111F94, 801136D4, 80111EF4,
+       801126A0, 801118CC, 801115F0, 8011124C, 801147C0, 80114880, 80114938,
+       80114788, 801151BC, 80114DC8, 80114EBC, 801110CC, 80111134, 8011117C,
+       8011102C, 80110FE4, 80113644, 801109A8, 8010F254, 8010F2F4, 8010F944,
+       8010FB58, 8010FD30, 8010FEEC, 801101E4, 80110334, 8011107C, 801107A0,
+       80110CFC, 80114AF0, 80114BC0, 8010F1D4, 8010F11C, 8010F144, 8010F08C,
+       801133B0, 8010EB14, 8010E98C, 8010E58C, 80110818, 8010E388, 8010E278,
+       8010E2B8, 801798F0, 80179670, 80179930, 8010E2F8, 8011368C, 8010E158,
+       8010E050, 8010E0A8, 8010E100, 8010DF98, 80110664 ... */
+    return;
+}
