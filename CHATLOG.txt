@@ -132,3 +132,11 @@ HEADLESS GRIND SESSION LEG 2 — MILESTONE 70.0% C-WRITTEN (1761/2516)
 README/PROGRESS/callgraph each time. Callgraph grew past 14k edges.
 The 65% target is satisfied; 70% is locked in. Next boundary: 75% (1887).
 ================================================================================
+
+================================================================================
+HEADLESS GRIND — 70.0% MILESTONE AND 70.4% BANKED (1772/2516)
+Session start 1526 (60.7%) -> 1772 (70.4%): +246 functions, ~45 commits
+pushed with README/PROGRESS/callgraph at every boundary. Callgraph is at
+~16k edges. Two big boundaries this run: 65.0% and 70.0% C-WRITTEN.
+Next stop: 75% (1887).
+================================================================================

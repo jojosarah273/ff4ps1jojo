@@ -407,6 +407,14 @@ ability menus (80127808/8013AB18/8013B270/80136494/8013C554), config screens
 (80132CFC/80132F40/8012DD58/8015EC70/8015DCA4/8015C220/8015BD34/8015AC7C/
 8015C604/8015FE98), cutscenes (8013FA08 text scroll), plus 30+ more.
 Callgraph edges now ~8300. NEXT: 60%->75% (1887) toward full 100% coverage.
+### HEADLESS GRIND SESSION — 70%+ BAND (1761 -> 1772, in progress)
+Post-70% banked decodes: 80119740, 80127408, 80123958, 8015A784, 80100BE0,
+801038D4, 8015CF18, 8016E358, 80122B54, 80149BE4, 8014B454 (+
+8015FD14/8011E16C leg-2 tail). The mid-band (0x118-0x210) menu screens
+continue to decode cleanly; the three big register-heavy monsters stay
+queued as deep passes.
+
+
 ### HEADLESS GRIND SESSION — 65% -> 70% (1636 -> 1761, +125)
 **MILESTONE: 70.0% C-WRITTEN (1761/2516) REACHED** — second boundary of the
 "keep going" run. 30+ commits, all pushed.
