@@ -1,12 +1,87 @@
 #include "common.h"
-__asm__(
-  ".globl func_800FC2AC\n"
-  ".type func_800FC2AC, @function\n"
-  "func_800FC2AC:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x10($sp)\n\tjal func_800F7210\n\taddiu $a0, $zero, 0x1800\n\tjal func_800F5958\n\taddiu $a0, $zero, 0x1B7\n\tjal func_800F53C0\n\tnop\n\tbeqz $v0, .L800FC2FC\n\tnop\n\tjal func_800F5958\n\taddiu $a0, $zero, 0x1B9\n\tjal func_800F53C0\n\tnop\n\tbnez $v0, .L800FC2FC\n\tnop\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x10\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x1802\n\t.L800FC2FC:\n\tjal func_800F6564\n\taddiu $a0, $zero, 0x1700\n\tjal func_800F5574\n\taddiu $a0, $zero, 0x3\n\tjal func_800F53D4\n\tnop\n\tbeqz $v0, .L800FC3C0\n\tnop\n\tjal func_800F6564\n\taddiu $a0, $zero, 0x1701\n\tjal func_800F6434\n\taddiu $a0, $zero, 0x2\n\tbnez $v0, .L800FC3C0\n\tnop\n\tjal func_800F6564\n\taddiu $a0, $zero, 0x1702\n\tjal func_800F5574\n\taddiu $a0, $zero, 0x5A\n\tjal func_800F53C0\n\tnop\n\tbeqz $v0, .L800FC36C\n\tnop\n\tjal func_800F5574\n\taddiu $a0, $zero, 0x5D\n\tjal func_800F53C0\n\tnop\n\tbeqz $v0, .L800FC39C\n\tnop\n\t.L800FC36C:\n\tjal func_800F5574\n\taddiu $a0, $zero, 0x67\n\tjal func_800F53C0\n\tnop\n\tbeqz $v0, .L800FC3C0\n\tnop\n\tjal func_800F5574\n\taddiu $a0, $zero, 0x7F\n\tjal func_800F53C0\n\tnop\n\tbnez $v0, .L800FC3C0\n\tnop\n\t.L800FC39C:\n\tjal func_800F6564\n\taddiu $a0, $zero, 0x1801\n\tlw $v1, %gp_rel(D_8019ED40)($gp)\n\tnop\n\tlbu $v0, 0x0($v1)\n\taddiu $a0, $zero, 0x1801\n\tori $v0, $v0, 0x80\n\tjal func_800F8188\n\tsb $v0, 0x0($v1)\n\t.L800FC3C0:\n\tjal func_800FB3F8\n\tnop\n\tjal func_800F92D8\n\tnop\n\tjal func_800F54B8\n\tnop\n\tjal func_8015084C\n\tnop\n\tjal func_800FC548\n\tnop\n\tjal func_800F9538\n\tnop\n\tjal func_800F6564\n\taddiu $a0, $zero, 0x1803\n\tjal func_800F6434\n\tori $a0, $zero, 0x8080\n\tbnez $v0, .L800FC434\n\tnop\n\tjal func_801762D0\n\tnop\n\tlw $v1, %gp_rel(D_8019ED4C)($gp)\n\taddiu $v0, $zero, 0x1\n\tlui $at, %hi(D_800D2126)\n\tsb $v0, %lo(D_800D2126)($at)\n\taddiu $v0, $zero, 0x2FF\n\tjal func_80187B00\n\tsh $v0, 0x0($v1)\n\tj .L800FC538\n\taddiu $v0, $zero, 0x1\n\t.L800FC434:\n\tjal func_800F6630\n\taddiu $a0, $zero, 0xC6\n\tjal func_800F6434\n\taddiu $a0, $zero, 0x2\n\tbnez $v0, .L800FC464\n\tnop\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x1804\n\tjal func_800F8FB8\n\taddiu $a0, $zero, 0xC6\n\tj .L800FC4EC\n\tnop\n\t.L800FC464:\n\tjal func_800F6564\n\taddiu $a0, $zero, 0x1804\n\tjal func_800F3B04\n\taddiu $a0, $zero, 0x1805\n\tjal func_800F78C4\n\taddu $a0, $v0, $zero\n\tjal func_800F3B04\n\taddiu $a0, $zero, 0x1806\n\tjal func_800F78C4\n\taddu $a0, $v0, $zero\n\tjal func_800F3B04\n\taddiu $a0, $zero, 0x1807\n\tjal func_800F78C4\n\taddu $a0, $v0, $zero\n\tjal func_800F3B04\n\taddiu $a0, $zero, 0x1808\n\tjal func_800F78C4\n\taddu $a0, $v0, $zero\n\tjal func_800F3B04\n\taddiu $a0, $zero, 0x1809\n\tjal func_800F78C4\n\taddu $a0, $v0, $zero\n\tjal func_800F3B04\n\taddiu $a0, $zero, 0x180A\n\tjal func_800F78C4\n\taddu $a0, $v0, $zero\n\tjal func_800F3B04\n\taddiu $a0, $zero, 0x180B\n\tjal func_800F78C4\n\taddu $a0, $v0, $zero\n\tjal func_800F7918\n\taddiu $a0, $zero, 0x2\n\tbnez $v0, .L800FC4FC\n\tnop\n\t.L800FC4EC:\n\tjal func_8011EB5C\n\tnop\n\tjal func_800FC548\n\tnop\n\t.L800FC4FC:\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x80\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x2100\n\tjal func_800F6564\n\taddiu $a0, $zero, 0x1700\n\tjal func_800F5574\n\taddiu $a0, $zero, 0x3\n\tjal func_800F53D4\n\tnop\n\tbeqz $v0, .L800FC538\n\taddu $v0, $zero, $zero\n\tjal func_8010CA74\n\tnop\n\taddu $v0, $zero, $zero\n\t.L800FC538:\n\tlw $ra, 0x10($sp)\n\tnop\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_800FC2AC, .-func_800FC2AC\n"
-);
+void func_800FC2AC(void)
+{
+    /* battle confirm-dialog: two 5958/53C0 key-gates select the 0x1802
+       header, then the 0x1700-0x1702 option rows, then 0x1803 dispatch
+       (801762D0/80187B00 vs the 0x1804-0x180B detail fill), 0x2100 title,
+       and 8010CA74 confirm. */
+    func_800F7210(0x1800);
+    func_800F5958(0x1B7);
+    if (func_800F53C0() == 0)
+        goto LFC2FC;
+    func_800F5958(0x1B9);
+    if (func_800F53C0() != 0)
+        goto LFC2FC;
+    func_800F654C(0x10);
+    func_800F8188(0x1802);
+LFC2FC:
+    func_800F6564(0x1700);
+    func_800F5574(3);
+    if (func_800F53D4() == 0)
+        goto LFC3C0;
+    func_800F6564(0x1701);
+    if (func_800F6434(2) != 0)
+        goto LFC3C0;
+    func_800F6564(0x1702);
+    func_800F5574(0x5A);
+    if (func_800F53C0() == 0)
+        goto LFC36C;
+    func_800F5574(0x5D);
+    if (func_800F53C0() == 0)
+        goto LFC39C;
+LFC36C:
+    func_800F5574(0x67);
+    if (func_800F53C0() == 0)
+        goto LFC3C0;
+    func_800F5574(0x7F);
+    if (func_800F53C0() != 0)
+        goto LFC3C0;
+LFC39C:
+    func_800F6564(0x1801);
+    func_800F8188();
+LFC3C0:
+    func_800FB3F8();
+    func_800F92D8();
+    func_800F54B8();
+    func_8015084C();
+    func_800FC548();
+    func_800F9538();
+    func_800F6564(0x1803);
+    if (func_800F6434() != 0)
+        goto LFC434;
+    func_801762D0();
+    func_80187B00();
+    goto LFC538;
+LFC434:
+    func_800F6630(0xC6);
+    if (func_800F6434(2) != 0)
+        goto LFC464;
+    func_800F8188(0x1804);
+    func_800F8FB8(0xC6);
+    goto LFC4EC;
+LFC464:
+    func_800F6564(0x1804);
+    func_800F78C4(func_800F3B04(0x1805));
+    func_800F78C4(func_800F3B04(0x1806));
+    func_800F78C4(func_800F3B04(0x1807));
+    func_800F78C4(func_800F3B04(0x1808));
+    func_800F78C4(func_800F3B04(0x1809));
+    func_800F78C4(func_800F3B04(0x180A));
+    func_800F78C4(func_800F3B04(0x180B));
+    if (func_800F7918(2) != 0)
+        goto LFC4FC;
+LFC4EC:
+    func_8011EB5C();
+    func_800FC548();
+LFC4FC:
+    func_800F654C(0x80);
+    func_800F8188(0x2100);
+    func_800F6564(0x1700);
+    func_800F5574(3);
+    if (func_800F53D4() == 0)
+        goto LFC538;
+    func_8010CA74();
+    return;
+LFC538:
+    return;
+}
