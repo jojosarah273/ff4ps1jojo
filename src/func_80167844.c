@@ -1,12 +1,32 @@
 #include "common.h"
-__asm__(
-  ".globl func_80167844\n"
-  ".type func_80167844, @function\n"
-  "func_80167844:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x14($sp)\n\tsw $s0, 0x10($sp)\n\t.L80167850:\n\tjal func_80070174\n\tlui $s0, %hi(D_8019A0C4)\n\tjal func_800F8FB8\n\taddu $a0, $zero, $zero\n\tjal func_800F71DC\n\taddu $a0, $zero, $zero\n\t.L80167868:\n\tjal func_800F6B68\n\tori $a0, $zero, 0xF488\n\tlui $v0, %hi(D_8019ED54)\n\tlw $v0, %lo(D_8019ED54)($v0)\n\tnop\n\tlhu $v1, 0x0($v0)\n\taddiu $a0, $s0, %lo(D_8019A0C4)\n\taddu $v1, $v1, $a0\n\tlbu $a0, 0x0($v1)\n\tjal func_800F5574\n\tnop\n\tjal func_800F53D4\n\tnop\n\tbnez $v0, .L801678CC\n\tori $a0, $zero, 0xF488\n\tlui $v0, %hi(D_8019ED54)\n\tlw $v0, %lo(D_8019ED54)($v0)\n\tnop\n\tlhu $v1, 0x0($v0)\n\tjal func_800F3B04\n\taddu $a0, $v1, $a0\n\tjal func_800F6048\n\taddu $a0, $v0, $zero\n\tjal func_800F62BC\n\taddu $a0, $zero, $zero\n\t.L801678CC:\n\tjal func_800F6364\n\tnop\n\tjal func_800F5958\n\taddiu $a0, $zero, 0x12\n\tjal func_800F53D4\n\tnop\n\tbeqz $v0, .L80167868\n\tnop\n\tjal func_800F6630\n\taddu $a0, $zero, $zero\n\tjal func_800F6434\n\taddiu $a0, $zero, 0x202\n\tbnez $v0, .L80167850\n\tnop\n\tlw $ra, 0x14($sp)\n\tlw $s0, 0x10($sp)\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_80167844, .-func_80167844\n"
-);
+void func_80167844(void)
+{
+    /* battle rows (twin with 6048): 0x70174/8FB8/71DC preps; loops
+       L167868 and L167850 on 5958(0x12)/6434(0x202). */
+L167850:
+    for (;;) {
+        func_80070174();
+        func_800F8FB8();
+        func_800F71DC();
+    L167868:
+        for (;;) {
+            func_800F6B68();
+            func_800F5574();
+            if (func_800F53D4() != 0)
+                goto L1678CC;
+            func_800F6048(func_800F3B04());
+            func_800F62BC();
+        L1678CC:
+            func_800F6364();
+            func_800F5958(0x12);
+            if (func_800F53D4() == 0)
+                continue;
+            break;
+        }
+        func_800F6630();
+        if (func_800F6434(0x202) != 0)
+            continue;
+        break;
+    }
+    return;
+}
