@@ -15,6 +15,11 @@ flowchart LR
 
 ## 0. Interpretation pass
 - Rename `func_8012XXXX` → semantic names (fn in SYMBOLS + everything8215/ff4).
+- **PS1-only subsystems have NO SNES counterpart** — everything8215/ff4 can't
+  name them; name manually from PS1 context:
+  - memory-card save/load code, memo/save-menu state,
+  - FMV driver/skip path, bestiary data+UI,
+  - the PSY-Q runtime-hook layer (BREAK/syscall/vector poles, 8018F0xx-80198xxx).
 - Merge per-function C into domains: battle, menu, config, event, anim, save.
 - Kill dead emulation weight: `INCLUDE_ASM` macros, lane artifacts, delay-slot
   comments, register-latch doc comments become real control flow.
