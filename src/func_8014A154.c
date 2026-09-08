@@ -1,12 +1,17 @@
 #include "common.h"
-__asm__(
-  ".globl func_8014A154\n"
-  ".type func_8014A154, @function\n"
-  "func_8014A154:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x10($sp)\n\tjal func_800F8F74\n\tori $a0, $zero, 0xF42B\n\tlui $v0, %hi(D_8019ED5C)\n\tlw $v0, %lo(D_8019ED5C)($v0)\n\tnop\n\tlbu $a0, 0x0($v0)\n\tnop\n\tsltiu $v1, $a0, 0x5F\n\tbeqz $v1, .L8014A478\n\tlui $v0, %hi(jtbl_800F29B0)\n\taddiu $v0, $v0, %lo(jtbl_800F29B0)\n\tsll $v1, $a0, 2\n\taddu $v1, $v1, $v0\n\tlw $a0, 0x0($v1)\n\tnop\n\tjr $a0\n\tnop\n\tjal func_8014B98C\n\tnop\n\tj .L8014A478\n\tnop\n\tjal func_8014B914\n\tnop\n\tj .L8014A478\n\tnop\n\tjal func_8014C994\n\tnop\n\tj .L8014A478\n\tnop\n\tjal func_8014C13C\n\tnop\n\tj .L8014A478\n\tnop\n\tjal func_8014BB6C\n\tnop\n\tj .L8014A478\n\tnop\n\tjal func_8014C114\n\tnop\n\tj .L8014A478\n\tnop\n\tjal func_8014B1D0\n\tnop\n\tj .L8014A478\n\tnop\n\tjal func_8014B8AC\n\tnop\n\tj .L8014A478\n\tnop\n\tjal func_8014BB0C\n\tnop\n\tj .L8014A478\n\tnop\n\tjal func_8014BB3C\n\tnop\n\tj .L8014A478\n\tnop\n\tjal func_8014B334\n\tnop\n\tj .L8014A478\n\tnop\n\tjal func_8014B36C\n\tnop\n\tj .L8014A478\n\tnop\n\tjal func_8014B3FC\n\tnop\n\tj .L8014A478\n\tnop\n\tjal func_8014B42C\n\tnop\n\tj .L8014A478\n\tnop\n\tjal func_8014B454\n\tnop\n\tj .L8014A478\n\tnop\n\tjal func_8014B5F8\n\tnop\n\tj .L8014A478\n\tnop\n\tjal func_8014B620\n\tnop\n\tj .L8014A478\n\tnop\n\tjal func_8014B648\n\tnop\n\tj .L8014A478\n\tnop\n\tjal func_8014B698\n\tnop\n\tj .L8014A478\n\tnop\n\tjal func_8014B6C0\n\tnop\n\tj .L8014A478\n\tnop\n\tjal func_8014B6E8\n\tnop\n\tj .L8014A478\n\tnop\n\tjal func_8014B804\n\tnop\n\tj .L8014A478\n\tnop\n\tjal func_8014B82C\n\tnop\n\tj .L8014A478\n\tnop\n\tjal func_8014B854\n\tnop\n\tj .L8014A478\n\tnop\n\tjal func_8014B884\n\tnop\n\tj .L8014A478\n\tnop\n\tjal func_8014B964\n\tnop\n\tj .L8014A478\n\tnop\n\tjal func_8014B9B4\n\tnop\n\tj .L8014A478\n\tnop\n\tjal func_8014B1A8\n\tnop\n\tj .L8014A478\n\tnop\n\tjal func_8014B188\n\tnop\n\tj .L8014A478\n\tnop\n\tjal func_8014B118\n\tnop\n\tj .L8014A478\n\tnop\n\tjal func_8014AF74\n\tnop\n\tj .L8014A478\n\tnop\n\tjal func_8014AE1C\n\tnop\n\tj .L8014A478\n\tnop\n\tjal func_8014AD24\n\tnop\n\tj .L8014A478\n\tnop\n\tjal func_8014AC3C\n\tnop\n\tj .L8014A478\n\tnop\n\tjal func_8014AB70\n\tnop\n\tj .L8014A478\n\tnop\n\tjal func_8014AAA8\n\tnop\n\tj .L8014A478\n\tnop\n\tjal func_8014AB90\n\tnop\n\tj .L8014A478\n\tnop\n\tjal func_8014A888\n\tnop\n\tj .L8014A478\n\tnop\n\tjal func_8014ABB8\n\tnop\n\tj .L8014A478\n\tnop\n\tjal func_8014AA30\n\tnop\n\tj .L8014A478\n\tnop\n\tjal func_8014A8B8\n\tnop\n\tj .L8014A478\n\tnop\n\tjal func_8014A920\n\tnop\n\tj .L8014A478\n\tnop\n\tjal func_8014A950\n\tnop\n\tj .L8014A478\n\tnop\n\tjal func_8014A980\n\tnop\n\tj .L8014A478\n\tnop\n\tjal func_8014A860\n\tnop\n\tj .L8014A478\n\tnop\n\tjal func_8014A810\n\tnop\n\tlw $ra, 0x10($sp)\n\tnop\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_8014A154, .-func_8014A154\n"
-);
+void func_8014A154(void)
+{
+    func_800F8F74();
+    /* jr $a0 : the ~46-entry battle item/action master table (invoked
+       via the item menu). Each entry calls one sub-screen then jumps to
+       L8014A478 (return). Handlers in index order:
+       8014B98C, 8014B914, 8014C994, 8014C13C, 8014BB6C, 8014C114,
+       8014B1D0, 8014B8AC, 8014BB0C, 8014BB3C, 8014B334, 8014B36C,
+       8014B3FC, 8014B42C, 8014B454, 8014B5F8, 8014B620, 8014B648,
+       8014B698, 8014B6C0, 8014B6E8, 8014B804, 8014B82C, 8014B854,
+       8014B884, 8014B964, 8014B9B4, 8014B1A8, 8014B188, 8014B118,
+       8014AF74, 8014AE1C, 8014AD24, 8014AC3C, 8014AB70, 8014AAA8,
+       8014AB90, 8014A888, 8014ABB8, 8014AA30, 8014A8B8, 8014A920,
+       8014A950, 8014A980, 8014A860, 8014A810 ... */
+    return;
+}
