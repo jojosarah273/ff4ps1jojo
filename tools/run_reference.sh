@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Boot the native FF4 recomp (recomp-ui frontend) on the desktop.
+# Boot the reference oracle (psxrecomp + recomp-ui frontend) on the desktop.
 # Requires: X session (Chrome Remote Desktop) + BIOS + disc configured in
 # /tmp/ff4_recomp (game.toml + build/settings.toml).
 #
@@ -23,17 +23,17 @@ if [ -f "$SET" ]; then
   else
     sed -i 's/skip_launcher\s*=\s*true/skip_launcher = false/' "$SET"
   fi
-  echo "recomp: settings.toml -> $(grep -E 'bios_hle|fast_boot|skip_launcher' "$SET" | tr '\n' ' ')"
+  echo "reference: settings.toml -> $(grep -E 'bios_hle|fast_boot|skip_launcher' "$SET" | tr '\n' ' ')"
 fi
 
 if [ ! -x "$ROOT/build/FF4_Recompiled" ]; then
   echo "error: $ROOT/build/FF4_Recompiled missing" >&2
   exit 1
 fi
-cd "$(dirname "$0")/.."                 # -> recomp/
+cd "$(dirname "$0")/.."                 # -> repo root
 ISO="$(cd .. && pwd -P)/ff4.iso"
 BIOS="$(cd .. && pwd -P)/SCPH1001.BIN"
-echo "booting: recomp/build/FF4_Recompiled"
+echo "booting: reference/build/FF4_Recompiled"
 echo "  disc: $ISO"
 echo "  bios: $BIOS"
-exec recomp/build/FF4_Recompiled --bios "$BIOS" --disc "$ISO" "$@"
+exec reference/build/FF4_Recompiled --bios "$BIOS" --disc "$ISO" "$@"

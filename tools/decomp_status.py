@@ -113,7 +113,7 @@ if mb0 != -1 and mb1 != -1 and mb1 > mb0:
         "<!-- MILESTONES:BEGIN -->",
         mk(25, 629), mk(50, 1258), mk(75, 1887),
         "- [ ] 100% C-written, with \u226550% byte-verified (matched)",
-        "- [ ] All stubborn functions runtime-verified against the recomp oracle",
+        "- [ ] All stubborn functions runtime-verified against the reference oracle",
         "<!-- MILESTONES:END -->",
     ])
     txt = txt[:mb0] + block + txt[mb1 + len("<!-- MILESTONES:END -->"):]

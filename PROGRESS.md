@@ -191,16 +191,16 @@ game.toml/settings.toml paths are anchored by find_project_root() to the
 first ancestor holding .git/.gitignore (the FF4_PS1_DECOMP folder), NOT the
 exe dir or cwd. Our `../ff4.iso` resolved to the wrong file -> "No CD001"
 -> no disc, no local EXE -> black screen. Fixed configs:
-  game.toml:            disc = "ff4.iso", exe = "recomp/input/SLUS_013.60"
+  game.toml:            disc = "ff4.iso", exe = "reference/input/SLUS_013.60"
   build/settings.toml:  [disc] path = "ff4.iso", [bios] path = "SCPH1001.BIN"
 run.sh now pre-flights the binary, exec bit, and ISO sha256, and launches with
 --bios SCPH1001.BIN (resolved via find_upward). Verified locally: disc region
 NTSC-U + text guard armed + mod FMV skip all present.
 
-### 2025-09-07 — recomp fixes for a slow/target machine
+### 2025-09-07 — reference-oracle fixes for a slow/target machine
 - Black screen root cause: target couldn't read the disc (bad/truncated sync —
   verify sha256 ab9e79c6...) AND no local EXE. Kit now ships
-  recomp/input/SLUS_013.60 (local EXE -> text guard armed, boots w/o disc EXE).
+  reference/input/SLUS_013.60 (local EXE -> text guard armed, boots w/o disc EXE).
 - Weak-GL fallback exists: `--renderer software` (SDL2) or vulkan.
 - FMV skip is MOD-OWNED on PSX: the [video] auto_skip_fmv key is ignored by
   design. Added framework builtin `mod_builtin_skip.c` (activation plugin
@@ -518,10 +518,11 @@ Autonomous grind wave delivered the milestone:
   init-run loops, zero-fill loops.
 - 1203 -> 1265 C-written in the grind. matched still 740 (byte-verify of the
   ~525 candidates via runtime oracle = the next tape, planned).
-### 2025-09-07 — PROJECT SCOPE: full C decomp -> native port (SoH/SM64 model)
+### 2025-09-07 — PROJECT SCOPE: full C decomp -> native source port (SoH/SM64 model)
 - Direction confirmed with user: goal = Ship-of-Harkinian-class native FF4
-  (PS1), NOT an emulator and NOT a machine-translated recomp (the recomp
-  remains the playable reference + oracle). FMVs dropped by design (policy in
+  (PS1) rebuilt from decompiled C — a **decompiled source port**, NOT an
+  emulator and NOT a machine-translated recomp (the psxrecomp build remains
+  only the playable reference oracle). FMVs dropped by design (policy in
   README).
 - Phase A baseline (decomp_status.py): 2516 total | 192 byte-verified (7.6%) |
   470 real-C match-pending (18.7%) | 1854 asm shells (73.7%) | C-written 26.3%.

@@ -28,19 +28,20 @@ path — the same recipe used by every modern decomp-port.
 - [x] 50% C-written (~1258 funcs) — DONE (2391 funcs, 95.0%)
 - [x] 75% C-written (~1887 funcs) — DONE (2391 funcs, 95.0%)
 - [ ] 100% C-written, with ≥50% byte-verified (matched)
-- [ ] All stubborn functions runtime-verified against the recomp oracle
+- [ ] All stubborn functions runtime-verified against the reference oracle
 <!-- MILESTONES:END -->
 
-The reference `psxrecomp` build (see `recomp/`) keeps the game **playable
-today** and acts as the correctness oracle; its `gpu.c`/`spu.c`/`cdrom.c`
-become the native device-layer semantics for Phase B.
+The **reference oracle** — a `psxrecomp` build of the original binary (see
+`reference/`) — keeps the game playable today and is the correctness oracle
+for spot-checks; its `gpu.c`/`spu.c`/`cdrom.c` become the native
+device-layer semantics for Phase B. It is a *tool of the decomp*, not the
+deliverable: the deliverable is the **decompiled source port** (Phase B).
 
 ## FMV policy
 
 The bundled FMVs (intro-only, unrelated to *Chrono Trigger*-style in-story
-cutscenes) are **removed by design**: copyrighted, zero gameplay value. The
-recomp's `psx.skip-fmv` mod (default-on) skips them now; the native port will
-not ship FMV playback at all.
+cutscenes) are **removed by design**: copyrighted, zero gameplay value. The reference build's `psx.skip-fmv` mod (default-on) skips them now; the
+native port will not ship FMV playback at all.
 
 ## Phase A tooling
 
@@ -65,7 +66,7 @@ expected/matched/        byte-verified C registrations
 include/  tools/         maspsx, psyq(CC1PSX), sweep, bulk, sas2c, decomp_*
 Makefile                 build lanes + diff targets
 decomp/                  STATUS.md, work packets, manifest
-recomp/                  reference psxrecomp build (playable today)
+reference/               psxrecomp reference oracle (playable today; tool of the decomp)
 refs/  symbols/          Ghidra/SNES naming references
 PROGRESS.md              session ledger
 ```

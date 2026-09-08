@@ -5,7 +5,7 @@ For each function, assemble everything a decompile pass needs into
 decomp/work/<name>.md and track state in decomp/manifest.json:
   spec        : the byte-verified annotated assembly (asm/nonmatchings/main)
   oracle      : the psxrecomp machine-translated C for the same address
-                (generated/SLUS_013.60_full_*.c in the recomp tree)
+                (generated/SLUS_013.60_full_*.c in the reference tree)
   lane        : which toolchain reproduces it (psx / psxs / modern / ladder)
   state       : shell | candidate | matched     (manifest only)
 
@@ -26,7 +26,7 @@ WORK = ROOT / "decomp" / "work"
 MANIFEST = ROOT / "decomp" / "manifest.json"
 RECOMP_GEN = Path("/tmp/ff4_recomp/generated")     # psxrecomp oracle tree
 if not RECOMP_GEN.exists():
-    RECOMP_GEN = ROOT / "recomp" / "generated"
+    RECOMP_GEN = ROOT / "reference" / "generated"
 LANES = {}
 for raw in (ROOT / "expected" / "lanes.txt").read_text().splitlines():
     p = raw.split()

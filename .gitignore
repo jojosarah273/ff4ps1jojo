@@ -32,9 +32,9 @@ build/
 # build outputs
 /build/
 
-# native recomp kit (binary + configs, synced out-of-band)
-/recomp/
+# reference psxrecomp oracle kit (binary + configs, synced out-of-band)
+/reference/
 
-# recomp atexit report (runtime artifact)
+# psxrecomp atexit report (runtime artifact)
 tools/psx_last_run_report.json
 /.debris/
