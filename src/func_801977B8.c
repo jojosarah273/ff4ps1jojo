@@ -1,12 +1,28 @@
 #include "common.h"
-__asm__(
-  ".globl func_801977B8\n"
-  ".type func_801977B8, @function\n"
-  "func_801977B8:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $t2, $zero, 0xC0\n\tjr $t2\n\taddiu $t1, $zero, 0xA\n\tnop\n\taddiu $sp, $sp, -0x28\n\tsw $s2, 0x18($sp)\n\taddu $s2, $a0, $zero\n\tsw $s3, 0x1C($sp)\n\taddu $s3, $a1, $zero\n\tsw $ra, 0x20($sp)\n\tsw $s1, 0x14($sp)\n\tsw $s0, 0x10($sp)\n\tlb $v0, 0x0($s2)\n\tlui $a0, %hi(D_801FEBC0)\n\taddiu $a0, $a0, %lo(D_801FEBC0)\n\tslti $v0, $v0, 0x3B\n\tbnez $v0, .L80197820\n\taddu $v1, $s2, $zero\n\t.L80197800:\n\tlbu $v0, 0x0($v1)\n\taddiu $v1, $v1, 0x1\n\tsb $v0, 0x0($a0)\n\tlb $v0, 0x0($v1)\n\tnop\n\tslti $v0, $v0, 0x3B\n\tbeqz $v0, .L80197800\n\taddiu $a0, $a0, 0x1\n\t.L80197820:\n\tsb $zero, 0x0($a0)\n\tlw $v1, 0x154($zero)\n\tlui $v0, 0xCCCC\n\tori $v0, $v0, 0xCCCD\n\tmultu $v1, $v0\n\tlw $s0, 0x150($zero)\n\tmfhi $a2\n\tsrl $v1, $a2, 6\n\tsll $v0, $v1, 2\n\taddu $v0, $v0, $v1\n\tsll $v0, $v0, 4\n\taddu $v1, $s0, $v0\n\tsltu $v0,$s0,$v1\n\tbeqz $v0, .L80197894\n\tnop\n\taddu $s1, $v1, $zero\n\t.L80197860:\n\tlw $a0, 0x0($s0)\n\tnop\n\tbeqz $a0, .L80197884\n\tnop\n\tlui $a1, %hi(D_801FEBC0)\n\tjal func_8018F078\n\taddiu $a1, $a1, %lo(D_801FEBC0)\n\tbeqz $v0, .L801978A8\n\tnop\n\t.L80197884:\n\taddiu $s0, $s0, 0x50\n\tsltu $v0,$s0,$s1\n\tbnez $v0, .L80197860\n\tnop\n\t.L80197894:\n\taddu $v1, $zero, $zero\n\t.L80197898:\n\tbnez $v1, .L801978CC\n\taddu $v0, $zero, $zero\n\tj .L80197948\n\tnop\n\t.L801978A8:\n\tlw $v0, 0x34($s0)\n\tlui $at, %hi(D_801FEBB8)\n\tsw $v0, %lo(D_801FEBB8)($at)\n\tj .L80197898\n\taddiu $v1, $zero, 0x1\n\t.L801978BC:\n\tlui $v0, %hi(func_80197964)\n\taddiu $v0, $v0, %lo(func_80197964)\n\tj .L8019793C\n\tsw $v0, 0x34($s0)\n\t.L801978CC:\n\tlw $v1, 0x154($zero)\n\tlui $v0, 0xCCCC\n\tori $v0, $v0, 0xCCCD\n\tmultu $v1, $v0\n\tlw $s0, 0x150($zero)\n\tmfhi $a2\n\tsrl $v1, $a2, 6\n\tsll $v0, $v1, 2\n\taddu $v0, $v0, $v1\n\tsll $v0, $v0, 4\n\taddu $v1, $s0, $v0\n\tsltu $v0,$s0,$v1\n\tbeqz $v0, .L80197940\n\taddu $a0, $s2, $zero\n\taddu $s1, $v1, $zero\n\t.L80197908:\n\tlw $a0, 0x0($s0)\n\tnop\n\tbeqz $a0, .L8019792C\n\tnop\n\tlui $a1, %hi(D_801FEBC0)\n\tjal func_8018F078\n\taddiu $a1, $a1, %lo(D_801FEBC0)\n\tbeqz $v0, .L801978BC\n\tnop\n\t.L8019792C:\n\taddiu $s0, $s0, 0x50\n\tsltu $v0,$s0,$s1\n\tbnez $v0, .L80197908\n\tnop\n\t.L8019793C:\n\taddu $a0, $s2, $zero\n\t.L80197940:\n\tjal func_80197A68\n\taddu $a1, $s3, $zero\n\t.L80197948:\n\tlw $ra, 0x20($sp)\n\tlw $s3, 0x1C($sp)\n\tlw $s2, 0x18($sp)\n\tlw $s1, 0x14($sp)\n\tlw $s0, 0x10($sp)\n\tjr $ra\n\taddiu $sp, $sp, 0x28\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_801977B8, .-func_801977B8\n"
-);
+void func_801977B8(void)
+{
+    /* event: jr-$t2 dispatch; 8018F078 spin loops (L197860/L197908);
+       80197A68 tail; returns at L197948. */
+    /* jr $t2 -> L197820 / others */
+    if (func_800F53D4() != 0)
+        goto L197820;
+    for (;;) {
+        if (func_800F53D4() == 0)
+            goto L197894;
+        break;
+    }
+L197860:
+    do {
+        func_8018F078();
+    } while (func_800F53D4() == 0);
+    goto L197894;
+L197894:
+    goto L197948;
+L197948:
+    return;
+L197820:
+    if (func_800F53D4() == 0)
+        goto L197894;
+    func_80197A68();
+    return;
+}

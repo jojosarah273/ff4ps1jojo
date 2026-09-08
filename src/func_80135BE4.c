@@ -1,12 +1,26 @@
 #include "common.h"
-__asm__(
-  ".globl func_80135BE4\n"
-  ".type func_80135BE4, @function\n"
-  "func_80135BE4:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x50\n\tlui $a1, %hi(D_800F28D8)\n\taddiu $v0, $a1, %lo(D_800F28D8)\n\tlui $a2, %hi(D_800F28EC)\n\taddiu $v1, $a2, %lo(D_800F28EC)\n\tlui $a3, %hi(D_800F28FC)\n\tlw $t0, %lo(D_800F28D8)($a1)\n\taddiu $a0, $a3, %lo(D_800F28FC)\n\tsw $ra, 0x48($sp)\n\tlw $t1, 0x4($v0)\n\tlw $a1, 0x8($v0)\n\tlw $t2, 0xC($v0)\n\tlw $t3, 0x10($v0)\n\tlw $t4, %lo(D_800F28EC)($a2)\n\tlw $v0, 0x4($v1)\n\tlw $a2, 0x8($v1)\n\tlw $t5, 0xC($v1)\n\tlw $t6, %lo(D_800F28FC)($a3)\n\tlw $v1, 0x4($a0)\n\tlw $a3, 0x8($a0)\n\tlw $t7, 0xC($a0)\n\tlw $a0, %gp_rel(D_8019EDD0)($gp)\n\tsw $t0, 0x10($sp)\n\tsw $t1, 0x14($sp)\n\tsw $a1, 0x18($sp)\n\tsw $t2, 0x1C($sp)\n\tsw $t3, 0x20($sp)\n\tsw $t4, 0x28($sp)\n\tsw $v0, 0x2C($sp)\n\tsw $a2, 0x30($sp)\n\tsw $t5, 0x34($sp)\n\tsw $t6, 0x38($sp)\n\tsw $v1, 0x3C($sp)\n\tsw $a3, 0x40($sp)\n\tbltz $a0, .L80135C78\n\tsw $t7, 0x44($sp)\n\tsw $a0, %gp_rel(D_8019EDE0)($gp)\n\t.L80135C78:\n\tlw $v0, %gp_rel(D_8019EDD4)($gp)\n\tnop\n\tbltz $v0, .L80135C8C\n\tnop\n\tsw $v0, %gp_rel(D_8019EDE4)($gp)\n\t.L80135C8C:\n\tlw $v1, %gp_rel(D_8019EDD8)($gp)\n\taddiu $v0, $zero, -0x1\n\tsw $v0, %gp_rel(D_8019EDD0)($gp)\n\tsw $v0, %gp_rel(D_8019EDD4)($gp)\n\taddiu $v0, $zero, 0x1\n\tbeq $v1, $v0, .L80135D4C\n\tslti $v0, $v1, 0x2\n\tbeqz $v0, .L80135CC0\n\taddiu $v0, $zero, 0x2\n\tbeqz $v1, .L80135CD8\n\tnop\n\tj .L80135DBC\n\tnop\n\t.L80135CC0:\n\tbeq $v1, $v0, .L80135CD8\n\taddiu $v0, $zero, 0x3\n\tbeq $v1, $v0, .L80135D4C\n\tnop\n\tj .L80135DBC\n\tnop\n\t.L80135CD8:\n\tjal func_80135EE4\n\tnop\n\tlw $v0, %gp_rel(D_8019EDD8)($gp)\n\tnop\n\tsll $v0, $v0, 2\n\taddu $v1, $sp, $v0\n\tlw $a0, 0x28($v1)\n\tjal func_8018F0E8\n\tnop\n\taddiu $v1, $zero, 0x1\n\tbne $v0, $v1, .L80135D18\n\tnop\n\tlw $v0, %gp_rel(D_8019EDD8)($gp)\n\tsw $zero, %gp_rel(D_8019EDDC)($gp)\n\tj .L80135DB8\n\taddiu $v0, $v0, 0x1\n\t.L80135D18:\n\tlw $v1, %gp_rel(D_8019EDDC)($gp)\n\tnop\n\tslti $v0, $v1, 0x5\n\tbnez $v0, .L80135D3C\n\tnop\n\tlw $v0, %gp_rel(D_8019EDD8)($gp)\n\tsw $zero, %gp_rel(D_8019EDDC)($gp)\n\tj .L80135DB8\n\taddiu $v0, $v0, 0x2\n\t.L80135D3C:\n\taddiu $v0, $v1, 0x1\n\tsw $v0, %gp_rel(D_8019EDDC)($gp)\n\tj .L80135DBC\n\tnop\n\t.L80135D4C:\n\tjal func_80135DE4\n\tnop\n\taddu $a2, $v0, $zero\n\tbltz $a2, .L80135DBC\n\tnop\n\tlw $v0, %gp_rel(D_8019EDD8)($gp)\n\taddiu $a1, $gp, %gp_rel(D_8019EDD0)\n\tsll $v0, $v0, 2\n\taddu $v1, $sp, $v0\n\tsll $v0, $a2, 2\n\tlw $a0, 0x38($v1)\n\taddu $v1, $sp, $v0\n\tsll $a3, $a0, 2\n\tlw $a0, 0x10($v1)\n\taddu $a1, $a3, $a1\n\tbnez $a0, .L80135DAC\n\tsw $a0, 0x0($a1)\n\taddiu $v0, $gp, %gp_rel(D_8019EDE0)\n\taddu $v0, $a3, $v0\n\tlw $a0, 0x0($v0)\n\taddiu $v1, $zero, 0x1\n\tbne $a0, $v1, .L80135DAC\n\taddiu $v0, $zero, 0x2\n\tsw $v0, 0x0($a1)\n\t.L80135DAC:\n\tlw $v0, %gp_rel(D_8019EDD8)($gp)\n\tnop\n\taddiu $v0, $v0, 0x1\n\t.L80135DB8:\n\tsw $v0, %gp_rel(D_8019EDD8)($gp)\n\t.L80135DBC:\n\tlw $v0, %gp_rel(D_8019EDD8)($gp)\n\tnop\n\tslti $v0, $v0, 0x4\n\tbnez $v0, .L80135DD4\n\tnop\n\tsw $zero, %gp_rel(D_8019EDD8)($gp)\n\t.L80135DD4:\n\tlw $ra, 0x48($sp)\n\tnop\n\tjr $ra\n\taddiu $sp, $sp, 0x50\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_80135BE4, .-func_80135BE4\n"
-);
+void func_80135BE4(void)
+{
+    /* ability: v1/v0 gates pick 80135EE4/8018F0E8 or 80135DE4 rows;
+       v0 latch closes; returns L135DD4. */
+    /* L135C8C: v1/v0 gates -> L135D4C / L135CC0 / L135DBC */
+    if (func_800F53D4() == 0)
+        goto L135CC0;
+    func_80135EE4();
+    func_8018F0E8();
+    /* v0/v1 latch -> L135D18 / L135DB8 */
+    goto L135DB8;
+L135CC0:
+    /* v1/v0 gates -> L135CD8 / L135D4C / L135DBC */
+    func_80135EE4();
+    func_8018F0E8();
+    goto L135DB8;
+L135D4C:
+    func_80135DE4();
+    /* a0/v1 latch -> L135DAC */
+L135DB8:
+    if (func_800F53D4() != 0)
+        goto L135DD4;
+L135DD4:
+    return;
+}
