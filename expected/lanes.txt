@@ -1541,7 +1541,6 @@ modern-asm func_801987B0
 modern-asm func_80198A00
 modern-asm func_800F3B04
 modern-asm func_800F3C3C
-modern-asm func_800F3C6C
 modern-asm func_800F3CC4
 modern-asm func_800F3D48
 modern-asm func_800F40E8
@@ -1726,7 +1725,6 @@ modern-asm func_800FDD28
 modern-asm func_80101788
 modern-asm func_801048EC
 modern-asm func_80109378
-modern-asm func_8011416C
 modern-asm func_801224F8
 modern-asm func_80122518
 modern-asm func_80129AD4
@@ -1769,7 +1767,6 @@ modern-asm func_8018746C
 modern-asm func_801875AC
 modern-asm func_80187A10
 modern-asm func_80187C54
-modern-asm func_80189698
 modern-asm func_80189750
 modern-asm func_80189A90
 modern-asm func_80189F6C

@@ -11,22 +11,22 @@ gcc-2.95.2). That makes a true C decompilation the correct and achievable
 path — the same recipe used by every modern decomp-port.
 
 **Byte-verified coverage of the entire main EXE text: 2516 / 2516.**
-**C-written: 32.5% (818 funcs) — the Phase A mission is the rest.**
+**C-written: 32.8% (826 funcs) — the Phase A mission is the rest.**
 
 ## Phases
 
 | Phase | Goal | State |
 |---|---|---|
 | 0 — Verified disassembly | Full text coverage byte-verified (maspsx lanes, splat, asm-differ) | ✅ done (2516/2516) |
-| A — Complete C decomp | Every function as harness-verified C (byte-match where the compiler reproduces it; runtime-verified where it doesn't) | ▶ in progress (818/2516 C-written, 736 byte-verified) |
+| A — Complete C decomp | Every function as harness-verified C (byte-match where the compiler reproduces it; runtime-verified where it doesn't) | ▶ in progress (826/2516 C-written, 739 byte-verified) |
 | B — Interpretation | Rename/restructure into modern readable C; native host: SDL, stdio assets, no BIOS; native renderer/audio swap | — |
 | C — Expansion | Widescreen, hi-res, new modes, randomizer/mod framework, cross-platform (DC-class portability = plain C) | — |
 
 **Phase A milestones** (regenerated every session by `tools/decomp_status.py`):
 <!-- MILESTONES:BEGIN -->
-- [x] 25% C-written (~629 funcs) — DONE (818 funcs, 32.5%)
-- [ ] 50% C-written (~1258 funcs) (818 so far)
-- [ ] 75% C-written (~1887 funcs) (818 so far)
+- [x] 25% C-written (~629 funcs) — DONE (826 funcs, 32.8%)
+- [ ] 50% C-written (~1258 funcs) (826 so far)
+- [ ] 75% C-written (~1887 funcs) (826 so far)
 - [ ] 100% C-written, with ≥50% byte-verified (matched)
 - [ ] All stubborn functions runtime-verified against the recomp oracle
 <!-- MILESTONES:END -->
@@ -81,12 +81,13 @@ More detail: `PROGRESS.md`. Verification harness: `tools/check_integrity.sh`.
 <!-- STATUS:BEGIN -->
 | state | count | % |
 |---|---|---|
-| byte-verified (matched) | 736 | 29.3% |
-| real-C (match pending) | 82 | 3.3% |
-| asm shell (to do) | 1698 | 67.5% |
+| byte-verified (matched) | 739 | 29.4% |
+| real-C (match pending) | 87 | 3.5% |
+| asm shell (to do) | 1690 | 67.2% |
 | **total** | 2516 | 100% |
-| **C-written** | **818** | **32.5%** |
+| **C-written** | **826** | **32.8%** |
 <!-- STATUS:END -->
+
 
 
 
