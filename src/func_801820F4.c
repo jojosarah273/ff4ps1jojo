@@ -1,12 +1,19 @@
 #include "common.h"
-__asm__(
-  ".globl func_801820F4\n"
-  ".type func_801820F4, @function\n"
-  "func_801820F4:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\tlh $v0, %gp_rel(D_8019EE98)($gp)\n\tlhu $a0, %gp_rel(D_8019EE98)($gp)\n\taddiu $sp, $sp, -0x20\n\tbltz $v0, .L8018225C\n\tsw $ra, 0x18($sp)\n\tlui $v0, %hi(D_801D3A68)\n\taddiu $t6, $v0, %lo(D_801D3A68)\n\taddu $t2, $zero, $zero\n\tlui $v0, %hi(D_801E01C8)\n\taddiu $v0, $v0, %lo(D_801E01C8)\n\tsw $v0, %gp_rel(D_8019EEA8)($gp)\n\taddiu $v0, $v0, 0x400\n\taddiu $a1, $zero, 0x8\n\tsw $v0, %gp_rel(D_8019EEAC)($gp)\n\taddiu $v0, $zero, 0x10\n\tandi $v1, $a0, 0xF\n\tsh $v0, %gp_rel(D_8019EE96)($gp)\n\tsll $v0, $v1, 3\n\taddiu $v0, $v0, 0x200\n\tandi $a0, $a0, 0xF0\n\tsll $v1, $v1, 2\n\taddiu $v1, $v1, 0x280\n\tsh $a0, %gp_rel(D_8019EE92)($gp)\n\tsrl $a0, $a0, 1\n\tsh $v0, %gp_rel(D_8019EE90)($gp)\n\taddiu $v0, $zero, 0x4\n\tsh $a1, %gp_rel(D_8019EE94)($gp)\n\tsh $v1, 0x10($sp)\n\tsh $a0, 0x12($sp)\n\tsh $v0, 0x14($sp)\n\tsh $a1, 0x16($sp)\n\t.L80182170:\n\taddiu $t5, $t6, 0x80\n\tandi $v0, $t2, 0x1\n\tsll $t4, $v0, 3\n\tandi $v1, $t2, 0x2\n\tsll $t3, $v1, 6\n\taddu $t0, $zero, $zero\n\taddiu $a3, $zero, 0x7\n\t.L8018218C:\n\taddu $a2, $zero, $zero\n\taddu $t1, $t0, $zero\n\taddu $a1, $t0, $t6\n\t.L80182198:\n\tlhu $v0, 0x0($a1)\n\tlw $v1, %gp_rel(D_8019EEA8)($gp)\n\taddiu $a1, $a1, 0x2\n\taddu $v1, $v1, $t1\n\taddu $v1, $v1, $t4\n\taddu $v1, $v1, $t3\n\taddu $v1, $v1, $a2\n\taddiu $a2, $a2, 0x1\n\tsrl $v0, $v0, 8\n\tslti $a0, $a2, 0x8\n\tbnez $a0, .L80182198\n\tsb $v0, 0x0($v1)\n\taddiu $a3, $a3, -0x1\n\tbgez $a3, .L8018218C\n\taddiu $t0, $t0, 0x10\n\taddiu $v0, $t2, 0x1\n\tandi $t2, $v0, 0xFFFF\n\tsltiu $v1, $t2, 0x4\n\tbnez $v1, .L80182170\n\taddu $t6, $t5, $zero\n\tlw $a1, %gp_rel(D_8019EEA8)($gp)\n\taddiu $a0, $gp, %gp_rel(D_8019EE90)\n\tjal func_80194640\n\tnop\n\taddu $a3, $zero, $zero\n\taddu $t2, $zero, $zero\n\t.L80182200:\n\taddiu $t1, $a3, 0x1\n\tsll $t0, $a3, 3\n\tsll $a3, $a3, 5\n\t.L8018220C:\n\tsll $v1, $t2, 1\n\taddiu $a1, $t2, 0x1\n\tlw $a0, %gp_rel(D_8019EEAC)($gp)\n\tlw $v0, %gp_rel(D_8019EEA8)($gp)\n\taddu $a0, $t0, $a0\n\taddu $a0, $a0, $t2\n\taddu $v0, $a3, $v0\n\taddu $v1, $v1, $v0\n\tandi $t2, $a1, 0xFFFF\n\tlbu $a2, 0x0($v1)\n\tsltiu $v0, $t2, 0x8\n\tbnez $v0, .L8018220C\n\tsb $a2, 0x0($a0)\n\taddu $a3, $t1, $zero\n\tslti $v0, $a3, 0x8\n\tbnez $v0, .L80182200\n\taddu $t2, $zero, $zero\n\tlw $a1, %gp_rel(D_8019EEAC)($gp)\n\tjal func_80194640\n\taddiu $a0, $sp, 0x10\n\t.L8018225C:\n\tlw $ra, 0x18($sp)\n\tnop\n\tjr $ra\n\taddiu $sp, $sp, 0x20\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_801820F4, .-func_801820F4\n"
-);
+void func_801820F4(void)
+{
+    /* battle anim: 80194640 row + v0 spin loops L18220C/L182200. */
+    func_80194640();
+    for (;;) {
+        if (func_800F53D4() != 0)
+            goto L18220C;
+        if (func_800F53D4() != 0)
+            continue;
+        break;
+    }
+    goto L18225C;
+L18220C:
+    func_80194640();
+    return;
+L18225C:
+    return;
+}
