@@ -1,12 +1,22 @@
 #include "common.h"
-__asm__(
-  ".globl func_8016EE10\n"
-  ".type func_8016EE10, @function\n"
-  "func_8016EE10:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x10($sp)\n\tjal func_800F9644\n\taddiu $a0, $zero, 0x10\n\tjal func_800F9660\n\taddiu $a0, $zero, 0x20\n\tlui $a2, %hi(D_800D0000)\n\tlui $v1, %hi(D_8019ED4C)\n\tlw $v1, %lo(D_8019ED4C)($v1)\n\tlui $a0, %hi(D_8019ED68)\n\tlw $a0, %lo(D_8019ED68)($a0)\n\tlhu $v0, 0x0($v1)\n\tlbu $a1, 0x0($a0)\n\taddu $v0, $v0, $a2\n\tsb $a1, %lo(D_800D0000)($v0)\n\tlui $v1, %hi(D_8019ED4C)\n\tlw $v1, %lo(D_8019ED4C)($v1)\n\tnop\n\tlhu $v0, 0x0($v1)\n\tnop\n\taddiu $v0, $v0, -0x1\n\tjal func_800F926C\n\tsh $v0, 0x0($v1)\n\tjal func_800F9298\n\tnop\n\tjal func_800F71DC\n\taddiu $a0, $zero, 0x8\n\tjal func_800F8D00\n\taddiu $a0, $zero, 0xA1\n\tjal func_800F71DC\n\tori $a0, $zero, 0xFFF2\n\tjal func_800F8D00\n\taddiu $a0, $zero, 0xA3\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x1\n\tjal func_800F81E8\n\taddiu $a0, $zero, 0x64\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x80\n\tjal func_800F81E8\n\taddiu $a0, $zero, 0x6A\n\tjal func_800F654C\n\taddiu $a0, $zero, 0xA\n\tjal func_800F81E8\n\taddiu $a0, $zero, 0x6B\n\tjal func_8016EF88\n\tnop\n\tlw $ra, 0x10($sp)\n\tnop\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_8016EE10, .-func_8016EE10\n"
-);
+void func_8016EE10(void)
+{
+    /* shop rows: 0xA1/0xA3 windows, 0x64/0x6A/0x6B texts, 8016EF88
+       row; linear. */
+    func_800F9644(0x10);
+    func_800F9660(0x20);
+    func_800F926C();
+    func_800F9298();
+    func_800F71DC(8);
+    func_800F8D00(0xA1);
+    func_800F71DC();
+    func_800F8D00(0xA3);
+    func_800F654C(1);
+    func_800F81E8(0x64);
+    func_800F654C(0x80);
+    func_800F81E8(0x6A);
+    func_800F654C(0xA);
+    func_800F81E8(0x6B);
+    func_8016EF88();
+    return;
+}
