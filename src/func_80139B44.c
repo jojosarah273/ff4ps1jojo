@@ -1,12 +1,35 @@
 #include "common.h"
-__asm__(
-  ".globl func_80139B44\n"
-  ".type func_80139B44, @function\n"
-  "func_80139B44:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x10($sp)\n\tjal func_80139CA4\n\tnop\n\tjal func_80139694\n\tnop\n\tjal func_800F6564\n\taddiu $a0, $zero, 0x1BAF\n\tjal func_800F6434\n\taddiu $a0, $zero, 0x2\n\tbnez $v0, .L80139B8C\n\tnop\n\tjal func_800F6B68\n\taddiu $a0, $zero, 0x1340\n\tjal func_800F63F8\n\tnop\n\tj .L80139B9C\n\tnop\n\t.L80139B8C:\n\tjal func_800F6B68\n\taddiu $a0, $zero, 0x1440\n\tjal func_800F63F8\n\tnop\n\t.L80139B9C:\n\tjal func_800F53D4\n\tnop\n\tbnez $v0, .L80139BFC\n\tnop\n\tjal func_800F5574\n\taddiu $a0, $zero, 0xCE\n\tjal func_800F53C0\n\tnop\n\tbnez $v0, .L80139BFC\n\tnop\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x1B39\n\tjal func_800F971C\n\tnop\n\t.L80139BD4:\n\tjal func_80139C0C\n\tnop\n\tjal func_800F61E8\n\tnop\n\tjal func_800F5574\n\taddiu $a0, $zero, 0x5\n\tjal func_800F53D4\n\tnop\n\tbeqz $v0, .L80139BD4\n\tnop\n\t.L80139BFC:\n\tlw $ra, 0x10($sp)\n\tnop\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_80139B44, .-func_80139B44\n"
-);
+void func_80139B44(void)
+{
+    /* ability rows: 80139CA4/80139694 preps, 0x1BAF text, 0x1340/
+       0x1440 gates, 80139C0C row; loop L139BD4 on 5574(5). */
+    func_80139CA4();
+    func_80139694();
+    func_800F6564(0x1BAF);
+    if (func_800F6434(2) != 0)
+        goto L139B8C;
+    func_800F6B68(0x1340);
+    func_800F63F8();
+    goto L139B9C;
+L139B8C:
+    func_800F6B68(0x1440);
+    func_800F63F8();
+L139B9C:
+    if (func_800F53D4() != 0)
+        return;
+    func_800F5574(0xCE);
+    if (func_800F53C0() != 0)
+        return;
+    func_800F8188(0x1B39);
+    func_800F971C();
+L139bd4:
+    for (;;) {
+        func_80139C0C();
+        func_800F61E8();
+        func_800F5574(5);
+        if (func_800F53D4() == 0)
+            continue;
+        break;
+    }
+    return;
+}
