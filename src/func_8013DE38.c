@@ -1,4 +1,6 @@
 #include "common.h"
+extern u8 *D_8019ED50;
+extern u8 *D_8019ED68;
 void func_8013DE38(void)
 {
     func_800F9330();
@@ -7,17 +9,18 @@ void func_8013DE38(void)
         goto L3DFC0;
     func_800F6630(1);
     func_800F5410();
-    if (func_800F4008(0xF) != 0)
+    func_800F4008(0xF);
+    if (*D_8019ED50 != 0)
         goto L3DEB8;
-    goto L3DF38;
+    /* branch-skip: v1 = *D_8019ED68 | 2 (dead) */
 L3DEB8:
     if (func_800F53FC() == 0)
         goto L3DF38;
     func_800F5410();
     func_800F3F38(func_800F3C3C());
-    if (func_800F53C0() != 0)
-        goto L3DFA0;
-    goto L3E0B0;
+    if (func_800F53C0() == 0)
+        goto L3E0B0;
+    goto L3DFA0;
 L3DF38:
     func_800F5410();
     func_800F3F38(func_800F3C3C());
