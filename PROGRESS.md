@@ -725,7 +725,17 @@ Open items queued:
 Archived expected objects were once back-filled for ALL built functions;
 2 strays (func_80191530, func_80197A78) were never verified. Authoritative
 count = asm/nonmatchings/main/*.s removed = 2516 - remaining. Commits (#)
-≠ functions matched (#): matches are batched per commit.### HEADLESS GRIND — 75.0% -> 78.0% (1887 -> 1962, in progress)
+≠ functions matched (#): matches are batched per commit.### HEADLESS GRIND — 78.0% -> 80.0% (1962 -> 2013)
+**MILESTONE: 80.0% C-WRITTEN (2013/2516) REACHED** — the "keep going" run
+passes its fourth boundary. +51 this leg: 80140598 (14-entry battle
+magic-judge jr-a0 table), the battle-loop set 80145168/801450B8/801449D0,
+shop/stat blocks 80173ED8/80176C6C/80175CB4/8016ADDC/801700BC, options
+twins 8015F1D0/8015F6F0/801605D0/8015E910, the anim chains 80178F20/
+80184AF8/80179670/801847D8, and ~40 more tiny cells. Callgraph well past
+19k edges. Next boundary: 90% (~2264).
+
+
+### HEADLESS GRIND — 75.0% -> 78.0% (1887 -> 1962, in progress)
 Post-75% leg: +75 functions across the low band. Highlights: 8015D1C8
 (6-entry jr-a0 options table), the battle-loop trio 80145168/801450B8/
 801449D0, options twins 8016097C/801607F4/8015E910/8015E758/8015D310,

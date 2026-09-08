@@ -164,3 +164,10 @@ Three big deep-pass monsters + ~620 tiny shells remain before 100%.
 HEADLESS GRIND LEG 4 — 78.0% C-WRITTEN (1962/2516)
 Since 75%: +75 more functions. All pushed. Next boundary: 80% (2013).
 ================================================================================
+
+================================================================================
+HEADLESS GRIND LEG 5 — MILESTONE 80.0% C-WRITTEN (2013/2516)
+1962 -> 2013 (+51). All pushed; README/PROGRESS/callgraph refreshed at every
+boundary. The 80% checkbox flips. Remaining: the 3 deep-pass monsters
+(80108458/80186810/800FB430) + ~500 tiny shells before 90%.
+================================================================================
