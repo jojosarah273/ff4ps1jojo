@@ -1,12 +1,13 @@
 #include "common.h"
-__asm__(
-  ".globl func_80176F88\n"
-  ".type func_80176F88, @function\n"
-  "func_80176F88:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x28\n\taddu $a0, $zero, $zero\n\tsw $ra, 0x24($sp)\n\tsw $s4, 0x20($sp)\n\tsw $s3, 0x1C($sp)\n\tsw $s2, 0x18($sp)\n\tsw $s1, 0x14($sp)\n\tjal func_800F3C3C\n\tsw $s0, 0x10($sp)\n\taddiu $a0, $zero, 0x300\n\tjal func_800F3B04\n\taddu $s0, $v0, $zero\n\tlui $a0, (0x128000 >> 16)\n\tori $a0, $a0, (0x128000 & 0xFFFF)\n\taddu $a1, $zero, $zero\n\tjal func_800F3B9C\n\taddu $s2, $v0, $zero\n\tlui $a0, (0x138000 >> 16)\n\tori $a0, $a0, (0x138000 & 0xFFFF)\n\taddu $a1, $zero, $zero\n\tjal func_800F3B9C\n\taddu $s4, $v0, $zero\n\taddu $s3, $v0, $zero\n\tlbu $v0, 0x4F($s0)\n\tlbu $a2, 0x50($s0)\n\tsll $a3, $v0, 2\n\tsll $s1, $a2, 2\n\tsb $a2, 0x30($s0)\n\t.L80176FF8:\n\taddu $a2, $a3, $s4\n\tlbu $v1, 0x7660($a2)\n\tsb $zero, 0x29($s0)\n\tsb $v1, 0x28($s0)\n\tlbu $v0, 0x7661($a2)\n\tlbu $v1, 0x4D($s0)\n\taddu $a1, $s1, $s2\n\taddu $v0, $v0, $v1\n\tsb $v0, 0x1($a1)\n\tlbu $a0, 0x4C($s0)\n\tlbu $v1, 0x4B($s0)\n\tlbu $v0, 0x28($s0)\n\tsll $a0, $a0, 8\n\tor $v1, $v1, $a0\n\taddu $v0, $v0, $v1\n\tandi $v0, $v0, 0x1FF\n\tsrl $v1, $v0, 8\n\tsb $v0, 0x28($s0)\n\tsb $v1, 0x29($s0)\n\tsb $v0, 0x0($a1)\n\tlbu $v1, 0x7662($a2)\n\tnop\n\tsb $v1, 0x2($a1)\n\tlbu $v1, 0x52($s0)\n\tnop\n\tbeqz $v1, .L80177078\n\tnop\n\tlbu $v0, 0x7663($a2)\n\tnop\n\tandi $a2, $v0, 0xF1\n\tj .L8017707C\n\tor $a2, $v1, $a2\n\t.L80177078:\n\tlbu $a2, 0x7663($a2)\n\t.L8017707C:\n\tnop\n\tsb $a2, 0x3($a1)\n\tlui $v0, %hi(D_8019ED54)\n\tlw $v0, %lo(D_8019ED54)($v0)\n\tjal func_800F9330\n\tsh $a3, 0x0($v0)\n\tlbu $v1, 0x30($s0)\n\taddiu $s1, $s1, 0x4\n\tandi $a2, $v1, 0x3\n\taddu $a0, $a2, $s3\n\tsrl $v1, $v1, 2\n\tsb $a2, 0x2E($s0)\n\tsb $v1, 0x2C($s0)\n\tlbu $v0, 0x5B0C($a0)\n\tandi $a2, $a2, 0xFF\n\tbeqz $a2, .L801770E0\n\tsb $v0, 0x2D($s0)\n\t.L801770C0:\n\tlbu $v0, 0x29($s0)\n\tlbu $v1, 0x2E($s0)\n\tsll $v0, $v0, 2\n\taddiu $v1, $v1, -0x1\n\tsb $v1, 0x2E($s0)\n\tandi $v1, $v1, 0xFF\n\tbnez $v1, .L801770C0\n\tsb $v0, 0x29($s0)\n\t.L801770E0:\n\tlbu $a3, 0x2C($s0)\n\tlbu $v1, 0x2D($s0)\n\taddu $a1, $a3, $s2\n\tlbu $a0, 0x200($a1)\n\tlbu $v0, 0x29($s0)\n\tand $a2, $a0, $v1\n\tor $v0, $a2, $v0\n\tjal func_800F95A0\n\tsb $v0, 0x200($a1)\n\tandi $s1, $s1, 0xFFFF\n\tlui $v1, %hi(D_8019ED54)\n\tlw $v1, %lo(D_8019ED54)($v1)\n\tlbu $v0, 0x30($s0)\n\tlhu $a3, 0x0($v1)\n\tlbu $v1, 0x4F($s0)\n\taddiu $v0, $v0, 0x1\n\tsb $v0, 0x30($s0)\n\tlbu $v0, 0x50($s0)\n\taddiu $v1, $v1, 0x1\n\taddiu $v0, $v0, 0x1\n\tsb $v0, 0x50($s0)\n\taddiu $v0, $a3, 0x4\n\tsb $v1, 0x4F($s0)\n\tlbu $v1, 0x51($s0)\n\tnop\n\taddiu $v1, $v1, -0x1\n\tsb $v1, 0x51($s0)\n\tandi $v1, $v1, 0xFF\n\tbnez $v1, .L80176FF8\n\tandi $a3, $v0, 0xFFFF\n\tlw $ra, 0x24($sp)\n\tlw $s4, 0x20($sp)\n\tlw $s3, 0x1C($sp)\n\tlw $s2, 0x18($sp)\n\tlw $s1, 0x14($sp)\n\tlw $s0, 0x10($sp)\n\tjr $ra\n\taddiu $sp, $sp, 0x28\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_80176F88, .-func_80176F88\n"
-);
+void func_80176F88(void)
+{
+    /* battle anim: 3C3C(0x300)/3B04/3B9Cx2 gates; 9330 row then
+       95A0 close. */
+    func_800F3C3C();
+    func_800F3B04(0x300);
+    func_800F3B9C();
+    func_800F3B9C();
+    func_800F9330();
+    func_800F95A0();
+    return;
+}

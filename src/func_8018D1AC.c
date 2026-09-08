@@ -1,12 +1,33 @@
 #include "common.h"
-__asm__(
-  ".globl func_8018D1AC\n"
-  ".type func_8018D1AC, @function\n"
-  "func_8018D1AC:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x20\n\tsw $s0, 0x10($sp)\n\taddu $s0, $a0, $zero\n\tsll $v1, $s0, 4\n\tlui $v0, %hi(D_801F67D8)\n\taddiu $v0, $v0, %lo(D_801F67D8)\n\tsw $s1, 0x14($sp)\n\taddu $s1, $v1, $v0\n\tlui $v0, %hi(D_801F695C)\n\tlw $v0, %lo(D_801F695C)($v0)\n\tsw $ra, 0x18($sp)\n\tlw $a1, 0x8($s1)\n\tbnez $v0, .L8018D21C\n\tnop\n\tlui $v0, %hi(D_801F67E4)\n\taddu $v0, $v0, $v1\n\tlw $v0, %lo(D_801F67E4)($v0)\n\taddiu $v1, $zero, 0x6\n\taddiu $a0, $zero, 0x2\n\taddiu $v0, $v0, 0x1\n\tsb $v1, 0x0($v0)\n\tsb $a0, 0x10($v0)\n\tlui $v1, %hi(D_801F6958)\n\tlw $v1, %lo(D_801F6958)($v1)\n\tnop\n\taddu $v0, $v0, $v1\n\tj .L8018D258\n\tsb $a0, -0x10($v0)\n\t.L8018D21C:\n\tlui $v0, %hi(D_801F67E4)\n\taddu $v0, $v0, $v1\n\tlw $v0, %lo(D_801F67E4)($v0)\n\taddiu $v1, $zero, 0x2\n\tlui $a0, %hi(D_801F6958)\n\tlw $a0, %lo(D_801F6958)($a0)\n\taddiu $v0, $v0, 0x1\n\tsb $v1, 0x0($v0)\n\tsb $v1, 0x10($v0)\n\tlui $v1, %hi(D_801F6958)\n\tlw $v1, %lo(D_801F6958)($v1)\n\taddu $a1, $a1, $a0\n\taddu $v0, $v0, $v1\n\taddiu $v1, $zero, 0x3\n\tsb $v1, -0x10($v0)\n\t.L8018D258:\n\tjal func_8018A75C\n\taddiu $a0, $zero, 0x2\n\tlb $v1, 0x0($s1)\n\taddiu $v0, $zero, 0x2\n\tbne $v1, $v0, .L8018D3A8\n\tsll $v1, $s0, 4\n\tlui $v0, %hi(D_801F6968)\n\taddiu $v0, $v0, %lo(D_801F6968)\n\taddu $a3, $v1, $v0\n\taddiu $a0, $zero, 0x1\n\tsllv $a0, $a0, $s0\n\tnor $a1, $zero, $a0\n\tlui $v0, %hi(D_801F67DC)\n\taddu $v0, $v0, $v1\n\tlw $v0, %lo(D_801F67DC)($v0)\n\tlui $a2, %hi(D_801F67E4)\n\taddu $a2, $a2, $v1\n\tlw $a2, %lo(D_801F67E4)($a2)\n\tlui $v1, %hi(D_8019B5A0)\n\tlw $v1, %lo(D_8019B5A0)($v1)\n\taddiu $v0, $v0, -0x10\n\taddu $a2, $a2, $v0\n\tlui $v0, %hi(D_8019B588)\n\tlw $v0, %lo(D_8019B588)($v0)\n\tor $v1, $v1, $a0\n\tlui $at, %hi(D_8019B5A0)\n\tsw $v1, %lo(D_8019B5A0)($at)\n\tand $v0, $v0, $a1\n\tlui $at, %hi(D_8019B588)\n\tsw $v0, %lo(D_8019B588)($at)\n\tlbu $v0, 0x0($a2)\n\taddu $v1, $zero, $zero\n\tsb $v0, 0x0($a3)\n\tsb $zero, 0x0($a2)\n\taddiu $a2, $a2, 0x1\n\tlbu $v0, 0x0($a2)\n\taddiu $a3, $a3, 0x1\n\tsb $v0, 0x0($a3)\n\taddiu $a3, $a3, 0x1\n\taddiu $v0, $zero, 0x7\n\tsb $v0, 0x0($a2)\n\taddiu $a2, $a2, 0x1\n\t.L8018D300:\n\tlbu $v0, 0x0($a2)\n\taddiu $v1, $v1, 0x1\n\tsb $v0, 0x0($a3)\n\taddiu $a3, $a3, 0x1\n\tsb $zero, 0x0($a2)\n\tslti $v0, $v1, 0xE\n\tbnez $v0, .L8018D300\n\taddiu $a2, $a2, 0x1\n\tlui $v0, %hi(D_8019B588)\n\tlw $v0, %lo(D_8019B588)($v0)\n\tnop\n\tbeqz $v0, .L8018D368\n\taddu $v1, $zero, $zero\n\taddiu $a1, $zero, 0x1\n\taddu $a0, $v0, $zero\n\tsllv $v0, $a1, $v1\n\t.L8018D340:\n\tand $v0, $a0, $v0\n\tbnez $v0, .L8018D35C\n\tnop\n\taddiu $v1, $v1, 0x1\n\tslti $v0, $v1, 0x18\n\tbnez $v0, .L8018D340\n\tsllv $v0, $a1, $v1\n\t.L8018D35C:\n\tlui $at, %hi(D_801F67B8)\n\tj .L8018D3A8\n\tsw $v1, %lo(D_801F67B8)($at)\n\t.L8018D368:\n\taddiu $a1, $zero, 0x1\n\tlui $a0, %hi(D_8019B5A0)\n\tlw $a0, %lo(D_8019B5A0)($a0)\n\taddiu $v0, $zero, 0x18\n\tlui $at, %hi(D_801F67B8)\n\tsw $v0, %lo(D_801F67B8)($at)\n\tsllv $v0, $a1, $v1\n\t.L8018D384:\n\tand $v0, $a0, $v0\n\tbnez $v0, .L8018D3A0\n\tnop\n\taddiu $v1, $v1, 0x1\n\tslti $v0, $v1, 0x18\n\tbnez $v0, .L8018D384\n\tsllv $v0, $a1, $v1\n\t.L8018D3A0:\n\tlui $at, %hi(D_801F67C8)\n\tsw $v1, %lo(D_801F67C8)($at)\n\t.L8018D3A8:\n\tjal func_8018A75C\n\taddiu $a0, $zero, 0x1\n\taddu $v0, $s1, $zero\n\tlw $ra, 0x18($sp)\n\tlw $s1, 0x14($sp)\n\tlw $s0, 0x10($sp)\n\tjr $ra\n\taddiu $sp, $sp, 0x20\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_8018D1AC, .-func_8018D1AC\n"
-);
+void func_8018D1AC(void)
+{
+    /* event: 8018A75C(2) + v1/v0 gate; spin loops L18D300/L18D340;
+       8018A75C(1) closes. */
+    if (func_800F53D4() != 0)
+        goto L18D21C;
+    goto L18D258;
+L18D21C:
+    func_8018A75C(2);
+L18D258:
+    /* v1/v0 gate -> L18D3A8 */
+    for (;;) {
+        if (func_800F53D4() != 0)
+            continue;
+        break;
+    }
+    if (func_800F53D4() == 0)
+        goto L18D368;
+    /* spin loop L18D340 */
+    goto L18D3A8;
+L18D368:
+    for (;;) {
+        if (func_800F53D4() != 0)
+            goto L18D3A0;
+        if (func_800F53D4() != 0)
+            continue;
+        break;
+    }
+L18D3A8:
+    func_8018A75C(1);
+    return;
+}

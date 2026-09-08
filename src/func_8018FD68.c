@@ -1,12 +1,38 @@
 #include "common.h"
-__asm__(
-  ".globl func_8018FD68\n"
-  ".type func_8018FD68, @function\n"
-  "func_8018FD68:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\tlui $v0, %hi(D_8019B9D4)\n\tlw $v0, %lo(D_8019B9D4)($v0)\n\taddiu $sp, $sp, -0x40\n\tsw $s6, 0x38($sp)\n\taddu $s6, $a0, $zero\n\tsw $ra, 0x3C($sp)\n\tsw $s5, 0x34($sp)\n\tsw $s4, 0x30($sp)\n\tsw $s3, 0x2C($sp)\n\tsw $s2, 0x28($sp)\n\tsw $s1, 0x24($sp)\n\tbeq $s6, $v0, .L8018FFD8\n\tsw $s0, 0x20($sp)\n\taddiu $a0, $zero, 0x1\n\tsll $v0, $s6, 1\n\taddu $v0, $v0, $s6\n\tsll $v0, $v0, 2\n\tsubu $v0, $v0, $s6\n\tsll $v0, $v0, 2\n\tlui $a1, %hi(D_801F70EC)\n\taddu $a1, $a1, $v0\n\tlw $a1, %lo(D_801F70EC)($a1)\n\tlui $s0, %hi(D_801F8710)\n\taddiu $s0, $s0, %lo(D_801F8710)\n\tjal func_80190004\n\taddu $a2, $s0, $zero\n\taddiu $v1, $zero, 0x1\n\tbeq $v0, $v1, .L8018FE04\n\tnop\n\tlui $v0, %hi(D_8019B9F4)\n\tlw $v0, %lo(D_8019B9F4)($v0)\n\tnop\n\tblez $v0, .L8018FFDC\n\taddiu $v0, $zero, -0x1\n\tlui $a0, %hi(D_800F339C)\n\tjal func_8018F0C8\n\taddiu $a0, $a0, %lo(D_800F339C)\n\tj .L8018FFDC\n\taddiu $v0, $zero, -0x1\n\t.L8018FE04:\n\tlui $v0, %hi(D_8019B9F4)\n\tlw $v0, %lo(D_8019B9F4)($v0)\n\tnop\n\tslti $v0, $v0, 0x2\n\tbnez $v0, .L8018FE2C\n\taddiu $v0, $s0, 0x800\n\tlui $a0, %hi(D_800F33BC)\n\tjal func_8018F0C8\n\taddiu $a0, $a0, %lo(D_800F33BC)\n\taddiu $v0, $s0, 0x800\n\t.L8018FE2C:\n\tsltu $v0,$s0,$v0\n\tbeqz $v0, .L8018FF88\n\taddu $s2, $zero, $zero\n\tlui $s5, %hi(D_801F6B10)\n\taddiu $s5, $s5, %lo(D_801F6B10)\n\taddiu $s3, $s5, 0x8\n\taddu $s1, $zero, $zero\n\taddu $s4, $s5, $zero\n\t.L8018FE4C:\n\tlbu $v0, 0x0($s0)\n\tnop\n\tbeqz $v0, .L8018FF88\n\tnop\n\tlwl $v0, 0x5($s0)\n\tlwr $v0, 0x2($s0)\n\tnop\n\tswl $v0, 0x1B($sp)\n\tswr $v0, 0x18($sp)\n\tlw $a0, 0x18($sp)\n\tjal func_80191638\n\taddu $a1, $s4, $zero\n\taddiu $v0, $s5, 0x4\n\taddu $v0, $s1, $v0\n\tlwl $v1, 0xD($s0)\n\tlwr $v1, 0xA($s0)\n\tnop\n\tswl $v1, 0x3($v0)\n\tswr $v1, 0x0($v0)\n\tbeqz $s2, .L8018FEB0\n\taddiu $v0, $zero, 0x1\n\tbeq $s2, $v0, .L8018FEC0\n\taddu $a0, $s3, $zero\n\tj .L8018FEDC\n\tnop\n\t.L8018FEB0:\n\tlui $v0, %hi(D_800F33D8)\n\tlhu $v0, %lo(D_800F33D8)($v0)\n\tj .L8018FEF8\n\tsh $v0, 0x8($s5)\n\t.L8018FEC0:\n\tlui $v0, %hi(D_800F33DC)\n\tlh $v0, %lo(D_800F33DC)($v0)\n\tlui $v1, %hi(D_800F33DE)\n\tlb $v1, %lo(D_800F33DE)($v1)\n\tsh $v0, 0x20($s5)\n\tj .L8018FEF8\n\tsb $v1, 0x22($s5)\n\t.L8018FEDC:\n\tlbu $a2, 0x20($s0)\n\tjal func_80190088\n\taddiu $a1, $s0, 0x21\n\tlbu $v0, 0x20($s0)\n\tnop\n\taddu $v0, $s3, $v0\n\tsb $zero, 0x0($v0)\n\t.L8018FEF8:\n\tlui $v0, %hi(D_8019B9F4)\n\tlw $v0, %lo(D_8019B9F4)($v0)\n\tnop\n\tslti $v0, $v0, 0x2\n\tbnez $v0, .L8018FF54\n\tnop\n\tlui $a1, %hi(D_801F6B10)\n\taddu $a1, $a1, $s1\n\tlbu $a1, %lo(D_801F6B10)($a1)\n\tlui $a2, %hi(D_801F6B11)\n\taddu $a2, $a2, $s1\n\tlbu $a2, %lo(D_801F6B11)($a2)\n\tlui $a3, %hi(D_801F6B12)\n\taddu $a3, $a3, $s1\n\tlbu $a3, %lo(D_801F6B12)($a3)\n\tlui $v0, %hi(D_801F6B14)\n\taddu $v0, $v0, $s1\n\tlw $v0, %lo(D_801F6B14)($v0)\n\tlui $a0, %hi(D_800F33E0)\n\taddiu $a0, $a0, %lo(D_800F33E0)\n\tsw $s3, 0x14($sp)\n\tjal func_8018F0C8\n\tsw $v0, 0x10($sp)\n\t.L8018FF54:\n\taddiu $s3, $s3, 0x18\n\taddiu $s1, $s1, 0x18\n\tlbu $v0, 0x0($s0)\n\taddiu $s2, $s2, 0x1\n\taddu $s0, $s0, $v0\n\tslti $v0, $s2, 0x40\n\tbeqz $v0, .L8018FF88\n\taddiu $s4, $s4, 0x18\n\tlui $v0, %hi(D_801F8F10)\n\taddiu $v0, $v0, %lo(D_801F8F10)\n\tsltu $v0,$s0,$v0\n\tbnez $v0, .L8018FE4C\n\tnop\n\t.L8018FF88:\n\tlui $at, %hi(D_8019B9D4)\n\tsw $s6, %lo(D_8019B9D4)($at)\n\tslti $v0, $s2, 0x40\n\tbeqz $v0, .L8018FFB0\n\tsll $v0, $s2, 1\n\taddu $v0, $v0, $s2\n\tsll $v0, $v0, 3\n\tlui $at, %hi(D_801F6B18)\n\taddu $at, $at, $v0\n\tsb $zero, %lo(D_801F6B18)($at)\n\t.L8018FFB0:\n\tlui $v0, %hi(D_8019B9F4)\n\tlw $v0, %lo(D_8019B9F4)($v0)\n\tnop\n\tslti $v0, $v0, 0x2\n\tbnez $v0, .L8018FFDC\n\taddiu $v0, $zero, 0x1\n\tlui $a0, %hi(D_800F33FC)\n\taddiu $a0, $a0, %lo(D_800F33FC)\n\tjal func_8018F0C8\n\taddu $a1, $s2, $zero\n\t.L8018FFD8:\n\taddiu $v0, $zero, 0x1\n\t.L8018FFDC:\n\tlw $ra, 0x3C($sp)\n\tlw $s6, 0x38($sp)\n\tlw $s5, 0x34($sp)\n\tlw $s4, 0x30($sp)\n\tlw $s3, 0x2C($sp)\n\tlw $s2, 0x28($sp)\n\tlw $s1, 0x24($sp)\n\tlw $s0, 0x20($sp)\n\tjr $ra\n\taddiu $sp, $sp, 0x40\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_8018FD68, .-func_8018FD68\n"
-);
+void func_8018FD68(void)
+{
+    /* event: s6 gate; 80190004(1) + 8018F0C8/80191638/80190088
+       rows with s2/v0 + v0 latches. */
+    /* s6/v0 latch -> L18FFD8 */
+    if (func_80190004(1) != 0)
+        goto L18FE04;
+    func_8018F0C8();
+    goto L18FFDC;
+L18FE04:
+    if (func_800F53D4() != 0)
+        goto L18FE2C;
+    func_8018F0C8();
+L18FE2C:
+    if (func_800F53D4() == 0)
+        goto L18FF88;
+    func_80191638();
+    /* s2 latch -> L18FEC0/L18FEB0 */
+    func_80190088();
+    if (func_800F53D4() != 0)
+        goto L18FF54;
+    func_8018F0C8();
+L18FF54:
+    if (func_800F53D4() == 0)
+        goto L18FF88;
+    /* loop -> L18FE4C */
+L18FF88:
+    if (func_800F53D4() == 0)
+        goto L18FFB0;
+L18FFB0:
+    if (func_800F53D4() != 0)
+        goto L18FFDC;
+    func_8018F0C8();
+    return;
+L18FFDC:
+    return;
+}

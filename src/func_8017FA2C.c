@@ -1,12 +1,13 @@
 #include "common.h"
-__asm__(
-  ".globl func_8017FA2C\n"
-  ".type func_8017FA2C, @function\n"
-  "func_8017FA2C:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x30\n\tsw $s4, 0x28($sp)\n\taddu $s4, $a0, $zero\n\tlui $a0, (0x80012000 >> 16)\n\tori $a0, $a0, (0x80012000 & 0xFFFF)\n\tsw $s1, 0x1C($sp)\n\taddiu $s1, $gp, %gp_rel(D_8019EE90)\n\tsw $s3, 0x24($sp)\n\tandi $s3, $a1, 0xFFFF\n\tsw $s2, 0x20($sp)\n\tandi $s2, $a2, 0xFFFF\n\taddiu $v0, $zero, 0x80\n\taddiu $v1, $zero, 0x8\n\tsh $v0, %gp_rel(D_8019EE94)($gp)\n\taddiu $v0, $s3, 0x80\n\tsh $v0, 0x10($sp)\n\taddiu $v0, $zero, 0x40\n\tsh $v1, %gp_rel(D_8019EE96)($gp)\n\taddiu $v1, $zero, 0x4\n\tsh $v0, 0x14($sp)\n\tlui $v0, %hi(D_801E01C8)\n\taddiu $v0, $v0, %lo(D_801E01C8)\n\tsw $ra, 0x2C($sp)\n\tsw $s0, 0x18($sp)\n\tsh $s3, %gp_rel(D_8019EE90)($gp)\n\tsh $s2, %gp_rel(D_8019EE92)($gp)\n\tsh $s2, 0x12($sp)\n\tsh $v1, 0x16($sp)\n\tsw $v0, %gp_rel(D_8019EEA8)($gp)\n\tsw $a0, %gp_rel(D_8019EEAC)($gp)\n\tsh $zero, %gp_rel(D_8019EE9C)($gp)\n\t.L8017FAA8:\n\tlh $v0, %gp_rel(D_8019EE9C)($gp)\n\tsh $zero, %gp_rel(D_8019EE9A)($gp)\n\tsll $v0, $v0, 12\n\taddu $t1, $s4, $v0\n\t.L8017FAB8:\n\taddu $v1, $zero, $zero\n\taddiu $t2, $t1, 0x80\n\taddu $a2, $zero, $zero\n\t.L8017FAC4:\n\taddiu $t0, $v1, 0x1\n\tsll $a3, $v1, 8\n\tsll $v0, $v1, 4\n\taddu $a1, $v0, $t1\n\t.L8017FAD4:\n\tlhu $a0, 0x0($a1)\n\taddiu $a1, $a1, 0x2\n\tlh $v1, %gp_rel(D_8019EE9A)($gp)\n\tlw $v0, %gp_rel(D_8019EEA8)($gp)\n\tsll $v1, $v1, 3\n\taddu $v0, $a3, $v0\n\taddu $v1, $v1, $v0\n\taddu $v1, $v1, $a2\n\taddiu $a2, $a2, 0x1\n\tsrl $a0, $a0, 8\n\tslti $v0, $a2, 0x8\n\tbnez $v0, .L8017FAD4\n\tsb $a0, 0x0($v1)\n\taddu $v1, $t0, $zero\n\tslti $v0, $v1, 0x8\n\tbnez $v0, .L8017FAC4\n\taddu $a2, $zero, $zero\n\tlhu $v0, %gp_rel(D_8019EE9A)($gp)\n\tnop\n\taddiu $v0, $v0, 0x1\n\tsh $v0, %gp_rel(D_8019EE9A)($gp)\n\tsll $v0, $v0, 16\n\tsra $v0, $v0, 16\n\tslti $v0, $v0, 0x20\n\tbnez $v0, .L8017FAB8\n\taddu $t1, $t2, $zero\n\taddu $a0, $s1, $zero\n\tlw $a1, %gp_rel(D_8019EEA8)($gp)\n\tlh $v0, %gp_rel(D_8019EE9C)($gp)\n\tsh $s3, %gp_rel(D_8019EE90)($gp)\n\tsll $v0, $v0, 3\n\taddu $v0, $s2, $v0\n\tsh $v0, %gp_rel(D_8019EE92)($gp)\n\tjal func_80194640\n\taddu $s0, $zero, $zero\n\taddu $a2, $zero, $zero\n\t.L8017FB64:\n\taddiu $t1, $s0, 0x1\n\tsll $t0, $s0, 7\n\tsll $a3, $s0, 9\n\t.L8017FB70:\n\tsll $v1, $a2, 1\n\tlw $a1, %gp_rel(D_8019EEAC)($gp)\n\tlw $v0, %gp_rel(D_8019EEA8)($gp)\n\taddu $a1, $t0, $a1\n\taddu $a1, $a1, $a2\n\taddu $v0, $a3, $v0\n\taddu $v1, $v1, $v0\n\taddiu $a2, $a2, 0x1\n\tlbu $a0, 0x0($v1)\n\tslti $v0, $a2, 0x80\n\tbnez $v0, .L8017FB70\n\tsb $a0, 0x0($a1)\n\taddu $s0, $t1, $zero\n\tslti $v0, $s0, 0x4\n\tbnez $v0, .L8017FB64\n\taddu $a2, $zero, $zero\n\taddiu $a0, $sp, 0x10\n\tlh $v0, %gp_rel(D_8019EE9C)($gp)\n\tlw $a1, %gp_rel(D_8019EEAC)($gp)\n\tsll $v0, $v0, 2\n\taddu $v0, $s2, $v0\n\tjal func_80194640\n\tsh $v0, 0x12($sp)\n\tlhu $v1, %gp_rel(D_8019EE9C)($gp)\n\tnop\n\taddiu $v1, $v1, 0x1\n\tsh $v1, %gp_rel(D_8019EE9C)($gp)\n\tsll $v1, $v1, 16\n\tsra $v1, $v1, 16\n\tslti $v1, $v1, 0x8\n\tbnez $v1, .L8017FAA8\n\taddiu $v1, $zero, -0x1\n\tsh $v1, %gp_rel(D_8019EE98)($gp)\n\tlui $v0, %hi(D_801A0A10)\n\taddiu $v0, $v0, %lo(D_801A0A10)\n\taddiu $s1, $v0, 0x10\n\taddiu $s0, $zero, 0x3\n\t.L8017FC04:\n\taddiu $a0, $zero, 0x1\n\taddu $a1, $zero, $zero\n\taddu $a2, $s3, $zero\n\tjal func_801971A8\n\taddu $a3, $s2, $zero\n\tsh $v0, 0x0($s1)\n\taddiu $s0, $s0, -0x1\n\tbgez $s0, .L8017FC04\n\taddiu $s1, $s1, 0x2\n\tjal func_8017F9FC\n\tnop\n\tlw $ra, 0x2C($sp)\n\tlw $s4, 0x28($sp)\n\tlw $s3, 0x24($sp)\n\tlw $s2, 0x20($sp)\n\tlw $s1, 0x1C($sp)\n\tlw $s0, 0x18($sp)\n\tjr $ra\n\taddiu $sp, $sp, 0x30\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_8017FA2C, .-func_8017FA2C\n"
-);
+void func_8017FA2C(void)
+{
+    /* battle anim: v0 spin loops with 2x 80194640; closes
+       801971A8(1)/8017F9FC. */
+    /* spin loops L17FAD4/L17FAC4/L17FAB8 */
+    func_80194640();
+    /* spin loops L17FB70/L17FB64 */
+    func_80194640();
+    func_801971A8(1);
+    func_8017F9FC();
+    return;
+}
