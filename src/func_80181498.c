@@ -1,12 +1,22 @@
 #include "common.h"
-__asm__(
-  ".globl func_80181498\n"
-  ".type func_80181498, @function\n"
-  "func_80181498:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x38\n\tsw $s5, 0x2C($sp)\n\taddu $s5, $a0, $zero\n\tlui $v0, (0x80013800 >> 16)\n\tori $v0, $v0, (0x80013800 & 0xFFFF)\n\taddu $a3, $zero, $zero\n\tsw $s3, 0x24($sp)\n\tlui $s3, (0x10000 >> 16)\n\tsw $s4, 0x28($sp)\n\tlui $s4, (0x10000 >> 16)\n\taddiu $v1, $zero, 0x20\n\taddiu $a0, $zero, 0x10\n\tsw $ra, 0x30($sp)\n\tsw $s2, 0x20($sp)\n\tsw $s1, 0x1C($sp)\n\tsw $s0, 0x18($sp)\n\tsh $a1, %gp_rel(D_8019EE90)($gp)\n\tsh $a2, %gp_rel(D_8019EE92)($gp)\n\tsh $v1, %gp_rel(D_8019EE94)($gp)\n\tsh $a0, %gp_rel(D_8019EE96)($gp)\n\tsw $v0, %gp_rel(D_8019EEA8)($gp)\n\t.L801814EC:\n\taddu $v1, $zero, $zero\n\tsll $v0, $a3, 5\n\tsll $s2, $a3, 2\n\tlui $s1, (0x10000 >> 16)\n\taddu $s0, $s5, $v0\n\t.L80181500:\n\tlbu $a0, 0x0($s0)\n\tlbu $a1, 0x1($s0)\n\tlbu $a2, 0x10($s0)\n\tlbu $a3, 0x11($s0)\n\taddiu $s0, $s0, 0x2\n\tlw $v0, %gp_rel(D_8019EEA8)($gp)\n\tsll $v1, $v1, 6\n\taddu $v0, $v0, $v1\n\taddu $v0, $v0, $s2\n\tjal func_801824D8\n\tsw $v0, 0x10($sp)\n\taddu $v1, $s1, $zero\n\tsra $v1, $v1, 16\n\tslti $v0, $v1, 0x8\n\tbnez $v0, .L80181500\n\taddu $s1, $s1, $s4\n\taddu $v1, $s3, $zero\n\tsra $a3, $v1, 16\n\tslti $v0, $a3, 0x10\n\tbnez $v0, .L801814EC\n\taddu $s3, $s3, $s4\n\taddu $a3, $zero, $zero\n\tlui $s4, (0x10000 >> 16)\n\taddu $v1, $zero, $zero\n\t.L80181560:\n\tsll $v0, $a3, 5\n\tsll $s2, $a3, 2\n\taddiu $s3, $a3, 0x1\n\tlui $s1, (0x10000 >> 16)\n\taddiu $v0, $v0, 0x200\n\taddu $s0, $s5, $v0\n\t.L80181578:\n\tlbu $a0, 0x0($s0)\n\tlbu $a1, 0x1($s0)\n\tlbu $a2, 0x10($s0)\n\tlbu $a3, 0x11($s0)\n\taddiu $s0, $s0, 0x2\n\tlw $v0, %gp_rel(D_8019EEA8)($gp)\n\tsll $v1, $v1, 6\n\taddu $v0, $v0, $v1\n\taddu $v0, $v0, $s2\n\taddiu $v0, $v0, 0x200\n\tjal func_801824D8\n\tsw $v0, 0x10($sp)\n\taddu $v1, $s1, $zero\n\tsra $v1, $v1, 16\n\tslti $v0, $v1, 0x8\n\tbnez $v0, .L80181578\n\taddu $s1, $s1, $s4\n\tsll $v0, $s3, 16\n\tsra $a3, $v0, 16\n\tslti $v1, $a3, 0x10\n\tbnez $v1, .L80181560\n\taddu $v1, $zero, $zero\n\tlw $a1, %gp_rel(D_8019EEA8)($gp)\n\taddiu $a0, $gp, %gp_rel(D_8019EE90)\n\tjal func_80194640\n\tnop\n\tlw $ra, 0x30($sp)\n\tlw $s5, 0x2C($sp)\n\tlw $s4, 0x28($sp)\n\tlw $s3, 0x24($sp)\n\tlw $s2, 0x20($sp)\n\tlw $s1, 0x1C($sp)\n\tlw $s0, 0x18($sp)\n\tjr $ra\n\taddiu $sp, $sp, 0x38\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_80181498, .-func_80181498\n"
-);
+void func_80181498(void)
+{
+    /* battle anim: 801824D8 spin loops (L181500/L181578), 80194640
+       closes. */
+    do {
+        func_801824D8();
+    } while (func_800F53D4() != 0);
+    for (;;) {
+        if (func_800F53D4() != 0)
+            goto L181578;
+        break;
+    }
+    func_80194640();
+    return;
+L181578:
+    do {
+        func_801824D8();
+    } while (func_800F53D4() != 0);
+    func_80194640();
+    return;
+}

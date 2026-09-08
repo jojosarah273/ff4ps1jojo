@@ -1,12 +1,24 @@
 #include "common.h"
-__asm__(
-  ".globl func_8019592C\n"
-  ".type func_8019592C, @function\n"
-  "func_8019592C:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x20\n\taddu $t0, $a0, $zero\n\tsw $ra, 0x1C($sp)\n\tsw $s2, 0x18($sp)\n\tsw $s1, 0x14($sp)\n\tsw $s0, 0x10($sp)\n\tlh $v1, 0x4($t0)\n\tlhu $a0, 0x4($t0)\n\tbltz $v1, .L80195980\n\taddu $t1, $a1, $zero\n\tlui $v0, %hi(D_8019DB58)\n\tlh $v0, %lo(D_8019DB58)($v0)\n\tnop\n\taddiu $v0, $v0, -0x1\n\tslt $v0, $v0, $v1\n\tlui $v1, %hi(D_8019DB58)\n\tlhu $v1, %lo(D_8019DB58)($v1)\n\tbnez $v0, .L80195984\n\taddiu $v0, $v1, -0x1\n\tj .L80195984\n\taddu $v0, $a0, $zero\n\t.L80195980:\n\taddu $v0, $zero, $zero\n\t.L80195984:\n\tlh $v1, 0x6($t0)\n\tlhu $a0, 0x6($t0)\n\tbltz $v1, .L801959C0\n\tsh $v0, 0x4($t0)\n\tlui $v0, %hi(D_8019DB5A)\n\tlh $v0, %lo(D_8019DB5A)($v0)\n\tnop\n\taddiu $v0, $v0, -0x1\n\tslt $v0, $v0, $v1\n\tlui $v1, %hi(D_8019DB5A)\n\tlhu $v1, %lo(D_8019DB5A)($v1)\n\tbnez $v0, .L801959C4\n\taddiu $v1, $v1, -0x1\n\tj .L801959C4\n\taddu $v1, $a0, $zero\n\t.L801959C0:\n\taddu $v1, $zero, $zero\n\t.L801959C4:\n\tlhu $v0, 0x0($t0)\n\tnop\n\tandi $v0, $v0, 0x3F\n\tbnez $v0, .L801959EC\n\tsh $v1, 0x6($t0)\n\tlhu $v0, 0x4($t0)\n\tnop\n\tandi $v0, $v0, 0x3F\n\tbeqz $v0, .L80195AC4\n\tlui $v0, (0x5FFFFFF >> 16)\n\t.L801959EC:\n\tlui $a2, (0xFFFFFF >> 16)\n\tori $a2, $a2, (0xFFFFFF & 0xFFFF)\n\tlui $a0, (0xE4FFFFFF >> 16)\n\tori $a0, $a0, (0xE4FFFFFF & 0xFFFF)\n\tlui $a3, (0x3FFFFFF >> 16)\n\tlui $a1, %hi(D_801FD358)\n\taddiu $a1, $a1, %lo(D_801FD358)\n\tlui $s0, %hi(D_801FD380)\n\taddiu $s0, $s0, %lo(D_801FD380)\n\tand $v0, $s0, $a2\n\tlui $v1, (0x8000000 >> 16)\n\tor $v0, $v0, $v1\n\tlui $s1, (0xE3000000 >> 16)\n\tlui $s2, (0xE5000000 >> 16)\n\tsw $v0, 0x0($a1)\n\tlui $v0, (0xE6000000 >> 16)\n\tand $a2, $t1, $a2\n\tlui $v1, (0x60000000 >> 16)\n\tor $a2, $a2, $v1\n\tsw $v0, 0x10($a1)\n\tlui $v0, %hi(D_8019DC5C)\n\tlw $v0, %lo(D_8019DC5C)($v0)\n\tlui $v1, (0xE1000000 >> 16)\n\tsw $s1, 0x4($a1)\n\tsw $a0, 0x8($a1)\n\tsw $s2, 0xC($a1)\n\tlw $a0, 0x0($v0)\n\tsrl $v0, $t1, 31\n\tsll $v0, $v0, 10\n\tor $v0, $v0, $v1\n\tsw $a2, 0x18($a1)\n\tandi $a0, $a0, 0x7FF\n\tor $a0, $a0, $v0\n\tsw $a0, 0x14($a1)\n\tlw $v0, 0x0($t0)\n\tori $a3, $a3, (0x3FFFFFF & 0xFFFF)\n\tsw $v0, 0x1C($a1)\n\tlw $v0, 0x4($t0)\n\taddiu $a0, $zero, 0x3\n\tsw $a3, 0x0($s0)\n\tjal func_801960BC\n\tsw $v0, 0x20($a1)\n\taddiu $a0, $zero, 0x4\n\tor $v0, $v0, $s1\n\tjal func_801960BC\n\tsw $v0, 0x4($s0)\n\taddiu $a0, $zero, 0x5\n\tlui $v1, (0xE4000000 >> 16)\n\tor $v0, $v0, $v1\n\tjal func_801960BC\n\tsw $v0, 0x8($s0)\n\tor $v0, $v0, $s2\n\tj .L80195B34\n\tsw $v0, 0xC($s0)\n\t.L80195AC4:\n\tori $v0, $v0, (0x5FFFFFF & 0xFFFF)\n\tlui $v1, (0xFFFFFF >> 16)\n\tori $v1, $v1, (0xFFFFFF & 0xFFFF)\n\tlui $a2, %hi(D_801FD358)\n\taddiu $a2, $a2, %lo(D_801FD358)\n\tsw $v0, 0x0($a2)\n\tlui $v0, (0xE6000000 >> 16)\n\tand $v1, $t1, $v1\n\tlui $a1, (0x2000000 >> 16)\n\tsw $v0, 0x4($a2)\n\tlui $v0, %hi(D_8019DC5C)\n\tlw $v0, %lo(D_8019DC5C)($v0)\n\tor $v1, $v1, $a1\n\tlw $a0, 0x0($v0)\n\tsrl $v0, $t1, 31\n\tsll $v0, $v0, 10\n\tsw $v1, 0xC($a2)\n\tlui $v1, (0xE1000000 >> 16)\n\tor $v0, $v0, $v1\n\tandi $a0, $a0, 0x7FF\n\tor $a0, $a0, $v0\n\tsw $a0, 0x8($a2)\n\tlw $v0, 0x0($t0)\n\tnop\n\tsw $v0, 0x10($a2)\n\tlw $v0, 0x4($t0)\n\tnop\n\tsw $v0, 0x14($a2)\n\t.L80195B34:\n\tlui $a0, %hi(D_801FD358)\n\tjal func_80196074\n\taddiu $a0, $a0, %lo(D_801FD358)\n\taddu $v0, $zero, $zero\n\tlw $ra, 0x1C($sp)\n\tlw $s2, 0x18($sp)\n\tlw $s1, 0x14($sp)\n\tlw $s0, 0x10($sp)\n\tjr $ra\n\taddiu $sp, $sp, 0x20\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_8019592C, .-func_8019592C\n"
-);
+void func_8019592C(void)
+{
+    /* event: v0 gates; 801960BC rows (3/4/5); 80196074 tail. */
+    if (func_800F53D4() != 0)
+        goto L1959C4;
+    if (func_800F53D4() == 0)
+        goto L195AC4;
+L1959C4:
+    if (func_800F53D4() != 0)
+        goto L1959EC;
+    goto L195AC4;
+L1959EC:
+    func_801960BC(3);
+    func_801960BC(4);
+    func_801960BC(5);
+    goto L195B34;
+L195AC4:
+    func_80196074();
+    return;
+L195B34:
+    func_80196074();
+    return;
+}
