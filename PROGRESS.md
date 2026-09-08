@@ -314,6 +314,15 @@ NTSC-U + text guard armed + mod FMV skip all present.
   50% target at 1258: +75 remaining — next session: mapper-family sweep 2 +
   hand batch + the 2-way ifelse resurrection.
   (Progress rails auto-refresh the README at every commit.)
+### 2025-09-08 — BIG-FUNCTION CAMPAIGN session 2 (55% crossed)
+1355 -> 1385 C-written (53.9% -> 55.0%)+. Strategy shift as directed: moved
+off the tiny pool (mostly jr-t2 syscall trampolines, not real logic) onto
+MID-LARGE functions (30-60 rows) analyzed via structure/pattern reading:
+prologue register clusters ($s0-$s7 slot allocation), call-frame shapes,
+queue-poll idioms, actin/actor-system (0x14-byte structs), mapper chains,
+menu-gates, spinners, state-machines (busy-flag + cross-slot copies),
+byte-pack + mult products, signed math tails. Pool now: 100+ = 440,
+61-100 = 266, 41-60 = 229 remain — these are the game engine.
 ### 2025-09-08 — HEADLESS GRIND session (continuation, long run)
 1203 -> 1355 C-written (47.8% -> 53.9%) in one continuous autonomous session.
 ~25+ commits pushed; README auto-refreshed each; PROGRESS logged.
