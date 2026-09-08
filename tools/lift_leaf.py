@@ -423,8 +423,15 @@ def main():
     for n in names:
         c = lift(n, mode_b)
         if c is None:
-            failed += 1
-            continue
+            c2 = None
+            try:
+                c2 = lift_2way(n)
+            except Exception:
+                c2 = None
+            if c2 is None:
+                failed += 1
+                continue
+            c = c2
         (SRC / f"{n}.c").write_text(c)
         lifted += 1
     print(f"lift_leaf done: lifted={lifted} failed={failed}")
@@ -432,3 +439,237 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# ===== 2-way value-selection lifter (per-arm register simulation) =====
+_SIM_ALU = re.compile(r"(\w+),\s*(\w+),\s*(.+)")
+_SIM_GP = re.compile(r"%gp_rel\((\w+)\)\(gp\)")
+_SIM_LO = re.compile(r"%lo\((\w+)\)\((\w+)\)")
+_SIM_OFF = re.compile(r"(\w+),\s*([\w\-]+)\((\w+)\)")
+
+
+def _sim_rows(rows, lo, hi, R, outs, gsizes):
+    """Simulate straight-line rows [lo,hi) on register dict R."""
+    i = lo
+    while i < hi:
+        insn = rows[i]
+        if insn.startswith(".L"):
+            i += 1
+            continue
+        m = insn.split(None, 1)
+        op, a = m[0], (m[1] if len(m) > 1 else "").replace("$", "")
+        if op in ("nop", "jr", "j", "beq", "bne", "beqz", "bnez", "blez",
+                  "bgtz", "bltz", "bgez"):
+            i += 1
+            continue
+        if op == "lui":
+            m32 = re.match(r"(\w+),\s*\(0x([0-9A-F]+) >> 16\)", a)
+            if m32:
+                R[m32.group(1)] = f"0x{int(m32.group(2),16) & 0xFFFF0000:X}"
+            else:
+                return None
+            i += 1
+            continue
+        if op.startswith("l") and op != "lui":
+            if "%gp_rel" in a:
+                dst = re.match(r"(\w+),\s*%gp_rel", a).group(1)
+                sym = _SIM_GP.search(a).group(1)
+                gsizes.setdefault(sym, 32 if op in ("lw",) else 8)
+                R[dst] = sym
+            elif "%lo(" in a:
+                lm = _SIM_LO.search(a)
+                dst = re.match(r"(\w+),\s*%lo", a).group(1)
+                sym = lm.group(1)
+                gsizes.setdefault(sym, 32)
+                R[dst] = sym + "[0]"
+            else:
+                mm = _SIM_OFF.match(a)
+                if not mm:
+                    return None
+                dst, off, base = mm.group(1), mm.group(2), mm.group(3)
+                bx = R.get(base, "?")
+                if bx == "?":
+                    return None
+                if op in ("lbu", "lb", "lhu", "lh"):
+                    cast = {"lbu": "u8", "lb": "s8", "lhu": "u16", "lh": "s16"}[op]
+                    R[dst] = f"({cast})*(volatile u8*)({bx} + {off})"
+                else:
+                    R[dst] = f"*((volatile u32*)({bx} + {off}))"
+            i += 1
+            continue
+        if op in ("sw", "sb", "sh"):
+            return None                     # stores inside arms: bail
+        ma = _SIM_ALU.match(a)
+        if op in ("addiu", "addu", "subu", "and", "or", "xor", "andi", "ori",
+                  "sll", "srl", "sra", "slt", "sltu", "move", "xori"):
+            if not ma:
+                return None
+            d, s1, s2 = ma.group(1), ma.group(2), ma.group(3)
+            e1 = R.get(s1)
+            if e1 is None:
+                return None
+            if s2.lstrip("-").lower().startswith("0x") or s2.lstrip("-").isdigit():
+                e2 = s2
+            else:
+                e2 = R.get(s2)
+                if e2 is None:
+                    return None
+            expr = {"addiu": f"({e1} + {e2})", "addu": f"({e1} + {e2})",
+                    "subu": f"({e1} - {e2})", "and": f"({e1} & {e2})",
+                    "or": f"({e1} | {e2})", "xor": f"({e1} ^ {e2})",
+                    "andi": f"({e1} & {e2})", "ori": f"({e1} | {e2})",
+                    "xori": f"({e1} ^ {e2})", "sll": f"({e1} << {e2})",
+                    "srl": f"((u32)({e1}) >> {e2})",
+                    "sra": f"((s32)({e1}) >> {e2})",
+                    "slt": f"((s32)({e1}) < (s32)({e2}))",
+                    "sltu": f"((u32)({e1}) < (u32)({e2}))",
+                    "move": e1}.get(op)
+            if expr is None:
+                return None
+            R[d] = expr
+            i += 1
+            continue
+        return None
+    return True
+
+
+def lift_2way(name):
+    """value-selection 2-way: [pre] bCOND mid; arm1; j last; mid: arm2;
+    last: epilogue store. Both arms register-only. Emits if/else value pick."""
+    rows = rows_of(name)
+    if len(rows) > 70:
+        return None
+    label_i = {r[:-1]: k for k, r in enumerate(rows) if r.startswith(".L")}
+    branch = None
+    for k, insn in enumerate(rows):
+        m = insn.split(None, 1)
+        if m and m[0] in ("beq", "bne", "beqz", "bnez", "blez", "bgtz", "bltz", "bgez"):
+            a = (m[1] if len(m) > 1 else "").replace("$", "")
+            mm = re.match(r"(\w+),\s*(\w+),\s*(\.L[0-9A-F]+)", a)
+            tgt = None
+            if mm:
+                tgt = mm.group(3)
+            else:
+                mm = re.match(r"(\w+),\s*(\.L[0-9A-F]+)", a)
+                if mm:
+                    tgt = mm.group(2)
+            if tgt and branch is None:
+                branch = (k, m[0], mm, tgt)
+            elif tgt:
+                return None                     # multi-branch: bail
+    if branch is None:
+        return None
+    bi, bop, bmm, tmid = branch
+    if tmid not in label_i:
+        return None
+    mi = label_i[tmid]
+    # find j row to last label after the branch
+    last_lab = [r[:-1] for r in rows if r.startswith(".L")][-1]
+    ji = None
+    for k in range(bi + 1, len(rows)):
+        if rows[k].startswith("j ") and (last_lab in rows[k]):
+            ji = k
+            break
+    if ji is None:
+        return None
+    li = label_i[last_lab]
+    # arm rows (skip branch slot row: bi+1; it executes on both paths -> pre-tail)
+    pre_hi = bi + 1                    # the slot row: runs both paths
+    arm1 = list(range(bi + 2, ji + 1))          # include j's slot row
+    arm2 = list(range(mi + 1, li))
+    gsizes = {}
+    R1 = {}
+    if not _sim_rows(rows, 0, bi + 2, R1, [], gsizes):
+        return None
+    R2 = dict(R1)
+    if not _sim_rows(rows, bi + 2, ji + 1, R1, [], gsizes):
+        return None
+    if not _sim_rows(rows, mi + 1, li, R2, [], gsizes):
+        return None
+    # epilogue store
+    epi = rows[li + 1:]
+    store = None
+    for e in epi:
+        if e.startswith(("sb", "sh", "sw")):
+            store = e
+            break
+    if store is None or any(e.startswith(("jal", "j ")) for e in epi):
+        return None
+    sm = store.split(None, 1)
+    sa = (sm[1] if len(sm) > 1 else "").replace("$", "")
+    if "%gp_rel" in sa:
+        dst = _SIM_GP.search(sa).group(1)
+        src = re.match(r"(\w+),\s*%gp_rel", sa).group(1)
+    else:
+        mm = re.match(r"(\w+),\s*[\w\-]+\((\w+)\)", sa)
+        if not mm:
+            return None
+        src, base = mm.group(1), mm.group(2)
+        bex = R1.get(base)
+        if not bex or not re.match(r"D_[0-9A-F]+$", bex):
+            return None
+        dst = bex
+    e1, e2 = R1.get(src), R2.get(src)
+    if e1 is None or e2 is None:
+        return None
+    # condition
+    if bop == "beq":
+        c_expr = f"({R1.get(bmm.group(1), bmm.group(1))} == \
+                   {R1.get(bmm.group(2), bmm.group(2))})"
+    elif bop == "bne":
+        c_expr = f"({R1.get(bmm.group(1), bmm.group(1))} != \
+                   {R1.get(bmm.group(2), bmm.group(2))})"
+    elif bop in ("bnez", "blez", "bgtz", "bltz", "bgez"):
+        rs = bmm.group(1)
+        x = R1.get(rs, rs)
+        zc = {"bnez": f"({x} != 0)", "blez": f"((s32)({x}) <= 0)",
+              "bgtz": f"((s32)({x}) > 0)", "bltz": f"((s32)({x}) < 0)",
+              "bgez": f"((s32)({x}) >= 0)"}[bop]
+        c_expr = zc
+    elif bop == "beqz":
+        c_expr = f"({R1.get(bmm.group(1), bmm.group(1))} == 0)"
+    else:
+        return None
+    cast = "u8" if store.startswith("sb") else "u32"
+    n1 = f"({cast})({e1})"
+    n2 = f"({cast})({e2})"
+    c = (f'#include "common.h"\n'
+         f'extern {cast} *{dst};\n'
+         f'void {name}(void)\n{{\n'
+         f'    if ({c_expr})\n'
+         f'        *{dst} = {n1};\n'
+         f'    else\n'
+         f'        *{dst} = {n2};\n'
+         f'}}\n')
+    return c
+    sm = store.split(None, 1)
+    sa = (sm[1] if len(sm) > 1 else "").replace("$", "")
+    if "%gp_rel" in sa:
+        dst = _SIM_GP.search(sa).group(1)
+        src = re.match(r"(\w+),\s*%gp_rel", sa).group(1)
+        e1, e2 = R1.get(src), R2.get(src)
+        if e1 is None or e2 is None:
+            return None
+        # condition
+        if bop in ("beq", "bne") and bmm:
+            rs, rt = bmm.group(1), R.get if False else None
+            rt = R1.get(bmm.group(2), bmm.group(2))
+            c_expr = f"({R1.get(bmm.group(1), bmm.group(1))} == {rt})" if bop == "beq" else \
+                     f"({R1.get(bmm.group(1), bmm.group(1))} != {rt})"
+        else:
+            rs = re.match(r"(\w+),\s*(\.L|)", sa)  # placeholder
+            c_expr = f"({R1.get(bmm.group(1), bmm.group(1))} != 0)" if bop == "bnez" else \
+                     f"({R1.get(bmm.group(1), bmm.group(1))} == 0)"
+        gsizes.setdefault(dst, 8 if store.startswith("sb") else 32)
+        dline = f"extern {'u8' if gsizes.get(dst) == 8 else 'u32'} *{dst};"
+        # arm1 = taken path value, arm2 = else value
+        c = (f'#include "common.h"\n{dline}\n'
+             f'void {name}(void)\n{{\n'
+             f'    u8 v = ({e1}) if false else 0;\n'
+             f'    if ({c_expr}) {{\n'
+             f'        *{dst} = (u8)({e1});\n'
+             f'    }} else {{\n'
+             f'        *{dst} = (u8)({e2});\n'
+             f'    }}\n'
+             f'}}\n')
+        return c
+    return None
