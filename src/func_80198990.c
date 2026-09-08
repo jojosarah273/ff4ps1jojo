@@ -1,40 +1,13 @@
 #include "common.h"
-__asm__(
-  ".globl func_80198990\n"
-  ".type func_80198990, @function\n"
-  "func_80198990:\n"
-  "\taddiu $sp, $sp, -0x18\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $v0, $zero, 0x21\n"
-  "\tsw $ra, 0x10($sp)\n"
-  "\tlui $at, %hi(D_8019ECF4)\n"
-  "\tsw $a0, %lo(D_8019ECF4)($at)\n"
-  "\tlui $at, %hi(D_8019ECF8)\n"
-  "\tbeq $a0, $v0, .LXC4\n"
-  "\tsw $a1, %lo(D_8019ECF8)($at)\n"
-  "\taddiu $v0, $zero, 0x22\n"
-  "\tbeq $a0, $v0, .LXD4\n"
-  "\tlui $a0, (0xF4000002 >> 16)\n"
-  "\tj .LXE4\n"
-  "\tnop\n"
-  ".LXC4:\n"
-  "\tlui $a0, (0xF4000002 >> 16)\n"
-  "\tori $a0, $a0, (0xF4000002 & 0xFFFF)\n"
-  "\tj .LXDC\n"
-  "\taddiu $a1, $zero, 0x301\n"
-  ".LXD4:\n"
-  "\tori $a0, $a0, (0xF4000002 & 0xFFFF)\n"
-  "\taddiu $a1, $zero, 0x302\n"
-  ".LXDC:\n"
-  "\tjal func_80197648\n"
-  "\tnop\n"
-  ".LXE4:\n"
-  "\tlw $ra, 0x10($sp)\n"
-  "\taddu $v0, $zero, $zero\n"
-  "\tjr $ra\n"
-  "\taddiu $sp, $sp, 0x18\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_80198990, .-func_80198990\n"
-);
+extern u32 *D_8019ECF4;
+extern u32 *D_8019ECF8;
+u32 func_80198990(u32 a0, u32 a1)
+{
+    *D_8019ECF4 = a0;
+    *D_8019ECF8 = a1;
+    if (a0 == 0x21)
+        func_80197648(0xF4000002, 0x301);
+    else if (a0 == 0x22)
+        func_80197648(0xF4000002, 0x302);
+    return 0;
+}
