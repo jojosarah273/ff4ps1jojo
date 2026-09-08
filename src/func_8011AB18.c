@@ -1,12 +1,52 @@
 #include "common.h"
-__asm__(
-  ".globl func_8011AB18\n"
-  ".type func_8011AB18, @function\n"
-  "func_8011AB18:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x10($sp)\n\tjal func_800F9200\n\tnop\n\tjal func_800F6630\n\taddiu $a0, $zero, 0xCA\n\tjal func_800F6434\n\taddiu $a0, $zero, 0x202\n\tbnez $v0, .L8011AB50\n\tnop\n\tjal func_800FEC74\n\tnop\n\tj .L8011AB78\n\tnop\n\t.L8011AB50:\n\tjal func_800F6630\n\taddiu $a0, $zero, 0x80\n\tjal func_800F6434\n\taddiu $a0, $zero, 0x2\n\tbnez $v0, .L8011AB78\n\tnop\n\tjal func_800F654C\n\taddu $a0, $zero, $zero\n\tjal func_800FD914\n\tnop\n\t.L8011AB78:\n\tjal func_800F93DC\n\tnop\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x1700\n\tjal func_800F6434\n\taddiu $a0, $zero, 0x202\n\tbnez $v0, .L8011ABA8\n\tnop\n\tjal func_800FB09C\n\tnop\n\tj .L8011AC00\n\tnop\n\t.L8011ABA8:\n\tjal func_800F5574\n\taddiu $a0, $zero, 0x1\n\tjal func_800F53D4\n\tnop\n\tbeqz $v0, .L8011ABD0\n\tnop\n\tjal func_800FB160\n\tnop\n\tj .L8011AC00\n\tnop\n\t.L8011ABD0:\n\tjal func_800F5574\n\taddiu $a0, $zero, 0x2\n\tjal func_800F53D4\n\tnop\n\tbeqz $v0, .L8011ABF8\n\tnop\n\tjal func_800FB224\n\tnop\n\tj .L8011AC00\n\tnop\n\t.L8011ABF8:\n\tjal func_800FAA04\n\tnop\n\t.L8011AC00:\n\tjal func_800F6630\n\taddiu $a0, $zero, 0xCA\n\tjal func_800F6434\n\taddiu $a0, $zero, 0x202\n\tbnez $v0, .L8011AC3C\n\tlui $a0, %hi(D_801CFD68)\n\taddiu $a0, $a0, %lo(D_801CFD68)\n\taddiu $a1, $zero, 0x200\n\taddu $a2, $zero, $zero\n\tjal func_8017F9A8\n\taddu $a3, $zero, $zero\n\tjal func_800FED3C\n\tnop\n\tj .L8011AC44\n\tnop\n\t.L8011AC3C:\n\tjal func_800F62BC\n\taddiu $a0, $zero, 0xCA\n\t.L8011AC44:\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x81\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x4200\n\tlw $ra, 0x10($sp)\n\tnop\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_8011AB18, .-func_8011AB18\n"
-);
+void func_8011AB18(void)
+{
+    /* shop main: 0xCA window + 0x1700 gate picks the buy (800FEC74/
+       800FD914/800FB09C/800FB160/800FB224/800FAA04) sub-rows; tail
+       via 8017F9A8/800FED3C or close 0x81/0x4200. */
+    func_800F9200();
+    func_800F6630(0xCA);
+    if (func_800F6434(0x202) != 0)
+        goto L11AB50;
+    func_800FEC74();
+    goto L11AB78;
+L11AB50:
+    func_800F6630(0x80);
+    if (func_800F6434(2) != 0)
+        goto L11AB78;
+    func_800F654C();
+    func_800FD914();
+L11AB78:
+    func_800F93DC();
+    func_800F8188(0x1700);
+    if (func_800F6434(0x202) != 0)
+        goto L11ABA8;
+    func_800FB09C();
+    goto L11AC00;
+L11ABA8:
+    func_800F5574(1);
+    if (func_800F53D4() == 0)
+        goto L11ABD0;
+    func_800FB160();
+    goto L11AC00;
+L11ABD0:
+    func_800F5574(2);
+    if (func_800F53D4() == 0)
+        goto L11ABF8;
+    func_800FB224();
+    goto L11AC00;
+L11ABF8:
+    func_800FAA04();
+L11AC00:
+    func_800F6630(0xCA);
+    if (func_800F6434(0x202) != 0)
+        goto L11AC3C;
+    func_8017F9A8();
+    func_800FED3C();
+    return;
+L11AC3C:
+    func_800F62BC(0xCA);
+    func_800F654C(0x81);
+    func_800F8188(0x4200);
+    return;
+}
