@@ -1,12 +1,37 @@
 #include "common.h"
-__asm__(
-  ".globl func_80178F20\n"
-  ".type func_80178F20, @function\n"
-  "func_80178F20:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x98\n\taddiu $a0, $sp, 0x30\n\tlui $a1, (0x80010000 >> 16)\n\tlui $v0, %hi(D_800F2E10)\n\tsw $ra, 0x94($sp)\n\tsw $s6, 0x90($sp)\n\tsw $s5, 0x8C($sp)\n\tsw $s4, 0x88($sp)\n\tsw $s3, 0x84($sp)\n\tsw $s2, 0x80($sp)\n\tsw $s1, 0x7C($sp)\n\tsw $s0, 0x78($sp)\n\taddiu $t0, $v0, %lo(D_800F2E10)\n\tlwl $v1, 0x3($t0)\n\tlwr $v1, 0x0($t0)\n\tlwl $a2, 0x7($t0)\n\tlwr $a2, 0x4($t0)\n\tlwl $a3, 0xB($t0)\n\tlwr $a3, 0x8($t0)\n\tswl $v1, 0x33($sp)\n\tswr $v1, 0x30($sp)\n\tswl $a2, 0x37($sp)\n\tswr $a2, 0x34($sp)\n\tswl $a3, 0x3B($sp)\n\tswr $a3, 0x38($sp)\n\tlwl $v1, 0xF($t0)\n\tlwr $v1, 0xC($t0)\n\tlwl $a2, 0x13($t0)\n\tlwr $a2, 0x10($t0)\n\tswl $v1, 0x3F($sp)\n\tswr $v1, 0x3C($sp)\n\tswl $a2, 0x43($sp)\n\tswr $a2, 0x40($sp)\n\tlui $v1, %hi(D_800F2E24)\n\taddiu $t0, $v1, %lo(D_800F2E24)\n\tlwl $v0, 0x3($t0)\n\tlwr $v0, 0x0($t0)\n\tlwl $a2, 0x7($t0)\n\tlwr $a2, 0x4($t0)\n\tlwl $a3, 0xB($t0)\n\tlwr $a3, 0x8($t0)\n\tswl $v0, 0x4B($sp)\n\tswr $v0, 0x48($sp)\n\tswl $a2, 0x4F($sp)\n\tswr $a2, 0x4C($sp)\n\tswl $a3, 0x53($sp)\n\tswr $a3, 0x50($sp)\n\tlwl $v0, 0xF($t0)\n\tlwr $v0, 0xC($t0)\n\tlwl $a2, 0x13($t0)\n\tlwr $a2, 0x10($t0)\n\tlb $a3, 0x14($t0)\n\tswl $v0, 0x57($sp)\n\tswr $v0, 0x54($sp)\n\tswl $a2, 0x5B($sp)\n\tswr $a2, 0x58($sp)\n\tsb $a3, 0x5C($sp)\n\tlui $v0, %hi(D_800F2E3C)\n\taddiu $t0, $v0, %lo(D_800F2E3C)\n\tlwl $v1, 0x3($t0)\n\tlwr $v1, 0x0($t0)\n\tlwl $a2, 0x7($t0)\n\tlwr $a2, 0x4($t0)\n\tlwl $a3, 0xB($t0)\n\tlwr $a3, 0x8($t0)\n\tswl $v1, 0x63($sp)\n\tswr $v1, 0x60($sp)\n\tswl $a2, 0x67($sp)\n\tswr $a2, 0x64($sp)\n\tswl $a3, 0x6B($sp)\n\tswr $a3, 0x68($sp)\n\tlwl $v1, 0xF($t0)\n\tlwr $v1, 0xC($t0)\n\tlwl $a2, 0x13($t0)\n\tlwr $a2, 0x10($t0)\n\tlb $a3, 0x14($t0)\n\tswl $v1, 0x6F($sp)\n\tswr $v1, 0x6C($sp)\n\tswl $a2, 0x73($sp)\n\tswr $a2, 0x70($sp)\n\tsb $a3, 0x74($sp)\n\tjal func_80178988\n\taddiu $s1, $sp, 0x48\n\tjal func_80197458\n\tlui $a0, (0x80010000 >> 16)\n\tjal func_80197468\n\taddiu $a0, $sp, 0x18\n\tlui $s0, %hi(D_801A0960)\n\taddiu $s0, $s0, %lo(D_801A0960)\n\taddu $s5, $s0, $zero\n\tlui $s4, (0x10000 >> 16)\n\tlw $a0, 0x18($sp)\n\tlw $a1, 0x1C($sp)\n\tlw $a2, 0x20($sp)\n\tlw $a3, 0x24($sp)\n\tlw $v0, 0x28($sp)\n\tlui $s6, (0x10000 >> 16)\n\tsw $s0, 0x14($sp)\n\tjal func_80179248\n\tsw $v0, 0x10($sp)\n\tlw $a1, 0x4($s0)\n\tjal func_80194640\n\taddiu $a0, $s0, 0xC\n\tlw $a1, 0x8($s0)\n\tjal func_80194640\n\taddiu $a0, $s0, 0x14\n\taddu $a0, $s1, $zero\n\tjal func_80178988\n\tlui $a1, (0x80020000 >> 16)\n\tjal func_80197458\n\tlui $a0, (0x80020000 >> 16)\n\tjal func_80197468\n\taddiu $a0, $sp, 0x18\n\tlw $a0, 0x18($sp)\n\tlw $a1, 0x1C($sp)\n\tlw $a2, 0x20($sp)\n\tlw $a3, 0x24($sp)\n\tlw $v1, 0x28($sp)\n\taddiu $v0, $s0, 0x1C\n\tsw $v0, 0x14($sp)\n\tjal func_80179248\n\tsw $v1, 0x10($sp)\n\tlw $a1, 0x20($s0)\n\tjal func_80194640\n\taddiu $a0, $s0, 0x28\n\taddiu $a0, $s0, 0x30\n\tlh $s2, 0x30($s0)\n\tlw $a1, 0x24($s0)\n\taddiu $v0, $zero, 0x80\n\tjal func_80194640\n\tsh $v0, 0x30($s0)\n\taddu $v1, $zero, $zero\n\taddiu $s3, $sp, 0x60\n\tlui $v0, %hi(D_801CA4B0)\n\taddiu $s1, $v0, %lo(D_801CA4B0)\n\tsh $s2, 0x30($s0)\n\t.L80179140:\n\tlh $a1, 0x32($s5)\n\tlh $a0, 0x30($s5)\n\tjal func_801971E8\n\taddu $a1, $a1, $v1\n\taddu $v1, $s4, $zero\n\taddu $s4, $s4, $s6\n\tsh $v0, 0x0($s1)\n\tsra $v1, $v1, 16\n\tslti $v0, $v1, 0x6\n\tbnez $v0, .L80179140\n\taddiu $s1, $s1, 0x2\n\taddu $a0, $s3, $zero\n\tjal func_80178988\n\tlui $a1, (0x80030000 >> 16)\n\tjal func_80197458\n\tlui $a0, (0x80030000 >> 16)\n\tjal func_80197468\n\taddiu $a0, $sp, 0x18\n\tlui $s0, %hi(D_801A0998)\n\taddiu $s0, $s0, %lo(D_801A0998)\n\taddiu $s1, $s0, -0x38\n\taddu $s4, $s1, $zero\n\tlui $s3, (0x10000 >> 16)\n\tlw $a0, 0x18($sp)\n\tlw $a1, 0x1C($sp)\n\tlw $a2, 0x20($sp)\n\tlw $a3, 0x24($sp)\n\tlw $v0, 0x28($sp)\n\tlui $s5, (0x10000 >> 16)\n\tsw $s0, 0x14($sp)\n\tjal func_80179248\n\tsw $v0, 0x10($sp)\n\tlw $a1, 0x3C($s1)\n\tjal func_80194640\n\taddiu $a0, $s0, 0xC\n\taddiu $a0, $s0, 0x14\n\tlh $s2, 0x4C($s1)\n\tlw $a1, 0x40($s1)\n\taddiu $v0, $zero, 0x80\n\tjal func_80194640\n\tsh $v0, 0x4C($s1)\n\taddu $v1, $zero, $zero\n\tlui $v0, %hi(D_801CA4C0)\n\taddiu $s0, $v0, %lo(D_801CA4C0)\n\tsh $s2, 0x4C($s1)\n\t.L801791F4:\n\tlh $a1, 0x4E($s4)\n\tlh $a0, 0x4C($s4)\n\tjal func_801971E8\n\taddu $a1, $a1, $v1\n\taddu $v1, $s3, $zero\n\taddu $s3, $s3, $s5\n\tsh $v0, 0x0($s0)\n\tsra $v1, $v1, 16\n\tslti $v0, $v1, 0x10\n\tbnez $v0, .L801791F4\n\taddiu $s0, $s0, 0x2\n\tlw $ra, 0x94($sp)\n\tlw $s6, 0x90($sp)\n\tlw $s5, 0x8C($sp)\n\tlw $s4, 0x88($sp)\n\tlw $s3, 0x84($sp)\n\tlw $s2, 0x80($sp)\n\tlw $s1, 0x7C($sp)\n\tlw $s0, 0x78($sp)\n\tjr $ra\n\taddiu $sp, $sp, 0x98\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_80178F20, .-func_80178F20\n"
-);
+void func_80178F20(void)
+{
+    /* battle anim loops: 2x (80178988/97458/97468/79248 + 94640x2)
+       pre-roll, then two 971E8 wait loops. */
+    func_80178988();
+    func_80197458();
+    func_80197468();
+    func_80179248();
+    func_80194640();
+    func_80194640();
+    func_80178988();
+    func_80197458();
+    func_80197468();
+    func_80179248();
+    func_80194640();
+    func_80194640();
+L179140:
+    for (;;) {
+        if (func_801971E8() != 0)
+            continue;
+        break;
+    }
+    func_80178988();
+    func_80197458();
+    func_80197468();
+    func_80179248();
+    func_80194640();
+    func_80194640();
+L1791f4:
+    for (;;) {
+        if (func_801971E8() != 0)
+            continue;
+        break;
+    }
+    return;
+}
