@@ -39,8 +39,7 @@ L117d70:
     for (;;) {
         func_800F6D70(0xAD6);
         func_800F8768(0x1000);
-        func_800F3C3C(0xE4);
-        if (func_800F54D4(func_800F53D4()) == 0)
+        if (func_800F54D4(func_800F3C3C(0xE4)) == 0)
             goto L117DC0;
         func_80117E64();
     L117DC0:
