@@ -6,7 +6,9 @@ void func_800F7084(void)
     u8 x = *D_8019ED68;
     u8 y = *D_8019ED5C;
     u8 r = (x & 0x7D) | (y & 0x80);
-    if (y == 0)
+    if (y != 0)
+        ;
+    else
         r = (x & 0x7D) | 0x2;
     *D_8019ED68 = r;
 }

@@ -1456,7 +1456,6 @@ modern-asm func_80192F34
 modern-asm func_8019307C
 modern-asm func_801931C8
 modern-asm func_80193220
-modern-asm func_8019328C
 modern-asm func_801932B8
 modern-asm func_801932E8
 modern-asm func_80193334
