@@ -1,12 +1,16 @@
 #include "common.h"
-__asm__(
-  ".globl func_80125528\n"
-  ".type func_80125528, @function\n"
-  "func_80125528:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x10($sp)\n\tjal func_800F971C\n\tnop\n\tjal func_800F3D48\n\tnop\n\tjal func_800F6630\n\taddiu $a0, $zero, 0x1D\n\tjal func_800F9644\n\taddiu $a0, $zero, 0x20\n\tlui $v1, %hi(D_8019ED44)\n\tlw $v1, %lo(D_8019ED44)($v1)\n\tnop\n\tlhu $v0, 0x0($v1)\n\tnop\n\tsll $v0, $v0, 5\n\tjal func_800F516C\n\tsh $v0, 0x0($v1)\n\tjal func_800F5050\n\tnop\n\tjal func_800F4064\n\taddiu $a0, $zero, 0x340\n\tlui $v0, %hi(D_8019ED44)\n\tlw $v0, %lo(D_8019ED44)($v0)\n\tlui $a1, %hi(D_8019ED58)\n\tlw $a1, %lo(D_8019ED58)($a1)\n\tlhu $v1, 0x0($v0)\n\taddiu $a0, $zero, 0x20\n\tjal func_800F9660\n\tsh $v1, 0x0($a1)\n\tjal func_801255E8\n\tnop\n\tjal func_800F95A0\n\tnop\n\tlw $ra, 0x10($sp)\n\tnop\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_80125528, .-func_80125528\n"
-);
+void func_80125528(void)
+{
+    /* rows: 0x1D/0x29 windows, 801255E8 close; 4064(0x340) reads. */
+    func_800F971C();
+    func_800F3D48();
+    func_800F6630(0x1D);
+    func_800F9644(0x20);
+    func_800F516C();
+    func_800F5050();
+    func_800F4064(0x340);
+    func_800F9660(0x20);
+    func_801255E8();
+    func_800F95A0();
+    return;
+}
