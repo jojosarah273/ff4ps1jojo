@@ -1,12 +1,36 @@
 #include "common.h"
-__asm__(
-  ".globl func_80185030\n"
-  ".type func_80185030, @function\n"
-  "func_80185030:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x38\n\taddiu $a0, $zero, 0x1\n\taddu $a1, $zero, $zero\n\taddiu $a2, $zero, 0x100\n\taddu $a3, $zero, $zero\n\tsw $ra, 0x30($sp)\n\tsw $s3, 0x2C($sp)\n\tsw $s2, 0x28($sp)\n\tsw $s1, 0x24($sp)\n\tjal func_801971A8\n\tsw $s0, 0x20($sp)\n\tlui $s1, %hi(D_801E0DC8)\n\taddiu $s1, $s1, %lo(D_801E0DC8)\n\taddu $a0, $s1, $zero\n\taddu $a1, $zero, $zero\n\taddu $a2, $zero, $zero\n\taddu $a3, $v0, $zero\n\tjal func_801973B8\n\tsw $zero, 0x10($sp)\n\taddiu $a0, $zero, 0x1\n\taddu $a1, $zero, $zero\n\taddiu $a2, $zero, 0x100\n\tjal func_801971A8\n\taddu $a3, $zero, $zero\n\taddiu $a0, $s1, 0x18\n\taddu $a1, $zero, $zero\n\taddu $a2, $zero, $zero\n\taddu $a3, $v0, $zero\n\tjal func_801973B8\n\tsw $zero, 0x10($sp)\n\taddiu $a0, $zero, 0x1\n\taddu $a1, $zero, $zero\n\taddiu $a2, $zero, 0x180\n\tjal func_801971A8\n\taddu $a3, $zero, $zero\n\taddiu $a0, $s1, 0xC\n\taddu $a1, $zero, $zero\n\taddu $a2, $zero, $zero\n\taddu $a3, $v0, $zero\n\tjal func_801973B8\n\tsw $zero, 0x10($sp)\n\taddiu $a0, $zero, 0x1\n\taddu $a1, $zero, $zero\n\taddiu $a2, $zero, 0x180\n\tjal func_801971A8\n\taddu $a3, $zero, $zero\n\taddiu $a0, $s1, 0x24\n\taddu $a1, $zero, $zero\n\taddu $a2, $zero, $zero\n\taddu $a3, $v0, $zero\n\tjal func_801973B8\n\tsw $zero, 0x10($sp)\n\taddiu $s0, $s1, 0x30\n\taddu $a0, $s0, $zero\n\taddiu $a1, $zero, 0x100\n\taddiu $a2, $zero, 0x1\n\taddu $a3, $zero, $zero\n\tsw $zero, 0x10($sp)\n\tsw $zero, 0x14($sp)\n\tjal func_801854A0\n\tsw $zero, 0x18($sp)\n\taddu $a0, $s1, $zero\n\tjal func_80197288\n\taddu $a1, $s0, $zero\n\taddiu $s2, $zero, 0x1\n\tlui $s3, %hi(D_801E0DE4)\n\taddiu $s1, $s1, 0x44\n\t.L8018513C:\n\taddu $a0, $s1, $zero\n\taddiu $a1, $zero, 0x100\n\taddiu $a2, $zero, 0x1\n\taddu $a3, $zero, $zero\n\tsw $s2, 0x10($sp)\n\tsw $zero, 0x14($sp)\n\tjal func_801854A0\n\tsw $s2, 0x18($sp)\n\taddu $a0, $s0, $zero\n\tjal func_80197288\n\taddu $a1, $s1, $zero\n\taddiu $s0, $s0, 0x14\n\taddiu $s2, $s2, 0x1\n\tslti $v0, $s2, 0x75\n\tbnez $v0, .L8018513C\n\taddiu $s1, $s1, 0x14\n\tsll $a0, $s2, 2\n\taddu $a0, $a0, $s2\n\tsll $a0, $a0, 2\n\taddiu $s0, $s3, %lo(D_801E0DE4)\n\taddu $a0, $a0, $s0\n\taddiu $s2, $s0, -0x10\n\tjal func_80197288\n\taddu $a1, $s2, $zero\n\taddiu $s1, $s0, 0xB18\n\taddu $a0, $s1, $zero\n\taddiu $a1, $zero, 0x100\n\taddiu $a2, $zero, 0x1\n\taddu $a3, $zero, $zero\n\tsw $zero, 0x10($sp)\n\tsw $zero, 0x14($sp)\n\tjal func_801854A0\n\tsw $zero, 0x18($sp)\n\taddu $a0, $s2, $zero\n\tjal func_80197288\n\taddu $a1, $s1, $zero\n\taddiu $s2, $zero, 0x8E\n\taddiu $s0, $s0, 0xB2C\n\t.L801851D4:\n\taddu $a0, $s0, $zero\n\taddiu $a1, $zero, 0x100\n\taddiu $a2, $zero, 0x1\n\taddu $a3, $zero, $zero\n\taddiu $v0, $s2, -0x8D\n\tsw $v0, 0x10($sp)\n\tsw $zero, 0x14($sp)\n\tjal func_801854A0\n\tsw $v0, 0x18($sp)\n\taddu $a0, $s1, $zero\n\tjal func_80197288\n\taddu $a1, $s0, $zero\n\taddiu $s1, $s1, 0x14\n\taddiu $s2, $s2, 0x1\n\tslti $v0, $s2, 0x102\n\tbnez $v0, .L801851D4\n\taddiu $s0, $s0, 0x14\n\tsll $a0, $s2, 2\n\taddu $a0, $a0, $s2\n\tsll $a0, $a0, 2\n\taddiu $s0, $s3, %lo(D_801E0DE4)\n\tjal func_801972B8\n\taddu $a0, $a0, $s0\n\taddiu $s2, $zero, 0x75\n\taddiu $s1, $s0, 0x938\n\taddu $a0, $s1, $zero\n\taddiu $a1, $zero, 0x100\n\taddiu $a2, $zero, 0x1\n\taddu $a3, $zero, $zero\n\tsw $s2, 0x10($sp)\n\tsw $zero, 0x14($sp)\n\tjal func_801854A0\n\tsw $s2, 0x18($sp)\n\taddiu $a0, $s0, -0x4\n\tjal func_80197288\n\taddu $a1, $s1, $zero\n\taddiu $s2, $zero, 0x76\n\taddiu $s0, $s0, 0x94C\n\t.L8018526C:\n\taddu $a0, $s0, $zero\n\taddiu $a1, $zero, 0x100\n\taddiu $a2, $zero, 0x1\n\taddu $a3, $zero, $zero\n\tsw $s2, 0x10($sp)\n\tsw $zero, 0x14($sp)\n\tjal func_801854A0\n\tsw $s2, 0x18($sp)\n\taddu $a0, $s1, $zero\n\tjal func_80197288\n\taddu $a1, $s0, $zero\n\taddiu $s1, $s1, 0x14\n\taddiu $s2, $s2, 0x1\n\tslti $v0, $s2, 0x8D\n\tbnez $v0, .L8018526C\n\taddiu $s0, $s0, 0x14\n\tsll $a0, $s2, 2\n\taddu $a0, $a0, $s2\n\tsll $a0, $a0, 2\n\taddiu $s0, $s3, %lo(D_801E0DE4)\n\taddu $a0, $a0, $s0\n\taddiu $s2, $s0, 0x8\n\tjal func_80197288\n\taddu $a1, $s2, $zero\n\taddiu $s1, $s0, 0x143C\n\taddu $a0, $s1, $zero\n\taddiu $a1, $zero, 0x100\n\taddiu $a2, $zero, 0x1\n\taddu $a3, $zero, $zero\n\taddiu $v0, $zero, 0x75\n\tsw $v0, 0x10($sp)\n\tsw $zero, 0x14($sp)\n\tjal func_801854A0\n\tsw $v0, 0x18($sp)\n\taddu $a0, $s2, $zero\n\tjal func_80197288\n\taddu $a1, $s1, $zero\n\taddiu $s2, $zero, 0x103\n\taddiu $s0, $s0, 0x1450\n\t.L80185308:\n\taddu $a0, $s0, $zero\n\taddiu $a1, $zero, 0x100\n\taddiu $a2, $zero, 0x1\n\taddu $a3, $zero, $zero\n\taddiu $v0, $s2, -0x8D\n\tsw $v0, 0x10($sp)\n\tsw $zero, 0x14($sp)\n\tjal func_801854A0\n\tsw $v0, 0x18($sp)\n\taddu $a0, $s1, $zero\n\tjal func_80197288\n\taddu $a1, $s0, $zero\n\taddiu $s1, $s1, 0x14\n\taddiu $s2, $s2, 0x1\n\tslti $v0, $s2, 0x11A\n\tbnez $v0, .L80185308\n\taddiu $s0, $s0, 0x14\n\tsll $a0, $s2, 2\n\taddu $a0, $a0, $s2\n\tsll $a0, $a0, 2\n\taddiu $v0, $s3, %lo(D_801E0DE4)\n\tjal func_801972B8\n\taddu $a0, $a0, $v0\n\tlw $ra, 0x30($sp)\n\tlw $s3, 0x2C($sp)\n\tlw $s2, 0x28($sp)\n\tlw $s1, 0x24($sp)\n\tlw $s0, 0x20($sp)\n\tjr $ra\n\taddiu $sp, $sp, 0x38\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_80185030, .-func_80185030\n"
-);
+void func_80185030(void)
+{
+    /* sequence-driver for the battle portrait loop: four 971A8(1)/973B8(1)
+       commits, then 5 poll loops (854A0/97288 pairs) with 972B8 selects
+       between them. Each poll: do { 854A0(); } while (97288() != 0). */
+    func_801971A8(1);
+    func_801973B8(1);
+    func_801971A8(1);
+    func_801973B8(1);
+    func_801971A8(1);
+    func_801973B8(1);
+    func_801971A8(1);
+    func_801973B8(1);
+    func_801854A0();
+    do {
+        func_801854A0();
+    } while (func_80197288() != 0);
+    func_80197288();
+    func_801854A0();
+    do {
+        func_801854A0();
+    } while (func_80197288() != 0);
+    func_801972B8();
+    func_801854A0();
+    do {
+        func_801854A0();
+    } while (func_80197288() != 0);
+    func_80197288();
+    func_801854A0();
+    do {
+        func_801854A0();
+    } while (func_80197288() != 0);
+    func_801972B8();
+    return;
+}
