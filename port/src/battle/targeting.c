@@ -2,57 +2,102 @@
  *
  * Interpretation of func_80115D2C (battle targeting hub).
  *
- * Loop: draw the cursor window (0x24 cell / 0x7A+7 key reads / 0x202
- * gate), walk the target-list pages (0xA6D..A6F labels; 0xAD0/0xAD4/
- * 0xAD5 page cells) while polling input; the 0xACF cell is the confirm
- * latch — when it fires the loop exits and the 0xAD2 result page is
- * painted. Cancel-hold path counts down via the 0xC7 page.
- * Ground truth: src/func_80115D2C.c (byte-verified).
+ * The window/input primitive mapping below names the 0x800F calls that
+ * Phase A decoded (src/func_80115D2C.c is ground truth). Data cells are
+ * 0xADxx catalog pages; 0x202 / 0x8080 are the standard armed and
+ * cancel-hold gate ids used across the battle UI web.
  */
 #include <stdint.h>
 
-void window_page(uint32_t page);          /* func_800F7270  */
-void window_key(uint32_t key);            /* func_800F6630  */
-uint32_t window_gate(uint32_t id);        /* func_800F4120  */
-uint32_t catalog(uint32_t off);           /* func_800F3B04  */
-uint32_t input_down(uint32_t id);         /* func_800F6434  */
-uint32_t input_just(uint32_t id);         /* func_800F53D4  */
-uint32_t input_press(uint32_t id);        /* func_800F54D4  */
+/* primitive mapping (window layer; see port/src/panel.c) */
+void     wnd_page(uint32_t page);          /* 800F7270 */
+void     wnd_key(uint32_t key);            /* 800F6630 */
+void     wnd_read(uint32_t id);            /* 800F4248 */
+uint32_t wnd_gate(uint32_t id);            /* 800F4120 (0x202 = live) */
+void     txt_label(uint32_t id);           /* 800F6B68 */
+void     txt_draw(uint32_t id);            /* 800F8768 */
+void     txt_set(uint32_t id);             /* 800F6564 */
+void     cell_poke(uint32_t v);            /* 800F3F38(800F3B04(v)) */
+void     page_paint(uint32_t id);          /* 800F90EC */
+uint32_t inp_held(uint32_t mask);          /* 800F6434 */
+uint32_t inp_just(uint32_t key);           /* 800F53D4 */
+void     inp_poll(uint32_t key);           /* 800F5574 */
+uint32_t inp_press(uint32_t cell);         /* 800F54D4(800F3B04(cell)) */
+void     wnd_clear(uint32_t id);           /* 800F654C */
+void     cell_refresh(void);               /* 8010D9D4 */
+void     cancel_handler(void);             /* 80116098 */
 
-#define K_PAD_UP    0x7    /* 0x7A/0x07 poll pair                     */
-#define WND_ACTIVE  0x202  /* 0x202 window-live gate                  */
-#define PG_TARGETS 0xA6D   /* target list header                      */
-#define PG_ARROW1  0xA6E   /* left/right arrow cells                  */
-#define PG_ARROW2  0xA6F
-#define PG_CONFIRM 0xACF   /* confirm press latch                     */
-#define PG_RESULT  0xAD2   /* final result page                       */
+#define GATE_LIVE   0x202
+#define CANCEL_HOLD 0x8080
 
 void battle_targeting_loop(void)
 {
-    uint8_t *state;
-    (void)state;
+    uint16_t *held;   /* D_8019ED54 (cursor index cell, exported later) */
+    (void)held;
     for (;;) {
-        window_page(0x24);
-        window_key(0x7A);
-        if (window_gate(0x202) == 0) {
-            /* point the cursor at the saved held index */
-            catalog(0xA6D);
+        wnd_page(0x24);
+        wnd_key(0x7A);
+        wnd_read(7);
+        /* if the window is not live, follow the saved held index */
+        if (wnd_gate(GATE_LIVE) == 0) {
+            cell_poke(catalog_idx_plus(0xA6D, held));  /* 3B04(D54[0]+0xA6D) */
         }
-        input_down(PG_TARGETS);
-        if (input_down(0x8080) == 0) {
-            /* 0x8080 = cancel-hold: poll cancel keys (4/0xC7 page) */
-            if (input_just(4) != 0)
-                break_or_advance(); /* 80116098 handles the cancel */
-        }
-        /* reposition + paint the arrow cells */
-        input_press(PG_CONFIRM);
-        if (input_press(PG_CONFIRM) == 0)
-            continue;
-        break;
+        txt_label(0xA6D);
+        if (inp_held(CANCEL_HOLD) == 0)
+            goto poll_cursor;
+        if (inp_just(4) == 0)
+            goto cancel;
+        /* move onto the target cells */
+        wnd_key(0x7A);
+        wnd_read(7);
+        if (wnd_gate(GATE_LIVE) != 0)
+            goto cancel;
+        wnd_key(0xE5);                     /* page-turn key */
+        if (inp_held(GATE_LIVE) != 0)
+            goto keep_label;
+        /* first page: paint the arrow pair rows */
+        page_paint(0xA6D);
+        wnd_key(0xC7);                     /* cancel counter page */
+        if (inp_held(GATE_LIVE) != 0)
+            goto second_page;
+        txt_set(0xAD0);
+        cell_refresh();
+        cell_poke(0xAD4);
+        wnd_page(0x24);
+        txt_draw(0xA6E);
+        txt_set(0xAD1);
+        cell_refresh();
+        cell_poke(0xAD5);
+        wnd_page(0x24);
+        txt_draw(0xA6F);
+        goto cancel;
+second_page:
+        wnd_key(0xC7);
+        cell_refresh();
+        cell_poke(0xAD4);
+        txt_draw(0xA6E);
+        cell_poke(0xAD5);
+        txt_draw(0xA6F);
+        goto cancel;
+keep_label:
+        wnd_clear(0xFF);
+        txt_draw(0xA6D);
+poll_cursor:
+        wnd_key(0x24);
+        wnd_read(4);
+        wnd_clear(0x24);
+        if (inp_press(0xACF) == 0)
+            continue;   /* keep polling targets */
+        break;          /* confirm pressed */
+cancel:
+        cancel_handler();
     }
-    window_key(0x7A);
-    if (window_gate(0x202) != 0)
+    /* epilogue: if the window is still live we return clean; else
+       paint the 0xAD2 result page */
+    wnd_key(0x7A);
+    wnd_read(7);
+    if (wnd_gate(GATE_LIVE) != 0)
         return;
-    window_page(PG_RESULT);
-    paint_arrows();
+    wnd_page(0xAD2);
+    paint_result_arrows();
 }
