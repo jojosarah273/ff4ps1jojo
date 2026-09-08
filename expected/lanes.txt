@@ -1943,7 +1943,6 @@ modern-asm func_801951A0
 modern-asm func_80196074
 modern-asm func_80196EF0
 modern-asm func_80196F18
-modern-asm func_80196F2C
 modern-asm func_801977B8
 modern-asm func_80197A78
 modern-asm func_80197DF8

@@ -1,1 +1,2 @@
 func_80197458 gcc-2.7.2 (ladder lane)
+func_80196F2C MODERN-bincmp
