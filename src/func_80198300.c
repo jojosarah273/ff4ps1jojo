@@ -1,12 +1,25 @@
 #include "common.h"
-__asm__(
-  ".globl func_80198300\n"
-  ".type func_80198300, @function\n"
-  "func_80198300:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x18\n\tsw $s0, 0x10($sp)\n\taddu $s0, $zero, $zero\n\taddu $a3, $a0, $zero\n\taddu $t1, $a1, $zero\n\tlui $v1, (0x7FFFFFFF >> 16)\n\tori $v1, $v1, (0x7FFFFFFF & 0xFFFF)\n\tand $v0, $a3, $v1\n\tbeqz $v0, .L80198364\n\tsw $ra, 0x14($sp)\n\tand $v0, $t1, $v1\n\tbeqz $v0, .L80198350\n\tsra $v0, $a3, 23\n\tandi $a2, $v0, 0xFF\n\tsra $v0, $t1, 23\n\tandi $t0, $v0, 0xFF\n\taddiu $v0, $t0, 0x19\n\tsltu $v0,$v0,$a2\n\tbeqz $v0, .L80198358\n\taddiu $v0, $a2, 0x19\n\t.L80198350:\n\tj .L80198494\n\taddu $v0, $a0, $zero\n\t.L80198358:\n\tsltu $v0,$v0,$t0\n\tbeqz $v0, .L8019836C\n\tlui $v0, (0x7FFFFF >> 16)\n\t.L80198364:\n\tj .L80198494\n\taddu $v0, $a1, $zero\n\t.L8019836C:\n\tori $v0, $v0, (0x7FFFFF & 0xFFFF)\n\tand $v1, $a3, $v0\n\tlui $a0, (0x800000 >> 16)\n\tor $v1, $v1, $a0\n\tsll $v1, $v1, 6\n\tand $v0, $t1, $v0\n\tor $v0, $v0, $a0\n\tsll $a0, $v0, 6\n\tbgez $a3, .L80198398\n\tlui $v0, (0x80000000 >> 16)\n\tnegu $v1, $v1\n\t.L80198398:\n\tand $v0, $t1, $v0\n\tbeqz $v0, .L801983A8\n\tsltu $v0,$t0,$a2\n\tnegu $a0, $a0\n\t.L801983A8:\n\tbeqz $v0, .L801983B8\n\tsubu $v0, $a2, $t0\n\tj .L801983C4\n\tsrav $a0, $a0, $v0\n\t.L801983B8:\n\tsubu $v0, $t0, $a2\n\tsrav $v1, $v1, $v0\n\taddu $a2, $t0, $zero\n\t.L801983C4:\n\taddu $v1, $v1, $a0\n\tbltz $v1, .L801983E0\n\tlui $v0, (0xE0000000 >> 16)\n\tbnez $v1, .L801983E8\n\tnop\n\tj .L80198494\n\taddu $v0, $zero, $zero\n\t.L801983E0:\n\tnegu $v1, $v1\n\tlui $s0, (0x80000000 >> 16)\n\t.L801983E8:\n\tand $v0, $v1, $v0\n\tbnez $v0, .L8019840C\n\tlui $v0, (0x40000000 >> 16)\n\tlui $a0, (0xE0000000 >> 16)\n\t.L801983F8:\n\tsll $v1, $v1, 1\n\tand $v0, $v1, $a0\n\tbeqz $v0, .L801983F8\n\taddiu $a2, $a2, -0x1\n\tlui $v0, (0x40000000 >> 16)\n\t.L8019840C:\n\tand $v0, $v1, $v0\n\tbeqz $v0, .L80198424\n\tandi $v0, $v1, 0x40\n\tsra $v1, $v1, 1\n\taddiu $a2, $a2, 0x1\n\tandi $v0, $v1, 0x40\n\t.L80198424:\n\tbnez $v0, .L80198430\n\taddiu $v0, $v1, 0x20\n\taddiu $v0, $v1, 0x1F\n\t.L80198430:\n\taddu $v1, $v0, $zero\n\tlui $v0, (0x40000000 >> 16)\n\tand $v0, $v1, $v0\n\tbeqz $v0, .L8019844C\n\tnop\n\tsra $v1, $v1, 1\n\taddiu $a2, $a2, 0x1\n\t.L8019844C:\n\tsra $v1, $v1, 6\n\tlui $v0, (0xFF7FFFFF >> 16)\n\tori $v0, $v0, (0xFF7FFFFF & 0xFFFF)\n\tand $v1, $v1, $v0\n\tsltiu $v0, $a2, 0xFF\n\tbnez $v0, .L80198488\n\tsll $v0, $a2, 23\n\taddiu $a0, $zero, 0x22\n\tjal func_80198990\n\taddiu $a1, $zero, 0xA\n\tbeqz $s0, .L80198480\n\tlui $v0, (0x7F800000 >> 16)\n\tlui $v0, (0xFF800000 >> 16)\n\t.L80198480:\n\tj .L80198490\n\taddu $a3, $v0, $zero\n\t.L80198488:\n\tor $v0, $s0, $v0\n\tor $a3, $v0, $v1\n\t.L80198490:\n\taddu $v0, $a3, $zero\n\t.L80198494:\n\tlw $ra, 0x14($sp)\n\tlw $s0, 0x10($sp)\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n\tnop\n\tnop\n\tnop\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_80198300, .-func_80198300\n"
-);
+void func_80198300(void)
+{
+    /* event: v0 gate tree; 80198990(0x22) row; returns L198494. */
+    if (func_800F53D4() == 0)
+        goto L198364;
+    if (func_800F53D4() == 0)
+        goto L198350;
+    if (func_800F53D4() == 0)
+        goto L198358;
+    goto L19836C;
+L198350:
+    goto L198494;
+L198364:
+    goto L198494;
+L198358:
+    goto L19836C;
+    return;
+L19836C:
+    /* gate tree -> L198488 row */
+    func_80198990(0x22);
+    return;
+L198494:
+    return;
+}

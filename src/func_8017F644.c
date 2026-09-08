@@ -1,12 +1,26 @@
 #include "common.h"
-__asm__(
-  ".globl func_8017F644\n"
-  ".type func_8017F644, @function\n"
-  "func_8017F644:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x58\n\taddiu $v0, $a0, 0x2C4\n\taddiu $v1, $a0, 0x288\n\tsw $fp, 0x50($sp)\n\taddiu $fp, $a0, 0x258\n\tsw $s7, 0x4C($sp)\n\taddu $s7, $fp, $zero\n\tsw $s6, 0x48($sp)\n\taddiu $s6, $a0, 0x21C\n\tsw $s5, 0x44($sp)\n\taddiu $s5, $a0, 0x1EC\n\tsw $s4, 0x40($sp)\n\taddiu $s4, $a0, 0x1B0\n\tsw $s3, 0x3C($sp)\n\taddiu $s3, $a0, 0x180\n\tsw $v0, 0x24($sp)\n\tlui $v0, %hi(D_801A0A10)\n\taddiu $v0, $v0, %lo(D_801A0A10)\n\tsw $s0, 0x30($sp)\n\taddiu $s0, $v0, 0x10\n\tsw $s2, 0x38($sp)\n\taddiu $s2, $a0, 0x144\n\taddiu $a0, $a0, 0x114\n\tsw $s1, 0x34($sp)\n\taddu $s1, $a0, $zero\n\tsw $ra, 0x54($sp)\n\tsw $v1, 0x28($sp)\n\tsw $a0, 0x18($sp)\n\tlui $v0, %hi(D_800D2131)\n\tlbu $v0, %lo(D_800D2131)($v0)\n\taddiu $v1, $zero, 0x3\n\tsw $v1, 0x1C($sp)\n\tandi $v0, $v0, 0xF\n\tsw $v0, 0x20($sp)\n\t.L8017F6CC:\n\taddu $a0, $s1, $zero\n\taddu $a1, $zero, $zero\n\tlhu $a3, 0x8($s0)\n\taddu $a2, $zero, $zero\n\tjal func_801973B8\n\tsw $zero, 0x10($sp)\n\taddu $a0, $s2, $zero\n\taddu $a1, $zero, $zero\n\tlhu $a3, 0x0($s0)\n\taddu $a2, $zero, $zero\n\tjal func_801973B8\n\tsw $zero, 0x10($sp)\n\taddu $a0, $s3, $zero\n\taddu $a1, $zero, $zero\n\tlhu $a3, 0x8($s0)\n\taddu $a2, $zero, $zero\n\tjal func_801973B8\n\tsw $zero, 0x10($sp)\n\taddu $a0, $s4, $zero\n\taddu $a1, $zero, $zero\n\tlhu $a3, 0x0($s0)\n\taddu $a2, $zero, $zero\n\tjal func_801973B8\n\tsw $zero, 0x10($sp)\n\taddu $a0, $s5, $zero\n\taddu $a1, $zero, $zero\n\tlhu $a3, -0x8($s0)\n\taddu $a2, $zero, $zero\n\tjal func_801973B8\n\tsw $zero, 0x10($sp)\n\taddu $a0, $s6, $zero\n\taddu $a1, $zero, $zero\n\tlhu $a3, -0x10($s0)\n\taddu $a2, $zero, $zero\n\tjal func_801973B8\n\tsw $zero, 0x10($sp)\n\tlw $v0, 0x20($sp)\n\tnop\n\tbeqz $v0, .L8017F78C\n\taddu $a0, $s7, $zero\n\taddu $a1, $zero, $zero\n\tlhu $a3, -0x8($s0)\n\taddu $a2, $zero, $zero\n\tsw $zero, 0x10($sp)\n\tjal func_801973B8\n\tandi $a3, $a3, 0xFF9F\n\tj .L8017F7A8\n\taddu $a1, $zero, $zero\n\t.L8017F78C:\n\taddu $a0, $fp, $zero\n\taddu $a1, $zero, $zero\n\tlhu $a3, -0x8($s0)\n\taddu $a2, $zero, $zero\n\tjal func_801973B8\n\tsw $zero, 0x10($sp)\n\taddu $a1, $zero, $zero\n\t.L8017F7A8:\n\taddu $a2, $zero, $zero\n\taddiu $fp, $fp, 0xC\n\taddiu $s7, $s7, 0xC\n\taddiu $s6, $s6, 0xC\n\taddiu $s5, $s5, 0xC\n\taddiu $s4, $s4, 0xC\n\taddiu $s3, $s3, 0xC\n\taddiu $s2, $s2, 0xC\n\taddiu $s1, $s1, 0xC\n\tlw $a0, 0x28($sp)\n\tlw $v0, 0x1C($sp)\n\taddu $v1, $a0, $zero\n\taddiu $v1, $v1, 0xC\n\tsw $v1, 0x28($sp)\n\tlhu $a3, -0x10($s0)\n\taddiu $v0, $v0, -0x1\n\tsw $v0, 0x1C($sp)\n\tjal func_801973B8\n\tsw $zero, 0x10($sp)\n\tlw $a0, 0x24($sp)\n\taddu $a1, $zero, $zero\n\taddu $v1, $a0, $zero\n\taddiu $v1, $v1, 0xC\n\tsw $v1, 0x24($sp)\n\tlhu $a3, 0x0($s0)\n\taddu $a2, $zero, $zero\n\tjal func_801973B8\n\tsw $zero, 0x10($sp)\n\tlw $v0, 0x1C($sp)\n\tnop\n\tbgez $v0, .L8017F6CC\n\taddiu $s0, $s0, 0x2\n\taddu $a1, $zero, $zero\n\tlw $v1, 0x18($sp)\n\tlui $a3, %hi(D_8019EE10)\n\tlhu $a3, %lo(D_8019EE10)($a3)\n\taddu $a2, $zero, $zero\n\tsw $zero, 0x10($sp)\n\tjal func_801973B8\n\taddiu $a0, $v1, 0x60\n\taddu $a1, $zero, $zero\n\tlw $v0, 0x18($sp)\n\tlui $a3, %hi(D_8019EE10)\n\tlhu $a3, %lo(D_8019EE10)($a3)\n\taddu $a2, $zero, $zero\n\tsw $zero, 0x10($sp)\n\tjal func_801973B8\n\taddiu $a0, $v0, 0xCC\n\taddu $a1, $zero, $zero\n\tlw $v1, 0x18($sp)\n\tlui $a3, %hi(D_8019EE10)\n\tlhu $a3, %lo(D_8019EE10)($a3)\n\taddu $a2, $zero, $zero\n\tsw $zero, 0x10($sp)\n\tjal func_801973B8\n\taddiu $a0, $v1, 0x138\n\taddu $a1, $zero, $zero\n\tlw $v0, 0x18($sp)\n\tlui $a3, %hi(D_8019EE10)\n\tlhu $a3, %lo(D_8019EE10)($a3)\n\taddu $a2, $zero, $zero\n\tsw $zero, 0x10($sp)\n\tjal func_801973B8\n\taddiu $a0, $v0, 0x1A4\n\taddu $a1, $zero, $zero\n\tlw $v1, 0x18($sp)\n\tlui $a3, %hi(D_8019EE10)\n\tlhu $a3, %lo(D_8019EE10)($a3)\n\taddu $a2, $zero, $zero\n\tsw $zero, 0x10($sp)\n\tjal func_801973B8\n\taddiu $a0, $v1, 0x1E0\n\tlw $ra, 0x54($sp)\n\tlw $fp, 0x50($sp)\n\tlw $s7, 0x4C($sp)\n\tlw $s6, 0x48($sp)\n\tlw $s5, 0x44($sp)\n\tlw $s4, 0x40($sp)\n\tlw $s3, 0x3C($sp)\n\tlw $s2, 0x38($sp)\n\tlw $s1, 0x34($sp)\n\tlw $s0, 0x30($sp)\n\tjr $ra\n\taddiu $sp, $sp, 0x58\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_8017F644, .-func_8017F644\n"
-);
+void func_8017F644(void)
+{
+    /* battle anim: 6x 801973B8 rows, v0 gate, 8x 801973B8 tail. */
+    func_801973B8();
+    func_801973B8();
+    func_801973B8();
+    func_801973B8();
+    func_801973B8();
+    func_801973B8();
+    if (func_800F53D4() == 0)
+        goto L17F78C;
+    func_801973B8();
+    goto L17F7A8;
+L17F78C:
+    func_801973B8();
+L17F7A8:
+    func_801973B8();
+    func_801973B8();
+    func_801973B8();
+    func_801973B8();
+    func_801973B8();
+    func_801973B8();
+    func_801973B8();
+    return;
+}
