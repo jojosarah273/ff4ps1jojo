@@ -107,3 +107,14 @@ I have wine. can we run the era-compiler through that? only when needed? i set u
 https://github.com/jojosarah273/ff4ps1jojo
 
 what do you need to use it?
+================================================================================
+SESSION — GRIND TO 60% AND BEYOND (long autonomous run)
+Session start: C-written 1393 (55.4%) — Session end: 1526 (60.7%)
++133 functions decoded, ~40 commits, each pushed with README/callgraph/PROGRESS.
+Milestones: 55.4% -> 60.0% (1510) -> 60.7% (1526). Callgraph: 6,481 -> ~10,900 edges.
+KEY: 60% milestone checkboxes flipped. The whole main-menu + battle-screen web
+now interlock through decoded roots func_800F9CE8 (main system menu dispatcher)
+and func_80116720 (main battle menu, ~50-entry jr-a0 table). Remaining shells
+are progressively smaller/leafier; the callgraph json is the Phase B asset.
+NEXT: continue the grind: 65% (1636) next target, then 75% (1887).
+================================================================================

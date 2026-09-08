@@ -407,6 +407,15 @@ ability menus (80127808/8013AB18/8013B270/80136494/8013C554), config screens
 (80132CFC/80132F40/8012DD58/8015EC70/8015DCA4/8015C220/8015BD34/8015AC7C/
 8015C604/8015FE98), cutscenes (8013FA08 text scroll), plus 30+ more.
 Callgraph edges now ~8300. NEXT: 60%->75% (1887) toward full 100% coverage.
+### GRIND-TO-65% SESSION (1520 -> 1526, committing; in progress)
++16 more decoded this stretch (battle/shop/config web): 80141760, 801474B0,
+8010E58C, 8012BB68, 8011D658, 8013CBF0, 80122FF4, 80123D3C, 8014F2CC,
+8011CE18, 80105DB4, 8015E158, 8011DBF0, 80130C74 (ability/equip web incl
+8012FBB0 + 80123320 + 80127808), 80137BB8 (register-heavy main ability
+menu), 800FAD48 (battle menu calling 8011D658/8011BD88).
+Every one syntax-checked, committed, pushed. Next: continue the same grind to
+65% (1636), then 75% (1887). The callgraph (10k+ edges) is the roadmap.
+
 ### 2025-09-08 — LARGE-FUNCTION SESSION (as directed: "target a larger function")
 Six big ones decoded: func_80114194 (90r, 3-phase menu state machine),
 func_80152F0C (90r, dual-phase screen-switch), func_80144344 (110r, nested
