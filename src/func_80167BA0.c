@@ -27,7 +27,6 @@ L167c20:
     func_8014096C();
     func_800F654C(2);
     func_800F8188();
-L167c68:
     func_800F71DC(4);
 L167c70:
     for (;;) {
@@ -75,5 +74,16 @@ L167d24:
     if (func_800F5B8C(0x202) != 0)
         goto L167C68;
     func_800F8F74();
+    return;
+L167C68:
+    func_800F71DC(4);
+    for (;;) {
+        func_80070174();
+        func_800F5E48();
+        if (func_800F5C64(0x202) != 0)
+            continue;
+        break;
+    }
+    func_800F6240();
     return;
 }
