@@ -314,6 +314,18 @@ NTSC-U + text guard armed + mod FMV skip all present.
   50% target at 1258: +75 remaining — next session: mapper-family sweep 2 +
   hand batch + the 2-way ifelse resurrection.
   (Progress rails auto-refresh the README at every commit.)
+### 2025-09-08 — HEADLESS GRIND session (continuation, long run)
+1203 -> 1355 C-written (47.8% -> 53.9%) in one continuous autonomous session.
+~25+ commits pushed; README auto-refreshed each; PROGRESS logged.
+Families cracked: vtable-dispatch (offsets->index emitter, 22 funcs),
+status-flag bit setters, mapper MMIO write-throughs/read-backs, init chains,
+poll/menu loops, choice-dispatch handlers, merges (2-flag/3-flag), clamp+select,
+struct-slot allocators, table reorder loops, stack-local callers, sign-compare,
+repeat-loops, gates. Lifters: lift_2way (value-selection, per-arm sim), a1-const
+jal slots, computed-arg calls, store-slots, MMIO $at offsets, func-addr args.
+Session cadence ~5 funcs/batch; integrity green throughout.
+NEXT: 75% milestone (1887) — the 'big' (>50 row) functions remain the largest
+pool; byte-verify tape of ~615 candidates pending (runtime-oracle).
 ### 2025-09-08 — HEADLESS GRIND session (user away)
 autonomous batches: 1203 -> 1302 C-written (47.8% -> 51.7%). Families cracked
 by hand in this stretch: vtbl-dispatch (23 identified, 18 via offset-index
