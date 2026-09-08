@@ -390,6 +390,23 @@ options), 8013327C (config), 8015C604 (status/config), 80173008 + 80173780
 STILL GRINDING toward 60% (1510): +49 of the needed ~117 functions banked this
 session. Remaining large clean shells staged: 8013FA08(520), 8016CA94,
 8014BB94, 80136494 + the whole 400-500 band. Callgraph edges now ~6600.
+### MILESTONE: 60% C-WRITTEN REACHED (1510/2516)
+MASSIVE GRIND SESSION: +117 funcs (1393 -> 1510 = 60.0%). Flagship catches:
+-	func_800F9CE8 (502r) MAIN SYSTEM MENU dispatcher
+-	func_80116720 (570r) main battle menu with ~50-entry jr-a0 jump table
+Heat-map of the session: the full battle-screen web (80171608/80154488-ish
+buy screens, 80163F68 equip family, 801482E8/8014FA4C/8014FEC8/8013F5A8/
+801121C4/80143908/801444FC/8010EB14/8013D720/8016AE94/8016CA94 battle
+screens), the main-menu web (800FAA04 inventory, 800FF1C0 shop, 80101350/
+8010543C/80102770 config-equip, 800FFEFC/80100D50, 8011A690 item-set),
+the shop/forge web (8011C768/8011C2C8/8011D218/801724D0/80173008/80173780/
+80172BA8/80171608/801719C8), the shared helpers (801571DC/80155778 status
+windows, 80176060/8016B6D0 HUD renderers, 8011B874/8011BD88/801151BC),
+stat displays (80126070/80125130/80124704/801115F0/8011124C/80153608),
+ability menus (80127808/8013AB18/8013B270/80136494/8013C554), config screens
+(80132CFC/80132F40/8012DD58/8015EC70/8015DCA4/8015C220/8015BD34/8015AC7C/
+8015C604/8015FE98), cutscenes (8013FA08 text scroll), plus 30+ more.
+Callgraph edges now ~8300. NEXT: 60%->75% (1887) toward full 100% coverage.
 ### 2025-09-08 — LARGE-FUNCTION SESSION (as directed: "target a larger function")
 Six big ones decoded: func_80114194 (90r, 3-phase menu state machine),
 func_80152F0C (90r, dual-phase screen-switch), func_80144344 (110r, nested
