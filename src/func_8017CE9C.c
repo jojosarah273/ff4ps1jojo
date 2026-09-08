@@ -1,12 +1,27 @@
 #include "common.h"
-__asm__(
-  ".globl func_8017CE9C\n"
-  ".type func_8017CE9C, @function\n"
-  "func_8017CE9C:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x40\n\tsw $s2, 0x28($sp)\n\taddu $s2, $a1, $zero\n\tlui $v0, %hi(D_8019EE70)\n\tlh $v0, %lo(D_8019EE70)($v0)\n\tsll $a2, $a2, 16\n\tsw $s5, 0x34($sp)\n\tsra $s5, $a2, 16\n\tsw $ra, 0x38($sp)\n\tsw $s4, 0x30($sp)\n\tsw $s3, 0x2C($sp)\n\tsw $s1, 0x24($sp)\n\tslti $v0, $v0, 0xF0\n\tbnez $v0, .L8017CEE0\n\tsw $s0, 0x20($sp)\n\tbnez $s5, .L8017D054\n\tnop\n\t.L8017CEE0:\n\tlbu $v0, 0xD($s2)\n\tnop\n\tbeqz $v0, .L8017D054\n\taddiu $s3, $a0, 0x70\n\taddiu $s1, $a0, 0x310\n\tlbu $v1, 0xC($s2)\n\tlui $a0, %hi(D_8019EDEC)\n\tlh $a0, %lo(D_8019EDEC)($a0)\n\tlh $a1, 0xA($s2)\n\tsll $v1, $v1, 2\n\taddu $s3, $s3, $v1\n\tsll $v0, $a0, 1\n\taddu $v0, $v0, $a0\n\tsll $v0, $v0, 2\n\taddu $s1, $s1, $v0\n\tlui $v1, %hi(D_8019EDEC)\n\tlhu $v1, %lo(D_8019EDEC)($v1)\n\tlbu $a0, 0xD($s2)\n\tlh $v0, 0x6($s2)\n\taddu $v1, $v1, $a0\n\taddu $v0, $v0, $a1\n\tslti $v0, $v0, 0xF1\n\tlui $at, %hi(D_8019EDEC)\n\tsh $v1, %lo(D_8019EDEC)($at)\n\tlhu $v1, 0x6($s2)\n\tbnez $v0, .L8017CF54\n\taddiu $v0, $zero, 0xF0\n\tsubu $v0, $v0, $v1\n\tsh $v0, 0xA($s2)\n\t.L8017CF54:\n\tlh $v0, 0x4($s2)\n\tlhu $a0, 0x4($s2)\n\tslti $v0, $v0, 0x100\n\tbeqz $v0, .L8017CFA0\n\taddiu $v1, $zero, 0x100\n\tlui $v1, %hi(D_8019EE40)\n\tlh $v1, %lo(D_8019EE40)($v1)\n\tsh $a0, 0x18($sp)\n\tlhu $a0, 0x8($s2)\n\tlhu $a1, 0xA($s2)\n\tsll $v0, $v1, 4\n\tsubu $v0, $v0, $v1\n\tlhu $v1, 0x6($s2)\n\tsll $v0, $v0, 4\n\tsh $a0, 0x1C($sp)\n\tsh $a1, 0x1E($sp)\n\taddu $v1, $v1, $v0\n\tj .L8017CFB4\n\tsh $v1, 0x1A($sp)\n\t.L8017CFA0:\n\taddiu $v0, $zero, 0xF0\n\tsh $v1, 0x18($sp)\n\tsh $zero, 0x1A($sp)\n\tsh $v1, 0x1C($sp)\n\tsh $v0, 0x1E($sp)\n\t.L8017CFB4:\n\taddu $a0, $s1, $zero\n\tjal func_80195120\n\taddiu $a1, $sp, 0x18\n\tlbu $v0, 0xD($s2)\n\tnop\n\tbeqz $v0, .L8017D000\n\tlui $s0, (0x10000 >> 16)\n\tlui $s4, (0x10000 >> 16)\n\t.L8017CFD4:\n\taddu $a0, $s3, $zero\n\tjal func_80197208\n\taddu $a1, $s1, $zero\n\taddu $v1, $s0, $zero\n\taddu $s0, $s0, $s4\n\taddiu $s3, $s3, 0x4\n\tlbu $v0, 0xD($s2)\n\tsra $v1, $v1, 16\n\tslt $v0, $v1, $v0\n\tbnez $v0, .L8017CFD4\n\taddiu $s1, $s1, 0xC\n\t.L8017D000:\n\taddu $a0, $zero, $zero\n\tlui $v0, %hi(D_801A0960)\n\taddiu $v0, $v0, %lo(D_801A0960)\n\tlh $a2, 0xC($v0)\n\tlhu $v1, 0x6($s2)\n\tlh $a3, 0xE($v0)\n\taddu $v1, $s5, $v1\n\tlui $at, %hi(D_8019EE70)\n\tsh $v1, %lo(D_8019EE70)($at)\n\tjal func_801971A8\n\taddu $a1, $zero, $zero\n\taddu $a0, $zero, $zero\n\taddu $a1, $zero, $zero\n\taddu $a2, $zero, $zero\n\tori $v0, $v0, 0x80\n\tandi $a3, $v0, 0xFFFF\n\tjal func_801973B8\n\tsw $zero, 0x10($sp)\n\taddu $a0, $s3, $zero\n\tjal func_80197208\n\taddu $a1, $zero, $zero\n\t.L8017D054:\n\tlw $ra, 0x38($sp)\n\tlw $s5, 0x34($sp)\n\tlw $s4, 0x30($sp)\n\tlw $s3, 0x2C($sp)\n\tlw $s2, 0x28($sp)\n\tlw $s1, 0x24($sp)\n\tlw $s0, 0x20($sp)\n\tjr $ra\n\taddiu $sp, $sp, 0x40\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_8017CE9C, .-func_8017CE9C\n"
-);
+void func_8017CE9C(void)
+{
+    /* battle anim: v0 gates; 80195120 + 80197208 spin loop; closes
+       with 801971A8/801973B8/80197208. */
+    if (func_800F53D4() != 0)
+        goto L17CEE0;
+L17CEE0:
+    /* v0 gates -> L17D054 / L17CF54 */
+    func_80195120();
+    if (func_800F53D4() != 0)
+        goto L17D000;
+L17cfd4:
+    for (;;) {
+        func_80197208();
+        if (func_800F53D4() != 0)
+            continue;
+        break;
+    }
+L17D000:
+    func_801971A8();
+    func_801973B8();
+    func_80197208();
+    return;
+L17D054:
+    return;
+}
