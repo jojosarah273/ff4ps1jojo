@@ -1,12 +1,65 @@
 #include "common.h"
-__asm__(
-  ".globl func_80118B80\n"
-  ".type func_80118B80, @function\n"
-  "func_80118B80:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x10($sp)\n\tjal func_80117594\n\tnop\n\tjal func_800F5574\n\taddiu $a0, $zero, 0xFE\n\tjal func_800F53D4\n\tnop\n\tbnez $v0, .L80118CA0\n\tnop\n\tjal func_800F824C\n\taddiu $a0, $zero, 0x18\n\tjal func_800F8FB8\n\taddiu $a0, $zero, 0x19\n\tjal func_800F654C\n\taddiu $a0, $zero, 0xA\n\tjal func_800F824C\n\taddiu $a0, $zero, 0x1A\n\tjal func_800F8FB8\n\taddiu $a0, $zero, 0x1B\n\tjal func_80174F0C\n\tnop\n\tjal func_800F71DC\n\taddu $a0, $zero, $zero\n\t.L80118BE0:\n\tjal func_800F6B68\n\taddiu $a0, $zero, 0x1003\n\tjal func_800F6434\n\taddiu $a0, $zero, 0x80\n\tbnez $v0, .L80118C70\n\tnop\n\tjal func_800F9644\n\taddiu $a0, $zero, 0x20\n\tjal func_800F6BE0\n\taddiu $a0, $zero, 0x1007\n\tjal func_800F5410\n\tnop\n\tjal func_800F3C3C\n\taddiu $a0, $zero, 0x30\n\tjal func_800F3F94\n\taddu $a0, $v0, $zero\n\tlui $v0, %hi(D_8019ED54)\n\tlw $v0, %lo(D_8019ED54)($v0)\n\tnop\n\tlhu $a0, 0x0($v0)\n\tjal func_800F3B04\n\taddiu $a0, $a0, 0x1009\n\tjal func_800F5520\n\taddu $a0, $v0, $zero\n\tjal func_800F53C0\n\tnop\n\tbeqz $v0, .L80118C58\n\tnop\n\tjal func_800F6BE0\n\taddiu $a0, $zero, 0x1009\n\t.L80118C58:\n\tjal func_800F87DC\n\taddiu $a0, $zero, 0x1007\n\tjal func_800F6558\n\taddu $a0, $zero, $zero\n\tjal func_800F9660\n\taddiu $a0, $zero, 0x20\n\t.L80118C70:\n\tjal func_80117DF8\n\tnop\n\tjal func_800F5958\n\taddiu $a0, $zero, 0x140\n\tjal func_800F53D4\n\tnop\n\tbeqz $v0, .L80118BE0\n\tnop\n\tjal func_8011EA5C\n\tnop\n\tj .L80118D10\n\tnop\n\t.L80118CA0:\n\tjal func_800F71DC\n\taddu $a0, $zero, $zero\n\t.L80118CA8:\n\tjal func_800F6B68\n\taddiu $a0, $zero, 0x1003\n\tjal func_800F6434\n\taddiu $a0, $zero, 0x80\n\tbnez $v0, .L80118CE8\n\tnop\n\tjal func_800F9644\n\taddiu $a0, $zero, 0x20\n\tjal func_800F6BE0\n\taddiu $a0, $zero, 0x1009\n\tjal func_800F87DC\n\taddiu $a0, $zero, 0x1007\n\tjal func_800F6558\n\taddu $a0, $zero, $zero\n\tjal func_800F9660\n\taddiu $a0, $zero, 0x20\n\t.L80118CE8:\n\tjal func_80117DF8\n\tnop\n\tjal func_800F5958\n\taddiu $a0, $zero, 0x140\n\tjal func_800F53D4\n\tnop\n\tbeqz $v0, .L80118CA8\n\tnop\n\tjal func_8011EA5C\n\tnop\n\t.L80118D10:\n\tlw $ra, 0x10($sp)\n\tnop\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_80118B80, .-func_80118B80\n"
-);
+void func_80118B80(void)
+{
+    /* battle stat row: 0x1003 gate, 0x18-0x1B windows, 0x30 window
+       cells, 80174F0C/80117DF8/8011EA5C; loops L118BE0 (H16: 6BE0
+       (0x1007)/5520 rows) and L118CA8 (0x1009 cell). */
+    func_80117594();
+    func_800F5574(0xFE);
+    if (func_800F53D4() != 0)
+        goto L118CA0;
+    func_800F824C(0x18);
+    func_800F8FB8(0x19);
+    func_800F654C(0xA);
+    func_800F824C(0x1A);
+    func_800F8FB8(0x1B);
+    func_80174F0C();
+    func_800F71DC();
+L118be0:
+    for (;;) {
+        func_800F6B68(0x1003);
+        if (func_800F6434(0x80) != 0)
+            goto L118C70;
+        func_800F9644(0x20);
+        func_800F6BE0(0x1007);
+        func_800F5410();
+        func_800F3F94(func_800F3C3C(0x30));
+        func_800F5520(func_800F3B04());
+        if (func_800F53C0() == 0)
+            goto L118C58;
+        func_800F6BE0(0x1009);
+    L118C58:
+        func_800F87DC(0x1007);
+        func_800F6558();
+        func_800F9660(0x20);
+    L118C70:
+        func_80117DF8();
+        func_800F5958(0x140);
+        if (func_800F53D4() == 0)
+            continue;
+        break;
+    }
+    func_8011EA5C();
+    return;
+L118CA0:
+    func_800F71DC();
+L118ca8:
+    for (;;) {
+        func_800F6B68(0x1003);
+        if (func_800F6434(0x80) != 0)
+            goto L118CE8;
+        func_800F9644(0x20);
+        func_800F6BE0(0x1009);
+        func_800F87DC(0x1007);
+        func_800F6558();
+        func_800F9660(0x20);
+    L118CE8:
+        func_80117DF8();
+        func_800F5958(0x140);
+        if (func_800F53D4() == 0)
+            continue;
+        break;
+    }
+    func_8011EA5C();
+    return;
+}
