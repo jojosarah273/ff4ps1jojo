@@ -1,12 +1,14 @@
 #include "common.h"
-__asm__(
-  ".globl func_800F4F4C\n"
-  ".type func_800F4F4C, @function\n"
-  "func_800F4F4C:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\tlw $a0, %gp_rel(D_8019ED68)($gp)\n\tlw $a1, %gp_rel(D_8019ED50)($gp)\n\tlbu $v1, 0x0($a0)\n\tlw $v0, 0x0($a1)\n\tnop\n\tandi $v0, $v0, 0x100\n\tbeqz $v0, .L800F4F74\n\tandi $a2, $v1, 0x7C\n\tj .L800F4F78\n\tori $v1, $a2, 0x1\n\t.L800F4F74:\n\tandi $v1, $a2, 0xFF\n\t.L800F4F78:\n\tlbu $v0, 0x0($a1)\n\tnop\n\tandi $v0, $v0, 0x80\n\tor $v0, $v1, $v0\n\tlbu $v1, 0x0($a1)\n\tnop\n\tbnez $v1, .L800F4FA0\n\tandi $a2, $v0, 0xFF\n\tj .L800F4FA4\n\tori $v0, $a2, 0x2\n\t.L800F4FA0:\n\tandi $v0, $a2, 0xFF\n\t.L800F4FA4:\n\tjr $ra\n\tsb $v0, 0x0($a0)\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_800F4F4C, .-func_800F4F4C\n"
-);
+extern u8 *D_8019ED68;
+extern u32 *D_8019ED50;
+void func_800F4F4C(void)
+{
+    u8 x = *D_8019ED68;
+    u8 r = (*D_8019ED50 & 0x100) ? (u8)((x & 0x7C) | 1) : (u8)(x & 0x7C);
+    u8 v = (u8)(r | ((u8)*D_8019ED50 & 0x80));
+    if ((u8)*D_8019ED50 != 0)
+        r = (u8)(v & 0xFF);
+    else
+        r = (u8)(v | 2);
+    *D_8019ED68 = r;
+}
