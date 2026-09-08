@@ -18,7 +18,7 @@ path — the same recipe used by every modern decomp-port.
 | Phase | Goal | State |
 |---|---|---|
 | 0 — Verified disassembly | Full text coverage byte-verified (maspsx lanes, splat, asm-differ) | ✅ done (2516/2516) |
-| A — Complete C decomp | Every function as harness-verified C (byte-match where the compiler reproduces it; runtime-verified where it doesn't) | ▶ in progress (818/2516 C-written, 614 byte-verified) |
+| A — Complete C decomp | Every function as harness-verified C (byte-match where the compiler reproduces it; runtime-verified where it doesn't) | ▶ in progress (818/2516 C-written, 736 byte-verified) |
 | B — Interpretation | Rename/restructure into modern readable C; native host: SDL, stdio assets, no BIOS; native renderer/audio swap | — |
 | C — Expansion | Widescreen, hi-res, new modes, randomizer/mod framework, cross-platform (DC-class portability = plain C) | — |
 
@@ -81,12 +81,15 @@ More detail: `PROGRESS.md`. Verification harness: `tools/check_integrity.sh`.
 <!-- STATUS:BEGIN -->
 | state | count | % |
 |---|---|---|
-| byte-verified (matched) | 614 | 24.4% |
-| real-C (match pending) | 204 | 8.1% |
+| byte-verified (matched) | 736 | 29.3% |
+| real-C (match pending) | 82 | 3.3% |
 | asm shell (to do) | 1698 | 67.5% |
 | **total** | 2516 | 100% |
 | **C-written** | **818** | **32.5%** |
 <!-- STATUS:END -->
+
+
+
 
 
 

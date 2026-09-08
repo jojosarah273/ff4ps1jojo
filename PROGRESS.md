@@ -275,6 +275,32 @@ NTSC-U + text guard armed + mod FMV skip all present.
 - S16: data-heavy/struct table cluster (event/script data access via D_ refs).
 - S17: consolidation: integrity + STATUS + README refresh + milestone check
   (50% at 1258) + final push.
+- PHASE A LONG SESSION (S12): two unattended drive sweeps — lane-first over
+  all 551 real-C candidates then ALL-lane retry over 203 failures:
+  **+469 byte-verified this round (matched 267 -> 736, 24.4%->29.3%)**.
+  - drive.py harness (tools/drive.py): candidates -> lanes.txt lane -> match
+    -> bincmp -> register, fully unattended; logs to decomp/sweep_*.log.
+  - tools/lift_leaf.py loop support scaffolded but parked (do-while hand-write).
+  - chain_emit extended for 32-bit lui+ori const args ($a0=v0+C); family
+    exhausted (func_800F8F74 matched).
+
+### PHASE A SESSION LADDER (S13-S27) — queued agenda
+- S13: hand-decomp do-while copy/scan loops (8018F478 pattern) batch 1.
+- S14: psx-lane SHELLS lift+sweep cycle #2 (lift what fits, sweep lane-first).
+- S15: modern-asm SHELLS lift+sweep cycle (83 remaining candidates pool).
+- S16: branchy batches 2-3 with the if-base-assign idiom (S9 lesson).
+- S17: MMIO-family register-forcing pass (800F6564-family stored C, `lui at`
+  hoist nudges — accept near-match, verify by runtime oracle later).
+- S18: stack-local functions (24-60 insns) — frame shapes.
+- S19: switch/choice chains (beqz/bne cascades).
+- S20: data-heavy/struct table cluster (event/script D_ refs).
+- S21: kernel/syscall-adjacent cluster (0x800F3B-5F mappers).
+- S22: medium engine funcs (60-120 insns).
+- S23: full ALL-lane re-sweep of every real-C candidate (auto-register).
+- S24: park-phase: leave remaining stubborn as verified-by-runtime candidates.
+- S25: consolidation + milestone check (50% @1258).
+- S26: README/STATUS final refresh + release notes drafting.
+- S27: Phase B kickoff plan (symbol renaming via SNES disasm).
 ### 2025-09-07 — PROJECT SCOPE: full C decomp -> native port (SoH/SM64 model)
 - Direction confirmed with user: goal = Ship-of-Harkinian-class native FF4
   (PS1), NOT an emulator and NOT a machine-translated recomp (the recomp

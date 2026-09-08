@@ -45,6 +45,9 @@ def lift(name, mode_b=False):
     rows = rows_of(name)
     if len(rows) > MAX_ROWS:
         return None
+    labels_used = set(r.split()[-1] for r in rows
+                      if re.match(r"\w+", r) and ".L" in r)
+    loop_tail = []
     R = {}
     ABSBASE = {}
     decls = {}
@@ -73,6 +76,15 @@ def lift(name, mode_b=False):
             continue
         if op in ("beq", "bne", "blez", "bgtz", "bltz", "bgez", "beqz", "bnez",
                   "jal", "j", "jalr"):
+            # single backward branch = do/while loop tail
+            mm = re.match(r"(\w+),(\w+),(\.L[0-9A-F]+)", args)
+            if op in ("bne", "beq", "blez", "bgtz", "bltz", "bgez") and mm:
+                tgt = mm.group(3)
+                if tgt not in labels_used:
+                    return None
+                loop_tail.append((op, mm.group(1), mm.group(2), tgt))
+                i += 1
+                continue
             return None
         if op == "lui":
             g = ABS.search(args)

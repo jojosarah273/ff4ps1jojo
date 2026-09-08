@@ -1,0 +1,407 @@
+func_800F3C3C [MODERN] func_800F3C3C: best MODERN = 2460
+func_800F3D48 [MODERN] func_800F3D48: best MODERN = 1400
+func_800F40E8 [MODERN] func_800F40E8: best MODERN = 2500
+func_800F4170 [MODERN] func_800F4170: best MODERN = 2400
+func_800F5140 [MODERN] func_800F5140: best MODERN = 1460
+func_800F516C [L295]     registered (L295)
+func_800F5CCC [L295] func_800F5CCC: best None = 999999
+func_800F5CF8 [MODERN] func_800F5CF8: best MODERN = 860
+func_800F5D24 [MODERN] func_800F5D24: best MODERN = 980
+func_800F5E1C [MODERN] func_800F5E1C: best MODERN = 860
+func_800F5E48 [MODERN] func_800F5E48: best MODERN = 860
+func_800F5E74 [MODERN] func_800F5E74: best MODERN = 860
+func_800F5EA0 [MODERN] func_800F5EA0: best MODERN = 860
+func_800F5EE8 [MODERN] func_800F5EE8: best MODERN = 2500
+func_800F5F70 [MODERN] func_800F5F70: best MODERN = 2400
+func_800F6104 [MODERN] func_800F6104: best MODERN = 1860
+func_800F61E8 [MODERN] func_800F61E8: best MODERN = 860
+func_800F6214 [L295] func_800F6214: best None = 999999
+func_800F6338 [MODERN] func_800F6338: best MODERN = 860
+func_800F6364 [MODERN] func_800F6364: best MODERN = 860
+func_800F6390 [MODERN] func_800F6390: best MODERN = 860
+func_800F63BC [MODERN] func_800F63BC: best MODERN = 860
+func_800F6564 [MODERN] func_800F6564: best MODERN = 860
+func_800F6630 [MODERN] func_800F6630: best MODERN = 860
+func_800F6B38 [MODERN] func_800F6B38: best MODERN = 1660
+func_800F6D40 [MODERN] func_800F6D40: best MODERN = 1660
+func_800F6F28 [MODERN] func_800F6F28: best MODERN = 860
+func_800F7430 [MODERN] func_800F7430: best MODERN = 1200
+func_800F76BC [MODERN] func_800F76BC: best MODERN = 1100
+func_800F7780 [MODERN] func_800F7780: best MODERN = 2320
+func_800F7864 [MODERN] func_800F7864: best MODERN = 980
+func_800F7894 [MODERN] func_800F7894: best MODERN = 980
+func_800F7968 [MODERN] func_800F7968: best MODERN = 2400
+func_800F7A40 [MODERN] func_800F7A40: best MODERN = 2460
+func_800F7B40 [MODERN] func_800F7B40: best MODERN = 4060
+func_800F7C6C [MODERN] func_800F7C6C: best MODERN = 2460
+func_800F7C98 [MODERN] func_800F7C98: best MODERN = 2660
+func_800F7CC8 [MODERN] func_800F7CC8: best MODERN = 1620
+func_800F7DDC [MODERN] func_800F7DDC: best MODERN = 3840
+func_800F7EE8 [MODERN] func_800F7EE8: best MODERN = 2720
+func_800F7F18 [MODERN] func_800F7F18: best MODERN = 2200
+func_800F916C [MODERN] func_800F916C: best MODERN = 2720
+func_800F9200 [MODERN] func_800F9200: best MODERN = 1860
+func_800F922C [MODERN] func_800F922C: best MODERN = 3460
+func_800F926C [MODERN] func_800F926C: best MODERN = 1860
+func_800F9298 [MODERN] func_800F9298: best MODERN = 3460
+func_800F92D8 [MODERN] func_800F92D8: best MODERN = 1860
+func_800F9304 [MODERN] func_800F9304: best MODERN = 1860
+func_800F9330 [MODERN] func_800F9330: best MODERN = 3460
+func_800F9370 [MODERN] func_800F9370: best MODERN = 1860
+func_800F939C [MODERN] func_800F939C: best MODERN = 3460
+func_800F93DC [MODERN] func_800F93DC: best MODERN = 2060
+func_800F9410 [MODERN] func_800F9410: best MODERN = 2200
+func_800F9538 [MODERN] func_800F9538: best MODERN = 2060
+func_800F956C [MODERN] func_800F956C: best MODERN = 2060
+func_800F95A0 [MODERN] func_800F95A0: best MODERN = 2200
+func_800F95D8 [MODERN] func_800F95D8: best MODERN = 2060
+func_800F960C [MODERN] func_800F960C: best MODERN = 2200
+func_800FC07C [PSX] func_800FC07C: best None = 999999
+func_800FC0DC [MODERN] func_800FC0DC: best MODERN = 1060
+func_800FD6B8 [PSX] func_800FD6B8: best None = 999999
+func_800FD6E8 [PSX] func_800FD6E8: best None = 999999
+func_800FD804 [PSX] func_800FD804: best None = 999999
+func_800FFB1C [PSX] func_800FFB1C: best None = 999999
+func_80102414 [PSX] func_80102414: best None = 999999
+func_801033E0 [L295] func_801033E0: best None = 999999
+func_80104DB4 [PSX] func_80104DB4: best None = 999999
+func_8010E0D0 [PSX] func_8010E0D0: best None = 999999
+func_8010E128 [PSX] func_8010E128: best None = 999999
+func_8011050C [PSX] func_8011050C: best None = 999999
+func_80111134 [PSX] func_80111134: best None = 999999
+func_80113644 [PSX] func_80113644: best None = 999999
+func_80113C54 [L295] func_80113C54: best None = 999999
+func_80114788 [PSX] func_80114788: best None = 999999
+func_80115038 [PSX] func_80115038: best None = 999999
+func_80117594 [PSX] func_80117594: best None = 999999
+func_80117628 [PSX] func_80117628: best None = 999999
+func_80117660 [PSX] func_80117660: best None = 999999
+func_8011770C [PSX] func_8011770C: best None = 999999
+func_80117754 [PSX] func_80117754: best None = 999999
+func_80117F10 [PSX] func_80117F10: best None = 999999
+func_80117F40 [PSX] func_80117F40: best None = 999999
+func_80117F78 [PSX] func_80117F78: best None = 999999
+func_801183B0 [PSX] func_801183B0: best None = 999999
+func_80118A40 [L295] func_80118A40: best None = 999999
+func_80118EC0 [PSX] func_80118EC0: best None = 999999
+func_801191B0 [PSX] func_801191B0: best None = 999999
+func_8011AC64 [PSX] func_8011AC64: best None = 999999
+func_8011AD14 [PSX] func_8011AD14: best None = 999999
+func_8011AD5C [PSX] func_8011AD5C: best None = 999999
+func_8011ADA4 [PSX] func_8011ADA4: best None = 999999
+func_8011ADEC [PSX] func_8011ADEC: best None = 999999
+func_8011AE1C [PSX] func_8011AE1C: best None = 999999
+func_8011AE4C [PSX] func_8011AE4C: best None = 999999
+func_8011AE7C [PSX] func_8011AE7C: best None = 999999
+func_8011FB74 [PSX] func_8011FB74: best None = 999999
+func_8012202C [PSX] func_8012202C: best None = 999999
+func_801220EC [PSX] func_801220EC: best None = 999999
+func_80122114 [PSX] func_80122114: best None = 999999
+func_8012216C [PSX] func_8012216C: best None = 999999
+func_801221C4 [PSX] func_801221C4: best None = 999999
+func_801221EC [PSX] func_801221EC: best None = 999999
+func_8012224C [PSX] func_8012224C: best None = 999999
+func_801224F8 [MODERN] func_801224F8: best MODERN = 860
+func_80122518 [MODERN] func_80122518: best MODERN = 860
+func_8012281C [PSX] func_8012281C: best None = 999999
+func_80122934 [PSX] func_80122934: best None = 999999
+func_80122964 [PSX] func_80122964: best None = 999999
+func_80122994 [PSX] func_80122994: best None = 999999
+func_80122CF0 [PSX] func_80122CF0: best None = 999999
+func_80123FB4 [PSX] func_80123FB4: best None = 999999
+func_80123FEC [PSX] func_80123FEC: best None = 999999
+func_801240F8 [PSX] func_801240F8: best None = 999999
+func_80124180 [PSX] func_80124180: best None = 999999
+func_80125100 [PSX] func_80125100: best None = 999999
+func_801255C0 [PSX] func_801255C0: best None = 999999
+func_80126330 [PSX] func_80126330: best None = 999999
+func_80126368 [PSX] func_80126368: best None = 999999
+func_801263F0 [PSX] func_801263F0: best None = 999999
+func_80126458 [PSX] func_80126458: best None = 999999
+func_80126528 [PSX] func_80126528: best None = 999999
+func_8012821C [PSX] func_8012821C: best None = 999999
+func_80129808 [PSX] func_80129808: best None = 999999
+func_80129AAC [PSX] func_80129AAC: best None = 999999
+func_80129C54 [L295] func_80129C54: best None = 999999
+func_8012F9A0 [PSX] func_8012F9A0: best None = 999999
+func_80130884 [PSX] func_80130884: best None = 999999
+func_80131294 [PSX] func_80131294: best None = 999999
+func_8013554C [PSX] func_8013554C: best None = 999999
+func_801378E0 [L295] func_801378E0: best None = 999999
+func_80138620 [MODERN] func_80138620: best MODERN = 2000
+func_80138A34 [PSX] func_80138A34: best None = 999999
+func_8013AAA8 [PSX] func_8013AAA8: best None = 999999
+func_8013B118 [L295] func_8013B118: best None = 999999
+func_8013B764 [MODERN] func_8013B764: best MODERN = 2400
+func_8013C44C [L295] func_8013C44C: best None = 999999
+func_8013C4B4 [PSX] func_8013C4B4: best None = 999999
+func_801407EC [PSX] func_801407EC: best None = 999999
+func_8014086C [PSX] func_8014086C: best None = 999999
+func_80140894 [PSX] func_80140894: best None = 999999
+func_801408BC [PSX] func_801408BC: best None = 999999
+func_80140944 [PSX] func_80140944: best None = 999999
+func_80140994 [PSX] func_80140994: best None = 999999
+func_80141F84 [PSX] func_80141F84: best None = 999999
+func_80141FC4 [PSX] func_80141FC4: best None = 999999
+func_80143628 [PSX] func_80143628: best None = 999999
+func_80145AA0 [MODERN] func_80145AA0: best MODERN = 2400
+func_8014A950 [PSX] func_8014A950: best None = 999999
+func_8014AE1C [L295] func_8014AE1C: best None = 999999
+func_8014B42C [PSX] func_8014B42C: best None = 999999
+func_8014B5F8 [PSX] func_8014B5F8: best None = 999999
+func_8014B6C0 [PSX] func_8014B6C0: best None = 999999
+func_8014B804 [PSX] func_8014B804: best None = 999999
+func_8014B82C [PSX] func_8014B82C: best None = 999999
+func_8014B884 [PSX] func_8014B884: best None = 999999
+func_8014E984 [PSX] func_8014E984: best None = 999999
+func_80150400 [PSX] func_80150400: best None = 999999
+func_80153374 [PSX] func_80153374: best None = 999999
+func_8015EAB0 [PSX] func_8015EAB0: best None = 999999
+func_8015F7B0 [PSX] func_8015F7B0: best None = 999999
+func_8015F940 [PSX] func_8015F940: best None = 999999
+func_8015FA20 [PSX] func_8015FA20: best None = 999999
+func_8015FAF8 [PSX] func_8015FAF8: best None = 999999
+func_8015FB48 [PSX] func_8015FB48: best None = 999999
+func_80161C48 [PSX] func_80161C48: best None = 999999
+func_80162468 [PSX] func_80162468: best None = 999999
+func_80162558 [PSX] func_80162558: best None = 999999
+func_80167604 [PSX] func_80167604: best None = 999999
+func_80168400 [PSX] func_80168400: best None = 999999
+func_80168474 [PSX] func_80168474: best None = 999999
+func_801691F0 [PSX] func_801691F0: best None = 999999
+func_8016B650 [L295] func_8016B650: best None = 999999
+func_8016BFE8 [L295] func_8016BFE8: best None = 999999
+func_8016E500 [PSX] func_8016E500: best None = 999999
+func_801743E0 [L295] func_801743E0: best None = 999999
+func_8017477C [L295] func_8017477C: best None = 999999
+func_80177224 [PSX] func_80177224: best None = 999999
+func_80177284 [PSX] func_80177284: best None = 999999
+func_80179500 [L295] func_80179500: best None = 999999
+func_8018AC40 [MODERN] func_8018AC40: best MODERN = 1860
+func_8018AC68 [MODERN] func_8018AC68: best MODERN = 1860
+func_8018AD28 [MODERN] func_8018AD28: best MODERN = 800
+func_8018CA18 [MODERN] func_8018CA18: best MODERN = 1960
+func_8018F1F8 [MODERN] func_8018F1F8: best MODERN = 660
+func_8018F478 [MODERN] func_8018F478: best MODERN = 1600
+func_801917D8 [MODERN] func_801917D8: best MODERN = 1000
+func_80191838 [MODERN] func_80191838: best MODERN = 600
+func_80191858 [MODERN] func_80191858: best MODERN = 600
+func_801928A8 [MODERN] func_801928A8: best MODERN = 600
+func_80192C74 [MODERN] func_80192C74: best MODERN = 860
+func_80195798 [MODERN] func_80195798: best MODERN = 860
+func_80196018 [MODERN] func_80196018: best MODERN = 260
+func_80196074 [MODERN] func_80196074: best MODERN = 2000
+func_801960BC [MODERN] func_801960BC: best MODERN = 1660
+func_80196F18 [MODERN] func_80196F18: best MODERN = 600
+func_80197168 [MODERN] func_80197168: best MODERN = 1600
+func_801971A8 [MODERN] func_801971A8: best MODERN = 1660
+func_80197208 [L295] func_80197208: best None = 999999
+func_80197248 [L295] func_80197248: best None = 999999
+func_80197708 [MODERN] func_80197708: best MODERN = 400
+func_80197A78 [MODERN] func_80197A78: best MODERN = 400
+func_80197DF8 [MODERN] func_80197DF8: best MODERN = 925
+func_80198600 [MODERN] func_80198600: best MODERN = 1520
+--- retry 202 failures on ALL lanes ---
+func_800F3C3C [ALL] func_800F3C3C: best L295 = 1060
+func_800F3D48 [ALL] func_800F3D48: best PSX = 520
+func_800F40E8 [ALL] func_800F40E8: best L295 = 2020
+func_800F4170 [ALL] func_800F4170: best L295 = 580
+func_800F5140 [ALL] func_800F5140: best L295 = 460
+func_800F5CCC [ALL]     registered (L295)
+func_800F5CF8 [ALL] func_800F5CF8: best L295 = 660
+func_800F5D24 [ALL] func_800F5D24: best L27 = 520
+func_800F5E1C [ALL] func_800F5E1C: best L295 = 660
+func_800F5E48 [ALL] func_800F5E48: best L295 = 660
+func_800F5E74 [ALL] func_800F5E74: best L295 = 660
+func_800F5EA0 [ALL] func_800F5EA0: best L295 = 660
+func_800F5EE8 [ALL] func_800F5EE8: best L295 = 2020
+func_800F5F70 [ALL] func_800F5F70: best L295 = 580
+func_800F6104 [ALL] func_800F6104: best MODERN = 1860
+func_800F61E8 [ALL] func_800F61E8: best L295 = 460
+func_800F6214 [ALL]     registered (L295)
+func_800F6338 [ALL] func_800F6338: best L295 = 460
+func_800F6364 [ALL] func_800F6364: best L295 = 460
+func_800F6390 [ALL] func_800F6390: best L295 = 460
+func_800F63BC [ALL] func_800F63BC: best L295 = 460
+func_800F6564 [ALL] func_800F6564: best L295 = 800
+func_800F6630 [ALL] func_800F6630: best L295 = 800
+func_800F6B38 [ALL] func_800F6B38: best L295 = 1000
+func_800F6D40 [ALL] func_800F6D40: best L295 = 1000
+func_800F6F28 [ALL] func_800F6F28: best L295 = 800
+func_800F7430 [ALL]     registered (L295)
+func_800F76BC [ALL] func_800F76BC: best L295 = 460
+func_800F7780 [ALL] func_800F7780: best L295 = 1980
+func_800F7864 [ALL] func_800F7864: best L295 = 460
+func_800F7894 [ALL] func_800F7894: best L295 = 460
+func_800F7968 [ALL] func_800F7968: best L295 = 580
+func_800F7A40 [ALL] func_800F7A40: best PSX = 2200
+func_800F7B40 [ALL] func_800F7B40: best L295 = 2860
+func_800F7C6C [ALL] func_800F7C6C: best PSX = 2400
+func_800F7C98 [ALL] func_800F7C98: best L295 = 2400
+func_800F7CC8 [ALL] func_800F7CC8: best L295 = 1340
+func_800F7DDC [ALL] func_800F7DDC: best MODERN = 3840
+func_800F7EE8 [ALL] func_800F7EE8: best L295 = 1780
+func_800F7F18 [ALL] func_800F7F18: best L295 = 1780
+func_800F916C [ALL] func_800F916C: best L26 = 2440
+func_800F9200 [ALL] func_800F9200: best MODERN = 1860
+func_800F922C [ALL] func_800F922C: best PSX = 2660
+func_800F926C [ALL] func_800F926C: best MODERN = 1860
+func_800F9298 [ALL] func_800F9298: best PSX = 2660
+func_800F92D8 [ALL] func_800F92D8: best MODERN = 1860
+func_800F9304 [ALL] func_800F9304: best MODERN = 1860
+func_800F9330 [ALL] func_800F9330: best PSX = 2660
+func_800F9370 [ALL] func_800F9370: best MODERN = 1860
+func_800F939C [ALL] func_800F939C: best PSX = 2660
+func_800F93DC [ALL] func_800F93DC: best MODERN = 2060
+func_800F9410 [ALL] func_800F9410: best MODERN = 2200
+func_800F9538 [ALL] func_800F9538: best MODERN = 2060
+func_800F956C [ALL] func_800F956C: best MODERN = 2060
+func_800F95A0 [ALL] func_800F95A0: best MODERN = 2200
+func_800F95D8 [ALL] func_800F95D8: best MODERN = 2060
+func_800F960C [ALL] func_800F960C: best MODERN = 2200
+func_800FC07C [ALL]     registered (PSXS)
+func_800FC0DC [ALL] func_800FC0DC: best PSX = 860
+func_800FD6B8 [ALL]     registered (PSXS)
+func_800FD6E8 [ALL]     registered (PSXS)
+func_800FD804 [ALL]     registered (PSXS)
+func_800FFB1C [ALL]     registered (PSXS)
+func_80102414 [ALL]     registered (PSXS)
+func_801033E0 [ALL]     registered (L295)
+func_80104DB4 [ALL]     registered (PSXS)
+func_8010E0D0 [ALL]     registered (PSXS)
+func_8010E128 [ALL]     registered (PSXS)
+func_8011050C [ALL]     registered (PSXS)
+func_80111134 [ALL]     registered (PSXS)
+func_80113644 [ALL]     registered (PSXS)
+func_80113C54 [ALL]     registered (L295)
+func_80114788 [ALL]     registered (PSXS)
+func_80115038 [ALL]     registered (PSXS)
+func_80117594 [ALL]     registered (PSXS)
+func_80117628 [ALL]     registered (PSXS)
+func_80117660 [ALL]     registered (PSXS)
+func_8011770C [ALL]     registered (PSXS)
+func_80117754 [ALL]     registered (PSXS)
+func_80117F10 [ALL]     registered (PSXS)
+func_80117F40 [ALL]     registered (PSXS)
+func_80117F78 [ALL]     registered (PSXS)
+func_801183B0 [ALL]     registered (PSXS)
+func_80118A40 [ALL]     registered (L295)
+func_80118EC0 [ALL]     registered (PSXS)
+func_801191B0 [ALL]     registered (PSXS)
+func_8011AC64 [ALL]     registered (PSXS)
+func_8011AD14 [ALL]     registered (PSXS)
+func_8011AD5C [ALL]     registered (PSXS)
+func_8011ADA4 [ALL]     registered (PSXS)
+func_8011ADEC [ALL]     registered (PSXS)
+func_8011AE1C [ALL]     registered (PSXS)
+func_8011AE4C [ALL]     registered (PSXS)
+func_8011AE7C [ALL]     registered (PSXS)
+func_8011FB74 [ALL]     registered (PSXS)
+func_8012202C [ALL]     registered (PSXS)
+func_801220EC [ALL]     registered (PSXS)
+func_80122114 [ALL]     registered (PSXS)
+func_8012216C [ALL]     registered (PSXS)
+func_801221C4 [ALL]     registered (PSXS)
+func_801221EC [ALL]     registered (PSXS)
+func_8012224C [ALL]     registered (PSXS)
+func_801224F8 [ALL] func_801224F8: best MODERN = 860
+func_80122518 [ALL] func_80122518: best MODERN = 860
+func_8012281C [ALL]     registered (PSXS)
+func_80122934 [ALL]     registered (PSXS)
+func_80122964 [ALL]     registered (PSXS)
+func_80122994 [ALL]     registered (PSXS)
+func_80122CF0 [ALL]     registered (PSXS)
+func_80123FB4 [ALL]     registered (PSXS)
+func_80123FEC [ALL]     registered (PSXS)
+func_801240F8 [ALL]     registered (PSXS)
+func_80124180 [ALL]     registered (PSXS)
+func_80125100 [ALL]     registered (PSXS)
+func_801255C0 [ALL]     registered (PSXS)
+func_80126330 [ALL]     registered (PSXS)
+func_80126368 [ALL]     registered (PSXS)
+func_801263F0 [ALL]     registered (PSXS)
+func_80126458 [ALL]     registered (PSXS)
+func_80126528 [ALL]     registered (PSXS)
+func_8012821C [ALL]     registered (PSXS)
+func_80129808 [ALL]     registered (PSXS)
+func_80129AAC [ALL]     registered (PSXS)
+func_80129C54 [ALL]     registered (L295)
+func_8012F9A0 [ALL]     registered (PSXS)
+func_80130884 [ALL]     registered (PSXS)
+func_80131294 [ALL]     registered (PSXS)
+func_8013554C [ALL]     registered (PSXS)
+func_801378E0 [ALL]     registered (L295)
+func_80138620 [ALL] func_80138620: best PSXS = 1600
+func_80138A34 [ALL]     registered (PSXS)
+func_8013AAA8 [ALL]     registered (PSXS)
+func_8013B118 [ALL]     registered (L295)
+func_8013B764 [ALL] func_8013B764: best PSXS = 2000
+func_8013C44C [ALL]     registered (L295)
+func_8013C4B4 [ALL]     registered (PSXS)
+func_801407EC [ALL]     registered (PSXS)
+func_8014086C [ALL]     registered (PSXS)
+func_80140894 [ALL]     registered (PSXS)
+func_801408BC [ALL]     registered (PSXS)
+func_80140944 [ALL]     registered (PSXS)
+func_80140994 [ALL]     registered (PSXS)
+func_80141F84 [ALL]     registered (PSXS)
+func_80141FC4 [ALL]     registered (PSXS)
+func_80143628 [ALL]     registered (PSXS)
+func_80145AA0 [ALL] func_80145AA0: best PSXS = 2200
+func_8014A950 [ALL]     registered (PSXS)
+func_8014AE1C [ALL]     registered (L295)
+func_8014B42C [ALL]     registered (PSXS)
+func_8014B5F8 [ALL]     registered (PSXS)
+func_8014B6C0 [ALL]     registered (PSXS)
+func_8014B804 [ALL]     registered (PSXS)
+func_8014B82C [ALL]     registered (PSXS)
+func_8014B884 [ALL]     registered (PSXS)
+func_8014E984 [ALL]     registered (PSXS)
+func_80150400 [ALL]     registered (PSXS)
+func_80153374 [ALL]     registered (PSXS)
+func_8015EAB0 [ALL]     registered (PSXS)
+func_8015F7B0 [ALL]     registered (PSXS)
+func_8015F940 [ALL]     registered (PSXS)
+func_8015FA20 [ALL]     registered (PSXS)
+func_8015FAF8 [ALL]     registered (PSXS)
+func_8015FB48 [ALL]     registered (PSXS)
+func_80161C48 [ALL]     registered (PSXS)
+func_80162468 [ALL]     registered (PSXS)
+func_80162558 [ALL]     registered (PSXS)
+func_80167604 [ALL]     registered (PSXS)
+func_80168400 [ALL]     registered (PSXS)
+func_80168474 [ALL]     registered (PSXS)
+func_801691F0 [ALL]     registered (PSXS)
+func_8016B650 [ALL]     registered (L295)
+func_8016BFE8 [ALL]     registered (L295)
+func_8016E500 [ALL]     registered (PSXS)
+func_801743E0 [ALL]     registered (L295)
+func_8017477C [ALL]     registered (L295)
+func_80177224 [ALL]     registered (PSXS)
+func_80177284 [ALL]     registered (PSXS)
+func_80179500 [ALL]     registered (L295)
+func_8018AC40 [ALL] func_8018AC40: best MODERN = 1860
+func_8018AC68 [ALL] func_8018AC68: best MODERN = 1860
+func_8018AD28 [ALL] func_8018AD28: best L26 = 200
+func_8018CA18 [ALL] func_8018CA18: best L26 = 1500
+func_8018F1F8 [ALL] func_8018F1F8: best L26 = 60
+func_8018F478 [ALL] func_8018F478: best PSXS = 1400
+func_801917D8 [ALL] func_801917D8: best L26 = 800
+func_80191838 [ALL] func_80191838: best L26 = 460
+func_80191858 [ALL] func_80191858: best L26 = 460
+func_801928A8 [ALL] func_801928A8: best L26 = 460
+func_80192C74 [ALL] func_80192C74: best L295 = 460
+func_80195798 [ALL] func_80195798: best PSX = 800
+func_80196018 [ALL] func_80196018: best MODERN = 260
+func_80196074 [ALL] func_80196074: best PSXS = 1800
+func_801960BC [ALL] func_801960BC: best L26 = 1460
+func_80196F18 [ALL] func_80196F18: best L26 = 460
+func_80197168 [ALL] func_80197168: best MODERN = 1600
+func_801971A8 [ALL] func_801971A8: best MODERN = 1660
+func_80197208 [ALL]     registered (L295)
+func_80197248 [ALL]     registered (L295)
+func_80197708 [ALL] func_80197708: best MODERN = 400
+func_80197A78 [ALL] func_80197A78: best L26 = 60
+func_80197DF8 [ALL]     registered (L26)
+func_80198600 [ALL] func_80198600: best PSX = 660
+DRIVE DONE matched_new=122 failed=202
