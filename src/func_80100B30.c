@@ -1,12 +1,24 @@
 #include "common.h"
-__asm__(
-  ".globl func_80100B30\n"
-  ".type func_80100B30, @function\n"
-  "func_80100B30:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x10($sp)\n\tjal func_800F6564\n\taddiu $a0, $zero, 0x1702\n\tjal func_800F824C\n\taddiu $a0, $zero, 0x3D\n\tjal func_800F8FB8\n\taddiu $a0, $zero, 0x3E\n\tjal func_800F3C3C\n\taddiu $a0, $zero, 0x3D\n\tjal func_800F4F28\n\taddu $a0, $v0, $zero\n\tjal func_800F4F4C\n\tnop\n\tjal func_800F3C3C\n\taddiu $a0, $zero, 0x3E\n\tjal func_800F7A40\n\taddu $a0, $v0, $zero\n\tjal func_800F6564\n\taddiu $a0, $zero, 0x1701\n\tjal func_800F6434\n\taddiu $a0, $zero, 0x2\n\tbnez $v0, .L80100BA0\n\tnop\n\tjal func_800F62BC\n\taddiu $a0, $zero, 0x3E\n\tjal func_800F62BC\n\taddiu $a0, $zero, 0x3E\n\t.L80100BA0:\n\tjal func_800F7270\n\taddiu $a0, $zero, 0x3D\n\tlui $a0, (0x158200 >> 16)\n\tjal func_800F6C68\n\tori $a0, $a0, (0x158200 & 0xFFFF)\n\tjal func_800F824C\n\taddiu $a0, $zero, 0x3D\n\tlui $a0, (0x158201 >> 16)\n\tjal func_800F6C68\n\tori $a0, $a0, (0x158201 & 0xFFFF)\n\tjal func_800F824C\n\taddiu $a0, $zero, 0x3E\n\tlw $ra, 0x10($sp)\n\tnop\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_80100B30, .-func_80100B30\n"
-);
+void func_80100B30(void)
+{
+    /* shop rows: 0x1702/0x3D/0x3E windows, 0x1701 text; 4F28/7A40
+       label pairs, then 62BC gates. */
+    func_800F6564(0x1702);
+    func_800F824C(0x3D);
+    func_800F8FB8(0x3E);
+    func_800F4F28(func_800F3C3C(0x3D));
+    func_800F4F4C();
+    func_800F7A40(func_800F3C3C(0x3E));
+    func_800F6564(0x1701);
+    if (func_800F6434(2) != 0)
+        goto L100BA0;
+    func_800F62BC(0x3E);
+    func_800F62BC(0x3E);
+L100BA0:
+    func_800F7270(0x3D);
+    func_800F6C68();
+    func_800F824C(0x3D);
+    func_800F6C68();
+    func_800F824C(0x3E);
+    return;
+}

@@ -1,12 +1,30 @@
 #include "common.h"
-__asm__(
-  ".globl func_800FC110\n"
-  ".type func_800FC110, @function\n"
-  "func_800FC110:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x10($sp)\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x3F\n\tjal func_800FD804\n\tnop\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x1\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x212C\n\tjal func_800F8FB8\n\taddiu $a0, $zero, 0x79\n\t.L800FC140:\n\tjal func_800FE7B0\n\tnop\n\tjal func_800F8F74\n\taddiu $a0, $zero, 0x420C\n\tjal func_800F6630\n\taddiu $a0, $zero, 0x79\n\tjal func_800F9690\n\tnop\n\tlui $a0, (0x14FB5E >> 16)\n\tjal func_800F6C68\n\tori $a0, $a0, (0x14FB5E & 0xFFFF)\n\tjal func_800F824C\n\taddiu $a0, $zero, 0xAD\n\tjal func_800FE5D4\n\tnop\n\tjal func_800FE6E4\n\tnop\n\tjal func_800F62BC\n\taddiu $a0, $zero, 0x79\n\tjal func_800F6630\n\taddiu $a0, $zero, 0x79\n\tjal func_800F5574\n\taddiu $a0, $zero, 0x28\n\tjal func_800F53D4\n\tnop\n\tbeqz $v0, .L800FC140\n\tnop\n\tlui $at, %hi(D_8019EE28)\n\tsw $zero, %lo(D_8019EE28)($at)\n\tjal func_800FC2AC\n\tnop\n\tlw $ra, 0x10($sp)\n\tnop\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_800FC110, .-func_800FC110\n"
-);
+void func_800FC110(void)
+{
+    /* battle rows: 0x3F/0x212C/0x79 windows, 0x420C texts, 0xAD
+       window, 800FC2AC close; loop L8FC140 on 5574(0x28). */
+    func_800F654C(0x3F);
+    func_800FD804();
+    func_800F654C(1);
+    func_800F8188(0x212C);
+    func_800F8FB8(0x79);
+L8fc140:
+    for (;;) {
+        func_800FE7B0();
+        func_800F8F74(0x420C);
+        func_800F6630(0x79);
+        func_800F9690();
+        func_800F6C68();
+        func_800F824C(0xAD);
+        func_800FE5D4();
+        func_800FE6E4();
+        func_800F62BC(0x79);
+        func_800F6630(0x79);
+        func_800F5574(0x28);
+        if (func_800F53D4() == 0)
+            continue;
+        break;
+    }
+    func_800FC2AC();
+    return;
+}
