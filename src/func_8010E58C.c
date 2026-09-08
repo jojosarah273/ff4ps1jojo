@@ -1,12 +1,96 @@
 #include "common.h"
-__asm__(
-  ".globl func_8010E58C\n"
-  ".type func_8010E58C, @function\n"
-  "func_8010E58C:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x20\n\tsw $ra, 0x18($sp)\n\tjal func_800FB3F8\n\tnop\n\tjal func_80103FE8\n\tnop\n\taddiu $a0, $sp, 0x10\n\taddiu $a1, $zero, 0xFF\n\taddiu $a2, $zero, 0xFF\n\taddiu $a3, $zero, 0xFF\n\taddiu $v0, $zero, 0x10\n\taddiu $v1, $zero, 0x1\n\taddiu $t0, $zero, 0x100\n\tlui $at, %hi(D_800D212C)\n\tsb $v0, %lo(D_800D212C)($at)\n\taddiu $v0, $zero, 0xF0\n\tsb $v1, %gp_rel(D_8019ECFC)($gp)\n\tsh $t0, 0x10($sp)\n\tsh $zero, 0x12($sp)\n\tsh $t0, 0x14($sp)\n\tjal func_80194518\n\tsh $v0, 0x16($sp)\n\tjal func_80194394\n\taddu $a0, $zero, $zero\n\tlui $a0, %hi(D_801D7D68)\n\taddiu $a0, $a0, %lo(D_801D7D68)\n\taddiu $a1, $zero, 0x300\n\taddu $a2, $zero, $zero\n\tjal func_8017F8F8\n\taddiu $a3, $zero, -0x1\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x22\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x2123\n\tjal func_800F654C\n\taddu $a0, $zero, $zero\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x420C\n\tjal func_800F654C\n\taddiu $a0, $zero, 0xF7\n\tlui $a0, (0x7F5A00 >> 16)\n\tjal func_800F81E8\n\tori $a0, $a0, (0x7F5A00 & 0xFFFF)\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x80\n\tlui $a0, (0x7F5A01 >> 16)\n\tjal func_800F81E8\n\tori $a0, $a0, (0x7F5A01 & 0xFFFF)\n\tjal func_800F654C\n\taddiu $a0, $zero, 0xEB\n\tlui $a0, (0x7F5A02 >> 16)\n\tjal func_800F81E8\n\tori $a0, $a0, (0x7F5A02 & 0xFFFF)\n\tjal func_800F654C\n\taddiu $a0, $zero, 0xF7\n\tlui $a0, (0x7F5A03 >> 16)\n\tjal func_800F81E8\n\tori $a0, $a0, (0x7F5A03 & 0xFFFF)\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x78\n\tlui $a0, (0x7F5A04 >> 16)\n\tjal func_800F81E8\n\tori $a0, $a0, (0x7F5A04 & 0xFFFF)\n\tjal func_800F654C\n\taddiu $a0, $zero, 0xEC\n\tlui $a0, (0x7F5A05 >> 16)\n\tjal func_800F81E8\n\tori $a0, $a0, (0x7F5A05 & 0xFFFF)\n\tjal func_800F654C\n\taddu $a0, $zero, $zero\n\tlui $a0, (0x7F5A06 >> 16)\n\tjal func_800F81E8\n\tori $a0, $a0, (0x7F5A06 & 0xFFFF)\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x41\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x4360\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x26\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x4361\n\tjal func_800F71DC\n\taddiu $a0, $zero, 0x5A00\n\tjal func_800F8D00\n\taddiu $a0, $zero, 0x4362\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x7F\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x4364\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x16\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x4367\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x3\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x1700\n\tjal func_800F654C\n\taddu $a0, $zero, $zero\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x2100\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x81\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x4200\n\tjal func_800F8FB8\n\taddiu $a0, $zero, 0x24\n\t.L8010E738:\n\tjal func_800FE7B0\n\tnop\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x40\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x420C\n\tjal func_800F6630\n\taddiu $a0, $zero, 0x24\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x2100\n\tjal func_8010E878\n\tnop\n\tjal func_800F62BC\n\taddiu $a0, $zero, 0x24\n\tjal func_800F6630\n\taddiu $a0, $zero, 0x24\n\tjal func_800F5574\n\taddiu $a0, $zero, 0x10\n\tjal func_800F53D4\n\tnop\n\tbeqz $v0, .L8010E738\n\tnop\n\t.L8010E790:\n\tjal func_800FE7B0\n\tnop\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x40\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x420C\n\tjal func_8010E878\n\tnop\n\tjal func_800F6630\n\taddiu $a0, $zero, 0x2\n\tjal func_800F6434\n\taddiu $a0, $zero, 0x202\n\tbnez $v0, .L8010E7E0\n\tnop\n\tjal func_800F6630\n\taddiu $a0, $zero, 0x3\n\tjal func_800F6434\n\taddiu $a0, $zero, 0x202\n\tbeqz $v0, .L8010E790\n\tnop\n\t.L8010E7E0:\n\tjal func_800F654C\n\taddiu $a0, $zero, 0xF\n\tjal func_800F824C\n\taddiu $a0, $zero, 0x24\n\t.L8010E7F0:\n\tjal func_800FE7B0\n\tnop\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x40\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x420C\n\tjal func_800F6630\n\taddiu $a0, $zero, 0x24\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x2100\n\tjal func_8010E878\n\tnop\n\tjal func_800F5DA0\n\taddiu $a0, $zero, 0x24\n\tjal func_800F6630\n\taddiu $a0, $zero, 0x24\n\tjal func_800F6434\n\taddiu $a0, $zero, 0x202\n\tbnez $v0, .L8010E7F0\n\tnop\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x33\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x2123\n\tjal func_800F654C\n\taddu $a0, $zero, $zero\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x420C\n\tjal func_8011EA5C\n\tnop\n\tlw $ra, 0x18($sp)\n\tsb $zero, %gp_rel(D_8019ECFC)($gp)\n\tjr $ra\n\taddiu $sp, $sp, 0x20\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_8010E58C, .-func_8010E58C\n"
-);
+void func_8010E58C(void)
+{
+    func_800FB3F8();
+    func_80103FE8();
+    func_80194518();
+    func_80194394();
+    func_8017F8F8();
+    func_800F654C(0x22);
+    func_800F8188(0x2123);
+    func_800F654C();
+    func_800F8188(0x420C);
+    func_800F654C(0xF7);
+    func_800F81E8();
+    func_800F654C(0x80);
+    func_800F81E8();
+    func_800F654C(0xEB);
+    func_800F81E8();
+    func_800F654C(0xF7);
+    func_800F81E8();
+    func_800F654C(0x78);
+    func_800F81E8();
+    func_800F654C(0xEC);
+    func_800F81E8();
+    func_800F654C();
+    func_800F81E8();
+    func_800F654C(0x41);
+    func_800F8188(0x4360);
+    func_800F654C(0x26);
+    func_800F8188(0x4361);
+    func_800F71DC(0x5A00);
+    func_800F8D00(0x4362);
+    func_800F654C(0x7F);
+    func_800F8188(0x4364);
+    func_800F654C(0x16);
+    func_800F8188(0x4367);
+    func_800F654C(3);
+    func_800F8188(0x1700);
+    func_800F654C();
+    func_800F8188(0x2100);
+    func_800F654C(0x81);
+    func_800F8188(0x4200);
+    func_800F8FB8(0x24);
+LE738:
+    for (;;) {
+        func_800FE7B0();
+        func_800F654C(0x40);
+        func_800F8188(0x420C);
+        func_800F6630(0x24);
+        func_800F8188(0x2100);
+        func_8010E878();
+        func_800F62BC(0x24);
+        func_800F6630(0x24);
+        func_800F5574(0x10);
+        if (func_800F53D4() == 0)
+            continue;
+        break;
+    }
+LE790:
+    for (;;) {
+        func_800FE7B0();
+        func_800F654C(0x40);
+        func_800F8188(0x420C);
+        func_8010E878();
+        func_800F6630(2);
+        if (func_800F6434(0x202) != 0)
+            goto LE7e0;
+        func_800F6630(3);
+        if (func_800F6434(0x202) == 0)
+            continue;
+        break;
+    }
+LE7e0:
+    func_800F654C(0xF);
+    func_800F824C(0x24);
+LE7f0:
+    for (;;) {
+        func_800FE7B0();
+        func_800F654C(0x40);
+        func_800F8188(0x420C);
+        func_800F6630(0x24);
+        func_800F8188(0x2100);
+        func_8010E878();
+        func_800F5DA0(0x24);
+        func_800F6630(0x24);
+        if (func_800F6434(0x202) != 0)
+            continue;
+        break;
+    }
+    func_800F654C(0x33);
+    func_800F8188(0x2123);
+    func_800F654C();
+    func_800F8188(0x420C);
+    func_8011EA5C();
+    return;
+}
