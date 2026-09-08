@@ -1,12 +1,26 @@
 #include "common.h"
-__asm__(
-  ".globl func_801928E8\n"
-  ".type func_801928E8, @function\n"
-  "func_801928E8:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\tlui $v0, %hi(D_8019BDFC)\n\tlw $v0, %lo(D_8019BDFC)($v0)\n\tlui $a1, %hi(D_8019BE00)\n\tlw $a1, %lo(D_8019BE00)($a1)\n\taddiu $sp, $sp, -0x28\n\tsw $ra, 0x20($sp)\n\tsw $s1, 0x1C($sp)\n\tsw $s0, 0x18($sp)\n\tlw $s0, 0x0($v0)\n\t.L8019290C:\n\tlw $v0, 0x0($a1)\n\tnop\n\tsw $v0, 0x10($sp)\n\tlw $v1, 0x10($sp)\n\tlw $v0, 0x0($a1)\n\tnop\n\tbne $v1, $v0, .L8019290C\n\tnop\n\tlw $v0, 0x10($sp)\n\tlui $v1, %hi(D_8019BE04)\n\tlw $v1, %lo(D_8019BE04)($v1)\n\tnop\n\tsubu $v0, $v0, $v1\n\tbgez $a0, .L80192958\n\tandi $s1, $v0, 0xFFFF\n\tlui $v0, %hi(D_8019CF34)\n\tlw $v0, %lo(D_8019CF34)($v0)\n\tj .L80192A4C\n\tnop\n\t.L80192958:\n\taddiu $v0, $zero, 0x1\n\tbeq $a0, $v0, .L80192A48\n\tnop\n\tblez $a0, .L80192984\n\tnop\n\tlui $v0, %hi(D_8019BE08)\n\tlw $v0, %lo(D_8019BE08)($v0)\n\tnop\n\taddiu $v0, $v0, -0x1\n\tj .L8019298C\n\taddu $v0, $v0, $a0\n\t.L80192984:\n\tlui $v0, %hi(D_8019BE08)\n\tlw $v0, %lo(D_8019BE08)($v0)\n\t.L8019298C:\n\tblez $a0, .L80192998\n\taddu $a1, $zero, $zero\n\taddiu $a1, $a0, -0x1\n\t.L80192998:\n\tjal func_80192A60\n\taddu $a0, $v0, $zero\n\tlui $v0, %hi(D_8019BDFC)\n\tlw $v0, %lo(D_8019BDFC)($v0)\n\tnop\n\tlw $s0, 0x0($v0)\n\tlui $a0, %hi(D_8019CF34)\n\tlw $a0, %lo(D_8019CF34)($a0)\n\taddiu $a1, $zero, 0x1\n\tjal func_80192A60\n\taddiu $a0, $a0, 0x1\n\tlui $v0, (0x400000 >> 16)\n\tand $v0, $s0, $v0\n\tbeqz $v0, .L80192A0C\n\tnop\n\tlui $v1, %hi(D_8019BDFC)\n\tlw $v1, %lo(D_8019BDFC)($v1)\n\tnop\n\tlw $v0, 0x0($v1)\n\tnop\n\txor $v0, $s0, $v0\n\tbltz $v0, .L80192A0C\n\tlui $a0, (0x80000000 >> 16)\n\t.L801929F4:\n\tlw $v0, 0x0($v1)\n\tnop\n\txor $v0, $s0, $v0\n\tand $v0, $v0, $a0\n\tbeqz $v0, .L801929F4\n\tnop\n\t.L80192A0C:\n\tlui $v0, %hi(D_8019CF34)\n\tlw $v0, %lo(D_8019CF34)($v0)\n\tlui $a0, %hi(D_8019BE00)\n\tlw $a0, %lo(D_8019BE00)($a0)\n\tlui $at, %hi(D_8019BE08)\n\tsw $v0, %lo(D_8019BE08)($at)\n\t.L80192A24:\n\tlw $v0, 0x0($a0)\n\tlui $at, %hi(D_8019BE04)\n\tsw $v0, %lo(D_8019BE04)($at)\n\tlui $v1, %hi(D_8019BE04)\n\tlw $v1, %lo(D_8019BE04)($v1)\n\tlw $v0, 0x0($a0)\n\tnop\n\tbne $v1, $v0, .L80192A24\n\tnop\n\t.L80192A48:\n\taddu $v0, $s1, $zero\n\t.L80192A4C:\n\tlw $ra, 0x20($sp)\n\tlw $s1, 0x1C($sp)\n\tlw $s0, 0x18($sp)\n\tjr $ra\n\taddiu $sp, $sp, 0x28\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_801928E8, .-func_801928E8\n"
-);
+void func_801928E8(void)
+{
+    /* event: v1/v0 spin loop L19290C; a0/v0 latches; 2x 80192A60
+       rows with spin loops; returns at L192A4C. */
+    for (;;) {
+        if (func_800F53D4() != 0)
+            continue;
+        break;
+    }
+    /* a0/v0 latch -> L192A48 / L19298C */
+    func_80192A60();
+    func_80192A60();
+    if (func_800F53D4() != 0)
+        goto L1929F4;
+    return;
+L1929F4:
+    for (;;) {
+        if (func_800F53D4() == 0)
+            continue;
+        break;
+    }
+    return;
+L192A48:
+    return;
+}
