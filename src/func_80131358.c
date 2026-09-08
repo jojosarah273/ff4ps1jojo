@@ -1,12 +1,59 @@
 #include "common.h"
-__asm__(
-  ".globl func_80131358\n"
-  ".type func_80131358, @function\n"
-  "func_80131358:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x10($sp)\n\tjal func_800F6564\n\taddiu $a0, $zero, 0x1B9B\n\tjal func_800F9200\n\tnop\n\tjal func_800F939C\n\tnop\n\tjal func_801224D0\n\tnop\n\tjal func_800F6B68\n\taddiu $a0, $zero, 0x1B8B\n\tjal func_800F6434\n\taddiu $a0, $zero, 0x202\n\tbnez $v0, .L801313F8\n\tnop\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x8\n\tjal func_800F824C\n\taddiu $a0, $zero, 0x45\n\t.L801313A8:\n\tjal func_800F654C\n\taddiu $a0, $zero, 0xFF\n\tjal func_800F8960\n\taddu $a0, $zero, $zero\n\tjal func_800F63BC\n\tnop\n\tjal func_800F654C\n\taddiu $a0, $zero, 0xF0\n\tjal func_800F8960\n\taddu $a0, $zero, $zero\n\tjal func_800F63BC\n\tnop\n\tjal func_800F5DA0\n\taddiu $a0, $zero, 0x45\n\tjal func_800F5B8C\n\taddiu $a0, $zero, 0x202\n\tbnez $v0, .L801313A8\n\tnop\n\tj .L80131498\n\tnop\n\t.L801313F8:\n\tjal func_800F6630\n\taddiu $a0, $zero, 0x43\n\tlui $v1, %hi(D_8019ED40)\n\tlw $v1, %lo(D_8019ED40)($v1)\n\tnop\n\tlbu $v0, 0x0($v1)\n\tnop\n\tsll $v0, $v0, 1\n\tjal func_800F5140\n\tsb $v0, 0x0($v1)\n\tjal func_800F4F4C\n\tnop\n\tjal func_800F3C3C\n\taddiu $a0, $zero, 0x43\n\tjal func_800F3F38\n\taddu $a0, $v0, $zero\n\tlui $v1, %hi(D_8019ED40)\n\tlw $v1, %lo(D_8019ED40)($v1)\n\tnop\n\tlbu $v0, 0x0($v1)\n\tnop\n\tsll $v0, $v0, 2\n\tjal func_800F5140\n\tsb $v0, 0x0($v1)\n\tjal func_800F4F4C\n\tnop\n\tjal func_800F4008\n\taddiu $a0, $zero, 0x24\n\tjal func_800F824C\n\taddiu $a0, $zero, 0x46\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x44\n\tjal func_800F824C\n\taddiu $a0, $zero, 0x45\n\tjal func_800F7270\n\taddiu $a0, $zero, 0x45\n\tjal func_800F971C\n\tnop\n\tjal func_8011F724\n\tnop\n\t.L80131498:\n\tjal func_800F960C\n\tnop\n\tjal func_800F9644\n\taddiu $a0, $zero, 0x20\n\tlui $v1, %hi(D_8019ED58)\n\tlw $v1, %lo(D_8019ED58)($v1)\n\tlui $a0, %hi(D_8019ED44)\n\tlw $a0, %lo(D_8019ED44)($a0)\n\tlhu $v0, 0x0($v1)\n\tjal func_800F5410\n\tsh $v0, 0x0($a0)\n\tjal func_800F4064\n\taddiu $a0, $zero, 0x10\n\tlui $v0, %hi(D_8019ED44)\n\tlw $v0, %lo(D_8019ED44)($v0)\n\tlui $a1, %hi(D_8019ED58)\n\tlw $a1, %lo(D_8019ED58)($a1)\n\tlhu $v1, 0x0($v0)\n\taddiu $a0, $zero, 0x20\n\tjal func_800F9660\n\tsh $v1, 0x0($a1)\n\tjal func_800F93DC\n\tnop\n\tjal func_800F61E8\n\tnop\n\tjal func_800F5574\n\taddiu $a0, $zero, 0x5\n\tjal func_800F53C0\n\tnop\n\tbeqz $v0, .L8013151C\n\tnop\n\tjal func_800F971C\n\tnop\n\t.L8013151C:\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x1B9B\n\tlw $ra, 0x10($sp)\n\tnop\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_80131358, .-func_80131358\n"
-);
+void func_80131358(void)
+{
+    /* ability/spell screen: 0x1B9B/0x1B8B texts, 0x45/0x46/0x43 windows,
+       801224D0 cursor, 8011F724 commit; L1313A8 row loop on
+       5DA0(0x45)/5B8C(0x202), L1314 960C tail. */
+    func_800F6564(0x1B9B);
+    func_800F9200();
+    func_800F939C();
+    func_801224D0();
+    func_800F6B68(0x1B8B);
+    if (func_800F6434(0x202) != 0)
+        goto L1313F8;
+    func_800F654C(8);
+    func_800F824C(0x45);
+L1313a8:
+    for (;;) {
+        func_800F654C(0xFF);
+        func_800F8960();
+        func_800F63BC();
+        func_800F654C(0xF0);
+        func_800F8960();
+        func_800F63BC();
+        func_800F5DA0(0x45);
+        if (func_800F5B8C(0x202) != 0)
+            continue;
+        break;
+    }
+    goto L131498;
+L1313F8:
+    func_800F6630(0x43);
+    func_800F5140();
+    func_800F4F4C();
+    func_800F3F38(func_800F3C3C(0x43));
+    func_800F5140();
+    func_800F4F4C();
+    func_800F4008(0x24);
+    func_800F824C(0x46);
+    func_800F654C(0x44);
+    func_800F824C(0x45);
+    func_800F7270(0x45);
+    func_800F971C();
+    func_8011F724();
+L131498:
+    func_800F960C();
+    func_800F9644(0x20);
+    func_800F5410();
+    func_800F4064(0x10);
+    func_800F9660(0x20);
+    func_800F93DC();
+    func_800F61E8();
+    func_800F5574(5);
+    if (func_800F53C0() == 0)
+        goto L13151C;
+    func_800F971C();
+L13151C:
+    func_800F8188(0x1B9B);
+    return;
+}
