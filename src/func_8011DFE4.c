@@ -1,12 +1,24 @@
 #include "common.h"
-__asm__(
-  ".globl func_8011DFE4\n"
-  ".type func_8011DFE4, @function\n"
-  "func_8011DFE4:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x18\n\taddu $a0, $zero, $zero\n\tsw $ra, 0x14($sp)\n\tjal func_800F3C3C\n\tsw $s0, 0x10($sp)\n\tlui $a0, (0x168000 >> 16)\n\tori $a0, $a0, (0x168000 & 0xFFFF)\n\taddu $s0, $v0, $zero\n\tjal func_800F3B9C\n\taddu $a1, $zero, $zero\n\taddu $t1, $v0, $zero\n\tlbu $v1, 0x41($s0)\n\tlbu $a3, 0x40($s0)\n\tsll $v1, $v1, 8\n\tor $a3, $a3, $v1\n\tlbu $v1, 0x3E($s0)\n\tlbu $v0, 0x3D($s0)\n\tsll $v1, $v1, 8\n\tor $v0, $v0, $v1\n\taddu $v0, $t1, $v0\n\tlbu $v1, 0x1($v0)\n\tlbu $t0, 0x0($v0)\n\tsll $v1, $v1, 8\n\tor $t0, $t0, $v1\n\t.L8011E044:\n\taddu $v1, $t0, $t1\n\tlbu $a1, 0x480($v1)\n\tnop\n\tandi $v0, $a1, 0x80\n\tbeqz $v0, .L8011E0A0\n\tnop\n\tlbu $a2, 0x481($v1)\n\tandi $a1, $a1, 0x7F\n\taddiu $a2, $a2, 0x1\n\t.L8011E068:\n\tlui $v0, (0x800E8000 >> 16)\n\tori $v0, $v0, (0x800E8000 & 0xFFFF)\n\taddu $v0, $a3, $v0\n\tsb $a1, 0x71($v0)\n\taddiu $v1, $a3, 0x1\n\taddiu $v0, $a2, -0x1\n\tandi $a2, $v0, 0xFFFF\n\tbnez $a2, .L8011E068\n\tandi $a3, $v1, 0xFFFF\n\tandi $v0, $a3, 0xFF\n\tbeqz $v0, .L8011E144\n\taddiu $v0, $t0, 0x2\n\tj .L8011E044\n\tandi $t0, $v0, 0xFFFF\n\t.L8011E0A0:\n\tbeqz $a1, .L8011E0DC\n\taddiu $v0, $zero, 0x10\n\tbeq $a1, $v0, .L8011E0DC\n\taddiu $v0, $zero, 0x20\n\tbeq $a1, $v0, .L8011E0DC\n\taddiu $v0, $zero, 0x30\n\tbeq $a1, $v0, .L8011E0DC\n\tlui $v0, (0x800E8000 >> 16)\n\tori $v0, $v0, (0x800E8000 & 0xFFFF)\n\taddu $v0, $a3, $v0\n\tsb $a1, 0x71($v0)\n\taddiu $v1, $a3, 0x1\n\tandi $a3, $v1, 0xFFFF\n\tj .L8011E134\n\tandi $v0, $a3, 0xFF\n\t.L8011E0DC:\n\tlui $a0, (0x800E8000 >> 16)\n\tori $a0, $a0, (0x800E8000 & 0xFFFF)\n\taddu $v1, $a3, $a0\n\taddiu $v0, $a3, 0x1\n\tandi $a3, $v0, 0xFFFF\n\tsb $a1, 0x71($v1)\n\tsrl $a1, $a1, 3\n\taddu $v0, $a1, $zero\n\tsrl $v1, $v0, 1\n\tandi $a1, $v1, 0xFF\n\taddu $v0, $v0, $a1\n\taddiu $v0, $v0, 0x70\n\tandi $a1, $v0, 0xFF\n\taddu $a0, $a3, $a0\n\taddiu $v0, $a3, 0x3\n\tandi $a3, $v0, 0xFFFF\n\taddiu $v0, $a1, 0x1\n\taddiu $v1, $a1, 0x2\n\tsb $v0, 0x72($a0)\n\tandi $v0, $a3, 0xFF\n\tsb $a1, 0x71($a0)\n\tsb $v1, 0x73($a0)\n\t.L8011E134:\n\tbeqz $v0, .L8011E144\n\taddiu $v0, $t0, 0x1\n\tj .L8011E044\n\tandi $t0, $v0, 0xFFFF\n\t.L8011E144:\n\tlw $ra, 0x14($sp)\n\tsrl $v0, $a3, 8\n\tsb $v0, 0x41($s0)\n\tsrl $v0, $t0, 8\n\tsb $a3, 0x40($s0)\n\tsb $t0, 0x3D($s0)\n\tsb $v0, 0x3E($s0)\n\tlw $s0, 0x10($sp)\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_8011DFE4, .-func_8011DFE4\n"
-);
+void func_8011DFE4(void)
+{
+    /* battle: 3C3C/3B9C gates; a1/v0 latch loops L11E044/L11E068. */
+    func_800F3C3C();
+    func_800F3B9C();
+L11E044:
+    if (func_800F53D4() == 0)
+        goto L11E0A0;
+    if (func_800F53D4() == 0)
+        goto L11E144;
+    if (func_800F53D4() != 0)
+        goto L11E044;
+    goto L11E0A0;
+L11E0A0:
+    /* a1/v0 latches -> L11E0DC */
+    if (func_800F53D4() == 0)
+        goto L11E144;
+    if (func_800F53D4() != 0)
+        goto L11E044;
+    return;
+L11E144:
+    return;
+}
