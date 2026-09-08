@@ -55,16 +55,33 @@ def parse_chain(rows):
                 return None
             slot = rows[i + 1].split(None, 1)
             sm = slot[0]
-            sargs = slot[1] if len(slot) > 1 else ""
+            sargs = (slot[1] if len(slot) > 1 else "").replace("$", "")
             if sm == "nop":
                 calls.append((callee, None))
-            elif sm in ("addiu", "ori") and re.match(r"\$a0, \$zero", sargs):
+            elif sm in ("addiu", "ori") and re.match(r"a0, zero", sargs):
                 c = int(re.search(r"0x[0-9A-F]+", sargs).group(0), 16)
                 calls.append((callee, c))
-            elif sm == "addu" and sargs.replace(" ", "") == "$a0,$v0,$zero":
+            elif sm == "addu" and sargs.replace(" ", "") == "a0,v0,zero":
                 calls.append((callee, None, True))
-            elif sm == "addu" and sargs.replace(" ", "") == "$a0,$zero,$zero":
+            elif sm == "addu" and sargs.replace(" ", "") == "a0,zero,zero":
                 calls.append((callee, 0))
+            elif sm == "addiu" and sargs.replace(" ", "").startswith("a0,v0,"):
+                c = int(re.search(r"0x[0-9A-F]+", sargs).group(0), 16)
+                calls.append((callee, c, "v0plus"))
+            elif sm == "lui" and re.match(r"a0,\(0x[0-9A-F]+ >> 16\)", sargs):
+                # 32-bit const: lui a0,(hi) then next row ori a0,a0,(lo)
+                hi = int(re.search(r"0x([0-9A-F]+) >> 16", sargs).group(1), 16) << 16
+                if i + 2 >= len(rows):
+                    return None
+                nxt = rows[i + 2].replace("$", "").split(None, 1)
+                nm = nxt[0]
+                nargs = nxt[1] if len(nxt) > 1 else ""
+                if nm != "ori" or "a0,a0,(0x" not in nargs.replace(" ", " "):
+                    return None
+                lo = int(re.search(r"0x([0-9A-F]+)", nargs).group(1), 16)
+                calls.append((callee, hi | lo))
+                i += 3
+                continue
             else:
                 return None
             i += 2
