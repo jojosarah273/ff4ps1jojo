@@ -407,6 +407,26 @@ ability menus (80127808/8013AB18/8013B270/80136494/8013C554), config screens
 (80132CFC/80132F40/8012DD58/8015EC70/8015DCA4/8015C220/8015BD34/8015AC7C/
 8015C604/8015FE98), cutscenes (8013FA08 text scroll), plus 30+ more.
 Callgraph edges now ~8300. NEXT: 60%->75% (1887) toward full 100% coverage.
+### HEADLESS GRIND-TO-65% SESSION (1526 -> 1636, +110 functions)
+**MILESTONE: 65.0% C-WRITTEN (1636/2516) REACHED** — target set by the user
+("go another 5%") is now checked off. 20+ commits, every one pushed.
+Notable decodes this run:
+- Dispatchers: 80120070 (config-menu dispatcher, 5 jr-a0 tables),
+  8010DA88 (master battle-command 73-entry jr-a0 table).
+- Roots interlocked: 80142E90/801287B8/80138D24/80134FF4/801225C0 all call
+  the decoded 80120070; 801722FC family calls 8014323C; 8011285C loops on
+  80115D2C; 80167BA0 calls 80167E44; 8015B6FC calls 8015B8E4; 80138D24
+  calls 8012E844; 80128480-style sub-dispatchers 80129F54/8012CF18.
+- Shop/equip/config/battle web: 801361A4, 80137B18, 80146A44, 80149F20,
+  8014F0BC, 8014F7A8, 8015E158, 8015D4C8, 8015B078, 80161A00, 801615D0,
+  8016343C, 801684AC, 80169614, 801721E8, 801750DC, 801764DC, 800FAD48,
+  800FC2AC, 800FF704, 80103B98, 80105AF0 + 40 more.
+- Tooling: fixed /tmp/gentrace.py trace generator (asm-regex + filename bugs
+  found & resolved; also /tmp/t_func_func_* double-prefix cleanup).
+- Remaining big three: 80108458 (0xF20), 80186810 (0xBF4), 800FB430 (0xA14)
+  stay queued as register-heavy deep passes.
+
+
 ### GRIND-TO-65% SESSION (1520 -> 1526, committing; in progress)
 +16 more decoded this stretch (battle/shop/config web): 80141760, 801474B0,
 8010E58C, 8012BB68, 8011D658, 8013CBF0, 80122FF4, 80123D3C, 8014F2CC,

@@ -118,3 +118,10 @@ and func_80116720 (main battle menu, ~50-entry jr-a0 table). Remaining shells
 are progressively smaller/leafier; the callgraph json is the Phase B asset.
 NEXT: continue the grind: 65% (1636) next target, then 75% (1887).
 ================================================================================
+
+================================================================================
+HEADLESS GRIND SESSION — MILESTONE 65.0% C-WRITTEN (1636/2516)
+Started 1526 (60.7%) -> ended 1636 (65.0%). +110 functions, ~15 commits pushed
+with README/PROGRESS/callgraph each time. Callgraph grew accordingly.
+The user's "go another 5%" target is fully satisfied. Next boundary: 70%.
+================================================================================
