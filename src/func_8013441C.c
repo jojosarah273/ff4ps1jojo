@@ -1,12 +1,55 @@
 #include "common.h"
-__asm__(
-  ".globl func_8013441C\n"
-  ".type func_8013441C, @function\n"
-  "func_8013441C:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x10($sp)\n\tjal func_800F8F74\n\taddiu $a0, $zero, 0x1EB\n\tjal func_800F5574\n\taddiu $a0, $zero, 0xB0\n\tjal func_800F53C0\n\tnop\n\tbnez $v0, .L8013445C\n\tnop\n\tjal func_8013463C\n\tnop\n\tjal func_800F53C0\n\tnop\n\tbnez $v0, .L8013446C\n\tnop\n\t.L8013445C:\n\tjal func_800F5410\n\tnop\n\tj .L801345A4\n\tnop\n\t.L8013446C:\n\tjal func_80134AF8\n\tnop\n\tjal func_800F53C0\n\tnop\n\tbeqz $v0, .L801345A4\n\tnop\n\tjal func_800F6564\n\taddiu $a0, $zero, 0x1B37\n\tjal func_800F5574\n\taddiu $a0, $zero, 0x2\n\tjal func_800F53C0\n\tnop\n\tbnez $v0, .L801345A4\n\tnop\n\tjal func_800F6E30\n\taddiu $a0, $zero, 0xE5\n\tjal func_800F4248\n\taddiu $a0, $zero, 0xC0\n\tjal func_800F5574\n\taddiu $a0, $zero, 0xC0\n\tjal func_800F53D4\n\tnop\n\tbnez $v0, .L8013454C\n\tnop\n\tjal func_800F5410\n\tnop\n\tjal func_800F7C6C\n\tnop\n\tjal func_800F7A68\n\tnop\n\tjal func_800F7C6C\n\tnop\n\tjal func_800F7A68\n\tnop\n\tjal func_800F7C6C\n\tnop\n\tjal func_801224D0\n\tnop\n\tlui $v0, %hi(D_80199C24)\n\tlui $a0, %hi(D_8019ED54)\n\tlw $a0, %lo(D_8019ED54)($a0)\n\taddiu $v0, $v0, %lo(D_80199C24)\n\tlhu $v1, 0x0($a0)\n\tlui $a1, %hi(D_8019ED40)\n\tlw $a1, %lo(D_8019ED40)($a1)\n\taddu $v1, $v1, $v0\n\tlbu $v0, 0x0($v1)\n\taddiu $a0, $zero, 0x1B37\n\tjal func_800F3B04\n\tsb $v0, 0x0($a1)\n\tjal func_800F54D4\n\taddu $a0, $v0, $zero\n\tjal func_800F53D4\n\tnop\n\tbeqz $v0, .L8013455C\n\tnop\n\t.L8013454C:\n\tjal func_800F6564\n\taddiu $a0, $zero, 0x1B39\n\tj .L80134584\n\taddiu $a0, $zero, 0x5F00\n\t.L8013455C:\n\tjal func_800F6564\n\taddiu $a0, $zero, 0x1B39\n\tjal func_800F71DC\n\taddiu $a0, $zero, 0x5F4D\n\tjal func_801345B4\n\tnop\n\tjal func_800F53C0\n\tnop\n\tbnez $v0, .L8013459C\n\taddiu $a0, $zero, 0x6C61\n\t.L80134584:\n\tjal func_800F71DC\n\tnop\n\tjal func_801345B4\n\tnop\n\tj .L801345A4\n\tnop\n\t.L8013459C:\n\tjal func_800F5480\n\tnop\n\t.L801345A4:\n\tlw $ra, 0x10($sp)\n\tnop\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_8013441C, .-func_8013441C\n"
-);
+void func_8013441C(void)
+{
+    /* config weapon sub-menu: 0x1EB/0x1B37/0x1B39 texts; 8013463C/
+       80134AF8/801224D0/801345B4 rows; 53C0/53D4 ladders route the
+       4C40/5F4D/6C61 option texts. */
+    func_800F8F74(0x1EB);
+    func_800F5574(0xB0);
+    if (func_800F53C0() != 0)
+        goto L13445C;
+    func_8013463C();
+    if (func_800F53C0() != 0)
+        goto L13446C;
+L13445C:
+    func_800F5410();
+    return;
+L13446C:
+    func_80134AF8();
+    if (func_800F53C0() == 0)
+        return;
+    func_800F6564(0x1B37);
+    func_800F5574(2);
+    if (func_800F53C0() != 0)
+        return;
+    func_800F6E30(0xE5);
+    func_800F4248(0xC0);
+    func_800F5574(0xC0);
+    if (func_800F53D4() != 0)
+        goto L13454C;
+    func_800F5410();
+    func_800F7C6C();
+    func_800F7A68();
+    func_800F7C6C();
+    func_800F7A68();
+    func_800F7C6C();
+    func_801224D0();
+    if (func_800F54D4(func_800F3B04(0x1B37)) == 0)
+        goto L13455C;
+L13454C:
+    func_800F6564(0x1B39);
+    goto L134584;
+L13455C:
+    func_800F6564(0x1B39);
+    func_800F71DC(0x5F4D);
+    func_801345B4();
+    if (func_800F53C0() != 0)
+        goto L13459C;
+L134584:
+    func_800F71DC(0x4C40);
+    func_801345B4();
+    return;
+L13459C:
+    func_800F5480();
+    return;
+}
