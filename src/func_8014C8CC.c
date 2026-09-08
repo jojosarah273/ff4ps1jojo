@@ -1,12 +1,20 @@
 #include "common.h"
-__asm__(
-  ".globl func_8014C8CC\n"
-  ".type func_8014C8CC, @function\n"
-  "func_8014C8CC:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x10($sp)\n\tjal func_800F71DC\n\taddu $a0, $zero, $zero\n\t.L8014C8DC:\n\tjal func_800F6B68\n\tori $a0, $zero, 0xEDB0\n\tjal func_800F824C\n\taddu $a0, $zero, $zero\n\tjal func_800F6B68\n\tori $a0, $zero, 0xEDB1\n\tjal func_800F824C\n\taddiu $a0, $zero, 0x1\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x1\n\tjal func_80094D14\n\tnop\n\tjal func_800F6630\n\taddu $a0, $zero, $zero\n\tjal func_800F8768\n\tori $a0, $zero, 0xEDB0\n\tjal func_800F6630\n\taddiu $a0, $zero, 0x1\n\tjal func_800F8768\n\tori $a0, $zero, 0xEDB1\n\tlui $v1, %hi(D_8019ED54)\n\tlw $v1, %lo(D_8019ED54)($v1)\n\tnop\n\tlhu $v0, 0x0($v1)\n\taddiu $a0, $zero, 0x80\n\taddiu $v0, $v0, 0x2\n\tjal func_800F5958\n\tsh $v0, 0x0($v1)\n\tjal func_800F53D4\n\tnop\n\tbeqz $v0, .L8014C8DC\n\tnop\n\tlw $ra, 0x10($sp)\n\tnop\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_8014C8CC, .-func_8014C8CC\n"
-);
+extern u16 *D_8019ED54;
+void func_8014C8CC(void)
+{
+    func_800F71DC(0);
+    do {
+        func_800F6B68(0xEDB0);
+        func_800F824C(0);
+        func_800F6B68(0xEDB1);
+        func_800F824C(1);
+        func_800F654C(1);
+        func_80094D14();
+        func_800F6630(0);
+        func_800F8768(0xEDB0);
+        func_800F6630(1);
+        func_800F8768(0xEDB1);
+        *D_8019ED54 = (u16)(*D_8019ED54 + 2);
+        func_800F5958(0x80);
+    } while (func_800F53D4() == 0);
+}
