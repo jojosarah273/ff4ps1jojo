@@ -27,6 +27,8 @@ L18D368:
             continue;
         break;
     }
+L18D3A0:
+    goto L18D3A8;
 L18D3A8:
     func_8018A75C(1);
     return;
