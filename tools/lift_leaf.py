@@ -50,6 +50,10 @@ def lift(name, mode_b=False):
     outs, v0_expr = [], None
     last_store = None
     guard_branches, guard_mark = [], []
+    ifelse = None
+    ifelse_branch_mark = 0
+    j_merge_mark = None
+    mid_mark = None
 
     def decl(sym, abs_, op):
         w = "u8"
@@ -72,6 +76,9 @@ def lift(name, mode_b=False):
     while i < len(rows):
         insn = rows[i]
         if insn.startswith(".L"):
+            if ifelse is not None and mid_mark is None and \
+                    insn.startswith(ifelse[3]):
+                mid_mark = len(outs)
             i += 1
             continue
         m = insn.split(None, 1)
@@ -112,7 +119,15 @@ def lift(name, mode_b=False):
             i += 2
             continue
         if op in UNCOND or op in ("j", "jalr"):
-            if op in ("jal", "jalr", "j"):
+            if op in ("jal", "jalr"):
+                return None
+            if op == "j":
+                if ifelse is not None and args.strip().startswith(".L") \
+                        and last_label is not None:
+                    if args.strip() in (last_label, last_label + ":"):
+                        j_merge_mark = len(outs)
+                        i += 1
+                        continue
                 return None
             tgt = rs0 = None
             mm = re.match(r"(\w+),\s*(\w+),\s*(\.L[0-9A-F]+)", args)
@@ -122,8 +137,28 @@ def lift(name, mode_b=False):
                 mm = re.match(r"(\w+),\s*(\.L[0-9A-F]+)", args)
                 if mm:
                     tgt, rs0 = mm.group(2), mm.group(1)
-            if tgt is None or tgt != last_label:
+            if tgt is None:
                 return None
+            if tgt != last_label:
+                if ifelse is not None:
+                    return None
+                ti = rows.index(tgt + ":") if (tgt + ":") in rows else -1
+                if ti < 0:
+                    return None
+                if any(r.split(None, 1)[0] in
+                       ("beq", "bne", "beqz", "bnez", "blez", "bgtz", "bltz",
+                        "bgez") for r in rows[i + 1:ti]
+                       if not r.startswith(".L")):
+                    return None
+                x0 = R.get(rs0, rs0)
+                cond = {"bltz": f"((s32)({x0}) < 0)",
+                        "bgez": f"((s32)({x0}) >= 0)",
+                        "blez": f"((s32)({x0}) <= 0)",
+                        "bgtz": f"((s32)({x0}) > 0)"}.get(op, x0)
+                ifelse = (op, rs0, cond, tgt)
+                ifelse_branch_mark = len(outs)
+                i += 1
+                continue
             guard_branches.append((op, rs0, R.get(rs0, rs0)))
             guard_mark.append(len(outs))
             i += 1
@@ -289,6 +324,24 @@ def lift(name, mode_b=False):
         return None
 
     # guard wrapping: nested if(!cond){ block }
+    if ifelse is not None:
+        bm = ifelse_branch_mark
+        jm = j_merge_mark if j_merge_mark is not None else len(outs)
+        mm = mid_mark if mid_mark is not None else jm
+        b1 = "".join(f"    {o}\n" for o in outs[bm:jm])
+        b2 = "".join(f"    {o}\n" for o in outs[mm:])
+        head = "".join(f"    {o}\n" for o in outs[:bm])
+        outs = [head + f"    if ({ifelse[2]}) {{\n{b1}    }} else {{\n{b2}    }}\n"]
+        guard_branches = []
+        guard_mark = []
+    if ifelse is not None:
+        bm, jm = ifelse_branch_mark, j_merge_mark if j_merge_mark is not None else len(outs)
+        mm = mid_mark if mid_mark is not None else jm
+        b1 = "".join(f"    {o}\n" for o in outs[bm:jm])
+        b2 = "".join(f"    {o}\n" for o in outs[mm:])
+        head = "".join(f"    {o}\n" for o in outs[:bm])
+        outs = [head + f"    if ({ifelse[2]}) {{\n{b1}    }} else {{\n{b2}    }}\n"]
+        guard_branches, guard_mark = [], []
     if guard_branches:
         marks = [0] + guard_mark + [len(outs)]
         segs = []

@@ -1,12 +1,20 @@
 #include "common.h"
-__asm__(
-  ".globl func_8018ADC8\n"
-  ".type func_8018ADC8, @function\n"
-  "func_8018ADC8:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddu $v0, $a0, $zero\n\tbgtz $v0, .L8018ADDC\n\tlui $v1, (0x40001010 >> 16)\n\tj .L8018AE14\n\taddu $v0, $zero, $zero\n\t.L8018ADDC:\n\tlui $a0, %hi(D_8019B13C)\n\tlw $a0, %lo(D_8019B13C)($a0)\n\tori $v1, $v1, (0x40001010 & 0xFFFF)\n\tsw $v1, 0x0($a1)\n\tlui $v1, (0x10000 >> 16)\n\tlui $at, %hi(D_8019B17C)\n\tsw $a1, %lo(D_8019B17C)($at)\n\tlui $at, %hi(D_8019B178)\n\tsw $zero, %lo(D_8019B178)($at)\n\tlui $at, %hi(D_8019B174)\n\tsw $v0, %lo(D_8019B174)($at)\n\tsllv $v1, $v1, $a0\n\taddiu $v1, $v1, -0x1010\n\tsw $v1, 0x4($a1)\n\t.L8018AE14:\n\tjr $ra\n\tnop\n\tnop\n\tnop\n\tnop\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_8018ADC8, .-func_8018ADC8\n"
-);
+extern u32 D_8019B13C[8];
+extern u32 D_8019B174[8];
+extern u32 D_8019B178[8];
+extern u32 D_8019B17C[8];
+void func_8018ADC8(u32 a0, u32 a1)
+{
+    return (if (((s32)((a0 + zero)) > 0)) {
+    } else {
+        if (((s32)((a0 + zero)) > 0)) {
+    } else {
+    ((volatile u8 *)(a1))[0x0] = (0x40000000 | 0x40001010);
+    D_8019B17C[0] = a1;
+    D_8019B178[0] = zero;
+    D_8019B174[0] = (zero + zero);
+    ((volatile u8 *)(a1))[0x4] = ((0x10000 << a0) + -0x1010);
+    }
+
+    });
+}
