@@ -1,12 +1,57 @@
 #include "common.h"
-__asm__(
-  ".globl func_80178C14\n"
-  ".type func_80178C14, @function\n"
-  "func_80178C14:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\tlui $v0, D_8019FFE8\n\taddiu $v0, $v0, D_8019FFE8\n\taddiu $v1, $0, 0x100\n\taddiu $a0, $0, 0xF0\n\tsh $0, 0x30($v0)\n\tsh $0, 0x2E($v0)\n\tsh $v1, 0x32($v0)\n\tsh $a0, 0x50($v0)\n\tsh $a0, 0x34($v0)\n\tlhu $t0, %gp_rel(D_8019EE64)($gp)\n\tlhu $t1, %gp_rel(D_8019EE6C)($gp)\n\tlhu $a0, 0x4($v0)\n\tlhu $a1, 0x6($v0)\n\tlhu $a2, 0x8($v0)\n\tlhu $a3, 0xA($v0)\n\tlhu $t2, %gp_rel(D_8019EE62)($gp)\n\tlhu $t3, %gp_rel(D_8019EE6A)($gp)\n\tlhu $t4, %gp_rel(D_8019EE66)($gp)\n\tlhu $t5, %gp_rel(D_8019EE6E)($gp)\n\taddiu $v1, $0, 0x1\n\tsb $v1, 0x37($v0)\n\tsb $v1, 0xFB($v0)\n\tsb $v1, 0x23D($v0)\n\tsh $t0, 0x2A($v0)\n\tsh $t1, 0x2C($v0)\n\tsh $a0, 0xF2($v0)\n\tsh $a1, 0xF4($v0)\n\tsh $a2, 0xF6($v0)\n\tsh $a3, 0xF8($v0)\n\tsh $t2, 0xEE($v0)\n\tsh $t3, 0xF0($v0)\n\tsh $a0, 0x234($v0)\n\tsh $a1, 0x236($v0)\n\tsh $a2, 0x238($v0)\n\tsh $a3, 0x23A($v0)\n\tsh $t4, 0x230($v0)\n\tsh $t5, 0x232($v0)\n\tsh $a0, 0x242($v0)\n\tsh $a1, 0x244($v0)\n\tlui $a1, D_801E01B8\n\tsb $v1, 0x24B($v0)\n\taddiu $v1, $0, 0x2A\n\tsh $a2, 0x246($v0)\n\tsh $a3, 0x248($v0)\n\tsw $v1, D_801E01B8($a1)\n\taddiu $a1, $a1, D_801E01B8\n\taddiu $v1, $0, 0x12\n\taddiu $a0, $0, 0x6\n\tlui $a2, D_801DFDE8\n\tsw $v1, 0x4($a1)\n\tsw $a0, 0x8($a1)\n\tlhu $a0, %gp_rel(D_8019EE60)($gp)\n\tlhu $a1, %gp_rel(D_8019EE68)($gp)\n\taddiu $v1, $0, -0x1\n\tsh $v1, D_801DFDE8($a2)\n\tsh $0, %gp_rel(D_8019EE26)($gp)\n\tsh $a0, 0x23E($v0)\n\tjr $ra\n\tsh $a1, 0x240($v0)\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_80178C14, .-func_80178C14\n"
-);
+extern u8 D_8019FFE8[];
+extern u16 D_8019EE26;
+extern u16 D_8019EE60;
+extern u16 D_8019EE62;
+extern u16 D_8019EE64;
+extern u16 D_8019EE66;
+extern u16 D_8019EE68;
+extern u16 D_8019EE6A;
+extern u16 D_8019EE6C;
+extern u16 D_8019EE6E;
+extern u32 D_801E01B8[];
+extern u16 D_801DFDE8[];
+void func_80178C14(void)
+{
+    /* battle status-table init: header fields, per-slot geometry and
+       the layout state blocks (0xEE/0xF2/0x230/0x234/0x242 rows). */
+    u8 *r = D_8019FFE8;
+    u16 p0 = *(u16 *)&r[0x4];
+    u16 p1 = *(u16 *)&r[0x6];
+    u16 p2 = *(u16 *)&r[0x8];
+    u16 p3 = *(u16 *)&r[0xA];
+    *(u16 *)&r[0x30] = 0;
+    *(u16 *)&r[0x2E] = 0;
+    *(u16 *)&r[0x32] = 0x100;
+    *(u16 *)&r[0x50] = 0xF0;
+    *(u16 *)&r[0x34] = 0xF0;
+    r[0x37] = 1;
+    r[0xFB] = 1;
+    r[0x23D] = 1;
+    r[0x24B] = 1;
+    *(u16 *)&r[0x2A] = D_8019EE64;
+    *(u16 *)&r[0x2C] = D_8019EE6C;
+    *(u16 *)&r[0xF2] = p0;
+    *(u16 *)&r[0xF4] = p1;
+    *(u16 *)&r[0xF6] = p2;
+    *(u16 *)&r[0xF8] = p3;
+    *(u16 *)&r[0xEE] = D_8019EE62;
+    *(u16 *)&r[0xF0] = D_8019EE6A;
+    *(u16 *)&r[0x234] = p0;
+    *(u16 *)&r[0x236] = p1;
+    *(u16 *)&r[0x238] = p2;
+    *(u16 *)&r[0x23A] = p3;
+    *(u16 *)&r[0x230] = D_8019EE66;
+    *(u16 *)&r[0x232] = D_8019EE6E;
+    *(u16 *)&r[0x242] = p0;
+    *(u16 *)&r[0x244] = p1;
+    *(u16 *)&r[0x246] = p2;
+    *(u16 *)&r[0x248] = p3;
+    *(u16 *)&r[0x23E] = D_8019EE60;
+    *(u16 *)&r[0x240] = D_8019EE68;
+    D_801E01B8[0] = 0x2A;
+    D_801E01B8[1] = 0x12;
+    D_801E01B8[2] = 6;
+    D_801DFDE8[0] = 0xFFFF;
+    D_8019EE26 = 0;
+}
