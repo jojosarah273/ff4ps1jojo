@@ -1,12 +1,102 @@
 #include "common.h"
-__asm__(
-  ".globl func_8012BE34\n"
-  ".type func_8012BE34, @function\n"
-  "func_8012BE34:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x10($sp)\n\t.L8012BE3C:\n\tjal func_8012D194\n\tnop\n\tjal func_800F53D4\n\tnop\n\tbeqz $v0, .L8012BE94\n\tnop\n\tjal func_800F6564\n\taddiu $a0, $zero, 0x1B3E\n\tjal func_800F61E8\n\tnop\n\tjal func_800F5574\n\taddiu $a0, $zero, 0x5\n\tjal func_800F53D4\n\tnop\n\tbeqz $v0, .L8012BE84\n\tnop\n\tjal func_800F654C\n\taddu $a0, $zero, $zero\n\t.L8012BE84:\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x1B3E\n\tj .L8012BE3C\n\tnop\n\t.L8012BE94:\n\tjal func_800F6564\n\taddiu $a0, $zero, 0x1B22\n\tjal func_800F6434\n\taddiu $a0, $zero, 0x202\n\tbnez $v0, .L8012BEBC\n\tnop\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x70\n\tj .L8012BEC4\n\tnop\n\t.L8012BEBC:\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x8\n\t.L8012BEC4:\n\tjal func_800F824C\n\taddiu $a0, $zero, 0x5D\n\t.L8012BECC:\n\tjal func_8011F684\n\tnop\n\tjal func_8011F884\n\tnop\n\tjal func_800F6630\n\taddiu $a0, $zero, 0x1\n\tjal func_800F4248\n\taddiu $a0, $zero, 0x8\n\tjal func_800F4120\n\taddiu $a0, $zero, 0x2\n\tbnez $v0, .L8012BF44\n\tnop\n\t.L8012BEFC:\n\tjal func_800F6564\n\taddiu $a0, $zero, 0x1B3E\n\tjal func_800F5CCC\n\tnop\n\tjal func_800F5B8C\n\tori $a0, $zero, 0x8080\n\tbnez $v0, .L8012BF24\n\tnop\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x4\n\t.L8012BF24:\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x1B3E\n\tjal func_8012D194\n\tnop\n\tjal func_800F53D4\n\tnop\n\tbnez $v0, .L8012BEFC\n\tnop\n\t.L8012BF44:\n\tjal func_800F6630\n\taddiu $a0, $zero, 0x1\n\tjal func_800F4248\n\taddiu $a0, $zero, 0x4\n\tjal func_800F4120\n\taddiu $a0, $zero, 0x2\n\tbnez $v0, .L8012BFB4\n\tnop\n\t.L8012BF64:\n\tjal func_800F6564\n\taddiu $a0, $zero, 0x1B3E\n\tjal func_800F61E8\n\tnop\n\tjal func_800F5574\n\taddiu $a0, $zero, 0x5\n\tjal func_800F53C0\n\tnop\n\tbeqz $v0, .L8012BF94\n\tnop\n\tjal func_800F654C\n\taddu $a0, $zero, $zero\n\t.L8012BF94:\n\tjal func_800F8188\n\taddiu $a0, $zero, 0x1B3E\n\tjal func_8012D194\n\tnop\n\tjal func_800F53D4\n\tnop\n\tbnez $v0, .L8012BF64\n\tnop\n\t.L8012BFB4:\n\tjal func_800F6630\n\taddu $a0, $zero, $zero\n\tjal func_800F4248\n\taddiu $a0, $zero, 0x80\n\tjal func_800F4120\n\taddiu $a0, $zero, 0x2\n\tbnez $v0, .L8012C000\n\tnop\n\tjal func_800F6564\n\taddiu $a0, $zero, 0x1B3E\n\tjal func_801224D0\n\tnop\n\tlui $a0, (0x14FF9D >> 16)\n\tjal func_800F6C68\n\tori $a0, $a0, (0x14FF9D & 0xFFFF)\n\tjal func_800F824C\n\taddiu $a0, $zero, 0xE8\n\tj .L8012C098\n\tnop\n\t.L8012C000:\n\tjal func_800F6630\n\taddiu $a0, $zero, 0x1\n\tjal func_800F4248\n\taddiu $a0, $zero, 0x80\n\tjal func_800F4120\n\taddiu $a0, $zero, 0x2\n\tbeqz $v0, .L8012C088\n\tnop\n\tjal func_800F6564\n\taddiu $a0, $zero, 0x1B3E\n\tlui $v1, %hi(D_8019ED40)\n\tlw $v1, %lo(D_8019ED40)($v1)\n\tnop\n\tlbu $v0, 0x0($v1)\n\tnop\n\tsll $v0, $v0, 4\n\tjal func_800F5140\n\tsb $v0, 0x0($v1)\n\tjal func_800F4F4C\n\tnop\n\tjal func_800F4008\n\taddiu $a0, $zero, 0x40\n\tjal func_800F824C\n\taddiu $a0, $zero, 0x5E\n\tjal func_800F654C\n\taddu $a0, $zero, $zero\n\tjal func_800F7270\n\taddiu $a0, $zero, 0x5D\n\tjal func_800F7500\n\taddiu $a0, $zero, 0x300\n\tjal func_8011F724\n\tnop\n\tj .L8012BECC\n\tnop\n\t.L8012C088:\n\tjal func_800F654C\n\taddiu $a0, $zero, 0xFF\n\tjal func_800F824C\n\taddiu $a0, $zero, 0xE8\n\t.L8012C098:\n\tlw $ra, 0x10($sp)\n\tnop\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_8012BE34, .-func_8012BE34\n"
-);
+void func_8012BE34(void)
+{
+    /* item/equip sub-screen: 0x1B3E/0x1B22 texts, 0x70/0x8/0xE8/0x5D
+       windows; 8012D194 cursor gate and 801224D0 detail; loops at
+       L2BE3C/L2BEFC/L2BF64 and the L2BECC option ring. */
+L2be3c:
+    for (;;) {
+        if (func_8012D194() == 0)
+            goto L2BE94;
+        func_800F6564(0x1B3E);
+        func_800F61E8();
+        func_800F5574(5);
+        if (func_800F53D4() == 0)
+            goto L2BE84;
+        func_800F654C();
+    L2BE84:
+        func_800F8188(0x1B3E);
+    }
+L2BE94:
+    func_800F6564(0x1B22);
+    if (func_800F6434(0x202) != 0)
+        goto L2BEBC;
+    func_800F654C(0x70);
+    goto L2BEC4;
+L2BEBC:
+    func_800F654C(8);
+L2BEC4:
+    func_800F824C(0x5D);
+L2becc:
+    for (;;) {
+        func_8011F684();
+        func_8011F884();
+        func_800F6630(1);
+        func_800F4248(8);
+        if (func_800F4120(2) != 0)
+            goto L2BF44;
+    L2befc:
+        for (;;) {
+            func_800F6564(0x1B3E);
+            func_800F5CCC();
+            if (func_800F5B8C() != 0)
+                goto L2BF24;
+            func_800F654C(4);
+        L2BF24:
+            func_800F8188(0x1B3E);
+            if (func_8012D194() != 0)
+                continue;
+            goto L2BF44;
+        }
+    L2BF44:
+        func_800F6630(1);
+        func_800F4248(4);
+        if (func_800F4120(2) != 0)
+            goto L2BFB4;
+    L2bf64:
+        for (;;) {
+            func_800F6564(0x1B3E);
+            func_800F61E8();
+            func_800F5574(5);
+            if (func_800F53C0() == 0)
+                goto L2BF94;
+            func_800F654C();
+        L2BF94:
+            func_800F8188(0x1B3E);
+            if (func_8012D194() != 0)
+                continue;
+            break;
+        }
+    L2BFB4:
+        func_800F6630();
+        func_800F4248(0x80);
+        if (func_800F4120(2) != 0)
+            goto L2C000;
+        func_800F6564(0x1B3E);
+        func_801224D0();
+        func_800F6C68();
+        func_800F824C(0xE8);
+        goto L2C098;
+    L2C000:
+        func_800F6630(1);
+        func_800F4248(0x80);
+        if (func_800F4120(2) == 0)
+            goto L2C088;
+        func_800F6564(0x1B3E);
+        func_800F5140();
+        func_800F4F4C();
+        func_800F4008(0x40);
+        func_800F824C(0x5E);
+        func_800F654C();
+        func_800F7270(0x5D);
+        func_800F7500(0x300);
+        func_8011F724();
+        continue;
+    L2C088:
+        func_800F654C(0xFF);
+        func_800F824C(0xE8);
+        break;
+    }
+L2C098:
+    return;
+}
