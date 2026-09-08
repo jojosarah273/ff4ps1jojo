@@ -1,12 +1,19 @@
 #include "common.h"
-__asm__(
-  ".globl func_800F80D0\n"
-  ".type func_800F80D0, @function\n"
-  "func_800F80D0:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\tlw $v1, %gp_rel(D_8019ED44)($gp)\n\tlw $v0, %gp_rel(D_8019ED68)($gp)\n\tlhu $a2, 0x0($v1)\n\tlbu $a1, 0x0($v0)\n\tsubu $a2, $a2, $a0\n\txori $v0, $a1, 0x1\n\tandi $v0, $v0, 0x1\n\tsubu $a2, $a2, $v0\n\tsh $a2, 0x0($v1)\n\tlw $v0, %gp_rel(D_8019ED40)($gp)\n\tandi $a1, $a1, 0x3C\n\tlbu $v1, 0x1($v0)\n\tlui $v0, (0x10000 >> 16)\n\tand $v0, $a2, $v0\n\tandi $v1, $v1, 0xC0\n\tbnez $v0, .L800F811C\n\tor $a1, $a1, $v1\n\tj .L800F8120\n\tori $v0, $a1, 0x1\n\t.L800F811C:\n\tandi $v0, $a1, 0xFF\n\t.L800F8120:\n\taddu $a1, $v0, $zero\n\tandi $v0, $a2, 0xFFFF\n\tbnez $v0, .L800F8134\n\tandi $a0, $a1, 0xFF\n\tori $a0, $a1, 0x2\n\t.L800F8134:\n\tlw $v0, %gp_rel(D_8019ED50)($gp)\n\tnop\n\tsw $a2, 0x0($v0)\n\tlw $v1, %gp_rel(D_8019ED68)($gp)\n\tjr $ra\n\tsb $a0, 0x0($v1)\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_800F80D0, .-func_800F80D0\n"
-);
+extern u16 *D_8019ED44;
+extern u8 *D_8019ED68;
+extern u8 *D_8019ED40;
+extern u32 *D_8019ED50;
+void func_800F80D0(u16 a0)
+{
+    u8 x = *D_8019ED68;
+    u16 a2 = (u16)(*D_8019ED44 - a0 - ((x ^ 1) & 1));
+    u8 a1 = (u8)((x & 0x3C) | (D_8019ED40[1] & 0xC0));
+    u8 r = (a2 & 0x10000) ? a1 : (u8)(a1 | 1);
+    if ((u16)a2 != 0)
+        r &= 0xFF;
+    else
+        r |= 0x2;
+    *D_8019ED44 = a2;
+    *D_8019ED50 = a2;
+    *D_8019ED68 = r;
+}
