@@ -36,7 +36,7 @@ L27080:
     func_800F8F74(0x17FB);
     func_80128264();
     return;
-L26f74:
+L26F74:
     for (;;) {
         func_80123FB4();
         func_801241B8();
