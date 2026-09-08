@@ -1,12 +1,42 @@
 #include "common.h"
-__asm__(
-  ".globl func_80179670\n"
-  ".type func_80179670, @function\n"
-  "func_80179670:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x50\n\tsw $s0, 0x40($sp)\n\taddu $s0, $a0, $zero\n\taddiu $a0, $sp, 0x30\n\tlui $a1, (0x8001F800 >> 16)\n\tori $a1, $a1, (0x8001F800 & 0xFFFF)\n\tlui $v0, %hi(D_800F2DDC)\n\tsw $ra, 0x4C($sp)\n\tsw $s2, 0x48($sp)\n\tsw $s1, 0x44($sp)\n\taddiu $t0, $v0, %lo(D_800F2DDC)\n\tlwl $v1, 0x3($t0)\n\tlwr $v1, 0x0($t0)\n\tlwl $a2, 0x7($t0)\n\tlwr $a2, 0x4($t0)\n\tlb $a3, 0x8($t0)\n\tswl $v1, 0x13($sp)\n\tswr $v1, 0x10($sp)\n\tswl $a2, 0x17($sp)\n\tswr $a2, 0x14($sp)\n\tsb $a3, 0x18($sp)\n\tlb $v1, 0x9($t0)\n\tlb $a2, 0xA($t0)\n\tsb $v1, 0x19($sp)\n\tsb $a2, 0x1A($sp)\n\tlui $v1, %hi(D_800F2DE8)\n\taddiu $t0, $v1, %lo(D_800F2DE8)\n\tlwl $v0, 0x3($t0)\n\tlwr $v0, 0x0($t0)\n\tlwl $a2, 0x7($t0)\n\tlwr $a2, 0x4($t0)\n\tlwl $a3, 0xB($t0)\n\tlwr $a3, 0x8($t0)\n\tswl $v0, 0x23($sp)\n\tswr $v0, 0x20($sp)\n\tswl $a2, 0x27($sp)\n\tswr $a2, 0x24($sp)\n\tswl $a3, 0x2B($sp)\n\tswr $a3, 0x28($sp)\n\tlb $v0, 0xC($t0)\n\tlb $a2, 0xD($t0)\n\tlb $a3, 0xE($t0)\n\tsb $v0, 0x2C($sp)\n\tsb $a2, 0x2D($sp)\n\tsb $a3, 0x2E($sp)\n\tlui $v0, %hi(D_800F2E54)\n\taddiu $t0, $v0, %lo(D_800F2E54)\n\tlwl $v1, 0x3($t0)\n\tlwr $v1, 0x0($t0)\n\tlwl $a2, 0x7($t0)\n\tlwr $a2, 0x4($t0)\n\tlb $a3, 0x8($t0)\n\tswl $v1, 0x33($sp)\n\tswr $v1, 0x30($sp)\n\tswl $a2, 0x37($sp)\n\tswr $a2, 0x34($sp)\n\tsb $a3, 0x38($sp)\n\taddiu $v1, $zero, 0x1\n\taddiu $s1, $sp, 0x10\n\tsh $v1, %gp_rel(D_8019EE54)($gp)\n\tjal func_80178988\n\taddiu $s2, $sp, 0x20\n\taddiu $v0, $zero, 0x80\n\tlui $at, %hi(D_8001F000)\n\tsb $s0, %lo(D_8001F000)($at)\n\tlui $at, %hi(D_800D2100)\n\tsb $v0, %lo(D_800D2100)($at)\n\tjal func_801942FC\n\taddu $a0, $zero, $zero\n\tjal func_80194394\n\taddu $a0, $zero, $zero\n\tjal func_8017953C\n\tnop\n\tlui $v0, (0x8001F800 >> 16)\n\tori $v0, $v0, (0x8001F800 & 0xFFFF)\n\tsw $v0, %gp_rel(D_8019EE34)($gp)\n\tjal func_80194018\n\taddiu $a0, $zero, 0x3\n\tjal func_801928C8\n\tnop\n\tjal func_801976E8\n\tnop\n\tlw $a0, %gp_rel(D_8019EE0C)($gp)\n\tjal func_80197668\n\tnop\n\tlw $a0, %gp_rel(D_8019EE1C)($gp)\n\tjal func_80197668\n\tnop\n\tlw $a0, %gp_rel(D_8019EE38)($gp)\n\tjal func_80197668\n\tnop\n\tlw $a0, %gp_rel(D_8019EDF8)($gp)\n\tjal func_80197668\n\tnop\n\tlw $a0, %gp_rel(D_8019EE18)($gp)\n\tjal func_80197668\n\tnop\n\tlw $a0, %gp_rel(D_8019EE20)($gp)\n\tjal func_80197668\n\tnop\n\tlw $a0, %gp_rel(D_8019EE3C)($gp)\n\tjal func_80197668\n\tnop\n\tlw $a0, %gp_rel(D_8019EDFC)($gp)\n\tjal func_80197668\n\tnop\n\tjal func_801976F8\n\tnop\n\tjal func_80192BEC\n\tnop\n\tjal func_801976E8\n\tnop\n\tlui $v1, (0x800CFFF0 >> 16)\n\tori $v1, $v1, (0x800CFFF0 & 0xFFFF)\n\taddiu $a1, $zero, 0x1\n\tlw $v0, %gp_rel(D_8019EE34)($gp)\n\taddu $a2, $zero, $zero\n\taddiu $a0, $v0, 0x10\n\tsw $v1, 0x30($v0)\n\tjal func_801975F8\n\tsw $zero, 0x34($v0)\n\tjal func_80192AF8\n\tnop\n\tjal func_8018F538\n\tnop\n\tjal func_80178DD0\n\taddu $a0, $zero, $zero\n\tjal func_80194018\n\taddiu $a0, $zero, 0x3\n\tjal func_8019418C\n\taddu $a0, $zero, $zero\n\tjal func_80178BB4\n\tnop\n\tjal func_801942FC\n\taddu $a0, $zero, $zero\n\tjal func_80178730\n\tnop\n\tjal func_801928E8\n\taddu $a0, $zero, $zero\n\tjal func_801795BC\n\tnop\n\taddu $a0, $s1, $zero\n\tlui $a1, (0x80028000 >> 16)\n\tjal func_80178988\n\tori $a1, $a1, (0x80028000 & 0xFFFF)\n\tjal func_80185FA0\n\tnop\n\taddu $a0, $s2, $zero\n\tlui $a1, (0x80014000 >> 16)\n\tjal func_80178988\n\tori $a1, $a1, (0x80014000 & 0xFFFF)\n\tjal func_80179500\n\tnop\n\tlw $ra, 0x4C($sp)\n\tlw $s2, 0x48($sp)\n\tlw $s1, 0x44($sp)\n\tlw $s0, 0x40($sp)\n\tsh $zero, %gp_rel(D_8019EE54)($gp)\n\tjr $ra\n\taddiu $sp, $sp, 0x50\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_80179670, .-func_80179670\n"
-);
+void func_80179670(void)
+{
+    /* battle animation driver: 80178988/801942FC/8017953C preps,
+       8x 80197668 sprite rows, 80192BEC/80192AF8 sound rows,
+       8018F538/80178DD0/80178BB4/80185FA0 commits; finishes via
+       801795BC/80179500. */
+    func_80178988();
+    func_801942FC();
+    func_80194394();
+    func_8017953C();
+    func_80194018(3);
+    func_801928C8();
+    func_801976E8();
+    func_80197668();
+    func_80197668();
+    func_80197668();
+    func_80197668();
+    func_80197668();
+    func_80197668();
+    func_80197668();
+    func_80197668();
+    func_801976F8();
+    func_80192BEC();
+    func_801976E8();
+    func_801975F8();
+    func_80192AF8();
+    func_8018F538();
+    func_80178DD0();
+    func_80194018(3);
+    func_8019418C();
+    func_80178BB4();
+    func_801942FC();
+    func_80178730();
+    func_801928E8();
+    func_801795BC();
+    func_80178988();
+    func_80185FA0();
+    func_80178988();
+    func_80179500();
+    return;
+}
