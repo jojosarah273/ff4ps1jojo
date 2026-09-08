@@ -18,7 +18,7 @@ path — the same recipe used by every modern decomp-port.
 | Phase | Goal | State |
 |---|---|---|
 | 0 — Verified disassembly | Full text coverage byte-verified (maspsx lanes, splat, asm-differ) | ✅ done (2516/2516) |
-| A — Complete C decomp | Every function as harness-verified C (byte-match where the compiler reproduces it; runtime-verified where it doesn't) | ▶ in progress (2516/2516 C-written, 740 byte-verified) |
+| A — Complete C decomp | Every function as harness-verified C (byte-match where the compiler reproduces it; runtime-verified where it doesn't) | ▶ in progress (2516/2516 C-written, 743 byte-verified) |
 | B — Interpretation | Rename/restructure into modern readable C; native host: SDL, stdio assets, no BIOS; native renderer/audio swap | — |
 | C — Expansion | Widescreen, hi-res, new modes, randomizer/mod framework, cross-platform (DC-class portability = plain C) | — |
 
@@ -27,7 +27,7 @@ path — the same recipe used by every modern decomp-port.
 - [x] 25% C-written (~629 funcs) — DONE (2516 funcs, 100.0%)
 - [x] 50% C-written (~1258 funcs) — DONE (2516 funcs, 100.0%)
 - [x] 75% C-written (~1887 funcs) — DONE (2516 funcs, 100.0%)
-- [x] 100% C-written — DONE (2516/2516); byte-verify ≥50% in progress (29.4%)
+- [ ] 100% C-written, with ≥50% byte-verified (matched)
 - [ ] All stubborn functions runtime-verified against the reference oracle
 <!-- MILESTONES:END -->
 
@@ -82,12 +82,14 @@ More detail: `PROGRESS.md`. Verification harness: `tools/check_integrity.sh`.
 <!-- STATUS:BEGIN -->
 | state | count | % |
 |---|---|---|
-| byte-verified (matched) | 740 | 29.4% |
-| real-C (match pending) | 1776 | 70.6% |
+| byte-verified (matched) | 743 | 29.5% |
+| real-C (match pending) | 1773 | 70.5% |
 | asm shell (to do) | 0 | 0.0% |
 | **total** | 2516 | 100% |
 | **C-written** | **2516** | **100.0%** |
 <!-- STATUS:END -->
+
+
 
 
 
