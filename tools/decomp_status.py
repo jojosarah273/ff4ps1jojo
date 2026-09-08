@@ -77,6 +77,30 @@ md = [
 ]
 (ROOT / "decomp").mkdir(exist_ok=True)
 (ROOT / "decomp" / "STATUS.md").write_text("\n".join(md) + "\n")
+# --- refresh README status block (monitoring via GitHub) -------------
+rd = (ROOT / "README.md")
+txt = rd.read_text()
+block = "\n".join([f"| {k} | {states[k]} | {pct(k)} |" for k in
+                    ("matched", "real-C", "shell")])
+frag = (
+    "\n**Phase A progress** — see `decomp/STATUS.md` for the full table.\n\n"
+    "<!-- STATUS:BEGIN -->\n"
+    f"| state | count | % |\n|---|---|---|\n{block}\n"
+    f"| total | {total} | 100% |\n"
+    "| **C-written** | **{0}** | **{1:.1f}%** |\n".format(
+        states['matched'] + states['real-C'],
+        100.0 * (states['matched'] + states['real-C']) / total) +
+    "<!-- STATUS:END -->\n"
+)
+b0 = txt.find("<!-- STATUS:BEGIN -->")
+b1 = txt.find("<!-- STATUS:END -->")
+if b0 != -1 and b1 != -1 and b1 > b0:
+    txt = txt[:b0] + "<!-- STATUS:BEGIN -->\n" + frag + txt[b1 + len("<!-- STATUS:END -->"):]
+else:
+    txt = txt.replace("# More detail: `PROGRESS.md`. Verification harness: `tools/check_integrity.sh`.",
+        "# More detail: `PROGRESS.md`. Verification harness: `tools/check_integrity.sh`."
+        "\n\n" + frag)
+rd.write_text(txt)
 print(f"TOTAL {total} | matched {states['matched']} | "
       f"real-C {states['real-C']} | shell {states['shell']} | "
       f"(C complete: {states['matched'] + states['real-C']} = "

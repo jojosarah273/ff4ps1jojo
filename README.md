@@ -69,3 +69,21 @@ PROGRESS.md              session ledger
 ```
 
 More detail: `PROGRESS.md`. Verification harness: `tools/check_integrity.sh`.
+
+**Phase A progress** — full table in `decomp/STATUS.md`.
+
+<!-- STATUS:BEGIN -->
+
+**Phase A progress** — see `decomp/STATUS.md` for the full table.
+
+<!-- STATUS:BEGIN -->
+| state | count | % |
+|---|---|---|
+| matched | 266 | 10.6% |
+| real-C | 539 | 21.4% |
+| shell | 1711 | 68.0% |
+| total | 2516 | 100% |
+| **C-written** | **805** | **32.0%** |
+<!-- STATUS:END -->
+
+
