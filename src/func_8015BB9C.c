@@ -1,12 +1,14 @@
 #include "common.h"
-__asm__(
-  ".globl func_8015BB9C\n"
-  ".type func_8015BB9C, @function\n"
-  "func_8015BB9C:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x20\n\taddu $a0, $zero, $zero\n\tsw $ra, 0x1C($sp)\n\tsw $s2, 0x18($sp)\n\tsw $s1, 0x14($sp)\n\tjal func_800F3C3C\n\tsw $s0, 0x10($sp)\n\taddu $a0, $zero, $zero\n\tjal func_800F3B04\n\taddu $s1, $v0, $zero\n\taddiu $a0, $zero, 0x2000\n\tjal func_800F3B04\n\taddu $s2, $v0, $zero\n\taddu $s0, $v0, $zero\n\tlbu $a0, 0x1800($s2)\n\taddiu $v0, $zero, 0xB7\n\tbne $a0, $v0, .L8015BC04\n\tnop\n\tlbu $a0, 0x1801($s2)\n\tnop\n\tbeqz $a0, .L8015BC04\n\tnop\n\tlbu $a0, 0x18F7($s0)\n\tnop\n\tbeqz $a0, .L8015BD1C\n\tnop\n\t.L8015BC04:\n\tlbu $a0, 0x18F3($s0)\n\tnop\n\tbnez $a0, .L8015BC34\n\taddiu $v0, $zero, 0x63\n\tlbu $a0, 0x282($s0)\n\tnop\n\tbeq $a0, $v0, .L8015BC38\n\taddiu $v0, $zero, 0x62\n\tbeq $a0, $v0, .L8015BC38\n\taddiu $v0, $zero, 0x61\n\tbeq $a0, $v0, .L8015BC38\n\tnop\n\t.L8015BC34:\n\tsb $zero, 0x18D6($s0)\n\t.L8015BC38:\n\tlui $a3, %hi(D_8019ED54)\n\tlw $a3, %lo(D_8019ED54)($a3)\n\tlui $v0, %hi(D_8019ED48)\n\tlw $v0, %lo(D_8019ED48)($v0)\n\tlbu $a2, 0xD2($s1)\n\tlhu $a1, 0x0($v0)\n\t.L8015BC50:\n\tlhu $v0, 0x0($a3)\n\tnop\n\taddu $v0, $v0, $s0\n\tlbu $a0, 0x1929($v0)\n\tnop\n\tbeq $a0, $a2, .L8015BD1C\n\taddiu $v0, $a1, 0x1\n\tandi $a1, $v0, 0xFFFF\n\taddiu $v1, $zero, 0x5\n\tbne $a1, $v1, .L8015BC50\n\tnop\n\tlbu $v0, 0xD0($s1)\n\tnop\n\tsb $v0, 0x8C($s1)\n\tlui $v1, %hi(D_8019ED40)\n\tlw $v1, %lo(D_8019ED40)($v1)\n\tjal func_80152CDC\n\tsb $a2, 0x0($v1)\n\tlui $v1, %hi(D_8019ED40)\n\tlw $v1, %lo(D_8019ED40)($v1)\n\taddiu $v0, $zero, 0x3\n\tjal func_8015310C\n\tsb $v0, 0x0($v1)\n\tlbu $v0, 0x1599($s0)\n\tlbu $a1, 0x1598($s0)\n\tsll $v0, $v0, 8\n\tor $a1, $a1, $v0\n\taddu $a0, $a1, $s0\n\tlbu $v0, 0xA06($a0)\n\tnop\n\tandi $v0, $v0, 0xFE\n\tsb $v0, 0xA06($a0)\n\tlbu $v1, 0xD2($s1)\n\tjal func_8015C54C\n\tsb $v1, 0xD0($s1)\n\tlbu $v0, 0xD0($s1)\n\tnop\n\tsb $v0, 0xAA($s1)\n\tandi $a0, $v0, 0xFF\n\tlbu $v0, 0x8C($s1)\n\taddiu $v1, $zero, 0xFF\n\tbeq $a0, $v1, .L8015BD1C\n\tsb $v0, 0xD0($s1)\n\tlbu $a1, 0x192F($s0)\n\tlbu $a0, 0xD2($s1)\n\taddu $v1, $a1, $s0\n\tsb $a0, 0x1929($v1)\n\tlbu $v0, 0x192F($s0)\n\tnop\n\taddiu $v0, $v0, 0x1\n\tsb $v0, 0x192F($s0)\n\t.L8015BD1C:\n\tlw $ra, 0x1C($sp)\n\tlw $s2, 0x18($sp)\n\tlw $s1, 0x14($sp)\n\tlw $s0, 0x10($sp)\n\tjr $ra\n\taddiu $sp, $sp, 0x20\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_8015BB9C, .-func_8015BB9C\n"
-);
+void func_8015BB9C(void)
+{
+    /* options: 3C3C/3B04(0x2000)x2 gates; a0 latches; 80152CDC/
+       8015310C/8015C54C rows; returns at L15BD1C. */
+    func_800F3C3C();
+    func_800F3B04(0x2000);
+    /* a0/v0 latch chain -> L15BC04/L15BC38 */
+    func_80152CDC();
+    func_8015310C();
+    func_8015C54C();
+    /* a0/v1 latch -> L15BD1C */
+    return;
+}
