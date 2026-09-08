@@ -1,61 +1,24 @@
 #include "common.h"
-__asm__(
-  ".globl func_80198860\n"
-  ".type func_80198860, @function\n"
-  "func_80198860:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddu $a2, $a0, $0\n"
-  "\tbeq $a2, $a1, .LX904\n"
-  "\tlui $v1, (0x7FFFFFFF >> 16)\n"
-  "\tori $v1, $v1, (0x7FFFFFFF & 0xFFFF)\n"
-  "\tand $v0, $a2, $v1\n"
-  "\tbnez $v0, .LX888\n"
-  "\tlui $v0, (0x80000000 >> 16)\n"
-  "\tand $v0, $a1, $v1\n"
-  "\tbeqz $v0, .LX904\n"
-  "\tlui $v0, (0x80000000 >> 16)\n"
-  ".LX888:\n"
-  "\tand $a3, $a2, $v0\n"
-  "\tand $v0, $a1, $v0\n"
-  "\tbeq $a3, $v0, .LX8A8\n"
-  "\tsra $v0, $a2, 23\n"
-  "\tbnez $a3, .LX908\n"
-  "\taddiu $v0, $0, -1\n"
-  "\tj .LX908\n"
-  "\taddu $v0, $0, $0\n"
-  ".LX8A8:\n"
-  "\tandi $a0, $v0, 0xFF\n"
-  "\tsra $v0, $a1, 23\n"
-  "\tandi $v1, $v0, 0xFF\n"
-  "\tslt $v0, $a0, $v1\n"
-  "\tbnez $v0, .LX8EC\n"
-  "\tnop\n"
-  "\tbne $a0, $v1, .LX8FC\n"
-  "\tlui $v0, (0x7FFFFF >> 16)\n"
-  "\tori $v0, $v0, (0x7FFFFF & 0xFFFF)\n"
-  "\tand $v1, $a2, $v0\n"
-  "\tlui $a0, (0x800000 >> 16)\n"
-  "\tor $v1, $v1, $a0\n"
-  "\tand $v0, $a1, $v0\n"
-  "\tor $v0, $v0, $a0\n"
-  "\tslt $v1, $v1, $v0\n"
-  "\tbeqz $v1, .LX8FC\n"
-  "\tnop\n"
-  ".LX8EC:\n"
-  "\tbnez $a3, .LX908\n"
-  "\taddu $v0, $0, $0\n"
-  "\tj .LX908\n"
-  "\taddiu $v0, $0, -1\n"
-  ".LX8FC:\n"
-  "\tbltz $a2, .LX908\n"
-  "\taddiu $v0, $0, -1\n"
-  ".LX904:\n"
-  "\taddu $v0, $0, $0\n"
-  ".LX908:\n"
-  "\tjr $ra\n"
-  "\tnop\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_80198860, .-func_80198860\n"
-);
+s32 func_80198860(s32 f0, s32 f1)
+{
+    /* float-bits compare: -1/0 result for the +/- ordering. */
+    u32 a = (u32)f0, b = (u32)f1;
+    u32 sign = 0x80000000;
+    if (a == b)
+        return 0;
+    if ((a & 0x7FFFFFFF) == 0 && (b & 0x7FFFFFFF) == 0)
+        return 0;
+    {
+        u32 as = a & sign;
+        if (as != (b & sign))
+            return as ? -1 : 0;
+        {
+            u32 ea = (a >> 23) & 0xFF, eb = (b >> 23) & 0xFF;
+            u32 ma = (a & 0x7FFFFF) | 0x800000;
+            u32 mb = (b & 0x7FFFFF) | 0x800000;
+            if (ea < eb || (ea == eb && ma < mb))
+                return as ? 0 : -1;
+            return (s32)a < 0 ? -1 : 0;
+        }
+    }
+}

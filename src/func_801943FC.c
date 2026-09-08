@@ -1,12 +1,32 @@
 #include "common.h"
-__asm__(
-  ".globl func_801943FC\n"
-  ".type func_801943FC, @function\n"
-  "func_801943FC:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x20\n\taddu $t0, $a0, $0\n\tsw $s0, 0x18($sp)\n\tlui $a0, D_8019DB56\n\taddiu $a0, $a0, D_8019DB56\n\tsw $ra, 0x1C($sp)\n\tlbu $v1, 0x0($a0)\n\taddiu $v0, $0, 0x1\n\tbeq $v1, $v0, .L80194438\n\taddu $s0, $a1, $0\n\taddiu $v0, $0, 0x2\n\tbeq $v1, $v0, .L801944C4\n\tnop\n\tj .L80194508\n\tnop\n\t.L80194438:\n\tlh $a1, 0x4($s0)\n\tlh $v1, 0x2($a0)\n\tnop\n\tslt $v0, $v1, $a1\n\tbnez $v0, .L801944B8\n\tnop\n\tlh $a3, 0x0($s0)\n\tnop\n\taddu $v0, $a1, $a3\n\tslt $v0, $v1, $v0\n\tbnez $v0, .L801944B8\n\tnop\n\tlh $v1, 0x2($s0)\n\tlh $a0, 0x4($a0)\n\tnop\n\tslt $v0, $a0, $v1\n\tbnez $v0, .L801944B8\n\tnop\n\tlh $a2, 0x6($s0)\n\tnop\n\taddu $v0, $v1, $a2\n\tslt $v0, $a0, $v0\n\tbnez $v0, .L801944B8\n\tnop\n\tblez $a1, .L801944B8\n\tnop\n\tbltz $a3, .L801944B8\n\tnop\n\tbltz $v1, .L801944B8\n\tnop\n\tbgtz $a2, .L80194508\n\tnop\n\t.L801944B8:\n\tlui $a0, D_800F3910\n\tj .L801944CC\n\taddiu $a0, $a0, D_800F3910\n\t.L801944C4:\n\tlui $a0, D_800F3930\n\taddiu $a0, $a0, D_800F3930\n\t.L801944CC:\n\tlui $v0, D_8019DB50\n\tlw $v0, D_8019DB50($v0)\n\tnop\n\tjalr $v0\n\taddu $a1, $t0, $0\n\tlh $a1, 0x0($s0)\n\tlh $a2, 0x2($s0)\n\tlh $a3, 0x4($s0)\n\tlh $v1, 0x6($s0)\n\tlui $v0, D_8019DB50\n\tlw $v0, D_8019DB50($v0)\n\tlui $a0, D_800F391C\n\taddiu $a0, $a0, D_800F391C\n\tjalr $v0\n\tsw $v1, 0x10($sp)\n\t.L80194508:\n\tlw $ra, 0x1C($sp)\n\tlw $s0, 0x18($sp)\n\tjr $ra\n\taddiu $sp, $sp, 0x20\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_801943FC, .-func_801943FC\n"
-);
+extern u8 D_8019DB56;
+extern u32 D_8019DB50;
+extern u8 D_800F3910;
+extern u8 D_800F391C;
+extern u8 D_800F3930;
+typedef void (*msg_cb)(u32 m, u32 a, s32 x, s32 y, s32 w, s32 h);
+void func_801943FC(u32 a0, s32 *s0)
+{
+    /* battle-UI phase state: hit-box gate then two message slots. */
+    u8 st = D_8019DB56;
+    s16 *rec = (s16 *)&D_8019DB56;
+    msg_cb cb = (msg_cb)D_8019DB50;
+    if (st == 1) {
+        s16 rw = rec[1];   /* +2 */
+        s16 rh = rec[2];   /* +4 */
+        s16 x = (s16)s0[0];
+        s16 y = (s16)s0[1];
+        s16 w = (s16)s0[2];
+        s16 h = (s16)s0[3];
+        if (rw >= y && rw < y + x && rh >= w && rh < w + h &&
+            y > 0 && x >= 0 && w >= 0 && h > 0)
+            return;
+        cb((u32)&D_800F3910, a0, x, y, w, h);
+        cb((u32)&D_800F391C, (s32)x, (s32)y, (s32)w, (s32)h, (s32)(s16)s0[4]);
+    } else if (st == 2) {
+        cb((u32)&D_800F3930, a0, (s32)(s16)s0[0], (s32)(s16)s0[1],
+           (s32)(s16)s0[2], (s32)(s16)s0[3]);
+        cb((u32)&D_800F391C, (s32)(s16)s0[0], (s32)(s16)s0[1],
+           (s32)(s16)s0[2], (s32)(s16)s0[3], (s32)(s16)s0[4]);
+    }
+}
