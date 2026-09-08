@@ -8,7 +8,7 @@ void func_8010E98C(void)
     func_800F654C(0x20);
     func_800F824C(0xAD);
     func_800FE870();
-L10e9b4:
+L10E9B4:
     for (;;) {
         func_800FE7B0();
         func_800F8F74(0x420C);
@@ -24,7 +24,7 @@ L10e9b4:
             continue;
         break;
     }
-L10ea2c:
+L10EA2C:
     for (;;) {
         func_800FE7B0();
         func_800F8F74(0x420C);
@@ -39,7 +39,7 @@ L10ea2c:
 L10EA74:
     func_8010E128();
     goto L10EA7C;
-L10ea7c:
+L10EA7C:
     for (;;) {
         func_800FE7B0();
         func_800F8F74(0x420C);
