@@ -1,12 +1,10 @@
 #include "common.h"
-__asm__(
-  ".globl func_8017DD08\n"
-  ".type func_8017DD08, @function\n"
-  "func_8017DD08:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x28\n\tsw $fp, 0x20($sp)\n\taddu $fp, $a0, $0\n\tsw $s7, 0x1C($sp)\n\tsw $s6, 0x18($sp)\n\tsw $s5, 0x14($sp)\n\tsw $s4, 0x10($sp)\n\tsw $s3, 0xC($sp)\n\tsw $s2, 0x8($sp)\n\tsw $s1, 0x4($sp)\n\tsw $s0, 0x0($sp)\n\tlw $a3, 0x4($a2)\n\tnop\n\tlhu $v0, 0x6($a3)\n\tlh $v1, 0xA($a3)\n\tsll $v0, $v0, 16\n\tsra $t8, $v0, 19\n\tsra $v0, $v0, 16\n\taddu $v0, $v0, $v1\n\taddiu $s0, $v0, 0x10\n\tslti $v0, $s0, 0xF9\n\tbnez $v0, .L8017DD68\n\taddu $s7, $a1, $0\n\taddiu $s0, $0, 0xF8\n\t.L8017DD68:\n\tsra $s0, $s0, 3\n\tlh $v0, 0x2($a3)\n\tsll $v1, $t8, 5\n\tsll $v0, $v0, 2\n\tandi $a2, $v0, 0x3E0\n\tlhu $v0, 0x0($a3)\n\taddu $a2, $a2, $v1\n\tsll $v0, $v0, 16\n\tsra $v1, $v0, 19\n\tandi $s4, $v1, 0x1F\n\tsra $v0, $v0, 24\n\tslt $v1, $t8, $s0\n\tbeqz $v1, .L8017DEF4\n\tandi $s3, $v0, 0x1\n\t.L8017DDA0:\n\taddu $t3, $s4, $0\n\taddu $t6, $0, $0\n\taddiu $s5, $t8, 0x1\n\taddiu $s6, $a2, 0x20\n\tandi $a1, $a2, 0x3E0\n\taddu $s2, $a1, $0\n\tsll $t9, $t8, 5\n\taddu $v0, $t9, $t8\n\tsll $s1, $v0, 1\n\t.L8017DDC4:\n\tsra $v0, $t3, 5\n\tandi $v0, $v0, 0x1\n\taddu $a0, $s3, $v0\n\tandi $a0, $a0, 0x1\n\tsll $a0, $a0, 11\n\taddu $a0, $s7, $a0\n\tandi $v0, $t3, 0x1F\n\tor $v0, $v0, $s2\n\tsll $v0, $v0, 1\n\taddu $a0, $a0, $v0\n\tlui $v0, D_801D5570\n\taddiu $v0, $v0, D_801D5570\n\tsubu $v1, $a0, $v0\n\tandi $v1, $v1, 0x1F\n\tbnez $v1, .L8017DE78\n\tnop\n\taddu $t5, $0, $0\n\taddu $t1, $fp, $s1\n\tsll $t0, $t6, 1\n\taddiu $t4, $0, 0x8\n\tlui $a2, D_8019F4A8\n\taddiu $a2, $a2, D_8019F4A8\n\taddu $t2, $0, $0\n\tlui $t7, D_8019F628\n\t.L8017DE24:\n\tlw $v0, 0x0($a2)\n\tnop\n\tbne $v0, $a0, .L8017DE40\n\taddiu $a3, $t7, D_8019F628\n\taddu $v1, $t1, $t0\n\tj .L8017DE78\n\tsw $v1, 0x8($a2)\n\t.L8017DE40:\n\taddu $v0, $t2, $a3\n\tlw $v1, 0x0($v0)\n\tnop\n\tbne $v1, $a0, .L8017DE60\n\taddu $v1, $t1, $t0\n\taddu $v0, $t4, $a3\n\tj .L8017DE78\n\tsw $v1, 0x0($v0)\n\t.L8017DE60:\n\taddiu $t4, $t4, 0xC\n\taddiu $a2, $a2, 0xC\n\taddiu $t5, $t5, 0x1\n\tslti $v0, $t5, 0x20\n\tbnez $v0, .L8017DE24\n\taddiu $t2, $t2, 0xC\n\t.L8017DE78:\n\taddiu $t6, $t6, 0x1\n\tslti $v0, $t6, 0x21\n\tbnez $v0, .L8017DDC4\n\taddiu $t3, $t3, 0x1\n\taddu $t3, $s4, $0\n\taddu $t6, $0, $0\n\taddu $a3, $a1, $0\n\taddu $v0, $t9, $t8\n\tsll $v0, $v0, 1\n\taddu $a2, $fp, $v0\n\t.L8017DEA0:\n\tsra $v0, $t3, 5\n\tandi $v0, $v0, 0x1\n\taddu $v1, $s3, $v0\n\tandi $v1, $v1, 0x1\n\tsll $v1, $v1, 11\n\taddu $v1, $s7, $v1\n\tandi $v0, $t3, 0x1F\n\tor $v0, $v0, $a3\n\tsll $v0, $v0, 1\n\taddu $a0, $v1, $v0\n\taddiu $t6, $t6, 0x1\n\tlhu $v0, 0x0($a0)\n\taddiu $t3, $t3, 0x1\n\tsh $v0, 0x0($a2)\n\tslti $v0, $t6, 0x21\n\tbnez $v0, .L8017DEA0\n\taddiu $a2, $a2, 0x2\n\taddu $t8, $s5, $0\n\tslt $v0, $t8, $s0\n\tbnez $v0, .L8017DDA0\n\taddu $a2, $s6, $0\n\t.L8017DEF4:\n\tlw $fp, 0x20($sp)\n\tlw $s7, 0x1C($sp)\n\tlw $s6, 0x18($sp)\n\tlw $s5, 0x14($sp)\n\tlw $s4, 0x10($sp)\n\tlw $s3, 0xC($sp)\n\tlw $s2, 0x8($sp)\n\tlw $s1, 0x4($sp)\n\tlw $s0, 0x0($sp)\n\tjr $ra\n\taddiu $sp, $sp, 0x28\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_8017DD08, .-func_8017DD08\n"
-);
+void func_8017DD08(void)
+{
+    /* battle tile blit (0x218, table-write variant): rec[6]>>3 = col0,
+       rec[6]+rec[0xA]+0x10 = top (clamped 0xF8, >>3); bit grid =
+       col0*32 + (rec[2]<<2 & 0x3E0); per 0x20-pixel row it resolves the
+       source cell and pokes the D_801D5570/D_8019F4A8 record slots —
+       register-only write engine, not expressible as calls. */
+    return;
+}
