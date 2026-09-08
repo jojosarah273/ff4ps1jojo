@@ -1,12 +1,29 @@
 #include "common.h"
-__asm__(
-  ".globl func_801973B8\n"
-  ".type func_801973B8, @function\n"
-  "func_801973B8:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddu $t0, $a0, $0\n\tlui $v1, (0xE1000200 >> 16)\n\tlw $t1, 0x10($sp)\n\taddiu $v0, $0, 0x2\n\tbeqz $a2, .L801973D4\n\tsb $v0, 0x3($t0)\n\tori $v1, $v1, (0xE1000200 & 0xFFFF)\n\t.L801973D4:\n\tbeqz $a1, .L801973E0\n\tandi $v0, $a3, 0x9FF\n\tori $v0, $v0, 0x400\n\t.L801973E0:\n\tor $v0, $v1, $v0\n\tbeqz $t1, .L80197440\n\tsw $v0, 0x4($t0)\n\tlui $v1, (0xE2000000 >> 16)\n\tlbu $a0, 0x2($t1)\n\tlbu $v0, 0x0($t1)\n\tsrl $a0, $a0, 3\n\tsll $a0, $a0, 15\n\tsrl $v0, $v0, 3\n\tsll $v0, $v0, 10\n\tor $v0, $v0, $v1\n\tor $a0, $a0, $v0\n\tlh $v1, 0x6($t1)\n\tlh $v0, 0x4($t1)\n\tnegu $v1, $v1\n\tsll $v1, $v1, 2\n\tandi $v1, $v1, 0x3E0\n\tor $a0, $a0, $v1\n\tnegu $v0, $v0\n\tandi $v0, $v0, 0xFF\n\tsra $v0, $v0, 3\n\tor $a0, $a0, $v0\n\tj .L80197444\n\tsw $a0, 0x8($t0)\n\t.L80197440:\n\tsw $0, 0x8($t0)\n\t.L80197444:\n\tjr $ra\n\tnop\n\tnop\n\tnop\n\tnop\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_801973B8, .-func_801973B8\n"
-);
+void func_801973B8(u8 *t0, u32 a1, u32 a2, u32 a3, u8 *t1)
+{
+    /* anim command header: GPU-ish control word + optional 2nd word. */
+    u32 v1 = 0xE1000200;
+    u32 v0;
+    t0[3] = 2;
+    if (a2 != 0)
+        v1 |= 0x200;
+    v0 = a3 & 0x9FF;
+    if (a1 != 0)
+        v0 |= 0x400;
+    v0 |= v1;
+    *(u32 *)&t0[4] = v0;
+    if (t1 == 0) {
+        *(u32 *)&t0[8] = 0;
+        return;
+    }
+    {
+        s16 sx = *(s16 *)&t1[4];
+        s16 sy = *(s16 *)&t1[6];
+        u32 w = 0xE2000000;
+        w |= ((u32)(t1[2] >> 3)) << 15;
+        w |= ((u32)(t1[0] >> 3)) << 10;
+        w |= ((u32)(-(s32)sy) << 2) & 0x3E0;
+        w |= (u8)(-(s32)sx) >> 3;
+        *(u32 *)&t0[8] = w;
+    }
+}
