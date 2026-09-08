@@ -1,12 +1,51 @@
 #include "common.h"
-__asm__(
-  ".globl func_80174CE4\n"
-  ".type func_80174CE4, @function\n"
-  "func_80174CE4:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x10($sp)\n\tjal func_800F9330\n\tnop\n\tjal func_800F939C\n\tnop\n\tjal func_800F71DC\n\taddu $a0, $zero, $zero\n\t.L80174D04:\n\tjal func_800F7500\n\taddiu $a0, $zero, 0x80\n\tjal func_800F8FB8\n\taddiu $a0, $zero, 0x33\n\t.L80174D14:\n\tjal func_800F9644\n\taddiu $a0, $zero, 0x20\n\tjal func_800F6658\n\taddiu $a0, $zero, 0x30\n\tjal func_800F5480\n\tnop\n\tlui $v0, %hi(D_8019ED54)\n\tlw $v0, %lo(D_8019ED54)($v0)\n\tlui $a0, (0x15C36F >> 16)\n\tlhu $a1, 0x0($v0)\n\tjal func_800F3B9C\n\tori $a0, $a0, (0x15C36F & 0xFFFF)\n\tlui $v1, %hi(D_8019ED54)\n\tlw $v1, %lo(D_8019ED54)($v1)\n\tnop\n\tlhu $a0, 0x0($v1)\n\tjal func_800F7FCC\n\taddu $a0, $v0, $a0\n\tjal func_800F8274\n\taddiu $a0, $zero, 0x30\n\tjal func_800F6658\n\taddiu $a0, $zero, 0x32\n\tlui $v0, %hi(D_8019ED54)\n\tlw $v0, %lo(D_8019ED54)($v0)\n\tlui $a0, (0x15C37F >> 16)\n\tlhu $a1, 0x0($v0)\n\tjal func_800F3B9C\n\tori $a0, $a0, (0x15C37F & 0xFFFF)\n\tlui $v1, %hi(D_8019ED54)\n\tlw $v1, %lo(D_8019ED54)($v1)\n\tnop\n\tlhu $a0, 0x0($v1)\n\tjal func_800F7FCC\n\taddu $a0, $v0, $a0\n\tjal func_800F8274\n\taddiu $a0, $zero, 0x32\n\tjal func_800F53C0\n\tnop\n\tbeqz $v0, .L80174DC4\n\tnop\n\tjal func_800F63BC\n\tnop\n\tj .L80174D14\n\tnop\n\t.L80174DC4:\n\tjal func_800F6658\n\taddiu $a0, $zero, 0x30\n\tjal func_800F5410\n\tnop\n\tlui $v0, %hi(D_8019ED54)\n\tlw $v0, %lo(D_8019ED54)($v0)\n\tlui $a0, (0x15C36F >> 16)\n\tlhu $a1, 0x0($v0)\n\tjal func_800F3B9C\n\tori $a0, $a0, (0x15C36F & 0xFFFF)\n\tlui $v1, %hi(D_8019ED54)\n\tlw $v1, %lo(D_8019ED54)($v1)\n\tnop\n\tlhu $a0, 0x0($v1)\n\tjal func_800F3F94\n\taddu $a0, $v0, $a0\n\tjal func_800F8274\n\taddiu $a0, $zero, 0x30\n\tjal func_800F6658\n\taddiu $a0, $zero, 0x32\n\tlui $v0, %hi(D_8019ED54)\n\tlw $v0, %lo(D_8019ED54)($v0)\n\tlui $a0, (0x15C37F >> 16)\n\tlhu $a1, 0x0($v0)\n\tjal func_800F3B9C\n\tori $a0, $a0, (0x15C37F & 0xFFFF)\n\tlui $v1, %hi(D_8019ED54)\n\tlw $v1, %lo(D_8019ED54)($v1)\n\tnop\n\tlhu $a0, 0x0($v1)\n\tjal func_800F3F94\n\taddu $a0, $v0, $a0\n\tjal func_800F8274\n\taddiu $a0, $zero, 0x32\n\tjal func_800F6558\n\taddu $a0, $zero, $zero\n\tjal func_800F9660\n\taddiu $a0, $zero, 0x20\n\tjal func_800F9330\n\tnop\n\tlui $v1, %hi(D_8019ED5C)\n\tlw $v1, %lo(D_8019ED5C)($v1)\n\tlui $a0, %hi(D_8019ED40)\n\tlw $a0, %lo(D_8019ED40)($a0)\n\tlbu $v0, 0x0($v1)\n\tjal func_800F7864\n\tsb $v0, 0x0($a0)\n\tlui $v1, %hi(D_8019ED44)\n\tlw $v1, %lo(D_8019ED44)($v1)\n\tlui $a0, %hi(D_8019ED54)\n\tlw $a0, %lo(D_8019ED54)($a0)\n\tlhu $v0, 0x0($v1)\n\tnop\n\tsh $v0, 0x0($a0)\n\tlui $v1, %hi(D_8019ED60)\n\tlw $v1, %lo(D_8019ED60)($v1)\n\tlui $a1, %hi(D_8019ED40)\n\tlw $a1, %lo(D_8019ED40)($a1)\n\tlbu $v0, 0x0($v1)\n\taddiu $a0, $zero, 0x34\n\tjal func_800F8674\n\tsb $v0, 0x0($a1)\n\tjal func_800F95A0\n\tnop\n\tjal func_800F6364\n\tnop\n\tjal func_800F6364\n\tnop\n\tjal func_800F5958\n\taddiu $a0, $zero, 0x10\n\tjal func_800F53D4\n\tnop\n\tbeqz $v0, .L80174D04\n\tnop\n\tjal func_800F960C\n\tnop\n\tjal func_800F95A0\n\tnop\n\tlw $ra, 0x10($sp)\n\tnop\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_80174CE4, .-func_80174CE4\n"
-);
+void func_80174CE4(void)
+{
+    /* shop stats: 0x30/0x32 windows, 0x33/0x34 profit cells, 3F94/
+       7FCC(3B9C) rows; loops L174D04/L174D14 (5A90(0x10)). */
+    func_800F9330();
+    func_800F939C();
+    func_800F71DC();
+L174d04:
+    for (;;) {
+        func_800F7500(0x80);
+        func_800F8FB8(0x33);
+    L174d14:
+        for (;;) {
+            func_800F9644(0x20);
+            func_800F6658(0x30);
+            func_800F5480();
+            func_800F7FCC(func_800F3B9C());
+            func_800F8274(0x30);
+            func_800F6658(0x32);
+            func_800F7FCC(func_800F3B9C());
+            func_800F8274(0x32);
+            if (func_800F53C0() != 0)
+                goto L174DC4;
+            func_800F63BC();
+        }
+    L174DC4:
+        func_800F6658(0x30);
+        func_800F5410();
+        func_800F3F94(func_800F3B9C());
+        func_800F8274(0x30);
+        func_800F6658(0x32);
+        func_800F3F94(func_800F3B9C());
+        func_800F8274(0x32);
+        func_800F6558();
+        func_800F9660(0x20);
+        func_800F9330();
+        func_800F7864();
+        func_800F8674(0x34);
+        func_800F95A0();
+        func_800F6364();
+        func_800F6364();
+        func_800F5958(0x10);
+        if (func_800F53D4() == 0)
+            continue;
+        break;
+    }
+    func_800F960C();
+    func_800F95A0();
+    return;
+}
