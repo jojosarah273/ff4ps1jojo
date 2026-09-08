@@ -1,12 +1,14 @@
 #include "common.h"
-__asm__(
-  ".globl func_80152A20\n"
-  ".type func_80152A20, @function\n"
-  "func_80152A20:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\tlui $v1, %hi(D_8019ED68)\n\tlw $v1, %lo(D_8019ED68)($v1)\n\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x10($sp)\n\tlbu $v0, 0x0($v1)\n\tnop\n\tandi $v0, $v0, 0x20\n\tbeqz $v0, .L80152A74\n\tnop\n\tlui $v1, %hi(D_8019ED40)\n\tlw $v1, %lo(D_8019ED40)($v1)\n\tnop\n\tlbu $v0, 0x0($v1)\n\tnop\n\tsrl $v0, $v0, 5\n\tjal func_800F7864\n\tsb $v0, 0x0($v1)\n\tjal func_800F76E8\n\tnop\n\tj .L80152A9C\n\tnop\n\t.L80152A74:\n\tlui $v1, %hi(D_8019ED44)\n\tlw $v1, %lo(D_8019ED44)($v1)\n\tnop\n\tlhu $v0, 0x0($v1)\n\tnop\n\tsrl $v0, $v0, 5\n\tjal func_800F7894\n\tsh $v0, 0x0($v1)\n\tjal func_800F77CC\n\tnop\n\t.L80152A9C:\n\tlw $ra, 0x10($sp)\n\tnop\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_80152A20, .-func_80152A20\n"
-);
+void func_80152A20(void)
+{
+    /* options row: v0 gate picks 7864/76E8 vs 7894/77CC. */
+    if (func_800F53D4() != 0)
+        goto L152A74;
+    func_800F7864();
+    func_800F76E8();
+    return;
+L152A74:
+    func_800F7894();
+    func_800F77CC();
+    return;
+}
