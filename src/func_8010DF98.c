@@ -1,12 +1,33 @@
 #include "common.h"
-__asm__(
-  ".globl func_8010DF98\n"
-  ".type func_8010DF98, @function\n"
-  "func_8010DF98:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x10($sp)\n\tjal func_800F71DC\n\taddu $a0, $zero, $zero\n\t.L8010DFA8:\n\tjal func_800F6B68\n\taddiu $a0, $zero, 0x1000\n\tjal func_800F4248\n\taddiu $a0, $zero, 0x1F\n\tjal func_800F5574\n\taddiu $a0, $zero, 0xB\n\tjal func_800F53D4\n\tnop\n\tbeqz $v0, .L8010DFE8\n\tnop\n\tjal func_800F90EC\n\taddiu $a0, $zero, 0x1003\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x1\n\tj .L8010E000\n\tnop\n\t.L8010DFE8:\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x80\n\tjal func_800F8768\n\taddiu $a0, $zero, 0x1003\n\tjal func_800F654C\n\taddu $a0, $zero, $zero\n\t.L8010E000:\n\tjal func_800F8768\n\taddiu $a0, $zero, 0x1007\n\tjal func_800F90EC\n\taddiu $a0, $zero, 0x1008\n\tjal func_800F90EC\n\taddiu $a0, $zero, 0x1004\n\tjal func_80117DF8\n\tnop\n\tjal func_800F5958\n\taddiu $a0, $zero, 0x140\n\tjal func_800F53D4\n\tnop\n\tbeqz $v0, .L8010DFA8\n\tnop\n\tjal func_8011EA5C\n\tnop\n\tlw $ra, 0x10($sp)\n\tnop\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_8010DF98, .-func_8010DF98\n"
-);
+void func_8010DF98(void)
+{
+    /* battle rows: 0x1000-0x1004/0x1008 cells, 5574(0xB) gate, 80117DF8
+       row; loop L10DFA8 on 5958(0x140). */
+    func_800F71DC();
+L10dfa8:
+    for (;;) {
+        func_800F6B68(0x1000);
+        func_800F4248(0x1F);
+        func_800F5574(0xB);
+        if (func_800F53D4() == 0)
+            goto L10DFE8;
+        func_800F90EC(0x1003);
+        func_800F654C(1);
+        goto L10E000;
+    L10DFE8:
+        func_800F654C(0x80);
+        func_800F8768(0x1003);
+        func_800F654C();
+    L10E000:
+        func_800F8768(0x1007);
+        func_800F90EC(0x1008);
+        func_800F90EC(0x1004);
+        func_80117DF8();
+        func_800F5958(0x140);
+        if (func_800F53D4() == 0)
+            continue;
+        break;
+    }
+    func_8011EA5C();
+    return;
+}
