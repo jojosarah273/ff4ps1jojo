@@ -1,12 +1,36 @@
 #include "common.h"
-__asm__(
-  ".globl func_8014D5A0\n"
-  ".type func_8014D5A0, @function\n"
-  "func_8014D5A0:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x10($sp)\n\tjal func_800F9200\n\tnop\n\tjal func_800F5574\n\taddiu $a0, $zero, 0x31\n\tjal func_800F53D4\n\tnop\n\tbnez $v0, .L8014D5E0\n\tnop\n\tjal func_800F5574\n\taddiu $a0, $zero, 0x33\n\tjal func_800F53D4\n\tnop\n\tbeqz $v0, .L8014D5F0\n\tnop\n\t.L8014D5E0:\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x80\n\tj .L8014D620\n\tnop\n\t.L8014D5F0:\n\tjal func_800F6564\n\tori $a0, $zero, 0xF485\n\tjal func_800F6434\n\taddiu $a0, $zero, 0x80\n\tbnez $v0, .L8014D618\n\tnop\n\tjal func_800F654C\n\taddiu $a0, $zero, 0xC0\n\tj .L8014D620\n\tnop\n\t.L8014D618:\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x40\n\t.L8014D620:\n\tjal func_800F8188\n\tori $a0, $zero, 0xF414\n\tjal func_800F93DC\n\tnop\n\tjal func_800F8188\n\tori $a0, $zero, 0xF413\n\tjal func_800F654C\n\taddiu $a0, $zero, 0xFF\n\tjal func_800F8188\n\tori $a0, $zero, 0xF415\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x2\n\tjal func_800F8188\n\tori $a0, $zero, 0xF412\n\tjal func_80177DAC\n\tnop\n\tjal func_800F960C\n\tnop\n\tjal func_800F95A0\n\tnop\n\tlw $ra, 0x10($sp)\n\tnop\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_8014D5A0, .-func_8014D5A0\n"
-);
+void func_8014D5A0(void)
+{
+    /* battle confirm: 5574(0x31/0x33)/6434(0x80) gates pick the
+       0x80/0xC0/0x40 colors, 80177DAC commit. */
+    func_800F9200();
+    func_800F5574(0x31);
+    if (func_800F53D4() != 0)
+        goto L14D5E0;
+    func_800F5574(0x33);
+    if (func_800F53D4() == 0)
+        goto L14D5F0;
+L14D5E0:
+    func_800F654C(0x80);
+    goto L14D620;
+L14D5F0:
+    func_800F6564();
+    if (func_800F6434(0x80) != 0)
+        goto L14D618;
+    func_800F654C(0xC0);
+    goto L14D620;
+L14D618:
+    func_800F654C(0x40);
+L14D620:
+    func_800F8188();
+    func_800F93DC();
+    func_800F8188();
+    func_800F654C(0xFF);
+    func_800F8188();
+    func_800F654C(2);
+    func_800F8188();
+    func_80177DAC();
+    func_800F960C();
+    func_800F95A0();
+    return;
+}
