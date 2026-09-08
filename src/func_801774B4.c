@@ -1,12 +1,36 @@
 #include "common.h"
-__asm__(
-  ".globl func_801774B4\n"
-  ".type func_801774B4, @function\n"
-  "func_801774B4:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x60\n\tsw $ra, 0x58($sp)\n\tsw $s3, 0x54($sp)\n\tsw $s2, 0x50($sp)\n\tsw $s1, 0x4C($sp)\n\tjal func_80189F94\n\tsw $s0, 0x48($sp)\n\tlui $v0, %hi(D_800F2DC8)\n\taddiu $a2, $v0, %lo(D_800F2DC8)\n\tlwl $v1, 0x3($a2)\n\tlwr $v1, 0x0($a2)\n\tlwl $a0, 0x7($a2)\n\tlwr $a0, 0x4($a2)\n\tlwl $a1, 0xB($a2)\n\tlwr $a1, 0x8($a2)\n\tswl $v1, 0x13($sp)\n\tswr $v1, 0x10($sp)\n\tswl $a0, 0x17($sp)\n\tswr $a0, 0x14($sp)\n\tswl $a1, 0x1B($sp)\n\tswr $a1, 0x18($sp)\n\tlwl $v1, 0xF($a2)\n\tlwr $v1, 0xC($a2)\n\tlb $a0, 0x10($a2)\n\tswl $v1, 0x1F($sp)\n\tswr $v1, 0x1C($sp)\n\tsb $a0, 0x20($sp)\n\tlui $v1, %hi(D_800F2DDC)\n\taddiu $a2, $v1, %lo(D_800F2DDC)\n\tlwl $v0, 0x3($a2)\n\tlwr $v0, 0x0($a2)\n\tlwl $a0, 0x7($a2)\n\tlwr $a0, 0x4($a2)\n\tlb $a1, 0x8($a2)\n\tswl $v0, 0x2B($sp)\n\tswr $v0, 0x28($sp)\n\tswl $a0, 0x2F($sp)\n\tswr $a0, 0x2C($sp)\n\tsb $a1, 0x30($sp)\n\tlb $v0, 0x9($a2)\n\tlb $a0, 0xA($a2)\n\tsb $v0, 0x31($sp)\n\tsb $a0, 0x32($sp)\n\tlui $v0, %hi(D_800F2DE8)\n\taddiu $a2, $v0, %lo(D_800F2DE8)\n\tlwl $v1, 0x3($a2)\n\tlwr $v1, 0x0($a2)\n\tlwl $a0, 0x7($a2)\n\tlwr $a0, 0x4($a2)\n\tlwl $a1, 0xB($a2)\n\tlwr $a1, 0x8($a2)\n\tswl $v1, 0x3B($sp)\n\tswr $v1, 0x38($sp)\n\tswl $a0, 0x3F($sp)\n\tswr $a0, 0x3C($sp)\n\tswl $a1, 0x43($sp)\n\tswr $a1, 0x40($sp)\n\tlb $v1, 0xC($a2)\n\tlb $a0, 0xD($a2)\n\tlb $a1, 0xE($a2)\n\tsb $v1, 0x44($sp)\n\tsb $a0, 0x45($sp)\n\tsb $a1, 0x46($sp)\n\tlui $at, %hi(D_8019ED82)\n\tsh $zero, %lo(D_8019ED82)($at)\n\tsh $zero, %gp_rel(D_8019EDE8)($gp)\n\tjal func_80192AF8\n\taddiu $s3, $sp, 0x10\n\tjal func_8018F538\n\tlui $s2, %hi(D_801A0A90)\n\tjal func_80178DD0\n\taddiu $a0, $zero, 0x1\n\tjal func_80194018\n\taddu $a0, $zero, $zero\n\tjal func_8019418C\n\taddu $a0, $zero, $zero\n\tjal func_80178BB4\n\taddiu $s2, $s2, %lo(D_801A0A90)\n\tjal func_80178730\n\tlui $s1, %hi(D_801B57A0)\n\tjal func_801782C0\n\taddu $a0, $s2, $zero\n\taddiu $s1, $s1, %lo(D_801B57A0)\n\tjal func_801782C0\n\taddu $a0, $s1, $zero\n\tlui $s0, %hi(D_801CA4E0)\n\taddiu $s0, $s0, %lo(D_801CA4E0)\n\tjal func_8017835C\n\taddu $a0, $s0, $zero\n\tjal func_801780B4\n\taddu $a0, $s2, $zero\n\tjal func_801780B4\n\taddu $a0, $s1, $zero\n\tjal func_80178220\n\taddu $a0, $s0, $zero\n\tjal func_801799F0\n\taddu $a0, $zero, $zero\n\tjal func_80178A58\n\tnop\n\tjal func_80178F20\n\tnop\n\tjal func_8018600C\n\tnop\n\taddu $a0, $s3, $zero\n\tjal func_80178988\n\tlui $a1, (0x80010000 >> 16)\n\tjal func_80179670\n\taddu $a0, $zero, $zero\n\taddiu $v0, $zero, 0x80\n\tlui $at, %hi(D_800D2100)\n\tsb $v0, %lo(D_800D2100)($at)\n\tjal func_801847D8\n\tnop\n\tjal func_80185030\n\tnop\n\tsh $zero, %gp_rel(D_8019EE68)($gp)\n\tsh $zero, %gp_rel(D_8019EE60)($gp)\n\tsh $zero, %gp_rel(D_8019EE6A)($gp)\n\tsh $zero, %gp_rel(D_8019EE62)($gp)\n\tsh $zero, %gp_rel(D_8019EE6C)($gp)\n\tsh $zero, %gp_rel(D_8019EE64)($gp)\n\tsh $zero, %gp_rel(D_8019EE6E)($gp)\n\tsh $zero, %gp_rel(D_8019EE66)($gp)\n\tsh $zero, %gp_rel(D_8019EE40)($gp)\n\tjal func_80178890\n\tnop\n\tjal func_80179930\n\tnop\n\tjal func_801977A8\n\tnop\n\tsw $v0, %gp_rel(D_8019EE44)($gp)\n\tjal func_801776E8\n\tnop\n\tlw $ra, 0x58($sp)\n\tlw $s3, 0x54($sp)\n\tlw $s2, 0x50($sp)\n\tlw $s1, 0x4C($sp)\n\tlw $s0, 0x48($sp)\n\taddu $v0, $zero, $zero\n\tjr $ra\n\taddiu $sp, $sp, 0x60\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_801774B4, .-func_801774B4\n"
-);
+void func_801774B4(void)
+{
+    /* battle anim chain: 80189F94/80192AF8/8018F538/80178DD0 preps,
+       80194018(1)+8019418C+80178BB4+80178730 core, then 6 splash
+       rows (801782C0x2/8017835C/801780B4x2/80178220) and the
+       801799F0/80179670/801847D8/80185030 drivers; ends 80178890/
+       80179930/801977A8/801776E8. */
+    func_80189F94();
+    func_80192AF8();
+    func_8018F538();
+    func_80178DD0();
+    func_80194018(1);
+    func_8019418C();
+    func_80178BB4();
+    func_80178730();
+    func_801782C0();
+    func_801782C0();
+    func_8017835C();
+    func_801780B4();
+    func_801780B4();
+    func_80178220();
+    func_801799F0();
+    func_80178A58();
+    func_80178F20();
+    func_8018600C();
+    func_80178988();
+    func_80179670();
+    func_801847D8();
+    func_80185030();
+    func_80178890();
+    func_80179930();
+    func_801977A8();
+    func_801776E8();
+    return;
+}
