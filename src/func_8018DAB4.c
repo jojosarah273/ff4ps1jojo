@@ -1,12 +1,21 @@
 #include "common.h"
-__asm__(
-  ".globl func_8018DAB4\n"
-  ".type func_8018DAB4, @function\n"
-  "func_8018DAB4:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x20\n\tsw $s1, 0x14($sp)\n\taddu $s1, $a0, $zero\n\tlui $a0, %hi(D_8019B584)\n\tlw $a0, %lo(D_8019B584)($a0)\n\taddiu $v0, $zero, 0x20\n\tsw $ra, 0x1C($sp)\n\tsw $s2, 0x18($sp)\n\tandi $v1, $a0, 0xF0\n\tbeq $v1, $v0, .L8018DB00\n\tsw $s0, 0x10($sp)\n\tslti $v0, $v1, 0x21\n\tbnez $v0, .L8018DC40\n\taddiu $v0, $zero, -0x3\n\taddiu $v0, $zero, 0x30\n\tbeq $v1, $v0, .L8018DB20\n\taddiu $v0, $zero, -0x3\n\tj .L8018DC40\n\tnop\n\t.L8018DB00:\n\taddiu $v0, $zero, 0x22\n\tbne $a0, $v0, .L8018DC40\n\taddiu $v0, $zero, -0x3\n\taddiu $v0, $zero, 0x30\n\tlui $at, %hi(D_8019B584)\n\tsw $v0, %lo(D_8019B584)($at)\n\tj .L8018DB44\n\taddu $a1, $s1, $zero\n\t.L8018DB20:\n\taddiu $v1, $zero, 0x1\n\tlui $at, %hi(D_801F6964)\n\tsw $v1, %lo(D_801F6964)($at)\n\tlui $at, %hi(D_8019B590)\n\tsw $s1, %lo(D_8019B590)($at)\n\tlui $at, %hi(D_801F6964)\n\tsw $zero, %lo(D_801F6964)($at)\n\tj .L8018DC40\n\taddiu $v0, $zero, 0x1\n\t.L8018DB44:\n\taddu $s0, $zero, $zero\n\taddiu $s2, $zero, 0x1\n\tsllv $v0, $s2, $s0\n\t.L8018DB50:\n\tand $v0, $a1, $v0\n\tbnez $v0, .L8018DB6C\n\tnop\n\taddiu $s0, $s0, 0x1\n\tslti $v0, $s0, 0x18\n\tbnez $v0, .L8018DB50\n\tsllv $v0, $s2, $s0\n\t.L8018DB6C:\n\tjal func_8018C608\n\taddiu $a0, $zero, 0x1\n\tlui $v0, %hi(D_8019B100)\n\tlw $v0, %lo(D_8019B100)($v0)\n\tnop\n\tandi $v0, $v0, 0x1\n\tbeqz $v0, .L8018DB94\n\tnop\n\tjal func_8018E0C8\n\taddiu $a0, $zero, 0x1\n\t.L8018DB94:\n\tlui $a0, %hi(func_8018D82C)\n\taddiu $a0, $a0, %lo(func_8018D82C)\n\tlui $at, %hi(D_8019B588)\n\tsw $s1, %lo(D_8019B588)($at)\n\tlui $at, %hi(D_8019B58C)\n\tsw $s1, %lo(D_8019B58C)($at)\n\tlui $at, %hi(D_8019B5A4)\n\tsw $zero, %lo(D_8019B5A4)($at)\n\tlui $at, %hi(D_8019B5A0)\n\tjal func_8018E4B8\n\tsw $zero, %lo(D_8019B5A0)($at)\n\tlui $v1, %hi(D_801F67D4)\n\tlw $v1, %lo(D_801F67D4)($v1)\n\tlui $at, %hi(D_801F67B0)\n\tbeqz $v1, .L8018DBDC\n\tsw $v0, %lo(D_801F67B0)($at)\n\tjal func_8018ABE8\n\taddu $a0, $zero, $zero\n\t.L8018DBDC:\n\tlui $a0, %hi(func_8018D3C8)\n\tjal func_8018E448\n\taddiu $a0, $a0, %lo(func_8018D3C8)\n\taddu $a0, $s0, $zero\n\tlui $at, %hi(D_801F67B4)\n\tsw $v0, %lo(D_801F67B4)($at)\n\tlui $at, %hi(D_801F695C)\n\tsw $s2, %lo(D_801F695C)($at)\n\tlui $at, %hi(D_801F67BC)\n\tsw $a0, %lo(D_801F67BC)($at)\n\tlui $at, %hi(D_801F67B8)\n\tjal func_8018D1AC\n\tsw $a0, %lo(D_801F67B8)($at)\n\taddu $a0, $zero, $zero\n\tjal func_8018E2C8\n\taddu $s0, $v0, $zero\n\tlw $a1, 0xC($s0)\n\tlui $a2, %hi(D_801F6958)\n\tlw $a2, %lo(D_801F6958)($a2)\n\taddiu $v0, $zero, 0x31\n\tlui $at, %hi(D_8019B584)\n\tsw $v0, %lo(D_8019B584)($at)\n\tjal func_8018A75C\n\taddiu $a0, $zero, 0x3\n\taddiu $v0, $zero, 0x1\n\t.L8018DC40:\n\tlw $ra, 0x1C($sp)\n\tlw $s2, 0x18($sp)\n\tlw $s1, 0x14($sp)\n\tlw $s0, 0x10($sp)\n\tjr $ra\n\taddiu $sp, $sp, 0x20\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_8018DAB4, .-func_8018DAB4\n"
-);
+void func_8018DAB4(void)
+{
+    /* event: v1/v0 gates; 8018C608(1)/8018E0C8(1) rows then
+       L18DB6C: 8018E4B8/8018ABE8 and L18DBDC: 8018E448/8018D1AC/
+       8018E2C8/8018A75C(3). */
+    /* v1/v0 gates -> L18DB00 / L18DB20 / L18DC40 */
+    func_8018C608(1);
+    if (func_800F53D4() == 0)
+        goto L18DB94;
+    func_8018E0C8(1);
+L18DB94:
+    func_8018E4B8();
+    func_8018ABE8();
+L18DBDC:
+    func_8018E448();
+    func_8018D1AC();
+    func_8018E2C8();
+    func_8018A75C(3);
+    return;
+}

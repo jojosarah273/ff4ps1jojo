@@ -1,12 +1,47 @@
 #include "common.h"
-__asm__(
-  ".globl func_8018A438\n"
-  ".type func_8018A438, @function\n"
-  "func_8018A438:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\tlui $v0, %hi(D_8019B114)\n\tlw $v0, %lo(D_8019B114)($v0)\n\tlui $v1, %hi(D_8019B12C)\n\tlhu $v1, %lo(D_8019B12C)($v1)\n\taddiu $sp, $sp, -0x28\n\tsw $s1, 0x14($sp)\n\taddu $s1, $a1, $zero\n\tsw $ra, 0x20($sp)\n\tsw $s3, 0x1C($sp)\n\tsw $s2, 0x18($sp)\n\tsw $s0, 0x10($sp)\n\tlhu $a1, 0x1AE($v0)\n\taddu $s2, $a0, $zero\n\tsh $v1, 0x1A6($v0)\n\tjal func_8018AC90\n\tandi $s3, $a1, 0x7FF\n\tbeqz $s1, .L8018A560\n\tsltiu $v0, $s1, 0x41\n\t.L8018A480:\n\tbeqz $v0, .L8018A48C\n\taddiu $s0, $zero, 0x40\n\taddu $s0, $s1, $zero\n\t.L8018A48C:\n\tblez $s0, .L8018A4B8\n\taddu $v1, $zero, $zero\n\tlui $a0, %hi(D_8019B114)\n\tlw $a0, %lo(D_8019B114)($a0)\n\t.L8018A49C:\n\tlhu $v0, 0x0($s2)\n\taddiu $s2, $s2, 0x2\n\taddiu $v1, $v1, 0x2\n\tsh $v0, 0x1A8($a0)\n\tslt $v0, $v1, $s0\n\tbnez $v0, .L8018A49C\n\tnop\n\t.L8018A4B8:\n\tlui $v1, %hi(D_8019B114)\n\tlw $v1, %lo(D_8019B114)($v1)\n\tnop\n\tlhu $a0, 0x1AA($v1)\n\tnop\n\tandi $v0, $a0, 0xFFCF\n\tori $v0, $v0, 0x10\n\tjal func_8018AC90\n\tsh $v0, 0x1AA($v1)\n\tlui $v0, %hi(D_8019B114)\n\tlw $v0, %lo(D_8019B114)($v0)\n\tnop\n\tlhu $v0, 0x1AE($v0)\n\tnop\n\tandi $v0, $v0, 0x400\n\tbeqz $v0, .L8018A548\n\taddu $v1, $zero, $zero\n\taddiu $v1, $v1, 0x1\n\t.L8018A500:\n\tsltiu $v0, $v1, 0xF01\n\tbnez $v0, .L8018A528\n\tnop\n\tlui $a0, %hi(D_800F3110)\n\taddiu $a0, $a0, %lo(D_800F3110)\n\tlui $a1, %hi(D_800F3130)\n\tjal func_8018F0C8\n\taddiu $a1, $a1, %lo(D_800F3130)\n\tj .L8018A548\n\tnop\n\t.L8018A528:\n\tlui $v0, %hi(D_8019B114)\n\tlw $v0, %lo(D_8019B114)($v0)\n\tnop\n\tlhu $v0, 0x1AE($v0)\n\tnop\n\tandi $v0, $v0, 0x400\n\tbnez $v0, .L8018A500\n\taddiu $v1, $v1, 0x1\n\t.L8018A548:\n\tjal func_8018AC90\n\tsubu $s1, $s1, $s0\n\tjal func_8018AC90\n\tnop\n\tbnez $s1, .L8018A480\n\tsltiu $v0, $s1, 0x41\n\t.L8018A560:\n\tlui $v0, %hi(D_8019B114)\n\tlw $v0, %lo(D_8019B114)($v0)\n\tnop\n\tlhu $a0, 0x1AA($v0)\n\tandi $a1, $s3, 0xFFFF\n\tandi $v1, $a0, 0xFFCF\n\tsh $v1, 0x1AA($v0)\n\tlhu $v0, 0x1AE($v0)\n\tnop\n\tandi $v0, $v0, 0x7FF\n\tbeq $v0, $a1, .L8018A5DC\n\taddu $v1, $zero, $zero\n\taddiu $v1, $v1, 0x1\n\t.L8018A594:\n\tsltiu $v0, $v1, 0xF01\n\tbnez $v0, .L8018A5BC\n\tnop\n\tlui $a0, %hi(D_800F3110)\n\taddiu $a0, $a0, %lo(D_800F3110)\n\tlui $a1, %hi(D_800F3144)\n\tjal func_8018F0C8\n\taddiu $a1, $a1, %lo(D_800F3144)\n\tj .L8018A5DC\n\tnop\n\t.L8018A5BC:\n\tlui $v0, %hi(D_8019B114)\n\tlw $v0, %lo(D_8019B114)($v0)\n\tnop\n\tlhu $v0, 0x1AE($v0)\n\tnop\n\tandi $v0, $v0, 0x7FF\n\tbne $v0, $a1, .L8018A594\n\taddiu $v1, $v1, 0x1\n\t.L8018A5DC:\n\tlw $ra, 0x20($sp)\n\tlw $s3, 0x1C($sp)\n\tlw $s2, 0x18($sp)\n\tlw $s1, 0x14($sp)\n\tlw $s0, 0x10($sp)\n\tjr $ra\n\taddiu $sp, $sp, 0x28\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_8018A438, .-func_8018A438\n"
-);
+void func_8018A438(void)
+{
+    /* event: 8018AC90 intro/branches with 8018F0C8 spins; loops
+       L18A49C/L18A500/L18A594 on regcmp latches. */
+    func_8018AC90();
+    if (func_800F53D4() == 0)
+        goto L18A48C;
+L18A48C:
+L18A49C:
+    for (;;) {
+        if (func_800F53D4() != 0)
+            continue;
+        break;
+    }
+L18A4B8:
+    func_8018AC90();
+    if (func_800F53D4() == 0)
+        goto L18A548;
+L18A500:
+    for (;;) {
+        if (func_800F53D4() != 0)
+            goto L18A528;
+        func_8018F0C8();
+        goto L18A548;
+    L18A528:
+        if (func_800F53D4() != 0)
+            continue;
+        break;
+    }
+L18A548:
+    func_8018AC90();
+    func_8018AC90();
+L18A560:
+    /* v0/a1 latch -> L18A5DC */
+    for (;;) {
+        if (func_800F53D4() != 0)
+            goto L18A5BC;
+        func_8018F0C8();
+        goto L18A5DC;
+    L18A5BC:
+        /* v0/a1 latch -> L18A594 */
+        continue;
+    }
+L18A5DC:
+    return;
+}

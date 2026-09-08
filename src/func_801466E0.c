@@ -1,12 +1,19 @@
 #include "common.h"
-__asm__(
-  ".globl func_801466E0\n"
-  ".type func_801466E0, @function\n"
-  "func_801466E0:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x28\n\taddu $a0, $zero, $zero\n\tsw $ra, 0x24($sp)\n\tsw $s4, 0x20($sp)\n\tsw $s3, 0x1C($sp)\n\tsw $s2, 0x18($sp)\n\tsw $s1, 0x14($sp)\n\tjal func_800F3C3C\n\tsw $s0, 0x10($sp)\n\taddiu $a0, $zero, 0x300\n\tjal func_800F3B04\n\taddu $s0, $v0, $zero\n\taddiu $a0, $zero, 0x2000\n\tjal func_800F3B04\n\taddu $s3, $v0, $zero\n\tori $a0, $zero, 0x8000\n\tjal func_800F3B04\n\taddu $s4, $v0, $zero\n\tlui $a0, (0x138000 >> 16)\n\tori $a0, $a0, (0x138000 & 0xFFFF)\n\taddu $s2, $v0, $zero\n\tjal func_800F3B9C\n\taddu $a1, $zero, $zero\n\tjal func_800F9330\n\taddu $s1, $v0, $zero\n\tjal func_800F939C\n\tnop\n\tlui $v0, %hi(D_8019ED54)\n\tlw $v0, %lo(D_8019ED54)($v0)\n\tlui $v1, (0x1FD15 >> 16)\n\tlhu $a3, 0x0($v0)\n\tori $v1, $v1, (0x1FD15 & 0xFFFF)\n\taddu $v0, $a3, $s1\n\taddu $v0, $v0, $v1\n\tandi $v1, $a3, 0xFF\n\tsll $t0, $v1, 2\n\tlbu $v0, 0x0($v0)\n\taddu $a0, $t0, $s2\n\tsll $v0, $v0, 2\n\tsb $v0, 0xE($s0)\n\tsrl $v0, $v0, 8\n\tsb $v0, 0xF($s0)\n\tlbu $a2, 0x7078($s2)\n\taddu $v0, $a3, $s2\n\tsll $v1, $a2, 4\n\tsb $a2, 0x708F($v0)\n\tsb $v1, 0x10($s0)\n\tlbu $v0, 0x707B($a0)\n\tnop\n\tbeqz $v0, .L80146924\n\tnop\n\tlbu $v0, 0x707C($a0)\n\tnop\n\taddiu $v0, $v0, 0x1\n\tandi $a2, $v0, 0xFF\n\tandi $v0, $a2, 0x7\n\tbnez $v0, .L801467D8\n\tsb $a2, 0x707C($a0)\n\tlbu $v0, 0x707D($a0)\n\tnop\n\taddiu $v0, $v0, 0x1\n\tsb $v0, 0x707D($a0)\n\t.L801467D8:\n\tsll $v0, $a3, 1\n\tandi $a3, $v0, 0xFFFF\n\taddu $v1, $a3, $s4\n\tlbu $a2, 0x4CF3($v1)\n\tlbu $v0, 0xF($s0)\n\tlbu $t0, 0xE($s0)\n\tsll $v0, $v0, 8\n\tor $t0, $t0, $v0\n\tsb $a2, 0x12($s0)\n\tlbu $a2, 0x4CF4($v1)\n\tlbu $v0, 0x10($s0)\n\tsb $a2, 0x13($s0)\n\tlbu $v1, 0x707D($a0)\n\tsb $zero, 0xE($s0)\n\tandi $a2, $v1, 0x1\n\tsll $a2, $a2, 3\n\taddu $v0, $v0, $a2\n\tandi $a3, $v0, 0xFFFF\n\taddu $v0, $a3, $s1\n\t.L80146824:\n\tlbu $a2, 0x7AE1($v0)\n\tlbu $v1, 0x12($s0)\n\tlbu $v0, 0x4CC0($s4)\n\taddu $v1, $a2, $v1\n\tbeqz $v0, .L80146848\n\tandi $a2, $v1, 0xFF\n\tnor $v0, $zero, $a2\n\taddiu $v0, $v0, -0x8\n\tandi $a2, $v0, 0xFF\n\t.L80146848:\n\taddu $a0, $s3, $t0\n\taddiu $v0, $t0, 0x1\n\tandi $t0, $v0, 0xFFFF\n\taddiu $v1, $a3, 0x1\n\tandi $a3, $v1, 0xFFFF\n\taddu $a1, $s3, $t0\n\taddiu $v0, $t0, 0x1\n\tandi $t0, $v0, 0xFFFF\n\taddu $v0, $a3, $s1\n\taddiu $v1, $a3, 0x1\n\tsb $a2, 0x0($a0)\n\tlbu $a2, 0x7AE1($v0)\n\tlbu $v0, 0x13($s0)\n\tandi $a3, $v1, 0xFFFF\n\taddu $v0, $a2, $v0\n\tsb $v0, 0x0($a1)\n\tlbu $v1, 0x7078($s2)\n\taddiu $v0, $zero, 0x9\n\tbne $v1, $v0, .L801468B0\n\taddu $v0, $a3, $s1\n\tlbu $v0, 0xE($s0)\n\tnop\n\taddu $v0, $v0, $s2\n\tlbu $a2, 0x7079($v0)\n\tj .L801468B8\n\taddu $v1, $s3, $t0\n\t.L801468B0:\n\tlbu $a2, 0x7AE1($v0)\n\taddu $v1, $s3, $t0\n\t.L801468B8:\n\taddiu $v0, $t0, 0x1\n\tandi $t0, $v0, 0xFFFF\n\taddiu $v0, $a3, 0x1\n\tsb $a2, 0x0($v1)\n\tlbu $v1, 0x4CC0($s4)\n\tnop\n\tbeqz $v1, .L801468E8\n\tandi $a3, $v0, 0xFFFF\n\taddu $v0, $a3, $s1\n\tlbu $v1, 0x7AE1($v0)\n\tj .L801468F0\n\txori $a2, $v1, 0x40\n\t.L801468E8:\n\taddu $v0, $a3, $s1\n\tlbu $a2, 0x7AE1($v0)\n\t.L801468F0:\n\taddu $a0, $s3, $t0\n\taddiu $v0, $t0, 0x1\n\tandi $t0, $v0, 0xFFFF\n\taddiu $v1, $a3, 0x1\n\tandi $a3, $v1, 0xFFFF\n\tsb $a2, 0x0($a0)\n\tlbu $v0, 0xE($s0)\n\taddiu $v1, $zero, 0x2\n\taddiu $v0, $v0, 0x1\n\tsb $v0, 0xE($s0)\n\tandi $v0, $v0, 0xFF\n\tbne $v0, $v1, .L80146824\n\taddu $v0, $a3, $s1\n\t.L80146924:\n\tjal func_800F960C\n\tnop\n\tjal func_800F95A0\n\tnop\n\tlw $ra, 0x24($sp)\n\tlw $s4, 0x20($sp)\n\tlw $s3, 0x1C($sp)\n\tlw $s2, 0x18($sp)\n\tlw $s1, 0x14($sp)\n\tlw $s0, 0x10($sp)\n\tjr $ra\n\taddiu $sp, $sp, 0x28\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_801466E0, .-func_801466E0\n"
-);
+void func_801466E0(void)
+{
+    /* battle: 3C3C/3B04(0x2000)x3/3B9C gates; 9330/939C rows with
+       the v0/v1 latch loop L146824; closes 960C/95A0. */
+    func_800F3C3C();
+    func_800F3B04(0x300);
+    func_800F3B04(0x2000);
+    func_800F3B04();
+    func_800F3B9C();
+    func_800F9330();
+    func_800F939C();
+    /* v0 gates -> L146924 / L1467D8 */
+L146824:
+    /* v0/v1 latch -> L146824 */
+    func_800F960C();
+    func_800F95A0();
+    return;
+}
