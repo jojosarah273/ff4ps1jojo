@@ -1,6 +1,7 @@
 #include "common.h"
 void func_80170458(void)
 {
+    int i;
     /* shop row render: 0x2115/0x4300/0x4301 title, 0x421F/0x2116/
        0x4302/0x4305 desc rows, 800F9868 catalog dispatch, then the
        0x4F/0x79/0x50 item cells; L170608 repeats the header/detail row
@@ -23,30 +24,11 @@ void func_80170458(void)
     func_800F9868();
     func_800F7210(0x2116);
     func_800F8F74(0x420B);
-    func_800F76BC(func_800F3C3C(0x4F));
-    func_800F76E8();
-    func_800F7CC8(func_800F3C3C(0x4F));
-    func_800F76BC(func_800F3C3C(0x4E));
-    func_800F76E8();
-    func_800F7CC8(func_800F3C3C(0x4E));
-    func_800F76BC(func_800F3C3C(0x4F));
-    func_800F76E8();
-    func_800F7CC8(func_800F3C3C(0x4F));
-    func_800F76BC(func_800F3C3C(0x4E));
-    func_800F76E8();
-    func_800F7CC8(func_800F3C3C(0x4E));
-    func_800F76BC(func_800F3C3C(0x4F));
-    func_800F76E8();
-    func_800F7CC8(func_800F3C3C(0x4F));
-    func_800F76BC(func_800F3C3C(0x4E));
-    func_800F76E8();
-    func_800F7CC8(func_800F3C3C(0x4E));
-    func_800F76BC(func_800F3C3C(0x4F));
-    func_800F76E8();
-    func_800F7CC8(func_800F3C3C(0x4F));
-    func_800F76BC(func_800F3C3C(0x4E));
-    func_800F76E8();
-    func_800F7CC8(func_800F3C3C(0x4E));
+    for (i = 0; i < 4; i++) {
+        func_800F76BC(func_800F3C3C(0x4F));
+        func_800F76E8();
+        func_800F7CC8(func_800F3C3C(0x4E));
+    }
     func_800F654C(0x18);
     func_800F8188(0x4301);
     func_800F7270(0x4C);
