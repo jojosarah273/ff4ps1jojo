@@ -21,6 +21,8 @@ L18F8DC:
         goto L18F990;
     func_8018F9E0();
     return;
+L18F990:
+    return;
 L18F9B8:
     return;
 }
