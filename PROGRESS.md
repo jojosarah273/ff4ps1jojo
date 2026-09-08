@@ -314,6 +314,13 @@ NTSC-U + text guard armed + mod FMV skip all present.
   50% target at 1258: +75 remaining — next session: mapper-family sweep 2 +
   hand batch + the 2-way ifelse resurrection.
   (Progress rails auto-refresh the README at every commit.)
+### LARGE-FUNCTION focused passes: func_80104354 DONE (232r menu-settings).
+func_80101788 (803r main-options menu): full call-graph + block map recovered
+(26 label-blocks, item grammar 6564/5574/53D4 + 3B04/54D4/56AC + action-genes
+102F38/102F70/103030/1031F0/1033E0/169128-11AEAC; submenus 1/2/3 = the
+0x30-0x21 menu, save-menu, item3) but first full write had gaps — REVERTED,
+queued as the next focused complete decode (all constants extracted: 170F/1710,
+1712/1713, 171B/1718/1719, 171F/171C/171D, 1723/1720/1721, 1727/1724/1725).
 ### 2025-09-08 — LARGE-FUNCTION SESSION (as directed: "target a larger function")
 Six big ones decoded: func_80114194 (90r, 3-phase menu state machine),
 func_80152F0C (90r, dual-phase screen-switch), func_80144344 (110r, nested
