@@ -315,12 +315,15 @@ NTSC-U + text guard armed + mod FMV skip all present.
   hand batch + the 2-way ifelse resurrection.
   (Progress rails auto-refresh the README at every commit.)
 ### LARGE-FUNCTION focused passes: func_80104354 DONE (232r menu-settings).
-func_80101788 (803r main-options menu): full call-graph + block map recovered
-(26 label-blocks, item grammar 6564/5574/53D4 + 3B04/54D4/56AC + action-genes
-102F38/102F70/103030/1031F0/1033E0/169128-11AEAC; submenus 1/2/3 = the
-0x30-0x21 menu, save-menu, item3) but first full write had gaps — REVERTED,
-queued as the next focused complete decode (all constants extracted: 170F/1710,
-1712/1713, 171B/1718/1719, 171F/171C/171D, 1723/1720/1721, 1727/1724/1725).
+func_80101788 (803r main-options menu) COMPLETE commit 4293924: the whole
+master menu decoded — settings (1704/1700 twin), the 1/2/3 submenu dispatch
+(0x21-cast menu, save screen, item3->104354/102494), the 1701-gated item chain
+(170F/1710, 1712/1713, 171B/1718/1719, 171F/171C/171D, 1723/1720/1721,
+1727/1724/1725 -> 102F38/102F70/103030/1031F0/1033E0/169128-11AEAC), and the
+memory screens (0D9D4/7864/7728 2C-2E windows, 5574(0x10) loop, 3C3C/3F38
+compute, 171608/171194 save, tail FD718+FF024+FE778/FE870 reset). All
+constants extracted from spec; C-written 1394 (55.4%).
+
 ### 2025-09-08 — LARGE-FUNCTION SESSION (as directed: "target a larger function")
 Six big ones decoded: func_80114194 (90r, 3-phase menu state machine),
 func_80152F0C (90r, dual-phase screen-switch), func_80144344 (110r, nested
