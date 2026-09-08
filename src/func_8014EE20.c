@@ -16,7 +16,7 @@ void func_8014EE20(void)
     func_800F71DC();
     func_800F6564();
     func_800F824C(0xE);
-L14ee88:
+L14EE88:
     for (;;) {
         func_800F3C3C(0xE);
         func_800F4F28();
@@ -61,7 +61,7 @@ L14EFF0:
     func_800F658C();
     func_800F922C();
     func_800F71DC(0xC);
-L14f030:
+L14F030:
     for (;;) {
         func_800F6BE0();
         func_800F87DC(0x202);
