@@ -1,12 +1,22 @@
 #include "common.h"
-__asm__(
-  ".globl func_800FF024\n"
-  ".type func_800FF024, @function\n"
-  "func_800FF024:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x10($sp)\n\tjal func_80171194\n\tnop\n\tjal func_80171608\n\tnop\n\tjal func_801719C8\n\tnop\n\tjal func_801724D0\n\tnop\n\tjal func_80172BA8\n\tnop\n\tjal func_80173008\n\tnop\n\tjal func_80173780\n\tnop\n\tjal func_801721E8\n\tnop\n\tjal func_800F654C\n\taddiu $a0, $zero, 0x3E\n\tjal func_8011B6B4\n\tnop\n\tjal func_800F5574\n\taddu $a0, $zero, $zero\n\tjal func_800F53D4\n\tnop\n\tbnez $v0, .L800FF09C\n\tnop\n\tjal func_80171F90\n\tnop\n\t.L800FF09C:\n\tlw $ra, 0x10($sp)\n\tnop\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_800FF024, .-func_800FF024\n"
-);
+void func_800FF024(void)
+{
+    /* shop flow: the buy-row chain 80171194/80171608/801719C8/
+       801724D0/80172BA8/80173008/80173780/801721E8/8011B6B4, then
+       a 5574 gate picks 80171F90. */
+    func_80171194();
+    func_80171608();
+    func_801719C8();
+    func_801724D0();
+    func_80172BA8();
+    func_80173008();
+    func_80173780();
+    func_801721E8();
+    func_800F654C(0x3E);
+    func_8011B6B4();
+    func_800F5574();
+    if (func_800F53D4() != 0)
+        return;
+    func_80171F90();
+    return;
+}
