@@ -227,7 +227,6 @@ modern-asm func_800F3A68
 modern-asm func_800F3A70
 modern-asm func_800F3AB4
 modern-asm func_800F3B9C
-modern-asm func_800F3C94
 modern-asm func_800F3D64
 modern-asm func_800F3E50
 modern-asm func_800F3F38
