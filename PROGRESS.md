@@ -348,6 +348,22 @@ view30 54D4/3F38 gates on 3B04(0x29AD/0x29CA+hw(ED58))), 29B5/29BD confirm,
 80153608), the 1804 confirm (78C4+3C3C(0xAB)) and the 1B34 sound gate
 (6564(0x35F3)+8188(0x1E00)+80169128) -> final 62BC/5DA0/6630(0xAA) loop
 -> 654C(0)+81E8(0x2106) re-arm, return. C-written 1396 (55.5%).
+### LARGE #1-4/5 committed (3756 rows) — menu-family screen chain
+- #1 func_801583FC (780r) — the 3975 info sub-menu redraw (ends calling 8015902C)
+- #2 func_801548F4 (857r) — info-menu EXIT/save selector (reset 29B5, save 29A0,
+  3581/3582 config gates, 3540 submenu, 2000/2001/2002/2003/2015 option windows,
+  2A07 sound loop -> 1548F4 is 801539C4's exit-rearm)
+- #3 func_8015902C (1050r) — stats/info sub-menu (3969/3967 stat text, 289C/28A2/
+  28A8/28B0/28B1 stat pages, 39xx fields, 80152AAC/52BC4/52B38/52C50 draws)
+- #4 func_80163F68 (1069r) — EQUIPMENT screen (3585/358B/358E stat blocks,
+  3591-3596, 16A0-16A2 stat set, 405F field, 1037-1039/103D-103F char stats,
+  1000/1002/1003 equip windows, 291C selection, 3975-loop -> 801583FC)
+Callgraph tracker now live: expected/callgraph.json (1401 callers, 5869 edges),
+rebuilt each commit (excludes signature self-edges). C-written 1400 (55.6%).
+#5 func_80108458 (968r) QUEUED as a dedicated deep pass: register/math-heavy
+status-table state machine (s0-s3 + sp[0x10]/[0x11] spill, modulo-48 multu
+0xAAAAAAAB division into D_80198D54/8E30/8F30/9030 status tables, per-index
+submenus). Head + dispatch mapped; needs register-simulated full write.
 ### 2025-09-08 — LARGE-FUNCTION SESSION (as directed: "target a larger function")
 Six big ones decoded: func_80114194 (90r, 3-phase menu state machine),
 func_80152F0C (90r, dual-phase screen-switch), func_80144344 (110r, nested
