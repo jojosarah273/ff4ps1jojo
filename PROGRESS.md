@@ -314,6 +314,14 @@ NTSC-U + text guard armed + mod FMV skip all present.
   50% target at 1258: +75 remaining — next session: mapper-family sweep 2 +
   hand batch + the 2-way ifelse resurrection.
   (Progress rails auto-refresh the README at every commit.)
+### 2025-09-08 — HEADLESS GRIND session (user away)
+autonomous batches: 1203 -> 1302 C-written (47.8% -> 51.7%). Families cracked
+by hand in this stretch: vtbl-dispatch (23 identified, 18 via offset-index
+emitter + 7 manual), status-flag bit-setters, mapper write-throughs/read-backs,
+MMIO merges, init-run loops, zero-fill loops, poll-loops, swap-copies,
+choice-dispatch handlers, mode resets. Lifters upgraded: lift_2way (value-
+selection 2-way, per-arm sim) accepted 8 +6 written; a1-const jal slots.
+Commit cadence: batched 3-6 funcs per commit, README auto-refreshed each.
 ### MILESTONE 50% C-WRITTEN — 2025-09-08 (1265/2516 = 50.3%)
 Autonomous grind wave delivered the milestone:
 - 2-way value-selection lifter (lift_2way, per-arm register simulation) — 8+.
