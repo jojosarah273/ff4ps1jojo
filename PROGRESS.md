@@ -314,6 +314,15 @@ NTSC-U + text guard armed + mod FMV skip all present.
   50% target at 1258: +75 remaining — next session: mapper-family sweep 2 +
   hand batch + the 2-way ifelse resurrection.
   (Progress rails auto-refresh the README at every commit.)
+### 2025-09-08 — LARGE-FUNCTION SESSION (as directed: "target a larger function")
+Six big ones decoded: func_80114194 (90r, 3-phase menu state machine),
+func_80152F0C (90r, dual-phase screen-switch), func_80144344 (110r, nested
+sound-menu loops), func_80110818 (110r, menu + nested input branch),
+func_801506BC (110r, sprite frame-setup sequence), func_80102494 (150r,
+4-option menu decision tree with nested gates). C-written 1387 -> 1392 (55.3%).
+Pattern: these engine controllers are all "gate -> poll-loop -> screen-flip"
+shapes (the 0xFxxx = sfx ids, 0x17xx = menu item ids). The 100+/150+ bands are
+opening; ~440 in 100+ remain, formatting the biggest single pool.
 ### 2025-09-08 — BIG-FUNCTION CAMPAIGN session 2 (55% crossed)
 1355 -> 1385 C-written (53.9% -> 55.0%)+. Strategy shift as directed: moved
 off the tiny pool (mostly jr-t2 syscall trampolines, not real logic) onto
