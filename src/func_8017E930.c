@@ -13,6 +13,7 @@ L17E974:
     func_80195120();
     if (func_800F53D4() == 0)
         goto L17EA58;
+L17EA2C:
     do {
         func_80197208();
     } while (func_800F53D4() != 0);
