@@ -1,12 +1,27 @@
 #include "common.h"
-__asm__(
-  ".globl func_80141A80\n"
-  ".type func_80141A80, @function\n"
-  "func_80141A80:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x18\n\tsw $ra, 0x10($sp)\n\tjal func_800F971C\n\tnop\n\tlui $v0, %hi(D_8019ED44)\n\tlw $v0, %lo(D_8019ED44)($v0)\n\tlui $a1, %hi(D_8019ED54)\n\tlw $a1, %lo(D_8019ED54)($a1)\n\tlhu $v1, 0x0($v0)\n\tori $a0, $zero, 0xF406\n\tjal func_800F8D00\n\tsh $v1, 0x0($a1)\n\tjal func_800F8D00\n\tori $a0, $zero, 0xF408\n\t.L80141AB8:\n\tjal func_80140558\n\tnop\n\tjal func_80140310\n\tnop\n\tjal func_800F9644\n\taddiu $a0, $zero, 0x20\n\tjal func_800F658C\n\tori $a0, $zero, 0xF406\n\tjal func_800F5480\n\tnop\n\tjal func_800F80D0\n\taddiu $a0, $zero, 0x8\n\tjal func_800F81B0\n\tori $a0, $zero, 0xF406\n\tjal func_800F971C\n\tnop\n\tjal func_800F9660\n\taddiu $a0, $zero, 0x20\n\tjal func_800F6364\n\tnop\n\tjal func_800F5958\n\taddiu $a0, $zero, 0x14\n\tjal func_800F53D4\n\tnop\n\tbeqz $v0, .L80141AB8\n\tnop\n\tlw $ra, 0x10($sp)\n\tnop\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_80141A80, .-func_80141A80\n"
-);
+void func_80141A80(void)
+{
+    /* battle rows: 80140558/80140310 loop L141AB8 on 5958(0x14),
+       with 80D0(8)/81B0 cells. */
+    func_800F971C();
+    func_800F8D00();
+    func_800F8D00();
+L141ab8:
+    for (;;) {
+        func_80140558();
+        func_80140310();
+        func_800F9644(0x20);
+        func_800F658C();
+        func_800F5480();
+        func_800F80D0(8);
+        func_800F81B0();
+        func_800F971C();
+        func_800F9660(0x20);
+        func_800F6364();
+        func_800F5958(0x14);
+        if (func_800F53D4() == 0)
+            continue;
+        break;
+    }
+    return;
+}
