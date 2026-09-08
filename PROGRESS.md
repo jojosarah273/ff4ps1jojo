@@ -229,6 +229,14 @@ NTSC-U + text guard armed + mod FMV skip all present.
   28.1%->28.9%. Chain family nearly exhausted (2 stragglers, func_8014EC18/
   8014ECC8 re-shelled for manual). Next: arithmetic/control-flow + data-access
   families, lane-first.
+- PHASE A SESSION 4: leaf/arithmetic family start. 5 hand-decompiled small
+  leaves as semantic C candidates (func_80196F2C getter, 80197458 setter,
+  801917D8 swap, 800F3D48 MMIO byte swap, 800F7430 byte copy). func_80197458
+  byte-verified on the gcc-2.7.2 LADDER lane (matched 265, C-written 29.4%).
+  Lane discoveries: absolute-$at setter/store shapes = ladder 2.6.3/2.7.2;
+  MMIO base-pointer form fixes lui+ori materialization; trailing-pad nops in
+  .s specs trip asm-differ on 12-16B getters (parked as candidates).
+  expected/matched_lanes.txt now records per-match toolchain lane.
 ### 2025-09-07 — PROJECT SCOPE: full C decomp -> native port (SoH/SM64 model)
 - Direction confirmed with user: goal = Ship-of-Harkinian-class native FF4
   (PS1), NOT an emulator and NOT a machine-translated recomp (the recomp
