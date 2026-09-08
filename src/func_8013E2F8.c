@@ -1,12 +1,91 @@
 #include "common.h"
-__asm__(
-  ".globl func_8013E2F8\n"
-  ".type func_8013E2F8, @function\n"
-  "func_8013E2F8:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x18\n\tori $a0, $zero, 0xF13D\n\tsw $ra, 0x14($sp)\n\tjal func_800F8188\n\tsw $s0, 0x10($sp)\n\tjal func_8013D12C\n\tlui $s0, %hi(D_8019A0B8)\n\tjal func_80148DE8\n\tnop\n\tjal func_800F971C\n\tnop\n\tlui $v0, %hi(D_8019ED44)\n\tlw $v0, %lo(D_8019ED44)($v0)\n\tlui $a0, %hi(D_8019ED54)\n\tlw $a0, %lo(D_8019ED54)($a0)\n\tlhu $v1, 0x0($v0)\n\tnop\n\tsh $v1, 0x0($a0)\n\t.L8013E340:\n\tlui $a0, (0x16FFEE >> 16)\n\tjal func_800F6C68\n\tori $a0, $a0, (0x16FFEE & 0xFFFF)\n\tjal func_800F8768\n\tori $a0, $zero, 0xF1B3\n\tlui $a0, (0x16FFF2 >> 16)\n\tjal func_800F6C68\n\tori $a0, $a0, (0x16FFF2 & 0xFFFF)\n\tjal func_800F8768\n\tori $a0, $zero, 0xF1F3\n\tjal func_800F654C\n\taddiu $a0, $zero, 0xFC\n\tjal func_80143E44\n\tnop\n\tjal func_800F6364\n\tnop\n\tjal func_800F5958\n\taddiu $a0, $zero, 0x4\n\tjal func_800F53D4\n\tnop\n\tbeqz $v0, .L8013E340\n\tnop\n\t.L8013E398:\n\tjal func_80140558\n\tnop\n\tjal func_800F971C\n\tnop\n\tlui $v1, %hi(D_8019ED44)\n\tlw $v1, %lo(D_8019ED44)($v1)\n\tlui $a0, %hi(D_8019ED58)\n\tlw $a0, %lo(D_8019ED58)($a0)\n\tlhu $v0, 0x0($v1)\n\tnop\n\tsh $v0, 0x0($a0)\n\tlui $v1, %hi(D_8019ED44)\n\tlw $v1, %lo(D_8019ED44)($v1)\n\tlui $a1, %hi(D_8019ED54)\n\tlw $a1, %lo(D_8019ED54)($a1)\n\tlhu $v0, 0x0($v1)\n\tori $a0, $zero, 0xF13D\n\tjal func_800F6564\n\tsh $v0, 0x0($a1)\n\tjal func_800F824C\n\taddiu $a0, $zero, 0xA\n\t.L8013E3EC:\n\tjal func_800F3C3C\n\taddiu $a0, $zero, 0xA\n\tjal func_800F4F28\n\taddu $a0, $v0, $zero\n\tjal func_800F4FAC\n\taddiu $a0, $zero, 0x101\n\tbnez $v0, .L8013E4C4\n\tnop\n\tjal func_800F6564\n\tori $a0, $zero, 0xF13E\n\tjal func_800F6434\n\taddiu $a0, $zero, 0x80\n\tbnez $v0, .L8013E454\n\tnop\n\tjal func_800F6B68\n\tori $a0, $zero, 0xF053\n\tjal func_800F5410\n\tnop\n\tjal func_800F4008\n\taddiu $a0, $zero, 0x10\n\tjal func_800F824C\n\taddu $a0, $zero, $zero\n\tjal func_800F6B68\n\tori $a0, $zero, 0xF054\n\tj .L8013E47C\n\tnop\n\t.L8013E454:\n\tjal func_800F6B68\n\tori $a0, $zero, 0xF043\n\tjal func_800F5480\n\tnop\n\tjal func_800F8058\n\taddiu $a0, $zero, 0xC\n\tjal func_800F824C\n\taddu $a0, $zero, $zero\n\tjal func_800F6B68\n\tori $a0, $zero, 0xF044\n\t.L8013E47C:\n\tjal func_800F824C\n\taddiu $a0, $zero, 0x2\n\tjal func_800F9330\n\tnop\n\tjal func_800F71DC\n\taddu $a0, $zero, $zero\n\t.L8013E494:\n\tjal func_8013E200\n\tnop\n\tjal func_800F6364\n\tnop\n\tjal func_800F5958\n\taddiu $a0, $zero, 0x4\n\tjal func_800F53D4\n\tnop\n\tbeqz $v0, .L8013E494\n\tnop\n\tjal func_800F95A0\n\tnop\n\t.L8013E4C4:\n\tjal func_800F6364\n\tnop\n\tjal func_800F6364\n\tnop\n\tjal func_800F5958\n\taddiu $a0, $zero, 0x10\n\tjal func_800F53D4\n\tnop\n\tbeqz $v0, .L8013E3EC\n\tnop\n\tjal func_800F971C\n\tnop\n\tlui $v0, %hi(D_8019ED44)\n\tlw $v0, %lo(D_8019ED44)($v0)\n\tlui $a0, %hi(D_8019ED54)\n\tlw $a0, %lo(D_8019ED54)($a0)\n\tlhu $v1, 0x0($v0)\n\tnop\n\tsh $v1, 0x0($a0)\n\t.L8013E510:\n\tlui $v0, %hi(D_8019ED54)\n\tlw $v0, %lo(D_8019ED54)($v0)\n\taddiu $a0, $s0, %lo(D_8019A0B8)\n\tlhu $v1, 0x0($v0)\n\tlui $a1, %hi(D_8019ED40)\n\tlw $a1, %lo(D_8019ED40)($a1)\n\taddu $v1, $v1, $a0\n\tlbu $v0, 0x0($v1)\n\tjal func_80143E44\n\tsb $v0, 0x0($a1)\n\tjal func_800F6364\n\tnop\n\tjal func_800F5958\n\taddiu $a0, $zero, 0x4\n\tjal func_800F53D4\n\tnop\n\tbeqz $v0, .L8013E510\n\tnop\n\tjal func_800F6564\n\tori $a0, $zero, 0xF133\n\tjal func_800F5574\n\taddiu $a0, $zero, 0x80\n\tjal func_800F53C0\n\tnop\n\tbnez $v0, .L8013E398\n\tnop\n\tlw $ra, 0x14($sp)\n\tlw $s0, 0x10($sp)\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_8013E2F8, .-func_8013E2F8\n"
-);
+void func_8013E2F8(void)
+{
+    /* battle magic-cast flow: 8013D12C/80148DE8 prep, wait loop L13E340
+       (43E44/5958), row read L13E3EC (4FAC(0x101)/6434(0x80) gates),
+       8013E200 cast helper loop L13E494, exit loop L13E510. */
+    func_800F8188();
+    func_8013D12C();
+    func_80148DE8();
+    func_800F971C();
+L13e340:
+    for (;;) {
+        func_800F6C68();
+        func_800F8768();
+        func_800F6C68();
+        func_800F8768();
+        func_800F654C(0xFC);
+        func_80143E44();
+        func_800F6364();
+        func_800F5958(4);
+        if (func_800F53D4() == 0)
+            continue;
+        break;
+    }
+L13e398:
+    for (;;) {
+        func_80140558();
+        func_800F971C();
+        func_800F6564();
+        func_800F824C(0xA);
+    L13e3ec:
+        for (;;) {
+            func_800F3C3C(0xA);
+            func_800F4F28();
+            if (func_800F4FAC(0x101) != 0)
+                goto L13E4C4;
+            func_800F6564();
+            if (func_800F6434(0x80) != 0)
+                goto L13E454;
+            func_800F6B68();
+            func_800F5410();
+            func_800F4008(0x10);
+            func_800F824C();
+            func_800F6B68();
+            goto L13E47C;
+        L13E454:
+            func_800F6B68();
+            func_800F5480();
+            func_800F8058(0xC);
+            func_800F824C();
+            func_800F6B68();
+        L13E47C:
+            func_800F824C(2);
+            func_800F9330();
+            func_800F71DC();
+        L13e494:
+            for (;;) {
+                func_8013E200();
+                func_800F6364();
+                func_800F5958(4);
+                if (func_800F53D4() == 0)
+                    continue;
+                break;
+            }
+            func_800F95A0();
+        L13E4C4:
+            func_800F6364();
+            func_800F6364();
+            func_800F5958(0x10);
+            if (func_800F53D4() == 0)
+                continue;
+            break;
+        }
+        func_800F971C();
+    L13e510:
+        for (;;) {
+            func_80143E44();
+            func_800F6364();
+            func_800F5958(4);
+            if (func_800F53D4() == 0)
+                continue;
+            break;
+        }
+        func_800F6564();
+        func_800F5574(0x80);
+        if (func_800F53C0() != 0)
+            continue;
+        break;
+    }
+    return;
+}
