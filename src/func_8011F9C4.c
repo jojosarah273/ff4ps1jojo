@@ -17,7 +17,7 @@ void func_8011F9C4(void)
     func_800F5410();
     func_800F3F94(func_800F3C3C(0x29));
     func_800F9660(0x20);
-L11fa70:
+L11FA70:
     for (;;) {
         func_800F6D70();
         if (func_800F6434(2) != 0)
