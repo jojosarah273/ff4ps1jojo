@@ -99,10 +99,22 @@ def lift(name, mode_b=False):
             sa = (slot[1] if len(slot) > 1 else "").replace("$", "")
             callee = args.split()[0]
             if sm == "nop":
-                cexpr = f"{callee}()"
+                aex = R.get("a0")
+                if aex is not None and not aex.startswith(("0x", "(")):
+                    cexpr = f"{callee}({aex})"
+                else:
+                    cexpr = f"{callee}()"
             elif sm in ("addiu", "ori") and re.match(r"a0,\s*zero", sa):
                 c = int(re.search(r"0x[0-9A-F]+", sa).group(0), 16)
                 cexpr = f"{callee}({c})"
+            elif "%lo(" in sa and re.match(r"a0,\s*a0", sa):
+                fn = sa.split("%lo(")[1].split(")")[0].strip()
+                cexpr = f"{callee}((u32){fn})"
+            elif sm in ("addiu", "ori") and re.match(r"a0,\s*a0", sa):
+                mt = re.search(r"0x[0-9A-F]+", sa)
+                c = int(mt.group(0), 16) if mt else 0
+                sourced.add("a0")
+                cexpr = f"{callee}({R.get('a0', 'a0')} + {c})"
             elif sm == "andi" and re.match(r"a0,\s*a0", sa):
                 sourced.add("a0")
                 cexpr = f"{callee}((u16)a0)"
@@ -117,6 +129,7 @@ def lift(name, mode_b=False):
                 return None
             R["v0"] = cexpr
             v0_expr = cexpr
+            R["a0"] = None
             i += 2
             continue
         if op in UNCOND or op in ("j", "jalr"):

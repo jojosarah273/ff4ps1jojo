@@ -301,6 +301,13 @@ NTSC-U + text guard armed + mod FMV skip all present.
 - S25: consolidation + milestone check (50% @1258).
 - S26: README/STATUS final refresh + release notes drafting.
 - S27: Phase B kickoff plan (symbol renaming via SNES disasm).
+- PHASE A SPRINT TOWARD 50%: lifter extended again (computed-arg calls via R[a0],
+  func-address args, andi/ori a0,a0 masks, mmio 0x1F8003C0 family hand batch):
+  C-written 1043 -> ~1085 (43.1%); matched 740. Remaining to 50% (1258): ~+173.
+  - 2-way ifelse lifter reverted (emission broken) — documented for next pass.
+  - Next levers: rmerge-family sweep 2, s0-MMIO byte family (multiple siblings
+    exist at 0x800F5-82xx), switch-cascade pattern, hand batches on call-heavy
+    controllers.
 ### 2025-09-07 — PROJECT SCOPE: full C decomp -> native port (SoH/SM64 model)
 - Direction confirmed with user: goal = Ship-of-Harkinian-class native FF4
   (PS1), NOT an emulator and NOT a machine-translated recomp (the recomp
