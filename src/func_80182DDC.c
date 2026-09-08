@@ -1,12 +1,6 @@
 #include "common.h"
-__asm__(
-  ".globl func_80182DDC\n"
-  ".type func_80182DDC, @function\n"
-  "func_80182DDC:\n"
-  "\t.set\tnoreorder\n"
-  "\t.set noreorder\n"
-  "\taddiu $sp, $sp, -0x18\n\tsw $s0, 0x10($sp)\n\taddu $s0, $a0, $zero\n\tsll $a0, $a1, 16\n\tsw $ra, 0x14($sp)\n\tjal func_80197FB8\n\tsra $a0, $a0, 16\n\tmult $s0, $v0\n\tlw $ra, 0x14($sp)\n\tmflo $s0\n\tsll $s0, $s0, 4\n\tsra $v0, $s0, 16\n\tlw $s0, 0x10($sp)\n\tjr $ra\n\taddiu $sp, $sp, 0x18\n"
-  "\t.set reorder\n"
-  "\t.set\treorder\n"
-  ".size func_80182DDC, .-func_80182DDC\n"
-);
+s32 func_80182DDC(u32 a0, s16 a1)
+{
+    s32 m = (s32)a0 * func_80197FB8(a1);
+    return (s32)(m << 4) >> 16;
+}
