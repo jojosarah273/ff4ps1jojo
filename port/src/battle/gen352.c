@@ -14,7 +14,7 @@ void func_80115A34(void)
         goto L115A7C;
     row_page(0x7A);
     cell_tick_half();
-    if (func_800F7728(0x101) == 0)
+    if (cell_flags_nz50(0x101) == 0)
         goto L115BBC;
 L115A7C:
     row_page(0xAD);

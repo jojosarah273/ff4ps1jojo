@@ -16,7 +16,7 @@ void func_80121678(void)
     cell_put_hi9(0x1D);
     func_800F6AF4(0x89);
     sep_b();
-    func_800F7FCC(cell_state(0x1D));
+    cell_pos_sub16(cell_state(0x1D));
     func_800F86F0(0x89);
     row_prep_close();
     if (io_go() != 0)

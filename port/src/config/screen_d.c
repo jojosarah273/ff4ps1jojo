@@ -297,7 +297,7 @@ s080:
         row_sel2(cell_state(0xD5));
         row_page(0xD4);
         cell_tick_or(cell_state(0xD5));
-        if (func_800F7918(0x202) != 0)
+        if (ticker_reblend2(0x202) != 0)
             goto l478;
         cell_set50_from40();
         cell_set50_from40();
@@ -352,7 +352,7 @@ s080:
         if (func_800F64EC(2) != 0)
             goto l5e0;
         cell_poke0(cell_state(0xA9));
-        func_800F7FCC();
+        cell_pos_sub16();
         cell_stamp8_9(0x2A07);
     l5e0:
         sep_a();

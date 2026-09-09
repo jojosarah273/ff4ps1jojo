@@ -32,7 +32,7 @@ L167e8c:
         cell_put(5);
     L167f70:
         for (;;) {
-            func_800F6EA8();
+            cell_push_c8_b4();
             io_poll(0xFF);
             if (io_just() != 0)
                 goto L1680E0;
@@ -48,15 +48,15 @@ L167e8c:
             row_close2();
             cell_pull_c8(0x340);
             func_80168118();
-            func_800F6EA8();
+            cell_push_c8_b4();
             sep_a();
             cell_poke0(cell_state(5));
             cell_pull_c8(0x341);
             func_80168118();
-            func_800F6EA8();
+            cell_push_c8_b4();
             cell_pull_c8(0x342);
             func_80168118();
-            func_800F6EA8();
+            cell_push_c8_b4();
             cell_cursor_dec();
             txt_set(0x6CC0);
             if (gate(2) != 0)

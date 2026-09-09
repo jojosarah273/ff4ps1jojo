@@ -75,7 +75,7 @@ L16593c:
         goto L1659A4;
     L165994:
         txt_cell(0x321C);
-        func_800F63F8();
+        cell_flags_scr();
     L1659A4:
         cell_pull_c8(0x1441);
         if (io_just() != 0)

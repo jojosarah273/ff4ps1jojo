@@ -24,7 +24,7 @@ void func_8012C360(void)
 L12C3FC:
     poll_pair_cur();
     poll_pair_cur();
-    func_800F8378(0x60);
+    cell_pull89_bank(0x60);
     row_prep_close();
     return;
 }

@@ -4,11 +4,6 @@
  */
 #include "ff4_window.h"
 
-
-extern int func_800F4370();
-
-
-
 extern int func_8010D2A0();
 
 void func_801051A8(void)
@@ -22,7 +17,7 @@ void func_801051A8(void)
   if (iVar1 == 0) {
     row_page(0xa1);
     row_read(3);
-    func_800F4370(0xd2);
+    cell_tick_and(0xd2);
     iVar1 = sel(2);
     if (iVar1 != 0) {
       return;

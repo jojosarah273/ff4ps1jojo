@@ -5,7 +5,7 @@
 #include "ff4_window.h"
 void func_80128D4C(void)
 {
-    func_800F65C8(0x1B49);
+    cell_push_c8_cur(0x1B49);
     if (gate(0x202) != 0)
         goto dE8;
     func_80123D3C();

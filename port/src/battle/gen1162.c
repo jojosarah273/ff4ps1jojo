@@ -10,7 +10,7 @@ void func_80141C98(void)
     cell_state_of();
     cell_bank_sel(4);
     cell_state_of();
-    func_800F6EA8();
+    cell_push_c8_b4();
     /* s1/v1 latch -> L141D1C / L141D40 */
     sep_a();
     return;

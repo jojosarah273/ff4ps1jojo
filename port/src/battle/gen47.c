@@ -54,7 +54,7 @@ L14896C:
     draw_pad_cur();
 L148a74:
     for (;;) {
-        func_800F67FC(0x14);
+        cell_push_c8_b4o(0x14);
         io_poll(0xFF);
         if (io_just() != 0)
             return;
@@ -73,7 +73,7 @@ L148a74:
         cell_draw(0x300);
         cell_step();
         step2();
-        func_800F67FC(0x14);
+        cell_push_c8_b4o(0x14);
         sep_a();
         cell_poke0(cell_state(0x12));
         cell_draw(0x300);

@@ -17,7 +17,7 @@ void func_801526F8(void)
     sep();
 L15275c:
     for (;;) {
-        func_800F67FC(0x80);
+        cell_push_c8_b4o(0x80);
         cell_draw(0x289C);
         step2();
         cell_step();

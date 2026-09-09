@@ -37,10 +37,10 @@ L16e6f0:
         func_800F7B40(cell_state(0xB5));
         sep_b();
         row_read2(0xB5);
-        func_800F7FCC(cell_state(0xAD));
+        cell_pos_sub16(cell_state(0xAD));
         cell_put_hi9(0xB5);
         row_read2(0xB7);
-        func_800F7FCC(cell_state(0xAF));
+        cell_pos_sub16(cell_state(0xAF));
         cell_put_hi9(0xB7);
         if (io_go() != 0)
             goto L16E7E8;

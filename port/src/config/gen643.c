@@ -18,7 +18,7 @@ void func_8012C8A4(void)
     cell_push89_sel(0x60);
     cell_put_hi9(0x45);
     func_800F4B1C();
-    func_800F8378(0x60);
+    cell_pull89_bank(0x60);
     cell_flags_cmp_pos(cell_state(0x45));
     if (io_just() != 0)
         goto L12C948;

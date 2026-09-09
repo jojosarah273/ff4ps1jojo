@@ -44,7 +44,7 @@ void func_801539C4(void)
     latch(0x13);
     cell_put(0x82);
     sep();
-    func_800F67FC(0x80);
+    cell_push_c8_b4o(0x80);
     cell_draw(0x388C);
     step2();
     cell_step();
@@ -56,7 +56,7 @@ void func_801539C4(void)
     io_poll(0xE);
     io_just();
     sep();
-    func_800F67FC(0x80);
+    cell_push_c8_b4o(0x80);
     cell_draw(0x389A);
     step2();
     cell_step();

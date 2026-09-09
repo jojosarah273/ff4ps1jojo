@@ -13,11 +13,11 @@ void func_80139B44(void)
     if (gate(2) != 0)
         goto L139B8C;
     txt_cell(0x1340);
-    func_800F63F8();
+    cell_flags_scr();
     goto L139B9C;
 L139B8C:
     txt_cell(0x1440);
-    func_800F63F8();
+    cell_flags_scr();
 L139B9C:
     if (io_just() != 0)
         return;

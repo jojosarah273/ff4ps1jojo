@@ -39,11 +39,11 @@ L15B79C:
     cell_put(0xB4);
     page(0xA6);
     txt_cell(0x2003);
-    func_800F4370(0xB3);
+    cell_tick_and(0xB3);
     if (sel(0x202) != 0)
         goto L15B844;
     txt_cell(0x2004);
-    func_800F4370(0xB4);
+    cell_tick_and(0xB4);
     if (sel(2) != 0)
         goto L15B854;
 L15B844:

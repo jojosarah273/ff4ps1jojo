@@ -19,10 +19,10 @@ L174d04:
             row_prep(0x20);
             row_read2(0x30);
             sep_b();
-            func_800F7FCC(cell_peek_cur());
+            cell_pos_sub16(cell_peek_cur());
             cell_put_hi9(0x30);
             row_read2(0x32);
-            func_800F7FCC(cell_peek_cur());
+            cell_pos_sub16(cell_peek_cur());
             cell_put_hi9(0x32);
             if (io_go() != 0)
                 goto L174DC4;

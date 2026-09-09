@@ -93,10 +93,10 @@ L5f48:
         goto L6030;
     row_prep(0x20);
     row_read2(0xE);
-    func_800F55C0(0x8001);
+    cell_flags_cmp3(0x8001);
     if (io_just() != 0)
         goto L61d8;
-    func_800F55C0(0x1001);
+    cell_flags_cmp3(0x1001);
     if (io_just() != 0)
         goto L61d8;
     latch(0x1080);
@@ -104,10 +104,10 @@ L5f48:
 L6030:
     row_prep(0x20);
     row_read2(0xE);
-    func_800F55C0(0x180);
+    cell_flags_cmp3(0x180);
     if (io_just() != 0)
         goto L61d8;
-    func_800F55C0(0x110);
+    cell_flags_cmp3(0x110);
     if (io_just() != 0)
         goto L61d8;
     latch(0x8010);
@@ -115,42 +115,42 @@ L6030:
 L6078:
     row_prep(0x20);
     row_read2(0xE);
-    func_800F55C0(0x101);
+    cell_flags_cmp3(0x101);
     if (io_just() != 0)
         goto L61d8;
-    func_800F55C0(0x180);
+    cell_flags_cmp3(0x180);
     if (io_just() != 0)
         goto L61d8;
     latch(0x8001);
 L60b8:
-    func_800F55C0(0x8001);
+    cell_flags_cmp3(0x8001);
     if (io_just() != 0)
         goto L61d8;
-    func_800F55C0(0x8080);
+    cell_flags_cmp3(0x8080);
     if (io_just() != 0)
         goto L61d8;
-    func_800F55C0(0x804);
+    cell_flags_cmp3(0x804);
     if (io_just() != 0)
         goto L61d8;
-    func_800F55C0(0x408);
+    cell_flags_cmp3(0x408);
     if (io_just() != 0)
         goto L61d8;
-    func_800F55C0(0x280);
+    cell_flags_cmp3(0x280);
     if (io_just() != 0)
         goto L61d8;
-    func_800F55C0(0x8002);
+    cell_flags_cmp3(0x8002);
     if (io_just() != 0)
         goto L61d8;
-    func_800F55C0(0x480);
+    cell_flags_cmp3(0x480);
     if (io_just() != 0)
         goto L61d8;
-    func_800F55C0(0x880);
+    cell_flags_cmp3(0x880);
     if (io_just() != 0)
         goto L61d8;
-    func_800F55C0(0x8008);
+    cell_flags_cmp3(0x8008);
     if (io_just() != 0)
         goto L61d8;
-    func_800F55C0(0x8004);
+    cell_flags_cmp3(0x8004);
     if (io_just() != 0)
         goto L61d8;
     sep();

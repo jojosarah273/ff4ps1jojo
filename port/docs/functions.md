@@ -8,7 +8,7 @@ column is the semantic 0x800F primitive name (tool:
 register machines are interpreted (Avenue 2).
 
 - functions: 2516   interpreted: 1473   stub-only: 1043
-- byte-verified: 827   named primitives: 126
+- byte-verified: 827   named primitives: 142
 
 | id | name | module fn | module | bv | role |
 |----|------|-----------|--------|----|------|
@@ -40,7 +40,7 @@ register machines are interpreted (Avenue 2).
 | 800F42B0 | - | - | - |  |  |
 | 800F42F8 | - | - | - |  |  |
 | 800F4328 | - | - | - |  |  |
-| 800F4370 | - | - | - |  |  |
+| 800F4370 | cell_tick_and | - | - |  |  |
 | 800F43A0 | - | - | - |  |  |
 | 800F43E8 | - | - | - |  |  |
 | 800F442C | - | - | - |  |  |
@@ -102,11 +102,11 @@ register machines are interpreted (Avenue 2).
 | 800F5464 | - | - | - | Y |  |
 | 800F5480 | sep_b | - | - | Y |  |
 | 800F549C | - | - | - | Y |  |
-| 800F54B8 | - | - | - | Y |  |
+| 800F54B8 | cell_flags_set4 | - | - | Y |  |
 | 800F54D4 | io_press | - | - |  |  |
 | 800F5520 | cell_flags_cmp_pos | - | - |  |  |
 | 800F5574 | io_poll | - | - |  |  |
-| 800F55C0 | - | - | - |  |  |
+| 800F55C0 | cell_flags_cmp3 | - | - |  |  |
 | 800F560C | - | - | - |  |  |
 | 800F56AC | cell_flags_cmp | - | - |  |  |
 | 800F5764 | - | - | - | Y |  |
@@ -154,7 +154,7 @@ register machines are interpreted (Avenue 2).
 | 800F6390 | - | - | - |  |  |
 | 800F63BC | step2 | - | - |  |  |
 | 800F63E8 | - | - | - | Y |  |
-| 800F63F8 | - | - | - |  |  |
+| 800F63F8 | cell_flags_scr | - | - |  |  |
 | 800F6434 | gate | - | - |  |  |
 | 800F6488 | - | - | - | Y |  |
 | 800F64A8 | - | - | - |  |  |
@@ -163,8 +163,8 @@ register machines are interpreted (Avenue 2).
 | 800F6558 | row_sync2 | - | - | Y |  |
 | 800F6564 | txt_set | - | - |  |  |
 | 800F658C | cell_push9 | - | - |  |  |
-| 800F65C8 | - | - | - |  |  |
-| 800F65F0 | - | - | - |  |  |
+| 800F65C8 | cell_push_c8_cur | - | - |  |  |
+| 800F65F0 | cell_sink89_c | - | - |  |  |
 | 800F6630 | row_page | - | - |  |  |
 | 800F6658 | row_read2 | - | - |  |  |
 | 800F6698 | - | - | - |  |  |
@@ -172,7 +172,7 @@ register machines are interpreted (Avenue 2).
 | 800F6718 | - | - | - |  |  |
 | 800F6764 | cell_push89_sel | - | - |  |  |
 | 800F67B0 | - | - | - |  |  |
-| 800F67FC | - | - | - |  |  |
+| 800F67FC | cell_push_c8_b4o | - | - |  |  |
 | 800F6848 | - | - | - |  |  |
 | 800F68A0 | - | - | - |  |  |
 | 800F68F8 | - | - | - |  |  |
@@ -194,10 +194,10 @@ register machines are interpreted (Avenue 2).
 | 800F6D40 | - | - | - |  |  |
 | 800F6D70 | cell_push_c8_d58 | - | - |  |  |
 | 800F6DA0 | - | - | - |  |  |
-| 800F6DE8 | - | - | - |  |  |
+| 800F6DE8 | cell_sink89 | - | - |  |  |
 | 800F6E30 | cell_push_c8_lo | - | - |  |  |
 | 800F6E60 | - | - | - |  |  |
-| 800F6EA8 | - | - | - |  |  |
+| 800F6EA8 | cell_push_c8_b4 | - | - |  |  |
 | 800F6EDC | - | - | - |  |  |
 | 800F6F28 | - | - | - |  |  |
 | 800F6F50 | - | - | - |  |  |
@@ -239,7 +239,7 @@ register machines are interpreted (Avenue 2).
 | 800F767C | - | - | - | Y |  |
 | 800F76BC | cell_word_half | - | - |  |  |
 | 800F76E8 | cell_flags_repack | - | - |  |  |
-| 800F7728 | - | - | - |  |  |
+| 800F7728 | cell_flags_nz50 | - | - |  |  |
 | 800F7780 | - | - | - |  |  |
 | 800F77CC | - | - | - |  |  |
 | 800F780C | - | - | - |  |  |
@@ -247,7 +247,7 @@ register machines are interpreted (Avenue 2).
 | 800F7894 | row_sel2 | - | - |  |  |
 | 800F78C4 | cell_tick_or | - | - | Y |  |
 | 800F78E0 | - | - | - |  |  |
-| 800F7918 | - | - | - |  |  |
+| 800F7918 | ticker_reblend2 | - | - |  |  |
 | 800F7968 | - | - | - |  |  |
 | 800F799C | - | - | - |  |  |
 | 800F79E0 | - | - | - |  |  |
@@ -260,7 +260,7 @@ register machines are interpreted (Avenue 2).
 | 800F7C6C | cell_tick_dbl | - | - |  |  |
 | 800F7C98 | - | - | - |  |  |
 | 800F7CC8 | cell_word_half_s | - | - |  |  |
-| 800F7D0C | - | - | - |  |  |
+| 800F7D0C | cell_flags_pack3 | - | - |  |  |
 | 800F7D68 | - | - | - |  |  |
 | 800F7DDC | - | - | - |  |  |
 | 800F7E20 | - | - | - |  |  |
@@ -268,7 +268,7 @@ register machines are interpreted (Avenue 2).
 | 800F7EE8 | - | - | - |  |  |
 | 800F7F18 | - | - | - |  |  |
 | 800F7F48 | cell_tick_sub | - | - |  | window subtract: D40 -= a0 (with parity bit); repack flags; store new D40/D50; returns the D50 pointer. |
-| 800F7FCC | - | - | - |  | window subtract u16: D44 -= u16(a0) (with parity bit); repack flags incl. D40[1] hi bits; returns the D50 pointer. |
+| 800F7FCC | cell_pos_sub16 | - | - |  | window subtract u16: D44 -= u16(a0) (with parity bit); repack flags incl. D40[1] hi bits; returns the D50 pointer. |
 | 800F8058 | cell_pos_back | - | - |  |  |
 | 800F80D0 | cell_pos_back2 | - | - |  |  |
 | 800F814C | - | - | - | Y |  |
@@ -282,7 +282,7 @@ register machines are interpreted (Avenue 2).
 | 800F82B0 | - | - | - |  |  |
 | 800F82EC | cell_pull_c8_bank | - | - |  |  |
 | 800F8328 | - | - | - |  |  |
-| 800F8378 | - | - | - |  |  |
+| 800F8378 | cell_pull89_bank | - | - |  |  |
 | 800F83C8 | - | - | - |  |  |
 | 800F8410 | - | - | - |  |  |
 | 800F8458 | - | - | - |  |  |
@@ -336,7 +336,7 @@ register machines are interpreted (Avenue 2).
 | 800F8EFC | - | - | - |  |  |
 | 800F8F30 | - | - | - |  |  |
 | 800F8F74 | cell_clear_bank | - | - |  |  |
-| 800F8F94 | - | - | - | Y |  |
+| 800F8F94 | cell_clear_bank2 | - | - | Y |  |
 | 800F8FB8 | open_row | - | - |  |  |
 | 800F8FD8 | - | - | - |  |  |
 | 800F8FFC | - | - | - |  |  |
@@ -422,7 +422,7 @@ register machines are interpreted (Avenue 2).
 | 800FD494 | - | - | - |  | battle vertical-menu: 3D/3E label windows, 0xC0 window row gate, 0x17EE text with the 60A8(0x202) check; key ladder 0x2B-0xFC advances the c |
 | 800FD6B8 | - | - | - | Y |  |
 | 800FD6E8 | - | - | - | Y |  |
-| 800FD718 | - | - | - |  | battle rows: 0x1704/0x1700/0xFE2 texts, 0x1E01/0x1E00 cells, 80169128 row; gates 6434(2)/5574(3). |
+| 800FD718 | battle_rows_run | - | - |  | battle rows: 0x1704/0x1700/0xFE2 texts, 0x1E01/0x1E00 cells, 80169128 row; gates 6434(2)/5574(3). |
 | 800FD804 | wnd_fx_pads | - | - | Y |  |
 | 800FD85C | - | - | - |  | shop rows: 0x82/0x79/0x80 windows, 0x2100 text; loop L8FD87C on 4370(0x82)/4120(0x202). |
 | 800FD914 | - | - | - | Y |  |

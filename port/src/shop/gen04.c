@@ -141,7 +141,7 @@ L124:
     cell_word_half(cell_state(0xCA));
     cell_flags_repack();
     cell_word_half_s(cell_state(0xC9));
-    func_800F7D0C();
+    cell_flags_pack3();
 L2ec:
     row_page(0xC1);
     if (gate(0x202) != 0)

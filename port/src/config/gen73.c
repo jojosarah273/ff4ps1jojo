@@ -11,7 +11,7 @@ void func_8012E844(void)
     tail(0x1D);
     tail(0x1F);
     row_prep(0x20);
-    func_800F55C0(0x1340);
+    cell_flags_cmp3(0x1340);
     if (io_just() == 0)
         goto L2E8AC;
     sep_a();

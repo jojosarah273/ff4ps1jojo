@@ -30,7 +30,7 @@ L124bcc:
         row_page(0x73);
         cell_tick_or(cell_state(0x74));
         cell_tick_or(cell_state(0x75));
-        if (func_800F7918(2) != 0)
+        if (ticker_reblend2(2) != 0)
             goto L124C54;
         poll_t(7);
         if (io_just() == 0)

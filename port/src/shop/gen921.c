@@ -17,7 +17,7 @@ void func_801606D4(void)
     sep_b();
     do {
         func_800F7EE8();
-        func_800F7D0C();
+        cell_flags_pack3();
         poll_pair_cur();
     } while (poll_go(0x8080) != 0);
     cell_draw(0x3883);

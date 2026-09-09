@@ -59,13 +59,13 @@ L354:
         goto L44c;
     draw_pad(5);
     cell_push89_sel(0x80);
-    func_800F8378(0x80);
+    cell_pull89_bank(0x80);
     goto L46c;
 L44c:
     draw_pad(5);
     cell_push89_sel(0x80);
     cell_pos_mask(0xFEFF);
-    func_800F8378(0x80);
+    cell_pull89_bank(0x80);
 L46c:
     sep();
     row_prep_close();
@@ -109,7 +109,7 @@ L59c:
     cell_push_c8_sel(0x80);
     draw_pad(8);
     cell_tick_or(cell_state(cell_bank_sel(0x80)));
-    if (func_800F7918(0x202) == 0) {
+    if (ticker_reblend2(0x202) == 0) {
         draw_pad(3);
         cell_push_c8_sel(0x80);
         cell_pull_c8_bank(0x80);

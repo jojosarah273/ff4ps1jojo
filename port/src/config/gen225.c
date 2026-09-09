@@ -22,7 +22,7 @@ void func_80123320(void)
     cell_tick_dbl();
     row_read(1);
     cell_tick_or(cell_state(0x45));
-    if (func_800F7918(2) != 0)
+    if (ticker_reblend2(2) != 0)
         goto L3440;
     cell_cursor_dec();
     func_80123AA8();

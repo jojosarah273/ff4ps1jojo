@@ -14,7 +14,7 @@ void func_80150A30(void)
     cell_cursor_ret2();
     row_open();
     row_sync();
-    func_800F54B8();
+    cell_flags_set4();
     row_sync2_cur();
     row_prep_close();
     row_prep(0x10);

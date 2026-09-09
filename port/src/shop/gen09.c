@@ -56,7 +56,7 @@ void func_8016CA94(void)
     row_prep(0x20);
     row_read2(0x66);
     row_done2();
-    func_800F55C0(0x400);
+    cell_flags_cmp3(0x400);
     if (io_just() == 0)
         goto Ld10;
     sep();
@@ -65,7 +65,7 @@ Lcd8:
     row_prep(0x20);
     row_read2(0x66);
     row_done2();
-    func_800F55C0(0x400);
+    cell_flags_cmp3(0x400);
     if (io_just() == 0)
         goto Ld10;
     row_scan_cur();

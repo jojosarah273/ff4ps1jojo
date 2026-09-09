@@ -22,9 +22,9 @@ void func_80141760(void)
     row_prep(0x20);
     row_sync2(0x28);
     sep_b();
-    func_800F7FCC(cell_state_of());
+    cell_pos_sub16(cell_state_of());
     sep_b();
-    func_800F7FCC(cell_state(2));
+    cell_pos_sub16(cell_state(2));
     cell_pull9_hi(0xF406);
     row_sync2(0x50);
     cell_pull9_hi(0xF408);
@@ -83,7 +83,7 @@ L1968:
         cell_pull9_hi(0xF406);
         cell_push9(0xF408);
         sep_b();
-        func_800F7FCC(cell_state(0xF121));
+        cell_pos_sub16(cell_state(0xF121));
         cell_pull9_hi(0xF408);
         sep();
         row_prep_close();

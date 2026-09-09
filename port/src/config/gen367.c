@@ -19,7 +19,7 @@ void func_8013EB2C(void)
     sep();
 L13ebd4:
     for (;;) {
-        func_800F67FC();
+        cell_push_c8_b4o();
         cell_put(4);
         row_read(0x80);
         cell_put(5);

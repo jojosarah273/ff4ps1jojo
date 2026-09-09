@@ -12,6 +12,6 @@ void func_80132428(void)
     row_prep(32);
     cell_sink8_9(11);
     sep_b();
-    func_800F7FCC(cell_state(67));
+    cell_pos_sub16(cell_state(67));
     row_prep_close();
 }

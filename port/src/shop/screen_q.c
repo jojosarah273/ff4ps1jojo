@@ -46,9 +46,9 @@ Lf14:
     draw_pad(0x280);
     wnd_open(0x104);
     for (;;) {
-        func_800F6DE8(0x3319);
+        cell_sink89(0x3319);
         cell_stamp8_9(0x3319);
-        func_800F6DE8(0x371B);
+        cell_sink89(0x371B);
         cell_stamp8_9(0x371B);
         sep_b();
         cell_pos_back2(4);

@@ -88,7 +88,7 @@ L9e4:
 La0c:
     row_page(0xB7);
     cell_tick_or(cell_state(0xB8));
-    if (func_800F7918(2) != 0)
+    if (ticker_reblend2(2) != 0)
         goto La6c;
     if (func_800F5F20(2) != 0)
         goto La6c;

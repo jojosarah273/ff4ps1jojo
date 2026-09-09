@@ -18,11 +18,11 @@ void func_801772E4(void)
     cell_cursor_ret2();
     cell_sink8_9(0x1BD1);
     cell_cursor_ret2();
-    func_800F6DE8(0x1BCD);
+    cell_sink89(0x1BCD);
     cell_stamp8_9(0x1BCD);
-    func_800F6DE8(0x1BCF);
+    cell_sink89(0x1BCF);
     cell_stamp8_9(0x1BCF);
-    func_800F6DE8(0x1BD1);
+    cell_sink89(0x1BD1);
     cell_stamp8_9(0x1BD1);
     cell_cursor_adv2();
     cell_stamp8_9_b(0x1BD1);

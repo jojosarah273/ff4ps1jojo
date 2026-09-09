@@ -11,14 +11,14 @@ void func_801533FC(void)
     sep();
 L153430:
     for (;;) {
-        func_800F67FC(0xAB);
+        cell_push_c8_b4o(0xAB);
         io_poll(0xFF);
         if (io_just() != 0)
             goto L1534C8;
         if (io_press(cell_state(0x1800)) == 0)
             goto L1534B0;
         step2();
-        func_800F67FC(0xAB);
+        cell_push_c8_b4o(0xAB);
         if (io_press(cell_state(0x1801)) == 0)
             goto L1534B8;
         key_page(0xA9);

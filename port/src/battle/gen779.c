@@ -21,7 +21,7 @@ L10af5c:
 L10AF94:
     txt_cell_cur();
     cell_tick_or(cell_state_of());
-    if (func_800F7918(0x202) != 0)
+    if (ticker_reblend2(0x202) != 0)
         goto L10AFF0;
     latch(0xFF);
     return;

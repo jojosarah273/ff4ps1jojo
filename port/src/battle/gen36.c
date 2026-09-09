@@ -55,7 +55,7 @@ Lfabc:
     draw_pad_cur();
 Lfc58:
     for (;;) {
-        func_800F6EA8(0x1C);
+        cell_push_c8_b4(0x1C);
         if (gate(0x80) != 0)
             goto Lfca8;
         page(0x1C);
@@ -74,7 +74,7 @@ Lfca8:
     page(0x1C);
     cell_step();
     tail(0x1C);
-    func_800F6EA8(0x1C);
+    cell_push_c8_b4(0x1C);
     cell_put(0x17);
     page(0x1C);
     cell_step();

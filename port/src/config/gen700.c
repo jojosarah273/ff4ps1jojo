@@ -8,9 +8,9 @@ void func_8013D428(void)
     draw_pad(0x1C);
     row_prep(0x20);
     do {
-        func_800F6DE8(0x340);
+        cell_sink89(0x340);
         cell_stamp8_9_b(0x344);
-        func_800F6DE8(0x342);
+        cell_sink89(0x342);
         sep_a();
         cell_pos_fwd(2);
         cell_stamp8_9_b(0x346);

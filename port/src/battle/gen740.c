@@ -20,7 +20,7 @@ void func_801035B0(void)
         latch(0xF);
         txt_draw(0x6FD);
     } else {
-        func_800FD718();
+        battle_rows_run();
         open_row(0x79);
         func_80103660();
     }

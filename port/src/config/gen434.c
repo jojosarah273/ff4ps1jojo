@@ -29,9 +29,9 @@ L1259BC:
 L1259c4:
     for (;;) {
         row_prep(0x20);
-        func_800F6DE8();
+        cell_sink89();
         cell_put_hi9(0x1D);
-        func_800F6DE8();
+        cell_sink89();
         cell_put_hi9(2);
         row_prep_close();
         row_open();

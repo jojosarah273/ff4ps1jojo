@@ -25,7 +25,7 @@ void func_8016D4D8(void)
 L16D574:
     for (;;) {
         /* v1/v0 gate -> L16D590 */
-        func_800F6EA8(0x36);
+        cell_push_c8_b4(0x36);
         if (gate(2) != 0)
             break;
         io_poll(0xF);

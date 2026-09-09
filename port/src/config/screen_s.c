@@ -17,7 +17,7 @@ void func_8015C604(void)
     }
     txt_set(0x393A);
     cell_tick_or(cell_state(0x393B));
-    if (func_800F7918(0x202) == 0) {
+    if (ticker_reblend2(0x202) == 0) {
         row_page(0xD0);
         sep();
         func_80153098();

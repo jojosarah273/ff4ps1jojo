@@ -19,7 +19,7 @@ void func_801486D8(void)
     cell_push_c8();
     cell_put(0x11);
     cell_push_c8_d58(0x500);
-    func_800F4370(0x11);
+    cell_tick_and(0x11);
     cell_tick_or(cell_state(0x10));
     cell_pull_c8(0x500);
     row_page(0xE);

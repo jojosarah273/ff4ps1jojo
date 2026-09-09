@@ -18,7 +18,7 @@ void func_8016D600(void)
     return;
 L16D648:
     func_8016D768();
-    func_800F6EA8(0x36);
+    cell_push_c8_b4(0x36);
     cell_put_cur();
 L16d660:
     for (;;) {

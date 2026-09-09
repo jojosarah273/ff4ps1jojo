@@ -102,7 +102,7 @@ void func_80104354(void)
             label(0x171D);
             txt_set(0x1701);
             txt_draw(0x171F);
-            func_800FD718();
+            battle_rows_run();
             page_paint2(0x1A02);
             return;
         }

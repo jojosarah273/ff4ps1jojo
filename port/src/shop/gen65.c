@@ -7,7 +7,7 @@ void func_801684AC(void)
 {
     /* config status text screen: 0x4219/0x421B choose header, 0x38D9 the
        detail row; 80168400/80168474/8016838C draw the option rows. */
-    func_800F65C8(0x4219);
+    cell_push_c8_cur(0x4219);
     cell_peek_cur();
     cell_tick_or();
     row_read(0x10);

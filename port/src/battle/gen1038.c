@@ -4,17 +4,13 @@
  */
 #include "ff4_window.h"
 
-
-
-extern int func_800FD718();
-
 void func_80102F38(void)
 
 {
   latch(1);
   txt_draw(0x1704);
   cell_put(0xac);
-  func_800FD718();
+  battle_rows_run();
   return;
 }
 

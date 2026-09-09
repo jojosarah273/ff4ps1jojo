@@ -25,7 +25,7 @@ L134968:
         }
         row_done();
         latch(1);
-        func_800F63F8();
+        cell_flags_scr();
         return;
     L1349E0:
         cell_cursor_dec();
@@ -38,7 +38,7 @@ L134968:
         row_close2();
         row_done();
         latch_cur();
-        func_800F63F8();
+        cell_flags_scr();
         return;
     }
 }

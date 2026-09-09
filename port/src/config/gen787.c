@@ -15,7 +15,7 @@ void func_80152640(void)
         return;
 L152690:
     for (;;) {
-        func_800F67FC(0x80);
+        cell_push_c8_b4o(0x80);
         io_poll(0xFF);
         if (io_just() == 0)
             goto L1526D0;

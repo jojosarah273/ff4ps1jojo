@@ -52,7 +52,7 @@ void func_80150C58(void)
     txt_draw(0x1801);
     row_prep(0x20);
     cell_push9(0x1800);
-    func_800F55C0(0x100);
+    cell_flags_cmp3(0x100);
     if (io_go() == 0)
         goto df4;
     sep_b();
@@ -246,7 +246,7 @@ l146C:
         func_80150C38();
         txt_set(0x38D9);
         cell_tick_or(cell_state(0x38DA));
-        if (func_800F7918(0x202) != 0)
+        if (ticker_reblend2(0x202) != 0)
             continue;
         cell_dec_bank(0x3538);
         if (gate(0x202) != 0)

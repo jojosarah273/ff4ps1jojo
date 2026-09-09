@@ -4,12 +4,6 @@
  */
 #include "ff4_window.h"
 
-
-
-
-extern int func_800F63F8();
-
-
 extern int func_8011F884();
 
 void func_8011F7D4(void)
@@ -23,7 +17,7 @@ void func_8011F7D4(void)
   if (iVar1 == 0) {
     func_8011F884();
     row_page(3);
-    func_800F63F8();
+    cell_flags_scr();
     cell_put(1);
     sep_a();
   }

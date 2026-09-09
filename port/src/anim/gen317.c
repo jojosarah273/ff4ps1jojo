@@ -34,9 +34,9 @@ L17079C:
     tail(0x45);
     latch(0x15);
     cell_put(0x3C);
-    func_800F65C8();
+    cell_push_c8_cur();
     cell_put(0x3D);
-    func_800F65C8();
+    cell_push_c8_cur();
     cell_put(0x3E);
     latch(0x80);
     txt_draw(0x2115);

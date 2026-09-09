@@ -61,7 +61,7 @@ L161660:
     tail(0xE3);
 L161788:
     row_page(0xCE);
-    func_800F63F8();
+    cell_flags_scr();
     func_80061C1C();
     row_page(0xE3);
     cell_draw(0x34D4);

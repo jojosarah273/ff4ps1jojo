@@ -13,7 +13,7 @@ L141dd0:
         func_80140558();
         row_page(0x4E);
         row_read(4);
-        if (func_800F7728(0x202) != 0)
+        if (cell_flags_nz50(0x202) != 0)
             goto L141E28;
         latch(0x34);
         goto L141E30;

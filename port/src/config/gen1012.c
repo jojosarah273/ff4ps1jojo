@@ -7,7 +7,7 @@ void func_801316E0(void)
 {
     txt_set(0x1BBB);
     if (gate(2) == 0) {
-        func_800F65C8(0xF9807);
+        cell_push_c8_cur(0xF9807);
         txt_draw(0x1B91);
         func_801317F0();
         return;

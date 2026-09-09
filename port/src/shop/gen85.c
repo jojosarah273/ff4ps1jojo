@@ -35,13 +35,13 @@ void func_8016C280(void)
     sep_a();
     cell_peek0(cell_state(0x88));
     sep_b();
-    func_800F7FCC(cell_state(0xA1));
+    cell_pos_sub16(cell_state(0xA1));
     cell_put_hi9(0x5D);
     row_read2(0x72);
     sep_a();
     cell_peek0(cell_state(0x8A));
     sep_b();
-    func_800F7FCC(cell_state(0xA3));
+    cell_pos_sub16(cell_state(0xA3));
     cell_put_hi9(0x5F);
     sep();
     row_prep_close();

@@ -18,7 +18,7 @@ L118948:
         func_8017EA90();
         key_page(0x79);
         row_page(0x79);
-        func_800F4370(0x82);
+        cell_tick_and(0x82);
         if (sel(0x202) != 0)
             continue;
         poll_pair(0x81);
@@ -31,7 +31,7 @@ L118948:
     txt_draw(0x212D);
     txt_set(0xFE4);
     cell_tick_half();
-    if (func_800F7728(0x101) != 0)
+    if (cell_flags_nz50(0x101) != 0)
         goto L118A28;
     latch(2);
     txt_draw(0x2130);

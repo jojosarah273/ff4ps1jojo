@@ -40,7 +40,7 @@ L118860:
         func_8017EA90();
         key_page(0x79);
         row_page(0x79);
-        func_800F4370(0x82);
+        cell_tick_and(0x82);
         if (sel(0x202) != 0)
             continue;
         break;

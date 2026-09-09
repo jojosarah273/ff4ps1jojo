@@ -21,7 +21,7 @@ void func_801580B0(void)
     page_open(0x3598);
     txt_cell(0x2A04);
     cell_tick_or(cell_state_of());
-    if (func_800F7918(0x202) != 0)
+    if (ticker_reblend2(0x202) != 0)
         return;
     txt_cell(0x2A06);
     row_read(1);

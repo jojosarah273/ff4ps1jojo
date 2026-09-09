@@ -22,7 +22,7 @@ La9e4:
     row_read(3);
     if (sel(2) != 0)
         goto Laa1c;
-    func_800F4370(0xD2);
+    cell_tick_and(0xD2);
     if (sel(0x202) == 0)
         return;
 Laa1c:

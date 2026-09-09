@@ -51,10 +51,10 @@ L560:
     row_prep(0x20);
     row_read2(0x37);
     sep_b();
-    func_800F7FCC(cell_state(0x3B));
+    cell_pos_sub16(cell_state(0x3B));
     cell_put_hi9(0x37);
     row_read2(0x39);
-    func_800F7FCC(cell_state(0x3D));
+    cell_pos_sub16(cell_state(0x3D));
     cell_put_hi9(0x39);
     row_prep_close();
     row_page(0x3A);
@@ -122,7 +122,7 @@ L758:
         func_8011F884();
         row_page(2);
         cell_tick_or(cell_state(3));
-        if (func_800F7918(0x202) != 0)
+        if (ticker_reblend2(0x202) != 0)
             continue;
         break;
     }

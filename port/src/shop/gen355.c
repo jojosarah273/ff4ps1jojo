@@ -14,11 +14,11 @@ void func_801673CC(void)
     latch(0x31);
     cell_put(0x10);
     latch(0xFF);
-    func_800F63F8();
+    cell_flags_scr();
     sep_a();
     goto L16751C;
 L167424:
-    func_800F6EA8(0x1C);
+    cell_push_c8_b4(0x1C);
     io_poll(0xFE);
     if (io_just() != 0)
         goto L1674AC;
@@ -30,7 +30,7 @@ L167424:
     tail(0x1C);
     cell_cursor_dec();
     txt_set_cur();
-    func_800F63F8();
+    cell_flags_scr();
     cell_put(0x10);
     row_close2();
     sep_b();
@@ -39,7 +39,7 @@ L1674AC:
     page(0x1C);
     cell_step();
     tail(0x1C);
-    func_800F6EA8(0x1C);
+    cell_push_c8_b4(0x1C);
     poll_spin();
     cell_put(0xE);
 L1674DC:

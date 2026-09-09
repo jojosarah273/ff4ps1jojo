@@ -26,7 +26,7 @@ L13f3bc:
         func_800F7B40(cell_state(0x22));
         sep_b();
         row_read2(0x22);
-        func_800F7FCC(cell_state(0x1E));
+        cell_pos_sub16(cell_state(0x1E));
         cell_put_hi9(0x22);
         if (io_go() != 0)
             goto L13F444;

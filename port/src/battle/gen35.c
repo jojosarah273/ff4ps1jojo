@@ -55,7 +55,7 @@ L004c:
         for (;;) {
             func_800F6EDC();
             func_80150364();
-            func_800F8378(8);
+            cell_pull89_bank(8);
             cell_inc_cell();
             cell_inc_cell(0x10);
             poll_t_cur();
@@ -66,7 +66,7 @@ L004c:
             func_800F6EDC();
             func_80150364();
             cell_pos_mask(0xFF);
-            func_800F8378(8);
+            cell_pull89_bank(8);
             cell_inc_cell(0x20);
             poll_t_cur();
             if (io_just() != 0)
@@ -78,7 +78,7 @@ L004c:
         for (;;) {
             func_800F6EDC();
             func_80150364();
-            func_800F8378(8);
+            cell_pull89_bank(8);
             cell_inc_cell();
             cell_inc_cell(0xFFFE);
             poll_t_cur();
@@ -90,7 +90,7 @@ L004c:
             func_800F6EDC();
             func_80150364();
             cell_pos_mask(0xFF);
-            func_800F8378(8);
+            cell_pull89_bank(8);
             cell_inc_cell(0xE);
             poll_t_cur();
             if (io_just() != 0)

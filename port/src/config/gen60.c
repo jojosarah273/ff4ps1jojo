@@ -68,7 +68,7 @@ L3be64:
         if (io_just() == 0)
             goto L3BEE4;
         row_prep(0x20);
-        func_800F6DE8();
+        cell_sink89();
         cell_stamp8_9(0x1440);
         row_read2(0x41);
         cell_stamp8_9_b();

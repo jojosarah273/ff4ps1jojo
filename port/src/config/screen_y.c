@@ -173,7 +173,7 @@ L13c55c:
         return;
     L13CA18:
         row_prep(0x20);
-        func_800F6DE8(0x1440);
+        cell_sink89(0x1440);
         cell_cursor_ret2();
         cell_sink8_9();
         cell_stamp8_9_b(0x1440);

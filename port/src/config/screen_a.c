@@ -216,7 +216,7 @@ d8:
     txt_set(0x3591);
     cell_tick_or(cell_state(0x3592));
     cell_tick_or(cell_state(0x3593));
-    if (func_800F7918(2) != 0)
+    if (ticker_reblend2(2) != 0)
         goto q790;
     sep();
     tail(0xAD);
@@ -224,7 +224,7 @@ d8:
     txt_set(0x3591);
     cell_tick_or(cell_state(0x3592));
     cell_tick_or(cell_state(0x3593));
-    if (func_800F7918(0x202) != 0)
+    if (ticker_reblend2(0x202) != 0)
         goto q728;
     open_row(0xAD);
     open_row(0xAE);
@@ -236,7 +236,7 @@ q730:
     row_page(0xAD);
     cell_tick_or(cell_state(0xAE));
     cell_tick_or(cell_state(0xAF));
-    if (func_800F7918(0x202) == 0)
+    if (ticker_reblend2(0x202) == 0)
         key_page(0xAD);
     page(0xAD);
     label(0x3591);
@@ -260,7 +260,7 @@ q790:
     sep();
     txt_set(0x3594);
     cell_tick_or(cell_state(0x3595));
-    if (func_800F7918(2) != 0)
+    if (ticker_reblend2(2) != 0)
         goto q860;
     latch(0x1F);
     txt_draw(0x34CA);
@@ -268,7 +268,7 @@ q790:
 q860:
     txt_set(0x3591);
     cell_tick_or(cell_state(0x3592));
-    if (func_800F7918(2) != 0)
+    if (ticker_reblend2(2) != 0)
         goto q8A0;
     latch(0x20);
     cell_draw(0x34CA);
@@ -363,7 +363,7 @@ q8D8:
         cell_fmt2(0xE3);
         sep();
         for (;;) {
-            func_800F67FC(0x80);
+            cell_push_c8_b4o(0x80);
             cell_draw(0x289C);
             step2();
             cell_step();
@@ -387,7 +387,7 @@ q8D8:
             cell_peek0();
             sep();
             row_prep_close();
-            func_800F67FC(0x80);
+            cell_push_c8_b4o(0x80);
             txt_draw(0x289C);
         }
         txt_set(0x289F);

@@ -17,10 +17,10 @@ void func_80132010(void)
     open_row(0x50);
     cell_push_c8_sel(0x4E);
     cell_cursor_dec();
-    func_800F4370(0x49);
+    cell_tick_and(0x49);
     cell_pull_c8_bank(0x4E);
     row_close2();
-    func_800F4370(0x48);
+    cell_tick_and(0x48);
     cell_tick_or(cell_bank_sel(0x4E));
     cell_state_of();
     cell_pull_c8_bank(0x4E);

@@ -27,7 +27,7 @@ void func_8014CA24(void)
     cell_put(0x2D);
     return;
 L4ae0:
-    func_800F6EA8(2);
+    cell_push_c8_b4(2);
     row_read(0xF0);
     io_poll(0xD0);
     if (io_just() != 0)
@@ -81,7 +81,7 @@ L4bf4:
     return;
 L4c3c:
     draw_pad(1);
-    func_800F67FC(2);
+    cell_push_c8_b4o(2);
     row_read(0x60);
     if (sel(0x202) != 0)
         goto L4cf4;

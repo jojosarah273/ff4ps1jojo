@@ -70,7 +70,7 @@ L16C9B0:
     cell_push_c8();
     cell_put(0x28);
     row_page(0x4A);
-    func_800F4370(0x28);
+    cell_tick_and(0x28);
     if (sel(0x202) != 0)
         return;
     wnd_open(4);

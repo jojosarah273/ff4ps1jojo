@@ -10,16 +10,16 @@ void func_80127408(void)
        8011EF0C); closes with 71DC(0x4000). */
     func_8012214C();
     row_prep(0x20);
-    func_800F65F0();
+    cell_sink89_c();
     cell_pull9_hi();
     cell_pull9_hi();
-    func_800F65F0();
+    cell_sink89_c();
     cell_pull9_hi();
     cell_pull9_hi();
-    func_800F65F0();
+    cell_sink89_c();
     cell_pull9_hi();
     cell_pull9_hi();
-    func_800F65F0();
+    cell_sink89_c();
     cell_pull9_hi();
     cell_pull9_hi();
     row_prep_close();

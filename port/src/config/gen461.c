@@ -13,7 +13,7 @@ void func_8013E5D0(void)
 L13e604:
     for (;;) {
         cell_word_half(cell_state(4));
-        if (func_800F7728(0x101) != 0)
+        if (cell_flags_nz50(0x101) != 0)
             goto L13E6FC;
         func_8013E588();
         row_read(7);

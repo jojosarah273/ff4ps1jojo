@@ -3,7 +3,5 @@
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-extern void func_800F8F94(u32 v);
 
-
-void func_80139CA4(void) { row_prep(0x20); func_800F8F94(0x1B4B); func_800F8F94(0x1B4D); func_800F8F94(0x1B4F); func_800F8F94(0x1B51); func_800F8F94(0x1B53); row_prep_close(); }
+void func_80139CA4(void) { row_prep(0x20); cell_clear_bank2(0x1B4B); cell_clear_bank2(0x1B4D); cell_clear_bank2(0x1B4F); cell_clear_bank2(0x1B51); cell_clear_bank2(0x1B53); row_prep_close(); }

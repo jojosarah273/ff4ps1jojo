@@ -21,7 +21,7 @@ L169fb0:
         cell_put(8);
     L169fc8:
         for (;;) {
-            func_800F67FC();
+            cell_push_c8_b4o();
             cell_draw(0x2703);
             row_prep(0x20);
             sep_a();

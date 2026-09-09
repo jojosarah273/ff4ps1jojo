@@ -17,7 +17,7 @@ void func_80105098(void)
         goto L105100;
     cell_push_c8_d58(0x6A1);
     row_read(3);
-    func_800F4370(0xD2);
+    cell_tick_and(0xD2);
     if (sel(2) != 0)
         return;
 L105100:

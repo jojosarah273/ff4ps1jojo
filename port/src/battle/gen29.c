@@ -103,7 +103,7 @@ L1620:
     sep_a();
     row_open_w(0xFB);
     cell_draw(0x172E);
-    func_800F65C8(0x1706);
+    cell_push_c8_cur(0x1706);
     cell_draw(0x172F);
     txt_set(0x1707);
     cell_draw(0x1730);

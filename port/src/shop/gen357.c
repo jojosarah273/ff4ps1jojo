@@ -35,7 +35,7 @@ L160CFC:
 L160d3c:
     for (;;) {
         cell_word_half(cell_state(0xA9));
-        if (func_800F7728(0x101) != 0)
+        if (cell_flags_nz50(0x101) != 0)
             goto L160D90;
         sep_a();
         row_open_w(0x15);

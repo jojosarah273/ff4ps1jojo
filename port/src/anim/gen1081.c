@@ -6,7 +6,7 @@
 void func_80172998(void)
 {
     cell_cursor_read();
-    func_800F54B8();
+    cell_flags_set4();
     cell_poke0(cell_state(cell_bank_sel(45)));
     cell_cursor_read();
 }

@@ -56,10 +56,10 @@ L128954:
     for (;;) {
         cell_sink8_9();
         cell_pos_mask(0x3F);
-        func_800F55C0(1);
+        cell_flags_cmp3(1);
         if (io_just() != 0)
             goto L1289D4;
-        func_800F55C0(0xB);
+        cell_flags_cmp3(0xB);
         if (io_just() != 0)
             goto L1289D4;
         sep_a();

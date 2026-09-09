@@ -31,7 +31,7 @@ L126DB0:
     wnd_open_cur();
     label(0x1BA5);
     txt_set(0x16A9);
-    func_800F63F8();
+    cell_flags_scr();
     cell_put(0x1C);
     return;
 }

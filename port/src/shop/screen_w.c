@@ -86,19 +86,19 @@ La51c:
             cell_word_half(cell_state_of());
             cell_flags_repack();
             cell_word_half_s(cell_state_of());
-            func_800F7D0C();
+            cell_flags_pack3();
             cell_word_half_s(cell_state_of());
-            func_800F7D0C();
+            cell_flags_pack3();
             cell_word_half_s(cell_state_of());
-            func_800F7D0C();
+            cell_flags_pack3();
             cell_word_half_s(cell_state_of());
-            func_800F7D0C();
+            cell_flags_pack3();
             cell_word_half_s(cell_state_of());
-            func_800F7D0C();
+            cell_flags_pack3();
             cell_word_half_s(cell_state_of());
-            func_800F7D0C();
+            cell_flags_pack3();
             cell_word_half_s(cell_state_of());
-            func_800F7D0C();
+            cell_flags_pack3();
             poll_pair(4);
             if (poll_go(0x202) != 0)
                 continue;

@@ -15,7 +15,7 @@ void func_801009E8(void)
     } while (1);
     cell_put(6);
     txt_cell(0x12A0);
-    func_800F4370(6);
+    cell_tick_and(6);
     cell_put(7);
     if (sel(0x202) == 0) {
         txt_cell(0x12A0);

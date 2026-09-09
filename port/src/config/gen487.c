@@ -29,7 +29,7 @@ L12C5D0:
     cell_flags_cmp_pos(cell_state_of());
     if (io_go() == 0)
         goto L12C678;
-    func_800F8378(0x60);
+    cell_pull89_bank(0x60);
 L12C678:
     row_prep_close();
     draw_pad(3);

@@ -126,7 +126,7 @@ Lc84:
 Lc9c:
     row_page(0xAB);
     cell_tick_half();
-    if (func_800F7728(0x101) != 0)
+    if (cell_flags_nz50(0x101) != 0)
         goto Ld8c;
     io_poll_cur();
     if (io_just() == 0)

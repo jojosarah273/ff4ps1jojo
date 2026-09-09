@@ -46,7 +46,7 @@ Lf78:
     row_sync2_cur();
     row_prep_close();
     row_page(0xCD);
-    func_800F63F8();
+    cell_flags_scr();
     func_80061C1C();
     row_page(0xA9);
     cell_draw(0x34D4);

@@ -52,7 +52,7 @@ Le84:
     func_800FDB5C();
     row_page(0x7A);
     cell_tick_half();
-    if (func_800F7728(0x101) == 0)
+    if (cell_flags_nz50(0x101) == 0)
         goto Lf14;
     row_page(0x94);
     if (gate(2) != 0)
@@ -98,7 +98,7 @@ Lfc4:
 Lfe4:
     row_page(0x7A);
     cell_tick_half();
-    if (func_800F7728(0x101) != 0)
+    if (cell_flags_nz50(0x101) != 0)
         goto L024;
     func_80109B08();
     func_80107530();

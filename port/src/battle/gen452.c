@@ -4,12 +4,6 @@
  */
 #include "ff4_window.h"
 
-
-
-
-
-
-extern int func_800FD718();
 extern int func_801030F8();
 extern int func_801034E0();
 extern int func_8017559C();
@@ -48,7 +42,7 @@ void func_801033E0(void)
     }
   }
   else {
-    func_800FD718();
+    battle_rows_run();
     open_row(0x79);
     func_801034E0();
   }

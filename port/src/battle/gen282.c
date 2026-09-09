@@ -56,9 +56,9 @@ L1416C4:
     cell_clear_bank(0x352D);
     txt_set_cur();
     cell_tick_or(cell_state(0x388B));
-    if (func_800F7918(0x202) != 0)
+    if (ticker_reblend2(0x202) != 0)
         goto L141738;
-    func_800F65C8(0x4218);
+    cell_push_c8_cur(0x4218);
     cell_peek_cur();
     cell_tick_or();
     row_read(0x30);

@@ -47,7 +47,7 @@ L126be4:
         func_80122114();
         sep();
         stat_sync();
-        func_800F65C8(0x17FB);
+        cell_push_c8_cur(0x17FB);
         cell_cursor_read();
         row_pad();
         return;

@@ -29,11 +29,11 @@ void func_8016F97C(void)
     cell_put(0x43);
     page(0x43);
     row_prep(0x20);
-    func_800F8F94(0x1A2D);
-    func_800F8F94(0x1A1D);
-    func_800F8F94(0x1A2F);
-    func_800F8F94(0x1A1F);
-    func_800F8F94(0x1A21);
+    cell_clear_bank2(0x1A2D);
+    cell_clear_bank2(0x1A1D);
+    cell_clear_bank2(0x1A2F);
+    cell_clear_bank2(0x1A1F);
+    cell_clear_bank2(0x1A21);
     cell_push9_bank();
     cell_pull9_hi(0x1A31);
     row_prep_close();

@@ -56,7 +56,7 @@ L1d0:
     row_open();
     row_close();
     row_prep(0x20);
-    func_800F65F0(0x4216);
+    cell_sink89_c(0x4216);
     cell_put_hi9(0x5A);
     row_prep_close();
 L238:

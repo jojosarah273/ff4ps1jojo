@@ -143,7 +143,7 @@ L0ec:
         goto L154;
     row_page(0xA1);
     row_read(3);
-    func_800F4370(0xD2);
+    cell_tick_and(0xD2);
     if (sel(0x202) != 0)
         goto L17c;
 L154:

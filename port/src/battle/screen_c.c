@@ -318,7 +318,7 @@ flow_screen:
     return;
     /* memory screens */
 memscreen:
-    func_800FD718();
+    battle_rows_run();
     page_paint2(0x1A02);
     row_page(0xA1);
     row_read(1);
@@ -336,7 +336,7 @@ memscreen:
     cell_put(0x2C);
     func_8010D9D4();
     cell_tick_half();
-    if (func_800F7728(0x101) != 0)
+    if (cell_flags_nz50(0x101) != 0)
         goto mem2;
     latch(3);
     txt_draw(0x1705);
@@ -348,7 +348,7 @@ mem2:
     cell_put(0x2E);
     func_8010D9D4();
     cell_tick_half();
-    if (func_800F7728(0x101) != 0)
+    if (cell_flags_nz50(0x101) != 0)
         goto mem_loop;
     row_page(0x2E);
     cell_set50_from40();
@@ -397,6 +397,6 @@ mem_loop:
     open_row(0xAC);
     open_row(0x7B);
     page_paint2(0x1A02);
-    func_800FD718();
+    battle_rows_run();
     return;
 }

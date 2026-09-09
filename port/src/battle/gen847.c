@@ -24,7 +24,7 @@ L11FFF0:
     func_8011F884();
     row_page_cur();
     cell_tick_or(cell_state(1));
-    if (func_800F7918(2) != 0)
+    if (ticker_reblend2(2) != 0)
         goto L11FF9C;
     row_pad();
     row_done();

@@ -116,7 +116,7 @@ L744:
 L784:
     func_800F6A78(0xA1);
     row_read(0x41);
-    func_800F4370(0xD2);
+    cell_tick_and(0xD2);
 L7a0:
     if (sel(2) != 0)
         goto L7d0;

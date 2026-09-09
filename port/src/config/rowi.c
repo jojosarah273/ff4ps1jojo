@@ -32,7 +32,7 @@ void func_8012D23C(void)
     func_80120F1C();
     draw_pad(0x270);
     latch(5);
-    func_800F63F8();
+    cell_flags_scr();
     sep_a();
     func_801222A4();
     draw_pad_cur();
@@ -226,7 +226,7 @@ L8b0:
     row_prep(0x20);
     row_read2(0x45);
     sep_b();
-    func_800F7FCC(cell_state(cell_bank_sel(0x60)));
+    cell_pos_sub16(cell_state(cell_bank_sel(0x60)));
     cell_put_hi9(0x45);
     row_prep_close();
     step2();

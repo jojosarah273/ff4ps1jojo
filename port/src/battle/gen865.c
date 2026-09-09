@@ -20,7 +20,7 @@ L102FC0:
     latch(2);
     txt_draw(0x1704);
     cell_put(0xAC);
-    func_800FD718();
+    battle_rows_run();
     func_80102414();
     return;
 }

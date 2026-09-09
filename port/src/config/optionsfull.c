@@ -275,7 +275,7 @@ l98B4:
     goto l9A88;
 l9A2C:
     sep_a();
-    func_800F65C8();
+    cell_push_c8_cur();
     cell_poke0(cell_state(0xA9));
     goto l9A80;
 l9A58:

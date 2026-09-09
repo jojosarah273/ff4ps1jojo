@@ -82,6 +82,15 @@ NM = {
     "800F9690": "cell_cur_save54",     "800F6E30": "cell_push_c8_lo",
     "800F6764": "cell_push89_sel",     "800FE7D8": "shop_view_run",
     "800FF024": "shop_buy_run",        "800FD804": "wnd_fx_pads",
+    # ---- batch 3: cell-sink/stamp family + flags + battle dispatch ----
+    "800F8378": "cell_pull89_bank",    "800F6DE8": "cell_sink89",
+    "800F65F0": "cell_sink89_c",       "800F4370": "cell_tick_and",
+    "800F7FCC": "cell_pos_sub16",      "800F7D0C": "cell_flags_pack3",
+    "800F7918": "ticker_reblend2",     "800F6EA8": "cell_push_c8_b4",
+    "800F65C8": "cell_push_c8_cur",    "800F63F8": "cell_flags_scr",
+    "800F8F94": "cell_clear_bank2",    "800F54B8": "cell_flags_set4",
+    "800F67FC": "cell_push_c8_b4o",    "800FD718": "battle_rows_run",
+    "800F7728": "cell_flags_nz50",     "800F55C0": "cell_flags_cmp3",
 }
 
 

@@ -49,21 +49,21 @@ L65c:
     cell_word_half(cell_state(0x289E));
     cell_flags_repack();
     cell_word_half_s(cell_state(0x289D));
-    func_800F7D0C();
+    cell_flags_pack3();
     cell_word_half_s(cell_state(0x289C));
     cell_word_half(cell_state(0x289E));
     cell_flags_repack();
     cell_word_half_s(cell_state(0x289D));
-    func_800F7D0C();
+    cell_flags_pack3();
     cell_word_half_s(cell_state(0x289C));
     txt_set(0x289C);
     cell_tick_or(cell_state(0x289D));
-    if (func_800F7918(2) != 0)
+    if (ticker_reblend2(2) != 0)
         goto L9a4;
     txt_set(0x16A0);
     cell_tick_or(cell_state(0x16A1));
     cell_tick_or(cell_state(0x16A2));
-    if (func_800F7918(2) != 0)
+    if (ticker_reblend2(2) != 0)
         goto L9a4;
     txt_set(0x16A0);
     cell_put(0xA9);

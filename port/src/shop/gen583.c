@@ -17,7 +17,7 @@ void func_80162D20(void)
     cell_put_hi9(0xA9);
     sep_b();
     cell_sink8_9(0x2007);
-    func_800F7FCC(cell_state(0xA9));
+    cell_pos_sub16(cell_state(0xA9));
     cell_stamp8_9(0x2007);
     if (io_go() != 0)
         goto L162DC0;

@@ -60,7 +60,7 @@ Lde10:
     row_page(0xDA);
     func_8012D204();
     cell_tick_or(cell_state(0x45));
-    if (func_800F7918(0x202) != 0)
+    if (ticker_reblend2(0x202) != 0)
         goto Ldf70;
     func_8012B0D8();
     return;

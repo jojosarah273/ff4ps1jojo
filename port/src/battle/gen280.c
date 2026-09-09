@@ -30,7 +30,7 @@ L110d5c:
         func_80173780();
         row_page(0x7A);
         cell_tick_half();
-        if (func_800F7728(0x101) != 0)
+        if (cell_flags_nz50(0x101) != 0)
             goto L110DA4;
         key_page(0x26);
     L110DA4:

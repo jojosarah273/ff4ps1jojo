@@ -20,7 +20,7 @@ void func_80103030(void)
         goto L103098;
     func_801030F8();
 L103098:
-    func_800FD718();
+    battle_rows_run();
     open_row(0x79);
     open_row(0xB6);
 L1030b0:

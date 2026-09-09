@@ -27,7 +27,7 @@ L14EE88:
         if (cell_flags_zero50(0x101) != 0)
             goto L14EFC8;
         row_prep(0x20);
-        func_800F6DE8();
+        cell_sink89();
         cell_cursor_ret2();
         row_sync();
         row_sync2(0xD);
@@ -36,7 +36,7 @@ L14EE88:
         cell_pos_fwd(0x1C);
     L14ef60:
         for (;;) {
-            func_800F6DE8();
+            cell_sink89();
             cell_stamp8_9_b(0x10);
             cell_dec_cell();
             if (poll_go(0x202) != 0)

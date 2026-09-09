@@ -12,9 +12,9 @@ void func_8013D5C8(void)
     row_prep(0x20);
 L13d600:
     for (;;) {
-        func_800F6DE8(0x340);
+        cell_sink89(0x340);
         cell_stamp8_9_b(0x380);
-        func_800F6DE8(0x342);
+        cell_sink89(0x342);
         cell_stamp8_9_b(0x382);
         step2();
         step2();
