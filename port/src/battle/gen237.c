@@ -37,7 +37,7 @@ L5254:
         tail(0xF3);
         latch(1);
         cell_put(0xE3);
-        func_80115D2C();
+        battle_window_24();
         row_page(0x7A);
         row_read(0x3F);
         if (sel(0x202) != 0)
@@ -55,11 +55,11 @@ L5254:
         cell_put(0x8F);
         latch(0x40);
         cell_put(0x92);
-        func_8011581C();
+        battle_rows_300();
         latch(0x80);
         cell_put(0xE);
         draw_pad(0x180);
-        func_80115A34();
+        battle_item_rows();
         latch(0x1C);
         cell_put(0x91);
         latch(0x78);
@@ -81,7 +81,7 @@ L5254:
             func_80115684();
             latch(0x20);
             cell_put(0x92);
-            func_8011581C();
+            battle_rows_300();
             key_page(0x79);
             row_page(0x79);
             io_poll(4);

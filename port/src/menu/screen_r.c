@@ -147,8 +147,8 @@ L374:
     row_page(8);
     txt_draw(0x8FB);
     func_801082C8();
-    func_80107C98();
-    func_80107F3C();
+    config_sub_screen();
+    config_confirm_loop_a();
     func_801005DC();
     return;
 L3cc:
@@ -172,8 +172,8 @@ L42c:
     func_801004D4();
 L44c:
     func_801082C8();
-    func_80107C98();
-    func_80107F3C();
+    config_sub_screen();
+    config_confirm_loop_a();
     return;
 L46c:
     txt_set(0x1705);
@@ -185,7 +185,7 @@ L46c:
     latch(4);
     cell_put(0xB2);
     func_801082C8();
-    func_80107C98();
-    func_80107F3C();
+    config_sub_screen();
+    config_confirm_loop_a();
     return;
 }

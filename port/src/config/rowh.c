@@ -36,7 +36,7 @@ void func_8012B190(void)
     cell_put(0xE3);
     wnd_open(0x1440);
     func_8012E844();
-    func_801221EC();
+    config_row_221ec();
     return;
 L2B8:
     func_8012AE00();

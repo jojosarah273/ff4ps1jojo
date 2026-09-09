@@ -10,12 +10,12 @@ void func_8018FD68(void)
     /* s6/v0 latch -> L18FFD8 */
     if (func_80190004(1) != 0)
         goto L18FE04;
-    func_8018F0C8();
+    anim_reg_stub();
     goto L18FFDC;
 L18FE04:
     if (io_just() != 0)
         goto L18FE2C;
-    func_8018F0C8();
+    anim_reg_stub();
 L18FE2C:
     if (io_just() == 0)
         goto L18FF88;
@@ -24,7 +24,7 @@ L18FE2C:
     func_80190088();
     if (io_just() != 0)
         goto L18FF54;
-    func_8018F0C8();
+    anim_reg_stub();
 L18FF54:
     if (io_just() == 0)
         goto L18FF88;
@@ -35,7 +35,7 @@ L18FF88:
 L18FFB0:
     if (io_just() != 0)
         goto L18FFDC;
-    func_8018F0C8();
+    anim_reg_stub();
     return;
 L18FFDC:
     return;

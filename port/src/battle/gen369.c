@@ -4,8 +4,6 @@
  */
 #include "ff4_window.h"
 
-extern int func_80115D2C();
-
 void func_801030F8(void)
 
 {
@@ -28,7 +26,7 @@ void func_801030F8(void)
   battle_row_e5();
   do {
     shop_view_run();
-    func_80115D2C();
+    battle_window_24();
     page_open(0xad2);
     poll_t(8);
     iVar1 = io_go();

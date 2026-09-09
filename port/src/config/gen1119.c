@@ -10,7 +10,7 @@ void func_801390DC(void)
     midrow_paint_b();
     draw_pad_cur();
     battle_rows_29();
-    func_80126528();
+    config_row_26528();
     func_80120E9C();
     func_8012AAC0();
     latch(0x11);
@@ -21,7 +21,7 @@ void func_801390DC(void)
     draw_pad_cur();
     battle_rows_sync();
     func_801264C0();
-    func_80126528();
+    config_row_26528();
     func_801391D4();
     return;
 }

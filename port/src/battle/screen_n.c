@@ -73,7 +73,7 @@ Lbc4:
         cell_put(0x8F);
         latch(0x60);
         cell_put(0x92);
-        func_8011581C();
+        battle_rows_300();
         key_page(0x79);
         row_page(0x79);
         io_poll(3);

@@ -16,7 +16,7 @@ L10fad4:
         row_sel_cell_cur();
         func_80115684();
         open_row(0x92);
-        func_8011581C();
+        battle_rows_300();
         key_page(0x79);
         row_page(0x79);
         io_poll(4);

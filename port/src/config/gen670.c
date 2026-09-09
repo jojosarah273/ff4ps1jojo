@@ -30,7 +30,7 @@ L139934:
     midrow_paint_b();
     draw_pad_cur();
     battle_rows_29();
-    func_80126528();
+    config_row_26528();
     return;
 L1399A4:
     row_prep(0x20);

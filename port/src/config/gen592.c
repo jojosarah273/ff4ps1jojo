@@ -4,8 +4,6 @@
  */
 #include "ff4_window.h"
 
-extern int func_801221EC();
-
 void func_8012C82C(void)
 
 {
@@ -23,7 +21,7 @@ void func_8012C82C(void)
   }
   cell_pull89_bank(0x60);
   row_prep_close();
-  func_801221EC();
+  config_row_221ec();
   return;
 }
 

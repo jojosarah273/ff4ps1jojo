@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801264E8.
- * Ground truth: src/func_801264E8.c (byte-verified).
+/* FF4 source-port — interpreted module for config_row_7800.
+ * Ground truth: src/config_row_7800.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801264E8(void)
+void config_row_7800(void)
 {
     row_open();
     row_sync();

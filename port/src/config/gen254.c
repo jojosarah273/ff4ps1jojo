@@ -27,7 +27,7 @@ L13c09c:
         page(0x5A);
         draw_pad(0x304);
         sep();
-        func_8011F724();
+        row_latch_7e();
         midrow_pad88_run();
         midrow_degen();
         row_page(1);

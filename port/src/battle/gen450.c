@@ -14,7 +14,7 @@ void func_8010F2F4(void)
     do {
         wnd_fx_7d();
         cell_clear_pad();
-        func_8011416C();
+        cell_fill_aa();
         key_page(0x20);
         row_page(0x24);
         sep_a();

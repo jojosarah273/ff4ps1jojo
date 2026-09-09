@@ -4,8 +4,6 @@
  */
 #include "ff4_window.h"
 
-extern int func_80123BD8();
-
 void func_80123B00(void)
 
 {
@@ -24,12 +22,12 @@ void func_80123B00(void)
   cell_tick_dbl();
   cell_put(0x45);
   latch(7);
-  func_80123BD8();
-  func_80123BD8();
+  shop_rows_37();
+  shop_rows_37();
   latch(0xe);
-  func_80123BD8();
-  func_80123BD8();
-  func_80123BD8();
+  shop_rows_37();
+  shop_rows_37();
+  shop_rows_37();
   row_done();
   row_close();
   row_close2();

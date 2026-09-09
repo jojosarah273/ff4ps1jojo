@@ -115,8 +115,8 @@ L24d0:
     latch(0xD0);
     cell_put(0xB2);
     func_80108330();
-    func_80107C98();
-    func_80107F3C();
+    config_sub_screen();
+    config_confirm_loop_a();
     open_row(0xCB);
     func_800FD6E8();
     latch(7);

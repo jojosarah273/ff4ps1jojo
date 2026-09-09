@@ -40,15 +40,15 @@ L114970:
         draw_pad(0x190);
         latch(0x60);
         cell_put(0x92);
-        func_8011581C();
+        battle_rows_300();
         draw_pad(0x70);
         row_info(0xE);
         draw_pad(0x150);
-        func_80115A34();
+        battle_item_rows();
         draw_pad(0x68);
         row_info(0xE);
         draw_pad(0x160);
-        func_80115A34();
+        battle_item_rows();
         page(0x89);
         cell_set50_from54();
         tail(0x89);

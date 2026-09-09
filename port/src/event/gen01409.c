@@ -12,7 +12,7 @@ L18E314:
     for (;;) {
         if (io_just() != 0)
             goto L18E334;
-        func_8018F0C8();
+        anim_reg_stub();
         goto L18E3F4;
     L18E334:
         if (io_just() != 0)

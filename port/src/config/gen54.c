@@ -27,7 +27,7 @@ LE178:
 LE1D8:
     sep();
     latch(0x2F);
-    func_80152224();
+    config_banner_96();
     label(0x393D);
     wnd_open(4);
     label(0x393F);

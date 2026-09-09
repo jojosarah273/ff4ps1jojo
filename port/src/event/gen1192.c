@@ -8,7 +8,7 @@ void func_8018A5F8(void)
     /* event: 8018AC90 + v0 spins; 80197648 tail row. */
     if (io_just() != 0)
         goto L18A614;
-    func_8018AC90();
+    self_test_loop();
 L18A614:
     for (;;) {
         if (io_just() == 0)

@@ -7,7 +7,6 @@
 
 extern int func_800FE8B4();
 
-extern int func_80115D2C();
 extern int func_80119AC8();
 
 void func_8011356C(void)
@@ -29,7 +28,7 @@ void func_8011356C(void)
   do {
     shop_view_run();
     func_80119AC8();
-    func_80115D2C();
+    battle_window_24();
     row_page(0x7a);
     row_read(0x3f);
     iVar1 = sel(0x202);

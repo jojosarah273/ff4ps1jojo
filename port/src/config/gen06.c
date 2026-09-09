@@ -33,7 +33,7 @@ void func_801324F8(void)
     func_80132C0C();
     latch(0xFF);
     txt_draw(0x1B4A);
-    func_801264E8();
+    config_row_7800();
     func_80132CA4();
     battle_mode_dispatch();
     anim_noop();
@@ -52,10 +52,10 @@ L6d8:
     L708:
         sep();
         draw_pad(0x300);
-        func_8011F724();
+        row_latch_7e();
         func_80132C0C();
         midrow_pad88_run();
-        func_801264E8();
+        config_row_7800();
         midrow_degen();
         row_page_cur();
         row_read(0x80);
@@ -87,7 +87,7 @@ L6d8:
         draw_pad_cur();
         battle_rows_29();
         midrow_pad88();
-        func_801264E8();
+        config_row_7800();
         func_8011FF40();
         battle_row_88();
         return;
@@ -119,7 +119,7 @@ L6d8:
         draw_pad_cur();
         battle_rows_sync();
         midrow_pad88();
-        func_801264E8();
+        config_row_7800();
     L918:
         for (;;) {
             func_80132C0C();

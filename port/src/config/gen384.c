@@ -35,7 +35,7 @@ void func_8012C0A8(void)
     cell_peek0(cell_state(0x1B84));
     cell_put_hi9(0x45);
     row_prep_close();
-    func_801221EC();
+    config_row_221ec();
     return;
 L12C1E0:
     draw_pad_cur();

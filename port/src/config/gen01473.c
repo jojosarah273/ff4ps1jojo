@@ -3,4 +3,4 @@
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8013C4B4(void) { cell_cursor_dec(); func_80120F94(); func_8012A868(); midrow_paint_b(); func_8012AAC0(); func_80126458(); func_80126528(); row_close2(); }
+void func_8013C4B4(void) { cell_cursor_dec(); func_80120F94(); func_8012A868(); midrow_paint_b(); func_8012AAC0(); func_80126458(); config_row_26528(); row_close2(); }

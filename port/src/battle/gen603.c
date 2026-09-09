@@ -1,5 +1,5 @@
-/* FF4 source-port — interpreted module for func_80107F3C.
- * Ground truth: src/func_80107F3C.c (byte-verified).
+/* FF4 source-port — interpreted module for config_confirm_loop_a.
+ * Ground truth: src/config_confirm_loop_a.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
@@ -11,7 +11,7 @@
 
 
 
-void func_80107F3C(void)
+void config_confirm_loop_a(void)
 
 {
   int iVar1;

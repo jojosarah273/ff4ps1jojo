@@ -55,7 +55,7 @@ void func_8011285C(void)
 L1129c4:
     for (;;) {
         shop_view_run();
-        func_80115D2C();
+        battle_window_24();
         page_open(0xAD2);
         poll_t(0x10);
         if (io_go() != 0)

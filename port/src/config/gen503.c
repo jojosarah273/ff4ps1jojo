@@ -50,7 +50,7 @@ L13546c:
         draw_pad(0x19A);
         func_801206DC();
         midrow_pad88_run();
-        func_801264E8();
+        config_row_7800();
         midrow_degen();
         func_80137938();
         txt_set(0x1BCB);

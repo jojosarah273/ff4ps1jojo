@@ -25,8 +25,8 @@ void func_801198F0(void)
     latch(0x14);
     cell_put(0xB2);
     func_801082C8();
-    func_80107C98();
-    func_80107F3C();
+    config_sub_screen();
+    config_confirm_loop_a();
 L119998:
     func_801175C4();
     battle_wndfx_run();

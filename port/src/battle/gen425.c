@@ -8,7 +8,7 @@ void func_80113F3C(void)
     /* battle rows: 0x20/0x21/0x31/0x24/0x26/0x8F/0x91 windows, 0x6FB/
        0x302/0x303/0x90 cells, 8011416C/80174F0C/801140A4/80113C04/
        80113C54; loop L113F5C on 54D4(3C3C(0x90)). */
-    func_8011416C();
+    cell_fill_aa();
     open_row(0x20);
     open_row(0x21);
 L113f5c:

@@ -79,7 +79,7 @@ L7d40:
     /* v1/v0 branch */
     func_80187CD0();
 L7e88:
-    func_801221EC();
+    config_row_221ec();
     midrow_paint_a();
     draw_pad_cur();
     battle_rows_sync();
@@ -99,7 +99,7 @@ L7ed8:
     /* v1/v0 branch */
     func_801382C8();
     func_80127C70();
-    func_801221EC();
+    config_row_221ec();
     midrow_paint_a();
     draw_pad_cur();
     battle_rows_sync();

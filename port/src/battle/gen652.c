@@ -4,13 +4,6 @@
  */
 #include "ff4_window.h"
 
-
-
-
-
-
-extern int func_8011581C();
-
 void func_80114C98(void)
 
 {
@@ -26,7 +19,7 @@ void func_80114C98(void)
   draw_pad(0x180);
   latch(0x60);
   cell_put(0x92);
-  func_8011581C();
+  battle_rows_300();
   return;
 }
 

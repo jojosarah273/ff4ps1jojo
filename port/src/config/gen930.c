@@ -16,7 +16,7 @@ L139554:
         cell_cursor_dec();
         func_801395E4();
         midrow_pad88_run();
-        func_801264E8();
+        config_row_7800();
         row_close2();
         poll_spin();
         if (poll_go(0x202) != 0)

@@ -21,7 +21,7 @@ L10fd60:
         txt_draw(0xAD0);
         txt_draw(0xAD1);
         txt_draw_cur();
-        func_80115D2C();
+        battle_window_24();
         func_80110474();
         row_page(0x89);
         row_read(0x3F);

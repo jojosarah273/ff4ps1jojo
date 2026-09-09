@@ -11,6 +11,6 @@ void func_8012E160(void)
     key_page(132);
     func_80122A9C();
     func_80122538();
-    func_80126528();
+    config_row_26528();
     battle_state_dc400();
 }

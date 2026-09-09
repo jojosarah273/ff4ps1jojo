@@ -1,9 +1,9 @@
 /* FF4 source-port — battle/targeting.c
  *
- * Interpretation of func_80115D2C (battle targeting hub).
+ * Interpretation of battle_window_24 (battle targeting hub).
  *
  * The window/input primitive mapping below names the 0x800F calls that
- * Phase A decoded (src/func_80115D2C.c is ground truth). Data cells are
+ * Phase A decoded (src/battle_window_24.c is ground truth). Data cells are
  * 0xADxx catalog pages; 0x202 / 0x8080 are the standard armed and
  * cancel-hold gate ids used across the battle UI web.
  */

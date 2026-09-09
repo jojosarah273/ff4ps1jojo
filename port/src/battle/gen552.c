@@ -5,14 +5,6 @@
 #include "ff4_window.h"
 
 
-
-
-
-
-
-extern int func_8011581C();
-extern int func_80115A34();
-
 void func_8011511C(void)
 
 {
@@ -30,9 +22,9 @@ void func_8011511C(void)
   cell_put(0xad);
   row_close2();
   cell_put(0x92);
-  func_8011581C();
+  battle_rows_300();
   draw_pad(400);
-  func_80115A34();
+  battle_item_rows();
   return;
 }
 

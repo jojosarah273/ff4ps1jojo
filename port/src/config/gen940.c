@@ -20,6 +20,6 @@ L12C6FC:
     cell_push_c8_sel(0x60);
     row_read(0x7F);
     cell_pull_c8_bank(0x60);
-    func_801221EC();
+    config_row_221ec();
     return;
 }

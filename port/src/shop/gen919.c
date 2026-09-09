@@ -11,7 +11,7 @@ void func_80162628(void)
     io_poll(0x80);
     if (io_go() == 0)
         goto L162670;
-    func_8015329C();
+    config_row_5329c();
     latch(0x10);
     txt_draw(0x34CA);
     return;

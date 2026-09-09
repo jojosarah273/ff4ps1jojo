@@ -42,7 +42,7 @@ void func_8012EC48(void)
     midrow_pad88_run();
     func_80124158();
     func_80122844();
-    func_80126528();
+    config_row_26528();
     latch(0x20);
     cell_put(0x3F);
     config_row_d600b();
@@ -206,7 +206,7 @@ L03c:
     wnd_open_cur();
     func_80121124();
     func_80122A9C();
-    func_80126528();
+    config_row_26528();
     config_row_d600b();
     func_80120B6C();
     func_80177284();

@@ -10,7 +10,7 @@ void func_801913C8(void)
     event_spin_wait();
     event_spin_wait();
     func_80191620();
-    func_8018F0C8();
+    anim_reg_stub();
     func_80190FD8();
     if (io_just() != 0)
         goto L191510;

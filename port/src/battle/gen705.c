@@ -1,11 +1,11 @@
-/* FF4 source-port — interpreted module for func_8011F724.
- * Ground truth: src/func_8011F724.c (byte-verified).
+/* FF4 source-port — interpreted module for row_latch_7e.
+ * Ground truth: src/row_latch_7e.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 extern u16 *D_8019ED54;
 extern u16 *D_8019ED44;
-void func_8011F724(void)
+void row_latch_7e(void)
 {
     latch(0xA);
     row_open2();

@@ -25,7 +25,7 @@ L1388c:
             goto L13958;
         key_page(0x79);
     L13958:
-        func_8011416C();
+        cell_fill_aa();
         open_row(0x20);
     L13968:
         for (;;) {

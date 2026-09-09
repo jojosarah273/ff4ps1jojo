@@ -23,7 +23,7 @@ void func_8012C8A4(void)
     if (io_just() != 0)
         goto L12C948;
     row_prep_close();
-    func_801221EC();
+    config_row_221ec();
     return;
 L12C948:
     row_prep_close();

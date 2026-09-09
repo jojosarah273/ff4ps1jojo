@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801312BC.
- * Ground truth: src/func_801312BC.c (byte-verified).
+/* FF4 source-port — interpreted module for ability_rows_29.
+ * Ground truth: src/ability_rows_29.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801312BC(void)
+void ability_rows_29(void)
 {
     /* ability rows: 0x29 window + 80124704 row; 6CF4/9330 preps. */
     cell_cursor_dec();

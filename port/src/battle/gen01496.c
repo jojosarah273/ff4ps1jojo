@@ -4,13 +4,11 @@
  */
 #include "ff4_window.h"
 
-extern int func_8011F724();
-
 void func_8011F6FC(void)
 
 {
   page(0x45);
-  func_8011F724();
+  row_latch_7e();
   return;
 }
 

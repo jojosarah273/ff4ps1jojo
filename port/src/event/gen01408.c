@@ -14,12 +14,12 @@ void func_8018F708(void)
     /* gates + 8018F0C8 -> L18F848 / L18F9B8 */
     if (func_8018FD68() != 0)
         goto L18F8B0;
-    func_8018F0C8();
+    anim_reg_stub();
     goto L18F9B8;
 L18F8B0:
     if (io_just() != 0)
         goto L18F8DC;
-    func_8018F0C8();
+    anim_reg_stub();
 L18F8DC:
     if (io_just() == 0)
         goto L18F990;

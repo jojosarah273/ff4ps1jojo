@@ -19,7 +19,7 @@ L1144f8:
     for (;;) {
         cell_put(0xC);
         cell_put(0xE);
-        func_80115A34();
+        battle_item_rows();
         latch(0x1C);
         cell_put(0x91);
         latch(0x78);
@@ -27,7 +27,7 @@ L1144f8:
         open_row(0xD);
         open_row(0xF);
         open_row(0x92);
-        func_8011581C();
+        battle_rows_300();
         poll_t(0x50);
         if (io_just() == 0)
             continue;

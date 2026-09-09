@@ -40,8 +40,8 @@ L10f5c4:
     for (;;) {
         wnd_fx_7d();
         cell_clear_pad();
-        func_8011416C();
-        func_80115D2C();
+        cell_fill_aa();
+        battle_window_24();
         wnd_open(0x30);
         latch(0x60);
         cell_put(0xC);

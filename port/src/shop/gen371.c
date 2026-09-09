@@ -14,7 +14,7 @@ void func_80163D68(void)
     page_paint2(0x3584);
     sep();
     latch(9);
-    func_80152224();
+    config_banner_96();
     cell_push_c8();
     cell_cursor_dec();
     row_read(0x7F);
@@ -27,7 +27,7 @@ L163e1c:
     for (;;) {
         wnd_open(5);
         latch(0xC);
-        func_80152224();
+        config_banner_96();
         row_info(0xA9);
         cell_push_c8_d58(0x3540);
         if (gate(0x202) != 0)

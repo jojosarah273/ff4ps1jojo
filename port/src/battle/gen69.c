@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80107C98.
- * Ground truth: src/func_80107C98.c (byte-verified).
+/* FF4 source-port — interpreted module for config_sub_screen.
+ * Ground truth: src/config_sub_screen.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80107C98(void)
+void config_sub_screen(void)
 {
     /* config sub-screen: 0xEA confirm wait, 0x8F4/0x8F6 save-check texts,
        80108458 status table + 80177DAC scroll; loops at L107CB8/L107D54/

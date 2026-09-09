@@ -32,7 +32,7 @@ L478:
     draw_pad_cur();
     func_801223A4();
     midrow_pad88_run();
-    func_801264E8();
+    config_row_7800();
     midrow_degen();
     txt_set(0x1B87);
     if (gate(0x202) != 0)

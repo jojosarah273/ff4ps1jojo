@@ -4,10 +4,8 @@
  */
 #include "ff4_window.h"
 
-
-extern void func_80152224(void);
 void func_8015316C(void) {
     wnd_open(0);
     latch(0x7);
-    func_80152224();;
+    config_banner_96();;
 }

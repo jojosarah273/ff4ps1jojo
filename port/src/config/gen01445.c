@@ -7,5 +7,5 @@ void func_8015319C(void)
 {
     wnd_open(0);
     latch(4);
-    func_80152224();
+    config_banner_96();
 }

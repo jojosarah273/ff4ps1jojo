@@ -23,12 +23,12 @@ L1154a8:
         cell_pos_mask(0xFF);
         row_sync2_cur();
         row_prep_close();
-        func_8011581C();
+        battle_rows_300();
         row_page(0xE);
         sep_a();
         row_open_w(0x10);
         cell_put(0xE);
-        func_80115A34();
+        battle_item_rows();
         key_page(0x79);
         row_page(0x79);
         io_poll(4);

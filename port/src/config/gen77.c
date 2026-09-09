@@ -76,11 +76,11 @@ void func_80130C74(void)
     cell_poke0(cell_state(0x45));
     battle_put43();
     latch_cur();
-    func_801312BC();
-    func_801312BC();
-    func_801312BC();
-    func_801312BC();
-    func_801312BC();
+    ability_rows_29();
+    ability_rows_29();
+    ability_rows_29();
+    ability_rows_29();
+    ability_rows_29();
     latch(0x1F);
     cell_pull_c8_lo(0x212C);
     return;

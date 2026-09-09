@@ -29,10 +29,10 @@ void func_8012BB68(void)
     cell_tick_or(cell_state(0x34));
     cell_put(0x45);
     latch(0xE);
-    func_80123BD8();
-    func_80123BD8();
-    func_80123BD8();
-    func_80123BD8();
+    shop_rows_37();
+    shop_rows_37();
+    shop_rows_37();
+    shop_rows_37();
     row_close2();
     row_prep(0x20);
     row_read2(0x4B);

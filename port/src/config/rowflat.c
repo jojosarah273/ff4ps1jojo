@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80152224.
- * Ground truth: src/func_80152224.c (byte-verified).
+/* FF4 source-port — interpreted module for config_banner_96.
+ * Ground truth: src/config_banner_96.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80152224(void)
+void config_banner_96(void)
 {
     /* config banner: 0x96/0x97 windows, 0x3947-0x394B texts, 8015254C
        rows; gates 58BC(0xFF)/54D4(3C3C(0x96)); loop on 5574(0xFF). */

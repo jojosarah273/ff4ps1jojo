@@ -6,14 +6,13 @@
 
 extern int func_80111C2C();
 extern int func_80111DC8();
-extern int func_8011416C();
 
 void func_80110FA4(void)
 
 {
   shop_view_run();
   cell_clear_pad();
-  func_8011416C();
+  cell_fill_aa();
   func_80111C2C();
   func_80111DC8();
   return;

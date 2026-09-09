@@ -3,7 +3,7 @@
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-extern void func_8011416C(void);
+
 extern void func_80173780(void);
 
 
@@ -12,7 +12,7 @@ extern void func_801105A4(void);
 extern void func_8010FAC4(void);
 extern void func_80115488(void);
 void func_80110474(void) {
-    func_8011416C();
+    cell_fill_aa();
     func_80173780();
     wnd_open(0);
     latch(0x60);

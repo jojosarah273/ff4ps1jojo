@@ -22,7 +22,7 @@ void func_801615D0(void)
 L161630:
     latch(0xD3);
     txt_draw(0x33C4);
-    func_8015329C();
+    config_row_5329c();
     latch_cur();
     txt_draw(0x34CA);
     return;

@@ -47,7 +47,7 @@ L11c54:
         draw_pad(0x10);
     }
 L11D98:
-    func_8011416C();
+    cell_fill_aa();
     latch(0xAA);
     txt_draw(0x51C);
     txt_draw(0x51D);

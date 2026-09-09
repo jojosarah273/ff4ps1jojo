@@ -23,6 +23,6 @@ L1637DC:
     cell_draw(0x2017);
     latch(0x12);
     txt_draw(0x34CA);
-    func_8015329C();
+    config_row_5329c();
     return;
 }

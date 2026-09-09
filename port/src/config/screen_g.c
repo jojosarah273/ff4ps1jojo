@@ -79,7 +79,7 @@ E00:
     txt_draw(0x1B06);
     func_801264C0();
     func_80126458();
-    func_80126528();
+    config_row_26528();
     latch(0x19);
     cell_pull_c8_lo(0x212C);
     wnd_open(0xFFFC);
@@ -133,10 +133,10 @@ L10C:
     cell_put(0x49);
     page(0x48);
     draw_pad(0x300);
-    func_8011F724();
+    row_latch_7e();
     func_80129D2C();
     midrow_pad88_run();
-    func_801264E8();
+    config_row_7800();
     midrow_degen();
     row_page_cur();
     row_read(0x40);

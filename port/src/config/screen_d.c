@@ -137,7 +137,7 @@ ae8:
     key_page(0xA9);
     key_page(0xAA);
     latch(0x63);
-    func_80152224();
+    config_banner_96();
     if (io_press(cell_state(0x38D4)) == 0)
         key_page(0xA9);
     func_801531CC();
@@ -160,7 +160,7 @@ e7c:
     cell_put(0xA9);
     sep();
     txt_set(0x38D4);
-    func_80152224();
+    config_banner_96();
     if (io_press(cell_state(0xA9)) == 0) {
         latch(8);
         txt_draw(0x3581);

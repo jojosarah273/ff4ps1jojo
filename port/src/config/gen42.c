@@ -17,7 +17,7 @@ L91f4:
         wnd_open(0x3188);
         func_80126070();
         midrow_pad88_run();
-        func_801264E8();
+        config_row_7800();
     L922c:
         row_read2(1);
         row_read(0x80);
@@ -86,7 +86,7 @@ L91f4:
             cell_cursor_dec();
             func_801395E4();
             midrow_pad88_run();
-            func_801264E8();
+            config_row_7800();
             row_close2();
             poll_spin();
             if (poll_go(0x202) != 0)
@@ -119,7 +119,7 @@ L91f4:
             cell_cursor_dec();
             func_801395E4();
             midrow_pad88_run();
-            func_801264E8();
+            config_row_7800();
             row_close2();
             poll_spin();
             if (poll_go(0x202) != 0)

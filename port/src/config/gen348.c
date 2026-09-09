@@ -23,7 +23,7 @@ L12A6F8:
     sep_a();
     row_open_w(4);
     draw_pad(0x300);
-    func_8011F724();
+    row_latch_7e();
     txt_set(0x1B19);
     if (gate(2) != 0)
         goto L12A850;
@@ -52,7 +52,7 @@ L12A808:
     sep_a();
     row_open_w(8);
     draw_pad(0x310);
-    func_8011F724();
+    row_latch_7e();
     return;
 L12A848:
     animation_row_310();

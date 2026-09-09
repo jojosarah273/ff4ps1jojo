@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80115A34.
- * Ground truth: src/func_80115A34.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_item_rows.
+ * Ground truth: src/battle_item_rows.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80115A34(void)
+void battle_item_rows(void)
 {
     /* battle items: 0xAD/0x7A/0xC/0xD/0xE windows, 0x350-0x35B cells,
        801714C4 picker; 5574(0x20) gate, 7728(0x101) check; two

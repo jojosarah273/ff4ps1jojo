@@ -49,7 +49,7 @@ L13978c:
     midrow_paint_b();
     draw_pad_cur();
     battle_rows_29();
-    func_80126528();
+    config_row_26528();
     return;
 L139874:
     txt_cell(0x1440);

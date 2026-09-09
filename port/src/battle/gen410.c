@@ -36,7 +36,7 @@ L11035c:
         draw_pad(0xB0);
         latch_cur();
         cell_put(0x92);
-        func_8011581C();
+        battle_rows_300();
         latch(0xF0);
         txt_draw(0x411);
         txt_draw(0x415);

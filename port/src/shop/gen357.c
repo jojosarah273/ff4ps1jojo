@@ -49,7 +49,7 @@ L160d3c:
         break;
     }
 L160DB0:
-    func_8015329C();
+    config_row_5329c();
     latch(0x1E);
     txt_draw(0x34CA);
     latch(0x14);

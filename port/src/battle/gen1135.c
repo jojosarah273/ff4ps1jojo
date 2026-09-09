@@ -11,9 +11,9 @@ void func_80119860(void)
     battle_tick_text();
     cell_put(0xB2);
     func_80108330();
-    func_80107C98();
+    config_sub_screen();
     func_80105DB4();
-    func_80107F3C();
+    config_confirm_loop_a();
     wnd_fx_7d_b();
     func_80109A28();
     row_page(0xDB);

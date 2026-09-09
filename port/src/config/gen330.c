@@ -22,7 +22,7 @@ L15e4bc:
     for (;;) {
         wnd_open_cur();
         latch(4);
-        func_80152224();
+        config_banner_96();
         cell_put(0xA9);
         cell_put(0xDF);
         txt_cell(0x3540);

@@ -36,7 +36,7 @@ L10fbb8:
         tail(0xF3);
         goto L10FC60;
     L10FC28:
-        func_80115D2C();
+        battle_window_24();
         page(0x89);
         poll_t(0x1B8);
         if (io_just() == 0)

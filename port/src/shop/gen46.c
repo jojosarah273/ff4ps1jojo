@@ -7,7 +7,7 @@ void func_8016343C(void)
 {
     sep();
     latch(0xA0);
-    func_80152224();
+    config_banner_96();
     io_poll(8);
     if (io_go() != 0)
         goto L6349C;

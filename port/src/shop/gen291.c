@@ -28,7 +28,7 @@ L161428:
         break;
     }
 L161488:
-    func_8015329C();
+    config_row_5329c();
     latch(0xF);
     txt_draw(0x34CA);
     return;

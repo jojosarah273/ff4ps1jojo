@@ -17,14 +17,14 @@ void func_801193F8(void)
     latch(0x1A);
     cell_put(0xB2);
     func_801082C8();
-    func_80107C98();
+    config_sub_screen();
     func_801196F8();
     func_80174CE4();
     func_801196B0();
     func_80105AF0();
     func_80105DB4();
     func_80105D2C();
-    func_80107F3C();
+    config_confirm_loop_a();
     wnd_fx_7d_b();
     func_80109A28();
     row_page(0xDB);
@@ -33,8 +33,8 @@ void func_801193F8(void)
     latch(0x1B);
     cell_put(0xB2);
     func_801082C8();
-    func_80107C98();
-    func_80107F3C();
+    config_sub_screen();
+    config_confirm_loop_a();
     func_80109A28();
     goto L119650;
 L119548:
@@ -57,8 +57,8 @@ L119548:
     latch(0x19);
     cell_put(0xB2);
     func_801082C8();
-    func_80107C98();
-    func_80107F3C();
+    config_sub_screen();
+    config_confirm_loop_a();
     func_80109A28();
 L119650:
     func_801175C4();

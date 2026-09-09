@@ -92,7 +92,7 @@ Lf48:
         goto Lf88;
     latch(0x11);
     txt_draw(0x34CA);
-    func_8015329C();
+    config_row_5329c();
     return;
 Lf88:
     io_poll(0x40);

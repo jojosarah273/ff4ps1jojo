@@ -17,7 +17,7 @@ void func_80162A70(void)
     txt_draw(0x33C4);
     latch_cur();
     txt_draw(0x34CA);
-    func_8015329C();
+    config_row_5329c();
     return;
 L162AD8:
     page_paint2(0x390A);

@@ -77,7 +77,7 @@ Le5c:
     cell_put(0xA9);
     cell_push_c8(0xA9);
     row_page_cur();
-    func_80152224();
+    config_banner_96();
     row_close();
     cell_draw(0x2015);
     txt_set(0x29A2);

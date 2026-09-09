@@ -25,7 +25,7 @@ L138d38:
     L138DA8:
         battle_rows_29();
         cell_clear_bank(0x1A88);
-        func_80126528();
+        config_row_26528();
         latch(0x17);
         cell_pull_c8_lo(0x212C);
         cell_flags_clr4();
@@ -38,7 +38,7 @@ L138d38:
         wnd_open(0x4010);
     L138E08:
         draw_pad(0x310);
-        func_8011F724();
+        row_latch_7e();
         func_80139CA4();
         wnd_open(0x3188);
         func_80126070();
@@ -77,7 +77,7 @@ L138d38:
         func_8012B168();
         animation_row_310();
         func_801264C0();
-        func_80126528();
+        config_row_26528();
         anim_noop();
         continue;
     }

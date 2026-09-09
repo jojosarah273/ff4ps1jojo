@@ -94,7 +94,7 @@ L2becc:
         latch_cur();
         page(0x5D);
         draw_pad(0x300);
-        func_8011F724();
+        row_latch_7e();
         continue;
     L2C088:
         latch(0xFF);

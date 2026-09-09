@@ -98,7 +98,7 @@ L0ec:
 L124:
     sep();
     row_page(0xC5);
-    func_80152224();
+    config_banner_96();
     cell_put(0xC9);
     sep_a();
     row_page(0xCB);

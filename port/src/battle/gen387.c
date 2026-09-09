@@ -38,7 +38,7 @@ L10e428:
         sep_a();
         row_open_w0();
         txt_draw(0xAD5);
-        func_80115D2C();
+        battle_window_24();
         shop_buy_run();
         page(0x89);
         cell_set50_from54();

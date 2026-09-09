@@ -9,7 +9,7 @@ void func_8015F660(void)
        80065534/80065774. */
     wnd_open_cur();
     latch(1);
-    func_80152224();
+    config_banner_96();
     if (func_800F70BC(0x202) != 0)
         goto L15F6C8;
     latch(0x80);

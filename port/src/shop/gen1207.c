@@ -3,4 +3,4 @@
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80161C48(void) { latch(0xFF); txt_draw(0x357B); latch(0x11); txt_draw(0x34CA); func_8015329C(); }
+void func_80161C48(void) { latch(0xFF); txt_draw(0x357B); latch(0x11); txt_draw(0x34CA); config_row_5329c(); }

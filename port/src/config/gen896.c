@@ -35,6 +35,6 @@ void func_80131534(void)
     func_8011FF40();
     midrow_paint_b();
     func_80122904();
-    func_80126528();
+    config_row_26528();
     return;
 }

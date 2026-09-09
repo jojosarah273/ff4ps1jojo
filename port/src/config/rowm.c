@@ -23,7 +23,7 @@ void func_80136A58(void)
     midrow_paint_b();
     func_8016EA7C();
     func_8012AAC0();
-    func_80126528();
+    config_row_26528();
     func_80120FBC();
     midrow_pad88_run();
     func_80126480();
@@ -42,7 +42,7 @@ Lb24:
     Lb64:
         draw_pad(0x300);
         latch_cur();
-        func_8011F724();
+        row_latch_7e();
         txt_set(0x1B7C);
         draw_pad(0x19A);
         func_801206DC();
@@ -101,7 +101,7 @@ Lc0c:
         midrow_paint_c();
         func_80120DB4();
         func_8012AAC0();
-        func_80126528();
+        config_row_26528();
         func_801352F0();
         func_801264C0();
         func_801263C8();

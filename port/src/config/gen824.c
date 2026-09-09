@@ -10,7 +10,7 @@ void func_8015F5A0(void)
        80065534 gates. */
     wnd_open(3);
     latch(5);
-    func_80152224();
+    config_banner_96();
     txt_draw(0xA9);
     sep_b();
 L15f5e8:

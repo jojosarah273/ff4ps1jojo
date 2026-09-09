@@ -34,7 +34,7 @@ L1136e4:
         for (;;) {
             shop_view_run();
             func_80119AC8();
-            func_80115D2C();
+            battle_window_24();
             page_open(0xAD2);
             poll_t(4);
             if (io_just() == 0)

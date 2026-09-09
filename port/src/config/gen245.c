@@ -20,7 +20,7 @@ Ld78:
         txt_draw(0x16A8);
         func_80122A9C();
         func_80122538();
-        func_80126528();
+        config_row_26528();
         battle_state_dc400();
     }
 Lde8:
@@ -106,7 +106,7 @@ Ldf70:
     animation_row_310();
     func_80122A9C();
     func_80122538();
-    func_80126528();
+    config_row_26528();
     battle_state_dc400();
     battle_mode_dispatch();
     return;

@@ -19,7 +19,6 @@
 
 
 extern int func_80114C98();
-extern int func_80115A34();
 
 void func_80114BC0(void)
 
@@ -44,7 +43,7 @@ void func_80114BC0(void)
     draw_pad(0x78);
     row_info(0xe);
     draw_pad(0x150);
-    func_80115A34();
+    battle_item_rows();
     page(0x2e);
     cell_step();
     tail(0x2e);

@@ -41,7 +41,7 @@ L10f9a4:
         poll_pair(0xF1);
         goto L10FA7C;
     L10FA34:
-        func_80115D2C();
+        battle_window_24();
         page(0x89);
         poll_t(0x138);
         if (io_just() == 0)

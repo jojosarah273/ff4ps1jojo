@@ -23,7 +23,7 @@ L139654:
     page(0x5A);
     draw_pad(0x300);
     sep();
-    func_8011F724();
+    row_latch_7e();
     func_80176BFC();
     return;
 }

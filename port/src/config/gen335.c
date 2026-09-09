@@ -44,7 +44,7 @@ L1313F8:
     cell_put(0x45);
     page(0x45);
     sep();
-    func_8011F724();
+    row_latch_7e();
 L131498:
     row_done();
     row_prep(0x20);

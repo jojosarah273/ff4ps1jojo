@@ -18,7 +18,7 @@ void func_8016097C(void)
 L1609C4:
     wnd_open_cur();
     latch(2);
-    func_80152224();
+    config_banner_96();
     cell_cursor_dec();
     latch(0xF8);
     txt_draw(0x26D4);

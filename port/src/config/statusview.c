@@ -19,7 +19,7 @@ void func_801652FC(void)
     sep();
     row_page(0xB1);
     func_80152BC4();
-    func_80152224();
+    config_banner_96();
     sep_a();
     cell_poke0(cell_state(0xB1));
     cell_put(0xAF);

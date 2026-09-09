@@ -146,11 +146,24 @@ NM = {
     "8017559C": "shop_buy_list",
     "801928E8": "event_spin_wait",
     "801973B8": "anim_cmd_header",
+    # ---- Block A batch 3 ----
+    "80107C98": "config_sub_screen",
+    "80107F3C": "config_confirm_loop_a",
+    "8011416C": "cell_fill_aa",
+    "8011581C": "battle_rows_300",
+    "80115A34": "battle_item_rows",
+    "80115D2C": "battle_window_24",
+    "8011F724": "row_latch_7e",
+    "801221EC": "config_row_221ec",
+    "80123BD8": "shop_rows_37",
+    "801264E8": "config_row_7800",
+    "80126528": "config_row_26528",
+    "801312BC": "ability_rows_29",
+    "80152224": "config_banner_96",
+    "8015329C": "config_row_5329c",
+    "8018AC90": "self_test_loop",
+    "8018F0C8": "anim_reg_stub",
 }
-
-
-
-
 # ids whose extern declarations should be dropped (declared by the header)
 HEADER = Path(__file__).resolve().parent.parent / "port/include/ff4_window.h"
 

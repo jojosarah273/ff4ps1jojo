@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8011581C.
- * Ground truth: src/func_8011581C.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_300.
+ * Ground truth: src/battle_rows_300.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8011581C(void)
+void battle_rows_300(void)
 {
     /* battle rows: 0x300/0x7A cells, 801714C4 picker; loop L1158A4
        on 4248(0xF)/4120(0x202). */

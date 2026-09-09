@@ -48,7 +48,7 @@ void func_80132CFC(void)
     tail(0xCD);
     func_80120DB4();
     func_801228B4();
-    func_80126528();
+    config_row_26528();
     row_page(0xE7);
     row_sel_cell_cur();
     cell_put(0x43);
@@ -107,7 +107,7 @@ void func_80132CFC(void)
     latch(0x7A);
     cell_pull_c8_lo(0x210A);
     func_80122A9C();
-    func_80126528();
+    config_row_26528();
     cell_clear_bank(0x1B1F);
     return;
 }

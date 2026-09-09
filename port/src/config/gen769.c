@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80123BD8.
- * Ground truth: src/func_80123BD8.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_rows_37.
+ * Ground truth: src/shop_rows_37.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80123BD8(void)
+void shop_rows_37(void)
 {
     /* shop rows: 0x37/0x29/0x45 windows, 801222C4 row; loop L123C54
        on 5DA0(0x37)/5B8C(0x202). */

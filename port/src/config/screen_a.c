@@ -378,7 +378,7 @@ q8D8:
             row_sync();
             wnd_open_cur();
             latch(7);
-            func_80152224();
+            config_banner_96();
             tail(0xAD);
             row_done();
             row_prep(0x20);

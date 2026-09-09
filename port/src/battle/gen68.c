@@ -53,7 +53,7 @@ L10f6ac:
         open_row(4);
     L10F81C:
         cell_clear_pad();
-        func_8011416C();
+        cell_fill_aa();
         latch(1);
         cell_put(0xD5);
         func_8010543C();

@@ -9,7 +9,7 @@ void func_8015F6F0(void)
        80065774/80065534 rows; 5C64(0x202) gate. */
     wnd_open_cur();
     latch(2);
-    func_80152224();
+    config_banner_96();
     if (func_800F70BC(0x202) != 0)
         goto L15F758;
     latch(0x20);

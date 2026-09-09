@@ -230,8 +230,6 @@ uint32_t func_801031F0() { return 0; }
 uint32_t func_80105230() { return 0; }
 uint32_t func_80109D68() { return 0; }
 uint32_t func_801111C4() { return 0; }
-uint32_t func_8011416C() { return 0; }
-uint32_t func_80115D2C() { return 0; }
 uint32_t func_8011EADC() { return 0; }
 uint32_t func_8011EB1C() { return 0; }
 uint32_t func_8011EB5C() { return 0; }
@@ -266,7 +264,6 @@ uint32_t func_801263C8() { return 0; }
 uint32_t func_801263F0() { return 0; }
 uint32_t func_80126458() { return 0; }
 uint32_t func_801264C0() { return 0; }
-uint32_t func_80126528() { return 0; }
 uint32_t func_801266A0() { return 0; }
 uint32_t func_801266C8() { return 0; }
 uint32_t func_80129808() { return 0; }
@@ -386,7 +383,6 @@ uint32_t func_80189B8C() { return 0; }
 uint32_t func_8018AAC4() { return 0; }
 uint32_t func_8018AB08() { return 0; }
 uint32_t func_8018ABE8() { return 0; }
-uint32_t func_8018AC90() { return 0; }
 uint32_t func_8018ACF8() { return 0; }
 uint32_t func_8018B16C() { return 0; }
 uint32_t func_8018B1C8() { return 0; }
@@ -408,7 +404,6 @@ uint32_t func_8018E4B8() { return 0; }
 uint32_t func_8018E4E8() { return 0; }
 uint32_t func_8018F078() { return 0; }
 uint32_t func_8018F098() { return 0; }
-uint32_t func_8018F0C8() { return 0; }
 uint32_t func_8018F0E8() { return 0; }
 uint32_t func_8018F538() { return 0; }
 uint32_t func_8018F688() { return 0; }

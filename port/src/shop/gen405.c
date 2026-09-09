@@ -4,8 +4,6 @@
  */
 #include "ff4_window.h"
 
-
-extern void func_8015329C(void);
 void func_80161900(void) {
     cell_clear_bank(0x357C);
     wnd_open(0xA);
@@ -28,7 +26,7 @@ void func_80161900(void) {
     page(0xA6);
     latch(0x22);
     cell_draw(0x2051);
-    func_8015329C();
+    config_row_5329c();
     latch(0x36);
     txt_draw(0x34CA);;
 }

@@ -9,22 +9,22 @@ void func_8018FA00(void)
        rows with 8018F0C8 polls; returns at L18FC9C. */
     if (func_80190004(1) != 0)
         goto L18FA74;
-    func_8018F0C8();
+    anim_reg_stub();
     goto L18FC9C;
 L18FA74:
     if (func_80190078() == 0)
         goto L18FAB4;
-    func_8018F0C8();
+    anim_reg_stub();
     goto L18FC9C;
 L18FAB4:
     if (func_80190004(1) != 0)
         goto L18FB0C;
-    func_8018F0C8();
+    anim_reg_stub();
     goto L18FC9C;
 L18FB0C:
     if (io_just() != 0)
         goto L18FB30;
-    func_8018F0C8();
+    anim_reg_stub();
 L18FB30:
     if (io_just() == 0)
         goto L18FC44;
@@ -34,7 +34,7 @@ L18FB30:
         func_80190088();
         if (io_just() != 0)
             goto L18FC2C;
-        func_8018F0C8();
+        anim_reg_stub();
         goto L18FC2C;
     L18FC2C:
         if (io_just() == 0)
@@ -49,7 +49,7 @@ L18FC44:
 L18FC6C:
     if (io_just() != 0)
         goto L18FC9C;
-    func_8018F0C8();
+    anim_reg_stub();
     return;
 L18FC9C:
     return;

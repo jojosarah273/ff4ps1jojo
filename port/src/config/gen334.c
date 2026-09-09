@@ -19,7 +19,7 @@ L135054:
     for (;;) {
         func_80123FB4();
         func_80134FBC();
-        func_80126528();
+        config_row_26528();
         func_80126458();
         func_801264C0();
     L13507C:
@@ -36,7 +36,7 @@ L135054:
         func_8011F6D4();
         func_80125934();
         midrow_pad88_run();
-        func_801264E8();
+        config_row_7800();
         battle_state_dc400();
         midrow_degen();
         row_page(1);
