@@ -41,8 +41,9 @@ void battle_itemcast_run(void)
         cell_step();
         poll_t(8);
         if (io_just() != 0)
-            goto cast_list;
+            break;
     }
+cast_list:
 confirm:
     txt_set(0x38E6);
     io_poll(3);
