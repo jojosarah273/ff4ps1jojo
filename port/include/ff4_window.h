@@ -30,7 +30,10 @@ void row_open(void);                     /* 800F9330                  */
 void row_open2(void);                    /* 800F926C/9298/9448        */
 void row_close(void);                    /* 800F95A0                  */
 void row_done(void);                     /* 800F960C                  */
-void row_sel_cell(void);                 /* 800F5140/4F4C             */
+void row_sel_cell(uint32_t id);          /* 800F5140                 */
+void row_sel_cell2(uint32_t id);         /* 800F4F4C                 */
+void row_arm_s(uint32_t id);             /* 800F516C                 */
+void row_arm_s2(uint32_t id);            /* 800F5050                 */
 
 /* text */
 void page(uint32_t id);                  /* 800F7270                  */
@@ -77,6 +80,10 @@ void row_sel2_cur(void);                 /* 800F7894()                */
 void row_arm2(uint32_t id);              /* 800F4F28                  */
 
 /* no-arg variants (0-arg call sites in the source) */
+void row_sel_cell_cur(void);
+void row_sel_cell2_cur(void);
+void row_arm_s_cur(void);
+void row_arm_s2_cur(void);
 void tail_cur(void);          /* 800F8D6C()  */
 void wnd_open_cur(void);      /* 800F71DC()  */
 void txt_set_cur(void);       /* 800F6564()  */
