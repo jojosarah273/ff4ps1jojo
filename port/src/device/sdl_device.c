@@ -13,6 +13,8 @@
 #include <string.h>
 #include <SDL2/SDL.h>
 
+#include "ff4_state.h"
+
 #define CELL_W 64
 #define CELL_H 32
 #define BANK_BASE 0x800D0000u
@@ -23,9 +25,7 @@ static uint8_t g_cell[CELL_H][CELL_W][3]; /* RGB per cell */
 static uint32_t g_bank[0x4000];           /* catalog bank sim */
 static int g_cursor;
 
-static uint32_t g_pad;
-static uint32_t g_pressed;
-static uint32_t g_keypress;
+static input_state_t g_in;   /* host input latch (PS1 pad bits) */
 
 uint32_t io_just(void);
 uint32_t poll_go(uint32_t id);
@@ -126,7 +126,7 @@ uint32_t io_just(void)
         jc = 0;
         return 1;
     }
-    return g_keypress;
+    return g_in.keypress;
 }
 uint32_t io_go(void)              { return io_just(); }
 uint32_t gate(uint32_t id)        { (void)id; return io_just(); }
@@ -142,43 +142,43 @@ uint32_t io_press(uint32_t c)     { (void)c; return io_just(); }
 void device_poll_events(void)
 {
     SDL_Event ev;
-    g_pressed = 0;
+    g_in.pressed = 0;
     while (SDL_PollEvent(&ev)) {
         if (ev.type == SDL_KEYDOWN) {
             switch (ev.key.keysym.sym) {
-            case SDLK_UP: g_pad |= 0x10; break;
-            case SDLK_RIGHT: g_pad |= 0x20; break;
-            case SDLK_DOWN: g_pad |= 0x40; break;
-            case SDLK_LEFT: g_pad |= 0x80; break;
-            case SDLK_RETURN: g_pad |= 0x4000; break; /* Cross */
-            case SDLK_ESCAPE: g_pad |= 0x2000; break; /* Circle */
-            case SDLK_q: g_pressed = 1; break;
+            case SDLK_UP: g_in.pad |= 0x10; break;
+            case SDLK_RIGHT: g_in.pad |= 0x20; break;
+            case SDLK_DOWN: g_in.pad |= 0x40; break;
+            case SDLK_LEFT: g_in.pad |= 0x80; break;
+            case SDLK_RETURN: g_in.pad |= 0x4000; break; /* Cross */
+            case SDLK_ESCAPE: g_in.pad |= 0x2000; break; /* Circle */
+            case SDLK_q: g_in.pressed = 1; break;
             default: break;
             }
         }
         if (ev.type == SDL_KEYUP) {
             switch (ev.key.keysym.sym) {
-            case SDLK_UP: g_pad &= ~0x10u; break;
-            case SDLK_RIGHT: g_pad &= ~0x20u; break;
-            case SDLK_DOWN: g_pad &= ~0x40u; break;
-            case SDLK_LEFT: g_pad &= ~0x80u; break;
-            case SDLK_RETURN: g_pad &= ~0x4000u; break;
-            case SDLK_ESCAPE: g_pad &= ~0x2000u; break;
+            case SDLK_UP: g_in.pad &= ~0x10u; break;
+            case SDLK_RIGHT: g_in.pad &= ~0x20u; break;
+            case SDLK_DOWN: g_in.pad &= ~0x40u; break;
+            case SDLK_LEFT: g_in.pad &= ~0x80u; break;
+            case SDLK_RETURN: g_in.pad &= ~0x4000u; break;
+            case SDLK_ESCAPE: g_in.pad &= ~0x2000u; break;
             default: break;
             }
         }
-        if (ev.type == SDL_QUIT) { g_keypress = 0xFF; }
+        if (ev.type == SDL_QUIT) { g_in.keypress = 0xFF; }
     }
     /* headless smoke: inject a confirm press after ~300 poll cycles so
        the menu can advance without real input. */
     {
         static int cyc;
         if (++cyc == 300)
-            g_keypress = 1;
+            g_in.keypress = 1;
         if (cyc > 300)
-            g_keypress = 0;
+            g_in.keypress = 0;
     }
-    g_keypress = (g_pressed || g_pad) ? 1 : g_keypress;
+    g_in.keypress = (g_in.pressed || g_in.pad) ? 1 : g_in.keypress;
 }
 
 void device_render(void)

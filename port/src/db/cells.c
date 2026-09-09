@@ -12,18 +12,43 @@
  */
 #include <stdint.h>
 
+#include "ff4_state.h"
+
 /* ------------------------------------------------------------------ */
 /* exported state (was raw PS1 cells)                                  */
 /* ------------------------------------------------------------------ */
 uint8_t  g_scratch[0x400];       /* 0x1F8003C0 scratch pad (low bytes) */
 uint8_t  g_vram_[0x800];         /* host backing for the 800D bank     */
+uint16_t D_8019ED44;             /* position counter (u16)             */
 uint16_t D_8019ED4C;             /* cell cursor word                   */
 uint32_t D_8019ED50;             /* merged cell word                   */
+uint16_t D_8019ED54;             /* delta register (u16)               */
 uint8_t  D_8019ED68;             /* cursor-show mask byte              */
 uint8_t  g_ticker_byte;          /* the byte D_8019ED40 points at      */
 uint8_t *D_8019ED40 = &g_ticker_byte;
 
 uint32_t catalog_base(uint32_t a0);
+
+/* typed view over the cell register file (see ff4_state.h) */
+void menu_cell_read(menu_cell_state_t *st)
+{
+    st->ticker = (uint32_t)*D_8019ED40;
+    st->pos    = (uint32_t)D_8019ED44;
+    st->cursor = (uint32_t)D_8019ED4C;
+    st->cell   = D_8019ED50;
+    st->delta  = (uint32_t)D_8019ED54;
+    st->mask   = (uint32_t)D_8019ED68;
+}
+
+void menu_cell_apply(const menu_cell_state_t *st)
+{
+    *D_8019ED40 = (uint8_t)st->ticker;
+    D_8019ED44  = (uint16_t)st->pos;
+    D_8019ED4C  = (uint16_t)st->cursor;
+    D_8019ED50  = st->cell;
+    D_8019ED54  = (uint16_t)st->delta;
+    D_8019ED68  = (uint8_t)st->mask;
+}
 
 /* ------------------------------------------------------------------ */
 /* 800F3CC4: merge two bank bytes into the cell word, then add the    */

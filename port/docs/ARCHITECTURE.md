@@ -45,3 +45,23 @@ onto a native host exactly like the SM64-PC / SoH decomp-ports:
 - [ ] renderer seam on SDL2 (Phase C tracks expansion after the native port)
 ```
 gcc -fsyntax-only -I include port/src/panel.h 2>/dev/null; git add -A && git commit -q -m "port: ARCHITECTURE.md — layered source-port plan (SoH/SM64-inspired)" && git push origin main 2>&1 | tail -1; grep -c MATCH /tmp/micro_sweep.log; ls expected/matched | wc -l; tail -1 /tmp/micro_sweep.log
+
+## State layer (readability structures)
+
+The raw PS1 cell registers live in `port/src/db/cells.c` as the flat
+D_8019EDxx globals (the byte-exact bind layer the legacy deck needs).
+New interpreted code and the device layer use the typed views in
+`port/include/ff4_state.h`:
+
+```c
+typedef struct menu_cell_state {
+    uint32_t ticker;  /* D_8019ED40: cursor flash/advance byte */
+    uint32_t pos;     /* D_8019ED44: position counter          */
+    uint32_t cursor;  /* D_8019ED4C: cell cursor offset        */
+    uint32_t cell;    /* D_8019ED50: merged cell word          */
+    uint32_t delta;   /* D_8019ED54: delta register            */
+    uint32_t mask;    /* D_8019ED68: cursor-show mask byte     */
+} menu_cell_state_t;   /* + input_state_t for host input */
+
+menu_cell_read()/menu_cell_apply() are mirrors - same bytes, typed.
+```
