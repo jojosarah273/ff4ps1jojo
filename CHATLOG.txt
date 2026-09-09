@@ -277,3 +277,17 @@ noted as the only lever (idiot-proof: evaluated 12 candidates, 580+
 bytes off even at best rung).
 All pushed.
 ================================================================================
+
+================================================================================
+HEADLESS LEG 14 — PORT WINDOW-POOL EXHAUSTED: 1137 MODULES, 0 FAILURES
+The row-map fleet consumed the entire window-driven pool (src functions
+with >=6 window-call sites; 0 remaining). 1137 .c modules across
+battle/config/shop/anim/event/status/menu + exact-mirror subsystems, whole
+tree gcc -fsyntax-only clean via port/include/ff4_window.h + the auto-fix
+arity loop (cell_peek_v etc). Coverage: ~2000 funcs referenced.
+Byte-match remains 827 (32.9%); the achieved mapping means the port's
+"interpreted deck" is essentially complete for the menu/shop/battle web.
+Next: register machines (interpretation), struct consolidation, platform/
+device layer (SDL boot path), then native integration.
+All pushed.
+================================================================================

@@ -547,16 +547,15 @@ ground-truth reference comment. Format: see `port/FORMAT.md`. Architecture:
 see `port/docs/ARCHITECTURE.md`.
 
 ```
-port/src/
-  gpu/      command-word builders, bit-gather
-  sprite/   tile blits, 5-bit color scaler
-  event/    event-queue primitives
-  math/     trig folds, atan, pan, float-bit compares
-  anim/     tick counters, row drivers
-  battle/   targeting hub, row drivers
-  config/   options/ability rows, config-root driver
-  status/   panel grid, status pane, status init, state dispatch
-  dev/      device command chains
+port/src/       1137 interpreted modules (0 failures, gcc clean)
+  battle/       battle screens, targeting, spell/item-cast, menu root
+  config/       options/status/store/formation screens + root driver
+  shop/         store/confirm/detail screens + buy-sell machine
+  anim/         tickers, row drivers, GPU-cmd rows
+  event/        event queues, confirm dialog, list init
+  status/       panel grid/pane/state + status table init
+  gpu, sprite, math, dev   exact-mirror subsystems
+  mapped via tools/port_rowmap.py + port/include/ff4_window.h
 ```
 
 Byte-match track continues in parallel (ladder lane micro-sweeps).
