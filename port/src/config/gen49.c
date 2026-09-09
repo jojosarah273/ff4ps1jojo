@@ -8,7 +8,7 @@ void func_80122FF4(void)
 L2FFC:
     for (;;) {
         row_page(0xE7);
-        func_801224D0();
+        battle_put43();
         func_8012D1D0();
         if (io_just() == 0)
             goto L3064;
@@ -47,7 +47,7 @@ L311C:
         latch(4);
     L3144:
         cell_put(0xE7);
-        func_801224D0();
+        battle_put43();
         cell_push_c8();
         func_80124EAC();
         txt_set(0x1BB8);
@@ -74,7 +74,7 @@ L31C0:
         sep();
     L31F0:
         cell_put(0xE7);
-        func_801224D0();
+        battle_put43();
         cell_push_c8();
         func_80124EAC();
         txt_set(0x1BB8);
@@ -102,7 +102,7 @@ L3294:
     if (sel(2) != 0)
         goto L32E0;
     row_page(0xE7);
-    func_801224D0();
+    battle_put43();
     cell_push_c8();
 L32D0:
     cell_put(0xE8);

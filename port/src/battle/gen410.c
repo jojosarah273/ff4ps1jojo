@@ -49,6 +49,6 @@ L11035c:
     }
     open_row(0x80);
     open_row(0xC8);
-    func_8011EA5C();
+    battle_wndfx_run();
     return;
 }

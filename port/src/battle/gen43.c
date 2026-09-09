@@ -9,7 +9,7 @@ void func_8010E58C(void)
     func_80103FE8();
     func_80194518();
     func_80194394();
-    func_8017F8F8();
+    battle_mode_dispatch();
     latch(0x22);
     txt_draw(0x2123);
     latch_cur();
@@ -95,6 +95,6 @@ LE7f0:
     txt_draw(0x2123);
     latch_cur();
     txt_draw(0x420C);
-    func_8011EA5C();
+    battle_wndfx_run();
     return;
 }

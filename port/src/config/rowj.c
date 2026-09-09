@@ -28,7 +28,7 @@ void func_8012EC48(void)
     row_sel_cell_cur();
     row_sel_cell2_cur();
     cell_poke0(cell_state(0x45));
-    func_801224D0();
+    battle_put43();
     cell_push_c8();
     func_800F4A7C();
     func_800F4A7C();
@@ -47,7 +47,7 @@ void func_8012EC48(void)
     cell_put(0x3F);
     func_80120F1C();
     draw_pad_cur();
-    func_8011EF30();
+    battle_rows_sync();
     draw_pad(0xDBAB);
     draw_pad_cur();
     wnd_open_cur();
@@ -95,7 +95,7 @@ void func_8012EC48(void)
 Lf4c:
     draw_pad(0xB234);
 Lf54:
-    func_8011FBA4();
+    battle_rows_29();
     cell_push_c8();
     txt_draw(0x1B7F);
     if (gate(0x80) != 0)
@@ -105,7 +105,7 @@ Lf54:
 Lf90:
     draw_pad(0xB23C);
 Lf98:
-    func_8011FBA4();
+    battle_rows_29();
     cell_push_c8();
     txt_draw(0x1B80);
     if (gate(0x80) != 0)
@@ -115,22 +115,22 @@ Lf98:
 Lfd4:
     draw_pad(0xB244);
 Lfdc:
-    func_8011FBA4();
+    battle_rows_29();
     row_page(0xE8);
     func_8012D204();
     io_poll(0x12);
     if (io_just() == 0)
         goto L01c;
     draw_pad(0xB22C);
-    func_8011FBA4();
+    battle_rows_29();
 L01c:
     func_80120FBC();
     draw_pad_cur();
-    func_8011EF30();
+    battle_rows_sync();
 L03c:
     for (;;) {
         txt_set(0x1B81);
-        func_801224D0();
+        battle_put43();
         txt_cell(0x1B7E);
         if (gate(0x8080) != 0)
             break;
@@ -158,7 +158,7 @@ L03c:
     func_801228B4();
     row_page(0xE7);
     row_sel_cell_cur();
-    func_801224D0();
+    battle_put43();
     row_prep(0x20);
     row_prep_close();
     draw_pad_cur();
@@ -192,7 +192,7 @@ L03c:
     func_80120E2C();
     row_page(0xE7);
     row_sel_cell_cur();
-    func_801224D0();
+    battle_put43();
     row_prep(0x20);
     row_prep_close();
     wnd_open_cur();

@@ -42,7 +42,7 @@ L118d80:
             continue;
         break;
     }
-    func_8011EA5C();
+    battle_wndfx_run();
     return;
 L118E40:
     wnd_open_cur();
@@ -63,6 +63,6 @@ L118e48:
             continue;
         break;
     }
-    func_8011EA5C();
+    battle_wndfx_run();
     return;
 }

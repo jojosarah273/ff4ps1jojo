@@ -4,16 +4,6 @@
  */
 #include "ff4_window.h"
 
-
-
-
-
-
-
-
-
-extern int func_80152CDC();
-
 void func_8015C54C(void)
 
 {
@@ -23,7 +13,7 @@ void func_8015C54C(void)
   io_poll(0xff);
   iVar1 = io_just();
   if (iVar1 == 0) {
-    func_80152CDC();
+    options_rows_run();
     page(0xa6);
     txt_cell(0x2003);
     row_read(0xc0);

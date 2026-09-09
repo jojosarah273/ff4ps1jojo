@@ -19,7 +19,7 @@ void func_80134AF8(void)
     cell_push_c8();
     row_read(0x1F);
     row_sel_cell_cur();
-    func_801224D0();
+    battle_put43();
     row_prep(0x20);
     cell_push9_bank();
     cell_put_hi9(0x45);

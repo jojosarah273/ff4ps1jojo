@@ -33,7 +33,7 @@ void func_80155C88(void)
     sep_a();
     txt_set(0x35A0);
     row_open_w(5);
-    func_80152CDC();
+    options_rows_run();
     page(0xA6);
     row_page(0xBD);
     if (gate(2) == 0) {
@@ -217,7 +217,7 @@ L394:
     cell_put(0xDF);
     latch(0x14);
     cell_put(0xE1);
-    func_8015240C();
+    options_row_run();
     txt_set(0x35A2);
     cell_put(0xE5);
     draw_pad(0xE030);

@@ -88,7 +88,7 @@ L19f2c:
         latch(0x31);
         wnd_fx_pads();
     L1A1EC:
-        func_8011EA5C();
+        battle_wndfx_run();
         return;
     }
 }

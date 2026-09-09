@@ -14,7 +14,7 @@ void func_80138CB0(void)
     open_row(0xE0);
     func_80120E2C();
     draw_pad_cur();
-    func_8011EF30();
+    battle_rows_sync();
     draw_pad_cur();
     func_8011FB74();
     return;

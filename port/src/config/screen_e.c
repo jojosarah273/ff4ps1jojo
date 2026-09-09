@@ -143,7 +143,7 @@ c38:
     row_sel_cell2_cur();
     cell_poke0(cell_state(cell_bank_sel(0x54)));
     row_sel_cell_cur();
-    func_801224D0();
+    battle_put43();
     txt_cell(0x1440);
     tail(0x4B);
     if (gate(2) != 0)
@@ -155,7 +155,7 @@ c38:
         goto L36C;
 d10:
     txt_set(0x1B37);
-    func_801224D0();
+    battle_put43();
     page(0x4B);
     cell_put(0x43);
     cell_fmt2(0x43);
@@ -354,7 +354,7 @@ L36C:
     func_8011FF40();
     func_801240D0();
     draw_pad_cur();
-    func_8011EF30();
+    battle_rows_sync();
     func_80126458();
 ec:
     row_page(1);

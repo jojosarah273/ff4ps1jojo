@@ -48,7 +48,7 @@ L13978c:
     }
     func_80120E2C();
     draw_pad_cur();
-    func_8011FBA4();
+    battle_rows_29();
     func_80126528();
     return;
 L139874:

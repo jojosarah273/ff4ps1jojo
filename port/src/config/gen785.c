@@ -11,7 +11,7 @@ void func_80157148(void)
     cell_put(0xDF);
     latch(3);
     cell_put(0xE1);
-    func_8015240C();
+    options_row_run();
     page(0xE3);
     draw_pad(0x80);
 L15718c:

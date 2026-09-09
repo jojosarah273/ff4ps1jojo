@@ -13,7 +13,6 @@
 
 extern int func_801035B0();
 extern int func_8011AB18();
-extern int func_8011EA5C();
 
 void func_8010F144(void)
 
@@ -32,7 +31,7 @@ void func_8010F144(void)
   txt_set(0x1727);
   func_8011AB18();
   func_801035B0();
-  func_8011EA5C();
+  battle_wndfx_run();
   return;
 }
 

@@ -94,7 +94,7 @@ L288:
             goto L614;
         func_80120FBC();
         draw_pad_cur();
-        func_8011EF30();
+        battle_rows_sync();
         func_80126458();
         func_801263F0();
         page_paint2(0x1BAD);
@@ -171,7 +171,7 @@ L288:
             goto L86c;
         txt_set(0x1B37);
         row_sel_cell_cur();
-        func_801224D0();
+        battle_put43();
         txt_draw(0x1B1D);
         txt_draw(0x1B1E);
         func_8013389C();

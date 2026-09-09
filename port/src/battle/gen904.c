@@ -24,6 +24,6 @@ L119E1C:
     latch(0xF);
     txt_draw(0x2100);
     cell_flags_clr4();
-    func_8011EA5C();
+    battle_wndfx_run();
     return;
 }

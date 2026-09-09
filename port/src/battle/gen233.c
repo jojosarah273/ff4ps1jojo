@@ -50,7 +50,7 @@ Leba4:
     }
     latch_cur();
     stat_sync();
-    func_8017F8F8();
+    battle_mode_dispatch();
     for (;;) {
         func_80194700();
         func_80194394();
@@ -115,8 +115,8 @@ Lee34:
     func_801745F4();
     latch(0x81);
     txt_draw(0x4200);
-    func_8011EA5C();
-    func_8017F8F8();
+    battle_wndfx_run();
+    battle_mode_dispatch();
     for (;;) {
         func_80194700();
         func_80194394();

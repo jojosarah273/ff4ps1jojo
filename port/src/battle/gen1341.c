@@ -12,9 +12,9 @@ L11ec58:
     for (;;) {
         func_8016EA9C();
         func_80123D3C();
-        func_8017F8F8();
-        func_8017F8F8();
-        func_8017F8F8();
+        battle_mode_dispatch();
+        battle_mode_dispatch();
+        battle_mode_dispatch();
     L11ecd0:
         for (;;) {
             func_80194700();

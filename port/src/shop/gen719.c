@@ -21,7 +21,7 @@ L160824:
     }
 L160864:
     row_page(0xA9);
-    func_80152CDC();
+    options_rows_run();
     latch(3);
     func_8015310C();
     page_open(0x3598);

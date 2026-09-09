@@ -92,11 +92,11 @@ Ldf70:
     battle_wait_just(0x7E7E);
     row_prep_close();
     row_page(0xD9);
-    func_801224D0();
+    battle_put43();
     txt_cell(0x16B9);
     cell_cursor_dec();
     row_page(0xDA);
-    func_801224D0();
+    battle_put43();
     txt_cell(0x16B9);
     cell_pull_c8(0x16B9);
     row_close2();
@@ -108,6 +108,6 @@ Ldf70:
     func_80122538();
     func_80126528();
     func_8011EF0C();
-    func_8017F8F8();
+    battle_mode_dispatch();
     return;
 }

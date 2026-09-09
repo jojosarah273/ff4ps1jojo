@@ -23,7 +23,7 @@ void func_801287B8(void)
     row_info(0x29);
 L12882C:
     draw_pad_cur();
-    func_8011EF30();
+    battle_rows_sync();
     draw_pad_cur();
     wnd_open(0x82);
     func_8011F8D4();
@@ -90,7 +90,7 @@ L1289D4:
     goto L128AB4;
 L128A98:
     draw_pad_cur();
-    func_8011FBA4();
+    battle_rows_29();
     row_pad();
 L128AB4:
     row_close2();

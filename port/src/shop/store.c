@@ -1,7 +1,7 @@
 /* FF4 source-port — shop/store.c
  *
- * Shop store-row driver (func_8016AB14, exact decode).
- * Ground truth: src/func_8016AB14.c (byte-verified).
+ * Shop store-row driver (shop_store_run, exact decode).
+ * Ground truth: src/shop_store_run.c (byte-verified).
  */
 #include <stdint.h>
 

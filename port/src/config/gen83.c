@@ -23,39 +23,39 @@ L78a4:
 L78b8:
     func_80120E2C();
     draw_pad_cur();
-    func_8011EF30();
+    battle_rows_sync();
     wnd_open(0x394);
     draw_pad_cur();
     func_8011F8D4();
 L78f4:
     func_8011F6A4();
-    func_8017F8F8();
+    battle_mode_dispatch();
     func_80120F1C();
     draw_pad_cur();
-    func_8011EF30();
+    battle_rows_sync();
     draw_pad_cur();
-    func_8011EF30();
+    battle_rows_sync();
     txt_set(0x1B47);
     if (gate(2) != 0)
         goto L7980;
     draw_pad_cur();
-    func_8011FBA4();
+    battle_rows_29();
     goto L7998;
 L7980:
     draw_pad_cur();
-    func_8011FBA4();
+    battle_rows_29();
 L7998:
     draw_pad_cur();
-    func_8011FBA4();
+    battle_rows_29();
     txt_set(0x16A4);
     page_open(0x16A5);
     draw_pad(0xCB2E);
     func_80127538();
     draw_pad_cur();
-    func_8011FBA4();
+    battle_rows_29();
     func_80120FBC();
     draw_pad_cur();
-    func_8011EF30();
+    battle_rows_sync();
     draw_pad_cur();
     wnd_open(0x676);
     func_8011F8D4();
@@ -71,7 +71,7 @@ L7998:
     if (gate(2) != 0)
         goto L7a8c;
     /* bnez -> L7a8c */
-    func_80127F2C();
+    status_panel_install_labels();
 L7a8c:
     func_80126590();
     cell_clear_bank(0x1B46);

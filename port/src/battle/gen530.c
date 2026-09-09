@@ -36,6 +36,6 @@ L113e84:
         break;
     }
     func_800FE8B4();
-    func_8011EA5C();
+    battle_wndfx_run();
     return;
 }

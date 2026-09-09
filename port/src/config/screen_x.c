@@ -116,7 +116,7 @@ Lfb8:
     cell_put(0xDF);
     latch(3);
     cell_put(0xE1);
-    func_8015240C();
+    options_row_run();
     page(0xE3);
     sep();
     for (;;) {

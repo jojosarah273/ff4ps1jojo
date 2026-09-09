@@ -1,9 +1,9 @@
 /* FF4 source-port — battle/monster.c
  *
- * Monster status rows (func_8016E0F8, exact decode): the 0x95 window
+ * Monster status rows (monster_status_run, exact decode): the 0x95 window
  * and 0x300..0x303 stat cells, with the 0x2384/0x2383/0x2483 variant
  * labels and the 0x96 press-poll loop.
- * Ground truth: src/func_8016E0F8.c (byte-verified).
+ * Ground truth: src/monster_status_run.c (byte-verified).
  */
 #include <stdint.h>
 

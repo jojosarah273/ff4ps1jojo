@@ -16,7 +16,7 @@ LDCD4:
         txt_cell(0x3560);
         if (gate(2) == 0)
             goto LDFA8;
-        func_80152CDC();
+        options_rows_run();
         page(0xA6);
         txt_cell(0x2003);
         row_read(0xC0);

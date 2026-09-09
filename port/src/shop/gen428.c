@@ -24,7 +24,7 @@ L16386c:
         txt_cell(0x3540);
         if (gate(0x202) != 0)
             break;
-        func_80152CDC();
+        options_rows_run();
         page(0xA6);
         sep_b();
         txt_cell(0x202F);

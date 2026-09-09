@@ -1,7 +1,7 @@
 /* FF4 source-port — battle/partyscreen.c
  *
- * Party/ability screen (func_8013B95C, exact decode).
- * Ground truth: src/func_8013B95C.c (byte-verified).
+ * Party/ability screen (cell_step2, exact decode).
+ * Ground truth: src/cell_step2.c (byte-verified).
  */
 #include <stdint.h>
 

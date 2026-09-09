@@ -3,7 +3,7 @@
  * The shop view/row drivers: window chains over the 0x82/0x79/0x80 pad
  * windows with the buy-command gates. Exact mirrors.
  *
- * Ground truth: src/func_800FD85C.c, 800FD914, 800FB09C
+ * Ground truth: src/shop_rows_run.c, 800FD914, 800FB09C
  * (byte-verified; asm order mirrored 1:1).
  */
 #include <stdint.h>

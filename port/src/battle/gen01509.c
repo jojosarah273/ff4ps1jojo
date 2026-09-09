@@ -4,13 +4,11 @@
  */
 #include "ff4_window.h"
 
-extern int func_8011EA5C();
-
 void func_8010F11C(void)
 
 {
   cell_clear_bank(0x171c);
-  func_8011EA5C();
+  battle_wndfx_run();
   return;
 }
 

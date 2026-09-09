@@ -13,8 +13,8 @@ void func_801038D4(void)
     func_80103A28();
     wnd_open(0x198);
     tail(0x5A);
-    func_8017F8F8();
-    func_8017F8F8();
+    battle_mode_dispatch();
+    battle_mode_dispatch();
     func_80103F94();
     func_80103B98();
     wnd_open_cur();

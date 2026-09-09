@@ -11,7 +11,7 @@ void func_80131358(void)
     txt_set(0x1B9B);
     cell_cursor_dec();
     row_sync();
-    func_801224D0();
+    battle_put43();
     txt_cell(0x1B8B);
     if (gate(0x202) != 0)
         goto L1313F8;

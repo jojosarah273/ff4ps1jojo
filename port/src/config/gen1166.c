@@ -17,7 +17,7 @@ void func_80137B18(void)
     func_80127408();
     func_801210AC();
     draw_pad(*D_80199230);
-    func_8011FBA4();
+    battle_rows_29();
     func_80126330();
     func_801241B8();
     latch(1);

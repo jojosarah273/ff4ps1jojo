@@ -1,10 +1,10 @@
 /* FF4 source-port — status/status_pane.c
  *
- * Full interpretation of func_80138458.
+ * Full interpretation of status_pane_build.
  *
  * The status pane layout: 8 slots cleared in the catalog bank, then the
  * label recipe painted over the D_801DED8C pane record (u16 text codes).
- * Ground truth: src/func_80138458.c (byte-verified).
+ * Ground truth: src/status_pane_build.c (byte-verified).
  */
 #include <stdint.h>
 

@@ -104,7 +104,7 @@ L6460:
         latch(0xFF);
         cell_pull_c8(0x9D5);
         for (;;) {
-            if (func_80116720() != 0)
+            if (menu_screen_tramp() != 0)
                 return;
             cell_dec_bank(0xA15);
             if (poll_go(0x202) != 0)

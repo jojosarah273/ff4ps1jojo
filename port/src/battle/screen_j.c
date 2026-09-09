@@ -9,7 +9,7 @@ void func_801569EC(void)
     cell_put(0xDF);
     latch(0x14);
     cell_put(0xE1);
-    func_8015240C();
+    options_row_run();
     txt_set(0x35A1);
     cell_put(0xE5);
     draw_pad(0xE030);
@@ -31,7 +31,7 @@ void func_801569EC(void)
     cell_put(0xDF);
     latch(0x28);
     cell_put(0xE1);
-    func_8015240C();
+    options_row_run();
     cell_fmt2(0xE3);
     row_info(0x9A);
     row_info(0x9E);
@@ -78,7 +78,7 @@ Lc0c:
     cell_put(0xDF);
     latch(0xA0);
     cell_put(0xE1);
-    func_8015240C();
+    options_row_run();
     cell_fmt2(0xE3);
     row_info(0x9A);
     latch(0xA);
@@ -96,7 +96,7 @@ Lc64:
         cell_put(0xDF);
         latch(4);
         cell_put(0xE1);
-        func_8015240C();
+        options_row_run();
         page(0xE3);
         cell_fmt2(0x9A);
         latch(4);
@@ -206,7 +206,7 @@ Lfc8:
     cell_put(0xDF);
     latch(0x14);
     cell_put(0xE1);
-    func_8015240C();
+    options_row_run();
     page(0xE3);
     sep();
     row_info(0xA9);
@@ -229,7 +229,7 @@ Lfc8:
     cell_put(0xDF);
     latch(0x3C);
     cell_put(0xE1);
-    func_8015240C();
+    options_row_run();
     txt_set(0x35A0);
     row_sel_cell_cur();
     sep_a();

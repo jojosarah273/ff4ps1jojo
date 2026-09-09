@@ -94,6 +94,6 @@ L5254:
         break;
     }
     open_row(0xE3);
-    func_8011EA5C();
+    battle_wndfx_run();
     return;
 }

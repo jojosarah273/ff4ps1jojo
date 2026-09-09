@@ -1,9 +1,9 @@
 /* FF4 source-port — battle/itemcast.c
  *
- * Battle item/stat-cast root (func_80149614, exact decode): confirm
+ * Battle item/stat-cast root (cast_alt2, exact decode): confirm
  * key 0x8C, the 0x29B5 item list poll, then the cast rows with the
  * 0x38E6 confirm screens; commits via 801495F4/8014D568.
- * Ground truth: src/func_80149614.c (byte-verified).
+ * Ground truth: src/cast_alt2.c (byte-verified).
  */
 #include <stdint.h>
 

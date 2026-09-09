@@ -82,16 +82,16 @@ L7e88:
     func_801221EC();
     func_801210AC();
     draw_pad_cur();
-    func_8011EF30();
+    battle_rows_sync();
     draw_pad_cur();
     goto L7ed8;
 L7ec0:
     draw_pad_cur();
 L7ed8:
-    func_8011FBA4();
+    battle_rows_29();
     func_80138788();
     /* v1/v0 + s2 branches */
-    func_80138458();
+    status_pane_build();
     func_80177DEC();
     func_80177DEC();
     func_80177DEC();
@@ -102,9 +102,9 @@ L7ed8:
     func_801221EC();
     func_801210AC();
     draw_pad_cur();
-    func_8011EF30();
+    battle_rows_sync();
     draw_pad_cur();
-    func_8011FBA4();
+    battle_rows_29();
     func_80138788();
     /* v1/v0 + s2 branches */
     func_8013836C();
@@ -129,7 +129,7 @@ L7fcc:
     goto L7c24;
 L80dc:
     draw_pad_cur();
-    func_8011EF30();
+    battle_rows_sync();
     draw_pad_cur();
     func_80126610();
     func_80138788();

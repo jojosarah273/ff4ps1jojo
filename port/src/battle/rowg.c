@@ -169,7 +169,7 @@ Lc64:
         txt_set(0xFE1);
         draw_pad(0x40);
         func_8010D0D8();
-        func_8017F8F8();
+        battle_mode_dispatch();
         return;
     }
 }

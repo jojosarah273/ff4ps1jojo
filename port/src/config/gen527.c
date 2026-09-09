@@ -11,13 +11,13 @@ void func_80120A0C(void)
     if (sel(0x202) == 0)
         return;
     poll_spin();
-    func_801224D0();
+    battle_put43();
     row_sel_cell_cur();
     cell_put(0x45);
     row_sel_cell_cur();
     row_sel_cell2_cur();
     cell_poke0(cell_state(0x45));
-    func_801224D0();
+    battle_put43();
     row_prep(0x20);
     sep_a();
     cell_peek0(cell_state(0x29));

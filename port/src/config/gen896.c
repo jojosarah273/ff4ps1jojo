@@ -24,13 +24,13 @@ void func_80131534(void)
     txt_draw(0x1A86);
     func_80120F94();
     draw_pad_cur();
-    func_8011EF30();
+    battle_rows_sync();
     func_80130884();
     func_8012F9D0();
     func_80130C74();
     func_8012B168();
     func_80126458();
-    func_8017F8F8();
+    battle_mode_dispatch();
     func_8011F6A4();
     func_8011FF40();
     func_80120E2C();

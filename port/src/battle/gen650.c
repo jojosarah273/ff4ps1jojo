@@ -32,17 +32,17 @@ L118f78:
             continue;
         break;
     }
-    func_8011EA5C();
+    battle_wndfx_run();
     return;
 L118FD0:
     page_paint(0x1033);
     page_paint(0x1034);
-    func_8011EA5C();
+    battle_wndfx_run();
     return;
 L118FF0:
     latch_cur();
     cell_pull_c8(0x1440);
     cell_pull_c8(0x1441);
-    func_8011EA5C();
+    battle_wndfx_run();
     return;
 }

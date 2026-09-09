@@ -4,15 +4,12 @@
  */
 #include "ff4_window.h"
 
-
-extern int func_801224D0();
-
 void func_8013B804(void)
 
 {
-  func_801224D0();
+  battle_put43();
   cell_push_c8(0x14ff9d);
-  func_801224D0();
+  battle_put43();
   txt_cell(0x16b9);
   return;
 }

@@ -1,9 +1,9 @@
 /* FF4 source-port — shop/machine.c
  *
- * Shop buy/sell state machine (func_8016DD9C, exact decode): the
+ * Shop buy/sell state machine (shop_machine_run, exact decode): the
  * s5/s0 latch loop drives the DB38/DB94 rows and the 80177DAC
  * feeder.
- * Ground truth: src/func_8016DD9C.c (byte-verified).
+ * Ground truth: src/shop_machine_run.c (byte-verified).
  */
 #include <stdint.h>
 

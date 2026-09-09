@@ -20,7 +20,6 @@
 
 extern int func_80114C98();
 extern int func_80115A34();
-extern int func_8011EA5C();
 
 void func_80114BC0(void)
 
@@ -52,7 +51,7 @@ void func_80114BC0(void)
     poll_t(0x78);
     iVar1 = io_just();
   } while (iVar1 == 0);
-  func_8011EA5C();
+  battle_wndfx_run();
   return;
 }
 

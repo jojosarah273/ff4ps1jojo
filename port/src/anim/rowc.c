@@ -12,7 +12,7 @@ void func_80177DEC(void)
     func_801928E8();
     func_80194988();
     func_8017841C();
-    func_80178C14();
+    status_table_init();
     func_8011EF0C();
     func_800FEF7C();
     func_801947B8();

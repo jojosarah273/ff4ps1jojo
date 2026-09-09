@@ -51,7 +51,7 @@ list8_loop:
             goto L558;
         latch(2);
     L558:
-        func_801224D0();
+        battle_put43();
         txt_cell(0x1B7E);
         if (gate(0x80) != 0)
             continue;
@@ -77,7 +77,7 @@ L5a0:
             goto L600;
         sep();
     L600:
-        func_801224D0();
+        battle_put43();
         txt_cell(0x1B7E);
         if (gate(0x80) != 0)
             continue;
@@ -196,7 +196,7 @@ L8e0:
             goto L940;
         sep();
     L940:
-        func_801224D0();
+        battle_put43();
         txt_cell(0x1B7E);
         if (gate(0x80) != 0)
             continue;

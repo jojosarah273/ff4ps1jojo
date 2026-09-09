@@ -17,7 +17,7 @@ Lacac:
         if (gate(0x202) != 0)
             goto Lad1c;
         row_page(0xA9);
-        func_80152CDC();
+        options_rows_run();
         page(0xA6);
         txt_cell(0x2003);
         row_read(0xC0);
@@ -98,7 +98,7 @@ Lacac:
             if (gate(0x202) != 0)
                 goto Laff8;
             row_page(0xA9);
-            func_80152CDC();
+            options_rows_run();
             page(0xA6);
             txt_cell(0x2003);
             row_read(0xC0);

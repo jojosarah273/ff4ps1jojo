@@ -11,7 +11,7 @@ void func_801387D8(void)
     row_sel_cell_cur();
     row_sel_cell2_cur();
     cell_poke0(cell_state(0x4E));
-    func_801224D0();
+    battle_put43();
     cell_put(0x4E);
     row_prep(0x20);
     cell_put_hi9(0x4F);

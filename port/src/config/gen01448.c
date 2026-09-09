@@ -1,18 +1,18 @@
-/* FF4 source-port — interpreted module for func_80152CDC.
- * Ground truth: src/func_80152CDC.c (byte-verified).
+/* FF4 source-port — interpreted module for options_rows_run.
+ * Ground truth: src/options_rows_run.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80152CDC(void)
+void options_rows_run(void)
 {
     /* options: 3C3C/3B04(0x2000) gates; 4x 8015240C + 8015236C
        rows. */
     cell_state_of();
     cell_state(0x2000);
-    func_8015240C();
-    func_8015240C();
-    func_8015240C();
-    func_8015240C();
+    options_row_run();
+    options_row_run();
+    options_row_run();
+    options_row_run();
     func_8015236C();
     return;
 }

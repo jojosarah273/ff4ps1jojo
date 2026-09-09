@@ -15,9 +15,9 @@ void func_8012BA14(void)
     func_8011EF0C();
     func_801210AC();
     draw_pad_cur();
-    func_8011EF30();
+    battle_rows_sync();
     draw_pad_cur();
-    func_8011FBA4();
+    battle_rows_29();
     txt_set(0x1B22);
     if (gate(2) != 0)
         goto L12BAB4;
@@ -29,7 +29,7 @@ L12BAB4:
     draw_pad_cur();
 L12BAC8:
     txt_draw(0x1BC1);
-    func_8011EF30();
+    battle_rows_sync();
     cell_clear_bank(0x1BC3);
     func_8012B950();
     return;

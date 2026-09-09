@@ -26,6 +26,6 @@ L118b30:
 L118B58:
     func_80117594();
     cell_pull_c8(0x1560);
-    func_8011EA5C();
+    battle_wndfx_run();
     return;
 }

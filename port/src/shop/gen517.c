@@ -15,7 +15,7 @@ void func_80162BD0(void)
     sep_a();
     row_open_w(5);
 L162C10:
-    func_80152CDC();
+    options_rows_run();
     page(0xA6);
     txt_cell(0x2005);
     row_read(0xFD);

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8011FBA4.
- * Ground truth: src/func_8011FBA4.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_29.
+ * Ground truth: src/battle_rows_29.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8011FBA4(void)
+void battle_rows_29(void)
 {
     /* rows: 0x29/0x100 windows, 8011FD34 close; 3F94(3C3C(0x29))
        + 926C/9298/9330 preps. */

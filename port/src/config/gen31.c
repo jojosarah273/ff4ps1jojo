@@ -36,7 +36,7 @@ L5634:
         cell_pull_c8_sel2(0x51);
         func_80136174();
         row_sync();
-        func_801224D0();
+        battle_put43();
         cell_push_c8();
         if (gate(0x8080) != 0)
             goto L58b0;

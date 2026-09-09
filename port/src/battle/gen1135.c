@@ -22,6 +22,6 @@ void func_80119860(void)
     func_801175C4();
     cell_step();
     label(0x9D5);
-    func_8011EA5C();
+    battle_wndfx_run();
     return;
 }

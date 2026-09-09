@@ -64,17 +64,17 @@ void func_801121C4(void)
     cell_put(0x3C);
     func_801766B0();
     /* s2 branch (register) */
-    func_8017F8F8();
-    func_8017F8F8();
-    func_8017F8F8();
-    func_8017F8F8();
+    battle_mode_dispatch();
+    battle_mode_dispatch();
+    battle_mode_dispatch();
+    battle_mode_dispatch();
     for (;;) {
         /* spin on v0 (register) */
     }
     func_8017F9A8();
     func_8017F9A8();
-    func_8017F8F8();
-    func_8017F8F8();
+    battle_mode_dispatch();
+    battle_mode_dispatch();
 L24d0:
     for (;;) {
         func_80194700();
@@ -121,6 +121,6 @@ L24d0:
     func_800FD6E8();
     latch(7);
     shop_rows2_run();
-    func_8011EA5C();
+    battle_wndfx_run();
     return;
 }

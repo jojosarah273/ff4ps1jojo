@@ -102,7 +102,19 @@ NM = {
     "800F5448": "cell_flags_clr4",    "800FB3F8": "wnd_fx_2100",
     "800FE6E4": "battle_gate_early",  "800FD85C": "shop_rows_run",
     "800FD914": "shop_rows2_run",     "800FB09C": "shop_view2_run",
+    # ---- 801x row-gate interpretations (hand modules, this + prior waves) ----
+    "8011EA5C": "battle_wndfx_run",    "801224D0": "battle_put43",
+    "8011EF30": "battle_rows_sync",    "8011FBA4": "battle_rows_29",
+    "8017F8F8": "battle_mode_dispatch","8015240C": "options_row_run",
+    "80152CDC": "options_rows_run",    "8010B010": "state_ok",
+    "801109A8": "battle_spell_run",    "80116720": "menu_screen_tramp",
+    "8011F9C4": "row_prep2_close",     "80127F2C": "status_panel_install_labels",
+    "80138458": "status_pane_build",   "8013B95C": "cell_step2",
+    "80149614": "cast_alt2",           "801539C4": "final_row",
+    "8016AB14": "shop_store_run",      "8016DD9C": "shop_machine_run",
+    "8016E0F8": "monster_status_run",  "80178C14": "status_table_init",
 }
+
 
 
 
@@ -114,15 +126,22 @@ def apply_to_file(path: Path, verbose=False):
     t = path.read_text()
     orig = t
     changed = 0
-    # 1) drop externs for mapped ids (the window header declares them)
+    # 1) drop externs for mapped primitives (the header declares them);
+    #    matches both the raw id form and the already-renamed form
     def drop_extern(m):
         nonlocal changed
         changed += 1
         return ""
+    ids = set(NM.keys())
+    names = set(NM.values())
     pat = re.compile(
-        r"^\s*extern\s+(?:int|void|u32|u16|u8|s32)\s+func_(800F[0-9A-F]{4})\s*\([^)]*\)\s*;\s*$",
+        r"^\s*extern\s+(?:int|void|u32|u16|u8|s32|s16|int32_t)\s+"
+        r"(?:func_((?:800F[0-9A-F]{4}|801[0-9A-F]{5}))|(\w+))\s*\([^)]*\)\s*;\s*$",
         re.M)
-    t2 = pat.sub(lambda m: drop_extern(m) if m.group(1) in NM else m.group(0), t)
+    t2 = pat.sub(
+        lambda m: drop_extern(m)
+        if (m.group(1) in ids or m.group(2) in names) else m.group(0),
+        t)
     # 2) rename id tokens everywhere (identifiers, incl. comments/strings)
     for fid, name in NM.items():
         if fid in t2:

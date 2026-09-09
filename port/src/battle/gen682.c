@@ -27,6 +27,6 @@ L11213C:
     txt_set(0x1A03);
     row_sel_cell_cur();
     txt_draw(0x303);
-    func_8011EA5C();
+    battle_wndfx_run();
     return;
 }

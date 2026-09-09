@@ -149,6 +149,6 @@ Laaa0:
     cell_flags_clr4();
     page(0xB3);
     tail(0xB3);
-    func_8011EA5C();
+    battle_wndfx_run();
     return;
 }

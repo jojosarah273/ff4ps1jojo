@@ -9,7 +9,7 @@ void func_80131A2C(void)
        801224D0/80124EAC/80132178 rows; 6434(2)/4120(0x202) gates. */
     cell_cursor_dec();
     txt_draw(0x1BC6);
-    func_801224D0();
+    battle_put43();
     txt_cell(0x1B8B);
     if (gate(2) != 0)
         return;

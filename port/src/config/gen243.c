@@ -16,7 +16,7 @@ Lc228:
     open_row(0xD9);
     row_page(0xD0);
     txt_draw(0x38E9);
-    func_80152CDC();
+    options_rows_run();
     page(0xA6);
     txt_cell(0x2000);
     row_read(0x1F);

@@ -31,7 +31,7 @@ void func_80139CF4(void)
     func_801241B8();
     func_8011F6A4();
     func_8011F864();
-    func_8017F8F8();
+    battle_mode_dispatch();
     func_80139E34();
     func_80126610();
     latch(0x1F);

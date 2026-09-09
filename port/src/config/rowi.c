@@ -46,9 +46,9 @@ void func_8012D23C(void)
     func_80124704();
     func_801210AC();
     draw_pad_cur();
-    func_8011EF30();
+    battle_rows_sync();
     draw_pad_cur();
-    func_8011FBA4();
+    battle_rows_29();
     func_801263F0();
     func_8011EF0C();
     func_8011F6A4();
@@ -174,7 +174,7 @@ void func_8012D23C(void)
     if (io_just() != 0)
         goto La88;
     draw_pad_cur();
-    func_8011FBA4();
+    battle_rows_29();
     draw_pad(0x3D);
     cell_push_c8_sel(0x60);
     cell_put(0x45);
@@ -188,7 +188,7 @@ void func_8012D23C(void)
     row_read(0x3F);
     poll_spin();
     row_sel_cell_cur();
-    func_801224D0();
+    battle_put43();
     row_prep(0x20);
     cell_push9_bank();
     cell_put_hi9(0x48);

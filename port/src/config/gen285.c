@@ -11,7 +11,7 @@ void func_8015B078(void)
     open_row(0xA9);
     open_row(0xAA);
     txt_set(0x1822);
-    func_80152CDC();
+    options_rows_run();
     page(0xA6);
     txt_cell(0x2001);
     row_read(0xF);

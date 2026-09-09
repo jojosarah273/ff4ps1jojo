@@ -18,7 +18,7 @@
 /* exported state (was raw PS1 cells)                                  */
 /* ------------------------------------------------------------------ */
 uint8_t  g_scratch[0x400];       /* 0x1F8003C0 scratch pad (low bytes) */
-uint8_t  g_vram_[0x10000];       /* host backing for the 800D/800C bank */
+uint8_t  g_vram_[0x20000];       /* host backing for the 800D/800C bank */
 uint8_t *D_800D0000 = &g_vram_[0x0000];   /* main catalog bank          */
 uint8_t *D_800C8000 = &g_vram_[0x8000];   /* pos-hi side bank           */
 uint16_t D_8019ED44;             /* position counter (u16)             */
@@ -33,6 +33,7 @@ uint8_t  D_8019ED68;             /* cursor-show mask byte              */
 uint8_t  g_tick[2];              /* ticker byte pair D_8019ED40 points */
 uint8_t *D_8019ED40 = g_tick;
 
+static uint32_t vram_host(uint32_t ps1_addr);
 uint32_t catalog_base(uint32_t a0);
 
 /* typed view over the cell register file (see ff4_state.h) */
@@ -65,7 +66,15 @@ int32_t cell_merge(uint32_t a0, int32_t a1)
     uint32_t base = 0x7FFC8000;
     if (0x7FFF < (uint32_t)(D_8019ED4C + a0))
         base = 0x800D0000;
-    D_8019ED50 = *(volatile uint8_t *)base;
-    D_8019ED50 |= (uint32_t)(*(volatile uint8_t *)(base + 1)) << 8;
-    return (int32_t)catalog_base(D_8019ED50) + a1;
+    {
+        uint8_t *p = (uint8_t *)(uintptr_t)vram_host(base);
+        D_8019ED50 = p[0];
+        D_8019ED50 |= (uint32_t)p[1] << 8;
+    }
+    return (int32_t)(uintptr_t)(uint8_t *)(uintptr_t)catalog_base(D_8019ED50) + a1;
+}
+/* host mapping helper (see db/catalogs.c): PS1 catalog addr -> sim ptr */
+static uint32_t vram_host(uint32_t ps1_addr)
+{
+    return (uint32_t)(uintptr_t)(g_vram_ + (ps1_addr & 0x1FFFFu));
 }

@@ -16,7 +16,7 @@ void func_80161A00(void)
     cell_set50_from54();
 L161A40:
     txt_cell(0x3539);
-    func_80152CDC();
+    options_rows_run();
     page(0xA6);
     txt_cell(0x2003);
     row_read(0xC0);

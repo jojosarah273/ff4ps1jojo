@@ -8,7 +8,7 @@ void func_80131CD8(void)
     /* ability tab: 0x1BC6/0x1B8B/0x16 texts, 0x43 window, 801321B4
        row; 6BE0(9)/87DC(7) latch and 6240(0x1BC9) tail. */
     cell_cursor_dec();
-    func_801224D0();
+    battle_put43();
     txt_cell(0x1B8B);
     if (gate(2) != 0)
         return;

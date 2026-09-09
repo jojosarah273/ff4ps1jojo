@@ -10,9 +10,9 @@ void func_80122A9C(void)
     func_8012281C();
     func_80120E2C();
     draw_pad_cur();
-    func_8011EF30();
+    battle_rows_sync();
     draw_pad_cur();
-    func_8011EF30();
+    battle_rows_sync();
     func_80120F1C();
     draw_pad_cur();
     func_8011FB74();

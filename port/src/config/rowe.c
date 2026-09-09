@@ -10,7 +10,7 @@ extern u32 D_8019ED60[8];
 void func_801583FC(void)
 {
     txt_set(0x3975);
-    func_80152CDC();
+    options_rows_run();
     sep_a();
     row_page(0xA6);
     row_open_w0();
@@ -244,7 +244,7 @@ void func_801583FC(void)
     cell_put(0xDF);
     txt_set(0x396B);
     cell_put(0xE1);
-    func_8015240C();
+    options_row_run();
     txt_set(0x3967);
     func_80152BC4();
     sep_a();

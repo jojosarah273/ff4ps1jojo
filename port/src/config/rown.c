@@ -14,7 +14,7 @@ void func_80136FFC(void)
     row_sel_cell2_cur();
     cell_poke0(cell_state(0x1B95));
     cell_poke0(cell_state(0x1B95));
-    func_801224D0();
+    battle_put43();
     label(0x1B98);
     txt_cell(0x1440);
     io_poll(0x19);

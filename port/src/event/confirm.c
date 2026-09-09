@@ -1,8 +1,8 @@
 /* FF4 source-port — event/confirm.c
  *
- * Config confirm dialog (func_8011F9C4, exact decode): 0x29 window +
+ * Config confirm dialog (row_prep2_close, exact decode): 0x29 window +
  * 801245B4/885C cell rows; the loop polls the 2-gate and refreshes.
- * Ground truth: src/func_8011F9C4.c (byte-verified).
+ * Ground truth: src/row_prep2_close.c (byte-verified).
  */
 #include <stdint.h>
 

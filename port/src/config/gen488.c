@@ -12,7 +12,7 @@ void func_801257BC(void)
         goto L1257E8;
     latch(0xA);
 L1257E8:
-    func_801224D0();
+    battle_put43();
     row_prep(0x20);
     row_sync2(5);
     cell_put_hi9(0x45);

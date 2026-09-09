@@ -60,6 +60,6 @@ L10EA7C:
     }
     latch(0x10);
     cell_put(0xAD);
-    func_8011EA5C();
+    battle_wndfx_run();
     return;
 }

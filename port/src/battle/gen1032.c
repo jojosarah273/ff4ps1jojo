@@ -4,10 +4,6 @@
  */
 #include "ff4_window.h"
 
-
-
-extern int func_8011EA5C();
-
 void func_80110FE4(void)
 
 {
@@ -16,7 +12,7 @@ void func_80110FE4(void)
   cell_set50_from54();
   cell_set50_from54();
   label(0x172c);
-  func_8011EA5C();
+  battle_wndfx_run();
   return;
 }
 

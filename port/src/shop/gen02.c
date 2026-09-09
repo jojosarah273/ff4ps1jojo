@@ -31,14 +31,14 @@ void func_8016EF88(u32 a0)
     if (io_just() != 0)
         goto f0b4;
     func_8016A208();
-    func_8016AB14();
+    shop_store_run();
     goto f0dc;
 f0b4:
     wnd_open(0x50);
     tail(0x96);
     func_8016A080();
     func_8016DCE0();
-    func_8016AB14();
+    shop_store_run();
 f0dc:
     cell_clear_bank(0x7D1F);
     cell_clear_bank(0x7D20);

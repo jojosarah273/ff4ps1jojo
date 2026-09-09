@@ -41,10 +41,10 @@ L87c:
     func_800FAD48();
     func_800FED3C();
     func_80170C14();
-    func_8010B010();
+    state_ok();
     latch(0x81);
     txt_draw(0x4200);
-    func_8011EA5C();
+    battle_wndfx_run();
     return;
 L8f4:
     io_poll_cur();

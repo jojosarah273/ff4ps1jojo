@@ -14,7 +14,7 @@ void func_8010DA88(void)
     cell_put(0x3D);
     page(0x3D);
     /* jr $a0 : the ~73-entry master battle-command jump table (invoked by
-       func_80116720). Each entry calls one battle-command screen then jumps
+       menu_screen_tramp). Each entry calls one battle-command screen then jumps
        to L8010DF88 (return). Handlers in index order:
        80114194, 801142FC, 80113CCC, 80112A68, 8011285C, 801120F4, 80113DCC,
        80113E04, 8011383C, 801121C4, 80111F34, 80111F94, 801136D4, 80111EF4,

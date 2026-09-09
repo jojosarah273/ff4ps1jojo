@@ -11,7 +11,7 @@ void func_80169290(void)
     func_8018F098();
     func_8018F098();
     open_row(0x9A);
-    func_8017F8F8();
+    battle_mode_dispatch();
     func_80194394();
     func_801928E8();
     func_801942FC();
@@ -19,7 +19,7 @@ void func_80169290(void)
     func_80194394();
     func_80194640();
     func_80194394();
-    func_8017F8F8();
+    battle_mode_dispatch();
     /* v1/v0 gate -> L16942C */
     func_80194640();
 L169408:

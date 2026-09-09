@@ -18,7 +18,7 @@ void func_801280D4(void)
     cell_put(0x1E);
     txt_set(0x1A3C);
     row_sel_cell_cur();
-    func_801224D0();
+    battle_put43();
     row_prep(0x20);
     cell_put_hi9(0x1F);
     row_prep_close();

@@ -4,11 +4,6 @@
  */
 #include "ff4_window.h"
 
-
-
-
-
-extern int func_8015240C();
 extern int func_8015A6CC();
 
 void func_8015A670(void)
@@ -18,7 +13,7 @@ void func_8015A670(void)
   cell_put(0xdf);
   latch(6);
   cell_put(0xe1);
-  func_8015240C();
+  options_row_run();
   page(0xe3);
   cell_push_c8(0xf97a0);
   func_8015A6CC();

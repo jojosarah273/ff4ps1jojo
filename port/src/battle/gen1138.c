@@ -6,7 +6,6 @@
 
 
 extern int func_801111C4();
-extern int func_8011EA5C();
 
 void func_8011117C(void)
 
@@ -16,7 +15,7 @@ void func_8011117C(void)
   wnd_open(0x1e0);
   tail(0x60);
   func_801111C4();
-  func_8011EA5C();
+  battle_wndfx_run();
   return;
 }
 

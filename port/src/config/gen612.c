@@ -9,7 +9,7 @@ void func_801580B0(void)
        80152CDC/8015310C rows; gates 7918(0x202)/4120(2). */
     row_page(0xA9);
     cell_put(0xD2);
-    func_80152CDC();
+    options_rows_run();
     row_page(0xAD);
     cell_put(0xD3);
     row_sel_cell_cur();

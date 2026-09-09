@@ -218,7 +218,7 @@ s080:
         cell_put(0xDF);
         latch(0xA);
         cell_put(0xE1);
-        func_8015240C();
+        options_row_run();
         page(0xCB);
         label(0x3945);
         page(0xE3);
@@ -257,7 +257,7 @@ s080:
         cell_put(0xDF);
         latch(0x80);
         cell_put(0xE1);
-        func_8015240C();
+        options_row_run();
         page(0xE3);
         txt_cell(0x2003);
         if (gate(0x80) != 0)

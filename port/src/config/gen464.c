@@ -68,7 +68,7 @@ void func_80129F54(void)
     latch(0x1F);
     cell_pull_c8_lo(0x212C);
     cell_clear_bank(0x1BC9);
-    func_8017F8F8();
+    battle_mode_dispatch();
     func_80120B6C();
     return;
 }

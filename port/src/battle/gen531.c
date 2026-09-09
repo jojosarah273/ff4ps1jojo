@@ -36,6 +36,6 @@ L113d24:
             continue;
         break;
     }
-    func_8011EA5C();
+    battle_wndfx_run();
     return;
 }

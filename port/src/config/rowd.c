@@ -20,7 +20,7 @@ L157978:
         tail(0xDF);
         wnd_open(0x80);
         tail(0xE1);
-        func_8015240C();
+        options_row_run();
         page(0xE3);
         txt_cell(0x2003);
         row_read(1);

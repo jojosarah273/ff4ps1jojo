@@ -15,11 +15,11 @@ void func_80136A58(void)
     func_8011F6A4();
     func_80120FBC();
     draw_pad_cur();
-    func_8011EF30();
+    battle_rows_sync();
     draw_pad_cur();
-    func_8011FBA4();
+    battle_rows_29();
     draw_pad_cur();
-    func_8011FBA4();
+    battle_rows_29();
     func_80120E2C();
     func_8016EA7C();
     func_8012AAC0();

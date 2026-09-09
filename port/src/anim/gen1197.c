@@ -18,7 +18,7 @@ void func_801779E4(void)
 L77acc:
     func_80194988();
     func_8017841C();
-    func_80178C14();
+    status_table_init();
     func_80106CD4();
     func_800FEF7C();
     /* L77B2C/L77B88 gates converge into the main chunk */

@@ -1,9 +1,9 @@
 /* FF4 source-port — config/root.c
  *
- * Configuration menu root (func_801539C4, 344-call chain). The asm
+ * Configuration menu root (final_row, 344-call chain). The asm
  * order is preserved; segments are named. This is the driver the
  * options rows (options.c) slot into.
- * Ground truth: src/func_801539C4.c (ordered call chain).
+ * Ground truth: src/final_row.c (ordered call chain).
  */
 #include <stdint.h>
 /* TEMP DEBUG */
@@ -66,6 +66,7 @@ void config_menu_run(void)
         seg_title();
         seg_list();
     seg_values();
+    return;
     final_row();
 }
 

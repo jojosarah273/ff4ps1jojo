@@ -1,7 +1,7 @@
-/* FF4 source-port — interpreted module for func_8011EA5C.
- * Ground truth: src/func_8011EA5C.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_wndfx_run.
+ * Ground truth: src/battle_wndfx_run.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-void func_8011EA5C(void) { wnd_fx_7d(); }
+void battle_wndfx_run(void) { wnd_fx_7d(); }

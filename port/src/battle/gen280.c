@@ -81,6 +81,6 @@ L110d5c:
     open_row(0xB9);
     wnd_open_cur();
     label(0x1725);
-    func_8011EA5C();
+    battle_wndfx_run();
     return;
 }

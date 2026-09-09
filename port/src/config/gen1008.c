@@ -4,13 +4,12 @@
  */
 #include "ff4_window.h"
 
-extern int func_801224D0();
 extern int func_80124EAC();
 
 void func_8013B840(void)
 
 {
-  func_801224D0();
+  battle_put43();
   cell_push_c8(0x14ff9d);
   func_80124EAC();
   txt_cell(0);

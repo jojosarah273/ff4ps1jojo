@@ -30,7 +30,7 @@ L15D160:
     latch(0x80);
     cell_draw(0x32DA);
     txt_set(0x3975);
-    func_80152CDC();
+    options_rows_run();
     func_8015A284();
     func_80155778();
     func_801583FC();

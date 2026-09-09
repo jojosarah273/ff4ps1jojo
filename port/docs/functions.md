@@ -7,19 +7,19 @@ column is the semantic 0x800F primitive name (tool:
 `bv` marks byte-verified. Unassigned rows are stubbed until the
 register machines are interpreted (Avenue 2).
 
-- functions: 2516   interpreted: 1474   stub-only: 1042
-- byte-verified: 827   named primitives: 162
+- functions: 2516   interpreted: 1459   stub-only: 1057
+- byte-verified: 827   named primitives: 182
 
 | id | name | module fn | module | bv | role |
 |----|------|-----------|--------|----|------|
 | 800F3A68 | - | - | - |  | register-only stub (0x4); see asm for exact dataflow. |
 | 800F3A70 | cell_bank_sel | - | - |  |  |
 | 800F3AB4 | - | - | - |  |  |
-| 800F3B04 | catalog_base | - | - |  | catalog base + offset. Bank tag byte at scratch 0x1F8003D2 selects the base; overflow path uses the saved bank offset. |
+| 800F3B04 | catalog_base | catalog_addr | src/db/catalogs.c |  | catalog base + offset. Bank tag byte at scratch 0x1F8003D2 selects the base; overflow path uses the saved bank offset. |
 | 800F3B9C | cell_add16 | - | - |  | byte-verified: the scratch-base machinery computes into an unused register; the only observable output is (u16)a0. |
-| 800F3C3C | cell_addr16 | - | - |  |  |
-| 800F3C6C | cell_read32 | - | - | Y |  |
-| 800F3C94 | cell_window | - | - | Y |  |
+| 800F3C3C | cell_addr16 | catalog_addr | src/db/catalogs.c |  |  |
+| 800F3C6C | cell_read32 | catalog_addr | src/db/catalogs.c | Y |  |
+| 800F3C94 | cell_window | catalog_addr | src/db/catalogs.c | Y |  |
 | 800F3CC4 | cell_merge | - | - | Y | menu cell: base 0x7FFC8000, upgrades to ROM 0x800D0000 when the cursor offset overflows 0x7FFF; merges 2 bytes into D50, catalog callback +  |
 | 800F3D48 | scratch_swap_status | - | - |  |  |
 | 800F3D64 | battle_wait_just | - | - |  | battle: 3B9C x2 gates; spin loop L800F3DF0. |
@@ -424,7 +424,7 @@ register machines are interpreted (Avenue 2).
 | 800FD6E8 | - | - | - | Y |  |
 | 800FD718 | battle_rows_run | - | - |  | battle rows: 0x1704/0x1700/0xFE2 texts, 0x1E01/0x1E00 cells, 80169128 row; gates 6434(2)/5574(3). |
 | 800FD804 | wnd_fx_pads | - | - | Y |  |
-| 800FD85C | shop_rows_run | cell_put | src/shop/shop_dispatch.c |  | shop rows: 0x82/0x79/0x80 windows, 0x2100 text; loop L8FD87C on 4370(0x82)/4120(0x202). |
+| 800FD85C | shop_rows_run | - | - |  | shop rows: 0x82/0x79/0x80 windows, 0x2100 text; loop L8FD87C on 4370(0x82)/4120(0x202). |
 | 800FD914 | shop_rows2_run | - | - | Y |  |
 | 800FD9FC | - | - | - | Y |  |
 | 800FDA4C | - | - | - | Y |  |
@@ -566,7 +566,7 @@ register machines are interpreted (Avenue 2).
 | 8010A5A0 | - | func_8010A5A0 | src/battle/gen621.c |  | shop banner: 0xE9 window + 0x2115 gate; spins on L10A620, then 0x834/0x774 text rows (L10A748/L10A84C) before restoring 0x2115. |
 | 8010A964 | - | func_8010A964 | src/battle/rowf.c |  |  |
 | 8010AF2C | - | func_8010AF2C | src/battle/gen779.c |  | battle rows: 0x903 text; loop L10AF5C on 5958/53D4; then 78C4(3B04)/7918(0x202) gates with 0x902 alternate. |
-| 8010B010 | - | state_open | src/battle/subscreen.c |  | battle: 3C3C/3B04/3B9C gates; wide v0 + a3/v0 gate tree (L10B084..L10B454) around the 8010B5DC row loop L10B2A8; v0/v1 latch loops close at  |
+| 8010B010 | state_ok | - | - |  | battle: 3C3C/3B04/3B9C gates; wide v0 + a3/v0 gate tree (L10B084..L10B454) around the 8010B5DC row loop L10B2A8; v0/v1 latch loops close at  |
 | 8010B5DC | - | func_8010B5DC | src/battle/gen1275.c |  | battle: 3C3C/3B04 gates; v0 run to L10B6D0. |
 | 8010B6EC | - | func_8010B6EC | src/battle/gen1067.c |  | stat-refresh/verify driver; loops until the v0==v1 latch at L10C000 breaks. Register gates decide which stat-rows are recomputed (8010C1AC / |
 | 8010C1AC | - | func_8010C1AC | src/battle/gen1176.c |  | battle rows: 3B9C(0xEDB)/3B04/3C3C gates then 9330; 95A0 close. |
@@ -627,7 +627,7 @@ register machines are interpreted (Avenue 2).
 | 80110664 | - | func_80110664 | src/battle/gen466.c |  | battle spell row: 0xCA/0x89 windows, 0x2100/0xAD4/0xAD5 texts, 80115D2C/80110474/8011EA5C; loop L110694 on 5C64(0x202). |
 | 801107A0 | - | func_801107A0 | src/battle/gen805.c | Y |  |
 | 80110818 | - | func_80110818 | src/battle/gen386.c |  |  |
-| 801109A8 | - | latch | src/battle/spell.c | Y | battle spell helper: 0x6C8/0x7A/0x24/0xB9/0x26/0xC8 windows, 80110F2C/80110FA4/80110B08/80173780/80110BC8/8011EA5C rows; loops L1109C8/L110A |
+| 801109A8 | battle_spell_run | - | - | Y | battle spell helper: 0x6C8/0x7A/0x24/0xB9/0x26/0xC8 windows, 80110F2C/80110FA4/80110B08/80173780/80110BC8/8011EA5C rows; loops L1109C8/L110A |
 | 80110B08 | - | func_80110B08 | src/battle/gen738.c |  | battle rows: 0x68/0x78 windows, 0x300-0x307 text cells with 0x7A window reads. |
 | 80110BC8 | - | func_80110BC8 | src/battle/gen855.c |  | battle rows: 0x7A/0x21 windows, 0xEBB cell via 87DC/6214; loop L110C10 on 5958(0x10). |
 | 80110CFC | - | func_80110CFC | src/battle/gen280.c |  | battle spell-cast row: 0x1FC1/0x6C8 texts, 0x26/0xB9/0x7A/0x22/ 0x24 windows, 80110F2C/80110FA4 sub-renders, 80173780 cast body, 80110BC8 ta |
@@ -705,7 +705,7 @@ register machines are interpreted (Avenue 2).
 | 80116348 | - | func_80116348 | src/battle/gen01506.c |  |  |
 | 80116398 | - | func_80116398 | src/battle/gen909.c | Y |  |
 | 801163E8 | - | func_801163E8 | src/battle/gen220.c |  |  |
-| 80116720 | - | wnd_open | src/battle/menu_root.c |  | jr $a0 : the ~50-entry main-battle-command jump table. Each entry calls one handler then jumps to return. Handlers: 80119BDC, 80119C24, 8011 |
+| 80116720 | menu_screen_tramp | - | - |  | jr $a0 : the ~50-entry main-battle-command jump table. Each entry calls one handler then jumps to return. Handlers: 80119BDC, 80119C24, 8011 |
 | 80116DA0 | - | func_80116DA0 | src/battle/optionscall.c |  |  |
 | 801172DC | - | func_801172DC | src/battle/gen275.c |  | battle item pick: 5574 key ladders on 53C0/53D4 route the item rows (0x4/0x5/0x6/0x7 windows), 0x1705/0x1709 texts, 0x1804 save row; 8010543 |
 | 80117594 | - | func_80117594 | src/battle/gen1345.c | Y |  |
@@ -806,7 +806,7 @@ register machines are interpreted (Avenue 2).
 | 8011E9EC | - | func_8011E9EC | src/battle/gen01502.c | Y |  |
 | 8011EA14 | - | func_8011EA14 | src/battle/gen01501.c | Y |  |
 | 8011EA3C | - | func_8011EA3C | src/battle/gen01500.c | Y |  |
-| 8011EA5C | - | wnd_fx_7d | src/battle/battle_rows2.c | Y |  |
+| 8011EA5C | battle_wndfx_run | - | - | Y |  |
 | 8011EA7C | - | - | - | Y |  |
 | 8011EA9C | - | - | - | Y |  |
 | 8011EABC | - | - | - | Y |  |
@@ -823,7 +823,7 @@ register machines are interpreted (Avenue 2).
 | 8011EDF4 | - | func_8011EDF4 | src/battle/gen1025.c | Y |  |
 | 8011EE34 | - | func_8011EE34 | src/battle/gen340.c | Y |  |
 | 8011EF0C | - | - | - | Y |  |
-| 8011EF30 | - | func_8011EF30 | src/battle/gen1134.c |  | battle rows: 3C3C/939C/926C/9448 x2 + 8011F030 + 960C. |
+| 8011EF30 | battle_rows_sync | - | - |  | battle rows: 3C3C/939C/926C/9448 x2 + 8011F030 + 960C. |
 | 8011F030 | - | func_8011F030 | src/battle/gen679.c |  | column rows: 0x29/0x2B/0x31/0x33 windows, 0xF7/0xFC codes, 8011F118/8011F210 rows; loop L11F0D8 on 5DA0(0x32). |
 | 8011F118 | - | func_8011F118 | src/battle/gen477.c |  | column cells: 0x30/0x2F/0x2D/0x31 windows, 80122334 row; loop L11F178 on 5DA0(0x31)/5B8C(0x202). |
 | 8011F210 | - | func_8011F210 | src/battle/gen490.c |  | column cells: 0x30/0x2F/0x2D/0x31 windows, 0xFA/0xFB codes; loop L11F270 on 5DA0(0x31)/5B8C(0x202). |
@@ -843,9 +843,9 @@ register machines are interpreted (Avenue 2).
 | 8011F864 | - | - | - | Y |  |
 | 8011F884 | - | func_8011F884 | src/battle/gen1340.c |  |  |
 | 8011F8D4 | - | func_8011F8D4 | src/battle/gen773.c |  | rows: 0x100/0x29 windows, 8011FD34 close; 3F94(3C3C(0x29)) + 926C/9298/9330 preps. |
-| 8011F9C4 | - | row_open | src/event/confirm.c |  | config confirm: 0x29 window, 801245B4 + 885C cell rows; loops L11FA70 (6434(2) gate) and L11FAFC (3F94(3C3C(0x29)) refresh). |
+| 8011F9C4 | row_prep2_close | - | - |  | config confirm: 0x29 window, 801245B4 + 885C cell rows; loops L11FA70 (6434(2) gate) and L11FAFC (3F94(3C3C(0x29)) refresh). |
 | 8011FB74 | - | - | - | Y |  |
-| 8011FBA4 | - | func_8011FBA4 | src/battle/gen848.c |  | rows: 0x29/0x100 windows, 8011FD34 close; 3F94(3C3C(0x29)) + 926C/9298/9330 preps. |
+| 8011FBA4 | battle_rows_29 | - | - |  | rows: 0x29/0x100 windows, 8011FD34 close; 3F94(3C3C(0x29)) + 926C/9298/9330 preps. |
 | 8011FD34 | - | func_8011FD34 | src/battle/gen732.c |  | config dialog: 6434(2)/5574(1) gates; 801245B4 + 885C/3D48 cell rows; loops L11FD3C (regcmp latch) and L11FE24 (3F94(3C3C(0x29)) refresh). |
 | 8011FF40 | - | func_8011FF40 | src/battle/gen1023.c | Y |  |
 | 8011FF80 | - | func_8011FF80 | src/battle/gen847.c |  | ability gates: v1/v0 branches route 801360AC / 801360EC+ 80136148 / 8011F320+8011F884+78C4 rows; the 7918(2) read loops back to L11FF9C. |
@@ -904,7 +904,7 @@ register machines are interpreted (Avenue 2).
 | 801222C4 | - | func_801222C4 | src/config/gen1132.c |  | rows: u16 D44<->D54 swap with 922C prep + 9410 close. |
 | 80122334 | - | func_80122334 | src/config/gen1131.c |  | rows: u16 D44<->D58 swap with 922C prep + 9410 close. |
 | 801223A4 | - | func_801223A4 | src/config/gen901.c |  | rows: 0x29 window, 885C/63BC fills; loop L12244C on 6434(2). |
-| 801224D0 | - | func_801224D0 | src/config/gen1260.c | Y |  |
+| 801224D0 | battle_put43 | - | - | Y |  |
 | 801224F8 | - | - | - |  |  |
 | 80122518 | - | - | - |  |  |
 | 80122538 | - | - | - |  |  |
@@ -1006,7 +1006,7 @@ register machines are interpreted (Avenue 2).
 | 80127718 | - | func_80127718 | src/config/gen476.c | Y |  |
 | 80127808 | - | func_80127808 | src/config/gen83.c |  | s2 branch |
 | 80127C70 | - | func_80127C70 | src/config/gen394.c |  | ability/status details screen: 80126610..80136014 header chain, 0x1BE4/0x17FE stat block, 0x1B47/0x1B46 detail rows with the s2/6434(2) gate |
-| 80127F2C | - | status_panel_clear_slots | src/status/panel_grid.c |  | menu text-grid: clears 4 slots, then installs the panel label recipe for panel geometry 7 or 8. |
+| 80127F2C | status_panel_install_labels | - | - |  | menu text-grid: clears 4 slots, then installs the panel label recipe for panel geometry 7 or 8. |
 | 8012807C | - | func_8012807C | src/config/gen842.c | Y |  |
 | 801280D4 | - | func_801280D4 | src/config/gen526.c |  | status row: 0x30/0xC1/0x1D/0x1E/0x1A3C/0x5A windows, 8012807C/801241B8/801224D0/80125130 rows; loop L1281AC on 5DA0(0x5A)/5B8C(0x202). |
 | 8012821C | - | func_8012821C | src/config/gen1168.c | Y |  |
@@ -1199,7 +1199,7 @@ register machines are interpreted (Avenue 2).
 | 8013836C | - | - | - |  |  |
 | 801383B8 | - | - | - |  |  |
 | 80138408 | - | - | - |  |  |
-| 80138458 | - | status_pane_build | src/status/status_pane.c |  | menu text-grid: clears 8 slots then writes the status-pane label recipe. |
+| 80138458 | status_pane_build | - | - |  | menu text-grid: clears 8 slots then writes the status-pane label recipe. |
 | 80138620 | - | - | - |  |  |
 | 80138664 | - | - | - |  |  |
 | 801386C8 | - | - | - | Y |  |
@@ -1253,7 +1253,7 @@ register machines are interpreted (Avenue 2).
 | 8013B88C | - | func_8013B88C | src/config/gen1056.c | Y |  |
 | 8013B8D4 | - | func_8013B8D4 | src/config/gen891.c | Y |  |
 | 8013B92C | - | func_8013B92C | src/config/gen1238.c | Y |  |
-| 8013B95C | - | row_open | src/battle/partyscreen.c |  | ability/party screen: 0x41/0x45 windows, 0x1804/0x1A83 texts; 8016EA9C/80123D3C/8013BB0C/80126610/80122114 rows; loop L13B9F8 (5DA0(0x45)/5B |
+| 8013B95C | cell_step2 | - | - |  | ability/party screen: 0x41/0x45 windows, 0x1804/0x1A83 texts; 8016EA9C/80123D3C/8013BB0C/80126610/80122114 rows; loop L13B9F8 (5DA0(0x45)/5B |
 | 8013BB0C | - | func_8013BB0C | src/config/gen833.c |  | ability menu: 0x93/0x9F/0x60 windows, 0x1B1D/0x1BC6 texts, 8013CB94/8012A868/8013C2FC/8013CA70 sub-rows; loop L13BC38 (80194700/80194394) an |
 | 8013BD04 | - | func_8013BD04 | src/config/gen60.c |  | battle summon/party-cast screen: 0x41 window + 0x48/0x45 rows; outer/ inner loops (L3BD24/L3BD54) with 6D70/54D4 confirm gates; L3BE64 advan |
 | 8013BFFC | - | func_8013BFFC | src/config/gen1117.c | Y | ability rows: 0x1A83 text; loop L13C024 on 6434(2)/53C0 with 8013C2FC/8013CA70/8013BD04/8013C50C rows. |
@@ -1454,7 +1454,7 @@ register machines are interpreted (Avenue 2).
 | 801495B4 | - | - | - | Y |  |
 | 801495D4 | - | - | - | Y |  |
 | 801495F4 | - | - | - | Y |  |
-| 80149614 | - | txt_set | src/battle/itemcast.c |  | battle item/statcast: 29B5/38E6/29A4 texts, 0x1800/0x1B7 gates, 800976A4/801495D4/80166218/80074B98/80099938/801669BC sub-casts and the 8014 |
+| 80149614 | cast_alt2 | - | - |  | battle item/statcast: 29B5/38E6/29A4 texts, 0x1800/0x1B7 gates, 800976A4/801495D4/80166218/80074B98/80099938/801669BC sub-casts and the 8014 |
 | 80149924 | - | func_80149924 | src/battle/gen540.c |  | battle rows: 0x38E6 text, 0x4E/0x1/0x4E windows, 8014D568/ 8007259C/80094D14/80168148 rows; loops L1499A4 and L1499D8 (5958(0x20)). |
 | 80149A98 | - | func_80149A98 | src/battle/gen460.c |  | battle rows: 0x28/0x4/0x2B/0x5/0x2 windows, 80148FC0 row, 7600 cells; loop L149B6C on 5DD4/5C64(0x202). |
 | 80149BE4 | - | func_80149BE4 | src/battle/gen474.c |  | battle item flow: 0x48/0x4/0x49 windows, 0x38E2/0x34C2 texts, 8014FE84/800760D0/8014B248/8014DA2C/80148CAC rows. |
@@ -1598,7 +1598,7 @@ register machines are interpreted (Avenue 2).
 | 80151F28 | - | func_80151F28 | src/config/gen265.c |  |  |
 | 80152224 | - | func_80152224 | src/config/rowflat.c |  | config banner: 0x96/0x97 windows, 0x3947-0x394B texts, 8015254C rows; gates 58BC(0xFF)/54D4(3C3C(0x96)); loop on 5574(0xFF). |
 | 8015236C | - | func_8015236C | src/config/gen01672.c |  |  |
-| 8015240C | - | func_8015240C | src/config/gen1307.c |  | options: 3C3C(0x394D)/3B04 rows; 971C close. |
+| 8015240C | options_row_run | - | - |  | options: 3C3C(0x394D)/3B04 rows; 971C close. |
 | 8015254C | - | func_8015254C | src/config/gen1155.c |  | options: 3B04(0x2000) gates; v0 run -> L152614 / L152630. |
 | 80152640 | - | func_80152640 | src/config/gen787.c |  | shop rows: 0x82/0x80/0xE5 windows; loop L152690 on 67FC(0x80)/5574(0xFF) gates; closes via 63BC. |
 | 801526F8 | - | func_801526F8 | src/config/gen786.c |  | shop rows: 0xE1/0xE5/0xDF windows, 8015240C row + 0xE3; loop L15275C on 56AC(3C3C(0xE5)). |
@@ -1612,7 +1612,7 @@ register machines are interpreted (Avenue 2).
 | 80152B38 | - | func_80152B38 | src/config/gen1148.c |  | options row: v0 gate picks 7864/76E8 vs 7894/77CC. |
 | 80152BC4 | - | func_80152BC4 | src/config/gen1147.c |  | options row: v0 gate picks 7864/76E8 vs 7894/77CC. |
 | 80152C50 | - | func_80152C50 | src/config/gen1146.c |  | options row: v0 gate picks 7864/76E8 vs 7894/77CC. |
-| 80152CDC | - | func_80152CDC | src/config/gen01448.c |  | options: 3C3C/3B04(0x2000) gates; 4x 8015240C + 8015236C rows. |
+| 80152CDC | options_rows_run | - | - |  | options: 3C3C/3B04(0x2000) gates; 4x 8015240C + 8015236C rows. |
 | 80152DE4 | - | func_80152DE4 | src/config/gen879.c | Y |  |
 | 80152E54 | - | func_80152E54 | src/config/gen999.c | Y |  |
 | 80152EAC | - | func_80152EAC | src/config/gen753.c | Y |  |
@@ -1635,7 +1635,7 @@ register machines are interpreted (Avenue 2).
 | 801534D8 | - | func_801534D8 | src/config/gen997.c | Y |  |
 | 80153518 | - | func_80153518 | src/config/gen637.c |  | options: 0x2003-0x2006 cells with 0x38BF-0x38C1 stats, 8015330C row; loop L153560 on 5A90(0xF). |
 | 80153608 | - | func_80153608 | src/config/gen18.c |  |  |
-| 801539C4 | - | func_801539C4 | src/config/root_gen.c |  | CONFIG MENU root (344 calls): register gate ladder; linear call chain with constants from asm, in order. |
+| 801539C4 | final_row | - | - |  | CONFIG MENU root (344 calls): register gate ladder; linear call chain with constants from asm, in order. |
 | 801548F4 | - | func_801548F4 | src/config/screen_d.c |  |  |
 | 80155658 | - | func_80155658 | src/config/gen559.c |  | options row: 0x8A window, 0x29B5/0x29CD/0xDF/0xE1/0xE3/0x2003/ 0x29EB texts, 8015240C row; 5B2C(3B04(0xA9))+5D24(0x29CD) gates. |
 | 80155778 | - | func_80155778 | src/config/screen_z.c |  |  |
@@ -1867,7 +1867,7 @@ register machines are interpreted (Avenue 2).
 | 8016AA54 | - | func_8016AA54 | src/shop/gen1205.c | Y |  |
 | 8016AA84 | - | func_8016AA84 | src/shop/gen991.c | Y |  |
 | 8016AACC | - | func_8016AACC | src/shop/gen990.c | Y |  |
-| 8016AB14 | - | func_8016AB14 | src/shop/store2.c |  | shop store registers: 0x3304 gate title, 0x43/0x42 windows with 0x4300-0x4330 index rows (8188/8D00 pairs); loop L16AB44 polls 5958(0x15). |
+| 8016AB14 | shop_store_run | - | - |  | shop store registers: 0x3304 gate title, 0x43/0x42 windows with 0x4300-0x4330 index rows (8188/8D00 pairs); loop L16AB44 polls 5958(0x15). |
 | 8016AC7C | - | func_8016AC7C | src/shop/gen441.c |  | shop status: 0x4A window, 0x2203/0x22C1/0x22A3/0x22B3 texts, gates 4120(0x202); loops L16ACFC (5A90(0x20)) and L16AD74 (5958(0x12)). |
 | 8016ADDC | - | func_8016ADDC | src/shop/gen693.c |  | shop rows: 0x3319/0x371B/0x331B/0x3719 cells; loop L16AE14 on 5958(0x400). |
 | 8016AE94 | - | func_8016AE94 | src/shop/screen_q.c |  |  |
@@ -1914,8 +1914,8 @@ register machines are interpreted (Avenue 2).
 | 8016DB38 | - | - | - |  |  |
 | 8016DB94 | - | func_8016DB94 | src/shop/gen514.c |  | config: 4264(0x1FF)/64EC gates, 0x14/0x20 windows, 8016D028 rows; 6180(0x202)/5480 close. |
 | 8016DCE0 | - | func_8016DCE0 | src/shop/gen867.c |  | shop rows: 0x2303/0x2883 cells via 8768; loops L16DD0C (5958(0x900)) and L16DD5C (5958(0x80)). |
-| 8016DD9C | - | state_open | src/shop/machine.c |  | shop: 3C3C/3B04(0x2000)/3B9C gates; 8016DB38/8016DB94x2/ 80177DAC rows; s5/s0 latches loop L16DDFC. |
-| 8016E0F8 | - | row_page | src/battle/monster.c |  | battle monster status: 0x95 window + 0x2303/0x2384 gate texts, 0x300-0x303 cells with 8016B650 prep; loop L16E168 (5A90/53D4) polls 6434(2). |
+| 8016DD9C | shop_machine_run | - | - |  | shop: 3C3C/3B04(0x2000)/3B9C gates; 8016DB38/8016DB94x2/ 80177DAC rows; s5/s0 latches loop L16DDFC. |
+| 8016E0F8 | monster_status_run | - | - |  | battle monster status: 0x95 window + 0x2303/0x2384 gate texts, 0x300-0x303 cells with 8016B650 prep; loop L16E168 (5A90/53D4) polls 6434(2). |
 | 8016E358 | - | func_8016E358 | src/shop/gen454.c |  | shop memory: 0x7D21 gate, 0x2121/0x2123/0x2127/0x7D24/0x7D1A texts, 0x1C window; loop L16E398 (5958(4)) with the 5D24/5B8C ladders. |
 | 8016E490 | - | - | - |  |  |
 | 8016E500 | - | func_8016E500 | src/shop/rowd.c | Y |  |
@@ -2033,7 +2033,7 @@ register machines are interpreted (Avenue 2).
 | 80178988 | - | - | - |  | anim/event: 8018F068 x2 preps, 8018F708 spin; loop L1789EC with 80191878/80192478 rows and 801928E8/80192614 gates. |
 | 80178A58 | - | - | - |  | battle anim: two 80178988 + 80194640x2 + 80194394 blocks. |
 | 80178BB4 | - | - | - |  |  |
-| 80178C14 | - | status_table_init | src/status/statusinit.c |  | battle status-table init: header fields, per-slot geometry and the layout state blocks (0xEE/0xF2/0x230/0x234/0x242 rows). |
+| 80178C14 | status_table_init | - | - |  | battle status-table init: header fields, per-slot geometry and the layout state blocks (0xEE/0xF2/0x230/0x234/0x242 rows). |
 | 80178D00 | - | - | - |  | battle row-commit: seven 8017E794 writes. |
 | 80178DD0 | - | - | - |  | battle anim: 801976E8 + 8x 80197658 rows + 801976F8/80197B24/ 8018F168(1)/8018F1F8/8018F0D8 preps; loop L178F08 on 80197BB4. |
 | 80178F20 | - | - | - |  | battle anim loops: 2x (80178988/97458/97468/79248 + 94640x2) pre-roll, then two 971E8 wait loops. |
@@ -2073,7 +2073,7 @@ register machines are interpreted (Avenue 2).
 | 8017F148 | - | func_8017F148 | src/anim/gen01429.c |  | battle anim: wide v0 gate ladder (L17F1EC..L17F398 spins), L17F25C main loop; closes with 2x 80194640. |
 | 8017F5C0 | - | func_8017F5C0 | src/anim/gen01649.c |  | battle: v0 gate picks 8017EAC8 vs 8017F148 rows. |
 | 8017F644 | - | func_8017F644 | src/anim/gen01648.c |  | battle anim: 6x 801973B8 rows, v0 gate, 8x 801973B8 tail. |
-| 8017F8F8 | - | - | - |  |  |
+| 8017F8F8 | battle_mode_dispatch | battle_mode_dispatch | src/battle/battle_rows2.c |  |  |
 | 8017F954 | - | - | - |  |  |
 | 8017F9A8 | - | - | - |  | stack-swap trick: SP swapped through a scratch frame at 0x1F80037C before calling 8017F954 (params masked). |
 | 8017F9FC | - | - | - |  |  |

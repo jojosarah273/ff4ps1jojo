@@ -15,7 +15,7 @@ L4c8:
     cell_put(0x45);
     txt_draw(0x1B75);
     txt_set(0x1B7B);
-    func_801224D0();
+    battle_put43();
     txt_cell(0x1B56);
     cell_put(0x37);
     txt_cell(0x1B57);

@@ -8,7 +8,6 @@
 
 
 extern int func_80111FCC();
-extern int func_8011EA5C();
 
 void func_80111F34(void)
 
@@ -24,7 +23,7 @@ void func_80111F34(void)
     label(0x172c);
     func_80111FCC();
   }
-  func_8011EA5C();
+  battle_wndfx_run();
   return;
 }
 

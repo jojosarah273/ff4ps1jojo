@@ -12,9 +12,13 @@ also in git (this file)._
   **3947 -> ~277 (93%)** via the `tools/port_names.py` manifest (151
   semantic names, declared in ff4_window.h); db/ layer live in the
   binary; typed state layer (ff4_state.h).
-- Native: `make -C port native` -> `port/build/ff4-native` runs the
-  config-menu state, exit 0 under SDL_VIDEODRIVER=dummy; with a display
-  it paints hex-glyph cells.
+- Native: `make -C port native` -> `port/build/ff4-native` runs BOTH
+  the config-menu state (`./build/ff4-native`) and the battle-menu
+  driver (`./build/ff4-native battle`), exit 0 under
+  SDL_VIDEODRIVER=dummy, consistent across repeated runs. Catalog +
+  register-machine mirrors now return host pointers into the g_vram_
+  sim (catalog_addr wrapper), so interpreted code derefs safely; the
+  fn-address-as-bank quirks map to the sim base.
 ## KEY TOOLS (stable, don't rewrite from scratch)
 - `tools/port_rowmap.py` — maps a Phase A window-driven screen into an
   interpreted module (semantic names, ground truth, primitive table).

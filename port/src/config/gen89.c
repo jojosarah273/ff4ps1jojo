@@ -50,7 +50,7 @@ L361ac:
             poll_spin();
         L362DC:
             txt_draw(0x1B7B);
-            func_801224D0();
+            battle_put43();
             txt_cell(0x1A78);
             if (gate(0x202) != 0)
                 continue;
@@ -70,7 +70,7 @@ L361ac:
             latch_cur();
         L3635C:
             txt_draw(0x1B7B);
-            func_801224D0();
+            battle_put43();
             txt_cell(0x1A78);
             if (gate(0x202) != 0)
                 continue;

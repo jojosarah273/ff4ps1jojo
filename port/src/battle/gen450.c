@@ -47,5 +47,5 @@ void func_8010F2F4(void)
         row_close();
         cell_set50_from54();
     } while (poll_go(0x202) != 0);
-    func_8011EA5C();
+    battle_wndfx_run();
 }

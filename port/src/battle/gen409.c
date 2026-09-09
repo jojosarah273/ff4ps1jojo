@@ -54,6 +54,6 @@ L1136e4:
             continue;
         break;
     }
-    func_8011EA5C();
+    battle_wndfx_run();
     return;
 }

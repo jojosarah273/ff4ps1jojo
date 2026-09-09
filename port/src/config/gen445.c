@@ -37,10 +37,10 @@ void func_80138A6C(void)
     func_80139AA4();
     func_8011F6A4();
     func_8011EF0C();
-    func_8017F8F8();
-    func_8017F8F8();
-    func_8017F8F8();
-    func_8017F8F8();
+    battle_mode_dispatch();
+    battle_mode_dispatch();
+    battle_mode_dispatch();
+    battle_mode_dispatch();
 L138bdc:
     for (;;) {
         func_80194700();

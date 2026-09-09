@@ -19,7 +19,6 @@
 
 extern int func_80114C98();
 extern int func_80115A34();
-extern int func_8011EA5C();
 
 void func_80114AF0(void)
 
@@ -50,7 +49,7 @@ void func_80114AF0(void)
     iVar1 = io_just();
   } while (iVar1 == 0);
   open_row(0x80);
-  func_8011EA5C();
+  battle_wndfx_run();
   return;
 }
 

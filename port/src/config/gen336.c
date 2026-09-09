@@ -27,7 +27,7 @@ void func_80124358(void)
     row_page(0x5B);
     row_sel_cell_cur();
     row_sel_cell2_cur();
-    func_801224D0();
+    battle_put43();
     row_prep(0x20);
     cell_push9_bank();
     cell_put_hi9(0x1D);

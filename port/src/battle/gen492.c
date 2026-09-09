@@ -29,7 +29,7 @@ void func_801198F0(void)
     func_80107F3C();
 L119998:
     func_801175C4();
-    func_8011EA5C();
+    battle_wndfx_run();
     return;
 L1199B0:
     io_poll(0xEC);
@@ -54,6 +54,6 @@ L119A48:
         goto L119A80;
     page_paint(0x1440);
 L119A80:
-    func_8011EA5C();
+    battle_wndfx_run();
     return;
 }

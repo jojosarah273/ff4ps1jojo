@@ -78,7 +78,7 @@ L5BA6C:
     cell_set50_from54();
 L5BAE4:
     txt_cell(0x3539);
-    func_80152CDC();
+    options_rows_run();
     page(0xA6);
     txt_cell(0x2003);
     row_read(0xFC);

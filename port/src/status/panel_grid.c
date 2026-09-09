@@ -1,13 +1,13 @@
 /* FF4 source-port — status/panel_grid.c
  *
- * Full interpretation of func_80127F2C (panel text-grid recipes).
+ * Full interpretation of status_panel_install_labels (panel text-grid recipes).
  *
  * The battle status pane is a grid of 0x40-byte rows in the low-RAM
  * catalog bank; labels are u16 text codes (0x20xx). This module clears
  * the four panel slots and installs the label recipe for panel geometry
  * 7 (default) or 8 (alternate). Geometry is the D_8019EDC2 state cell.
  *
- * Ground truth: src/func_80127F2C.c (byte-verified).
+ * Ground truth: src/status_panel_install_labels.c (byte-verified).
  */
 #include <stdint.h>
 #include <stddef.h>

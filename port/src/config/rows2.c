@@ -1,7 +1,7 @@
 /* FF4 source-port — config/rows2.c
  *
  * Options sub-rows (exact Phase A decodes).
- * Ground truth: src/func_80152CDC, 8015A9BC.
+ * Ground truth: src/options_rows_run, 8015A9BC.
  */
 #include <stdint.h>
 

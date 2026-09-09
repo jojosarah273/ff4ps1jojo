@@ -10,7 +10,7 @@ void func_8015BB9C(void)
     cell_state_of();
     cell_state(0x2000);
     /* a0/v0 latch chain -> L15BC04/L15BC38 */
-    func_80152CDC();
+    options_rows_run();
     func_8015310C();
     func_8015C54C();
     /* a0/v1 latch -> L15BD1C */

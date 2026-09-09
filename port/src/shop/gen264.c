@@ -43,7 +43,7 @@ L161660:
     cell_put(0xDF);
     txt_set(0x2682);
     cell_put(0xE1);
-    func_8015240C();
+    options_row_run();
     page(0xE3);
     label(0x289C);
     func_801531CC();

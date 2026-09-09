@@ -84,7 +84,7 @@ L5384:
         row_sel_cell2_cur();
         cell_poke0(cell_state(0x43));
         cell_poke0(cell_state(0xE9));
-        func_801224D0();
+        battle_put43();
         latch_cur();
         stat_sync();
         page(0xE9);

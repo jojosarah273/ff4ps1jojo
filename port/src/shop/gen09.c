@@ -105,7 +105,7 @@ Le68:
     if (io_just() == 0)
         goto Lea8;
     func_8016D9B0();
-    func_8016E0F8();
+    monster_status_run();
     goto Lf24;
 Lea8:
     func_8016BC6C();

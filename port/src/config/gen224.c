@@ -11,7 +11,7 @@ void func_8013B270(void)
        L13B3BC, L13B458/L13B4D0, L13B638, L13B6A0. */
     func_801210AC();
     draw_pad_cur();
-    func_8011EF30();
+    battle_rows_sync();
     draw_pad_cur();
     func_8011FB74();
     open_row(0x48);
@@ -80,7 +80,7 @@ L13b458:
         for (;;) {
             row_page(0x45);
             row_sel_cell_cur();
-            func_801224D0();
+            battle_put43();
             row_prep(0x20);
             row_prep_close();
             row_page(0x45);

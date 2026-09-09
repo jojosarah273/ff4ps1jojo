@@ -29,14 +29,14 @@ L1353C4:
     func_801241B8();
     func_80120F1C();
     draw_pad_cur();
-    func_8011EF30();
+    battle_rows_sync();
     func_80135298();
     draw_pad_cur();
-    func_8011EF30();
+    battle_rows_sync();
     draw_pad_cur();
-    func_8011FBA4();
+    battle_rows_29();
     draw_pad_cur();
-    func_8011EF30();
+    battle_rows_sync();
     func_80135574();
     txt_draw(0x1B7D);
     func_8011F684();

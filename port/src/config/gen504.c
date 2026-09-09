@@ -36,7 +36,7 @@ void func_80127408(void)
     latch(0x30);
     cell_put(0x34);
     draw_pad_cur();
-    func_8011EF30();
+    battle_rows_sync();
     row_close2();
     cell_put(0x34);
     func_8011EF0C();

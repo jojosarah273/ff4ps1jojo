@@ -33,14 +33,14 @@ Lab24:
         draw_pad(0x30C);
         func_8011F6FC();
         txt_set(0x16B1);
-        func_801224D0();
+        battle_put43();
         cell_put(0x45);
         latch(0x7A);
         cell_put(0x46);
         draw_pad(0x308);
         func_8011F6FC();
         txt_set(0x16B2);
-        func_801224D0();
+        battle_put43();
         cell_put(0x45);
         latch(0x8A);
         cell_put(0x46);
@@ -88,7 +88,7 @@ Lab24:
         io_poll(5);
         if (io_just() != 0)
             goto Laf0c;
-        func_801224D0();
+        battle_put43();
         txt_cell(0x16AE);
         cell_set50_from40();
         io_poll_cur();
@@ -106,7 +106,7 @@ Lab24:
         io_poll(5);
         if (io_just() != 0)
             goto Laf0c;
-        func_801224D0();
+        battle_put43();
         txt_cell(0x16AE);
         poll_spin();
         if (poll_go(0x8080) != 0)

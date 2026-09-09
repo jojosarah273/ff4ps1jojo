@@ -139,7 +139,7 @@ L13c55c:
         row_sel_cell2_cur();
         cell_poke0(cell_state(0x1BB4));
         row_sel_cell_cur();
-        func_801224D0();
+        battle_put43();
         txt_set(0x1BB5);
         sep_a();
         cell_poke0(cell_state(0x1BB7));

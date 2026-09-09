@@ -13,9 +13,9 @@ void func_80117E9C(void)
     row_page(0xAC);
     if (gate(0x202) == 0) {
         key_page(0xAC);
-        func_8011EA5C();
+        battle_wndfx_run();
     } else {
         open_row(0xAC);
-        func_8011EA5C();
+        battle_wndfx_run();
     }
 }

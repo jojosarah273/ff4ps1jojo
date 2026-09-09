@@ -22,16 +22,16 @@ void func_8013BB0C(void)
     func_8012A868();
     func_80120F1C();
     draw_pad_cur();
-    func_8011EF30();
+    battle_rows_sync();
     func_80120E2C();
     func_8012AAC0();
     func_80126330();
     func_8016EA7C();
     open_row(0x60);
-    func_8017F8F8();
-    func_8017F8F8();
-    func_8017F8F8();
-    func_8017F8F8();
+    battle_mode_dispatch();
+    battle_mode_dispatch();
+    battle_mode_dispatch();
+    battle_mode_dispatch();
 L13bc38:
     for (;;) {
         func_80194700();

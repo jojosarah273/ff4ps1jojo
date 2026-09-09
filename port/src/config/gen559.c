@@ -22,7 +22,7 @@ void func_80155658(void)
     cell_put(0xDF);
     latch(0x80);
     cell_put(0xE1);
-    func_8015240C();
+    options_row_run();
     page(0xE3);
     latch(0x80);
     cell_draw(0x2003);

@@ -173,7 +173,7 @@ L59C:
 L5DC:
     func_80120F94();
     draw_pad_cur();
-    func_8011EF30();
+    battle_rows_sync();
     func_80130884();
     func_8012F9A0();
     func_80132130();
@@ -191,7 +191,7 @@ L654:
     if (sel(2) != 0)
         goto L6A4;
     txt_set(0x1B8A);
-    func_801224D0();
+    battle_put43();
     latch(0xFF);
     cell_draw(0x1B8B);
     func_80131534();

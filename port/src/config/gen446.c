@@ -4,18 +4,6 @@
  */
 #include "ff4_window.h"
 
-
-
-
-
-
-
-
-
-
-
-
-extern int func_801224D0();
 extern int func_801321B4();
 
 void func_80131E50(void)
@@ -24,7 +12,7 @@ void func_80131E50(void)
   int iVar1;
   
   cell_cursor_dec();
-  func_801224D0();
+  battle_put43();
   txt_cell(0x1b8b);
   iVar1 = gate(2);
   if (iVar1 == 0) {

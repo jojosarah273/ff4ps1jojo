@@ -9,9 +9,9 @@ void func_80139E34(void)
     draw_pad_cur();
     func_8011FB74();
     draw_pad_cur();
-    func_8011EF30();
+    battle_rows_sync();
     draw_pad_cur();
-    func_8011FBA4();
+    battle_rows_29();
     latch(0x53);
     txt_draw(0xBB1E);
     latch(0x48);
@@ -50,11 +50,11 @@ Lf50:
     func_8011F6D4();
     func_8013B88C();
     txt_set(0x16AC);
-    func_801224D0();
+    battle_put43();
     latch_cur();
     cell_draw(0xB81F);
     txt_set(0x16AD);
-    func_801224D0();
+    battle_put43();
     latch_cur();
     cell_draw(0xB89F);
     txt_set(0x1BA7);
@@ -239,7 +239,7 @@ L564:
         goto L62C;
     poll_spin();
     row_sel_cell_cur();
-    func_801224D0();
+    battle_put43();
     row_prep(0x20);
     cell_put_hi9(0x45);
     row_prep_close();
@@ -308,7 +308,7 @@ L7B4:
         goto L884;
     poll_spin();
     row_sel_cell_cur();
-    func_801224D0();
+    battle_put43();
     row_prep(0x20);
     cell_put_hi9(0x45);
     row_prep_close();

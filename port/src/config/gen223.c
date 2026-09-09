@@ -38,7 +38,7 @@ LED50:
         cell_put(0xDF);
         latch(0x80);
         cell_put(0xE1);
-        func_8015240C();
+        options_row_run();
         page(0xE3);
         txt_cell(0x2003);
         row_read(0xC0);
@@ -81,7 +81,7 @@ LEEB0:
         cell_put(0xDF);
         latch(0x80);
         cell_put(0xE1);
-        func_8015240C();
+        options_row_run();
         row_prep(0x20);
         page(0xE3);
         sep_a();

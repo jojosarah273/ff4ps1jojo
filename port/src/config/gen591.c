@@ -14,14 +14,14 @@ void func_80134E74(void)
     func_8012807C();
     func_801257BC();
     draw_pad_cur();
-    func_8011EF30();
+    battle_rows_sync();
     func_80135298();
     draw_pad_cur();
-    func_8011EF30();
+    battle_rows_sync();
     draw_pad_cur();
-    func_8011EF30();
+    battle_rows_sync();
     draw_pad_cur();
-    func_8011EF30();
+    battle_rows_sync();
     draw_pad_cur();
     latch_cur();
     stat_sync();
@@ -36,6 +36,6 @@ void func_80134E74(void)
     wnd_open(0x46);
     func_8011F8D4();
     draw_pad_cur();
-    func_8011FBA4();
+    battle_rows_29();
     return;
 }

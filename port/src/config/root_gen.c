@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801539C4.
- * Ground truth: src/func_801539C4.c (byte-verified).
+/* FF4 source-port — interpreted module for final_row.
+ * Ground truth: src/final_row.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801539C4(void)
+void final_row(void)
 {
     /* CONFIG MENU root (344 calls): register gate ladder;
        linear call chain with constants from asm, in order. */
@@ -79,7 +79,7 @@ void func_801539C4(void)
     tail_cur();
     row_info(0xAB);
     row_page(0xA9);
-    func_80152CDC();
+    options_rows_run();
     page(0xA6);
     txt_cell(0x2001);
     row_read(0xF);
@@ -105,7 +105,7 @@ void func_801539C4(void)
     cell_put(0xDF);
     latch(0x18);
     cell_put(0xE1);
-    func_8015240C();
+    options_row_run();
     page(0xE3);
     open_row(0xAD);
     cell_fmt2(0xAB);
@@ -286,7 +286,7 @@ void func_801539C4(void)
     cell_put(0xDF);
     latch(0x5);
     cell_put(0xE1);
-    func_8015240C();
+    options_row_run();
     latch(0x5);
     cell_put(0xAB);
     page(0xE3);

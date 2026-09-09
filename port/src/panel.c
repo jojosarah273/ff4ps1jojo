@@ -5,6 +5,7 @@
  * line). The raw PS1 cells form one panel_state.
  */
 #include "panel.h"
+extern uint8_t *D_800D0000;
 
 /* mask semantics of the PS1 cells (D_8019ED40..68) */
 static panel_state g_panel;
@@ -99,7 +100,7 @@ uint16_t panel_cursor_next(panel_state *s)
        status flags, advance the cursor index. */
     uint8_t f = s->flags;
     uint16_t idx = s->cursor;
-    uint8_t *p = (uint8_t *)(0x800D0000 + idx);
+    uint8_t *p = D_800D0000 + idx;
     uint16_t v = (uint16_t)((p[1] << 8) | p[2]);
     if (v & 0x8000) {
         f &= 0x7D;

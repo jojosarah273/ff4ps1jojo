@@ -13,7 +13,7 @@ L12b958:
         func_80124EAC();
         txt_set(0x1BC1);
         row_sel_cell_cur();
-        func_801224D0();
+        battle_put43();
         row_prep(0x20);
         cell_push9_bank(0x20);
         row_prep_close();

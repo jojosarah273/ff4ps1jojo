@@ -19,7 +19,7 @@ L48c:
     cell_put(0xDF);
     latch(0x28);
     cell_put(0xE1);
-    func_8015240C();
+    options_row_run();
     cell_fmt2(0xE3);
     row_info(0x9A);
     row_info(0x9E);
@@ -66,7 +66,7 @@ L620:
     cell_put(0xDF);
     latch(0xA0);
     cell_put(0xE1);
-    func_8015240C();
+    options_row_run();
     cell_fmt2(0xE3);
     row_info(0x9A);
     latch(0xA);
@@ -84,7 +84,7 @@ L678:
         cell_put(0xDF);
         latch(4);
         cell_put(0xE1);
-        func_8015240C();
+        options_row_run();
         page(0xE3);
         cell_fmt2(0x9A);
         latch(4);

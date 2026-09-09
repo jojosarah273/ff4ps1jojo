@@ -25,7 +25,7 @@ L125B14:
     row_read(0x38);
     if (sel(2) != 0)
         goto L125C78;
-    func_801224D0();
+    battle_put43();
     row_prep(0x20);
     cell_push9_bank(0x20);
     row_prep_close();

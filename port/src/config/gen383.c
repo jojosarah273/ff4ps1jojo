@@ -16,11 +16,11 @@ void func_8012C980(void)
     row_sel_cell2_cur();
     cell_poke0(cell_state(0x1B22));
     row_sel_cell_cur();
-    func_801224D0();
+    battle_put43();
     txt_cell(0x1440);
     cell_cursor_dec();
     draw_pad_cur();
-    func_8011EF30();
+    battle_rows_sync();
     row_close2();
     io_poll(0xCE);
     if (io_go() == 0)
@@ -30,7 +30,7 @@ void func_8012C980(void)
         goto L12CB04;
     sep_b();
     cell_pos_back(0xCE);
-    func_801224D0();
+    battle_put43();
     cell_push_c8();
     cell_put(0x45);
     wnd_open_cur();
@@ -51,7 +51,7 @@ L12ca7c:
 L12CACC:
     latch(0xF);
     wnd_open(0x54);
-    func_8011F9C4();
+    row_prep2_close();
     return;
 L12CB04:
     func_801240A8();

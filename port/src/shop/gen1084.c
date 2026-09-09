@@ -4,10 +4,6 @@
  */
 #include "ff4_window.h"
 
-
-
-extern int func_8016DD9C();
-
 void func_8016BB84(void)
 
 {
@@ -17,7 +13,7 @@ void func_8016BB84(void)
   io_poll(2);
   iVar1 = io_just();
   if (iVar1 != 0) {
-    func_8016DD9C();
+    shop_machine_run();
   }
   return;
 }

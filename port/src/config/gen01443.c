@@ -9,7 +9,7 @@ void func_8015A9BC(void)
        8015A56C rows. */
     cell_state_of();
     cell_state(0x2000);
-    func_8015240C();
+    options_row_run();
     func_8015ABEC();
     func_8015A56C();
     return;

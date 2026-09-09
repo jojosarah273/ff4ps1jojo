@@ -1,12 +1,12 @@
 /* FF4 source-port — battle/menu_root.c
  *
- * Master battle-menu driver (func_80116720, ~230-call chain).
+ * Master battle-menu driver (menu_screen_tramp, ~230-call chain).
  * The flow: open the command window, idle until the menu button
  * (0x03), run the command sub-screen (items 0x8FE/0x908), then the
  * big 40-slot jr-$a0 dispatch (each slot = a battle-menu screen,
  * listed in menu_screens.md). 8010DA88 (battle-command table, 73
  * entries) is the final slot.
- * Ground truth: src/func_80116720.c (ordered chain).
+ * Ground truth: src/menu_screen_tramp.c (ordered chain).
  */
 #include <stdint.h>
 

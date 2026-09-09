@@ -16,6 +16,7 @@
 #include <stdint.h>
 
 extern uint8_t  g_scratch[];
+extern uint8_t  g_vram_[];
 extern uint16_t D_8019ED4C;
 extern uint32_t D_8019ED50;
 extern uint16_t D_8019ED58;
@@ -23,6 +24,7 @@ extern uint8_t  D_8019ED60[2];
 extern uint8_t *D_800D0000;
 
 uint32_t catalog_base();
+uint32_t catalog_addr();
 uint32_t cell_addr16();
 uint32_t cell_add16();
 uint32_t cell_bank_sel();
@@ -50,7 +52,7 @@ void cell_clear_bank2(void)
 /* 800F6C68: scratch tag = cell_byte(add16() + a0). */
 void cell_push_c8(uint32_t a0)
 {
-    g_scratch[0x08] = ((volatile uint8_t *)(cell_add16() + a0))[0];
+    g_scratch[0x08] = ((volatile uint8_t *)catalog_addr(cell_add16() + a0))[0];
 }
 
 /* 800F6D70: scratch tag = bank byte at (base(ed58+a0)). */
@@ -68,13 +70,13 @@ void cell_push_c8_sel(uint32_t a0)
 /* 800F81E8: low bank cell = scratch tag. */
 uint32_t cell_pull_c8_lo(void)
 {
-    return (((volatile uint8_t *)cell_add16(0, 1))[0] = g_scratch[0x08]);
+    return (((volatile uint8_t *)catalog_addr(cell_add16(0, 1)))[0] = g_scratch[0x08]);
 }
 
 /* 800F885C: bank cell (add16() + a0) = scratch tag. */
 uint32_t cell_pull_c8_off(uint32_t a0, uint32_t a1)
 {
-    return (((volatile uint8_t *)(cell_add16() + a0))[0] = g_scratch[0x08]);
+    return (((volatile uint8_t *)catalog_addr(cell_add16() + a0))[0] = g_scratch[0x08]);
 }
 
 /* 800F82EC: bank cell (sel(a0)+a0) = scratch tag. */
@@ -100,7 +102,7 @@ void cell_pull9_hi(uint8_t *p)
 /* 800F87DC: bank base bytes = scratch 0x08/0x09 (fn-addr quirk kept). */
 void cell_stamp8_9(void)
 {
-    uint8_t *p = (uint8_t *)catalog_base;
+    uint8_t *p = (uint8_t *)g_vram_;   /* fn-addr quirk -> sim base */
     p[0] = g_scratch[0x08];
     p[1] = g_scratch[0x09];
 }
@@ -108,7 +110,7 @@ void cell_stamp8_9(void)
 /* 800F89D4: same stamp, second slot (fn-addr quirk kept). */
 void cell_stamp8_9_b(void)
 {
-    uint8_t *p = (uint8_t *)catalog_base;
+    uint8_t *p = (uint8_t *)g_vram_;   /* fn-addr quirk -> sim base */
     p[0] = g_scratch[0x08];
     p[1] = g_scratch[0x09];
 }
@@ -123,13 +125,13 @@ void cell_push9(uint8_t *p)
 uint32_t cell_push9_bank(uint32_t a0, uint32_t a1)
 {
     return (g_scratch[0x09] =
-            ((volatile uint8_t *)(cell_add16() + a1))[1]);
+            ((volatile uint8_t *)catalog_addr(cell_add16() + a1))[1]);
 }
 
 /* 800F6BE0: scratch 0x00/0x01 = bank base bytes (fn-addr quirk). */
 void cell_sink89(void)
 {
-    uint8_t *p = (uint8_t *)catalog_base;
+    uint8_t *p = (uint8_t *)g_vram_;   /* fn-addr quirk -> sim base */
     g_scratch[0x00] = p[0];
     g_scratch[0x01] = p[1];
 }
@@ -137,7 +139,7 @@ void cell_sink89(void)
 /* 800F6DE8: same sink as 6BE0 (aliased id). */
 void cell_sink89_c(void)
 {
-    uint8_t *p = (uint8_t *)catalog_base;
+    uint8_t *p = (uint8_t *)g_vram_;   /* fn-addr quirk -> sim base */
     g_scratch[0x00] = p[0];
     g_scratch[0x01] = p[1];
 }
@@ -145,7 +147,7 @@ void cell_sink89_c(void)
 /* 800F65F0: scratch 0x00/0x01 = add16-fn base bytes (fn-addr quirk). */
 void cell_sink89_d(void)
 {
-    uint8_t *p = (uint8_t *)cell_add16;
+    uint8_t *p = (uint8_t *)g_vram_;   /* fn-addr quirk -> sim base */
     g_scratch[0x00] = p[0];
     g_scratch[0x01] = p[1];
 }
@@ -153,19 +155,19 @@ void cell_sink89_d(void)
 /* 800F6EA8: scratch tag = bank byte at (b4(a0)+0). */
 void cell_push_c8_b4(uint32_t a0)
 {
-    g_scratch[0x08] = ((volatile uint8_t *)(cell_add16(cell_bank_sel((uint16_t)a0) + 0, 1)))[0];
+    g_scratch[0x08] = ((volatile uint8_t *)catalog_addr(cell_add16(cell_bank_sel((uint16_t)a0) + 0, 1)))[0];
 }
 
 /* 800F65C8: scratch tag = low bank byte (add16(0,1)). */
 void cell_push_c8_cur(void)
 {
-    g_scratch[0x08] = ((volatile uint8_t *)cell_add16(0, 1))[0];
+    g_scratch[0x08] = ((volatile uint8_t *)catalog_addr(cell_add16(0, 1)))[0];
 }
 
 /* 800F67FC: scratch tag = bank byte at (b4(a0) + a0). */
 void cell_push_c8_b4o(uint32_t a0)
 {
-    g_scratch[0x08] = ((volatile uint8_t *)(cell_add16(cell_bank_sel((uint16_t)a0)) + a0))[0];
+    g_scratch[0x08] = ((volatile uint8_t *)catalog_addr(cell_add16(cell_bank_sel((uint16_t)a0)) + a0))[0];
 }
 
 /* 800F6E30: scratch tag = bank byte at (sel(a0) base). */
@@ -211,7 +213,7 @@ uint32_t cell_pull_c8_sel2(uint32_t a0)
 /* 800F88E4: fn-addr cell bytes = scratch 0x08/0x09 (quirk kept). */
 void cell_pull89_fn(void)
 {
-    uint8_t *p = (uint8_t *)cell_add16;
+    uint8_t *p = (uint8_t *)g_vram_;   /* fn-addr quirk -> sim base */
     p[0] = g_scratch[0x08];
     p[1] = g_scratch[0x09];
 }

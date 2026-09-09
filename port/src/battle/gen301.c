@@ -32,7 +32,7 @@ L11855c:
             continue;
         break;
     }
-    func_8011EA5C();
+    battle_wndfx_run();
     return;
 L11860C:
     txt_cell(0x9D5);
@@ -67,6 +67,6 @@ L1186c8:
 L118728:
     page(0x3D);
     page_paint(0x1000);
-    func_8011EA5C();
+    battle_wndfx_run();
     return;
 }

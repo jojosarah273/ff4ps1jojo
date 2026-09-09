@@ -392,7 +392,7 @@ l9E84:
     cell_put(0xDF);
     latch(3);
     cell_put(0xE1);
-    func_8015240C();
+    options_row_run();
     row_page(0xE3);
     cell_put(0xA9);
     sep_a();

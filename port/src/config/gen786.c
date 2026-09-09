@@ -12,7 +12,7 @@ void func_801526F8(void)
     cell_put(0xDF);
     row_page(0xE1);
     cell_put(0xE5);
-    func_8015240C();
+    options_row_run();
     cell_fmt2(0xE3);
     sep();
 L15275c:

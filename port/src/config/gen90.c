@@ -11,7 +11,7 @@ void func_8013463C(void)
     if (io_just() != 0)
         goto L134930;
     txt_set(0x1B37);
-    func_801224D0();
+    battle_put43();
     txt_draw(0x1B3A);
     io_poll(0x30);
     if (io_just() != 0)

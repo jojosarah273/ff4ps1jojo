@@ -9,12 +9,12 @@ void func_801621D0(void)
        80152CDC + 80150C38 rows; loop L162238 on 5574(0x13). */
     row_page(0xCE);
     txt_draw(0x357A);
-    func_80152CDC();
+    options_rows_run();
     page(0xA6);
     txt_cell(0x2006);
     cell_draw(0x2006);
     row_page(0xCD);
-    func_80152CDC();
+    options_rows_run();
     page_open(0x3534);
 L162238:
     for (;;) {

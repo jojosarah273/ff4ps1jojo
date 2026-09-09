@@ -62,7 +62,7 @@ L119548:
     func_80109A28();
 L119650:
     func_801175C4();
-    func_8011EA5C();
+    battle_wndfx_run();
     return;
 L119668:
     row_page(0x30);
@@ -71,6 +71,6 @@ L119668:
     txt_draw(0x16A1);
     row_page(0x32);
     txt_draw(0x16A2);
-    func_8011EA5C();
+    battle_wndfx_run();
     return;
 }

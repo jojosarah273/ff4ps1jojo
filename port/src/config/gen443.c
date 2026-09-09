@@ -15,7 +15,7 @@ void func_80152F0C(void)
             sep_a();
             row_open_w(5);
         }
-        func_80152CDC();
+        options_rows_run();
         page(0xA6);
         sep();
         *D_8019ED58 = *D_8019ED44;
@@ -33,7 +33,7 @@ void func_80152F0C(void)
         sep_a();
         row_open_w(5);
     }
-    func_80152CDC();
+    options_rows_run();
     page(0xA6);
     sep();
     *D_8019ED58 = *D_8019ED44;

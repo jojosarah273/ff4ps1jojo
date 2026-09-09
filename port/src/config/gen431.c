@@ -10,7 +10,7 @@ void func_80158190(void)
        4120(0x202)/53C0 gates. */
     row_page(0xD2);
     txt_draw(0x38F6);
-    func_80152CDC();
+    options_rows_run();
     page_paint2(0x38F6);
     txt_set(0x38F6);
     io_poll(0xD);

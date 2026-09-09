@@ -20,7 +20,7 @@ void func_801369B8(void)
         u8 *p = D_8019ED40;
         *p = (u8)(*p << 2);
     }
-    func_801224D0();
+    battle_put43();
     latch(8);
     cell_draw(0xFE15);
 end:

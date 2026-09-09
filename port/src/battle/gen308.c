@@ -62,6 +62,6 @@ L1127c0:
     label(0x1706);
     open_row(0xE3);
     open_row(0x80);
-    func_8011EA5C();
+    battle_wndfx_run();
     return;
 }

@@ -6,7 +6,6 @@
 
 
 extern int func_8010E0D0();
-extern int func_8011EA5C();
 
 void func_8010E050(void)
 
@@ -18,7 +17,7 @@ void func_8010E050(void)
   latch(0xff);
   txt_draw(0x2140);
   func_8010E0D0();
-  func_8011EA5C();
+  battle_wndfx_run();
   return;
 }
 

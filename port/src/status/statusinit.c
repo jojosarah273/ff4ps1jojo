@@ -1,11 +1,11 @@
 /* FF4 source-port — status/statusinit.c
  *
- * Battle status-table initialization (func_80178C14, exact decode).
+ * Battle status-table initialization (status_table_init, exact decode).
  * The battle status record (g_status_rec = D_8019FFE8) holds the
  * layout: header windows, per-slot geometry (p0..p3 carried from the
  * record), and the three state blocks (0xEE/0xF2/0x230/0x234/
  * 0x242). The D_801E01B8 box struct and D_8019EE26 latch close it.
- * Ground truth: src/func_80178C14.c.
+ * Ground truth: src/status_table_init.c.
  */
 #include <stdint.h>
 

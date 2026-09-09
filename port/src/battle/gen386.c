@@ -53,5 +53,5 @@ void func_80110818(void)
         break;
     } while (1);
     open_row(0xC8);
-    func_8011EA5C();
+    battle_wndfx_run();
 }

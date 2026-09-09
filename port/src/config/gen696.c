@@ -16,7 +16,7 @@ void func_8015A374(void)
         goto L15A3A8;
     page_paint2(0x3558);
 L15A3A8:
-    func_80152CDC();
+    options_rows_run();
     page(0xA6);
     txt_cell(0x2060);
     cell_put(0xA9);

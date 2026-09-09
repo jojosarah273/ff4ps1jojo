@@ -11,7 +11,7 @@ void func_8015D1C8(void)
        8015D878 (returns at L15D300). */
     func_8005A234();
     row_page(0xD2);
-    func_80152CDC();
+    options_rows_run();
     row_page(0xD3);
     cell_put(0xAB);
     row_sel_cell_cur();

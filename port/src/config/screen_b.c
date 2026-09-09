@@ -178,7 +178,7 @@ view74:
     cell_put(0xDF);
     latch(8);
     cell_put(0xE1);
-    func_8015240C();
+    options_row_run();
     page(0xE3);
     sep();
     for (;;) {
@@ -205,7 +205,7 @@ view74:
     cell_put(0xDF);
     latch(0x10);
     cell_put(0xE1);
-    func_8015240C();
+    options_row_run();
     page(0xE3);
     sep();
     for (;;) {
@@ -217,7 +217,7 @@ view74:
         if (io_just() != 0)
             break;
     }
-    func_801539C4();
+    final_row();
     txt_set(0x2282);
     io_poll(0x61);
     if (io_go() != 0) {

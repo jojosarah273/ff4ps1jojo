@@ -4,9 +4,6 @@
  */
 #include "ff4_window.h"
 
-
-extern int func_8011EA5C();
-
 void func_80118A40(void)
 
 {
@@ -17,12 +14,12 @@ void func_80118A40(void)
   if (iVar1 == 0) {
     latch(7);
     shop_rows_run();
-    func_8011EA5C();
+    battle_wndfx_run();
   }
   else {
     latch(7);
     shop_rows2_run();
-    func_8011EA5C();
+    battle_wndfx_run();
   }
   return;
 }

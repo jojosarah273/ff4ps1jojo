@@ -5,6 +5,7 @@
  * 800F521C, 800F94B8.
  */
 #include <stdint.h>
+extern uint8_t *D_800D0000;
 
 extern uint8_t  g_panel_mask;   /* D_8019ED40 */
 extern uint16_t g_panel_held;   /* D_8019ED44 */

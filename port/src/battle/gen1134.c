@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8011EF30.
- * Ground truth: src/func_8011EF30.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_sync.
+ * Ground truth: src/battle_rows_sync.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8011EF30(void)
+void battle_rows_sync(void)
 {
     /* battle rows: 3C3C/939C/926C/9448 x2 + 8011F030 + 960C. */
     cell_state_of();

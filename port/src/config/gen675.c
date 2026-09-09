@@ -14,10 +14,10 @@ void func_80126E08(void)
     txt_draw(0x1E00);
     func_80169128();
     func_80123D3C();
-    func_8017F8F8();
-    func_8017F8F8();
-    func_8017F8F8();
-    func_8017F8F8();
+    battle_mode_dispatch();
+    battle_mode_dispatch();
+    battle_mode_dispatch();
+    battle_mode_dispatch();
 L26ef0:
     func_80194700();
     func_80194394();
@@ -55,7 +55,7 @@ L26F74:
         func_80127408();
         func_801210AC();
         draw_pad_cur();
-        func_8011FBA4();
+        battle_rows_29();
         func_80126330();
         /* v0/s0 gate -> L27048 / L270E8 */
         func_80128750();

@@ -16,7 +16,7 @@ void func_8015D9A8(void)
     func_8005A234();
 L15da08:
     for (;;) {
-        if (func_80152CDC() != 0)
+        if (options_rows_run() != 0)
             break;
     L15da1c:
         /* v1/v0 gate -> L15DA08 */

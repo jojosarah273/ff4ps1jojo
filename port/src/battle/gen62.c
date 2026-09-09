@@ -87,6 +87,6 @@ L1388c:
     }
     latch_cur();
     wnd_fx_pads();
-    func_8011EA5C();
+    battle_wndfx_run();
     return;
 }

@@ -37,7 +37,7 @@ L13446C:
     cell_tick_dbl();
     cell_flags_repack2();
     cell_tick_dbl();
-    func_801224D0();
+    battle_put43();
     if (io_press(cell_state(0x1B37)) == 0)
         goto L13455C;
 L13454C:

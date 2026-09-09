@@ -130,7 +130,7 @@ Lae68:
     cell_draw(0x909);
 Laec0:
     row_open();
-    func_8010B010();
+    state_ok();
     row_close();
     txt_cell(0x907);
     row_open();

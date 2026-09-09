@@ -359,7 +359,7 @@ q8D8:
         cell_put(0xDF);
         latch(5);
         cell_put(0xE1);
-        func_8015240C();
+        options_row_run();
         cell_fmt2(0xE3);
         sep();
         for (;;) {

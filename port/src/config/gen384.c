@@ -43,9 +43,9 @@ L12C1E0:
     row_sync();
     func_801210AC();
     draw_pad_cur();
-    func_8011EF30();
+    battle_rows_sync();
     row_done();
-    func_8011FBA4();
+    battle_rows_29();
     func_801263F0();
     func_8012C250();
     return;

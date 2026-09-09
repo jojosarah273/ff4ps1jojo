@@ -66,18 +66,18 @@ L35C:
 L38C:
     func_801210AC();
     draw_pad_cur();
-    func_8011EF30();
+    battle_rows_sync();
     draw_pad_cur();
-    func_8011FBA4();
+    battle_rows_29();
 L3C0:
     func_801263F0();
     func_8011FF40();
     func_8012B0B0();
     func_801210AC();
     draw_pad_cur();
-    func_8011EF30();
+    battle_rows_sync();
     draw_pad_cur();
-    func_8011FBA4();
+    battle_rows_29();
     return;
 L410:
     func_8012B0B0();
@@ -204,9 +204,9 @@ L7DC:
 L814:
     func_801210AC();
     draw_pad_cur();
-    func_8011EF30();
+    battle_rows_sync();
     draw_pad_cur();
-    func_8011FBA4();
+    battle_rows_29();
     goto L3C0;
 L850:
     txt_set(0x1E05);

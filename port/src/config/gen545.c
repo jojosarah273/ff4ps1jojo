@@ -12,7 +12,7 @@ L13c304:
     for (;;) {
         func_801210AC();
         draw_pad_cur();
-        func_8011FBA4();
+        battle_rows_29();
         func_8013C44C();
         func_8011F684();
         func_80126418();

@@ -107,6 +107,6 @@ L1294:
         break;
     }
     cell_clear_bank(0x1728);
-    func_8011EA5C();
+    battle_wndfx_run();
     return;
 }

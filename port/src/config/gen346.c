@@ -23,7 +23,7 @@ L138d38:
     L138D9C:
         draw_pad_cur();
     L138DA8:
-        func_8011FBA4();
+        battle_rows_29();
         cell_clear_bank(0x1A88);
         func_80126528();
         latch(0x17);

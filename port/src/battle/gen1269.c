@@ -5,7 +5,7 @@
 #include "ff4_window.h"
 
 extern int func_8010E338();
-extern int func_8011EA5C();
+
 extern int func_8016E9DC();
 
 void func_8010E2F8(void)
@@ -15,7 +15,7 @@ void func_8010E2F8(void)
   cell_flags_set4();
   func_8016E9DC();
   func_8010E338();
-  func_8011EA5C();
+  battle_wndfx_run();
   return;
 }
 

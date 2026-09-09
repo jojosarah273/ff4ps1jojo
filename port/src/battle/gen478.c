@@ -31,7 +31,7 @@ L1197d8:
         goto L119820;
     L119810:
         func_80170C14();
-        func_8010B010();
+        state_ok();
     L119820:
         page(0x89);
         cell_set50_from54();
@@ -40,6 +40,6 @@ L1197d8:
             continue;
         break;
     }
-    func_8011EA5C();
+    battle_wndfx_run();
     return;
 }

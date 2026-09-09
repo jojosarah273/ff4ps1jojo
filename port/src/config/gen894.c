@@ -11,7 +11,7 @@ void func_80132378(void)
 L132388:
     for (;;) {
         cell_cursor_dec();
-        func_801224D0();
+        battle_put43();
         txt_cell(0x1B8B);
         if (gate(2) != 0)
             goto L1323F0;

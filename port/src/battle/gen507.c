@@ -11,7 +11,6 @@
 
 
 extern int func_80114D18();
-extern int func_8011EA5C();
 
 void func_801147C0(void)
 
@@ -40,7 +39,7 @@ void func_801147C0(void)
     tail(0x89);
     iVar1 = poll_go(0x202);
   } while (iVar1 != 0);
-  func_8011EA5C();
+  battle_wndfx_run();
   return;
 }
 

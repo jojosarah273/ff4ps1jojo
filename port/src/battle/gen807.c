@@ -21,5 +21,5 @@ void func_8010F254(void)
     txt_draw(0x6C8);
     wnd_open(0xE828);
     label(0x1725);
-    func_8011EA5C();
+    battle_wndfx_run();
 }

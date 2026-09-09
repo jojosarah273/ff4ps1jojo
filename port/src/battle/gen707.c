@@ -30,6 +30,6 @@ L1148b8:
             continue;
         break;
     }
-    func_8011EA5C();
+    battle_wndfx_run();
     return;
 }

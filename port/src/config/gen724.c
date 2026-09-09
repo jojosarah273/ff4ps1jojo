@@ -13,7 +13,7 @@ void func_801368E8(void)
     cell_clear_bank();
     cell_clear_bank();
     txt_set(0x1B7B);
-    func_801224D0();
+    battle_put43();
     txt_cell(0x1B55);
     if (gate(0x202) == 0)
         return;

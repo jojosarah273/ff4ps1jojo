@@ -15,6 +15,7 @@ void device_render(void);
 void config_menu_run(void);
 void battle_menu_run(void);
 
+#include <stdio.h>
 int ff4_native_main(int argc, char **argv)
 {
     int frames = 0;

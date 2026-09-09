@@ -20,7 +20,7 @@ void func_8016046C(void)
     cell_put(0xDF);
     latch(0x80);
     cell_put(0xE1);
-    func_8015240C();
+    options_row_run();
     page(0xE3);
     page_paint(0x2003);
     page_paint(0x2004);

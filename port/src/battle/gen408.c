@@ -46,5 +46,5 @@ void func_80114194(void)
     txt_draw(0x1700);
     open_row(0xAC);
     cell_clear_bank(0x1704);
-    func_8011EA5C();
+    battle_wndfx_run();
 }

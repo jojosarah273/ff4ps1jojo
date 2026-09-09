@@ -10,7 +10,7 @@ void func_8015F1D0(void)
     txt_set(0x2705);
     txt_draw_cur();
     row_page(0xCF);
-    func_80152CDC();
+    options_rows_run();
     latch(0x12);
     func_8015310C();
     page_open(0x3598);

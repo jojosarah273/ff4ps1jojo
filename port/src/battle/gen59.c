@@ -78,7 +78,7 @@ L100774:
     latch(0x81);
     txt_draw(0x4200);
     func_80170C14();
-    func_8010B010();
+    state_ok();
     latch_cur();
     shop_rows_run();
     return;

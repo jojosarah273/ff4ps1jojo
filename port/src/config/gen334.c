@@ -12,7 +12,7 @@ void func_80134FF4(void)
     func_80124298();
     func_80134FBC();
     func_801264C0();
-    func_8017F8F8();
+    battle_mode_dispatch();
     func_80126590();
     goto L13507C;
 L135054:

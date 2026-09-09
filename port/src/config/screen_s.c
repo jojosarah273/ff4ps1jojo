@@ -7,7 +7,7 @@ void func_8015C604(void)
 {
     row_page(0xD0);
     txt_draw(0x3975);
-    func_80152CDC();
+    options_rows_run();
     txt_set(0x352B);
     if (gate(2) == 0) {
         func_8015A284();

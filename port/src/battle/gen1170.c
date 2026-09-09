@@ -11,9 +11,9 @@ void func_80118750(void)
     if (gate(0x202) == 0) {
         txt_cell(0x9D5);
         func_801187C0();
-        func_8011EA5C();
+        battle_wndfx_run();
     } else {
         func_80118938();
-        func_8011EA5C();
+        battle_wndfx_run();
     }
 }

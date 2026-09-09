@@ -1,9 +1,9 @@
 /* FF4 source-port — battle/spell.c
  *
- * Battle spell-cast helper (func_801109A8, exact decode). Two poll
+ * Battle spell-cast helper (battle_spell_run, exact decode). Two poll
  * loops: the first waits for the spell screens to arm (0x202 gate),
  * the second walks the target/0x24 rows with the 0x48/0x24/0x64 keys.
- * Ground truth: src/func_801109A8.c (byte-verified).
+ * Ground truth: src/battle_spell_run.c (byte-verified).
  */
 #include <stdint.h>
 

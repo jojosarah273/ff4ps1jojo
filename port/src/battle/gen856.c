@@ -19,5 +19,5 @@ void func_8010F08C(void)
     txt_draw(5927);
     wnd_open(10003);
     label(5925);
-    func_8011EA5C();
+    battle_wndfx_run();
 }

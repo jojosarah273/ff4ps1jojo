@@ -7,7 +7,7 @@ void func_8012E1C0(void)
 {
     /* rows: 5140 + 801224D0 + 9644(0x20)/9660(0x20) windows. */
     row_sel_cell_cur();
-    func_801224D0();
+    battle_put43();
     row_prep(0x20);
     row_prep_close();
     return;

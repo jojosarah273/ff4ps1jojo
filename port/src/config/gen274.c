@@ -77,7 +77,7 @@ L2becc:
         if (sel(2) != 0)
             goto L2C000;
         txt_set(0x1B3E);
-        func_801224D0();
+        battle_put43();
         cell_push_c8();
         cell_put(0xE8);
         goto L2C098;

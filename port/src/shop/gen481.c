@@ -13,13 +13,13 @@ void func_801622F0(void)
     latch(0x10);
     txt_draw(0x34C7);
     txt_set(0x357A);
-    func_80152CDC();
+    options_rows_run();
     page(0xA6);
     txt_cell(0x2006);
     row_read(0xFD);
     cell_draw(0x2006);
     row_page(0xCD);
-    func_80152CDC();
+    options_rows_run();
     page_open(0x3534);
 L162360:
     for (;;) {

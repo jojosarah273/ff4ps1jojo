@@ -20,6 +20,6 @@ void func_80174348(void)
     latch(0x1C);
     cell_put(0x49);
     func_80170458();
-    func_8017F8F8();
+    battle_mode_dispatch();
     return;
 }

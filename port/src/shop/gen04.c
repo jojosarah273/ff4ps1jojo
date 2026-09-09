@@ -76,7 +76,7 @@ L044:
     txt_cell(0x201D);
     cell_put(0xC5);
     cell_put(0xE1);
-    func_8015240C();
+    options_row_run();
     cell_word_half(cell_state(0xE4));
     cell_flags_repack();
     cell_word_half_s(cell_state(0xE3));
@@ -112,7 +112,7 @@ L124:
     if (gate(0x202) != 0)
         goto L3f4;
     row_page(0xC7);
-    func_80152CDC();
+    options_rows_run();
     page(0xA6);
     txt_cell(0x2003);
     row_read(0xC0);
@@ -150,7 +150,7 @@ L2ec:
     cell_put(0xDF);
     txt_cell(0x202A);
     cell_put(0xE1);
-    func_8015240C();
+    options_row_run();
     sep_b();
     row_page(0xC9);
     cell_tick_sub(cell_state(0xE3));
