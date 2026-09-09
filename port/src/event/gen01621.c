@@ -1,0 +1,17 @@
+/* FF4 source-port — interpreted module for func_8018F374.
+ * Ground truth: src/func_8018F374.c (byte-verified).
+ * Primitives: port/include/ff4_window.h.
+ */
+#include "ff4_window.h"
+void func_8018F374(void)
+{
+    /* event: 801976E8 prep; t2/t1 latch loop; 80197608 tail. */
+    func_801976E8();
+    for (;;) {
+        /* t2/t1 latch */
+        if (io_just() == 0)
+            break;
+    }
+    func_80197608();
+    return;
+}

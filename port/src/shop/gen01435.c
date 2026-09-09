@@ -1,0 +1,17 @@
+/* FF4 source-port — interpreted module for func_8016838C.
+ * Ground truth: src/func_8016838C.c (byte-verified).
+ * Primitives: port/include/ff4_window.h.
+ */
+#include "ff4_window.h"
+void func_8016838C(void)
+{
+    /* shop: 3B04(0x7000) x2 + v1/t0 latch loop. */
+    cell_state(0x7000);
+    cell_state_of();
+    for (;;) {
+        if (func_80197288() != 0)
+            continue;
+        break;
+    }
+    return;
+}

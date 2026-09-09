@@ -1,0 +1,21 @@
+/* FF4 source-port — interpreted module for func_80193924.
+ * Ground truth: src/func_80193924.c (byte-verified).
+ * Primitives: port/include/ff4_window.h.
+ */
+#include "ff4_window.h"
+void func_80193924(void)
+{
+    /* battle anim: v1/v0 gate tree; 801972B8/80197208 rows;
+       returns at L193C10. */
+    if (io_just() != 0)
+        goto L1939B8;
+    goto L193C10;
+L1939B8:
+    func_801972B8();
+    /* gate tree -> L193A50/L193AB8/L193B44/L193B5C */
+    func_80197208();
+    func_801972B8();
+    return;
+L193C10:
+    return;
+}
