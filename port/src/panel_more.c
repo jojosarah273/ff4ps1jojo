@@ -86,6 +86,7 @@ uint16_t panel_cursor_next(void)
 
 /* cell-and family (byte-verified on gcc-2.95.2; exact decodes).
  * Ground truth: src/func_800F4998, 800F4B78, 800F4BB0. */
+uint8_t *g_panel_mask_addr(void);
 
 extern uint8_t *g_sel_cell;     /* D_8019ED5C */
 extern uint8_t *g_sel_cell2;    /* D_8019ED60 */
