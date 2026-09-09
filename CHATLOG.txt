@@ -343,3 +343,26 @@ All pushed.
 - Boot: frames 0..60 of config_menu_run, io_just self-inject (auto-press after
   many polls) keeps menus advancing headless; real SDL keys map to pad bits.
 - Docs refreshed: RESUME.md, port/docs/EXECUTE.md, README Phase B line.
+
+=== 2026-09-09 17:18 ===
+**Long-stretch: readability pass, Avenue-2 interpretation wave, device hardening.**
+- tools/port_names.py: 171-entry 0x800F semantic-name manifest; deck raw
+  func_ refs cut 3947 -> ~144 (94%+); 1466 redundant externs dropped;
+  header +69..+19 declarations. tools/port_catalog.py -> port/docs/functions.md.
+- Avenue 2 interpreted (real definitions, no longer stubs):
+  db/cursor.c (26), db/cellstore.c (29), db/flags.c (19), db/dispatch.c (13),
+  db/catalogs.c (4), db/cells.c (2), db/ticker.c (3), db/arith.c (1),
+  db/scratch.c (1), battle/battle_rows2.c (5), config/options_rows.c (2),
+  shop/shop_dispatch.c (3).
+- State layer: include/ff4_state.h menu_cell_state_t/input_state_t;
+  device input on the struct; db/cells.c register file extended
+  (D_8019ED44/48/54/58/5C/60, D_800D0000/D_800C8000 -> g_vram_ sim).
+- Device hardening (remote-desktop): renderer falls back to software,
+  auto-press injectors gated on SDL dummy driver / FF4_AUTOPRESS=1,
+  held-press navigation; cell screen is blitted (visible state-to-pixels).
+- Boot: 'battle' arg drives battle_menu_run; config + battle both exit 0
+  headless; clean build verified from committed tree.
+- Docs: port/docs/READING.md, BYTE_MATCH_POLICY.md (oracle-guard
+  decision), EXECUTE/RESUME/README/coverage/functions refreshed.
+- Commits this stretch: 961c3933, Avenue2 batches 2-5, state layer,
+  device hardening b049b376..196a9a0f + batch5.
