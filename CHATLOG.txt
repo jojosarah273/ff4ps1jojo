@@ -366,3 +366,22 @@ All pushed.
   decision), EXECUTE/RESUME/README/coverage/functions refreshed.
 - Commits this stretch: 961c3933, Avenue2 batches 2-5, state layer,
   device hardening b049b376..196a9a0f + batch5.
+
+=== 2026-09-09 17:35 ===
+**Stretch close: interpretation integration + host-pointer pivot + stability.**
+- NM 801x integration: +20 mappings (battle_wndfx_run/battle_rows_*,
+  options_row*, status_panel_install_labels/status_pane_build, shop_*,
+  state_ok, menu_screen_tramp, final_row...); extern-drop idempotent
+  (raw + renamed forms); header now carries only 800F names.
+- Duplicates fixed: options_rows.c + shop/store2.c deleted (older waves
+  owned the names), battle_rows2.c stripped to battle_mode_dispatch.
+- HOST-POINTER PIVOT: catalog_base/cell_addr16/cell_read32/cell_window/
+  cell_merge return pointers into g_vram_ (& 0x1FFFF bank placement);
+  cellstore cell_add16 mirrors route via catalog_addr(); panels use
+  D_800D0000; fn-addr-as-bank quirks -> sim base (no .text writes).
+- BISECTED the config segv to final_row's cell_add16 chain (PS1 addr
+  derefs); fixed -> config + battle both exit 0 consistently.
+- tools/match.py: full 8-rung ladder (L260/L2724/L280/L291 wired);
+  near-misses re-probed (still plateau 827; lane-sweep-1.md updated).
+- Clean tree state: 1512 modules, 411 fn stubs (was 885), ~1460/2516
+  funcs interpreted, config+battle smoke exit 0, byte-verified 827.
