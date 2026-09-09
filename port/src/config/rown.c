@@ -101,7 +101,7 @@ L2e0:
         func_800F62F0(0x39);
     L3a8:
         func_800F5DD4(0x60);
-        if (poll_go() != 0)
+        if (poll_go(0x202) != 0)
             continue;
         break;
     }

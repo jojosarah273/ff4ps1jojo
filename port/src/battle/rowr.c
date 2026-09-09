@@ -118,7 +118,7 @@ L6b4:
             row_open_w(0x10);
             cell_put(0x22);
             poll_pair(0x20);
-            if (poll_go() != 0)
+            if (poll_go(0x202) != 0)
                 continue;
             break;
         }
@@ -127,7 +127,7 @@ L6b4:
         row_open_w(0x10);
         cell_put(0x23);
         poll_pair(0x21);
-        if (poll_go() != 0)
+        if (poll_go(0x202) != 0)
             continue;
         break;
     }

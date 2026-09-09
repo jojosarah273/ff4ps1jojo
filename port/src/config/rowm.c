@@ -141,14 +141,14 @@ Lc0c:
     Le34:
         txt_set(0x1B94);
         poll_spin();
-        if (poll_go() != 0)
+        if (poll_go(0x80) != 0)
             goto Le64;
         txt_draw(0x1B94);
         goto Lef4;
     Le64:
         txt_set(0x1B96);
         poll_spin();
-        if (poll_go() != 0)
+        if (poll_go(0x80) != 0)
             goto Lef4;
         txt_draw(0x1B96);
         latch(8);
@@ -160,7 +160,7 @@ Lc0c:
             row_prep_close();
             func_801266C8();
             poll_pair(0x45);
-            if (poll_go() != 0)
+            if (poll_go(0x202) != 0)
                 continue;
             break;
         }
@@ -196,7 +196,7 @@ Lc0c:
             row_prep_close();
             func_801266C8();
             poll_pair(0x45);
-            if (poll_go() != 0)
+            if (poll_go(0x202) != 0)
                 continue;
             break;
         }

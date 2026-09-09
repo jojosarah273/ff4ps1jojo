@@ -39,7 +39,7 @@ L560:
         func_800F8274(0x3D);
         row_prep_close();
         poll_pair(0x45);
-        if (poll_go() != 0)
+        if (poll_go(0x202) != 0)
             continue;
         break;
     }

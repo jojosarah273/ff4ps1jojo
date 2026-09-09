@@ -56,6 +56,7 @@ uint32_t sel(uint32_t id);               /* 800F4120                  */
 void poll_t(uint32_t t);                 /* 800F5958 / 5A90           */
 void poll_pair(uint32_t id);             /* 800F5DA0 / 62BC           */
 uint32_t poll_go(uint32_t id);           /* 800F5B8C / 5C64 (0x202)   */
+uint32_t poll_go_cur(void);              /* 800F5B8C() (held)         */
 
 /* flow */
 void latch(uint32_t id);                 /* 800F654C                  */
@@ -71,6 +72,7 @@ void cell_dispatch(void);                /* 800F6048                  */
 void row_open_w(uint32_t id);            /* 800F4008                  */
 void cell_fmt2(uint32_t id);             /* 800F7594                  */
 void row_sel2(uint32_t cell);            /* 800F7894 / 7A40           */
+void row_sel2_cur(void);                 /* 800F7894()                */
 void row_arm2(uint32_t id);              /* 800F4F28                  */
 
 /* no-arg variants (0-arg call sites in the source) */

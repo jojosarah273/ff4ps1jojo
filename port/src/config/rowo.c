@@ -167,7 +167,7 @@ L36C:
         goto L3BC;
     txt_set(0x1BA7);
     poll_spin();
-    if (poll_go() != 0)
+    if (poll_go(0x8080) != 0)
         goto L3B4;
     latch(9);
 L3B4:
@@ -197,39 +197,39 @@ L414:
     goto L654;
 L45C:
     poll_spin();
-    if (poll_go() != 0)
+    if (poll_go(0x202) != 0)
         goto L4A4;
     txt_set(0x16AC);
     poll_spin();
-    if (poll_go() != 0)
+    if (poll_go(0x80) != 0)
         goto L654;
     txt_draw(0x16AC);
     goto L654;
 L4A4:
     poll_spin();
-    if (poll_go() != 0)
+    if (poll_go(0x202) != 0)
         goto L4EC;
     txt_set(0x16AD);
     poll_spin();
-    if (poll_go() != 0)
+    if (poll_go(0x80) != 0)
         goto L654;
     txt_draw(0x16AD);
     goto L654;
 L4EC:
     poll_spin();
-    if (poll_go() != 0)
+    if (poll_go(0x202) != 0)
         goto L514;
     func_8013B160();
     goto L654;
 L514:
     poll_spin();
-    if (poll_go() != 0)
+    if (poll_go(0x202) != 0)
         goto L53C;
     func_8013B228();
     goto L654;
 L53C:
     poll_spin();
-    if (poll_go() != 0)
+    if (poll_go(0x202) != 0)
         goto L564;
     func_8013B1A8();
     goto L654;
@@ -245,7 +245,7 @@ L564:
     row_prep_close();
     func_800F6E30(0x45);
     poll_spin();
-    if (poll_go() != 0)
+    if (poll_go(0x80) != 0)
         goto L654;
     func_800F8A18(0x45);
     goto L654;
@@ -264,7 +264,7 @@ L654:
     goto Lf50;
 L69C:
     poll_spin();
-    if (poll_go() != 0)
+    if (poll_go(0x202) != 0)
         goto L6EC;
     txt_set(0x16AC);
     func_800F61E8();
@@ -275,7 +275,7 @@ L69C:
     goto Lf50;
 L6EC:
     poll_spin();
-    if (poll_go() != 0)
+    if (poll_go(0x202) != 0)
         goto L73C;
     txt_set(0x16AD);
     func_800F61E8();
@@ -286,19 +286,19 @@ L6EC:
     goto Lf50;
 L73C:
     poll_spin();
-    if (poll_go() != 0)
+    if (poll_go(0x202) != 0)
         goto L764;
     func_8013B160();
     goto Lf50;
 L764:
     poll_spin();
-    if (poll_go() != 0)
+    if (poll_go(0x202) != 0)
         goto L78C;
     func_8013B228();
     goto Lf50;
 L78C:
     poll_spin();
-    if (poll_go() != 0)
+    if (poll_go(0x202) != 0)
         goto L7B4;
     func_8013B1A8();
     goto Lf50;

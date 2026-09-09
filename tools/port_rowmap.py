@@ -60,7 +60,7 @@ CURFIX = ("tail", "wnd_open", "txt_set", "txt_cell", "row_prep", "poll_t",
           "cell_state", "cell_peek", "draw_pad", "key_page",
           "poll_pair", "page_paint", "page_paint2", "txt_draw",
           "row_scan", "row_sync2", "row_sel2", "row_arm2", "row_act2",
-          "cell_put", "label")
+          "cell_put", "label", "poll_go", "row_sel2")
 
 def map_calls(txt):
     for a, b in M:

@@ -47,7 +47,7 @@ list8_loop:
     for (;;) {
         row_page(0x43);
         poll_spin();
-        if (poll_go() != 0)
+        if (poll_go(0x8080) != 0)
             goto L558;
         latch(2);
     L558:
@@ -105,7 +105,7 @@ L698:
         goto L6e8;
     txt_set(0x1B83);
     poll_spin();
-    if (poll_go() != 0)
+    if (poll_go(0x8080) != 0)
         goto L6e0;
     latch(7);
 L6e0:
@@ -130,7 +130,7 @@ L740:
         goto L790;
     txt_set(0x1B84);
     poll_spin();
-    if (poll_go() != 0)
+    if (poll_go(0x8080) != 0)
         goto L788;
     latch(2);
 L788:

@@ -52,7 +52,7 @@ L2B8:
     if (io_just() == 0)
         goto L35C;
     func_800F5B2C(cell_state(0x1441 + *(u16 *)D_8019ED54[0]));
-    if (poll_go() != 0)
+    if (poll_go(0x202) != 0)
         goto L850;
     page_paint(0x1440);
     goto L850;
@@ -172,7 +172,7 @@ L690:
 L6F0:
     page_open(0x1B3C);
     func_800F5B2C(cell_state(0x1441 + *(u16 *)D_8019ED54[0]));
-    if (poll_go() != 0)
+    if (poll_go(0x202) != 0)
         goto L730;
     page_paint(0x1440);
 L730:
@@ -226,7 +226,7 @@ L850:
     for (;;) {
         func_8011F320();
         poll_spin();
-        if (poll_go() != 0)
+        if (poll_go(0x202) != 0)
             continue;
         break;
     }

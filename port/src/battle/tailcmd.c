@@ -58,7 +58,7 @@ La7a8:
     txt_cell(0x9D9);
     row_read(0x1F);
     poll_spin();
-    if (poll_go() == 0) {
+    if (poll_go(0x202) == 0) {
         txt_set(0x172F);
         txt_draw(0x1706);
         txt_set(0x1730);
@@ -84,7 +84,7 @@ La888:
     goto Laaa0;
 La8f8:
     poll_spin();
-    if (poll_go() != 0)
+    if (poll_go(0x202) != 0)
         goto La930;
     latch(1);
     txt_draw(0x170F);
@@ -92,7 +92,7 @@ La8f8:
     goto Laaa0;
 La930:
     poll_spin();
-    if (poll_go() != 0)
+    if (poll_go(0x202) != 0)
         goto La970;
     latch(1);
     txt_draw(0x1712);
@@ -101,7 +101,7 @@ La930:
     goto Laaa0;
 La970:
     poll_spin();
-    if (poll_go() != 0)
+    if (poll_go(0x202) != 0)
         goto La9a8;
     latch(1);
     txt_draw(0x1718);
@@ -109,7 +109,7 @@ La970:
     goto Laaa0;
 La9a8:
     poll_spin();
-    if (poll_go() != 0)
+    if (poll_go(0x202) != 0)
         goto La9e0;
     latch(1);
     txt_draw(0x171C);
@@ -117,7 +117,7 @@ La9a8:
     goto Laaa0;
 La9e0:
     poll_spin();
-    if (poll_go() != 0)
+    if (poll_go(0x202) != 0)
         goto Laa18;
     latch(1);
     txt_draw(0x1720);
@@ -125,7 +125,7 @@ La9e0:
     goto Laaa0;
 Laa18:
     poll_spin();
-    if (poll_go() != 0)
+    if (poll_go(0x202) != 0)
         goto Laa50;
     latch(1);
     txt_draw(0x1724);

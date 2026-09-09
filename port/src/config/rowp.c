@@ -61,7 +61,7 @@ Lab24:
             goto Lad80;
         txt_set(0x1BB9);
         poll_spin();
-        if (poll_go() != 0)
+        if (poll_go(0x8080) != 0)
             goto Lad78;
         latch(5);
     Lad78:
@@ -109,7 +109,7 @@ Lab24:
         func_801224D0();
         txt_cell(0x16AE);
         poll_spin();
-        if (poll_go() != 0)
+        if (poll_go(0x8080) != 0)
             goto Laf04;
         poll_spin();
     Laf04:
