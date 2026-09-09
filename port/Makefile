@@ -30,4 +30,4 @@ native: all
 clean:
 	rm -rf build
 
-.PHONY: all deck stubs platform clean
+.PHONY: all deck native clean

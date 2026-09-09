@@ -7,7 +7,7 @@ if ! ls build/src/*/*.o >/dev/null 2>&1; then
   echo "deck not built; run: make deck"
   exit 1
 fi
-OBJS=$(find build -name '*.o' ! -name 'stubs.o' ! -name 'main.o')
+OBJS=$(find build -path '*src*' -name '*.o')
 UNDEF=$(nm -u $OBJS 2>/dev/null | awk '{print $2}' | sed 's/@.*//' | sort -u)
 DEF=$(nm $OBJS build/platform/boot.o build/main.o 2>/dev/null | awk '$2 ~ /^[TtDdBbRr]$/ {print $3}' | sort -u)
 python3 - "$UNDEF" "$DEF" << 'PY'
