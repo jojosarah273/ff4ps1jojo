@@ -11,7 +11,7 @@ void txt_draw(uint32_t id);
 void cell_fmt(uint32_t id);
 void row_page(uint32_t id);
 void row_read(uint32_t id);
-void gate(uint32_t id);
+uint32_t gate(uint32_t id);
 uint32_t io_sel(uint32_t key);
 void latch(uint32_t id);
 void open2(uint32_t id);
