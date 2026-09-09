@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 """Map a Phase A row/state machine C file into an interpreted module.
 
-Faithful text transform: the 0x800F primitives become the semantic
-window API (port/include/ff4_window.h); func_801xxxxx row helpers keep
-their ids so the caller graph stays visible. Behavior unchanged.
+Faithful text transform: 0x800F primitives become the semantic window
+API (port/include/ff4_window.h); row helpers keep their func ids; direct
+cell externs are re-emitted; arity mismatches (0-arg call sites) become
+the *_cur variants. Behavior unchanged.
 """
-import re, sys
+import re
+import sys
 from pathlib import Path
 
 M = [
@@ -38,39 +40,58 @@ M = [
     ("func_800F6558", "row_sync2"), ("func_800F3D48", "stat_sync"),
     ("func_800F6658", "row_read2"), ("func_800F6214", "row_done2"),
     ("func_800F7828", "row_act2"), ("func_800F7834", "row_act3"),
-    ("func_800F6028", "row_ptr"), ("func_800F6014", ""),
-    ("func_800F6268", "key_page2"),
-    ("func_800F54D4", "io_press"),
+    ("func_800F6028", "row_ptr"), ("func_800F54D4", "io_press"),
     ("func_800F6048", "cell_dispatch"), ("func_800F6240", "page_paint2"),
     ("func_800F4008", "row_open_w"), ("func_800F7594", "cell_fmt2"),
     ("func_800F7894", "row_sel2"), ("func_800F7A40", "row_sel2"),
-    ("func_800F4F28", "row_arm2"),
+    ("func_800F4F28", "row_arm2"), ("func_800F6268", "key_page2"),
+    ("func_800F5CCC", "poll_spin"), ("func_800F5160", "row_arm_t"),
+    ("func_800F5C0C", "poll_cmd"), ("func_800F8EBC", "row_info"),
+    ("func_800F9244", "row_line"), ("func_800F93DC", "row_close2"),
+    ("func_800F7320", "row_frame"), ("func_800F8070", "row_attr"),
 ]
+
+ARGLESS = ("sep", "step2", "io_just", "io_go", "row_close", "row_open",
+           "row_prep_close", "row_sync", "row_done", "stat_sync",
+           "cell_dispatch", "row_pad", "row_sel_cell", "row_sel_cell2",
+           "row_open2", "row_open3", "poll_go")
+CURFIX = ("tail", "wnd_open", "txt_set", "txt_cell", "row_prep", "poll_t",
+          "io_poll", "io_press", "cell_draw", "page", "latch",
+          "cell_state", "cell_peek", "draw_pad", "key_page",
+          "poll_pair", "page_paint", "page_paint2", "txt_draw",
+          "row_scan", "row_sync2", "row_sel2", "row_arm2", "row_act2")
+
 def map_calls(txt):
     for a, b in M:
         if b:
             txt = txt.replace(a, b)
     return txt
+
 def main():
     for arg in sys.argv[1:]:
         func, out = arg.split("=")
-        src = Path("src") / (func + ".c")
-        body = src.read_text()
-        body = re.sub(r"#include \"common.h\"\n", "", body)
-        body = re.sub(r"extern[^;]*;[^\n]*\n", "", body)
+        body = Path("src") / (func + ".c")
+        body = body.read_text()
+        body = re.sub(r'#include "common.h"\n', "", body)
+        exter = re.findall(r"extern[^;]*;\n", body)
+        body = re.sub(r"extern[^;]*;\n", "", body)
         body = map_calls(body)
-        body = body.replace("cell_state()", "cell_state_of()")
-        body = body.replace("row_prep_close(0x20)", "row_prep_close()")
-        body = body.replace("row_prep_close(0x10)", "row_prep_close()")
-        body = body.replace("latch()", "latch_cur()")
+        # arity normalizations
+        for name in ARGLESS:
+            body = re.sub(r"\b%s\(0x[0-9A-Fa-f]+\)" % name, name + "()", body)
+        for name in CURFIX:
+            body = body.replace(name + "()", name + "_cur()")
+        body = body.replace("cell_state_cur()", "cell_state_of()")
         body = body.replace("row_open_w()", "row_open_w0()")
-        # skip void func_ signature -> keep; wrap header
-        head = (f"/* FF4 source-port — interpreted module for {func}.\n"
-                f" * Ground truth: src/{func}.c (byte-verified).\n"
-                f" * Primitives: port/include/ff4_window.h.\n */\n"
-                f"#include \"ff4_window.h\"\n")
+        if exter:
+            body = "".join(exter) + body
+        head = ("/* FF4 source-port — interpreted module for %s.\n"
+                " * Ground truth: src/%s.c (byte-verified).\n"
+                " * Primitives: port/include/ff4_window.h.\n */\n"
+                "#include \"ff4_window.h\"\n" % (func, func))
         Path(out).parent.mkdir(parents=True, exist_ok=True)
         Path(out).write_text(head + body)
         print("mapped", func, "->", out)
+
 if __name__ == "__main__":
     main()

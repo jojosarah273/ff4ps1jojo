@@ -9,6 +9,9 @@
 
 #include <stdint.h>
 
+typedef uint32_t u32; typedef int32_t s32; typedef uint16_t u16;
+typedef int16_t s16; typedef uint8_t u8;
+
 /* cells & state */
 uint32_t cell_state(uint32_t off);       /* 800F3B04 (catalog base)   */
 uint32_t cell_state_of(void);            /* 800F3B04() (held cell)   */
@@ -70,4 +73,32 @@ void cell_fmt2(uint32_t id);             /* 800F7594                  */
 void row_sel2(void);                     /* 800F7894 / 7A40           */
 void row_arm2(uint32_t id);              /* 800F4F28                  */
 
+/* no-arg variants (0-arg call sites in the source) */
+void tail_cur(void);          /* 800F8D6C()  */
+void wnd_open_cur(void);      /* 800F71DC()  */
+void txt_set_cur(void);       /* 800F6564()  */
+void txt_cell_cur(void);      /* 800F6B68()  */
+void row_prep_cur(void);      /* 800F9644()  */
+void poll_t_cur(void);        /* 800F5958()  */
+void io_poll_cur(void);       /* 800F5574()  */
+uint32_t io_press_cur(void);  /* 800F54D4()  */
+void cell_draw_cur(void);     /* 800F8768()  */
+void page_cur(void);          /* 800F7270()  */
+
 #endif
+
+/* more no-arg variants (mapper output) */
+void latch_cur(void);          /* 800F654C()  */
+uint32_t cell_state_of(void);  /* 800F3B04()  */
+void cell_peek_cur(void);      /* 800F3B9C()  */
+void draw_pad_cur(void);       /* 800F7500()  */
+void key_page_cur(void);       /* 800F62BC()  */
+void poll_pair_cur(void);      /* 800F5DA0()  */
+void page_paint_cur(void);     /* 800F90EC()  */
+void page_paint2_cur(void);    /* 800F6240()  */
+void txt_draw_cur(void);       /* 800F8188()  */
+void row_scan_cur(void);       /* 800F5CF8()  */
+void row_sync2_cur(void);      /* 800F6558()  */
+void row_sel2_cur(void);       /* 800F7894()  */
+void row_arm2_cur(void);       /* 800F4F28()  */
+void row_act2_cur(void);       /* 800F7828()  */
