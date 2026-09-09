@@ -20,7 +20,7 @@ void func_8013B270(void)
 L13b2cc:
     for (;;) {
         page(0x48);
-        func_800F6C68();
+        cell_push_c8();
         row_sync();
         func_80124EAC();
         txt_cell_cur();
@@ -85,10 +85,10 @@ L13b458:
             row_prep_close();
             row_page(0x45);
             func_8013B804();
-            func_800F7864();
+            cell_tick_half();
             sep_a();
             row_open_w(0x81);
-            func_800F8960();
+            cell_pull_c8();
             key_page(0x45);
             row_page(0x45);
             io_poll(5);
@@ -135,7 +135,7 @@ L13b458:
     L13b6a0:
         for (;;) {
             txt_set(0x1BC7);
-            func_800F61E8();
+            cell_set50_from40();
             io_poll(5);
             if (io_just() == 0)
                 goto L13B6D0;

@@ -7,10 +7,10 @@ void func_80150610(void)
 {
     /* battle rows: 0x3FF/0x2/0xC windows, 8007411C row. */
     row_prep(0x20);
-    func_800F6CF4();
-    func_800F4264(0x3FF);
+    cell_push9_bank();
+    cell_pos_mask(0x3FF);
     row_arm_s_cur();
-    func_800F6CF4();
+    cell_push9_bank();
     sep();
     row_prep_close();
     wnd_open(2);

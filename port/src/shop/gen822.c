@@ -11,7 +11,7 @@ void func_801605D0(void)
     sep();
 L160604:
     for (;;) {
-        func_800F6D70(0x29B5);
+        cell_push_c8_d58(0x29B5);
         if (io_press(cell_state(0xB1)) != 0)
             goto L16064C;
         if (io_press(cell_state(0xB2)) != 0)

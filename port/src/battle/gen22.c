@@ -14,7 +14,7 @@ void func_801482E8(void)
     io_poll(0x2A);
     if (io_just() == 0)
         goto L8348;
-    func_800F8F74(0xF107);
+    cell_clear_bank(0xF107);
     return;
 L8348:
     draw_pad_cur();
@@ -23,7 +23,7 @@ L8348:
 L8360:
     for (;;) {
         open_row(0x14);
-        func_800F6D70(0xF0FA);
+        cell_push_c8_d58(0xF0FA);
         if (gate(2) != 0)
             goto L83a0;
         io_poll(0xFF);
@@ -31,14 +31,14 @@ L8360:
             goto L8670;
         key_page(0x14);
     L83a0:
-        func_800F6D70(0xF0D3);
+        cell_push_c8_d58(0xF0D3);
         sep_b();
-        func_800F8058(0x10);
+        cell_pos_back(0x10);
         cell_put(0x12);
         row_open();
-        func_800F6D70(0xF0E0);
+        cell_push_c8_d58(0xF0E0);
         sep_b();
-        func_800F8058(8);
+        cell_pos_back(8);
         cell_put(0xE);
         row_sync();
         draw_pad_cur();
@@ -47,10 +47,10 @@ L8360:
         if (gate(0x202) != 0)
             goto L849c;
         for (;;) {
-            func_800F6C68();
+            cell_push_c8();
             sep_a();
             cell_poke0(cell_state(0xE));
-            func_800F8960(0x13);
+            cell_pull_c8(0x13);
             step2();
             poll_t(5);
             if (io_just() != 0)
@@ -59,7 +59,7 @@ L8360:
         goto L8508;
     L849c:
         txt_set(0xF108);
-        func_800F6C68();
+        cell_push_c8();
         sep_a();
         cell_poke0(cell_state(0xE));
         cell_put(0x13);
@@ -76,7 +76,7 @@ L8360:
         if (gate(2) == 0) {
             row_page(0x12);
             sep_b();
-            func_800F8058(0x20);
+            cell_pos_back(0x20);
             cell_put(0x12);
         }
         for (;;) {
@@ -101,7 +101,7 @@ L8360:
             row_close();
             cell_draw(0x340);
             cell_step();
-            func_800F6D70(0xF0ED);
+            cell_push_c8_d58(0xF0ED);
             cell_draw(0x340);
             cell_step();
             poll_pair(0xE);
@@ -114,8 +114,8 @@ L8360:
         row_prep(0x20);
         row_read2(0x10);
         sep_a();
-        func_800F4064(5);
-        func_800F8274(0x10);
+        cell_pos_fwd(5);
+        cell_put_hi9(0x10);
         sep();
         row_prep_close();
     L86a8:

@@ -17,9 +17,9 @@ L167e8c:
             goto L1680E8;
         row_sel_cell_cur();
         row_open();
-        func_800F6C68();
+        cell_push_c8();
         cell_put_cur();
-        func_800F6C68();
+        cell_push_c8();
         cell_put(1);
         latch(0x13);
         cell_put(2);
@@ -38,34 +38,34 @@ L167e8c:
                 goto L1680E0;
             sep_a();
             cell_poke0(cell_state(4));
-            func_800F9200();
+            cell_cursor_dec();
             txt_set(0x6CC0);
             if (gate(2) != 0)
                 goto L167FF0;
             row_close2();
-            func_800F9200();
+            cell_cursor_dec();
         L167FF0:
             row_close2();
-            func_800F8960(0x340);
+            cell_pull_c8(0x340);
             func_80168118();
             func_800F6EA8();
             sep_a();
             cell_poke0(cell_state(5));
-            func_800F8960(0x341);
+            cell_pull_c8(0x341);
             func_80168118();
             func_800F6EA8();
-            func_800F8960(0x342);
+            cell_pull_c8(0x342);
             func_80168118();
             func_800F6EA8();
-            func_800F9200();
+            cell_cursor_dec();
             txt_set(0x6CC0);
             if (gate(2) != 0)
                 goto L1680A0;
             row_close2();
-            func_800F9200();
+            cell_cursor_dec();
         L1680A0:
             row_close2();
-            func_800F8960(0x343);
+            cell_pull_c8(0x343);
             step2();
             step2();
             step2();

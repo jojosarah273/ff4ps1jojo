@@ -41,17 +41,17 @@ L1463C4:
         goto L146420;
     row_open();
     row_page(0x47);
-    func_800F6C68();
+    cell_push_c8();
     row_close();
     goto L14645C;
 L146420:
     row_open();
     row_page(0x47);
-    func_800F6C68();
+    cell_push_c8();
     row_close();
 L14645C:
     cell_draw_cur();
-    func_800F6D70();
+    cell_push_c8_d58();
     row_read(0x30);
     if (sel(2) != 0)
         goto L1464E4;

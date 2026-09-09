@@ -1,0 +1,103 @@
+#!/usr/bin/env python3
+"""port_catalog — render port/docs/functions.md, the readable function
+catalog of every 0x800F/0x801x function and where it lives in the port.
+
+Sources:
+  * src/func_*.c        role comment (first /* */ after the decl)
+  * port/src/...        interpreted module + its function name
+  * tools/port_names.py semantic name for named 0x800F primitives
+  * expected/matched/   byte-verified marker
+"""
+import re
+import json
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+SRC = ROOT / "src"
+PORT = ROOT / "port"
+MATCHED = ROOT / "expected" / "matched"
+sys.path.insert(0, str(ROOT / "tools"))
+from port_names import NM  # noqa: E402
+
+
+def role_of(fid: str) -> str:
+    p = SRC / (fid + ".c")
+    if not p.exists():
+        return ""
+    t = p.read_text()
+    # role comment directly after the function decl, else any leading comment
+    m = re.search(r"\)\s*\n\s*\{?\s*\n\s*/\*\s*([^*]+?)\s*\*/", t)
+    if not m:
+        m = re.search(r"/\*\s*([^*]+?)\s*\*/", t)
+    if not m:
+        return ""
+    return " ".join(m.group(1).split())[:140]
+
+
+def find_module(fid: str):
+    """Return (module_path, function_name) if some port module interprets it."""
+    marker = "src/%s.c" % fid
+    for p in PORT.joinpath("src").rglob("*.c"):
+        if "device" in p.parts:
+            continue
+        t = p.read_text()
+        if marker in t:
+            # the module's exported function: first "void name(" or "RET name(" at top level
+            m = re.search(r"^(?:void|u8|u16|u32|s8|s16|s32|int|uint32_t|int32_t)\s+(?:gen)?(\w+)\([^)]*\)\s*(?:[\{;])", t, re.M)
+            if m:
+                return str(p.relative_to(PORT)), m.group(1)
+            return str(p.relative_to(PORT)), ""
+    return None, None
+
+
+def main():
+    rows = []
+    ids = sorted(p.stem for p in SRC.glob("func_*.c"))
+    for fid in ids:
+        mod, fname = find_module(fid)
+        bv = (MATCHED / (fid + ".o")).exists()
+        role = role_of(fid)
+        rows.append({
+            "id": fid[5:],
+            "name": NM.get(fid[5:], ""),
+            "fname": fname or "",
+            "module": mod or "",
+            "bv": bv,
+            "role": role,
+        })
+
+    # statuses
+    interp = sum(1 for r in rows if r["module"])
+    stubs = sum(1 for r in rows if not r["module"])
+    named = sum(1 for r in rows if r["name"])
+    bv = sum(1 for r in rows if r["bv"])
+
+    lines = [
+        "# FF4 port — function catalog",
+        "",
+        "Every Phase A function and where it lives in the port. The `name`",
+        "column is the semantic 0x800F primitive name (tool:",
+        "`tools/port_names.py`, header: `port/include/ff4_window.h`);",
+        "`module` is the interpreted module that owns the function;",
+        "`bv` marks byte-verified. Unassigned rows are stubbed until the",
+        "register machines are interpreted (Avenue 2).",
+        "",
+        f"- functions: {len(rows)}   interpreted: {interp}   stub-only: {stubs}",
+        f"- byte-verified: {bv}   named primitives: {named}",
+        "",
+        "| id | name | module fn | module | bv | role |",
+        "|----|------|-----------|--------|----|------|",
+    ]
+    for r in rows:
+        lines.append("| %s | %s | %s | %s | %s | %s |" % (
+            r["id"], r["name"] or "-", r["fname"] or "-",
+            r["module"] or "-", "Y" if r["bv"] else "",
+            r["role"] or ""))
+    out = ROOT / "port" / "docs" / "functions.md"
+    out.write_text("\n".join(lines) + "\n")
+    print(f"wrote {out} ({len(rows)} rows)")
+
+
+if __name__ == "__main__":
+    main()

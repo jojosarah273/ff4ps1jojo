@@ -10,19 +10,19 @@ void func_801745F4(void)
     txt_set(0xFE0);
     cell_put(0x19);
     open_row(0x18);
-    func_800F76BC(cell_state(0x19));
-    func_800F76E8();
-    func_800F7CC8(cell_state(0x18));
+    cell_word_half(cell_state(0x19));
+    cell_flags_repack();
+    cell_word_half_s(cell_state(0x18));
     page(0x18);
     draw_pad(0x20);
 L17464C:
     for (;;) {
     L174650:
         for (;;) {
-            func_800F6C68();
-            func_800F8960(0xCDB);
-            func_800F6C68();
-            func_800F8960(0xCEB);
+            cell_push_c8();
+            cell_pull_c8(0xCDB);
+            cell_push_c8();
+            cell_pull_c8(0xCEB);
             cell_step();
             step2();
             row_read(0xF);

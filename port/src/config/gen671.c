@@ -16,7 +16,7 @@ void func_8012C42C(void)
     cell_peek0(cell_state(0x45));
     step2();
     step2();
-    func_800F5520(func_800F3A70(0x60));
+    func_800F5520(cell_bank_sel(0x60));
     cell_state_of();
     if (io_go() == 0)
         goto L12C4C8;

@@ -8,10 +8,10 @@ void func_80105AF0(void)
     /* shop list render: 2115/4300/4304 header + 4 item rows (2882/28B2/
        28E2/2912 desc, 4302/4305 cells, 420B cursor); loop L105C48 polls
        634/70 key read with 6B68(0x634)/5574(0x80) gates. */
-    func_800FE778();
+    wnd_fx_7d();
     latch(0x80);
     txt_draw(0x2115);
-    func_800FCC84();
+    wnd_fx_tags();
     latch(1);
     txt_draw(0x4300);
     latch(0x14);
@@ -25,7 +25,7 @@ void func_80105AF0(void)
     func_800FCCBC();
     wnd_open(0x28B2);
     label(0x2116);
-    func_800F8F74(0x420B);
+    cell_clear_bank(0x420B);
     wnd_open_cur();
     label(0x4302);
     wnd_open(0x18);
@@ -33,7 +33,7 @@ void func_80105AF0(void)
     func_800FCCBC();
     wnd_open(0x28E2);
     label(0x2116);
-    func_800F8F74(0x420B);
+    cell_clear_bank(0x420B);
     wnd_open_cur();
     label(0x4302);
     wnd_open(0x18);
@@ -41,7 +41,7 @@ void func_80105AF0(void)
     func_800FCCBC();
     wnd_open(0x2912);
     label(0x2116);
-    func_800F8F74(0x420B);
+    cell_clear_bank(0x420B);
     wnd_open_cur();
     label(0x4302);
     wnd_open(0x18);

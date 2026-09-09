@@ -5,7 +5,7 @@
 #include "ff4_window.h"
 void func_8012EC48(void)
 {
-    func_800F8F74(0x1B27);
+    cell_clear_bank(0x1B27);
     func_80122FF4();
     row_page(0xE8);
     if (gate(0x8080) == 0)
@@ -29,7 +29,7 @@ void func_8012EC48(void)
     row_sel_cell2_cur();
     cell_poke0(cell_state(0x45));
     func_801224D0();
-    func_800F6C68();
+    cell_push_c8();
     func_800F4A7C();
     func_800F4A7C();
     io_poll(0xFF);
@@ -86,7 +86,7 @@ void func_8012EC48(void)
     row_page(0xE8);
     cell_put(0xD3);
     row_close();
-    func_800F6C68();
+    cell_push_c8();
     txt_draw(0x1B7E);
     if (gate(0x80) != 0)
         goto Lf4c;
@@ -96,7 +96,7 @@ Lf4c:
     draw_pad(0xB234);
 Lf54:
     func_8011FBA4();
-    func_800F6C68();
+    cell_push_c8();
     txt_draw(0x1B7F);
     if (gate(0x80) != 0)
         goto Lf90;
@@ -106,7 +106,7 @@ Lf90:
     draw_pad(0xB23C);
 Lf98:
     func_8011FBA4();
-    func_800F6C68();
+    cell_push_c8();
     txt_draw(0x1B80);
     if (gate(0x80) != 0)
         goto Lfd4;
@@ -135,7 +135,7 @@ L03c:
         if (gate(0x8080) != 0)
             break;
         txt_set(0x1B81);
-        func_800F61E8();
+        cell_set50_from40();
         io_poll(3);
         if (io_just() == 0)
             goto L094;
@@ -145,7 +145,7 @@ L03c:
     }
     page_paint2(0x1B87);
     func_8012F9D0();
-    func_800F8F74(0x1B87);
+    cell_clear_bank(0x1B87);
     wnd_open(0xFF18);
     tail(0x93);
     func_8016EA7C();

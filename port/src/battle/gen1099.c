@@ -8,6 +8,6 @@ void func_8014ED88(void)
     open_row(6);
     sep();
     sep_b();
-    func_800F7F48(cell_state(8));
+    cell_tick_sub(cell_state(8));
     cell_put(7);
 }

@@ -21,9 +21,9 @@ void func_80107FC4(void)
     key_page(0x3E);
 L10802C:
     page(0x3D);
-    func_800F6C68();
+    cell_push_c8();
     cell_put(0x3D);
-    func_800F6C68();
+    cell_push_c8();
     cell_put(0x3E);
     page(0x3D);
     row_page(0xB2);
@@ -33,7 +33,7 @@ L108098:
     for (;;) {
         cell_step();
         /* v0 gates -> L108134 */
-        func_800F6C68();
+        cell_push_c8();
         if (gate(0x202) != 0)
             continue;
         /* v0 gates -> L1081C0 / L1081A8 / L1081D4 */

@@ -7,9 +7,9 @@ void func_80152E54(void)
 {
     row_prep(32);
     sep_b();
-    func_800F658C(14686);
+    cell_push9(14686);
     func_800F7FCC(cell_state(14688));
-    func_800F81B0(14690);
+    cell_pull9_hi(14690);
     sep();
     row_prep_close();
 }

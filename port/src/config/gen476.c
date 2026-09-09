@@ -16,20 +16,20 @@ void func_80127718(void)
     row_open2();
     row_open3();
     sep();
-    func_800F9200();
+    cell_cursor_dec();
     row_pad();
     stat_sync();
     wnd_open(1536);
     row_open();
-    func_800F94B8();
+    cell_cursor_read();
     func_8011EA3C();
-    func_800F94B8();
+    cell_cursor_read();
     row_pad();
     page(65);
     label(4103);
     label(4105);
-    func_800F8F74(4160);
-    func_800F8F74(4224);
-    func_800F8F74(4288);
-    func_800F8F74(4352);
+    cell_clear_bank(4160);
+    cell_clear_bank(4224);
+    cell_clear_bank(4288);
+    cell_clear_bank(4352);
 }

@@ -7,22 +7,22 @@ void func_8016A390(void)
 {
     /* shop icon row: 9x (3B04/7A40/7A68) icon triplets. */
     row_sel2(cell_state_of());
-    func_800F7A68();
+    cell_flags_repack2();
     row_sel2(cell_state_of());
-    func_800F7A68();
+    cell_flags_repack2();
     row_sel2(cell_state_of());
-    func_800F7A68();
+    cell_flags_repack2();
     row_sel2(cell_state_of());
-    func_800F7A68();
+    cell_flags_repack2();
     row_sel2(cell_state_of());
-    func_800F7A68();
+    cell_flags_repack2();
     row_sel2(cell_state_of());
-    func_800F7A68();
+    cell_flags_repack2();
     row_sel2(cell_state_of());
-    func_800F7A68();
+    cell_flags_repack2();
     row_sel2(cell_state_of());
-    func_800F7A68();
+    cell_flags_repack2();
     row_sel2(cell_state_of());
-    func_800F7A68();
+    cell_flags_repack2();
     return;
 }

@@ -14,7 +14,7 @@ void func_801308B4(void)
     latch_cur();
     stat_sync();
     row_prep(0x20);
-    func_800F8274(0x45);
+    cell_put_hi9(0x45);
     row_arm_s_cur();
     row_arm_s2_cur();
     cell_peek0(cell_state(0x45));

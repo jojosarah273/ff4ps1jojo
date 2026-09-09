@@ -24,8 +24,8 @@ L1662E0:
 L1662ec:
     for (;;) {
         row_arm_s_cur();
-        func_800F4264(0x100);
-        func_800F89D4();
+        cell_pos_mask(0x100);
+        cell_stamp8_9_b();
         cell_step();
         step2();
         step2();
@@ -42,7 +42,7 @@ L16638c:
         page_paint2_cur();
         txt_set_cur();
         row_read(7);
-        func_800F6C68();
+        cell_push_c8();
         func_800F8E50();
         func_80166458();
         txt_set_cur();

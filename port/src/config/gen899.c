@@ -13,8 +13,8 @@ L126618:
         row_page(0x88);
         if (gate(0x80) != 0)
             goto L126690;
-        func_800F81E8(0x2100);
-        func_800F9200();
+        cell_pull_c8_lo(0x2100);
+        cell_cursor_dec();
         func_8011F844();
         row_close2();
         poll_spin();
@@ -22,7 +22,7 @@ L126618:
         if (poll_go_cur() != 0)
             continue;
         latch(0x80);
-        func_800F81E8(0x2100);
+        cell_pull_c8_lo(0x2100);
         cell_put(0x88);
         return;
     }

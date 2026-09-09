@@ -37,7 +37,7 @@ Lc298:
         page_paint2(0x38A9);
         goto Lc390;
     Lc308:
-        func_800F8F74(0x38A9);
+        cell_clear_bank(0x38A9);
     }
 Lc318:
     for (;;) {
@@ -47,7 +47,7 @@ Lc318:
         io_poll(0xFF);
         if (io_just() == 0)
             break;
-        func_800F8F74(0x38A8);
+        cell_clear_bank(0x38A8);
     }
     cell_put(0xA9);
     txt_cell(0x388D);
@@ -59,7 +59,7 @@ Lc390:
     if (io_go() == 0)
         goto Lc4a4;
     sep_b();
-    func_800F8058(0xC0);
+    cell_pos_back(0xC0);
     cell_put(0xDC);
     txt_draw(0x38EA);
     row_page(0xA9);

@@ -8,10 +8,10 @@ void func_8013E200(void)
     /* battle item rows: 0x1/0x2/0x3/0x4/0x5 windows, 80143D64 +
        80143D14 + 8013DE38 rows. */
     row_page_cur();
-    func_800F9200();
+    cell_cursor_dec();
     row_page_cur();
     sep_b();
-    func_800F8058(0x10);
+    cell_pos_back(0x10);
     cell_put_cur();
     func_80143D64();
     cell_put(1);

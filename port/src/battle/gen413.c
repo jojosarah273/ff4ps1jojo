@@ -10,20 +10,20 @@ void func_8010D0D8(void)
        gates. */
     cell_put(0x3E);
     open_row(0x3D);
-    func_800F76BC(cell_state(0x3E));
-    func_800F76E8();
-    func_800F7CC8(cell_state(0x3D));
-    func_800F76BC(cell_state(0x3E));
-    func_800F76E8();
-    func_800F7CC8(cell_state(0x3D));
-    func_800F76BC(cell_state(0x3E));
-    func_800F76E8();
-    func_800F7CC8(cell_state(0x3D));
+    cell_word_half(cell_state(0x3E));
+    cell_flags_repack();
+    cell_word_half_s(cell_state(0x3D));
+    cell_word_half(cell_state(0x3E));
+    cell_flags_repack();
+    cell_word_half_s(cell_state(0x3D));
+    cell_word_half(cell_state(0x3E));
+    cell_flags_repack();
+    cell_word_half_s(cell_state(0x3D));
     page(0x3D);
 L10D170:
     for (;;) {
-        func_800F6C68();
-        func_800F8960(0xE5B);
+        cell_push_c8();
+        cell_pull_c8(0xE5B);
         cell_step();
         step2();
         row_read(0xF);
@@ -34,7 +34,7 @@ L10D170:
 L10D1C4:
     for (;;) {
         latch_cur();
-        func_800F8960(0xE5B);
+        cell_pull_c8(0xE5B);
         step2();
         row_read(0xF);
         if (sel(0x202) != 0)

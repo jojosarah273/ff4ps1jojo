@@ -11,11 +11,11 @@ void func_80105098(void)
     row_page(0xAB);
     row_sel_cell_cur();
     func_800F96E0();
-    func_800F6D70(0x6A1);
+    cell_push_c8_d58(0x6A1);
     row_read(4);
     if (sel(2) != 0)
         goto L105100;
-    func_800F6D70(0x6A1);
+    cell_push_c8_d58(0x6A1);
     row_read(3);
     func_800F4370(0xD2);
     if (sel(2) != 0)

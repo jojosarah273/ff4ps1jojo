@@ -10,7 +10,7 @@ void func_8015A374(void)
        8015A524 / 8015A5B8 / 8015A670 / 8015A784 / 8015A89C /
        8015A91C / 8015A9BC / 8015AA6C / 8015A614; the table tail runs
        on the selected value-row and returns at L15A514. */
-    func_800F8F74(0x3558);
+    cell_clear_bank(0x3558);
     io_poll(5);
     if (io_go() == 0)
         goto L15A3A8;

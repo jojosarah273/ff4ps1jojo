@@ -3,5 +3,5 @@
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-extern void func_800F6240(u32 v);
+
 void func_8015FCCC(void) { page_paint2(0x3881); }

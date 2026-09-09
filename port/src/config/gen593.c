@@ -12,7 +12,7 @@ void func_8012833C(void)
     open_row(0x45);
     page(0x45);
     row_prep(0x20);
-    func_800F6CF4(0x20);
+    cell_push9_bank(0x20);
     row_prep_close();
     poll_t(0x1BE4);
     if (io_just() != 0)
@@ -23,7 +23,7 @@ L1283C8:
     return;
 L1283E0:
     row_page(0x51);
-    func_800F61E8();
+    cell_set50_from40();
     func_801387D8();
     row_prep(0x20);
     page(0x45);

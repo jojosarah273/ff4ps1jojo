@@ -9,7 +9,7 @@ void func_80131358(void)
        801224D0 cursor, 8011F724 commit; L1313A8 row loop on
        5DA0(0x45)/5B8C(0x202), L1314 960C tail. */
     txt_set(0x1B9B);
-    func_800F9200();
+    cell_cursor_dec();
     row_sync();
     func_801224D0();
     txt_cell(0x1B8B);
@@ -20,10 +20,10 @@ void func_80131358(void)
 L1313a8:
     for (;;) {
         latch(0xFF);
-        func_800F8960();
+        cell_pull_c8();
         step2();
         latch(0xF0);
-        func_800F8960();
+        cell_pull_c8();
         step2();
         poll_pair(0x45);
         if (poll_go(0x202) != 0)
@@ -49,10 +49,10 @@ L131498:
     row_done();
     row_prep(0x20);
     sep_a();
-    func_800F4064(0x10);
+    cell_pos_fwd(0x10);
     row_prep_close();
     row_close2();
-    func_800F61E8();
+    cell_set50_from40();
     io_poll(5);
     if (io_go() == 0)
         goto L13151C;

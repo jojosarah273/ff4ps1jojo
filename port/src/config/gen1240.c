@@ -3,5 +3,5 @@
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-extern void func_800F8F74(u32 v);
-void func_801378B0(void) { func_800F8F74(0x1B7B); func_800F8F74(0x1B94); func_800F8F74(0x1B96); }
+
+void func_801378B0(void) { cell_clear_bank(0x1B7B); cell_clear_bank(0x1B94); cell_clear_bank(0x1B96); }

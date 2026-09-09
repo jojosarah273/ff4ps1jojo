@@ -13,13 +13,13 @@ void func_801192F8(void)
     draw_pad_cur();
 L119320:
     for (;;) {
-        func_800F6D70(0x1000);
+        cell_push_c8_d58(0x1000);
         row_read(0x1F);
         if (io_press(cell_state(6)) != 0)
             goto L1193B4;
         row_prep(0x20);
         sep_a();
-        func_800F4064(0x40);
+        cell_pos_fwd(0x40);
         row_sync2_cur();
         row_prep_close();
         cell_step();
@@ -28,6 +28,6 @@ L1193B4:
     txt_draw_cur();
     latch(1);
     cell_put(0xCC);
-    func_800FE778();
+    wnd_fx_7d();
     return;
 }

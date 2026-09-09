@@ -40,8 +40,8 @@ Leba4:
     wnd_open_cur();
     for (;;) {
         row_prep(0x20);
-        func_800F4264(0x1C0);
-        func_800F4264(0x20);
+        cell_pos_mask(0x1C0);
+        cell_pos_mask(0x20);
         row_prep_close();
         cell_step();
         poll_t(0x200);
@@ -82,19 +82,19 @@ Lee34:
         open_row(0x21);
     Lee44:
         for (;;) {
-            func_800FE7B0();
+            wnd_fx_7d_b();
             row_page(0x2E);
             row_sel_cell(0x20);
             row_prep(0x20);
             row_read2(0x20);
-            func_800F8274(0x22);
+            cell_put_hi9(0x22);
             cell_state_of();
             func_800F7968();
             cell_peek_cur();
             func_800F7968();
-            func_800F8274(0x22);
+            cell_put_hi9(0x22);
             row_read2(0x22);
-            func_800F87DC(0xCE1);
+            cell_stamp8_9(0xCE1);
             row_sync2_cur();
             row_prep_close();
             key_page(0x20);

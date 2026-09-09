@@ -22,12 +22,12 @@ L1136e4:
         label(0xAD2);
         latch(6);
         txt_draw(0xACD);
-        func_800F8F74(0xACE);
+        cell_clear_bank(0xACE);
         row_page(0x79);
         row_sel_cell_cur();
-        func_800F6C68();
+        cell_push_c8();
         txt_draw(0xAD4);
-        func_800F6C68();
+        cell_push_c8();
         txt_draw(0xAD5);
         func_80115BCC();
     L11379c:

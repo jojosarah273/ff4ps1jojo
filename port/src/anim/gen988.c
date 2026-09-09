@@ -7,7 +7,7 @@ void func_80174710(void)
 {
     wnd_open(0);
     do {
-        func_800F6C68(0xD87D0);
+        cell_push_c8(0xD87D0);
         cell_draw(0xCDB);
         cell_step();
         poll_t(0x20);

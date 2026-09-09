@@ -11,7 +11,7 @@ void func_80117DF8(void)
     row_prep(0x20);
     D_8019ED44[0] = D_8019ED54[0];
     sep_a();
-    func_800F4064(0x40);
+    cell_pos_fwd(0x40);
     D_8019ED54[0] = D_8019ED44[0];
     row_sync2(0);
     row_prep_close();

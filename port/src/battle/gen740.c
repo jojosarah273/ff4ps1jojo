@@ -15,7 +15,7 @@ void func_801035B0(void)
         cell_put(0xAD);
         latch(0x20);
         cell_put(0xB9);
-        func_800F7864();
+        cell_tick_half();
         func_8017559C();
         latch(0xF);
         txt_draw(0x6FD);

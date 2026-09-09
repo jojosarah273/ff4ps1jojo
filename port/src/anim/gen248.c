@@ -25,9 +25,9 @@ void func_8017583C(void)
         goto L758F4;
 L758C4:
     latch_cur();
-    func_800F885C();
-    func_800F61E8();
-    func_800F885C();
+    cell_pull_c8_off();
+    cell_set50_from40();
+    cell_pull_c8_off();
     return;
 L758F4:
     txt_set(0x1281);
@@ -42,11 +42,11 @@ L758F4:
     if (io_just() == 0)
         goto L7599C;
     latch(0x12);
-    func_800F885C();
+    cell_pull_c8_off();
     latch(0x13);
-    func_800F885C();
-    func_800F885C();
-    func_800F885C();
+    cell_pull_c8_off();
+    cell_pull_c8_off();
+    cell_pull_c8_off();
     latch(0x14);
     goto L759F0;
 L7599C:
@@ -55,12 +55,12 @@ L7599C:
         goto L75A00;
 L759B4:
     latch(0x13);
-    func_800F885C();
-    func_800F885C();
-    func_800F885C();
-    func_800F885C();
+    cell_pull_c8_off();
+    cell_pull_c8_off();
+    cell_pull_c8_off();
+    cell_pull_c8_off();
 L759F0:
-    func_800F885C();
+    cell_pull_c8_off();
     return;
 L75A00:
     txt_set(0x1286);
@@ -72,7 +72,7 @@ L75A00:
     if (io_just() == 0)
         goto L75A5C;
     latch(0x13);
-    func_800F885C();
+    cell_pull_c8_off();
     return;
 L75A5C:
     io_poll(0xD3);
@@ -82,11 +82,11 @@ L75A5C:
     if (io_just() == 0)
         goto L75AD8;
     latch(0x13);
-    func_800F885C();
-    func_800F885C();
-    func_800F885C();
-    func_800F885C();
-    func_800F885C();
+    cell_pull_c8_off();
+    cell_pull_c8_off();
+    cell_pull_c8_off();
+    cell_pull_c8_off();
+    cell_pull_c8_off();
     return;
 L75AD8:
     io_poll(0xD5);
@@ -94,15 +94,15 @@ L75AD8:
         goto L75B24;
 L75AF0:
     latch(0x13);
-    func_800F885C();
-    func_800F885C();
-    func_800F885C();
+    cell_pull_c8_off();
+    cell_pull_c8_off();
+    cell_pull_c8_off();
     return;
 L75B24:
     io_poll(0xD6);
     if (io_just() == 0)
         return;
     latch(0x13);
-    func_800F885C();
+    cell_pull_c8_off();
     return;
 }

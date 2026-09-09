@@ -3,10 +3,10 @@
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-extern int func_800F6240();
-extern int func_800F6434();
-extern int func_800F6564();
-extern int func_800F8F74();
+
+
+
+
 extern int func_8014ADD4();
 extern int func_8014AEC4();
 extern int func_8014AF3C();
@@ -25,7 +25,7 @@ void func_8014AE1C(void)
   if (iVar1 == 0) {
     func_8014ADD4();
     func_8014C994();
-    func_800F8F74(0xf42e);
+    cell_clear_bank(0xf42e);
   }
   else {
     txt_set(0x3522);
@@ -38,7 +38,7 @@ void func_8014AE1C(void)
       page_paint2(0xf2a0);
       func_8014AF3C();
       func_8014BA34();
-      func_800F8F74(0xf42e);
+      cell_clear_bank(0xf42e);
     }
   }
   return;

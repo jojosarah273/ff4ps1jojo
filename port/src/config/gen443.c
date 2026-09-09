@@ -20,7 +20,7 @@ void func_80152F0C(void)
         sep();
         *D_8019ED58 = *D_8019ED44;
         do {
-            func_800F6D70(0x2680);
+            cell_push_c8_d58(0x2680);
             cell_draw(0x2000);
             cell_step();
             step2();
@@ -38,7 +38,7 @@ void func_80152F0C(void)
     sep();
     *D_8019ED58 = *D_8019ED44;
     do {
-        func_800F6D70(0x2700);
+        cell_push_c8_d58(0x2700);
         cell_draw(0x2000);
         cell_step();
         step2();

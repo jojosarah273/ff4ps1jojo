@@ -13,7 +13,7 @@ void func_8011383C(void)
     open_row(0x7A);
 L1388c:
     for (;;) {
-        func_800FE7B0();
+        wnd_fx_7d_b();
         row_page(0x7A);
         row_read(0x1C);
         row_page(0x83);
@@ -48,7 +48,7 @@ L1388c:
             func_80113C54();
             row_page(0x20);
             row_read(3);
-            func_800F8960(0x302);
+            cell_pull_c8(0x302);
             io_poll(0xEC);
             if (io_just() == 0)
                 goto L13B18;
@@ -59,7 +59,7 @@ L1388c:
             latch(0x79);
         L13B18:
             latch(0x39);
-            func_800F8960(0x303);
+            cell_pull_c8(0x303);
             key_page(0x20);
             row_page(0x20);
             io_poll(0x10);

@@ -12,18 +12,18 @@ void func_801208C8(void)
     row_sync();
     func_8011F3F8();
     row_prep(0x20);
-    func_800F9410();
+    cell_cursor_adv2();
     sep_a();
     cell_peek0(cell_state(0x29));
     row_prep_close();
     row_page(0x5A);
-    func_800F8960();
+    cell_pull_c8();
     row_page(0x5B);
-    func_800F8960(2);
+    cell_pull_c8(2);
     row_page(0x5D);
-    func_800F8960(4);
+    cell_pull_c8(4);
     row_page(0x5E);
-    func_800F8960(6);
+    cell_pull_c8(6);
     row_close();
     return;
 }

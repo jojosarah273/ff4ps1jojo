@@ -21,7 +21,7 @@ L15275c:
         cell_draw(0x289C);
         step2();
         cell_step();
-        if (func_800F56AC(cell_state(0xE5)) == 0)
+        if (cell_flags_cmp(cell_state(0xE5)) == 0)
             continue;
         break;
     }

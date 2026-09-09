@@ -7,7 +7,7 @@ void func_80131760(void)
 {
     /* ability rows: 0x1B8B/0x16 texts, 0x43 window, 801224D0 +
        80132178 rows; gates 6434(2/0x80). */
-    func_800F9200();
+    cell_cursor_dec();
     func_801224D0();
     txt_cell(0x1B8B);
     if (gate(2) != 0)
@@ -18,8 +18,8 @@ void func_80131760(void)
     if (gate(0x80) != 0)
         return;
     row_prep(0x20);
-    func_800F6BE0(9);
-    func_800F87DC(7);
+    cell_sink8_9(9);
+    cell_stamp8_9(7);
     row_prep_close();
     row_close2();
     return;

@@ -8,8 +8,8 @@ void func_80149394(void)
     /* battle spell-detail: 3F38(3B04) row pair draws (L1493BC loop),
        gate on 54D4(3B04)/53C0 with 658C/4264/8274 stat cells
        (L14940C loop); tail 5DA0/5D24 closes (L14955C). */
-    func_800F8F74();
-    func_800F8F74();
+    cell_clear_bank();
+    cell_clear_bank();
     txt_set_cur();
     cell_put_cur();
 L1493bc:
@@ -31,24 +31,24 @@ L1493bc:
                 goto L14947C;
             row_prep(0x20);
             row_read2();
-            func_800F922C();
-            func_800F658C();
-            func_800F4264(0xFF);
-            func_800F8274();
+            cell_cursor_ret2();
+            cell_push9();
+            cell_pos_mask(0xFF);
+            cell_put_hi9();
             goto L1494BC;
         L14947C:
             row_prep(0x20);
             row_read2();
-            func_800F922C();
-            func_800F658C();
-            func_800F8274();
+            cell_cursor_ret2();
+            cell_push9();
+            cell_put_hi9();
         L1494BC:
-            func_800F658C();
+            cell_push9();
             sep_a();
             cell_peek0(cell_state_of());
-            func_800F81B0();
-            func_800F9410();
-            func_800F8274();
+            cell_pull9_hi();
+            cell_cursor_adv2();
+            cell_put_hi9();
             sep();
             row_prep_close();
             txt_set_cur();
@@ -57,14 +57,14 @@ L1493bc:
             txt_draw_cur();
             txt_set_cur();
             sep_b();
-            func_800F7F48(cell_state_of());
+            cell_tick_sub(cell_state_of());
             txt_draw_cur();
         }
 L14955C:
         poll_pair_cur();
         if (poll_go(0x202) != 0)
             continue;
-        func_800F5D24();
+        cell_dec_bank();
         if (poll_go(0x202) != 0)
             goto L14959C;
         sep_b();

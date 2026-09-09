@@ -12,9 +12,9 @@ void func_80134C74(void)
     row_open3();
     wnd_open(0x100);
     row_open();
-    func_800F94B8();
+    cell_cursor_read();
     latch(0x7E);
-    func_800F9200();
+    cell_cursor_dec();
     row_pad();
     func_8016EA9C();
     func_80123D3C();
@@ -29,12 +29,12 @@ L134d38:
         label(0x1B1D);
         latch(0x20);
         cell_put(0xC1);
-        func_800F8F74(0x1BB1);
-        func_800F8F74(0x1BB2);
+        cell_clear_bank(0x1BB1);
+        cell_clear_bank(0x1BB2);
         func_8016EA7C();
         latch(0x20);
         cell_put(0x3F);
-        func_800F8F74(0x1BB4);
+        cell_clear_bank(0x1BB4);
         func_80123FB4();
         func_801241B8();
         func_80126330();
@@ -47,7 +47,7 @@ L134d38:
         func_80122114();
         sep();
         stat_sync();
-        func_800F94B8();
+        cell_cursor_read();
         row_pad();
         return;
     }

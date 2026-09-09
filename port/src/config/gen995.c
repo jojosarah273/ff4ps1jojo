@@ -19,7 +19,7 @@ L15EC28:
     func_80160B8C();
     func_80061860();
     txt_set(0x3550);
-    func_800F9200();
+    cell_cursor_dec();
     func_80065774();
     row_close2();
     txt_draw(0x3550);

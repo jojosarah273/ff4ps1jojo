@@ -12,7 +12,7 @@ void func_80150458(void)
     tail_cur();
     latch(0x7E);
     wnd_open_cur();
-    func_800F9200();
+    cell_cursor_dec();
     row_open();
     row_sync();
     page_cur();
@@ -37,8 +37,8 @@ L1504D0:
     label_cur();
     row_prep(0x20);
     row_read2();
-    func_800F4264();
-    func_800F8274();
+    cell_pos_mask();
+    cell_put_hi9();
     sep();
     row_prep_close();
     row_page(1);
@@ -47,18 +47,18 @@ L150578:
     for (;;) {
         page_paint2_cur();
         func_8007259C();
-        func_800F5D24();
+        cell_dec_bank();
         if (poll_go(2) != 0)
             goto L150600;
         row_prep(0x20);
-        func_800F658C();
+        cell_push9();
         sep_a();
-        func_800F4064(0x40);
-        func_800F81B0();
-        func_800F658C();
+        cell_pos_fwd(0x40);
+        cell_pull9_hi();
+        cell_push9();
         sep_a();
-        func_800F4064(0x20);
-        func_800F81B0();
+        cell_pos_fwd(0x20);
+        cell_pull9_hi();
         sep();
         row_prep_close();
     }

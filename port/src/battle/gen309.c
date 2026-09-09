@@ -16,7 +16,7 @@ L10D6D8:
     if (io_go() != 0)
         goto L10D728;
     sep_b();
-    func_800F8058(0x11);
+    cell_pos_back(0x11);
     goto L10D718;
 L10D718:
     wnd_open(0x3300);
@@ -26,27 +26,27 @@ L10D728:
     if (io_go() != 0)
         goto L10D768;
     sep_b();
-    func_800F8058(0x30);
+    cell_pos_back(0x30);
     row_sel_cell_cur();
     wnd_open(0x6180);
     goto L10D780;
 L10D768:
     sep_b();
-    func_800F8058(0x46);
+    cell_pos_back(0x46);
     wnd_open(0x7200);
 L10D780:
     row_prep(0x20);
     stat_sync();
-    func_800F8274(0x4A);
+    cell_put_hi9(0x4A);
     row_sel2_cur();
     sep_a();
     cell_peek0(cell_state(0x4A));
-    func_800F8274(0x4A);
+    cell_put_hi9(0x4A);
     sep_a();
     cell_peek0(cell_state(0x4A));
     sep_a();
-    func_800F4064();
-    func_800F8274(0x4A);
+    cell_pos_fwd();
+    cell_put_hi9(0x4A);
     row_sync2_cur();
     row_prep_close();
     row_page(0xAE);

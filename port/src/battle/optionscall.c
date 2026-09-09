@@ -24,7 +24,7 @@ Ldec:
     io_poll(4);
     if (io_go() != 0)
         goto Lee0;
-    func_800F61E8();
+    cell_set50_from40();
     cell_draw(0x902);
     row_page(0xCF);
     if (gate(0x202) != 0)
@@ -43,7 +43,7 @@ Lee0:
     if (io_go() != 0)
         goto Lf10;
     sep_b();
-    func_800F8058(4);
+    cell_pos_back(4);
     goto L28c;
 Lf10:
     io_poll(8);
@@ -53,15 +53,15 @@ Lf10:
     txt_cell(0x906);
     cell_put(0x3E);
     open_row(0x3D);
-    func_800F76BC(cell_state(0x3E));
-    func_800F76E8();
-    func_800F7CC8(cell_state(0x3D));
-    func_800F76BC(cell_state(0x3E));
-    func_800F76E8();
-    func_800F7CC8(cell_state(0x3D));
-    func_800F76BC(cell_state(0x3E));
-    func_800F76E8();
-    func_800F7CC8(cell_state(0x3D));
+    cell_word_half(cell_state(0x3E));
+    cell_flags_repack();
+    cell_word_half_s(cell_state(0x3D));
+    cell_word_half(cell_state(0x3E));
+    cell_flags_repack();
+    cell_word_half_s(cell_state(0x3D));
+    cell_word_half(cell_state(0x3E));
+    cell_flags_repack();
+    cell_word_half_s(cell_state(0x3D));
     row_page(0x3D);
     sep_a();
     cell_poke0(cell_state_of());
@@ -76,11 +76,11 @@ Lf10:
     page_paint(0x90B);
     row_open();
     page(0x3D);
-    func_800F6C68();
+    cell_push_c8();
     if (io_press(cell_state(6)) == 0)
         goto L0dc;
     latch_cur();
-    func_800F885C();
+    cell_pull_c8_off();
     goto L0dc;
 L0a8:
     latch(1);
@@ -88,7 +88,7 @@ L0a8:
     row_open();
     page(0x3D);
     row_page(6);
-    func_800F885C();
+    cell_pull_c8_off();
 L0dc:
     row_close();
     goto L2c4;

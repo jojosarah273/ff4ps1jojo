@@ -7,7 +7,7 @@ void func_80141290(void)
 {
     /* battle: 3C3C/3A70/3B04 rows. */
     cell_state_of();
-    func_800F3A70();
+    cell_bank_sel();
     cell_state_of();
     return;
 }

@@ -30,14 +30,14 @@ L142938:
 L142988:
     for (;;) {
         row_open();
-        func_800F8F74();
+        cell_clear_bank();
         sep();
     L1429bc:
         for (;;) {
-            func_800F6D70(3);
+            cell_push_c8_d58(3);
             row_read_cur();
-            func_800F6C68();
-            func_800F8960();
+            cell_push_c8();
+            cell_pull_c8();
             step2();
             poll_t(0x40);
             if (io_just() != 0)
@@ -54,7 +54,7 @@ L142988:
                 goto L142AD4;
             txt_cell_cur();
             sep_b();
-            func_800F8058(8);
+            cell_pos_back(8);
             cell_draw_cur();
             cell_draw_cur();
             io_poll(0x10);
@@ -75,11 +75,11 @@ L142988:
             goto L142B1C;
         func_8014096C();
     L142B1C:
-        func_800F5E48();
+        cell_set50_from54();
         if (poll_go(0x202) != 0)
             continue;
         break;
     }
-    func_800F8F74();
+    cell_clear_bank();
     return;
 }

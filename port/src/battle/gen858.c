@@ -11,7 +11,7 @@ void func_801093B8(void)
         goto L109478;
     row_open();
     sep_b();
-    func_800F8058(0xF);
+    cell_pos_back(0xF);
     row_sel_cell_cur();
     stat_sync();
     stat_sync();

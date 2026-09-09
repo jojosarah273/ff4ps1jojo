@@ -14,7 +14,7 @@ void func_801046F4(void)
     open_row(0x79);
 L104724:
     for (;;) {
-        func_800FE870();
+        cell_clear_pad();
         func_800FF024();
         row_page(0x79);
         func_800F9690();
@@ -25,7 +25,7 @@ L104724:
         io_poll(0x20);
         if (io_just() == 0)
             goto L1047D4;
-        func_800F8F74(0x6D0);
+        cell_clear_bank(0x6D0);
         txt_set(0x1701);
         txt_draw(0x171B);
         page_open(0x1706);

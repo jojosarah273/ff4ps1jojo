@@ -9,7 +9,7 @@ void func_80106D6C(void)
 {
     func_800F92D8();
     row_prep(0x20);
-    func_800F922C();
+    cell_cursor_ret2();
     row_open();
     row_sync();
     row_open2();
@@ -18,9 +18,9 @@ void func_80106D6C(void)
     row_prep_close();
     wnd_open(0x600);
     row_open();
-    func_800F94B8();
+    cell_cursor_read();
     latch_cur();
-    func_800F9200();
+    cell_cursor_dec();
     row_pad();
     open_row(0x7F);
     row_page(0xC4);
@@ -51,7 +51,7 @@ Le84:
         goto Lf4c;
     func_800FDB5C();
     row_page(0x7A);
-    func_800F7864();
+    cell_tick_half();
     if (func_800F7728(0x101) == 0)
         goto Lf14;
     row_page(0x94);
@@ -97,7 +97,7 @@ Lfc4:
     func_80106960();
 Lfe4:
     row_page(0x7A);
-    func_800F7864();
+    cell_tick_half();
     if (func_800F7728(0x101) != 0)
         goto L024;
     func_80109B08();
@@ -170,15 +170,15 @@ L1a0:
 L254:
     row_page(0x5A);
     sep_b();
-    func_800F7F48(cell_state(0x10));
+    cell_tick_sub(cell_state(0x10));
     row_page(0x5B);
-    func_800F8058();
+    cell_pos_back();
     *(u16 *)D_8019EE60[0] = (u8)*(u16 *)D_8019ED40[0];
     row_page(0x5E);
     sep_b();
-    func_800F7F48(cell_state(0x10));
+    cell_tick_sub(cell_state(0x10));
     row_page(0x5F);
-    func_800F8058();
+    cell_pos_back();
     row_page(0x5C);
     row_page(0x5D);
 L300:
@@ -216,11 +216,11 @@ L4c8:
     page_paint2(0xFFF);
     open_row(0x7D);
     row_prep(0x20);
-    func_800F94B8();
+    cell_cursor_read();
     row_pad();
     row_done();
     row_close();
-    func_800F9410();
+    cell_cursor_adv2();
     func_800F9538();
     return;
 }

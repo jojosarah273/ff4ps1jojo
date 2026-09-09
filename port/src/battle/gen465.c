@@ -16,7 +16,7 @@ void func_80111FCC(void)
         goto L11207C;
     txt_draw(0x1722);
     latch(3);
-    func_800F9200();
+    cell_cursor_dec();
     txt_cell(0x172F);
     row_read(0x3F);
     txt_draw(0x1706);
@@ -28,8 +28,8 @@ void func_80111FCC(void)
     goto L1120B4;
 L11207C:
     sep_b();
-    func_800F8058(0xFB);
-    func_800F9200();
+    cell_pos_back(0xFB);
+    cell_cursor_dec();
     txt_cell(0x172F);
     txt_draw(0x1706);
     txt_cell(0x1730);
@@ -37,7 +37,7 @@ L11207C:
 L1120B4:
     row_close2();
     func_8011AB18();
-    func_800F8F74(0x1E05);
+    cell_clear_bank(0x1E05);
     func_80169128();
     func_800FD718();
     open_row(0xD6);

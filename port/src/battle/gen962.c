@@ -7,7 +7,7 @@ void func_8014CE94(void)
 {
     /* battle rows: 4x 8768 cells (0x7612-0x77B6); loop L14CEAC on
        5958(0x8C). */
-    func_800F9200();
+    cell_cursor_dec();
     wnd_open_cur();
 L14ceac:
     for (;;) {

@@ -11,7 +11,7 @@ void func_8011F360(void)
 L11f370:
     for (;;) {
         sep_b();
-        func_800F8058(0xA);
+        cell_pos_back(0xA);
         if (io_go() != 0)
             goto L11F3A0;
         key_page(0x45);

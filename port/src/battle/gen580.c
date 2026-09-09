@@ -21,18 +21,18 @@ void func_80104E14(void)
     row_read(4);
     if (sel(2) != 0)
         goto L104EBC;
-    func_800F6D70(0x6A1);
+    cell_push_c8_d58(0x6A1);
     row_read(3);
     func_800F4370(0xD2);
     if (sel(2) != 0)
         goto L104ED4;
     goto L104EF4;
 L104EBC:
-    func_800F6D70(0x6A1);
+    cell_push_c8_d58(0x6A1);
     func_800F4370(0xA);
     goto L104EE4;
 L104ED4:
-    func_800F6D70(0x6A1);
+    cell_push_c8_d58(0x6A1);
     row_read(4);
 L104EE4:
     if (sel(2) != 0)

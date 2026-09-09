@@ -6,7 +6,7 @@
 void func_80120E9C(void)
 {
     func_80124130();
-    func_800F9200();
+    cell_cursor_dec();
     row_open();
     wnd_open(50688);
     tail(41);

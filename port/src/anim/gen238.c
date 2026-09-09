@@ -3,22 +3,21 @@
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-extern int func_800F4008();
-extern int func_800F4248();
-extern int func_800F5140();
-extern int func_800F53D4();
-extern int func_800F5410();
-extern int func_800F5480();
-extern int func_800F5574();
-extern int func_800F654C();
-extern int func_800F6564();
-extern int func_800F6630();
-extern int func_800F71DC();
-extern int func_800F8058();
-extern int func_800F8188();
-extern int func_800F81E8();
-extern int func_800F8D00();
-extern int func_800F8F74();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 void func_801743E0(void)
 
@@ -29,47 +28,47 @@ void func_801743E0(void)
   io_poll(3);
   iVar1 = io_just();
   if (iVar1 == 0) {
-    func_800F8F74(0x211c);
-    func_800F8F74(0x211c);
-    func_800F8F74(0x211d);
-    func_800F8F74(0x211d);
+    cell_clear_bank(0x211c);
+    cell_clear_bank(0x211c);
+    cell_clear_bank(0x211d);
+    cell_clear_bank(0x211d);
     latch(0xf0);
-    func_800F81E8(0x7f5a00);
-    func_800F81E8(0x7f5a03);
+    cell_pull_c8_lo(0x7f5a00);
+    cell_pull_c8_lo(0x7f5a03);
     txt_set(0x1704);
     io_poll(6);
     iVar1 = io_just();
     if (iVar1 == 0) {
       row_page(0xad);
       sep_b();
-      func_800F8058(0x10);
+      cell_pos_back(0x10);
       row_sel_cell_cur();
       sep_a();
       row_open_w(0);
-      func_800F81E8(0x7f5a02);
-      func_800F81E8(0x7f5a05);
+      cell_pull_c8_lo(0x7f5a02);
+      cell_pull_c8_lo(0x7f5a05);
       latch(0);
-      func_800F81E8(0x7f5a01);
+      cell_pull_c8_lo(0x7f5a01);
       latch(0xe0);
-      func_800F81E8(0x7f5a04);
+      cell_pull_c8_lo(0x7f5a04);
     }
     else {
       row_page(0xad);
       sep_b();
-      func_800F8058(0x10);
+      cell_pos_back(0x10);
       row_read(0xfe);
       sep_a();
       row_open_w(0x22);
-      func_800F81E8(0x7f5a02);
-      func_800F81E8(0x7f5a05);
+      cell_pull_c8_lo(0x7f5a02);
+      cell_pull_c8_lo(0x7f5a05);
       latch(0);
-      func_800F81E8(0x7f5a01);
+      cell_pull_c8_lo(0x7f5a01);
       latch(0xe0);
-      func_800F81E8(0x7f5a04);
+      cell_pull_c8_lo(0x7f5a04);
     }
     latch(0x80);
-    func_800F81E8(0x7f5a06);
-    func_800F8F74(0x420c);
+    cell_pull_c8_lo(0x7f5a06);
+    cell_clear_bank(0x420c);
     latch(0x42);
     txt_draw(0x4340);
     txt_draw(0x4350);

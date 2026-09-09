@@ -8,7 +8,7 @@
  * the real global symbols so the rest of the deck binds here instead
  * of to link-time stubs.
  *
- * Ground truth: src/func_800F3CC4.c (byte-verified; asm order mirrored).
+ * Ground truth: src/cell_merge.c (byte-verified; asm order mirrored).
  */
 #include <stdint.h>
 

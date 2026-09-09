@@ -5,7 +5,7 @@
 #include "ff4_window.h"
 void func_80126070(void)
 {
-    func_800F5D24(0x1A73);
+    cell_dec_bank(0x1A73);
     if (poll_go(0x202) != 0)
         goto L60c8;
     latch(0xA);
@@ -14,16 +14,16 @@ void func_80126070(void)
     txt_draw(0x1A75);
 L60c8:
     row_prep(0x20);
-    func_800F8274(0x63);
+    cell_put_hi9(0x63);
     sep_a();
-    func_800F4064(0x18);
-    func_800F8274(0x65);
-    func_800F4064(0x18);
-    func_800F8274(0x67);
-    func_800F4064(0x18);
-    func_800F8274(0x69);
-    func_800F4064(0x18);
-    func_800F8274(0x6B);
+    cell_pos_fwd(0x18);
+    cell_put_hi9(0x65);
+    cell_pos_fwd(0x18);
+    cell_put_hi9(0x67);
+    cell_pos_fwd(0x18);
+    cell_put_hi9(0x69);
+    cell_pos_fwd(0x18);
+    cell_put_hi9(0x6B);
     row_prep_close();
     sep();
     cell_put(0x1D);

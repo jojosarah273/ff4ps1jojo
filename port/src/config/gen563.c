@@ -28,7 +28,7 @@ L134968:
         func_800F63F8();
         return;
     L1349E0:
-        func_800F9200();
+        cell_cursor_dec();
         txt_cell(0x1441);
         if (io_press(cell_state(0xE3)) == 0)
             goto L134A20;

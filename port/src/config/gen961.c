@@ -6,11 +6,11 @@
 void func_8015A094(void)
 {
     row_read(18);
-    func_800F7864();
+    cell_tick_half();
     cell_put(170);
     row_page(169);
     row_read(9);
     row_sel_cell_cur();
-    func_800F78C4(cell_state(170));
+    cell_tick_or(cell_state(170));
     func_800F78E0();
 }

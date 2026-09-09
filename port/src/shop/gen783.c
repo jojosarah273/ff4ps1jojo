@@ -33,12 +33,12 @@ L1676dc:
         func_801409E4();
         func_80167604();
         row_close();
-        func_800F5E48();
+        cell_set50_from54();
         if (poll_go(0x202) != 0)
             continue;
         break;
     }
-    func_800F8F74();
+    cell_clear_bank();
     func_80167844();
     return;
 }

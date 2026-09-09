@@ -39,7 +39,7 @@ L143f1c:
         row_read(2);
         sep_a();
         row_open_w(0x8C);
-        func_800F8F74();
+        cell_clear_bank();
         func_8013D4C8();
         cell_step();
         poll_t(0x40);

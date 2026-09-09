@@ -5,7 +5,7 @@
 #include "ff4_window.h"
 void func_8013D3B0(void)
 {
-    func_800F9200();
+    cell_cursor_dec();
     row_sync();
     latch(16);
     func_80143E44();

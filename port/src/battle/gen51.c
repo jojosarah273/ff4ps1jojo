@@ -7,7 +7,7 @@ void func_801060A8(void)
 {
     latch(0x80);
     txt_draw(0x2115);
-    func_800FCC84();
+    wnd_fx_tags();
     latch(1);
     txt_draw(0x4300);
     wnd_open(0x10);
@@ -42,7 +42,7 @@ void func_801060A8(void)
     cell_put(0x3E);
     page(0x3D);
     label(0x2116);
-    func_800F8F74(0x420B);
+    cell_clear_bank(0x420B);
     wnd_open_cur();
     label(0x4302);
     wnd_open(0x10);
@@ -57,7 +57,7 @@ void func_801060A8(void)
     cell_put(0x3E);
     latch(0x80);
     txt_draw(0x2115);
-    func_800FCC84();
+    wnd_fx_tags();
     latch(1);
     txt_draw(0x4300);
     page(0x3D);

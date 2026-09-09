@@ -20,9 +20,9 @@ void func_80100B30(void)
     key_page(0x3E);
 L100BA0:
     page(0x3D);
-    func_800F6C68();
+    cell_push_c8();
     cell_put(0x3D);
-    func_800F6C68();
+    cell_push_c8();
     cell_put(0x3E);
     return;
 }

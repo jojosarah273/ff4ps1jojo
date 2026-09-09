@@ -10,7 +10,7 @@ void func_80132428(void)
     txt_set(7059);
     cell_put(67);
     row_prep(32);
-    func_800F6BE0(11);
+    cell_sink8_9(11);
     sep_b();
     func_800F7FCC(cell_state(67));
     row_prep_close();

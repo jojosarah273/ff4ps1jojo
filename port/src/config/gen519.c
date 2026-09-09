@@ -30,7 +30,7 @@ L15F348:
     io_poll(4);
     if (io_go() == 0)
         goto L15F370;
-    func_800F76BC(cell_state(0xA9));
+    cell_word_half(cell_state(0xA9));
 L15F370:
     row_page(0xA9);
     label(0x3947);

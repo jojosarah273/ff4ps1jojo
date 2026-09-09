@@ -30,7 +30,7 @@ L1309EC:
     wnd_open(0x230);
 L1309F4:
     latch(0x20);
-    func_800F9200();
+    cell_cursor_dec();
     draw_pad(5);
     func_80130A24();
     return;

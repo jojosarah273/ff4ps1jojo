@@ -10,8 +10,8 @@ void func_80141334(void)
     sep();
 L141390:
     for (;;) {
-        func_800F6C68();
-        func_800F8960();
+        cell_push_c8();
+        cell_pull_c8();
         cell_step();
         step2();
         poll_t(8);

@@ -29,9 +29,9 @@ L120afc:
         txt_cell(0x1500);
         cell_step();
         func_801245B4();
-        func_800F8960();
+        cell_pull_c8();
         stat_sync();
-        func_800F8960(0x40);
+        cell_pull_c8(0x40);
         poll_pair(0x45);
         if (poll_go(0x202) != 0)
             continue;

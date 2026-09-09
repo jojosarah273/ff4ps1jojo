@@ -25,7 +25,7 @@ void func_8010543C(void)
         goto L598;
     txt_set(0x1706);
     sep_b();
-    func_800F7F48(cell_state(0x1716));
+    cell_tick_sub(cell_state(0x1716));
     if (io_just() != 0)
         goto L51c;
     func_800F53FC();
@@ -34,7 +34,7 @@ void func_8010543C(void)
 L51c:
     txt_set(0x1707);
     sep_b();
-    func_800F7F48(cell_state(0x1717));
+    cell_tick_sub(cell_state(0x1717));
     if (io_just() != 0)
         goto L580;
     func_800F53FC();
@@ -42,7 +42,7 @@ L51c:
 L560:
     latch_cur();
     txt_draw(0x1705);
-    func_800F61E8();
+    cell_set50_from40();
     goto L7e8;
 L580:
     latch(0x80);
@@ -77,7 +77,7 @@ L648:
     latch_cur();
 L650:
     txt_draw(0x1705);
-    func_800F61E8();
+    cell_set50_from40();
     txt_draw(0x709);
     row_sel_cell_cur();
     func_800F9690();

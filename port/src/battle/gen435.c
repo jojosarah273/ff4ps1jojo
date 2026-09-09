@@ -39,7 +39,7 @@ L111914:
         latch(0x37);
         txt_draw(0x303);
         page(0x89);
-        func_800F5E48();
+        cell_set50_from54();
         tail(0x89);
         if (poll_go(0x202) != 0)
             continue;

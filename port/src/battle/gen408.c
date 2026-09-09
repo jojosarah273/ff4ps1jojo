@@ -13,7 +13,7 @@ void func_80114194(void)
     wnd_open(0x80);
     func_80116398();
     do {
-        func_800FE778();
+        wnd_fx_7d();
         func_80114680();
         latch(8);
         cell_put(5);
@@ -26,16 +26,16 @@ void func_80114194(void)
     wnd_open(0x1E0);
     tail(0x89);
     do {
-        func_800FE778();
+        wnd_fx_7d();
         latch(8);
         cell_put(5);
         func_801144B4();
         page(0x89);
-        func_800F5E48();
+        cell_set50_from54();
         tail(0x89);
     } while (poll_go(0x202) != 0);
     do {
-        func_800FE778();
+        wnd_fx_7d();
         func_80114618();
         latch(8);
         cell_put(5);
@@ -45,6 +45,6 @@ void func_80114194(void)
     latch(3);
     txt_draw(0x1700);
     open_row(0xAC);
-    func_800F8F74(0x1704);
+    cell_clear_bank(0x1704);
     func_8011EA5C();
 }

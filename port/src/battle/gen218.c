@@ -15,7 +15,7 @@ void func_80104354(void)
             io_press(cell_state(0x171B));
             if (io_just() != 0) {
                 page_open(0x1719);
-                func_800F56AC(cell_state(0x1706));
+                cell_flags_cmp(cell_state(0x1706));
                 if (io_just() != 0) {
                     func_80104804();
                     return;
@@ -27,7 +27,7 @@ void func_80104354(void)
         io_press(cell_state(0x1701));
         if (io_just() != 0) {
             page_open(0x1706);
-            func_800F56AC(cell_state(0x1721));
+            cell_flags_cmp(cell_state(0x1721));
             if (io_just() != 0)
                 return;
         }
@@ -35,7 +35,7 @@ void func_80104354(void)
         io_press(cell_state(0x1701));
         if (io_just() != 0) {
             page_open(0x1706);
-            func_800F56AC(cell_state(0x1725));
+            cell_flags_cmp(cell_state(0x1725));
             if (io_just() != 0)
                 return;
         }
@@ -69,14 +69,14 @@ void func_80104354(void)
         if (sel(0x202) == 0)
             break;
         page_open(0x1719);
-        func_800F56AC(cell_state(0x1706));
+        cell_flags_cmp(cell_state(0x1706));
         if (io_just() != 0)
             break;
         txt_set(0x1723);
         io_press(cell_state(0x171F));
         if (io_just() != 0) {
             page_open(0x1721);
-            func_800F56AC(cell_state(0x1706));
+            cell_flags_cmp(cell_state(0x1706));
             if (io_just() != 0)
                 break;
         }
@@ -84,16 +84,16 @@ void func_80104354(void)
         io_press(cell_state(0x171F));
         if (io_just() != 0) {
             page_open(0x1725);
-            func_800F56AC(cell_state(0x1706));
+            cell_flags_cmp(cell_state(0x1706));
             if (io_just() != 0)
                 break;
         }
         row_page(0x79);
-        func_800F7864();
+        cell_tick_half();
         txt_draw(0x6FD);
         poll_pair(0x79);
         if (poll_go(0x202) == 0) {
-            func_800F8F74(0x1704);
+            cell_clear_bank(0x1704);
             open_row(0xAC);
             open_row(0x7B);
             latch(2);

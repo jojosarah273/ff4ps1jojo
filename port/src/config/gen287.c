@@ -33,7 +33,7 @@ L1379C0:
     if (gate(2) != 0)
         goto L137A38;
     txt_set(0x1B7C);
-    func_800F61E8();
+    cell_set50_from40();
     io_poll(0x64);
     if (io_go() == 0)
         goto L137A28;

@@ -13,7 +13,7 @@ void func_8015E758(void)
     tail(0xA9);
 L15e7b4:
     for (;;) {
-        func_800F6D70(0x3540);
+        cell_push_c8_d58(0x3540);
         if (gate(0x202) != 0)
             goto L15E7F4;
         txt_cell(0x2003);

@@ -9,14 +9,14 @@ void func_8016AC7C(void)
        gates 4120(0x202); loops L16ACFC (5A90(0x20)) and L16AD74
        (5958(0x12)). */
     row_page(0x4A);
-    func_800F7864();
+    cell_tick_half();
     row_read(1);
-    func_800F6C68();
+    cell_push_c8();
     sep();
 L16acfc:
     for (;;) {
-        func_800F6C68();
-        func_800F8960(0x2203);
+        cell_push_c8();
+        cell_pull_c8(0x2203);
         cell_step();
         step2();
         poll_t(0x20);
@@ -29,22 +29,22 @@ L16acfc:
     if (sel(0x202) != 0)
         return;
     row_prep(0x20);
-    func_800F658C(0x22C1);
-    func_800F922C();
+    cell_push9(0x22C1);
+    cell_cursor_ret2();
     wnd_open(0x1C);
 L16ad74:
     for (;;) {
-        func_800F6BE0(0x22A3);
-        func_800F87DC(0x22A5);
-        func_800F5E48();
-        func_800F5E48();
+        cell_sink8_9(0x22A3);
+        cell_stamp8_9(0x22A5);
+        cell_set50_from54();
+        cell_set50_from54();
         poll_t(0x12);
         if (io_just() == 0)
             continue;
         break;
     }
-    func_800F9410();
-    func_800F81B0(0x22B7);
+    cell_cursor_adv2();
+    cell_pull9_hi(0x22B7);
     sep();
     row_prep_close();
     return;

@@ -6,7 +6,7 @@
 void func_80140598(void)
 {
     sep_b();
-    func_800F8058(0xA9);
+    cell_pos_back(0xA9);
     row_sel_cell_cur();
     /* jr $a0 : the 14-entry battle magic-judge table. Each entry calls
        one effect then jumps to L1406EC (return); the table tail runs

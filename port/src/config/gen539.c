@@ -9,9 +9,9 @@ void func_8015CB80(void)
        80152EAC/8015CC80 rows; 5C64(2) gate. */
     row_open();
     txt_set(0x393B);
-    func_800F78C4(cell_state(0x393A));
+    cell_tick_or(cell_state(0x393A));
     func_80152EAC();
-    func_800F5E48();
+    cell_set50_from54();
     if (poll_go(2) != 0)
         goto L15CC68;
     sep();

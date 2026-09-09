@@ -39,7 +39,7 @@ L104F94:
         goto L105078;
     func_8010D54C();
     page(0x3D);
-    func_800F6C68();
+    cell_push_c8();
     if (gate_cur() != 0)
         goto L105078;
     cell_put(0xEE);

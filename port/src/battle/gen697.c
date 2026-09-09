@@ -24,9 +24,9 @@ L1423c0:
             continue;
         break;
     }
-    func_800F5D24();
-    func_800F5D24();
-    func_800F5D24();
-    func_800F5D24();
+    cell_dec_bank();
+    cell_dec_bank();
+    cell_dec_bank();
+    cell_dec_bank();
     return;
 }

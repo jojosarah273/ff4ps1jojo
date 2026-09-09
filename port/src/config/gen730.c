@@ -20,7 +20,7 @@ void func_801237A8(void)
     draw_pad_cur();
     func_80123908();
     row_page(0x5B);
-    func_800F8960(0x56C);
+    cell_pull_c8(0x56C);
     return;
 L123828:
     cell_fmt2(0x41);

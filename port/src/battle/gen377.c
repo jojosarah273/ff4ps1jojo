@@ -9,7 +9,7 @@ void func_80118244(void)
        103F stat-cell loops (5DA0(7)/5B8C(0x202) latch each), closing
        via 801183D8. */
     row_prep(0x20);
-    func_800F8274(0x40);
+    cell_put_hi9(0x40);
     row_sync2_cur();
     row_prep_close();
     latch(0x14);
@@ -18,8 +18,8 @@ void func_80118244(void)
     cell_fmt2(0x3D);
 L1182a4:
     for (;;) {
-        func_800F6C68();
-        func_800F8960(0x1000);
+        cell_push_c8();
+        cell_pull_c8(0x1000);
         cell_step();
         step2();
         poll_pair(7);
@@ -33,8 +33,8 @@ L1182a4:
     cell_fmt2(0x3D);
 L118300:
     for (;;) {
-        func_800F6C68();
-        func_800F8960(0x102D);
+        cell_push_c8();
+        cell_pull_c8(0x102D);
         cell_step();
         step2();
         poll_pair(7);
@@ -48,8 +48,8 @@ L118300:
     cell_fmt2(0x3D);
 L118360:
     for (;;) {
-        func_800F6C68();
-        func_800F8960(0x1037);
+        cell_push_c8();
+        cell_pull_c8(0x1037);
         cell_step();
         step2();
         poll_pair(7);

@@ -3,15 +3,14 @@
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-extern int func_800F53D4();
-extern int func_800F5A90();
-extern int func_800F5EA0();
+
+
+
 extern int func_800F6DE8();
-extern int func_800F7500();
-extern int func_800F89D4();
-extern int func_800F9644();
-extern int func_800F9660();
-extern int func_800F971C();
+
+
+
+
 
 void func_8013D690(void)
 
@@ -22,9 +21,9 @@ void func_8013D690(void)
   row_prep(0x20);
   do {
     func_800F6DE8(0x340);
-    func_800F89D4(0x344);
+    cell_stamp8_9_b(0x344);
     func_800F6DE8(0x342);
-    func_800F89D4(0x346);
+    cell_stamp8_9_b(0x346);
     poll_pair_cur();
     poll_pair_cur();
     poll_pair_cur();

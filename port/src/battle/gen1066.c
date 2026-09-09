@@ -8,7 +8,7 @@ void func_801175C4(void)
     page_open(0x9D3);
     cell_step();
     for (;;) {
-        func_800F6C68(0x128200);
+        cell_push_c8(0x128200);
         io_poll(0xFF);
         if (io_just() != 0)
             break;

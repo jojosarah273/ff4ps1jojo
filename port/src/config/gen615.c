@@ -5,12 +5,12 @@
 #include "ff4_window.h"
 extern void func_8012B0D8(void);
 extern void func_801267A0(void);
-extern void func_800F654C(u32 v0);
-extern void func_800F824C(u32 v0);
-extern void func_800F6630(u32 v0);
+
+
+
 extern void func_8012E1C0(void);
-extern void func_800F8EBC(u32 v0);
-extern void func_800F8FB8(u32 v0);
+
+
 extern void func_80125130(void);
 extern void func_8012E758(void);
 extern void func_8011F684(void);

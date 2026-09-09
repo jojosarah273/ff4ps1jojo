@@ -10,7 +10,7 @@ void func_8010A964(void)
     row_sel_cell(0x202);
     if (func_800F73E0() != 0)
         goto La9e4;
-    func_800F6D70(0x6A4);
+    cell_push_c8_d58(0x6A4);
     row_read(0x20);
     if (sel(2) != 0)
         goto La9e4;
@@ -18,7 +18,7 @@ void func_8010A964(void)
     cell_put(8);
     goto Laa1c;
 La9e4:
-    func_800F6D70(0x6A3);
+    cell_push_c8_d58(0x6A3);
     row_read(3);
     if (sel(2) != 0)
         goto Laa1c;
@@ -118,7 +118,7 @@ Lad44:
         return;
 Lae68:
     txt_cell(0x909);
-    func_800F9200();
+    cell_cursor_dec();
     txt_cell(0x901);
     row_read(0x10);
     if (sel(2) != 0)

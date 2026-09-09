@@ -16,12 +16,12 @@ L11b6dc:
         poll_t_cur();
         if (io_just() != 0)
             goto L11B70C;
-        func_800F7864();
+        cell_tick_half();
         poll_pair_cur();
     }
 L11B70C:
-    func_800F7864();
-    func_800F76E8();
+    cell_tick_half();
+    cell_flags_repack();
     latch_cur();
     row_open_w0();
     row_close();

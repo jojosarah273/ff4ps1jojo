@@ -14,7 +14,7 @@ void func_80162DF8(void)
     sep();
     for (;;) {
         txt_cell(0x33C2);
-        func_800F8960(0x289C);
+        cell_pull_c8(0x289C);
         io_poll(0xCE);
         if (io_just() != 0)
             break;
@@ -26,15 +26,15 @@ void func_80162DF8(void)
     }
     step2();
     latch(0xF8);
-    func_800F8960(0x289C);
+    cell_pull_c8(0x289C);
     step2();
     latch(4);
-    func_800F8960(0x289C);
+    cell_pull_c8(0x289C);
     step2();
     cell_step();
     for (;;) {
         txt_cell(0x33C2);
-        func_800F8960(0x289C);
+        cell_pull_c8(0x289C);
         io_poll(0xFF);
         if (io_just() != 0)
             break;
@@ -64,8 +64,8 @@ Lfa4:
     row_page(0xC1);
     if (gate(0x202) != 0)
         goto L044;
-    func_800F76BC(cell_state(0xDF));
-    func_800F76E8();
+    cell_word_half(cell_state(0xDF));
+    cell_flags_repack();
     row_page(0xDF);
     if (gate(0x202) != 0)
         goto L044;
@@ -77,9 +77,9 @@ L044:
     cell_put(0xC5);
     cell_put(0xE1);
     func_8015240C();
-    func_800F76BC(cell_state(0xE4));
-    func_800F76E8();
-    func_800F7CC8(cell_state(0xE3));
+    cell_word_half(cell_state(0xE4));
+    cell_flags_repack();
+    cell_word_half_s(cell_state(0xE3));
     page(0xE3);
     tail(0xCB);
     row_page(0xCD);
@@ -135,12 +135,12 @@ L124:
     txt_cell(0x2040);
     if (gate(0x8080) != 0)
         goto L2ec;
-    func_800F76BC(cell_state(0xCA));
-    func_800F76E8();
-    func_800F7CC8(cell_state(0xC9));
-    func_800F76BC(cell_state(0xCA));
-    func_800F76E8();
-    func_800F7CC8(cell_state(0xC9));
+    cell_word_half(cell_state(0xCA));
+    cell_flags_repack();
+    cell_word_half_s(cell_state(0xC9));
+    cell_word_half(cell_state(0xCA));
+    cell_flags_repack();
+    cell_word_half_s(cell_state(0xC9));
     func_800F7D0C();
 L2ec:
     row_page(0xC1);
@@ -153,10 +153,10 @@ L2ec:
     func_8015240C();
     sep_b();
     row_page(0xC9);
-    func_800F7F48(cell_state(0xE3));
+    cell_tick_sub(cell_state(0xE3));
     cell_put(0xC9);
     row_page(0xCA);
-    func_800F7F48(cell_state(0xE4));
+    cell_tick_sub(cell_state(0xE4));
     cell_put(0xCA);
     if (io_go() != 0)
         goto L394;
@@ -164,7 +164,7 @@ L384:
     wnd_open(0x4000);
     tail(0xC9);
 L394:
-    if (func_800F7170(2) != 0)
+    if (cell_flags_pack(2) != 0)
         goto L384;
     row_page(0xC7);
     row_sel_cell_cur();

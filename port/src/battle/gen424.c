@@ -18,7 +18,7 @@ void func_8011DE40(void)
         goto L11DEC0;
     txt_set(0x70A);
     sep_b();
-    func_800F8058(0x1F);
+    cell_pos_back(0x1F);
     goto L11DEDC;
 L11DEC0:
     txt_set(0x70A);

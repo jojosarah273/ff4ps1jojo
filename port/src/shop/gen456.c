@@ -6,31 +6,31 @@
 void func_80169DE8(void)
 {
     cell_state_of();
-    func_800F7CC8();
+    cell_word_half_s();
     func_800F7D0C();
     cell_state_of();
-    func_800F7CC8();
+    cell_word_half_s();
     func_800F7D0C();
     cell_state_of();
-    func_800F7CC8();
+    cell_word_half_s();
     func_800F7D0C();
     cell_state_of();
-    func_800F7CC8();
+    cell_word_half_s();
     func_800F7D0C();
     cell_state_of();
-    func_800F7CC8();
+    cell_word_half_s();
     func_800F7D0C();
     cell_state_of();
-    func_800F7CC8();
+    cell_word_half_s();
     func_800F7D0C();
     cell_state_of();
-    func_800F7CC8();
+    cell_word_half_s();
     func_800F7D0C();
     cell_state_of();
-    func_800F7CC8();
+    cell_word_half_s();
     func_800F7D0C();
     cell_state_of();
-    func_800F7CC8();
+    cell_word_half_s();
     func_800F7D0C();
     return;
 }

@@ -20,7 +20,7 @@ L12e5c0:
         key_page(0xD7);
         func_8012E7CC();
         func_8011F684();
-        func_800F5E48();
+        cell_set50_from54();
         if (poll_go(0x202) != 0)
             continue;
         break;
@@ -32,15 +32,15 @@ L12e620:
         row_read2(0xD5);
         sep_a();
         cell_peek0(cell_state(0x1B9D));
-        func_800F8274(0xD5);
+        cell_put_hi9(0xD5);
         row_read2(0xD7);
         sep_a();
         cell_peek0(cell_state(0x1B9F));
-        func_800F8274(0xD7);
+        cell_put_hi9(0xD7);
         row_prep_close();
         func_8012E7CC();
         func_8011F684();
-        func_800F5D24(0x1B9C);
+        cell_dec_bank(0x1B9C);
         if (poll_go(0x202) != 0)
             continue;
         break;

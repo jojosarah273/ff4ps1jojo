@@ -14,7 +14,7 @@ void func_8013BD04(void)
     cell_put(0x48);
 L3bd24:
     for (;;) {
-        func_800F6D70();
+        cell_push_c8_d58();
         if (gate(2) != 0)
             goto L3BE24;
         latch(0x30);
@@ -22,10 +22,10 @@ L3bd24:
         page(0x41);
     L3bd54:
         for (;;) {
-            func_800F6D70();
+            cell_push_c8_d58();
             if (io_press(cell_state_of()) == 0)
                 goto L3BDFC;
-            func_800F6D70();
+            cell_push_c8_d58();
             sep_a();
             cell_poke0(cell_state_of());
             io_poll(0x64);
@@ -33,8 +33,8 @@ L3bd24:
                 goto L3BDFC;
             cell_draw(0x1441);
             latch_cur();
-            func_800F8960();
-            func_800F8960();
+            cell_pull_c8();
+            cell_pull_c8();
             goto L3BE24;
         L3BDFC:
             cell_step();
@@ -57,7 +57,7 @@ L3bd24:
     cell_fmt2(0x41);
 L3be64:
     for (;;) {
-        func_800F6D70();
+        cell_push_c8_d58();
         if (gate(2) != 0)
             goto L3BEE4;
         latch_cur();
@@ -69,9 +69,9 @@ L3be64:
             goto L3BEE4;
         row_prep(0x20);
         func_800F6DE8();
-        func_800F87DC(0x1440);
+        cell_stamp8_9(0x1440);
         row_read2(0x41);
-        func_800F89D4();
+        cell_stamp8_9_b();
         row_prep_close();
     L3BEE4:
         step2();

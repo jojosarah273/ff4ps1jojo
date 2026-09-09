@@ -20,9 +20,9 @@ void func_8016BC6C(void)
     row_prep(0x20);
     row_read2(0x57);
     sep_a();
-    func_800F4064(0x400);
-    func_800F4264(0x7FFF);
-    func_800F8274(0x57);
+    cell_pos_fwd(0x400);
+    cell_pos_mask(0x7FFF);
+    cell_put_hi9(0x57);
     sep();
     row_prep_close();
     return;

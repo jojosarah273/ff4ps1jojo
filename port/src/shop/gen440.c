@@ -3,25 +3,25 @@
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-extern int func_800F654C();
-extern int func_800F7270();
-extern int func_800F8188();
-extern int func_800F8D00();
+
+
+
+
 extern int func_800F8E50();
-extern int func_800F9200();
-extern int func_800F926C();
-extern int func_800F93DC();
-extern int func_800F9448();
-extern int func_800F971C();
+
+
+
+
+
 extern int func_800F9868();
 
 void func_8016B5B0(void)
 
 {
   row_open2();
-  func_800F9200();
+  cell_cursor_dec();
   sep();
-  func_800F9200();
+  cell_cursor_dec();
   row_pad();
   row_close2();
   func_800F8E50(0x2116);

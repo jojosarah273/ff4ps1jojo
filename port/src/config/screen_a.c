@@ -29,10 +29,10 @@ fe8:
         row_sel2(cell_state(0xB0));
         page(0xAF);
         sep_a();
-        func_800F6C68();
+        cell_push_c8();
         cell_poke0(cell_state(0x3591));
         txt_draw(0x3591);
-        func_800F6C68();
+        cell_push_c8();
         cell_poke0(cell_state(0x3592));
         txt_draw(0x3592);
         txt_set(0x3593);
@@ -47,10 +47,10 @@ fe8:
         row_sel2(cell_state(0xB0));
         page(0xAF);
         sep_a();
-        func_800F6C68();
+        cell_push_c8();
         cell_poke0(cell_state(0x3594));
         txt_draw(0x3594);
-        func_800F6C68();
+        cell_push_c8();
         cell_poke0(cell_state(0x3595));
         txt_draw(0x3595);
         txt_set(0x3596);
@@ -86,8 +86,8 @@ fe8:
         sep();
         row_info(0xA9);
         for (;;) {
-            func_800F6C68();
-            func_800F8960(0x289C);
+            cell_push_c8();
+            cell_pull_c8(0x289C);
             cell_step();
             step2();
             key_page(0xA9);
@@ -152,11 +152,11 @@ d8:
     txt_draw(0x16A2);
     sep_b();
     txt_set(0x16A0);
-    func_800F8058(0x7F);
+    cell_pos_back(0x7F);
     txt_set(0x16A1);
-    func_800F8058(0x96);
+    cell_pos_back(0x96);
     txt_set(0x16A2);
-    func_800F8058(0x98);
+    cell_pos_back(0x98);
     if (io_go() != 0) {
         latch(0x7F);
         txt_draw(0x16A0);
@@ -202,8 +202,8 @@ d8:
         row_prep(0x20);
         sep_a();
         row_read2(0xAD);
-        func_800F4064(0x40);
-        func_800F8274(0xAD);
+        cell_pos_fwd(0x40);
+        cell_put_hi9(0xAD);
         sep();
         row_prep_close();
         key_page(0xA9);
@@ -214,16 +214,16 @@ d8:
         break;
     }
     txt_set(0x3591);
-    func_800F78C4(cell_state(0x3592));
-    func_800F78C4(cell_state(0x3593));
+    cell_tick_or(cell_state(0x3592));
+    cell_tick_or(cell_state(0x3593));
     if (func_800F7918(2) != 0)
         goto q790;
     sep();
     tail(0xAD);
     tail(0xAF);
     txt_set(0x3591);
-    func_800F78C4(cell_state(0x3592));
-    func_800F78C4(cell_state(0x3593));
+    cell_tick_or(cell_state(0x3592));
+    cell_tick_or(cell_state(0x3593));
     if (func_800F7918(0x202) != 0)
         goto q728;
     open_row(0xAD);
@@ -234,8 +234,8 @@ q728:
     func_8016E668();
 q730:
     row_page(0xAD);
-    func_800F78C4(cell_state(0xAE));
-    func_800F78C4(cell_state(0xAF));
+    cell_tick_or(cell_state(0xAE));
+    cell_tick_or(cell_state(0xAF));
     if (func_800F7918(0x202) == 0)
         key_page(0xAD);
     page(0xAD);
@@ -259,7 +259,7 @@ q790:
     txt_draw(0x359F);
     sep();
     txt_set(0x3594);
-    func_800F78C4(cell_state(0x3595));
+    cell_tick_or(cell_state(0x3595));
     if (func_800F7918(2) != 0)
         goto q860;
     latch(0x1F);
@@ -267,7 +267,7 @@ q790:
     cell_step();
 q860:
     txt_set(0x3591);
-    func_800F78C4(cell_state(0x3592));
+    cell_tick_or(cell_state(0x3592));
     if (func_800F7918(2) != 0)
         goto q8A0;
     latch(0x20);
@@ -302,11 +302,11 @@ q8D8:
         cell_draw(0x1039);
         sep_b();
         txt_cell(0x1037);
-        func_800F8058(0x7F);
+        cell_pos_back(0x7F);
         txt_cell(0x1038);
-        func_800F8058(0x96);
+        cell_pos_back(0x96);
         txt_cell(0x1039);
-        func_800F8058(0x98);
+        cell_pos_back(0x98);
         if (io_go() != 0) {
             latch(0x7F);
             cell_draw(0x1037);
@@ -319,8 +319,8 @@ q8D8:
         row_prep(0x20);
         sep_a();
         row_read2(0xAB);
-        func_800F4064(0x40);
-        func_800F8274(0xAB);
+        cell_pos_fwd(0x40);
+        cell_put_hi9(0xAB);
         sep();
         row_prep_close();
         key_page(0xA9);
@@ -344,9 +344,9 @@ q8D8:
         row_read(0x1F);
         poll_spin();
         row_sel_cell_cur();
-        func_800F6C68();
+        cell_push_c8();
         cell_put(0x80);
-        func_800F6C68();
+        cell_push_c8();
         cell_put(0x81);
         latch(0xF);
         cell_put(0x82);
@@ -410,11 +410,11 @@ q8D8:
         cell_put(0xAF);
         sep_b();
         txt_cell(0x1037);
-        func_800F7F48(cell_state(0xAD));
+        cell_tick_sub(cell_state(0xAD));
         txt_cell(0x1038);
-        func_800F7F48(cell_state(0xAE));
+        cell_tick_sub(cell_state(0xAE));
         txt_cell(0x1039);
-        func_800F7F48(cell_state(0xAF));
+        cell_tick_sub(cell_state(0xAF));
         if (io_go() == 0)
             goto f2C;
         row_page(0xAD);
@@ -457,8 +457,8 @@ q8D8:
         row_prep(0x20);
         sep_a();
         row_read2(0xA6);
-        func_800F4064(0x40);
-        func_800F8274(0xA6);
+        cell_pos_fwd(0x40);
+        cell_put_hi9(0xA6);
         sep();
         row_prep_close();
         key_page(0x98);
@@ -470,7 +470,7 @@ q8D8:
     }
     func_801571DC();
     func_80155778();
-    func_800F8F74(0x3975);
+    cell_clear_bank(0x3975);
     for (;;) {
         txt_set(0x3975);
         txt_cell(0x3540);

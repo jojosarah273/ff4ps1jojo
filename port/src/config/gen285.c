@@ -20,9 +20,9 @@ void func_8015B078(void)
 L15b0dc:
     for (;;) {
         row_sel2(cell_state(0xA9));
-        func_800F7A68();
+        cell_flags_repack2();
         row_sel2(cell_state(0xAA));
-        func_800F7A68();
+        cell_flags_repack2();
         poll_pair_cur();
         if (poll_go(0x202) != 0)
             continue;

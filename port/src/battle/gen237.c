@@ -14,7 +14,7 @@ void func_801151BC(void)
     label(0xAD2);
     latch(1);
     txt_draw(0xACD);
-    func_800F8F74(0xACE);
+    cell_clear_bank(0xACE);
     latch(0x40);
     txt_draw(0xAD4);
     txt_draw(0xAD5);
@@ -26,9 +26,9 @@ void func_801151BC(void)
 L5254:
     for (;;) {
         func_800FE7D8();
-        func_800FE870();
+        cell_clear_pad();
         page(0xF3);
-        func_800F5E48();
+        cell_set50_from54();
         tail(0xF3);
         poll_t(0xC0);
         if (io_go() != 0)
@@ -69,7 +69,7 @@ L5254:
         func_80115488();
         latch_cur();
         sep_b();
-        func_800F7F48(cell_state(0xF3));
+        cell_tick_sub(cell_state(0xF3));
         cell_put(0xEF);
         open_row(0xF0);
         open_row(0xF1);
@@ -89,7 +89,7 @@ L5254:
                 break;
         }
         page_open(0xAD2);
-        if (func_800F7170(2) == 0)
+        if (cell_flags_pack(2) == 0)
             continue;
         break;
     }

@@ -12,7 +12,7 @@ void func_80125528(void)
     row_prep(0x20);
     row_arm_s_cur();
     row_arm_s2_cur();
-    func_800F4064(0x340);
+    cell_pos_fwd(0x340);
     row_prep_close();
     func_801255E8();
     row_close();

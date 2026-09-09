@@ -52,7 +52,7 @@ Ldb4:
     sep_a();
     cell_poke0(cell_state(6));
     func_800F9690();
-    func_800F6C68();
+    cell_push_c8();
     cell_put(6);
     row_open();
     row_done();
@@ -61,7 +61,7 @@ Ldb4:
         goto Lf0c;
     row_page(0x86);
     func_800F9690();
-    func_800F6C68();
+    cell_push_c8();
     sep_a();
     cell_poke0(cell_state(0x17EF));
     if (io_press(cell_state(6)) != 0)
@@ -69,7 +69,7 @@ Ldb4:
 Lf0c:
     row_sync();
     row_close();
-    func_800F6C68();
+    cell_push_c8();
     goto Ld40;
 Lf30:
     io_poll(1);
@@ -80,7 +80,7 @@ Lf30:
         goto Lfbc;
     row_page(0x86);
     func_800F9690();
-    func_800F6C68();
+    cell_push_c8();
     sep_a();
     cell_poke0(cell_state(0x17EF));
     cell_peek_cur();
@@ -95,7 +95,7 @@ Lfbc:
     sep_a();
     cell_poke0(cell_state(6));
     func_800F9690();
-    func_800F6C68();
+    cell_push_c8();
     goto Ld40;
 Ld038:
     io_poll(2);
@@ -106,7 +106,7 @@ Ld038:
         goto Ld0c4;
     row_page(0x86);
     func_800F9690();
-    func_800F6C68();
+    cell_push_c8();
     sep_a();
     cell_poke0(cell_state(0x17EF));
     cell_peek_cur();
@@ -127,12 +127,12 @@ Ld0c4:
         key_page(6);
     row_page(6);
     func_800F9690();
-    func_800F6C68();
+    cell_push_c8();
 Ld40:
     func_800FD494();
     open_row(0x3E);
     page(0x3D);
-    func_800F6C68();
+    cell_push_c8();
     txt_draw(0x1800);
     txt_set(0x1701);
     if (gate(2) == 0)
@@ -154,7 +154,7 @@ Ld1f4:
         latch(1);
     cell_put(0x3E);
     page(0x3D);
-    func_800F6C68();
+    cell_push_c8();
     if (gate(2) != 0)
         goto Ld2c4;
     cell_put(6);
@@ -163,7 +163,7 @@ Ld1f4:
         goto Ld30c;
     row_page(0x86);
     func_800F9690();
-    func_800F6C68();
+    cell_push_c8();
     sep_a();
     cell_poke0(cell_state(0x17EF));
     if (io_press(cell_state(6)) == 0)
@@ -175,15 +175,15 @@ Ld2c4:
     open_row(0xC0);
     latch(2);
     txt_draw(0x1E00);
-    func_800F8F74(0x1E01);
+    cell_clear_bank(0x1E01);
     func_80169128();
     return;
 Ld30c:
     page(0x3D);
-    func_800F6C68();
+    cell_push_c8();
     func_800FD494();
     page(0x3D);
-    func_800F6C68();
+    cell_push_c8();
     txt_draw(0x1800);
     func_800FD37C();
     open_row(0xC0);

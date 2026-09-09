@@ -9,28 +9,28 @@ void func_80166458(void)
        5DD4(2) reads; loop L1664D0 on 5A90(0x230). */
     row_open();
     row_prep(0x20);
-    func_800F658C();
-    func_800F8274(2);
+    cell_push9();
+    cell_put_hi9(2);
     row_sync2(0x100);
-    func_800F8274();
+    cell_put_hi9();
     sep();
 L1664d0:
     for (;;) {
         row_read2();
-        func_800F89D4(0x7600);
+        cell_stamp8_9_b(0x7600);
         func_800F5DD4(2);
         if (poll_go_cur() != 0)
             goto L166560;
-        func_800F658C();
-        func_800F8274();
+        cell_push9();
+        cell_put_hi9();
         poll_t(0x40);
         if (io_just() != 0)
             goto L166560;
-        func_800F6BE0();
-        func_800F8274(4);
+        cell_sink8_9();
+        cell_put_hi9(4);
         row_read2();
         func_800F5F70(cell_state(4));
-        func_800F8274();
+        cell_put_hi9();
         cell_step();
         cell_step();
     L166560:

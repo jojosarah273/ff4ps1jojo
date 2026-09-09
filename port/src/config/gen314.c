@@ -4,19 +4,19 @@
  */
 #include "ff4_window.h"
 extern int func_800F3D64();
-extern int func_800F53D4();
-extern int func_800F5958();
-extern int func_800F61E8();
-extern int func_800F6364();
-extern int func_800F654C();
-extern int func_800F6558();
-extern int func_800F71DC();
-extern int func_800F7500();
-extern int func_800F8188();
-extern int func_800F8768();
-extern int func_800F8D00();
-extern int func_800F9644();
-extern int func_800F9660();
+
+
+
+
+
+
+
+
+
+
+
+
+
 extern int func_8012214C();
 
 void func_80128C4C(void)
@@ -47,10 +47,10 @@ void func_80128C4C(void)
   row_prep_close();
   latch(0);
   txt_draw(0x16ae);
-  func_800F61E8();
+  cell_set50_from40();
   txt_draw(0x16af);
   txt_draw(0x16b1);
-  func_800F61E8();
+  cell_set50_from40();
   txt_draw(0x16ad);
   txt_draw(0x16ac);
   txt_draw(0x16b0);

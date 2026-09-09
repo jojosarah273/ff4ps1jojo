@@ -13,7 +13,7 @@ void func_801652FC(void)
     sep_a();
     row_read2(0xA6);
     cell_peek0(cell_state(0xB5));
-    func_800F8274(0xB5);
+    cell_put_hi9(0xB5);
     sep();
     row_prep_close();
     sep();
@@ -28,14 +28,14 @@ void func_801652FC(void)
     cell_put(0xB0);
     row_prep(0x20);
     page(0xB5);
-    func_800F6BE0(0x1000);
+    cell_sink8_9(0x1000);
     cell_peek0(cell_state(0xAF));
     func_800F5520(cell_state(0xB3));
     if (io_go() == 0)
         goto L165414;
     row_read2(0xB3);
 L165414:
-    func_800F87DC(0x1000);
+    cell_stamp8_9(0x1000);
     sep();
     row_prep_close();
     return;

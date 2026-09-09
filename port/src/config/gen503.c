@@ -41,7 +41,7 @@ L1353C4:
     txt_draw(0x1B7D);
     func_8011F684();
     func_80120B6C();
-    func_800F8F74(0x1BCB);
+    cell_clear_bank(0x1BCB);
 L13546c:
     for (;;) {
         func_801378E0();
@@ -56,7 +56,7 @@ L13546c:
         txt_set(0x1BCB);
         if (gate(2) != 0)
             goto L1354DC;
-        func_800F8F74(0x1BCB);
+        cell_clear_bank(0x1BCB);
         func_8013554C();
     L1354DC:
         row_page_cur();

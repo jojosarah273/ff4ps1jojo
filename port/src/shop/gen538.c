@@ -12,14 +12,14 @@ void func_8016C624(void)
     sep_a();
     cell_peek0(cell_state(108));
     cell_peek0(cell_state(124));
-    func_800F4064(8);
-    func_800F8274(75);
+    cell_pos_fwd(8);
+    cell_put_hi9(75);
     row_read2(122);
     sep_a();
     cell_peek0(cell_state(110));
     cell_peek0(cell_state(126));
-    func_800F4064(8);
-    func_800F8274(77);
+    cell_pos_fwd(8);
+    cell_put_hi9(77);
     sep();
     row_prep_close();
     latch(4);

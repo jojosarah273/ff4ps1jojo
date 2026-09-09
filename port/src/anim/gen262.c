@@ -10,14 +10,14 @@ void func_80170458(void)
        0x4302/0x4305 desc rows, 800F9868 catalog dispatch, then the
        0x4F/0x79/0x50 item cells; L170608 repeats the header/detail row
        pack while 5804(3C3C(0x4E)) holds, then commits 80194394/80181300. */
-    func_800F8F74(0x420B);
+    cell_clear_bank(0x420B);
     latch(0x80);
     txt_draw(0x2115);
     latch(8);
     txt_draw(0x4300);
     latch(0x19);
     txt_draw(0x4301);
-    func_800F8F74(0x4304);
+    cell_clear_bank(0x4304);
     page(0x4C);
     label(0x2116);
     open_row(0x10);
@@ -27,11 +27,11 @@ void func_80170458(void)
     label(0x4305);
     func_800F9868();
     page_open(0x2116);
-    func_800F8F74(0x420B);
+    cell_clear_bank(0x420B);
     for (i = 0; i < 4; i++) {
-        func_800F76BC(cell_state(0x4F));
-        func_800F76E8();
-        func_800F7CC8(cell_state(0x4E));
+        cell_word_half(cell_state(0x4F));
+        cell_flags_repack();
+        cell_word_half_s(cell_state(0x4E));
     }
     latch(0x18);
     txt_draw(0x4301);
@@ -44,7 +44,7 @@ void func_80170458(void)
     draw_pad_cur();
 L170608:
     for (;;) {
-        func_800F8F74(0x420B);
+        cell_clear_bank(0x420B);
         latch(0x80);
         txt_draw(0x2115);
         latch(1);
@@ -52,9 +52,9 @@ L170608:
         wnd_open(0x10);
         label(0x4305);
         func_800F9868();
-        func_800F8F74(0x420B);
-        func_800F8F74(0x2115);
-        func_800F8F74(0x4300);
+        cell_clear_bank(0x420B);
+        cell_clear_bank(0x2115);
+        cell_clear_bank(0x4300);
         wnd_open(8);
         label(0x4305);
         func_800F9868();

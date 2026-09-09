@@ -13,7 +13,7 @@ L139554:
         func_800F5DD4(0x99);
         func_800F5DD4(0x99);
         row_prep_close();
-        func_800F9200();
+        cell_cursor_dec();
         func_801395E4();
         func_8011F684();
         func_801264E8();

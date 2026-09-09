@@ -35,9 +35,9 @@ L107bbc:
         if (io_go() != 0)
             goto L107C58;
     L107C24:
-        func_800F8960(0x712);
+        cell_pull_c8(0x712);
         txt_cell(0x1441);
-        func_800F8960(0x713);
+        cell_pull_c8(0x713);
     L107C58:
         poll_t(0x60);
         if (io_just() == 0)

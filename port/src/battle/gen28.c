@@ -30,16 +30,16 @@ L2840:
     row_page(0x5C);
     cell_put(6);
     sep_b();
-    func_800F8058();
+    cell_pos_back();
     cell_put(0x5C);
     row_page(0x5D);
-    func_800F8058();
+    cell_pos_back();
     row_read(7);
     cell_put(0x5D);
     row_page(6);
     row_read(0xF);
     sep_b();
-    func_800F8058();
+    cell_pos_back();
     if (io_go() != 0)
         goto L2c18;
     txt_set(0x6FA);
@@ -66,7 +66,7 @@ L2948:
     txt_set(0x6FA);
     func_800F9690();
     txt_set(0x1706);
-    func_800F61E8();
+    cell_set50_from40();
     goto L2af4;
 L2a20:
     io_poll(3);
@@ -87,7 +87,7 @@ L2a20:
     txt_set(0x6FA);
     func_800F9690();
     txt_set(0x1707);
-    func_800F61E8();
+    cell_set50_from40();
 L2ad4:
     txt_draw(0x1707);
 L2af4:
@@ -100,16 +100,16 @@ L2b08:
     row_page(0x5A);
     cell_put(6);
     sep_b();
-    func_800F8058();
+    cell_pos_back();
     cell_put(0x5A);
     row_page(0x5B);
-    func_800F8058();
+    cell_pos_back();
     row_read(7);
     cell_put(0x5B);
     row_page(6);
     row_read(0xF);
     sep_b();
-    func_800F8058();
+    cell_pos_back();
     if (io_go() != 0)
         goto L2c18;
     txt_set(0x6FA);

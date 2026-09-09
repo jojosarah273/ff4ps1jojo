@@ -7,8 +7,8 @@ void func_80122054(void)
 {
     row_page(102);
     sep_b();
-    func_800F7F48(cell_state(100));
-    func_800F61E8();
+    cell_tick_sub(cell_state(100));
+    cell_set50_from40();
     cell_put(29);
     func_801220A4();
 }

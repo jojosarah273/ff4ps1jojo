@@ -20,15 +20,15 @@ L113e84:
         func_800FE7D8();
         func_80113F3C();
         row_prep(0x20);
-        func_800F658C(0x6FB);
+        cell_push9(0x6FB);
         row_scan_cur();
         row_scan_cur();
-        func_800F81B0(0x6FB);
+        cell_pull9_hi(0x6FB);
         row_read2(0x24);
         row_scan_cur();
         row_scan_cur();
-        func_800F8274(0x24);
-        func_800F4264(0xFF);
+        cell_put_hi9(0x24);
+        cell_pos_mask(0xFF);
         row_prep_close();
         cell_put(0xAD);
         if (func_800F41E8(2) == 0)

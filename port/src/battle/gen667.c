@@ -9,7 +9,7 @@ void func_80140350(void)
     row_sync();
     row_info();
     row_prep(0x20);
-    func_800F8274(0x2A);
+    cell_put_hi9(0x2A);
     sep_a();
     cell_peek0(cell_state_of());
     row_read2(0x2A);
@@ -17,9 +17,9 @@ void func_80140350(void)
     cell_peek0(cell_state_of());
     sep();
     row_prep_close();
-    func_800F6C68();
-    func_800F8960();
-    func_800F8960();
+    cell_push_c8();
+    cell_pull_c8();
+    cell_pull_c8();
     row_done();
     return;
 }

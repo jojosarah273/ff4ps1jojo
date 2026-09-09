@@ -10,7 +10,7 @@ void func_80110CFC(void)
        80110BC8 target pick; loops L110D24/L110D5C/L110E8C. */
     func_80110F2C();
     latch(1);
-    func_800F81E8(0x6C8);
+    cell_pull_c8_lo(0x6C8);
     wnd_open_cur();
 L110d24:
     for (;;) {
@@ -29,7 +29,7 @@ L110d5c:
         cell_put(0xB9);
         func_80173780();
         row_page(0x7A);
-        func_800F7864();
+        cell_tick_half();
         if (func_800F7728(0x101) != 0)
             goto L110DA4;
         key_page(0x26);
@@ -77,7 +77,7 @@ L110d5c:
     open_row(0xC8);
     latch(1);
     txt_draw(0x1724);
-    func_800F8F74(0x1727);
+    cell_clear_bank(0x1727);
     open_row(0xB9);
     wnd_open_cur();
     label(0x1725);

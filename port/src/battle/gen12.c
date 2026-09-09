@@ -21,10 +21,10 @@ L378:
     latch(0x70);
     cell_put(0xBB);
     func_80107B74();
-    func_800FE778();
+    wnd_fx_7d();
     func_80107830();
 L3e8:
-    func_800FE778();
+    wnd_fx_7d();
     for (;;) {
         row_page(0x7F);
         io_poll(2);
@@ -37,7 +37,7 @@ L3e8:
     if (io_just() == 0)
         goto L3e8;
 L438:
-    func_800FE778();
+    wnd_fx_7d();
 L440:
     for (;;) {
         latch(1);
@@ -75,7 +75,7 @@ L440:
         func_80106860();
         key_page(0xE7);
         row_page(0x8B);
-        func_800F61E8();
+        cell_set50_from40();
         row_read(1);
         cell_put(0x8B);
         if (sel(0x202) != 0)
@@ -84,7 +84,7 @@ L440:
         io_poll(3);
         if (io_just() != 0)
             goto L6a8;
-        func_800F61E8();
+        cell_set50_from40();
         goto L628;
     L5a8:
         row_page(3);
@@ -163,7 +163,7 @@ L440:
         goto L440;
     }
 L7b8:
-    func_800FE778();
+    wnd_fx_7d();
     for (;;) {
         row_page(0x7F);
         io_poll(2);

@@ -15,7 +15,7 @@ void func_801316E0(void)
     latch(0);
     do {
         func_80131760();
-        func_800F61E8();
+        cell_set50_from40();
         io_poll(5);
     } while (io_just() == 0);
 }

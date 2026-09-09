@@ -7,7 +7,7 @@ void func_80121A9C(void)
 {
     row_page(102);
     sep_b();
-    func_800F7F48(cell_state(100));
+    cell_tick_sub(cell_state(100));
     poll_spin();
     cell_put(29);
     row_page(30);

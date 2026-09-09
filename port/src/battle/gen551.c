@@ -3,35 +3,34 @@
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-extern int func_800F53D4();
-extern int func_800F5958();
-extern int func_800F6364();
-extern int func_800F63BC();
-extern int func_800F654C();
-extern int func_800F6D70();
-extern int func_800F71DC();
-extern int func_800F885C();
-extern int func_800F9200();
-extern int func_800F9448();
+
+
+
+
+
+
+
+
+
 
 void func_8011C1F8(void)
 
 {
   int iVar1;
   
-  func_800F9200();
+  cell_cursor_dec();
   row_pad();
   wnd_open(0);
   do {
-    func_800F6D70(0);
-    func_800F885C(0x7f4800);
+    cell_push_c8_d58(0);
+    cell_pull_c8_off(0x7f4800);
     step2();
     cell_step();
     poll_t(0x200);
     iVar1 = io_just();
   } while (iVar1 == 0);
   latch(0);
-  func_800F9200();
+  cell_cursor_dec();
   row_pad();
   return;
 }

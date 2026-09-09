@@ -7,12 +7,12 @@ void func_80152DE4(void)
 {
     row_prep(32);
     sep_a();
-    func_800F658C(14678);
+    cell_push9(14678);
     cell_peek0(cell_state(14680));
-    func_800F81B0(14682);
+    cell_pull9_hi(14682);
     row_sync2(0);
-    func_800F4064(0);
-    func_800F81B0(14684);
+    cell_pos_fwd(0);
+    cell_pull9_hi(14684);
     sep();
     row_prep_close();
 }

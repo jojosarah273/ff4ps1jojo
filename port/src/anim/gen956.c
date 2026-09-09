@@ -17,7 +17,7 @@ void func_80173ED8(void)
     cell_peek_cur();
     row_open2();
     latch(0x15);
-    func_800F9200();
+    cell_cursor_dec();
     row_pad();
     /* a3/t1 + v0 gates -> L173F64 / L174030 / L1740DC / L17417C
        mode branches */

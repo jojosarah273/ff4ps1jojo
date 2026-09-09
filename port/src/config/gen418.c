@@ -32,9 +32,9 @@ L15CFC8:
         goto L15D0A8;
     sep_b();
     txt_cell(0x321C);
-    func_800F9200();
+    cell_cursor_dec();
     row_open();
-    func_800F8058(1);
+    cell_pos_back(1);
     cell_draw(0x321C);
     if (io_just() == 0)
         goto L15D060;

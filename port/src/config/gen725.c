@@ -11,12 +11,12 @@ void func_80130BC8(void)
     stat_sync();
     row_prep(0x20);
     row_arm_s_cur();
-    func_800F8274(0x45);
+    cell_put_hi9(0x45);
     row_arm_s_cur();
     row_arm_s2_cur();
     cell_peek0(cell_state(0x45));
     row_prep_close();
-    func_800F6C68();
+    cell_push_c8();
     row_read(0x7F);
     txt_draw(0x1B93);
     txt_set(0x1B93);

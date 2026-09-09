@@ -18,7 +18,7 @@ void func_8015D6C0(void)
         return;
     txt_cell(0x2004);
     row_read(3);
-    func_800F61E8();
+    cell_set50_from40();
     cell_put(0xA9);
     io_poll(4);
     if (io_just() == 0)
@@ -36,7 +36,7 @@ void func_8015D6C0(void)
     return;
 L15D7C8:
     txt_cell(0x2004);
-    func_800F78C4(cell_state(0xA9));
+    cell_tick_or(cell_state(0xA9));
     cell_draw(0x2004);
     row_page(0xD2);
     row_sel_cell_cur();

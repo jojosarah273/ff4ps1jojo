@@ -7,11 +7,11 @@ void func_8016B6D0(void)
 {
     latch_cur();
     txt_draw(0x4200);
-    func_800F9200();
+    cell_cursor_dec();
     row_pad();
     wnd_open_cur();
     row_open();
-    func_800F94B8();
+    cell_cursor_read();
     latch(0x80);
     txt_draw(0x2100);
     latch(7);
@@ -83,7 +83,7 @@ void func_8016B6D0(void)
     txt_draw(0x200);
     txt_draw(0x204);
     latch(0x7E);
-    func_800F9200();
+    cell_cursor_dec();
     row_pad();
     return;
 }

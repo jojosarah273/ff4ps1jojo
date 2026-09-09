@@ -34,30 +34,30 @@ L118030:
         goto L11816C;
     func_8011818C();
     cell_fmt2(0x3D);
-    func_800F6D70(0x1000);
+    cell_push_c8_d58(0x1000);
     row_read(0xE0);
     page(0xB3);
-    func_800F78C4(cell_state_of());
-    func_800F8960(0x1000);
+    cell_tick_or(cell_state_of());
+    cell_pull_c8(0x1000);
     row_read(0x1F);
     io_poll(0x11);
     if (io_just() == 0)
         goto L11811C;
     latch(0xB);
-    func_800F8960(0x1001);
+    cell_pull_c8(0x1001);
 L11811C:
-    func_800F6D70(0x1009);
-    func_800F8960(0x1007);
-    func_800F6D70(0x100A);
-    func_800F8960(0x1008);
-    func_800F6D70(0x100D);
-    func_800F8960(0x100B);
-    func_800F6D70(0x100E);
-    func_800F8960(0x100C);
+    cell_push_c8_d58(0x1009);
+    cell_pull_c8(0x1007);
+    cell_push_c8_d58(0x100A);
+    cell_pull_c8(0x1008);
+    cell_push_c8_d58(0x100D);
+    cell_pull_c8(0x100B);
+    cell_push_c8_d58(0x100E);
+    cell_pull_c8(0x100C);
     func_801183D8();
     return;
 L11816C:
     func_80118244();
-    func_800FE778();
+    wnd_fx_7d();
     return;
 }

@@ -8,15 +8,15 @@ void func_80168BC4(void)
     /* config help/credits: 0x180F/0x1813/0x1900 texts; key confirms
        (5574 0xD/0x10, 13/10 ladders), two scroll loops (L168D60/
        L168DD8 on 5A90(4/0x20)), 0x8000 gate at the end. */
-    func_800F8F74();
-    func_800F8F74();
-    func_800F8F74();
-    func_800F8F74();
-    func_800F8F74();
-    func_800F8F74();
-    func_800F9200();
+    cell_clear_bank();
+    cell_clear_bank();
+    cell_clear_bank();
+    cell_clear_bank();
+    cell_clear_bank();
+    cell_clear_bank();
+    cell_cursor_dec();
     sep_b();
-    func_800F8058(0x4D);
+    cell_pos_back(0x4D);
     txt_draw_cur();
     io_poll(0xD);
     if (io_go() == 0)
@@ -24,10 +24,10 @@ void func_80168BC4(void)
     io_poll(0x10);
     if (io_just() != 0)
         goto L168C9C;
-    func_800F9200();
+    cell_cursor_dec();
     page_paint2_cur();
     txt_set(0x1813);
-    func_800F6D70(0x1900);
+    cell_push_c8_d58(0x1900);
     row_read(3);
     txt_draw_cur();
     row_close2();
@@ -35,8 +35,8 @@ L168C9C:
     io_poll(0xA);
     if (io_just() == 0)
         goto L168D0C;
-    func_800F9200();
-    func_800F8F74();
+    cell_cursor_dec();
+    cell_clear_bank();
     latch(0x40);
     txt_draw_cur();
     latch(8);
@@ -50,8 +50,8 @@ L168D0C:
     sep();
 L168d60:
     for (;;) {
-        func_800F6C68();
-        func_800F8960();
+        cell_push_c8();
+        cell_pull_c8();
         cell_step();
         step2();
         poll_t(4);
@@ -65,7 +65,7 @@ L168d60:
 L168dd8:
     for (;;) {
         sep();
-        func_800F8960();
+        cell_pull_c8();
         cell_step();
         step2();
         poll_t(0x20);

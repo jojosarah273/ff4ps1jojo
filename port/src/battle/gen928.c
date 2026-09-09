@@ -6,7 +6,7 @@
 void func_80143E44(void)
 {
     /* battle rows (twin): two 3F38(3B04) pair reads; linear. */
-    func_800F9200();
+    cell_cursor_dec();
     sep_a();
     cell_poke0(cell_state_of());
     cell_draw_cur();

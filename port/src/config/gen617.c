@@ -8,7 +8,7 @@ void func_80124DC8(void)
     /* rows: 0x29/0x45/0x46 windows, 8012371C row; 3F94(3C3C(0x29))
        + 3F38(3C3C(0x45)) reads. */
     row_read(0xF);
-    func_800F9200();
+    cell_cursor_dec();
     row_prep(0x20);
     sep_a();
     cell_peek0(cell_state(0x29));

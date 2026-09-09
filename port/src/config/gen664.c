@@ -3,13 +3,13 @@
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-extern int func_800F53D4();
-extern int func_800F5EA0();
-extern int func_800F654C();
-extern int func_800F6564();
-extern int func_800F824C();
-extern int func_800F82EC();
-extern int func_800F971C();
+
+
+
+
+
+
+
 extern int func_80150C38();
 
 void func_8015CEA0(void)
@@ -21,10 +21,10 @@ void func_8015CEA0(void)
   if (iVar1 != 0) {
     poll_pair_cur();
     sep();
-    func_800F82EC(0x80);
+    cell_pull_c8_bank(0x80);
     poll_pair_cur();
     latch(0x80);
-    func_800F82EC(0x80);
+    cell_pull_c8_bank(0x80);
   }
   txt_set(0x3939);
   cell_put(1);

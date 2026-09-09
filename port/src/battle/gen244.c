@@ -25,27 +25,27 @@ void func_80141760(void)
     func_800F7FCC(cell_state_of());
     sep_b();
     func_800F7FCC(cell_state(2));
-    func_800F81B0(0xF406);
+    cell_pull9_hi(0xF406);
     row_sync2(0x50);
-    func_800F81B0(0xF408);
+    cell_pull9_hi(0xF408);
     row_prep_close();
     func_80140310();
 L1898:
     for (;;) {
         func_80140558();
         row_prep(0x20);
-        func_800F658C(0xF406);
+        cell_push9(0xF406);
         sep_a();
-        func_800F4064(8);
-        func_800F81B0(0xF406);
-        func_800F658C(0xF408);
+        cell_pos_fwd(8);
+        cell_pull9_hi(0xF406);
+        cell_push9(0xF408);
         sep_b();
         func_800F80D0(8);
-        func_800F81B0(0xF408);
+        cell_pull9_hi(0xF408);
         sep();
         row_prep_close();
         func_80140310();
-        func_800F5D24(0xF137);
+        cell_dec_bank(0xF137);
         if (poll_go(0x202) != 0)
             continue;
         break;
@@ -77,14 +77,14 @@ L1968:
         cell_put(0x2B);
     L19c8:
         row_prep(0x20);
-        func_800F658C(0xF406);
+        cell_push9(0xF406);
         sep_a();
-        func_800F4064(8);
-        func_800F81B0(0xF406);
-        func_800F658C(0xF408);
+        cell_pos_fwd(8);
+        cell_pull9_hi(0xF406);
+        cell_push9(0xF408);
         sep_b();
         func_800F7FCC(cell_state(0xF121));
-        func_800F81B0(0xF408);
+        cell_pull9_hi(0xF408);
         sep();
         row_prep_close();
         txt_set(0xF406);

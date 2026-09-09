@@ -17,7 +17,7 @@ L14ea34:
         if (func_800F4FAC(0x101) != 0)
             goto L14EAB4;
         row_page_cur();
-        func_800F8960();
+        cell_pull_c8();
     L14EAB4:
         cell_step();
         poll_t(5);

@@ -7,21 +7,21 @@ void func_80140224(void)
 {
     /* battle rows: 2x4 87DC cell sets (0x7612-0x77B6 and +2); loop
        L140260 on 5958(0x8C). */
-    func_800F658C();
-    func_800F8274();
+    cell_push9();
+    cell_put_hi9();
     sep();
 L140260:
     for (;;) {
         row_read2();
-        func_800F87DC(0x7612);
-        func_800F87DC(0x769E);
-        func_800F87DC(0x772A);
-        func_800F87DC(0x77B6);
+        cell_stamp8_9(0x7612);
+        cell_stamp8_9(0x769E);
+        cell_stamp8_9(0x772A);
+        cell_stamp8_9(0x77B6);
         row_read2(2);
-        func_800F87DC(0x7614);
-        func_800F87DC(0x76A0);
-        func_800F87DC(0x772C);
-        func_800F87DC(0x77B8);
+        cell_stamp8_9(0x7614);
+        cell_stamp8_9(0x76A0);
+        cell_stamp8_9(0x772C);
+        cell_stamp8_9(0x77B8);
         cell_step();
         cell_step();
         cell_step();

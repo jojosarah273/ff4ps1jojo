@@ -35,7 +35,7 @@ L10ff8c:
         func_8011050C();
         open_row(0x28);
         row_page(0x89);
-        func_800F7864();
+        cell_tick_half();
         sep_a();
         row_open_w(0x20);
         cell_put(0x29);

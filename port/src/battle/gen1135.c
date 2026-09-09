@@ -14,7 +14,7 @@ void func_80119860(void)
     func_80107C98();
     func_80105DB4();
     func_80107F3C();
-    func_800FE7B0();
+    wnd_fx_7d_b();
     func_80109A28();
     row_page(0xDB);
     if (gate(2) != 0)

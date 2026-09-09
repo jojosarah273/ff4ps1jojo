@@ -10,7 +10,7 @@ void func_80118AA8(void)
     cell_step();
     txt_cell(0x9D5);
     row_prep(0x20);
-    func_800F8274(0x18);
+    cell_put_hi9(0x18);
     row_arm_s_cur();
     sep_a();
     cell_peek0(cell_state(0x18));
@@ -18,14 +18,14 @@ void func_80118AA8(void)
     row_prep_close();
 L118b30:
     for (;;) {
-        func_800F6D70(0x1560);
+        cell_push_c8_d58(0x1560);
         if (gate(2) != 0)
             goto L118B58;
         step2();
     }
 L118B58:
     func_80117594();
-    func_800F8960(0x1560);
+    cell_pull_c8(0x1560);
     func_8011EA5C();
     return;
 }

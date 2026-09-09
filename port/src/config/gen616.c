@@ -15,14 +15,14 @@ L126be4:
     for (;;) {
         func_8016EA9C();
         latch(0x7E);
-        func_800F9200();
+        cell_cursor_dec();
         row_pad();
-        func_800F8F74(0x1B9A);
+        cell_clear_bank(0x1B9A);
         wnd_open(0x1BE4);
-        if (func_800F56AC(cell_state(0x1A5F)) != 0)
+        if (cell_flags_cmp(cell_state(0x1A5F)) != 0)
             goto L126C54;
         label(0x1A5F);
-        func_800F8F74(0x1A3C);
+        cell_clear_bank(0x1A3C);
         func_80128264();
         func_8011F864();
     L126C54:
@@ -30,7 +30,7 @@ L126be4:
         func_80128B3C();
         func_801793F8();
         /* v1/v0 gate -> L126C88 */
-        func_800F8F74(0x1A3C);
+        cell_clear_bank(0x1A3C);
         /* v1/v0 gate -> L126CA4 */
         func_800FF0AC();
         func_80128480();
@@ -48,7 +48,7 @@ L126be4:
         sep();
         stat_sync();
         func_800F65C8(0x17FB);
-        func_800F94B8();
+        cell_cursor_read();
         row_pad();
         return;
     }

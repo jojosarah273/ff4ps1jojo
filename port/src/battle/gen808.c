@@ -14,7 +14,7 @@ void func_80109774(void)
     sep_a();
     row_open_w(0x14);
     txt_draw(0x4209);
-    func_800F8F74(0x420A);
+    cell_clear_bank(0x420A);
     row_page(0xBB);
     return;
 L109824:

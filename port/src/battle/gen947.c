@@ -9,7 +9,7 @@ void func_80115080(void)
        windows. */
     row_page(0x7A);
     row_read(0x1F);
-    func_800F6C68();
+    cell_push_c8();
     sep_a();
     row_open_w(0x70);
     cell_put(0x2C);

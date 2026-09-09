@@ -3,26 +3,26 @@
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-extern int func_800F4064();
-extern int func_800F53D4();
-extern int func_800F5410();
-extern int func_800F5958();
-extern int func_800F6434();
-extern int func_800F654C();
-extern int func_800F6564();
-extern int func_800F6658();
-extern int func_800F71DC();
-extern int func_800F7270();
-extern int func_800F8188();
-extern int func_800F8274();
-extern int func_800F8D00();
-extern int func_800F8F74();
-extern int func_800F9200();
-extern int func_800F926C();
-extern int func_800F9448();
-extern int func_800F9644();
-extern int func_800F9660();
-extern int func_800F971C();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 extern int func_800F9868();
 
 void func_8016D850(void)
@@ -35,7 +35,7 @@ void func_8016D850(void)
   if (iVar1 == 0) {
     row_open2();
     sep();
-    func_800F9200();
+    cell_cursor_dec();
     row_pad();
     latch(0);
     txt_draw(0x2115);
@@ -58,19 +58,19 @@ void func_8016D850(void)
     row_prep(0x20);
     row_read2(0x90);
     sep_a();
-    func_800F4064(0x100);
-    func_800F8274(0x90);
+    cell_pos_fwd(0x100);
+    cell_put_hi9(0x90);
     row_read2(0x92);
     sep_a();
-    func_800F4064(0x100);
-    func_800F8274(0x92);
+    cell_pos_fwd(0x100);
+    cell_put_hi9(0x92);
     sep();
     row_prep_close();
     page(0x92);
     poll_t(0x4000);
     iVar1 = io_just();
     if (iVar1 != 0) {
-      func_800F8F74(0x7d20);
+      cell_clear_bank(0x7d20);
     }
   }
   return;

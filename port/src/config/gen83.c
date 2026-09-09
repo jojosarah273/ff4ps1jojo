@@ -14,7 +14,7 @@ void func_80127808(void)
     func_80120E2C();
     func_80125A64();
     wnd_open(0x1BE4);
-    if (func_800F56AC(cell_state(0x17FE)) == 0)
+    if (cell_flags_cmp(cell_state(0x17FE)) == 0)
         goto L78a4;
     func_8012281C();
     goto L78f4;
@@ -74,7 +74,7 @@ L7998:
     func_80127F2C();
 L7a8c:
     func_80126590();
-    func_800F8F74(0x1B46);
+    cell_clear_bank(0x1B46);
     /* v1 branch */
     latch(1);
     txt_draw(0x1B46);
@@ -94,7 +94,7 @@ L7aec:
     func_8011F684();
     func_8011F884();
     /* beqz -> L7b4c */
-    func_800F8F74(0x1B46);
+    cell_clear_bank(0x1B46);
     sep_b();
 L7b3c:
     func_80136148();
@@ -111,7 +111,7 @@ L7b98:
     if (sel(2) != 0)
         goto L7bd8;
     txt_set(0x1B46);
-    func_800F61E8();
+    cell_set50_from40();
     row_read(1);
     txt_draw(0x1B46);
 L7bd8:

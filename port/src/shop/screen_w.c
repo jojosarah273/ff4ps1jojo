@@ -16,14 +16,14 @@ La51c:
         func_8016A390();
         func_8016A390();
         row_prep(0x20);
-        func_800F6BE0(0x2703);
-        func_800F87DC(0x2B03);
-        func_800F6BE0(0x2705);
-        func_800F87DC(0x2B05);
-        func_800F6BE0(0x2707);
-        func_800F87DC(0x2B07);
-        func_800F6BE0(0x2709);
-        func_800F87DC(0x2B09);
+        cell_sink8_9(0x2703);
+        cell_stamp8_9(0x2B03);
+        cell_sink8_9(0x2705);
+        cell_stamp8_9(0x2B05);
+        cell_sink8_9(0x2707);
+        cell_stamp8_9(0x2B07);
+        cell_sink8_9(0x2709);
+        cell_stamp8_9(0x2B09);
         func_800F9140(0x2F03);
         func_800F9140(0x2F05);
         func_800F9140(0x2F07);
@@ -36,8 +36,8 @@ La51c:
         cell_poke0(cell_state(1));
         sep();
         for (;;) {
-            func_800F6C68();
-            func_800F8960(0x42);
+            cell_push_c8();
+            cell_pull_c8(0x42);
             cell_step();
             step2();
             poll_t(8);
@@ -52,15 +52,15 @@ La51c:
             row_arm2(cell_state(0x47));
             row_sel_cell2_cur();
             row_sel2(cell_state(0x46));
-            func_800F7A68();
+            cell_flags_repack2();
             row_sel2(cell_state(0x45));
-            func_800F7A68();
+            cell_flags_repack2();
             row_sel2(cell_state(0x44));
-            func_800F7A68();
+            cell_flags_repack2();
             row_sel2(cell_state(0x43));
-            func_800F7A68();
+            cell_flags_repack2();
             row_sel2(cell_state(0x42));
-            func_800F7A68();
+            cell_flags_repack2();
             if (func_800F7AC8(0x101) != 0)
                 goto La718;
             func_80169DE8();
@@ -77,27 +77,27 @@ La51c:
         sep_a();
         cell_poke0(cell_state(4));
         row_read(0x1F);
-        func_800F6C68();
+        cell_push_c8();
         if (gate(2) != 0)
             goto La944;
         row_close();
         cell_put(4);
         for (;;) {
-            func_800F76BC(cell_state_of());
-            func_800F76E8();
-            func_800F7CC8(cell_state_of());
+            cell_word_half(cell_state_of());
+            cell_flags_repack();
+            cell_word_half_s(cell_state_of());
             func_800F7D0C();
-            func_800F7CC8(cell_state_of());
+            cell_word_half_s(cell_state_of());
             func_800F7D0C();
-            func_800F7CC8(cell_state_of());
+            cell_word_half_s(cell_state_of());
             func_800F7D0C();
-            func_800F7CC8(cell_state_of());
+            cell_word_half_s(cell_state_of());
             func_800F7D0C();
-            func_800F7CC8(cell_state_of());
+            cell_word_half_s(cell_state_of());
             func_800F7D0C();
-            func_800F7CC8(cell_state_of());
+            cell_word_half_s(cell_state_of());
             func_800F7D0C();
-            func_800F7CC8(cell_state_of());
+            cell_word_half_s(cell_state_of());
             func_800F7D0C();
             poll_pair(4);
             if (poll_go(0x202) != 0)
@@ -126,7 +126,7 @@ La51c:
         row_close();
         row_prep(0x20);
         sep_a();
-        func_800F4064(8);
+        cell_pos_fwd(8);
         sep();
         row_prep_close();
         poll_t(0x400);

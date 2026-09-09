@@ -75,7 +75,7 @@ L5BA6C:
     row_page(0xD0);
     if (io_press(cell_state(0x3539)) != 0)
         goto L5BAE4;
-    func_800F5E48();
+    cell_set50_from54();
 L5BAE4:
     txt_cell(0x3539);
     func_80152CDC();

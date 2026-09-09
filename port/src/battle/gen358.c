@@ -13,7 +13,7 @@ void func_8014E7C4(void)
     txt_draw_cur();
     latch(0x22);
     txt_draw_cur();
-    func_800F8F74();
+    cell_clear_bank();
     latch(0xFF);
     txt_draw_cur();
     latch(0x3E);
@@ -25,8 +25,8 @@ void func_8014E7C4(void)
     row_sel_cell_cur();
     func_8014E984();
     sep_b();
-    func_800F7F48(cell_state_of());
-    func_800F8058(8);
+    cell_tick_sub(cell_state_of());
+    cell_pos_back(8);
     sep_a();
     cell_poke0(cell_state_of());
     txt_draw_cur();
@@ -35,8 +35,8 @@ void func_8014E7C4(void)
     row_sel_cell_cur();
     func_8014E984();
     sep_b();
-    func_800F7F48(cell_state_of());
-    func_800F8058(8);
+    cell_tick_sub(cell_state_of());
+    cell_pos_back(8);
     sep_a();
     cell_poke0(cell_state_of());
     txt_draw_cur();

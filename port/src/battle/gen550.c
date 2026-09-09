@@ -11,20 +11,20 @@ void func_8011CC98(void)
 L11ccac:
     for (;;) {
         page(0x3D);
-        func_800F6C68();
+        cell_push_c8();
         cell_put(0x18);
         open_row(0x19);
         row_prep(0x20);
         func_800F5024(cell_state(0x18));
         page(0x18);
-        func_800F6CF4();
-        func_800F6CF4();
-        func_800F6CF4();
-        func_800F6CF4();
-        func_800F89D4(0xADB);
-        func_800F89D4(0xADD);
-        func_800F89D4(0xB1B);
-        func_800F89D4(0xB1D);
+        cell_push9_bank();
+        cell_push9_bank();
+        cell_push9_bank();
+        cell_push9_bank();
+        cell_stamp8_9_b(0xADB);
+        cell_stamp8_9_b(0xADD);
+        cell_stamp8_9_b(0xB1B);
+        cell_stamp8_9_b(0xB1D);
         row_sync2_cur();
         row_prep_close();
         key_page(0x3D);

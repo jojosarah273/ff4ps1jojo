@@ -35,7 +35,7 @@ L16E90C:
 L16E924:
     row_prep(0x20);
     sep_a();
-    func_800F4064(0x80);
+    cell_pos_fwd(0x80);
     sep();
     row_prep_close();
     latch(0xFF);

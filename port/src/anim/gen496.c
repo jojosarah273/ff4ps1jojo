@@ -3,18 +3,18 @@
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-extern int func_800F53D4();
-extern int func_800F5574();
-extern int func_800F5B8C();
-extern int func_800F5CCC();
-extern int func_800F5DA0();
-extern int func_800F61E8();
-extern int func_800F654C();
-extern int func_800F6564();
-extern int func_800F6630();
-extern int func_800F824C();
-extern int func_800F9200();
-extern int func_800F93DC();
+
+
+
+
+
+
+
+
+
+
+
+
 extern int func_80176C6C();
 
 void func_80176B6C(void)
@@ -31,10 +31,10 @@ void func_80176B6C(void)
     txt_set(0x1bb2);
     poll_spin();
     do {
-      func_800F9200();
+      cell_cursor_dec();
       func_80176C6C();
       row_close2();
-      func_800F61E8();
+      cell_set50_from40();
       poll_pair(0x45);
       iVar1 = poll_go(0x202);
     } while (iVar1 != 0);

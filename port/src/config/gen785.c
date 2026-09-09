@@ -16,8 +16,8 @@ void func_80157148(void)
     draw_pad(0x80);
 L15718c:
     for (;;) {
-        func_800F6C68();
-        func_800F8960(0x289C);
+        cell_push_c8();
+        cell_pull_c8(0x289C);
         cell_step();
         step2();
         poll_t(0x83);

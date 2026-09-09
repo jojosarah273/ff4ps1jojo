@@ -13,7 +13,7 @@ void func_8012AB18(void)
         goto L12AB84;
     row_prep(0x20);
     sep_a();
-    func_800F4064(0x40);
+    cell_pos_fwd(0x40);
     row_prep_close();
 L12AB84:
     row_page(0x5D);
@@ -24,17 +24,17 @@ L12AB84:
     func_80125100();
     row_prep(0x20);
     sep_a();
-    func_800F4064(0x52);
+    cell_pos_fwd(0x52);
     row_prep_close();
     func_800F6E30(0x5A);
     io_poll(0xFE);
     if (io_just() != 0)
         return;
     latch(0xC8);
-    func_800F82EC(0x29);
+    cell_pull_c8_bank(0x29);
     step2();
     row_page(0xDB);
-    func_800F82EC(0x29);
+    cell_pull_c8_bank(0x29);
     step2();
     row_sync();
     row_page(0x5C);
@@ -42,31 +42,31 @@ L12AB84:
     row_done();
     step2();
     row_page(0xDB);
-    func_800F82EC(0x29);
+    cell_pull_c8_bank(0x29);
     step2();
     step2();
-    func_800F82EC(0x29);
+    cell_pull_c8_bank(0x29);
     return;
 L12ACA8:
     row_prep(0x20);
     sep_a();
-    func_800F4064(0x1C);
+    cell_pos_fwd(0x1C);
     row_prep_close();
     func_800F6E30(0x5A);
     func_80125100();
     row_prep(0x20);
     sep_a();
-    func_800F4064(0x52);
+    cell_pos_fwd(0x52);
     row_prep_close();
     func_800F6E30(0x5A);
     io_poll(0xFE);
     if (io_just() != 0)
         return;
     latch(0xC8);
-    func_800F82EC(0x29);
+    cell_pull_c8_bank(0x29);
     step2();
     row_page(0xDB);
-    func_800F82EC(0x29);
+    cell_pull_c8_bank(0x29);
     step2();
     row_page(0x5C);
     row_sync();
@@ -74,9 +74,9 @@ L12ACA8:
     row_done();
     step2();
     row_page(0xDB);
-    func_800F82EC(0x29);
+    cell_pull_c8_bank(0x29);
     step2();
     step2();
-    func_800F82EC(0x29);
+    cell_pull_c8_bank(0x29);
     return;
 }

@@ -9,7 +9,7 @@ void func_8012C0A8(void)
        801221EC/801210AC/8011EF30/8011FBA4/801263F0/8012C250 rows;
        4120(2) gate. */
     draw_pad(3);
-    func_800F66D8(0x60);
+    cell_push_c8_sel(0x60);
     row_read(0xC0);
     if (sel(2) == 0)
         goto L12C1E0;
@@ -17,23 +17,23 @@ void func_8012C0A8(void)
     stat_sync();
     txt_set(0x1B3B);
     sep_b();
-    func_800F8058(0xB0);
+    cell_pos_back(0xB0);
     row_prep(0x20);
     row_arm_s_cur();
-    func_800F8274(0x45);
+    cell_put_hi9(0x45);
     row_arm_s_cur();
     row_arm_s2_cur();
     cell_peek0(cell_state(0x45));
     row_prep_close();
     sep();
     stat_sync();
-    func_800F6C68();
+    cell_push_c8();
     row_prep(0x20);
-    func_800F81B0(0x1B84);
+    cell_pull9_hi(0x1B84);
     row_arm_s_cur();
     row_arm_s2_cur();
     cell_peek0(cell_state(0x1B84));
-    func_800F8274(0x45);
+    cell_put_hi9(0x45);
     row_prep_close();
     func_801221EC();
     return;

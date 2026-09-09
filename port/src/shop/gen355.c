@@ -28,7 +28,7 @@ L167424:
     page(0x1C);
     cell_step();
     tail(0x1C);
-    func_800F9200();
+    cell_cursor_dec();
     txt_set_cur();
     func_800F63F8();
     cell_put(0x10);

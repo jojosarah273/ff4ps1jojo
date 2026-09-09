@@ -19,7 +19,7 @@ void func_80161C88(void)
     row_page(0xCD);
     if (io_press(cell_state(0x3539)) != 0)
         goto Ld18;
-    func_800F5E48();
+    cell_set50_from54();
 Ld18:
     open_row(0xD6);
     txt_cell(0x3539);
@@ -42,7 +42,7 @@ Ld90:
     row_prep(0x20);
     func_80152A20();
     row_sel2_cur();
-    func_800F8274(0xA9);
+    cell_put_hi9(0xA9);
     row_prep_close();
     sep();
     for (;;) {
@@ -120,8 +120,8 @@ Lfb8:
     page(0xE3);
     sep();
     for (;;) {
-        func_800F6C68();
-        func_800F8960(0x28A2);
+        cell_push_c8();
+        cell_pull_c8(0x28A2);
         step2();
         cell_step();
         poll_t(3);
@@ -146,10 +146,10 @@ L128:
     page(0x92);
     sep_b();
     txt_cell(0x200B);
-    func_800F7F48(cell_state(0xAB));
+    cell_tick_sub(cell_state(0xAB));
     cell_put(0xA9);
     txt_cell(0x200C);
-    func_800F8058();
+    cell_pos_back();
     cell_put(0xAA);
     if (io_go() == 0)
         return;

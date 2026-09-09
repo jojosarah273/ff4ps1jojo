@@ -12,10 +12,10 @@ void func_8015FD14(void)
     txt_set(0x2703);
     if (gate_cur() != 0)
         goto L15FE68;
-    func_800F8F74(0x2703);
-    func_800F8F74(0x2704);
-    func_800F8F74(0x2705);
-    func_800F8F74(0x2706);
+    cell_clear_bank(0x2703);
+    cell_clear_bank(0x2704);
+    cell_clear_bank(0x2705);
+    cell_clear_bank(0x2706);
     open_row(0xD6);
     row_page(0xCF);
     func_8015A374();
@@ -31,7 +31,7 @@ void func_8015FD14(void)
     if (io_go() == 0)
         goto L15FE68;
     sep_b();
-    func_800F8058(5);
+    cell_pos_back(5);
     txt_cell(0x29BD);
     cell_draw(0x29B5);
     cell_state_of();

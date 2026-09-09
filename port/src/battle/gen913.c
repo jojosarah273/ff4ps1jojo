@@ -18,7 +18,7 @@ void func_80100A98(void)
 L100B00:
     txt_set(0x8FC);
     row_read(7);
-    func_800F61E8();
+    cell_set50_from40();
     func_800F96E0();
     return;
 }

@@ -21,7 +21,7 @@ L12a8c0:
         goto L12AA20;
     L12A900:
         draw_pad(1);
-        func_800F66D8(0x5A);
+        cell_push_c8_sel(0x5A);
         if (gate(2) != 0)
             goto L12AA20;
         cell_put(0x5C);
@@ -50,7 +50,7 @@ L12a8c0:
         row_sel2_cur();
         row_arm_s_cur();
         row_arm_s2_cur();
-        func_800F4064(4);
+        cell_pos_fwd(4);
         row_prep_close();
         func_8012AB18();
     L12AA20:

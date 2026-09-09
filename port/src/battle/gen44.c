@@ -12,7 +12,7 @@ L42e98:
         func_80143D14();
         cell_draw_cur();
         cell_step();
-        if (func_800F56AC(cell_state_of()) == 0)
+        if (cell_flags_cmp(cell_state_of()) == 0)
             continue;
         break;
     }
@@ -54,14 +54,14 @@ L42fd0:
         if (io_just() != 0)
             goto L4309C;
         row_sel_cell_cur();
-        func_800F6D70();
+        cell_push_c8_d58();
         sep_a();
         row_open_w(0x18);
         cell_poke0(cell_state(2));
         cell_put_cur();
-        func_800F6D70();
+        cell_push_c8_d58();
         sep_b();
-        func_800F8058(8);
+        cell_pos_back(8);
         cell_put(1);
         func_8014323C();
     L4309C:
@@ -87,13 +87,13 @@ L430f4:
         if (io_just() != 0)
             goto L431B8;
         row_sel_cell_cur();
-        func_800F6D70();
+        cell_push_c8_d58();
         sep_a();
         cell_poke0(cell_state(2));
         cell_put_cur();
-        func_800F6D70();
+        cell_push_c8_d58();
         sep_b();
-        func_800F8058(8);
+        cell_pos_back(8);
         cell_put(1);
         func_8014323C();
     L431B8:

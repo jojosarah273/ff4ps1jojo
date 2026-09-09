@@ -10,7 +10,7 @@ void func_80125934(void)
     txt_set(0x1A73);
     if (gate(2) != 0)
         goto L125964;
-    func_800F5D24(0x1A73);
+    cell_dec_bank(0x1A73);
     return;
 L125964:
     latch(0xA);
@@ -30,9 +30,9 @@ L1259c4:
     for (;;) {
         row_prep(0x20);
         func_800F6DE8();
-        func_800F8274(0x1D);
+        cell_put_hi9(0x1D);
         func_800F6DE8();
-        func_800F8274(2);
+        cell_put_hi9(2);
         row_prep_close();
         row_open();
         row_sync();
@@ -43,7 +43,7 @@ L1259c4:
         step2();
         step2();
         step2();
-        func_800F5E48();
+        cell_set50_from54();
         if (poll_go(0x202) != 0)
             continue;
         break;

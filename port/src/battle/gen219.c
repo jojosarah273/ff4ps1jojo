@@ -20,12 +20,12 @@ void func_8014C13C(void)
     label(0xF113);
     func_80148E80();
     latch(0x60);
-    func_800F81E8(0x2107);
+    cell_pull_c8_lo(0x2107);
     latch(0x58);
-    func_800F81E8(0x2108);
+    cell_pull_c8_lo(0x2108);
     latch(3);
     txt_draw(0xF1B5);
-    func_800F61E8();
+    cell_set50_from40();
     txt_draw(0xF1B3);
     txt_set(0xED4E);
     row_read(0xBF);
@@ -52,20 +52,20 @@ L23c:
         for (;;) {
             wnd_open_cur();
             func_80148F60();
-            func_800F8960(0x7614);
-            func_800F8960(0x7694);
-            func_800F8960(0x7714);
-            func_800F8960(0x7794);
-            func_800F8960(0x7814);
+            cell_pull_c8(0x7614);
+            cell_pull_c8(0x7694);
+            cell_pull_c8(0x7714);
+            cell_pull_c8(0x7794);
+            cell_pull_c8(0x7814);
             wnd_open(1);
             func_80148F60();
-            func_800F9200();
-            func_800F9200();
-            func_800F8960(0x7612);
-            func_800F8960(0x7692);
-            func_800F8960(0x7712);
-            func_800F8960(0x7792);
-            func_800F8960(0x7812);
+            cell_cursor_dec();
+            cell_cursor_dec();
+            cell_pull_c8(0x7612);
+            cell_pull_c8(0x7692);
+            cell_pull_c8(0x7712);
+            cell_pull_c8(0x7792);
+            cell_pull_c8(0x7812);
             row_close2();
             if (gate(0x80) != 0)
                 goto L34c;
@@ -74,20 +74,20 @@ L23c:
         L34c:
             latch(1);
         L354:
-            func_800F8960(0x7613);
-            func_800F8960(0x7693);
-            func_800F8960(0x7713);
-            func_800F8960(0x7793);
-            func_800F8960(0x7813);
+            cell_pull_c8(0x7613);
+            cell_pull_c8(0x7693);
+            cell_pull_c8(0x7713);
+            cell_pull_c8(0x7793);
+            cell_pull_c8(0x7813);
             row_close2();
-            func_800F8960(0x7992);
-            func_800F8960(0x7A12);
-            func_800F8960(0x7A92);
-            func_800F8960(0x7B12);
+            cell_pull_c8(0x7992);
+            cell_pull_c8(0x7A12);
+            cell_pull_c8(0x7A92);
+            cell_pull_c8(0x7B12);
             poll_t(0x30);
             if (io_go() != 0)
                 goto L3c4;
-            func_800F8960(0x7B92);
+            cell_pull_c8(0x7B92);
         L3c4:
             txt_set(0xF133);
             sep_a();

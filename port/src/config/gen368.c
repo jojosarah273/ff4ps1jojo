@@ -27,12 +27,12 @@ void func_80139704(void)
     cell_fmt2(0x41);
 L13978c:
     for (;;) {
-        func_800F6D70(0x1340);
+        cell_push_c8_d58(0x1340);
         if (gate(2) != 0)
             goto L139874;
         if (io_press(cell_state_of()) == 0)
             goto L13981C;
-        func_800F6D70(0x1341);
+        cell_push_c8_d58(0x1341);
         sep_a();
         cell_poke0(cell_state_of());
         io_poll(0x64);
@@ -53,11 +53,11 @@ L13978c:
     return;
 L139874:
     txt_cell(0x1440);
-    func_800F8960(0x1340);
+    cell_pull_c8(0x1340);
     txt_cell(0x1441);
     sep_a();
     cell_poke0(cell_state_of());
-    func_800F8960(0x1341);
+    cell_pull_c8(0x1341);
     page_paint(0x1440);
     page_paint(0x1441);
     func_80120E9C();

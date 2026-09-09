@@ -17,8 +17,8 @@ panel_state *panel_get(void)
 uint32_t panel_catalog_base(uint32_t offset)
 {
     /* bank-tag byte selects the base; overflow path folds the saved
-       offset (func_800F3B04). */
-    return func_800F3B04(offset);
+       offset (catalog_base). */
+    return catalog_base(offset);
 }
 
 uint8_t panel_latch_inward(panel_state *s, uint8_t v)

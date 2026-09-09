@@ -10,18 +10,18 @@ void func_801105A4(void)
     draw_pad_cur();
 L1105b8:
     for (;;) {
-        func_800F6C68();
+        cell_push_c8();
         sep_a();
         cell_poke0(cell_state(0xC));
-        func_800F8960(0x340);
-        func_800F6C68();
+        cell_pull_c8(0x340);
+        cell_push_c8();
         sep_a();
         cell_poke0(cell_state(0xE));
-        func_800F8960(0x341);
-        func_800F6C68();
-        func_800F8960(0x342);
-        func_800F6C68();
-        func_800F8960(0x343);
+        cell_pull_c8(0x341);
+        cell_push_c8();
+        cell_pull_c8(0x342);
+        cell_push_c8();
+        cell_pull_c8(0x343);
         func_800FC0DC();
         poll_t(0x18);
         if (io_just() == 0)

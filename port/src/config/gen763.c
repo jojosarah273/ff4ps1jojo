@@ -11,13 +11,13 @@ void func_8013A950(void)
     cell_put(0x43);
     row_prep(0x20);
     row_read2(0x43);
-    func_800F8274(0x45);
+    cell_put_hi9(0x45);
     row_prep_close();
     txt_set(0x1BA8);
-    func_800F78C4(cell_state(0x45));
+    cell_tick_or(cell_state(0x45));
     cell_put(0x45);
     txt_set(0x1BAA);
-    func_800F78C4(cell_state(0x46));
+    cell_tick_or(cell_state(0x46));
     cell_put(0x46);
     return;
 }

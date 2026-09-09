@@ -25,15 +25,15 @@ L118be0:
         if (gate(0x80) != 0)
             goto L118C70;
         row_prep(0x20);
-        func_800F6BE0(0x1007);
+        cell_sink8_9(0x1007);
         sep_a();
         cell_peek0(cell_state(0x30));
         func_800F5520(cell_state_of());
         if (io_go() == 0)
             goto L118C58;
-        func_800F6BE0(0x1009);
+        cell_sink8_9(0x1009);
     L118C58:
-        func_800F87DC(0x1007);
+        cell_stamp8_9(0x1007);
         row_sync2_cur();
         row_prep_close();
     L118C70:
@@ -53,8 +53,8 @@ L118ca8:
         if (gate(0x80) != 0)
             goto L118CE8;
         row_prep(0x20);
-        func_800F6BE0(0x1009);
-        func_800F87DC(0x1007);
+        cell_sink8_9(0x1009);
+        cell_stamp8_9(0x1007);
         row_sync2_cur();
         row_prep_close();
     L118CE8:

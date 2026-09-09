@@ -4,8 +4,8 @@
  * the blending ops that make the menu cursor flash/advance; the
  * register-order mirrors keep the exact bit behavior.
  *
- * Ground truth: src/func_800F3F38.c, src/func_800F40CC.c,
- *              src/func_800F4120.c (byte-verified; asm order mirrored).
+ * Ground truth: src/ticker_advance.c, src/ticker_mask.c,
+ *              src/ticker_reblend.c (byte-verified; asm order mirrored).
  */
 #include <stdint.h>
 

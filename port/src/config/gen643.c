@@ -9,14 +9,14 @@ void func_8012C8A4(void)
        8012C980 rows; gate 53D4. */
     txt_set(0x1B3B);
     sep_b();
-    func_800F8058(0xD5);
+    cell_pos_back(0xD5);
     row_sel_cell_cur();
     cell_put(0x43);
     page(0x43);
     draw_pad(3);
     row_prep(0x20);
     func_800F6764(0x60);
-    func_800F8274(0x45);
+    cell_put_hi9(0x45);
     func_800F4B1C();
     func_800F8378(0x60);
     func_800F5520(cell_state(0x45));

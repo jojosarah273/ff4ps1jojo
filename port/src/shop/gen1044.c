@@ -13,7 +13,7 @@ void func_80169228(void)
         row_read(0xF);
         if (sel(0x202) != 0)
             continue;
-        func_800F5D24(0x3303);
+        cell_dec_bank(0x3303);
         if (poll_go(0x202) == 0)
             break;
     }

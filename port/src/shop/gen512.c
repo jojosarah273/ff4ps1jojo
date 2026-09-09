@@ -7,10 +7,10 @@ void func_8016FCF0(void)
 {
     /* shop map: the fixed 15-sprite row (0x8A-0xA0 windows) then
        9448/93DC close. */
-    func_800F9200();
+    cell_cursor_dec();
     row_open2();
     sep();
-    func_800F9200();
+    cell_cursor_dec();
     row_pad();
     row_page(0x8A);
     row_page(0x8B);

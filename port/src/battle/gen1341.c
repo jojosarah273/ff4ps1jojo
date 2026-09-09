@@ -19,8 +19,8 @@ L11ec58:
         for (;;) {
             func_80194700();
             func_80194394();
-            func_800F5E48();
-            func_800F5E48();
+            cell_set50_from54();
+            cell_set50_from54();
             label(0x1A65);
             func_801225C0();
             func_80126610();

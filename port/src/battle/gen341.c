@@ -26,8 +26,8 @@ void func_8010F4DC(void)
     txt_draw(0xACF);
     wnd_open(0x24);
     label(0xAD2);
-    func_800F8F74(0xACD);
-    func_800F8F74(0xACE);
+    cell_clear_bank(0xACD);
+    cell_clear_bank(0xACE);
     latch(0x70);
     txt_draw(0xAD4);
     txt_draw(0xAD5);
@@ -38,8 +38,8 @@ void func_8010F4DC(void)
     cell_put(0xE3);
 L10f5c4:
     for (;;) {
-        func_800FE778();
-        func_800FE870();
+        wnd_fx_7d();
+        cell_clear_pad();
         func_8011416C();
         func_80115D2C();
         wnd_open(0x30);

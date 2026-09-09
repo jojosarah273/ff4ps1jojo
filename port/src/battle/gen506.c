@@ -3,14 +3,14 @@
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-extern int func_800F654C();
-extern int func_800F7270();
-extern int func_800F7500();
-extern int func_800F824C();
-extern int func_800F8D6C();
-extern int func_800F8EBC();
-extern int func_800FE778();
-extern int func_800FE870();
+
+
+
+
+
+
+
+
 extern int func_8011581C();
 extern int func_80115A34();
 extern int func_80172BA8();
@@ -18,8 +18,8 @@ extern int func_80172BA8();
 void func_80114D18(void)
 
 {
-  func_800FE778();
-  func_800FE870();
+  wnd_fx_7d();
+  cell_clear_pad();
   func_80172BA8();
   page(0x2c);
   tail(0xc);

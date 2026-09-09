@@ -9,14 +9,14 @@ void func_80118428(void)
        row; loop L11849C on 5DA0(7)/5B8C(0x202). */
     cell_put(7);
     sep_b();
-    func_800F7F48(cell_state(7));
+    cell_tick_sub(cell_state(7));
     latch(7);
     cell_put(7);
     cell_fmt2(0x3D);
 L11849c:
     for (;;) {
-        func_800F6C68();
-        func_800F8960(0x1030);
+        cell_push_c8();
+        cell_pull_c8(0x1030);
         cell_step();
         step2();
         poll_pair(7);
@@ -24,9 +24,9 @@ L11849c:
             continue;
         break;
     }
-    func_800F76BC(cell_state(0x3E));
-    func_800F76E8();
-    func_800F7CC8(cell_state(0x3D));
+    cell_word_half(cell_state(0x3E));
+    cell_flags_repack();
+    cell_word_half_s(cell_state(0x3D));
     row_page(0x3D);
     func_80150A30();
     return;

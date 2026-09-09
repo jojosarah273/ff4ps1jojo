@@ -6,8 +6,8 @@
  * the catalog base, and an offset above 0x7FFF falls back to the saved
  * bank pointer (scratch 0x1F8003C0 >> 1).
  *
- * Ground truth: src/func_800F3B04.c, src/func_800F3C3C.c,
- *              src/func_800F3C6C.c, src/func_800F3C94.c
+ * Ground truth: src/catalog_base.c, src/cell_addr16.c,
+ *              src/cell_read32.c, src/cell_window.c
  *              (byte-verified; asm order mirrored 1:1).
  */
 #include <stdint.h>

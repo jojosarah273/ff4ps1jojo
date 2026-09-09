@@ -11,7 +11,7 @@ void func_8016AB14(void)
     sep();
 L16ab44:
     for (;;) {
-        func_800F6C68();
+        cell_push_c8();
         cell_draw(0x3304);
         cell_step();
         poll_t(0x15);
@@ -21,7 +21,7 @@ L16ab44:
     }
     row_open2();
     sep();
-    func_800F9200();
+    cell_cursor_dec();
     row_pad();
     latch(0x43);
     txt_draw(0x4300);

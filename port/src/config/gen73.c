@@ -15,16 +15,16 @@ void func_8012E844(void)
     if (io_just() == 0)
         goto L2E8AC;
     sep_a();
-    func_800F4064(0xFA);
+    cell_pos_fwd(0xFA);
     goto L2E8BC;
 L2E8AC:
     sep_a();
-    func_800F4064(0x5E);
+    cell_pos_fwd(0x5E);
 L2E8BC:
-    func_800F8274(0x21);
+    cell_put_hi9(0x21);
     row_done2();
     row_done2();
-    func_800F8274(0x25);
+    cell_put_hi9(0x25);
     row_prep_close();
     cell_step();
 L2e8ec:
@@ -38,21 +38,21 @@ L2e8ec:
             func_800F6E30(0x1F);
             if (gate(2) != 0)
                 goto L2E9CC;
-            func_800F3A70(0x1F);
+            cell_bank_sel(0x1F);
             if (io_press(cell_state_of()) == 0)
                 goto L2E9CC;
             step2();
-            func_800F66D8(0x1F);
+            cell_push_c8_sel(0x1F);
             sep_a();
-            cell_poke0(func_800F3A70(0x23));
+            cell_poke0(cell_bank_sel(0x23));
             io_poll(0x64);
             if (io_go() != 0)
                 goto L2E9D4;
             func_800F8A18(0x23);
             latch_cur();
-            func_800F82EC(0x1F);
+            cell_pull_c8_bank(0x1F);
             poll_pair_cur();
-            func_800F82EC(0x1F);
+            cell_pull_c8_bank(0x1F);
         L2E9CC:
             step2();
         L2E9D4:
@@ -71,7 +71,7 @@ L2e8ec:
         func_800F62F0(0x1F);
         row_prep_close();
         page(0x1F);
-        if (func_800F56AC(cell_state(0x21)) == 0)
+        if (cell_flags_cmp(cell_state(0x21)) == 0)
             continue;
         break;
     }

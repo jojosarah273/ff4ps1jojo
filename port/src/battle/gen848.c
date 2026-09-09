@@ -12,7 +12,7 @@ void func_8011FBA4(void)
     row_open();
     wnd_open(0x100);
     row_open();
-    func_800F94B8();
+    cell_cursor_read();
     row_pad();
     row_prep(0x20);
     /* v0/v1 latch -> L11FC7C / L11FCB4 */

@@ -5,9 +5,9 @@
 #include "ff4_window.h"
 extern void func_8011416C(void);
 extern void func_80173780(void);
-extern void func_800F71DC(u32 v0);
-extern void func_800F654C(u32 v0);
-extern void func_800F824C(u32 v0);
+
+
+
 extern void func_801105A4(void);
 extern void func_8010FAC4(void);
 extern void func_80115488(void);

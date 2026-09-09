@@ -4,10 +4,9 @@
  */
 #include "ff4_window.h"
 extern int func_800999C8();
-extern int func_800F6434();
-extern int func_800F654C();
-extern int func_800F6564();
-extern int func_800F8188();
+
+
+
 
 void func_8014D394(void)
 

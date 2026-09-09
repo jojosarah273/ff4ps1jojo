@@ -48,30 +48,30 @@ L3E048:
         goto L3E0D0;
 L3E0B0:
     latch(0xF0);
-    func_800F8960(0x340);
-    func_800F8960(0x341);
+    cell_pull_c8(0x340);
+    cell_pull_c8(0x341);
     goto L3E1C8;
 L3E0D0:
-    func_800F8960(0x340);
+    cell_pull_c8(0x340);
     row_page(2);
     sep_a();
     cell_poke0(cell_state(3));
-    func_800F8960(0x341);
+    cell_pull_c8(0x341);
     row_page(4);
     row_read(0x60);
-    func_800F6C68();
-    func_800F8960(0x342);
-    func_800F6C68();
+    cell_push_c8();
+    cell_pull_c8(0x342);
+    cell_push_c8();
     func_800F5ECC(cell_state(5));
-    func_800F9200();
+    cell_cursor_dec();
     txt_set(0x6CC0);
     if (gate(2) != 0)
         goto L3E1B8;
     row_close2();
-    func_800F9200();
+    cell_cursor_dec();
 L3E1B8:
     row_close2();
-    func_800F8960(0x343);
+    cell_pull_c8(0x343);
 L3E1C8:
     step2();
     step2();

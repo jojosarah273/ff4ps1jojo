@@ -75,12 +75,12 @@ L4e64c:
         latch(8);
         func_8014E984();
         sep_b();
-        func_800F8058(4);
+        cell_pos_back(4);
         cell_draw_cur();
         latch(0xC);
         func_8014E984();
         sep_b();
-        func_800F8058(6);
+        cell_pos_back(6);
         cell_draw_cur();
         poll_t(0xA);
         if (io_just() != 0)
@@ -94,7 +94,7 @@ L4E6D4:
         row_sel_cell_cur();
         func_8014E984();
         sep_b();
-        func_800F7F48(cell_state_of());
+        cell_tick_sub(cell_state_of());
         cell_draw_cur();
         cell_step();
         poll_t(0x10);

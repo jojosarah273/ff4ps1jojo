@@ -7,20 +7,20 @@ void func_80149D68(void)
 {
     /* battle confirm: 80075FE0/8007411C/80072068 rows with the
        9644/6CF4/6558/8274 cell draws; 0x4D/0xD/0xD windows. */
-    func_800F9200();
+    cell_cursor_dec();
     sep_b();
-    func_800F8058(0x4D);
-    func_800F9200();
-    func_800F9200();
-    func_800F6C68();
+    cell_pos_back(0x4D);
+    cell_cursor_dec();
+    cell_cursor_dec();
+    cell_push_c8();
     wnd_open(0xC);
     func_80075FE0();
     row_close2();
     row_sel_cell_cur();
     row_prep(0x20);
     row_sync2(0x80);
-    func_800F8274();
-    func_800F6CF4();
+    cell_put_hi9();
+    cell_push9_bank();
     wnd_open_cur();
     sep();
     row_prep_close();
@@ -29,7 +29,7 @@ void func_80149D68(void)
     row_close2();
     row_sel_cell_cur();
     row_prep(0x20);
-    func_800F6CF4();
+    cell_push9_bank();
     sep();
     row_prep_close();
     latch(0xD);

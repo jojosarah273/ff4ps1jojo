@@ -13,7 +13,7 @@ void func_80161A00(void)
     row_page(0xCD);
     if (io_press(cell_state(0x3539)) != 0)
         goto L161A40;
-    func_800F5E48();
+    cell_set50_from54();
 L161A40:
     txt_cell(0x3539);
     func_80152CDC();

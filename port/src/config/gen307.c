@@ -3,20 +3,20 @@
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-extern int func_800F4064();
-extern int func_800F5410();
-extern int func_800F5480();
-extern int func_800F5B8C();
-extern int func_800F5DA0();
-extern int func_800F654C();
-extern int func_800F6658();
-extern int func_800F71DC();
+
+
+
+
+
+
+
+
 extern int func_800F80D0();
-extern int func_800F824C();
-extern int func_800F8274();
-extern int func_800F8D6C();
-extern int func_800F9644();
-extern int func_800F9660();
+
+
+
+
+
 extern int func_8011EE34();
 extern int func_8011F320();
 
@@ -30,12 +30,12 @@ void func_80120CA4(void)
   row_prep(0x20);
   row_read2(0x35);
   sep_a();
-  func_800F4064(0x600);
-  func_800F8274(0x1d);
+  cell_pos_fwd(0x600);
+  cell_put_hi9(0x1d);
   row_read2(0x29);
   sep_a();
-  func_800F4064(0xc00);
-  func_800F8274(0x1f);
+  cell_pos_fwd(0xc00);
+  cell_put_hi9(0x1f);
   row_prep_close();
   latch(0x7e);
   cell_put(0x21);
@@ -48,11 +48,11 @@ void func_80120CA4(void)
     row_read2(0x1d);
     sep_b();
     func_800F80D0(0x40);
-    func_800F8274(0x1d);
+    cell_put_hi9(0x1d);
     row_read2(0x1f);
     sep_b();
     func_800F80D0(0x80);
-    func_800F8274(0x1f);
+    cell_put_hi9(0x1f);
     row_prep_close();
     poll_pair(0x45);
     iVar1 = poll_go(0x202);

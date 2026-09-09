@@ -23,9 +23,9 @@ L111E20:
     row_sel_cell_cur();
 L111e54:
     for (;;) {
-        func_800F6D70(0xAAF);
+        cell_push_c8_d58(0xAAF);
         cell_draw(0xE1D);
-        func_800F6D70(0xAB0);
+        cell_push_c8_d58(0xAB0);
         cell_draw(0xE1E);
         poll_t(0xE);
         if (io_just() != 0)

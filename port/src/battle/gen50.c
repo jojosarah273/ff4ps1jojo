@@ -9,9 +9,9 @@ void func_8011DBF0(void)
     row_read(1);
     if (sel(0x202) == 0)
         goto LDD18;
-    func_800F8F74(0x2115);
-    func_800FCC84();
-    func_800F8F74(0x4300);
+    cell_clear_bank(0x2115);
+    wnd_fx_tags();
+    cell_clear_bank(0x4300);
     page(0x99);
     label(0x2116);
     wnd_open(0xADB);
@@ -22,7 +22,7 @@ void func_8011DBF0(void)
     page(0x9B);
     label(0x2116);
     page(0x97);
-    if (func_800F7170(2) != 0)
+    if (cell_flags_pack(2) != 0)
         goto LDCA0;
     label(0x4305);
     func_800FCCBC();
@@ -37,7 +37,7 @@ LDCA0:
     page(0x9F);
     label(0x2116);
     page(0x97);
-    if (func_800F7170(2) != 0)
+    if (cell_flags_pack(2) != 0)
         return;
     label(0x4305);
     func_800FCCBC();
@@ -48,8 +48,8 @@ LDD18:
         return;
     latch(3);
     txt_draw(0x2115);
-    func_800FCC84();
-    func_800F8F74(0x4300);
+    wnd_fx_tags();
+    cell_clear_bank(0x4300);
     page(0x99);
     label(0x2116);
     wnd_open(0xADB);
@@ -60,7 +60,7 @@ LDD18:
     page(0x9B);
     label(0x2116);
     page(0x97);
-    if (func_800F7170(2) != 0)
+    if (cell_flags_pack(2) != 0)
         goto LDDC0;
     label(0x4305);
     func_800FCCBC();
@@ -75,7 +75,7 @@ LDDC0:
     page(0x9F);
     label(0x2116);
     page(0x97);
-    if (func_800F7170(2) != 0)
+    if (cell_flags_pack(2) != 0)
         return;
     label(0x4305);
     func_800FCCBC();

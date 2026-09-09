@@ -7,7 +7,7 @@ void func_80142BCC(void)
 {
     /* battle rows: 0x1/0x2/0x4/0x6 windows with 4008(0x20) reads;
        loop L142C14 on 5958(0x40). */
-    func_800F8F74();
+    cell_clear_bank();
     sep();
     open_row_cur();
     latch(0x40);

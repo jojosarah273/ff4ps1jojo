@@ -8,7 +8,7 @@ void func_801144B4(void)
     /* battle rows: 0x4/0xD5/0xC/0xE/0x91/0x8F/0xD/0xF/0x92 windows,
        8010543C/80102770/80115A34/8011581C rows; loop L1144F8 on
        5A90(0x50). */
-    func_800FE870();
+    cell_clear_pad();
     open_row(4);
     latch(1);
     cell_put(0xD5);

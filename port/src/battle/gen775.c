@@ -8,11 +8,11 @@ void func_801133B0(void)
     /* battle rows: 0x60/0xAD4/0xAD5 texts, 8011356C row; loop
        L11340C on 5574(0x10). */
     latch(0x60);
-    func_800F81E8(0xAD4);
+    cell_pull_c8_lo(0xAD4);
     latch(0x48);
     txt_draw(0xAD5);
     func_8011356C();
-    func_800FE7B0();
+    wnd_fx_7d_b();
     latch(0x80);
     txt_draw(0x2115);
     wnd_open_cur();

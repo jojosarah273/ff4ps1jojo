@@ -9,10 +9,10 @@ void func_80119D48(void)
     open_row(0x79);
 L119d58:
     for (;;) {
-        func_800FE7B0();
+        wnd_fx_7d_b();
         row_page(0x79);
-        func_800F7864();
-        func_800F6C68();
+        cell_tick_half();
+        cell_push_c8();
         txt_draw(0x2106);
         key_page(0x79);
         key_page(0x79);

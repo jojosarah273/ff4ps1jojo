@@ -39,7 +39,7 @@ void func_80136FFC(void)
     txt_cell(0x1441);
     cell_put(0x5E);
     page(0x43);
-    func_800F6C68();
+    cell_push_c8();
     if (gate(0x80) != 0)
         goto L1d0;
     cell_put(0x43);
@@ -48,7 +48,7 @@ void func_80136FFC(void)
     row_arm_s_cur();
     row_arm_s2_cur();
     cell_peek0(cell_state(0x43));
-    func_800F8274(0x5A);
+    cell_put_hi9(0x5A);
     row_prep_close();
     goto L238;
 L1d0:
@@ -57,7 +57,7 @@ L1d0:
     row_close();
     row_prep(0x20);
     func_800F65F0(0x4216);
-    func_800F8274(0x5A);
+    cell_put_hi9(0x5A);
     row_prep_close();
 L238:
     row_page(0x5D);
@@ -77,7 +77,7 @@ L288:
     txt_set(0x1B7C);
     poll_spin();
 L2b0:
-    func_800F61E8();
+    cell_set50_from40();
     if (io_press(cell_state(0x5E)) == 0)
         goto L2e0;
     row_page(0x5E);
@@ -105,7 +105,7 @@ L2e0:
             continue;
         break;
     }
-    func_800F8274(0x37);
+    cell_put_hi9(0x37);
     row_read2(0x39);
     page(0x37);
     draw_pad(0x412);
@@ -123,7 +123,7 @@ L2e0:
 L438:
     open_row(0x48);
     row_page(0x48);
-    func_800F61E8();
+    cell_set50_from40();
     row_read(1);
     cell_put(0x48);
     func_80120B6C();
@@ -163,10 +163,10 @@ L478:
         goto L6a0;
     L548:
         row_prep(0x20);
-        func_800F658C(0x16A0);
+        cell_push9(0x16A0);
         sep_a();
         cell_peek0(cell_state(0x37));
-        func_800F81B0(0x16A0);
+        cell_pull9_hi(0x16A0);
         row_prep_close();
         txt_set(0x16A2);
         cell_poke0(cell_state(0x39));
@@ -175,7 +175,7 @@ L478:
         if (io_go() == 0)
             goto L5f8;
         wnd_open(0x967F);
-        if (func_800F56AC(cell_state(0x16A0)) != 0)
+        if (cell_flags_cmp(cell_state(0x16A0)) != 0)
             goto L5f8;
         label(0x16A0);
         latch(0x98);
@@ -184,7 +184,7 @@ L478:
         page_open(0x1B98);
         txt_cell(0x1441);
         sep_b();
-        func_800F7F48(cell_state(0x1B97));
+        cell_tick_sub(cell_state(0x1B97));
         cell_draw(0x1441);
         if (io_just() == 0)
             goto L640;
@@ -199,7 +199,7 @@ L478:
         if (sel(2) != 0)
             goto L478;
         row_page(0x48);
-        func_800F61E8();
+        cell_set50_from40();
         row_read(1);
         cell_put(0x48);
         goto L478;

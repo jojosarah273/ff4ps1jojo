@@ -13,7 +13,7 @@ void func_801126A0(void)
     row_open();
     wnd_open_cur();
     label(0x1706);
-    func_800F8F74(0x1700);
+    cell_clear_bank(0x1700);
     func_800FB09C();
     latch(0x20);
     cell_put(0xAD);
@@ -37,7 +37,7 @@ void func_801126A0(void)
     label(0xAD4);
     wnd_open(0x40);
     label(0xAD2);
-    func_800F8F74(0xACD);
+    cell_clear_bank(0xACD);
     latch(2);
     txt_draw(0xACE);
     latch(0x5E);
@@ -54,7 +54,7 @@ L1127c0:
         txt_draw(0x2100);
     L11280C:
         page_open(0xAD2);
-        if (func_800F7170(0x202) != 0)
+        if (cell_flags_pack(0x202) != 0)
             continue;
         break;
     }

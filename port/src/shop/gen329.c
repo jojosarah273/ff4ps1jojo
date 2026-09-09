@@ -9,8 +9,8 @@ void func_8016C858(void)
        0x2005/0x2001/0x2003 gates, 0x50/0x4A windows; 8016C280/8016C624
        row draws, 8016C0A8/8016C128 area cells, 8016AACC/8016AA84 and
        8016BE1C/8016B470 commits. */
-    func_800F8F74(0x2101);
-    func_800F8F74(0x2102);
+    cell_clear_bank(0x2101);
+    cell_clear_bank(0x2102);
     open_row(0x50);
     txt_set(0x2005);
     row_read(1);
@@ -67,7 +67,7 @@ L16C9B0:
     draw_pad_cur();
     func_8016BE1C();
     txt_set(0x2100);
-    func_800F6C68();
+    cell_push_c8();
     cell_put(0x28);
     row_page(0x4A);
     func_800F4370(0x28);

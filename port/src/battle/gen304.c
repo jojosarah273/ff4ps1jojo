@@ -10,16 +10,16 @@ void func_80149F20(void)
        the L149FF0 poll chain and 8014A154/80148CAC commits. */
     txt_draw_cur();
     txt_draw_cur();
-    func_800F5D24();
-    func_800F8F74();
-    func_800F8F74();
+    cell_dec_bank();
+    cell_clear_bank();
+    cell_clear_bank();
     io_poll(0x4D);
     if (io_go() == 0)
         goto L149FF0;
     io_poll(0x5E);
     if (io_go() != 0)
         goto L149FF0;
-    func_800F9200();
+    cell_cursor_dec();
     func_80149D68();
     func_80168BC4();
     latch(1);
@@ -39,19 +39,19 @@ L149FF0:
     row_prep(0x20);
     sep();
     row_prep_close();
-    func_800F6C68();
+    cell_push_c8();
     row_open();
     wnd_open(0xF);
     txt_draw_cur();
     func_800760D0();
     row_close();
-    func_800F6C68();
+    cell_push_c8();
     row_open();
     func_8014FEC8();
     txt_set(0x34C4);
     txt_draw_cur();
     row_close();
-    func_800F6C68();
+    cell_push_c8();
     io_poll(0xFF);
     if (io_just() != 0)
         goto L14A134;
@@ -59,14 +59,14 @@ L149FF0:
     latch(1);
     txt_draw_cur();
     txt_draw_cur();
-    func_800F6C68();
+    cell_push_c8();
     io_poll(0xFF);
     if (io_just() != 0)
         goto L14A134;
     row_sel_cell_cur();
     func_8014A154();
 L14A134:
-    func_800F8F74();
+    cell_clear_bank();
     func_80148CAC();
     return;
 }

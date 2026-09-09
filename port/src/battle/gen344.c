@@ -32,9 +32,9 @@ L14d1b4:
         page(0x2A);
     L14d248:
         for (;;) {
-            func_800F6C68();
-            func_800F8960();
-            func_800F8960();
+            cell_push_c8();
+            cell_pull_c8();
+            cell_pull_c8();
             cell_step();
             step2();
             poll_pair(0x28);
@@ -56,9 +56,9 @@ L14D2B8:
     page(0x2A);
 L14d2cc:
     for (;;) {
-        func_800F6C68();
-        func_800F8960();
-        func_800F8960();
+        cell_push_c8();
+        cell_pull_c8();
+        cell_pull_c8();
         cell_step();
         step2();
         poll_t(0x10);

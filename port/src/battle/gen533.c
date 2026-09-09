@@ -23,7 +23,7 @@ void func_801038D4(void)
     func_80103DD8();
     latch(0x80);
     txt_draw(0x2100);
-    func_800F8F74(0x4200);
+    cell_clear_bank(0x4200);
     latch_cur();
     txt_draw(0x1700);
     txt_draw(0x1701);

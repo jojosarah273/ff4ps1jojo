@@ -42,8 +42,8 @@ L8860:
     txt_set(0xF435);
     if (gate(2) == 0)
         goto L8948;
-    func_800F8F74(0xF49B);
-    func_800F8F74(0xEF87);
+    cell_clear_bank(0xF49B);
+    cell_clear_bank(0xEF87);
     goto L8998;
 L8890:
     txt_set(0xF435);
@@ -72,12 +72,12 @@ L8930:
     if (gate(2) != 0)
         goto L8968;
 L8948:
-    func_800F5D24(0xF435);
-    func_800F5D24(0xF434);
-    func_800F5D24(0xF433);
+    cell_dec_bank(0xF435);
+    cell_dec_bank(0xF434);
+    cell_dec_bank(0xF433);
     goto L8998;
 L8968:
-    func_800F8F74(0xEF8A);
+    cell_clear_bank(0xEF8A);
     goto L8998;
 L8978:
     txt_set(0xEF89);
@@ -112,7 +112,7 @@ L8998:
     row_read(2);
     if (sel(0x202) != 0)
         goto L8b84;
-    func_800F8F74(0xEF87);
+    cell_clear_bank(0xEF87);
     goto L8b84;
 L8b04:
     page_paint2(0xEF89);
@@ -123,15 +123,15 @@ L8b14:
     if (sel(2) != 0)
         goto L8b64;
     latch(2);
-    func_800F81E8(0x2130);
-    func_800F81E8(0x212D);
+    cell_pull_c8_lo(0x2130);
+    cell_pull_c8_lo(0x212D);
     latch(0x41);
     func_80168B94();
     goto L8b84;
 L8b64:
     sep();
-    func_800F81E8(0x2130);
-    func_800F81E8(0x212D);
+    cell_pull_c8_lo(0x2130);
+    cell_pull_c8_lo(0x212D);
     func_80168B94();
 L8b84:
     return;

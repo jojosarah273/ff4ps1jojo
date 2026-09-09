@@ -10,7 +10,7 @@ void func_8016501C(void)
     cell_put(0xAF);
     row_prep(0x20);
     row_read2(0xA6);
-    func_800F4064(0xF);
+    cell_pos_fwd(0xF);
     sep();
     row_prep_close();
     draw_pad(5);
@@ -25,7 +25,7 @@ L5080:
             goto L5100;
         sep_b();
         txt_cell(0x1000);
-        func_800F8058(1);
+        cell_pos_back(1);
         io_poll(1);
         if (io_go() != 0)
             goto L5140;
@@ -65,7 +65,7 @@ L5080:
     latch(0xFF);
     for (;;) {
         cell_draw(0x291C);
-        func_800F5E48();
+        cell_set50_from54();
         if (poll_go(0x8080) != 0)
             continue;
         break;
@@ -86,7 +86,7 @@ L5080:
 L5288:
     for (;;) {
         page(0xB1);
-        func_800F6C68();
+        cell_push_c8();
         io_poll(0xFF);
         if (io_just() != 0)
             goto L52bc;

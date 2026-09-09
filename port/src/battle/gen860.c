@@ -12,16 +12,16 @@ void func_8010408C(void)
 L1040a4:
     for (;;) {
         func_8010D9D4();
-        func_800F8960(0x300);
+        cell_pull_c8(0x300);
         func_8010D9D4();
-        func_800F8960(0x301);
+        cell_pull_c8(0x301);
         latch(0x2F);
-        func_800F8960(0x302);
+        cell_pull_c8(0x302);
         func_8010D9D4();
         row_read(7);
         row_sel_cell_cur();
-        func_800F8960(0x303);
-        func_800F8960(0x200);
+        cell_pull_c8(0x303);
+        cell_pull_c8(0x200);
         poll_t_cur();
         if (io_just() == 0)
             continue;

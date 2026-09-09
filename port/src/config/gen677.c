@@ -19,7 +19,7 @@ L12192C:
     func_80121CE4();
     row_page(0x65);
     sep_b();
-    func_800F7F48(cell_state(0x63));
+    cell_tick_sub(cell_state(0x63));
     poll_spin();
     cell_put(0x1D);
     latch(0xF7);

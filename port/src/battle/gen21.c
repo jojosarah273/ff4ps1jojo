@@ -52,7 +52,7 @@ L8f4:
         poll_spin();
         poll_spin();
     }
-    func_800F7864();
+    cell_tick_half();
     cell_put(6);
     cell_put(0xE4);
     wnd_open_cur();
@@ -60,7 +60,7 @@ L8f4:
 L970:
     for (;;) {
         txt_cell(0x1000);
-        func_800F8960(0xAD6);
+        cell_pull_c8(0xAD6);
         func_80117DF8();
         step2();
         poll_t(5);

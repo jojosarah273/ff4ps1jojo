@@ -21,7 +21,7 @@ L11DAC0:
     latch(0x81);
 L11DAE0:
     txt_draw(0x2115);
-    func_800FCC84();
+    wnd_fx_tags();
     latch(1);
     txt_draw(0x4300);
     page(0x99);
@@ -34,7 +34,7 @@ L11DAE0:
     page(0x9B);
     label(0x2116);
     page(0x97);
-    if (func_800F7170(2) != 0)
+    if (cell_flags_pack(2) != 0)
         goto L11DB70;
     label(0x4305);
     func_800FCCBC();
@@ -49,7 +49,7 @@ L11DB70:
     page(0x9F);
     label(0x2116);
     page(0x97);
-    if (func_800F7170(2) != 0)
+    if (cell_flags_pack(2) != 0)
         return;
     label(0x4305);
     func_800FCCBC();

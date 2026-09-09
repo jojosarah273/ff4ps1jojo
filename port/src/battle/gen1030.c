@@ -9,7 +9,7 @@ void func_801140A4(void)
     func_800FE634();
     row_prep(0x20);
     sep_a();
-    func_800F8274(0x70);
+    cell_put_hi9(0x70);
     row_sync2(0x22);
     row_prep_close();
     row_page(0x20);

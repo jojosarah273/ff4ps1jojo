@@ -7,7 +7,7 @@ void func_80173780(void)
 {
     row_open2();
     latch(0x15);
-    func_800F9200();
+    cell_cursor_dec();
     row_pad();
     txt_set(0x1704);
     io_poll(6);
@@ -46,7 +46,7 @@ void func_80173780(void)
     if (io_go() == 0)
         goto L948;
     sep_b();
-    func_800F8058(0x40);
+    cell_pos_back(0x40);
     cell_put(0xC);
     goto L948;
 L8f8:
@@ -70,7 +70,7 @@ L948:
     if (io_go() == 0)
         goto L9f8;
     sep_b();
-    func_800F8058(0x40);
+    cell_pos_back(0x40);
     cell_put(0xE);
     goto L9f8;
 L9a8:
@@ -98,7 +98,7 @@ La08:
         goto Lb78;
     row_page(0xE);
     sep_b();
-    func_800F8058(8);
+    cell_pos_back(8);
     cell_put(0xE);
     wnd_open_cur();
 La70:
@@ -141,7 +141,7 @@ Lb88:
     goto Lbf0;
 Lbb8:
     sep_b();
-    func_800F8058(0x10);
+    cell_pos_back(0x10);
     io_poll(0x10);
     if (io_go() != 0)
         latch(0x10);
@@ -151,7 +151,7 @@ Lbf0:
     cell_put(0xC);
     latch(0x60);
     sep_b();
-    func_800F7F48(cell_state(0xB9));
+    cell_tick_sub(cell_state(0xB9));
     cell_put(0xE);
     open_row(0xD);
     open_row(0xF);
@@ -167,7 +167,7 @@ Lc40:
         txt_cell(0xBD97);
         sep_a();
         cell_poke0(cell_state(0xC));
-        func_800F8960(0x424);
+        cell_pull_c8(0x424);
         row_page(0xD);
         row_open_w0();
         row_read(1);
@@ -178,12 +178,12 @@ Lc40:
         txt_cell(0xBD98);
         sep_a();
         cell_poke0(cell_state(0xE));
-        func_800F8960(0x425);
+        cell_pull_c8(0x425);
         page(0x40);
         txt_cell(0xBDB7);
-        func_800F8960(0x426);
+        cell_pull_c8(0x426);
         txt_cell(0xBDB8);
-        func_800F8960(0x427);
+        cell_pull_c8(0x427);
         key_page(0x40);
         key_page(0x40);
         key_page(0x43);
@@ -202,7 +202,7 @@ Lc40:
         txt_cell(0xBD97);
         sep_a();
         cell_poke0(cell_state(0xC));
-        func_800F8960(0x4A0);
+        cell_pull_c8(0x4A0);
         row_page(0xD);
         row_open_w0();
         row_read(1);
@@ -213,12 +213,12 @@ Lc40:
         txt_cell(0xBD98);
         sep_a();
         cell_poke0(cell_state(0xE));
-        func_800F8960(0x4A1);
+        cell_pull_c8(0x4A1);
         page(0x40);
         txt_cell(0xBDB7);
-        func_800F8960(0x4A2);
+        cell_pull_c8(0x4A2);
         txt_cell(0xBDB8);
-        func_800F8960(0x4A3);
+        cell_pull_c8(0x4A3);
         key_page(0x40);
         key_page(0x40);
         key_page(0x43);

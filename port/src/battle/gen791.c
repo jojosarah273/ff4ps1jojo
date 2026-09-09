@@ -18,10 +18,10 @@ L14AFA4:
         return;
     func_8014B9B4();
     txt_set(0x34C4);
-    func_800F9200();
+    cell_cursor_dec();
     txt_draw(0x34C4);
     txt_set(0x49);
-    func_800F9200();
+    cell_cursor_dec();
     func_8014B044();
     func_801420D4();
     row_close2();

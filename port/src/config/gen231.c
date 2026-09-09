@@ -6,14 +6,14 @@
 void func_80132CFC(void)
 {
     page_paint2(0x1B1F);
-    func_800F8F74(0x1B27);
+    cell_clear_bank(0x1B27);
     func_80122FF4();
     row_page(0xE8);
     if (gate(0x8080) == 0) {
-        func_800F8F74(0x1B1F);
+        cell_clear_bank(0x1B1F);
         return;
     }
-    func_800F8F74(0x1BAD);
+    cell_clear_bank(0x1BAD);
     func_801241B8();
     func_801266F0();
     latch(0x30);
@@ -33,7 +33,7 @@ void func_80132CFC(void)
     open_row(0xB9);
     open_row(0xBB);
     latch(0x79);
-    func_800F81E8(0x210A);
+    cell_pull_c8_lo(0x210A);
     latch(0x82);
     cell_put(0xAE);
     latch(0x28);
@@ -72,7 +72,7 @@ void func_80132CFC(void)
     func_800F3D64(0x7E7E);
     row_prep_close();
     latch(0x79);
-    func_800F81E8(0x210A);
+    cell_pull_c8_lo(0x210A);
     func_80120E2C();
     func_801240A8();
     func_801240D0();
@@ -105,9 +105,9 @@ void func_80132CFC(void)
     row_done();
     func_80121124();
     latch(0x7A);
-    func_800F81E8(0x210A);
+    cell_pull_c8_lo(0x210A);
     func_80122A9C();
     func_80126528();
-    func_800F8F74(0x1B1F);
+    cell_clear_bank(0x1B1F);
     return;
 }

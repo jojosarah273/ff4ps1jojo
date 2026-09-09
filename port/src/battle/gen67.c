@@ -13,32 +13,32 @@ void func_8011AEAC(void)
     row_sel2(cell_state(0x3E));
     cell_put(0x3D);
     page(0x3D);
-    func_800F6C68();
+    cell_push_c8();
     cell_put(0x40);
-    func_800F6C68();
+    cell_push_c8();
     cell_put(0x41);
     page(0x40);
-    func_800F5E48();
+    cell_set50_from54();
 L11af28:
     for (;;) {
-        func_800F6C68();
+        cell_push_c8();
         io_poll(0xFF);
         if (io_just() != 0)
             goto L11AF58;
-        func_800F5E48();
+        cell_set50_from54();
     }
 L11AF58:
     cell_step();
     label(0xA6B);
     page(0x3D);
-    func_800F6C68();
+    cell_push_c8();
     cell_put(0xBE);
-    func_800F6C68();
+    cell_push_c8();
     cell_put(0xBF);
 L11af98:
     for (;;) {
         page(0xBE);
-        func_800F6C68();
+        cell_push_c8();
         io_poll(0xFF);
         if (io_just() != 0)
             goto L11B0D4;
@@ -48,7 +48,7 @@ L11af98:
         page(0xBE);
         cell_step();
         tail(0xBE);
-        func_800F6C68();
+        cell_push_c8();
         func_8011B6B4();
         io_poll_cur();
         if (io_just() != 0)
@@ -64,7 +64,7 @@ L11af98:
     L11b050:
         for (;;) {
             cell_step();
-            func_800F6C68();
+            cell_push_c8();
             io_poll(0xFF);
             if (io_just() != 0)
                 break;
@@ -72,7 +72,7 @@ L11af98:
         cell_step();
         tail(0xBE);
         page(0xBE);
-        if (func_800F56AC(cell_state(0xA6B)) != 0)
+        if (cell_flags_cmp(cell_state(0xA6B)) != 0)
             goto L11B0D4;
         continue;
     L11B0B4:
@@ -85,7 +85,7 @@ L11B0D4:
     cell_put(0xB1);
     open_row(0xAB);
     page(0xBE);
-    func_800F6C68();
+    cell_push_c8();
     if (gate(2) != 0)
         goto L11B13C;
     func_801163E8();

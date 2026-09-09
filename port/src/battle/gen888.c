@@ -12,10 +12,10 @@ L141b5c:
         func_80140558();
         func_80140310();
         row_prep(0x20);
-        func_800F658C();
+        cell_push9();
         sep_a();
-        func_800F4064(8);
-        func_800F81B0();
+        cell_pos_fwd(8);
+        cell_pull9_hi();
         sep();
         row_prep_close();
         cell_step();

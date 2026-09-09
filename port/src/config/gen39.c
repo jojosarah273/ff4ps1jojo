@@ -48,7 +48,7 @@ void func_8015FE98(void)
     row_read(0x30);
     func_80152B38();
     tail(0x8C);
-    if (func_800F7170(2) != 0)
+    if (cell_flags_pack(2) != 0)
         goto L098;
     for (;;) {
         latch(1);
@@ -64,7 +64,7 @@ L098:
     row_read(0xC);
     func_80152C50();
     tail(0x8C);
-    if (func_800F7170(2) != 0)
+    if (cell_flags_pack(2) != 0)
         return;
     for (;;) {
         latch(2);
@@ -79,7 +79,7 @@ L098:
 L118:
     latch(1);
     cell_put(0xB1);
-    func_800F61E8();
+    cell_set50_from40();
     cell_put(0xB2);
     func_801605D0();
     sep();

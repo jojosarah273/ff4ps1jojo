@@ -12,11 +12,11 @@ void func_8016EABC(void)
     row_sync();
     row_open3();
     latch_cur();
-    func_800F9200();
+    cell_cursor_dec();
     row_pad();
     wnd_open_cur();
     row_open();
-    func_800F94B8();
+    cell_cursor_read();
     cell_state_of();
     cell_state(0x1000);
     cell_peek_cur();
@@ -33,7 +33,7 @@ L16eb5c:
         row_open();
         /* gates -> L16EBFC/L16EC3C/L16EC94 */
         row_close();
-        func_800F94B8();
+        cell_cursor_read();
         cell_state(0x20);
         row_prep_close();
         row_done();

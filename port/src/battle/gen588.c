@@ -8,7 +8,7 @@ void func_80145B90(void)
     /* battle rows: 0x26/0x28/0x2A windows, 0x1800 text, 80072720 +
        80145C74 rows. */
     row_open();
-    func_800F6C68();
+    cell_push_c8();
     cell_put(0x26);
     latch(0x18);
     cell_put(0x28);
@@ -23,8 +23,8 @@ void func_80145B90(void)
     row_prep(0x20);
     row_read2(0x2A);
     sep_a();
-    func_800F4064();
-    func_800F81B0();
+    cell_pos_fwd();
+    cell_pull9_hi();
     sep();
     row_prep_close();
     func_80145C74();

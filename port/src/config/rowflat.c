@@ -19,16 +19,16 @@ void func_80152224(void)
         goto L152354;
     func_800F7248(0x97);
     sep_b();
-    func_800F7F48(cell_state(0x96));
+    cell_tick_sub(cell_state(0x96));
     io_poll(0xFF);
     if (io_just() == 0)
         goto L1522D4;
     func_800F6B38(0x1900);
     goto L152354;
 L1522D4:
-    func_800F61E8();
+    cell_set50_from40();
     txt_draw(0x3947);
-    func_800F8F74(0x3948);
+    cell_clear_bank(0x3948);
     func_800F6B38(0x1900);
     func_800F8CD4(0x3945);
     row_prep(0x10);

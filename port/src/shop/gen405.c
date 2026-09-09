@@ -3,21 +3,21 @@
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-extern void func_800F8F74(u32 v0);
-extern void func_800F71DC(u32 v0);
-extern void func_800F8D00(u32 v0);
-extern void func_800F6240(u32 v0);
-extern void func_800F654C(u32 v0);
-extern void func_800F8188(u32 v0);
-extern void func_800F824C(u32 v0);
-extern void func_800F6630(u32 v0);
+
+
+
+
+
+
+
+
 extern void func_8015A374(void);
 extern void func_80153374(void);
-extern void func_800F8768(u32 v0);
-extern void func_800F7270(u32 v0);
+
+
 extern void func_8015329C(void);
 void func_80161900(void) {
-    func_800F8F74(0x357C);
+    cell_clear_bank(0x357C);
     wnd_open(0xA);
     label(0x357D);
     page_paint2(0x390A);

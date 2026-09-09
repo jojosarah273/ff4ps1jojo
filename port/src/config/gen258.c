@@ -27,10 +27,10 @@ void func_80126990(void)
 L126A28:
     row_page(0xB9);
     sep_b();
-    func_800F7F48(cell_state(0xBD));
+    cell_tick_sub(cell_state(0xBD));
     cell_put(0xB9);
     row_page(0xBA);
-    func_800F7F48(cell_state(0xBE));
+    cell_tick_sub(cell_state(0xBE));
     cell_put(0xBA);
 L126A70:
     row_page(0xC0);
@@ -49,10 +49,10 @@ L126A70:
 L126AE8:
     row_page(0xBB);
     sep_b();
-    func_800F7F48(cell_state(0xBF));
+    cell_tick_sub(cell_state(0xBF));
     cell_put(0xBB);
     row_page(0xBC);
-    func_800F7F48(cell_state(0xC0));
+    cell_tick_sub(cell_state(0xC0));
     cell_put(0xBC);
 L126B30:
     row_page(0xBC);

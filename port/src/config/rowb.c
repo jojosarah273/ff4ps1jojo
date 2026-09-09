@@ -16,14 +16,14 @@ void func_80155C88(void)
     row_read2(0xBB);
     row_arm_s_cur();
     sep_b();
-    func_800F6CF4();
+    cell_push9_bank();
     func_800F80D0(0xA860);
     sep();
     row_prep_close();
     sep();
     for (;;) {
-        func_800F6C68();
-        func_800F8960(0x289C);
+        cell_push_c8();
+        cell_pull_c8(0x289C);
         cell_step();
         step2();
         poll_t(0x14);
@@ -63,19 +63,19 @@ Le5c:
     cell_draw(0x2008);
     cell_draw(0x200A);
     row_prep(0x20);
-    func_800F658C(0x289D);
+    cell_push9(0x289D);
     func_80152B38();
-    func_800F87DC(0x200B);
-    func_800F87DC(0x200D);
+    cell_stamp8_9(0x200B);
+    cell_stamp8_9(0x200D);
     sep();
     row_prep_close();
     row_open();
     txt_set(0x28A2);
     row_read(0x3F);
     row_sel_cell_cur();
-    func_800F6C68();
+    cell_push_c8();
     cell_put(0xA9);
-    func_800F6C68(0xA9);
+    cell_push_c8(0xA9);
     row_page_cur();
     func_80152224();
     row_close();
@@ -135,13 +135,13 @@ Lfec:
     row_read(0x80);
     if (sel(2) != 0)
         goto L1dc;
-    func_800F6D70(0x28A6);
+    cell_push_c8_d58(0x28A6);
     cell_draw(0x2019);
     step2();
-    func_800F6D70(0x28A6);
+    cell_push_c8_d58(0x28A6);
     cell_draw(0x201E);
     step2();
-    func_800F6D70(0x28A6);
+    cell_push_c8_d58(0x28A6);
     cell_draw(0x201F);
     step2();
 L1dc:
@@ -149,7 +149,7 @@ L1dc:
     row_read(0x40);
     if (sel(2) != 0)
         goto L264;
-    func_800F6D70(0x28A6);
+    cell_push_c8_d58(0x28A6);
     if (gate(0x8080) != 0)
         goto L224;
     cell_draw(0x2026);
@@ -158,10 +158,10 @@ L224:
     cell_draw(0x2025);
 L22c:
     step2();
-    func_800F6D70(0x28A6);
+    cell_push_c8_d58(0x28A6);
     cell_draw(0x202B);
     step2();
-    func_800F6D70(0x28A6);
+    cell_push_c8_d58(0x28A6);
     cell_draw(0x202C);
     step2();
 L264:
@@ -169,7 +169,7 @@ L264:
     row_read(0x20);
     if (sel(2) != 0)
         goto L2dc;
-    func_800F6D70(0x28A6);
+    cell_push_c8_d58(0x28A6);
     if (gate(0x8080) != 0)
         goto L2a4;
     cell_draw(0x2021);
@@ -186,7 +186,7 @@ L2dc:
     row_read(0x10);
     if (sel(2) != 0)
         goto L32c;
-    func_800F6D70(0x28A6);
+    cell_push_c8_d58(0x28A6);
     cell_draw(0x2012);
     cell_draw(0x2013);
     cell_draw(0x2017);
@@ -197,7 +197,7 @@ L32c:
     row_read(8);
     if (sel(2) != 0)
         goto L364;
-    func_800F6D70(0x28A6);
+    cell_push_c8_d58(0x28A6);
     cell_draw(0x2040);
     step2();
 L364:
@@ -211,7 +211,7 @@ L384:
 L394:
     txt_set(0x35A0);
     cell_dispatch(cell_state_of());
-    func_800F6D70(0x28A6);
+    cell_push_c8_d58(0x28A6);
     txt_draw(0x35A2);
     txt_set(0x35A0);
     cell_put(0xDF);

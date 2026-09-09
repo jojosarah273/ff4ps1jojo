@@ -9,10 +9,10 @@ void func_8016BE1C(void)
     row_prep(0x20);
     sep_a();
     cell_peek0(cell_state_of());
-    func_800F87DC(0x2000);
+    cell_stamp8_9(0x2000);
     sep_a();
     cell_peek0(cell_state_of());
-    func_800F87DC(0x2040);
+    cell_stamp8_9(0x2040);
     sep();
     row_prep_close();
     return;

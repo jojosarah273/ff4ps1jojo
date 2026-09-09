@@ -26,14 +26,14 @@ L129938:
                 if (io_just() != 0)
                     goto L1299B8;
                 poll_spin();
-                func_800F8960();
-                func_800F8960(0x40);
+                cell_pull_c8();
+                cell_pull_c8(0x40);
                 goto L1299D8;
             L1299B8:
                 func_801245B4();
-                func_800F8960();
+                cell_pull_c8();
                 stat_sync();
-                func_800F8960(0x40);
+                cell_pull_c8(0x40);
             L1299D8:
                 step2();
                 step2();
@@ -53,7 +53,7 @@ L129938:
         }
         row_prep(0x20);
         sep_a();
-        func_800F4064(0x54);
+        cell_pos_fwd(0x54);
         row_prep_close();
         poll_pair(0x45);
         if (poll_go(0x202) != 0)

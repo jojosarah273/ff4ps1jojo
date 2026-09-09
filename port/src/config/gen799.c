@@ -13,9 +13,9 @@ L125e20:
         wnd_open(8);
     L125e28:
         for (;;) {
-            func_800F6D70();
-            func_800F6D70();
-            func_800F5E48();
+            cell_push_c8_d58();
+            cell_push_c8_d58();
+            cell_set50_from54();
             if (poll_go(0x202) != 0)
                 continue;
             break;
@@ -23,14 +23,14 @@ L125e20:
         wnd_open(8);
     L125eac:
         for (;;) {
-            func_800F6D70();
+            cell_push_c8_d58();
             step2();
-            func_800F5E48();
+            cell_set50_from54();
             if (poll_go(0x202) != 0)
                 continue;
             break;
         }
-        func_800F5D24(0x145);
+        cell_dec_bank(0x145);
         if (poll_go(0x202) != 0)
             continue;
         break;

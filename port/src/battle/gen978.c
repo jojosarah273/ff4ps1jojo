@@ -19,7 +19,7 @@ L11b634:
     }
 L11B664:
     page(0x3D);
-    func_800F78C4(cell_peek_cur());
-    func_800F885C(0x12E0);
+    cell_tick_or(cell_peek_cur());
+    cell_pull_c8_off(0x12E0);
     return;
 }

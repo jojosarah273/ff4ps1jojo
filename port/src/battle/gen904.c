@@ -20,7 +20,7 @@ L119E1C:
     open_row(0x7B);
     latch(0x81);
     txt_draw(0x4200);
-    func_800FE7B0();
+    wnd_fx_7d_b();
     latch(0xF);
     txt_draw(0x2100);
     func_800F5448();

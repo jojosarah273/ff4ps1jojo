@@ -23,7 +23,7 @@ void func_8014B454(void)
     txt_draw_cur();
     txt_cell_cur();
     sep_b();
-    func_800F8058(0x10);
+    cell_pos_back(0x10);
     txt_draw_cur();
     func_801490CC();
     func_8014B5A8();

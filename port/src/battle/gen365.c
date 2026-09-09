@@ -14,14 +14,14 @@ void func_801486D8(void)
     cell_put(0xE);
     row_page_cur();
     row_read(3);
-    func_800F6C68();
+    cell_push_c8();
     cell_put(0x10);
-    func_800F6C68();
+    cell_push_c8();
     cell_put(0x11);
-    func_800F6D70(0x500);
+    cell_push_c8_d58(0x500);
     func_800F4370(0x11);
-    func_800F78C4(cell_state(0x10));
-    func_800F8960(0x500);
+    cell_tick_or(cell_state(0x10));
+    cell_pull_c8(0x500);
     row_page(0xE);
     row_prep(0x20);
     sep();
@@ -35,7 +35,7 @@ void func_801486D8(void)
         goto L1488A4;
     txt_set_cur();
     sep_b();
-    func_800F8058(0x10);
+    cell_pos_back(0x10);
     cell_draw(0x300);
     txt_set(0x303);
     cell_draw_cur();

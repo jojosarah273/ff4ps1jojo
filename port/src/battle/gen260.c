@@ -41,7 +41,7 @@ L14411C:
         func_80143ED4();
         txt_set_cur();
         sep_b();
-        func_800F8058(6);
+        cell_pos_back(6);
         txt_draw_cur();
         latch(1);
         txt_draw_cur();
@@ -70,7 +70,7 @@ L14411C:
             cell_draw_cur();
             txt_cell_cur();
             cell_draw_cur();
-            func_800F5E48();
+            cell_set50_from54();
             poll_t_cur();
             if (io_just() != 0)
                 break;
@@ -88,7 +88,7 @@ L14411C:
         }
         break;
     }
-    func_800F8F74();
+    cell_clear_bank();
     func_801452C8();
     return;
 }

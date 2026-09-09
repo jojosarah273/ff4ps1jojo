@@ -13,7 +13,7 @@ void func_8016BED4(void)
 L16bf0c:
     for (;;) {
         func_800F9140(0x2000);
-        func_800F87DC(0x2040);
+        cell_stamp8_9(0x2040);
         cell_step();
         cell_step();
         poll_t(0x40);

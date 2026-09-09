@@ -14,7 +14,7 @@ L118948:
         func_800FE7D8();
         row_page(0x83);
         row_read(0xE0);
-        func_800F78C4(cell_state(0x81));
+        cell_tick_or(cell_state(0x81));
         func_8017EA90();
         key_page(0x79);
         row_page(0x79);
@@ -30,7 +30,7 @@ L118948:
     latch(0x11);
     txt_draw(0x212D);
     txt_set(0xFE4);
-    func_800F7864();
+    cell_tick_half();
     if (func_800F7728(0x101) != 0)
         goto L118A28;
     latch(2);
@@ -39,6 +39,6 @@ L118948:
     txt_draw(0x2131);
     return;
 L118A28:
-    func_800F8F74(0x2131);
+    cell_clear_bank(0x2131);
     return;
 }

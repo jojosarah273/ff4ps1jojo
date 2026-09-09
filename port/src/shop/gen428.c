@@ -13,8 +13,8 @@ void func_8016380C(void)
     txt_draw(0x34C7);
     page(0xA6);
     txt_cell(0x202F);
-    func_800F7864();
-    func_800F76E8();
+    cell_tick_half();
+    cell_flags_repack();
     cell_put(0xA9);
     wnd_open(5);
     tail(0xAB);
@@ -28,7 +28,7 @@ L16386c:
         page(0xA6);
         sep_b();
         txt_cell(0x202F);
-        func_800F7F48(cell_state(0xA9));
+        cell_tick_sub(cell_state(0xA9));
         if (io_just() != 0)
             goto L1638F0;
         if (io_go() != 0)

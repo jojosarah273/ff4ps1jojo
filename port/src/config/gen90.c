@@ -33,7 +33,7 @@ L134714:
 L13471C:
     cell_put(0x43);
     cell_fmt2(0x43);
-    func_800F66D8(0xE5);
+    cell_push_c8_sel(0xE5);
     txt_draw(0x1B38);
     if (gate(0x202) != 0)
         goto L13475C;

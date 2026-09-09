@@ -7,7 +7,7 @@ void func_8014EC18(void)
 {
     sep();
     sep_b();
-    func_800F7F48(cell_state(8));
+    cell_tick_sub(cell_state(8));
     cell_put(6);
     row_page(8);
     cell_put(7);

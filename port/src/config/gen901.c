@@ -17,7 +17,7 @@ L12244c:
     for (;;) {
         if (gate(2) != 0)
             goto L1224B8;
-        func_800F885C();
+        cell_pull_c8_off();
         step2();
     }
 L1224B8:

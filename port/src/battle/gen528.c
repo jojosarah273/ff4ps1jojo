@@ -16,22 +16,22 @@ void func_80119210(void)
     func_80174F0C();
     txt_set(0x16A0);
     sep_b();
-    func_800F7F48(cell_state(0x30));
+    cell_tick_sub(cell_state(0x30));
     txt_draw(0x16A0);
     txt_set(0x16A1);
     cell_state(0x31);
-    func_800F7F48();
+    cell_tick_sub();
     txt_draw(0x16A1);
     txt_set(0x16A2);
     cell_state(0x32);
-    func_800F7F48();
+    cell_tick_sub();
     txt_draw(0x16A2);
     if (io_go() != 0)
         goto L1192E0;
-    func_800F8F74(0x16A0);
-    func_800F8F74(0x16A1);
-    func_800F8F74(0x16A2);
+    cell_clear_bank(0x16A0);
+    cell_clear_bank(0x16A1);
+    cell_clear_bank(0x16A2);
 L1192E0:
-    func_800FE778();
+    wnd_fx_7d();
     return;
 }

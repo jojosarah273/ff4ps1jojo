@@ -24,7 +24,7 @@ L26ef0:
     latch(0x30);
     cell_put(0xC1);
     func_80128480();
-    func_800F8F74(0x1B47);
+    cell_clear_bank(0x1B47);
     goto L26F74;
 L27080:
     txt_set(0x1A3C);
@@ -35,9 +35,9 @@ L27080:
     func_8013AAA8();
     row_prep(0x20);
     row_sync2(0x1BE4);
-    func_800F81B0(0x17FE);
+    cell_pull9_hi(0x17FE);
     row_prep_close();
-    func_800F8F74(0x17FB);
+    cell_clear_bank(0x17FB);
     func_80128264();
     return;
 L26F74:

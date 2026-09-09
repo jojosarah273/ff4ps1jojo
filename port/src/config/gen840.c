@@ -30,7 +30,7 @@ L12BAB4:
 L12BAC8:
     txt_draw(0x1BC1);
     func_8011EF30();
-    func_800F8F74(0x1BC3);
+    cell_clear_bank(0x1BC3);
     func_8012B950();
     return;
 }

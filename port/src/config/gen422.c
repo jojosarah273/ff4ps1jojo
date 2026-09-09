@@ -13,15 +13,15 @@ void func_80122B54(void)
     row_read2(0x60);
     row_arm_s_cur();
     row_arm_s2_cur();
-    func_800F4064(0x1000);
+    cell_pos_fwd(0x1000);
     row_prep_close();
     row_page(0x60);
     cell_put(0x48);
-    func_800F6D70();
+    cell_push_c8_d58();
     row_read(0x3F);
     if (sel(0x202) == 0)
         return;
-    func_800F78C4(cell_state(0x48));
+    cell_tick_or(cell_state(0x48));
     cell_put(0x48);
     txt_set(0x16A8);
     if (gate(2) != 0)
@@ -38,7 +38,7 @@ L122C5C:
     row_prep(0x20);
     row_read2(0x43);
     cell_peek0(cell_state(0x45));
-    func_800F6CF4(0x20);
+    cell_push9_bank(0x20);
     row_prep_close();
     return;
 }

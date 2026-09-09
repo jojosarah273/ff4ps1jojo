@@ -6,29 +6,29 @@
 void func_8016CA94(void)
 {
     row_prep(0x30);
-    func_800F922C();
+    cell_cursor_ret2();
     row_open();
     row_sync();
     row_open2();
     row_open3();
     wnd_open_cur();
     row_open();
-    func_800F94B8();
+    cell_cursor_read();
     sep();
     row_prep_close();
     latch(0x7E);
-    func_800F9200();
+    cell_cursor_dec();
     row_pad();
     row_page(0x40);
     if (gate(2) == 0)
         goto Lfac;
     key_page(0x40);
     txt_set(0x3303);
-    func_800F81E8(0x2100);
+    cell_pull_c8_lo(0x2100);
     row_page(0xA0);
-    func_800F81E8(0x211A);
+    cell_pull_c8_lo(0x211A);
     txt_set(0x7D28);
-    func_800F81E8(0x212C);
+    cell_pull_c8_lo(0x212C);
     row_page(0x64);
     io_poll(1);
     if (io_just() != 0)
@@ -40,13 +40,13 @@ void func_8016CA94(void)
     row_page(0x66);
     row_page(0x67);
     row_page(0x8C);
-    func_800F81E8(0x211F);
+    cell_pull_c8_lo(0x211F);
     row_page(0x8D);
-    func_800F81E8(0x211F);
+    cell_pull_c8_lo(0x211F);
     row_page(0x8E);
-    func_800F81E8(0x2120);
+    cell_pull_c8_lo(0x2120);
     row_page(0x8F);
-    func_800F81E8(0x2120);
+    cell_pull_c8_lo(0x2120);
     txt_set(0x7D1F);
     if (gate(0x202) != 0)
         goto Le68;
@@ -70,34 +70,34 @@ Lcd8:
         goto Ld10;
     row_scan_cur();
 Ld10:
-    func_800F8274(0x66);
+    cell_put_hi9(0x66);
     sep_a();
-    func_800F4064(0x80);
-    func_800F8274(0x8E);
+    cell_pos_fwd(0x80);
+    cell_put_hi9(0x8E);
     sep();
     row_prep_close();
     goto Le68;
 Ld48:
     txt_set(0x61);
-    func_800F81E8(0x211B);
+    cell_pull_c8_lo(0x211B);
     txt_set(0x62);
-    func_800F81E8(0x211B);
+    cell_pull_c8_lo(0x211B);
     txt_set(0x61);
-    func_800F81E8(0x211E);
+    cell_pull_c8_lo(0x211E);
     txt_set(0x62);
-    func_800F81E8(0x211E);
+    cell_pull_c8_lo(0x211E);
     row_page(0x5D);
     row_page(0x5E);
     row_page(0x5F);
     row_page(0x60);
     row_page(0x8C);
-    func_800F81E8(0x211F);
+    cell_pull_c8_lo(0x211F);
     row_page(0x8D);
-    func_800F81E8(0x211F);
+    cell_pull_c8_lo(0x211F);
     row_page(0x8E);
-    func_800F81E8(0x2120);
+    cell_pull_c8_lo(0x2120);
     row_page(0x8F);
-    func_800F81E8(0x2120);
+    cell_pull_c8_lo(0x2120);
 Le68:
     func_8016BD2C();
     row_page(0x64);
@@ -144,10 +144,10 @@ Lf94:
     key_page(0x4A);
 Lfac:
     row_prep(0x30);
-    func_800F94B8();
+    cell_cursor_read();
     row_pad();
     row_done();
     row_close();
-    func_800F9410();
+    cell_cursor_adv2();
     return;
 }

@@ -64,7 +64,7 @@ L361ac:
     L36324:
         for (;;) {
             txt_set(0x1B7B);
-            func_800F61E8();
+            cell_set50_from40();
             if (io_press(cell_state(0x1B7D)) == 0)
                 goto L3635C;
             latch_cur();

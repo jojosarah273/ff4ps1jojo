@@ -6,7 +6,7 @@
 extern u8 *D_8019ED40;
 void func_801369B8(void)
 {
-    func_800F9200();
+    cell_cursor_dec();
     cell_put(0x57);
     func_8012D204();
     if (io_just() != 0)

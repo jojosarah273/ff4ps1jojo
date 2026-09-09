@@ -11,7 +11,7 @@ void func_80142E34(void)
        80142E90. */
     latch(8);
     txt_draw(0xF42C);
-    func_800F8F74(0xF42D);
+    cell_clear_bank(0xF42D);
     func_80140558();
     sep();
     D_8019ED54[0] = D_8019ED44[0];

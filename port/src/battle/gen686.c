@@ -13,7 +13,7 @@ void func_80104804(void)
     open_row(0x79);
 L104834:
     for (;;) {
-        func_800FE870();
+        cell_clear_pad();
         func_800FF024();
         row_page(0x79);
         func_800F9690();

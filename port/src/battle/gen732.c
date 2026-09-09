@@ -18,13 +18,13 @@ L11fd3c:
         if (io_just() != 0)
             goto L11FE24;
         func_801245B4();
-        func_800F885C();
+        cell_pull_c8_off();
         stat_sync();
-        func_800F885C();
+        cell_pull_c8_off();
         goto L11FF18;
     L11FE04:
         row_close();
-        func_800F94B8();
+        cell_cursor_read();
         row_pad();
         return;
     L11FE24:

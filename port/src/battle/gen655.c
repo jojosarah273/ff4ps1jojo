@@ -13,22 +13,22 @@ void func_8010E878(void)
 L10e898:
     for (;;) {
         func_8010D9D4();
-        func_800F7864();
+        cell_tick_half();
         sep_a();
         row_open_w(0x40);
-        func_800F8960(0x300);
+        cell_pull_c8(0x300);
         func_8010D9D4();
-        func_800F7864();
+        cell_tick_half();
         sep_a();
         row_open_w(0x40);
-        func_800F8960(0x301);
+        cell_pull_c8(0x301);
         latch(0xFF);
-        func_800F8960(0x302);
+        cell_pull_c8(0x302);
         func_8010D9D4();
         row_read(7);
         row_sel_cell_cur();
-        func_800F8960(0x303);
-        func_800F8960(0x200);
+        cell_pull_c8(0x303);
+        cell_pull_c8(0x200);
         poll_t(0x200);
         if (io_just() == 0)
             continue;

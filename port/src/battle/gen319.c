@@ -26,7 +26,7 @@ L14F0E4:
     txt_draw_cur();
     func_80148CAC();
 L14F144:
-    func_800F8F74();
+    cell_clear_bank();
     txt_set_cur();
     txt_draw_cur();
     open_row(0x18);
@@ -55,7 +55,7 @@ L14f1cc:
         io_poll(8);
         if (io_just() == 0)
             continue;
-        func_800F5D24();
+        cell_dec_bank();
         if (poll_go(0x202) != 0)
             return;
         txt_set_cur();
@@ -65,7 +65,7 @@ L14f1cc:
         return;
     L14F294:
         page_open_cur();
-        if (func_800F7170(2) != 0)
+        if (cell_flags_pack(2) != 0)
             continue;
         func_8014F2CC();
     }

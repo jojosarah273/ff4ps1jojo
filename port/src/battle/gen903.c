@@ -3,19 +3,19 @@
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-extern int func_800F3D48();
-extern int func_800F654C();
-extern int func_800F81E8();
-extern int func_800F9200();
-extern int func_800F93DC();
+
+
+
+
+
 extern int func_8016EA1C();
 
 void func_8011EDA4(void)
 
 {
-  func_800F9200();
+  cell_cursor_dec();
   latch(0);
-  func_800F81E8(0x140);
+  cell_pull_c8_lo(0x140);
   func_8016EA1C();
   latch(0);
   stat_sync();

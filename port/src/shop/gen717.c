@@ -9,10 +9,10 @@ void func_80169958(void)
        texts, 8016D4D8 close; loop L169998 on 5958. */
     sep();
     txt_draw(0xA0);
-    func_800F81E8(0x211A);
+    cell_pull_c8_lo(0x211A);
 L169998:
     for (;;) {
-        func_800F885C();
+        cell_pull_c8_off();
         cell_step();
         poll_t_cur();
         if (io_just() == 0)

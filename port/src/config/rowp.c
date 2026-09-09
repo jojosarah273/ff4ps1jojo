@@ -72,7 +72,7 @@ Lab24:
         if (sel(2) != 0)
             goto Ladd8;
         txt_set(0x1BB9);
-        func_800F61E8();
+        cell_set50_from40();
         io_poll(6);
         if (io_just() == 0)
             goto Ladd0;
@@ -90,7 +90,7 @@ Lab24:
             goto Laf0c;
         func_801224D0();
         txt_cell(0x16AE);
-        func_800F61E8();
+        cell_set50_from40();
         io_poll_cur();
         if (io_just() == 0)
             goto Lae6c;

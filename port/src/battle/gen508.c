@@ -14,7 +14,7 @@ void func_8010E158(void)
     tail(0x89);
 L10e180:
     for (;;) {
-        func_800FE778();
+        wnd_fx_7d();
         row_page(0x89);
         io_poll(0x40);
         if (io_go() != 0)
@@ -26,7 +26,7 @@ L10e180:
     L10E1E0:
         latch(1);
         cell_put(0xD5);
-        func_800FE870();
+        cell_clear_pad();
         latch(2);
         cell_put(5);
         open_row(4);
@@ -36,7 +36,7 @@ L10e180:
         func_80102770();
         func_80172BA8();
         page(0x89);
-        func_800F5E48();
+        cell_set50_from54();
         tail(0x89);
         if (poll_go(0x202) != 0)
             continue;

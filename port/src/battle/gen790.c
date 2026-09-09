@@ -7,7 +7,7 @@ void func_8014CF14(void)
 {
     /* battle rows: 0x1802/0x7992-0x7B36 cells; gate 5574(0x10);
        loop L14CF64 on 5958(0x8C). */
-    func_800F9200();
+    cell_cursor_dec();
     txt_set(0x1802);
     io_poll(0x10);
     if (io_just() != 0)

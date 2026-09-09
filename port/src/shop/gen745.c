@@ -16,11 +16,11 @@ void func_8016EE10(void)
     wnd_open_cur();
     label(0xA3);
     latch(1);
-    func_800F81E8(0x64);
+    cell_pull_c8_lo(0x64);
     latch(0x80);
-    func_800F81E8(0x6A);
+    cell_pull_c8_lo(0x6A);
     latch(0xA);
-    func_800F81E8(0x6B);
+    cell_pull_c8_lo(0x6B);
     func_8016EF88();
     return;
 }

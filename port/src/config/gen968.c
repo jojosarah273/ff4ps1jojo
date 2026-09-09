@@ -11,16 +11,16 @@ void func_8013EFD8(void)
     cell_state_of();
 L13f020:
     for (;;) {
-        func_800F3A70();
+        cell_bank_sel();
         cell_state_of();
     L13f03c:
         for (;;) {
-            func_800F922C();
+            cell_cursor_ret2();
             if (io_press(1) == 0)
                 continue;
             break;
         }
-        func_800F9410();
+        cell_cursor_adv2();
         sep_a();
         sep();
         return;

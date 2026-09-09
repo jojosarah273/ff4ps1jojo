@@ -15,14 +15,14 @@ void func_801694A4(void)
     label(0x2107);
     row_open2();
     sep();
-    func_800F9200();
+    cell_cursor_dec();
     row_pad();
     wnd_open(0x3000);
     sep();
 L169548:
     for (;;) {
-        func_800F6C68();
-        func_800F9200();
+        cell_push_c8();
+        cell_cursor_dec();
         row_read(0xF);
         row_close2();
         row_read(0xF0);

@@ -5,7 +5,7 @@
 #include "ff4_window.h"
 void func_8012BB68(void)
 {
-    func_800F6D70();
+    cell_push_c8_d58();
     row_read(0x3F);
     if (sel(2) != 0)
         return;
@@ -16,17 +16,17 @@ void func_8012BB68(void)
     func_80120A0C();
     row_close();
     row_done();
-    func_800F9200();
-    func_800F6D70(3);
+    cell_cursor_dec();
+    cell_push_c8_d58(3);
     func_800F7C6C();
-    func_800F7A68();
+    cell_flags_repack2();
     func_800F7C6C();
-    func_800F7A68();
+    cell_flags_repack2();
     func_800F7C6C();
-    func_800F7A68();
+    cell_flags_repack2();
     func_800F7C6C();
     row_read(4);
-    func_800F78C4(cell_state(0x34));
+    cell_tick_or(cell_state(0x34));
     cell_put(0x45);
     latch(0xE);
     func_80123BD8();
@@ -38,10 +38,10 @@ void func_8012BB68(void)
     row_read2(0x4B);
     sep_a();
     cell_peek0(cell_state(0x29));
-    func_800F8274(0x4E);
+    cell_put_hi9(0x4E);
     sep_a();
-    func_800F4064(0x40);
-    func_800F8274(0x51);
+    cell_pos_fwd(0x40);
+    cell_put_hi9(0x51);
     row_prep_close();
     page(0x48);
     cell_fmt2(0x4B);
@@ -55,22 +55,22 @@ void func_8012BB68(void)
     row_prep(0x20);
     row_read2(0x51);
     sep_a();
-    func_800F4064(0x42);
+    cell_pos_fwd(0x42);
     row_prep_close();
     latch(0x49);
-    func_800F8960();
+    cell_pull_c8();
     latch(0x51);
-    func_800F8960();
-    func_800F8960(2);
-    func_800F8960(0x42);
+    cell_pull_c8();
+    cell_pull_c8(2);
+    cell_pull_c8(0x42);
     latch(0x4E);
-    func_800F8960();
+    cell_pull_c8();
     latch(0x40);
-    func_800F8960();
+    cell_pull_c8();
     latch(0xC7);
-    func_800F8960();
-    func_800F8960(0xE);
-    func_800F8960(0x4E);
+    cell_pull_c8();
+    cell_pull_c8(0xE);
+    cell_pull_c8(0x4E);
     row_prep(0x20);
     page(0x51);
     cell_step();

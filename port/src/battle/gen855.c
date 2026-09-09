@@ -13,10 +13,10 @@ void func_80110BC8(void)
     wnd_open_cur();
 L110c10:
     for (;;) {
-        func_800F87DC(0xEBB);
+        cell_stamp8_9(0xEBB);
         row_done2();
         row_done2();
-        func_800F4264(0x1F);
+        cell_pos_mask(0x1F);
         poll_t(0x10);
         if (io_just() == 0)
             continue;

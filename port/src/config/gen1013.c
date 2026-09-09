@@ -12,9 +12,9 @@ void func_8012E758(void)
     cell_fmt2(0x43);
     wnd_open(0x20);
     do {
-        func_800F6D70(0xFE28);
-        func_800F8960(0xA160);
+        cell_push_c8_d58(0xFE28);
+        cell_pull_c8(0xA160);
         step2();
-        func_800F5E48();
+        cell_set50_from54();
     } while (poll_go(0x202) != 0);
 }

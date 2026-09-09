@@ -21,16 +21,16 @@ L1451a0:
         page_paint2_cur();
         func_80144C78();
         func_801449D0();
-        func_800F8F74();
+        cell_clear_bank();
         func_8014D43C();
         row_close();
-        func_800F5E48();
+        cell_set50_from54();
         if (poll_go(0x202) != 0)
             continue;
         break;
     }
     func_8013D12C();
-    func_800F8F74();
+    cell_clear_bank();
     func_8014D414();
     return;
 }

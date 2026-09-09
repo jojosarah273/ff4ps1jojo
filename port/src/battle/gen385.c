@@ -13,7 +13,7 @@ void func_801193F8(void)
     row_sel_cell_cur();
     txt_draw(0x8F8);
     txt_draw(0x8F9);
-    func_800F8F74(0x8FA);
+    cell_clear_bank(0x8FA);
     latch(0x1A);
     cell_put(0xB2);
     func_801082C8();
@@ -25,7 +25,7 @@ void func_801193F8(void)
     func_80105DB4();
     func_80105D2C();
     func_80107F3C();
-    func_800FE7B0();
+    wnd_fx_7d_b();
     func_80109A28();
     row_page(0xDB);
     if (gate(2) != 0)
@@ -44,13 +44,13 @@ L119548:
     row_sel_cell_cur();
     txt_set(0x16A0);
     sep_b();
-    func_800F8058();
+    cell_pos_back();
     cell_put(0x30);
     txt_set(0x16A1);
-    func_800F8058();
+    cell_pos_back();
     cell_put(0x31);
     txt_set(0x16A2);
-    func_800F8058();
+    cell_pos_back();
     cell_put(0x32);
     if (io_go() != 0)
         goto L119668;

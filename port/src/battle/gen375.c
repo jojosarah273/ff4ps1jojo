@@ -24,15 +24,15 @@ L118d80:
         if (gate(0x80) != 0)
             goto L118E10;
         row_prep(0x20);
-        func_800F6BE0(0x100B);
+        cell_sink8_9(0x100B);
         sep_a();
         cell_peek0(cell_state(0x30));
         func_800F5520(cell_state_of());
         if (io_go() == 0)
             goto L118DF8;
-        func_800F6BE0(0x100D);
+        cell_sink8_9(0x100D);
     L118DF8:
-        func_800F87DC(0x100B);
+        cell_stamp8_9(0x100B);
         row_sync2_cur();
         row_prep_close();
     L118E10:
@@ -52,8 +52,8 @@ L118e48:
         if (gate(0x80) != 0)
             goto L118E88;
         row_prep(0x20);
-        func_800F6BE0(0x100D);
-        func_800F87DC(0x100B);
+        cell_sink8_9(0x100D);
+        cell_stamp8_9(0x100B);
         row_sync2_cur();
         row_prep_close();
     L118E88:

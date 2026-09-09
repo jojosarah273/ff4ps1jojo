@@ -13,7 +13,7 @@ void func_8014D680(void)
     io_poll(0xFF);
     if (io_just() != 0)
         goto L14D6E8;
-    func_800F6C68();
+    cell_push_c8();
     func_8014D5A0();
     return;
 L14D6E8:

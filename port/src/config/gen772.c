@@ -20,12 +20,12 @@ L120be4:
         row_prep(0x20);
         row_read2(0x1D);
         sep_a();
-        func_800F4064(0x40);
-        func_800F8274(0x1D);
+        cell_pos_fwd(0x40);
+        cell_put_hi9(0x1D);
         row_read2(0x1F);
         sep_a();
-        func_800F4064(0x80);
-        func_800F8274(0x1F);
+        cell_pos_fwd(0x80);
+        cell_put_hi9(0x1F);
         row_prep_close();
         poll_pair(0x45);
         if (poll_go(0x202) != 0)

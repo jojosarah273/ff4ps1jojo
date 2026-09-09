@@ -33,9 +33,9 @@ L15B79C:
     row_open();
     txt_cell(0x3303);
     row_sel_cell_cur();
-    func_800F6C68();
+    cell_push_c8();
     cell_put(0xB3);
-    func_800F6C68();
+    cell_push_c8();
     cell_put(0xB4);
     page(0xA6);
     txt_cell(0x2003);
@@ -52,9 +52,9 @@ L15B844:
 L15B854:
     row_close();
     txt_cell(0x3302);
-    func_800F9200();
+    cell_cursor_dec();
     row_read(0x7F);
-    func_800F78C4(cell_state(0xB5));
+    cell_tick_or(cell_state(0xB5));
     cell_draw(0x3302);
     row_close2();
     if (io_press(cell_state_of()) != 0)

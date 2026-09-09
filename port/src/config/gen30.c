@@ -97,7 +97,7 @@ L77c:
     for (;;) {
         func_800F88E4();
         sep_a();
-        func_800F4064(0x18);
+        cell_pos_fwd(0x18);
         cell_step();
         cell_step();
         poll_t(0x600);

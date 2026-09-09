@@ -9,7 +9,7 @@ void func_80122D20(void)
        0x48/0x4B/0x4D/0x4F/0x46/0x57/0x49/0x51/0x4A/0x4E/0x4C/0xC7
        stat cells through 80123B00/80120A0C/80123320/8011F360/80122F2C;
        early exit when 4120(2) holds. */
-    func_800F6D70();
+    cell_push_c8_d58();
     row_read(0x3F);
     if (sel(2) != 0)
         return;
@@ -23,8 +23,8 @@ void func_80122D20(void)
     row_prep(0x20);
     row_read2(0x4B);
     sep_a();
-    func_800F4064(0x84);
-    func_800F8274(0x4B);
+    cell_pos_fwd(0x84);
+    cell_put_hi9(0x4B);
     cell_peek0(cell_state(0x29));
     row_prep_close();
     latch(0x4D);
@@ -46,7 +46,7 @@ void func_80122D20(void)
     cell_draw(0x4E);
     cell_draw(0x8E);
     draw_pad(2);
-    func_800F66D8(0x48);
+    cell_push_c8_sel(0x48);
     func_8011F360();
     cell_draw(0x14);
     stat_sync();

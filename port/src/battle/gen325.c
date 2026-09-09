@@ -25,12 +25,12 @@ L106BA4:
     cell_poke0(cell_state(0x8C));
     cell_put(0x4B);
     open_row(0x4A);
-    func_800F76BC(cell_state(0x4B));
-    func_800F76E8();
-    func_800F7CC8(cell_state(0x4A));
-    func_800F76BC(cell_state(0x4B));
-    func_800F76E8();
-    func_800F7CC8(cell_state(0x4A));
+    cell_word_half(cell_state(0x4B));
+    cell_flags_repack();
+    cell_word_half_s(cell_state(0x4A));
+    cell_word_half(cell_state(0x4B));
+    cell_flags_repack();
+    cell_word_half_s(cell_state(0x4A));
     row_page(0x8B);
     if (gate(2) != 0)
         goto L106C44;

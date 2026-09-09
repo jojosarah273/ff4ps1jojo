@@ -15,7 +15,7 @@ void func_80129B04(void)
     cell_put(0x45);
     sep_a();
     cell_poke0(cell_state(0x45));
-    cell_poke0(func_800F3A70(0x5D));
+    cell_poke0(cell_bank_sel(0x5D));
     cell_state_of();
     cell_put(0x45);
     open_row(0x46);

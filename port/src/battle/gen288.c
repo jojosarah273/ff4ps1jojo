@@ -16,7 +16,7 @@ void func_80114938(void)
     tail(0x89);
 L114970:
     for (;;) {
-        func_800FE778();
+        wnd_fx_7d();
         row_page(0x2E);
         io_poll(0x10);
         if (io_go() != 0)
@@ -28,10 +28,10 @@ L114970:
         tail(0xC);
         row_page(0x2E);
         sep_b();
-        func_800F8058(8);
+        cell_pos_back(8);
         cell_put(0xE);
         row_page(0x2F);
-        func_800F8058();
+        cell_pos_back();
         cell_put(0xF);
         latch(0x1C);
         cell_put(0x91);
@@ -50,13 +50,13 @@ L114970:
         draw_pad(0x160);
         func_80115A34();
         page(0x89);
-        func_800F5E48();
+        cell_set50_from54();
         tail(0x89);
         poll_t(0x80);
         if (io_go() != 0)
             continue;
         page(0x2E);
-        func_800F5E48();
+        cell_set50_from54();
         tail(0x2E);
         poll_t_cur();
         if (io_just() == 0)

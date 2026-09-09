@@ -26,20 +26,20 @@ void func_8012E33C(void)
     func_800F80D0();
     row_pad();
     stat_sync();
-    func_800F81B0(0x1B9C);
+    cell_pull9_hi(0x1B9C);
     row_sync2_cur();
-    func_800F81B0(0x1B9F);
+    cell_pull9_hi(0x1B9F);
     row_sync2(0x400);
-    func_800F81B0(0x1B9D);
+    cell_pull9_hi(0x1B9D);
     goto L12E590;
 L12E540:
     row_pad();
     stat_sync();
-    func_800F81B0(0x1B9C);
+    cell_pull9_hi(0x1B9C);
     row_sync2_cur();
-    func_800F81B0(0x1B9D);
+    cell_pull9_hi(0x1B9D);
     row_sync2(0x400);
-    func_800F81B0(0x1B9F);
+    cell_pull9_hi(0x1B9F);
     goto L12E590;
 L12E590:
     row_prep_close();

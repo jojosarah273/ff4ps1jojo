@@ -7,7 +7,7 @@ void func_80131CD8(void)
 {
     /* ability tab: 0x1BC6/0x1B8B/0x16 texts, 0x43 window, 801321B4
        row; 6BE0(9)/87DC(7) latch and 6240(0x1BC9) tail. */
-    func_800F9200();
+    cell_cursor_dec();
     func_801224D0();
     txt_cell(0x1B8B);
     if (gate(2) != 0)
@@ -28,9 +28,9 @@ void func_80131CD8(void)
     func_800F5520(cell_state_of());
     if (io_go() == 0)
         goto L131DC8;
-    func_800F6BE0(9);
+    cell_sink8_9(9);
 L131DC8:
-    func_800F87DC(7);
+    cell_stamp8_9(7);
     row_prep_close();
     page_paint2(0x1BC9);
     row_close2();

@@ -165,7 +165,7 @@ L61d8:
     row_prep_close();
     latch(1);
     txt_draw(0x352B);
-    func_800F8F74(0x2893);
+    cell_clear_bank(0x2893);
     row_close();
     return;
 }

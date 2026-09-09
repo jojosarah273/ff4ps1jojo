@@ -17,7 +17,7 @@ void func_80155658(void)
     cell_draw(0x29B5);
     row_page(0xA9);
     func_800F5B2C(cell_state_of());
-    func_800F5D24(0x29CD);
+    cell_dec_bank(0x29CD);
     row_page(0x8A);
     cell_put(0xDF);
     latch(0x80);

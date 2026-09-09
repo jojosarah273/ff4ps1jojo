@@ -75,7 +75,7 @@ Lbf3c:
     for (;;) {
         func_800F6A78(0xD7);
         cell_draw(0x3937);
-        func_800F5E48();
+        cell_set50_from54();
         if (poll_go(0x8080) != 0)
             continue;
         break;
@@ -92,7 +92,7 @@ Lbf8c:
     io_poll(0xFF);
     if (io_just() != 0)
         return;
-    func_800F9200();
+    cell_cursor_dec();
     sep();
     for (;;) {
         txt_cell(0x392A);
@@ -102,7 +102,7 @@ Lbf8c:
         if (io_just() != 0)
             break;
     }
-    func_800F5D24(0x392F);
+    cell_dec_bank(0x392F);
     row_close2();
     txt_draw(0x1822);
     cell_put(0xD0);

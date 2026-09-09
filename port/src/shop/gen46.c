@@ -60,7 +60,7 @@ L6358C:
 L635C4:
     latch(0x19);
 L635CC:
-    func_800F9200();
+    cell_cursor_dec();
     tail(0xE5);
     wnd_open_cur();
     tail(0x80);
@@ -78,8 +78,8 @@ L635CC:
     sep();
 L63684:
     for (;;) {
-        func_800F6C68();
-        func_800F8960(0x28A2);
+        cell_push_c8();
+        cell_pull_c8(0x28A2);
         step2();
         cell_step();
         poll_t(3);

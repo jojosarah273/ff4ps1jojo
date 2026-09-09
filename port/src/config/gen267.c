@@ -12,22 +12,22 @@ void func_801317F0(void)
     stat_sync();
     txt_set(0x1B91);
     row_prep(0x20);
-    func_800F81B0(0x1B91);
+    cell_pull9_hi(0x1B91);
     row_prep_close();
     row_page(0xE8);
     func_80124EAC();
     txt_cell(0x18);
-    func_800F61E8();
+    cell_set50_from40();
     cell_put(0x54);
     open_row(0x55);
     latch_cur();
     stat_sync();
     txt_cell(0x18);
-    func_800F7864();
+    cell_tick_half();
     row_prep(0x20);
     sep_a();
     cell_peek0(cell_state(0x1B91));
-    func_800F8274(0x57);
+    cell_put_hi9(0x57);
 L1318d0:
     for (;;) {
         sep_a();
@@ -37,7 +37,7 @@ L1318d0:
             continue;
         break;
     }
-    func_800F8274(0x57);
+    cell_put_hi9(0x57);
     row_prep_close();
     row_prep_close();
     func_800F7248(0x41);
@@ -65,13 +65,13 @@ L1319CC:
     row_prep(0x20);
     row_read2(0x57);
 L1319DC:
-    func_800F8274(0x45);
+    cell_put_hi9(0x45);
     row_prep_close();
     latch_cur();
 L1319f4:
     for (;;) {
         func_80131A2C();
-        func_800F61E8();
+        cell_set50_from40();
         io_poll(5);
         if (io_just() == 0)
             continue;

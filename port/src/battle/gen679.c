@@ -12,11 +12,11 @@ void func_8011F030(void)
     sep_a();
     cell_peek0(cell_state(0x2B));
     row_read2(0x2D);
-    func_800F8274(0x31);
+    cell_put_hi9(0x31);
     row_prep_close();
     latch(0xF7);
     func_8011F118();
-    func_800F9200();
+    cell_cursor_dec();
     row_page(0x33);
     if (gate(2) != 0)
         goto L11F0D0;

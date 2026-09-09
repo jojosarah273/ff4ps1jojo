@@ -15,15 +15,15 @@ void func_801706C0(void)
     if (io_just() != 0)
         goto L17079C;
     func_80170884();
-    func_800F8F74(0x420B);
+    cell_clear_bank(0x420B);
     txt_set(0xFD8);
     row_sel_cell_cur();
-    func_800F6C68();
+    cell_push_c8();
     txt_draw(0x4302);
-    func_800F6C68();
+    cell_push_c8();
     txt_draw(0x4303);
     txt_set(0xFD8);
-    func_800F6C68();
+    cell_push_c8();
     txt_draw(0x4304);
     func_8017091C();
     return;
@@ -40,7 +40,7 @@ L17079C:
     cell_put(0x3E);
     latch(0x80);
     txt_draw(0x2115);
-    func_800F8F74(0x420B);
+    cell_clear_bank(0x420B);
     latch(1);
     txt_draw(0x4300);
     latch(0x18);

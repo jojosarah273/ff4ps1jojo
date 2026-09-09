@@ -22,7 +22,7 @@ void func_80119740(void)
     row_sel2(cell_state(0x8A));
 L1197d8:
     for (;;) {
-        func_800FE778();
+        wnd_fx_7d();
         txt_set(0x1700);
         io_poll(3);
         if (io_just() != 0)
@@ -34,7 +34,7 @@ L1197d8:
         func_8010B010();
     L119820:
         page(0x89);
-        func_800F5E48();
+        cell_set50_from54();
         tail(0x89);
         if (poll_go(0x202) != 0)
             continue;

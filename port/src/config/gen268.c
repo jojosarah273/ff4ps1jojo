@@ -8,8 +8,8 @@ void func_8012AE00(void)
     /* save/load status screen: 0x1B1F cancel gate, 0x1BC9 open dialog
        (8013441C), 0x1BC8 arrows; 0x1B12 row reads; 0x34 window with
        0xDB cell writes. */
-    func_800F9200();
-    func_800F9200();
+    cell_cursor_dec();
+    cell_cursor_dec();
     txt_set(0x1B1F);
     if (gate(2) != 0)
         goto L12AE58;
@@ -27,7 +27,7 @@ L12AE58:
     if (io_just() == 0)
         goto L12AEE0;
 L12AE90:
-    func_800F9200();
+    cell_cursor_dec();
     txt_set(0x1BC9);
     if (gate(2) != 0)
         goto L12AED8;
@@ -66,7 +66,7 @@ L12AF70:
         goto L12AFE8;
 L12AFB8:
     latch(4);
-    func_800F78C4(cell_state(0x34));
+    cell_tick_or(cell_state(0x34));
 L12AFD0:
     cell_put(0xDB);
     row_close2();
@@ -79,7 +79,7 @@ L12AFE8:
     if (gate(2) != 0)
         goto L12AFB8;
     latch(8);
-    func_800F78C4(cell_state(0x34));
+    cell_tick_or(cell_state(0x34));
     cell_put(0xDB);
     row_close2();
     return;

@@ -14,7 +14,7 @@ L15cc90:
         row_arm2_cur();
         if (func_800F4FAC(0x101) != 0)
             goto L15CD08;
-        func_800F6D70(0x2003);
+        cell_push_c8_d58(0x2003);
         row_read(0xC0);
         if (sel(2) != 0)
             goto L15CD08;
@@ -25,7 +25,7 @@ L15cc90:
     L15CD08:
         row_prep(0x20);
         sep_a();
-        func_800F4064(0x80);
+        cell_pos_fwd(0x80);
         sep();
         row_prep_close();
         key_page(0xAA);

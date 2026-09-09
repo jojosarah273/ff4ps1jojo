@@ -14,7 +14,7 @@ void func_801387D8(void)
     func_801224D0();
     cell_put(0x4E);
     row_prep(0x20);
-    func_800F8274(0x4F);
+    cell_put_hi9(0x4F);
     row_read2(0x41);
     draw_pad(0x7FA);
     sep_a();

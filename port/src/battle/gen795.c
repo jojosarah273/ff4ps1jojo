@@ -15,10 +15,10 @@ L141ab8:
         func_80140558();
         func_80140310();
         row_prep(0x20);
-        func_800F658C();
+        cell_push9();
         sep_b();
         func_800F80D0(8);
-        func_800F81B0();
+        cell_pull9_hi();
         sep();
         row_prep_close();
         cell_step();

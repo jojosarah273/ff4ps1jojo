@@ -8,7 +8,7 @@ void func_80166CA8(void)
     /* shop rows: 0x1D window + 4248(0x30/0x20) gates route the
        0xB8 window fills. */
     page_paint_cur();
-    func_800F6D70();
+    cell_push_c8_d58();
     row_read(0x30);
     if (sel(2) != 0)
         goto L166D98;
@@ -18,7 +18,7 @@ void func_80166CA8(void)
     txt_cell_cur();
     row_read(7);
     row_open();
-    func_800F6C68();
+    cell_push_c8();
     row_close();
     cell_draw_cur();
 L166D88:

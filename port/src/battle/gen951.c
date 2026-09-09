@@ -6,8 +6,8 @@
 extern void func_800FC548(void);
 extern void func_80176060(void);
 extern void func_800F5448(void);
-extern void func_800F654C(u32 v0);
-extern void func_800F8188(u32 v0);
+
+
 void func_8010E338(void) {
     func_800FC548();
     func_80176060();

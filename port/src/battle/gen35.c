@@ -9,16 +9,16 @@ void func_8014FEC8(void)
     func_800F8E50(0xF469);
     draw_pad(0x1000);
     func_800F8E50(0xF46B);
-    func_800F9200();
+    cell_cursor_dec();
     io_poll(0x15);
     if (io_go() == 0)
         goto Lffc0;
     sep_b();
-    func_800F8058(0x15);
+    cell_pos_back(0x15);
     row_open();
     row_prep(0x20);
     row_arm_s_cur();
-    func_800F81B0(0xF469);
+    cell_pull9_hi(0xF469);
     sep();
     row_prep_close();
     row_close();
@@ -30,25 +30,25 @@ Lffc0:
     row_close2();
     row_prep(0x20);
     row_sync2(0xDBE6);
-    func_800F8274(8);
+    cell_put_hi9(8);
     row_sync2(0xF000);
-    func_800F8274(4);
+    cell_put_hi9(4);
     func_800F7534(0xF469);
 L004c:
     for (;;) {
         row_sync();
-        func_800F6CF4();
-        func_800F922C();
-        func_800F922C();
-        func_800F4264(0x3FFF);
+        cell_push9_bank();
+        cell_cursor_ret2();
+        cell_cursor_ret2();
+        cell_pos_mask(0x3FFF);
         row_arm_s_cur();
         func_800F68A0(4);
-        func_800F8274();
-        func_800F9410();
-        func_800F4264(0x4000);
-        func_800F8274(0xA);
-        func_800F9410();
-        func_800F4264(0x8000);
+        cell_put_hi9();
+        cell_cursor_adv2();
+        cell_pos_mask(0x4000);
+        cell_put_hi9(0xA);
+        cell_cursor_adv2();
+        cell_pos_mask(0x8000);
         if (func_800F41E8(0x202) != 0)
             goto L01a0;
         draw_pad_cur();
@@ -65,7 +65,7 @@ L004c:
         for (;;) {
             func_800F6EDC();
             func_80150364();
-            func_800F4264(0xFF);
+            cell_pos_mask(0xFF);
             func_800F8378(8);
             func_800F62F0(0x20);
             poll_t_cur();
@@ -89,7 +89,7 @@ L004c:
         for (;;) {
             func_800F6EDC();
             func_80150364();
-            func_800F4264(0xFF);
+            cell_pos_mask(0xFF);
             func_800F8378(8);
             func_800F62F0(0xE);
             poll_t_cur();
@@ -99,8 +99,8 @@ L004c:
     L0260:
         row_read2(8);
         sep_a();
-        func_800F4064(0x20);
-        func_800F8274(8);
+        cell_pos_fwd(0x20);
+        cell_put_hi9(8);
         row_done();
         poll_pair_cur();
         if (poll_go(0x202) != 0)

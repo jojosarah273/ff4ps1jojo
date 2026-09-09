@@ -9,7 +9,7 @@ void func_80173654(void)
        loop L173730 on 5A90(0x20). */
     row_open2();
     latch(0x15);
-    func_800F9200();
+    cell_cursor_dec();
     row_pad();
     row_page(0xC8);
     if (gate(0x202) != 0)
@@ -20,7 +20,7 @@ void func_80173654(void)
         goto L173768;
     row_page(0xB9);
     sep_b();
-    func_800F8058(0x10);
+    cell_pos_back(0x10);
     io_poll(0x10);
     if (io_just() == 0)
         goto L1736EC;
@@ -31,7 +31,7 @@ L1736EC:
 L173730:
     for (;;) {
         txt_cell_cur();
-        func_800F8960(0x4C0);
+        cell_pull_c8(0x4C0);
         cell_step();
         step2();
         poll_t(0x20);

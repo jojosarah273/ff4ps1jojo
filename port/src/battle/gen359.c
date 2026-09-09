@@ -14,9 +14,9 @@ void func_80147888(void)
     page_cur();
     row_page(0x47);
     sep();
-    func_800F8960();
+    cell_pull_c8();
     row_page(0x47);
-    func_800F6D70();
+    cell_push_c8_d58();
     row_read(0xC0);
     if (sel(0x202) != 0)
         goto L147A80;
@@ -25,17 +25,17 @@ void func_80147888(void)
         goto L147994;
     row_open();
     row_page(0x47);
-    func_800F6C68();
+    cell_push_c8();
     row_close();
     goto L1479D0;
 L147994:
     row_open();
     row_page(0x47);
-    func_800F6C68();
+    cell_push_c8();
     row_close();
 L1479D0:
     cell_draw_cur();
-    func_800F6D70();
+    cell_push_c8_d58();
     row_read(0x30);
     if (sel(2) != 0)
         goto L147A58;

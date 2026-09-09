@@ -45,9 +45,9 @@ L1471dc:
         row_prep(0x20);
         row_read2(0x2A);
         sep_a();
-        func_800F4064(0x800);
+        cell_pos_fwd(0x800);
         row_sync2_cur();
-        func_800F8274();
+        cell_put_hi9();
         cell_fmt2(0xA);
         sep();
         row_prep_close();
@@ -57,8 +57,8 @@ L1471dc:
         row_prep(0x20);
         row_read2(0xA);
         sep_a();
-        func_800F4064(0x400);
-        func_800F8274(0xA);
+        cell_pos_fwd(0x400);
+        cell_put_hi9(0xA);
         sep();
         row_prep_close();
         row_close();

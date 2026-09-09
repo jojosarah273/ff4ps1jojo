@@ -15,9 +15,9 @@ void func_8015EA00(void)
     func_800F5520(cell_state(0x270D));
     if (io_go() == 0)
         goto L15EA60;
-    func_800F658C(0x270D);
+    cell_push9(0x270D);
 L15EA60:
-    func_800F81B0(0x270B);
+    cell_pull9_hi(0x270B);
     sep();
     row_prep_close();
     row_page(0xA5);

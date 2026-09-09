@@ -50,7 +50,7 @@ L13c09c:
         if (sel(2) != 0)
             goto L13C1FC;
         txt_set(0x1BB4);
-        func_800F61E8();
+        cell_set50_from40();
         row_read(1);
         txt_draw(0x1BB4);
         if (sel(2) != 0)
@@ -61,7 +61,7 @@ L13c09c:
         if (sel(2) != 0)
             goto L13C24C;
         txt_set(0x1BB4);
-        func_800F61E8();
+        cell_set50_from40();
         row_read(1);
         txt_draw(0x1BB4);
         if (sel(0x202) != 0)
@@ -85,7 +85,7 @@ L13c09c:
         goto L13C2B4;
     L13C2B4:
         txt_set(0x1BB3);
-        func_800F61E8();
+        cell_set50_from40();
         io_poll(4);
         if (io_just() != 0)
             continue;

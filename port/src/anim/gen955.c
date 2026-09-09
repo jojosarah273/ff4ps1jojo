@@ -19,8 +19,8 @@ void func_80174F64(void)
     }
     row_read(0xE);
     *D_8019ED54 = *D_8019ED44;
-    func_800F6C68(0x15C3DA);
+    cell_push_c8(0x15C3DA);
     txt_draw(0xEC7);
-    func_800F6C68(0x15C3DB);
+    cell_push_c8(0x15C3DB);
     txt_draw(0xEC8);
 }

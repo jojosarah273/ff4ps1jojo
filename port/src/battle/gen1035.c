@@ -12,7 +12,7 @@ void func_801094D8(void)
     if (gate(0x202) != 0)
         goto L109600;
     /* v0/v1 gates -> L109560 / L1096E0 */
-    func_800F6C68();
+    cell_push_c8();
     return;
     /* L109560: gates -> L1095B8 / L1095EC / L1096C8 */
 L109600:
@@ -20,10 +20,10 @@ L109600:
     if (io_just() == 0)
         goto L10967C;
     /* v0 gate -> L10966C */
-    func_800F6C68();
+    cell_push_c8();
     return;
 L10967C:
     /* v0 gate -> L1096D8 */
-    func_800F6C68();
+    cell_push_c8();
     return;
 }

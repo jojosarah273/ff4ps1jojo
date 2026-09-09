@@ -8,8 +8,8 @@ void func_80142064(void)
     page_paint2(62247);
     wnd_open(32);
     func_8014202C();
-    func_800F8F74(62246);
-    func_800F8F74(62247);
+    cell_clear_bank(62246);
+    cell_clear_bank(62247);
     wnd_open(8);
     func_8014202C();
 }

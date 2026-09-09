@@ -27,7 +27,7 @@ La198:
         if (sel(2) != 0)
             goto La258;
         txt_set(0x1B22);
-        func_800F61E8();
+        cell_set50_from40();
         row_read(1);
         txt_draw(0x1B22);
         if (sel(0x202) != 0)
@@ -38,7 +38,7 @@ La198:
         if (sel(2) != 0)
             goto La2a8;
         txt_set(0x1B22);
-        func_800F61E8();
+        cell_set50_from40();
         row_read(1);
         txt_draw(0x1B22);
         if (sel(2) != 0)
@@ -63,7 +63,7 @@ La198:
             row_read2(0x93);
             sep_b();
             func_800F80D0(2);
-            func_800F8274(0x93);
+            cell_put_hi9(0x93);
             row_prep_close();
             txt_set(0x1B19);
             if (gate(2) != 0)
@@ -106,21 +106,21 @@ La198:
         io_poll(0xE);
         if (io_just() != 0)
             goto La558;
-        func_800F61E8();
+        cell_set50_from40();
         txt_draw(0x1B1A);
         row_prep(0x20);
         draw_pad(8);
         for (;;) {
             row_read2(0x93);
             sep_a();
-            func_800F4064(2);
-            func_800F8274(0x93);
+            cell_pos_fwd(2);
+            cell_put_hi9(0x93);
             row_prep_close();
             txt_set(0x1B19);
             if (gate(2) != 0)
                 goto La4c8;
-            func_800F5D24(0x311);
-            func_800F5D24(0x311);
+            cell_dec_bank(0x311);
+            cell_dec_bank(0x311);
         La4c8:
             row_sync();
             func_8012C980();
@@ -141,7 +141,7 @@ La198:
             goto La558;
         goto La208;
     La548:
-        func_800F61E8();
+        cell_set50_from40();
         txt_draw(0x1B23);
     La558:
         row_page_cur();
@@ -157,7 +157,7 @@ La198:
         func_8012B190();
         func_80120FBC();
         func_8012AAC0();
-        func_800F8F74(0x1B19);
+        cell_clear_bank(0x1B19);
         func_8012B0B0();
         func_80126458();
         func_8011F6A4();
@@ -175,7 +175,7 @@ La198:
         open_row(0x86);
         return;
     La648:
-        func_800F8F74(0x1B19);
+        cell_clear_bank(0x1B19);
         func_8012B0B0();
     La658:
         func_8012A678();

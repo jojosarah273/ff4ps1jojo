@@ -10,7 +10,7 @@ void func_8010DA88(void)
     row_sel_cell_cur();
     row_sel_cell2_cur();
     row_sel2(cell_state(0x3E));
-    func_800F7A68();
+    cell_flags_repack2();
     cell_put(0x3D);
     page(0x3D);
     /* jr $a0 : the ~73-entry master battle-command jump table (invoked by

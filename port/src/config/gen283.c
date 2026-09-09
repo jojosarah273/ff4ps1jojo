@@ -15,12 +15,12 @@ L127178:
         io_poll(5);
         if (io_go() == 0)
             goto L1271A0;
-        func_800F8F74(0x1A3C);
+        cell_clear_bank(0x1A3C);
     L1271A0:
         func_8011F684();
         func_8011EF0C();
         latch(0x1F);
-        func_800F81E8(0x212C);
+        cell_pull_c8_lo(0x212C);
         page_paint2(0x16A7);
         func_8011F884();
         row_page_cur();
@@ -42,7 +42,7 @@ L127178:
         if (sel(2) != 0)
             goto L127324;
         latch(0xF);
-        func_800F81E8(0x212C);
+        cell_pull_c8_lo(0x212C);
     L127294:
         for (;;) {
             txt_set(0x1B47);
@@ -74,11 +74,11 @@ L127178:
         if (sel(2) != 0)
             goto L1273C4;
         latch(0xF);
-        func_800F81E8(0x212C);
+        cell_pull_c8_lo(0x212C);
     L127354:
         for (;;) {
             txt_set(0x1A3C);
-            func_800F61E8();
+            cell_set50_from40();
             io_poll(5);
             if (io_just() == 0)
                 goto L127384;

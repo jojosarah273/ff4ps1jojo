@@ -11,15 +11,15 @@ void func_801130C0(void)
     io_poll(0x60);
     if (io_just() == 0)
         return;
-    func_800F8F74(0x2115);
+    cell_clear_bank(0x2115);
     latch_cur();
 L113140:
     for (;;) {
         /* v1/v0 + v0 gates -> L1131D4 / L1131EC / L113224 / L113258 */
-        func_800F6C68();
-        func_800F6C68();
-        func_800F6C68();
-        func_800F6C68();
+        cell_push_c8();
+        cell_push_c8();
+        cell_push_c8();
+        cell_push_c8();
         poll_t(0x10);
         if (io_just() == 0)
             continue;

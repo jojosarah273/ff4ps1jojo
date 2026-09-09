@@ -6,11 +6,11 @@
 void func_80140814(void)
 {
     txt_draw(61320);
-    func_800F8F74(62515);
-    func_800F8F74(62517);
-    func_800F8F74(62516);
+    cell_clear_bank(62515);
+    cell_clear_bank(62517);
+    cell_clear_bank(62516);
     latch(2);
     txt_draw(61319);
-    func_800F8F74(61321);
-    func_800F8F74(61322);
+    cell_clear_bank(61321);
+    cell_clear_bank(61322);
 }

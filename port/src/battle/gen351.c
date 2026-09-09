@@ -8,8 +8,8 @@ void func_801187C0(void)
     /* battle rows: 0x6/0x83/0x82/0x79/0x81 windows, 0x2130/0x212D
        texts, 8017EA90 icon; loop L118860 polls 4120(0x202) and
        54D4(3C3C(0x81)). */
-    func_800F9200();
-    func_800F9200();
+    cell_cursor_dec();
+    cell_cursor_dec();
     row_read(0xE0);
     cell_put(6);
     row_close2();
@@ -30,13 +30,13 @@ L118848:
 L118860:
     for (;;) {
         func_800FE7D8();
-        func_800F8F74(0x2130);
-        func_800F8F74(0x212D);
+        cell_clear_bank(0x2130);
+        cell_clear_bank(0x212D);
         latch(0x83);
         txt_draw(0x2131);
         row_page(0x83);
         row_read(0xE0);
-        func_800F78C4(cell_state(0x81));
+        cell_tick_or(cell_state(0x81));
         func_8017EA90();
         key_page(0x79);
         row_page(0x79);

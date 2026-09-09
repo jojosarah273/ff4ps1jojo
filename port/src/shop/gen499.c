@@ -33,15 +33,15 @@ L16d660:
 L16D690:
     txt_set(0x7D1D);
     row_prep(0x20);
-    func_800F922C();
+    cell_cursor_ret2();
     row_arm_s_cur();
     sep_a();
     cell_peek0(cell_state(0x39));
-    func_800F8274(0x39);
-    func_800F9410();
+    cell_put_hi9(0x39);
+    cell_cursor_adv2();
     sep_a();
     cell_peek0(cell_state(0x39));
-    func_800F8274(0x3C);
+    cell_put_hi9(0x3C);
     sep();
     row_prep_close();
     return;

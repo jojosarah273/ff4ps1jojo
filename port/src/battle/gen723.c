@@ -13,7 +13,7 @@ void func_8014AC3C(void)
     latch(0xF);
     cell_put(4);
     func_8013E5D0();
-    func_800F8F74();
+    cell_clear_bank();
     latch(1);
     func_8014B9B4();
     txt_set(0x34C4);
@@ -23,7 +23,7 @@ void func_8014AC3C(void)
         goto L14ACBC;
     func_8013E2F8();
 L14ACBC:
-    func_800F8F74();
+    cell_clear_bank();
     txt_set(0x34C4);
     txt_draw_cur();
     func_8014BA34();

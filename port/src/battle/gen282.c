@@ -15,10 +15,10 @@ void func_80141530(void)
         goto L1415C4;
     txt_set(0x38E9);
     txt_set(0x38EA);
-    func_800F6C68();
-    func_800F8960();
-    func_800F8960();
-    func_800F8F74(0x38E8);
+    cell_push_c8();
+    cell_pull_c8();
+    cell_pull_c8();
+    cell_clear_bank(0x38E8);
 L1415C4:
     txt_set(0x388D);
     if (gate(2) != 0)
@@ -28,14 +28,14 @@ L1415C4:
     latch(1);
     txt_draw(0x1E00);
     func_80169128();
-    func_800F8F74(0x388D);
+    cell_clear_bank(0x388D);
 L14160C:
     txt_set_cur();
     if (gate(2) != 0)
         goto L14163C;
     txt_draw(0x1E00);
     func_80169128();
-    func_800F8F74();
+    cell_clear_bank();
 L14163C:
     txt_set_cur();
     if (gate(2) != 0)
@@ -51,24 +51,24 @@ L14163C:
     txt_draw_cur();
 L1416B4:
     func_80169128();
-    func_800F8F74();
+    cell_clear_bank();
 L1416C4:
-    func_800F8F74(0x352D);
+    cell_clear_bank(0x352D);
     txt_set_cur();
-    func_800F78C4(cell_state(0x388B));
+    cell_tick_or(cell_state(0x388B));
     if (func_800F7918(0x202) != 0)
         goto L141738;
     func_800F65C8(0x4218);
     cell_peek_cur();
-    func_800F78C4();
+    cell_tick_or();
     row_read(0x30);
     io_poll(0x30);
     if (io_just() == 0)
         goto L141738;
     page_paint2(0x352D);
 L141738:
-    func_800F8F74(0x1811);
-    func_800F8F74(0x1812);
+    cell_clear_bank(0x1811);
+    cell_clear_bank(0x1812);
     key_page(0x97);
     return;
 }

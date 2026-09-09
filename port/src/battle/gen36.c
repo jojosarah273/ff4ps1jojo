@@ -27,11 +27,11 @@ Lfabc:
     cell_put(0x13);
     txt_set(0xF24A);
     sep_b();
-    func_800F7F48(cell_state(0x12));
+    cell_tick_sub(cell_state(0x12));
     cell_put(0x12);
     txt_set(0xF24B);
     sep_b();
-    func_800F7F48(cell_state(0x13));
+    cell_tick_sub(cell_state(0x13));
     cell_put(0x13);
     txt_set(0xF248);
     tail(0x1C);
@@ -42,9 +42,9 @@ Lfabc:
     row_arm_s_cur();
     sep();
     row_prep_close();
-    func_800F6C68();
+    cell_push_c8();
     cell_put(0x1C);
-    func_800F6C68();
+    cell_push_c8();
     cell_put(0x1D);
     latch(0xF);
     cell_put(0x1E);
@@ -108,14 +108,14 @@ Lfda0:
     draw_pad_cur();
 Lfdb0:
     for (;;) {
-        func_800F6D70(0xEBE6);
+        cell_push_c8_d58(0xEBE6);
         sep_a();
         cell_poke0(cell_state(0xF3B0));
-        func_800F8960(0xEBE6);
-        func_800F6D70(0xEBE7);
+        cell_pull_c8(0xEBE6);
+        cell_push_c8_d58(0xEBE7);
         sep_a();
         cell_poke0(cell_state(0xF3B1));
-        func_800F8960(0xEBE7);
+        cell_pull_c8(0xEBE7);
         poll_t(0x24);
         if (io_just() != 0)
             break;

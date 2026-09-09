@@ -11,10 +11,10 @@ void func_801757A4(void)
     wnd_open_cur();
 L1757bc:
     for (;;) {
-        func_800F6BE0(0xCDB);
-        func_800F4264();
+        cell_sink8_9(0xCDB);
+        cell_pos_mask();
         row_sel2_cur();
-        func_800F87DC(0xBD5);
+        cell_stamp8_9(0xBD5);
         cell_step();
         cell_step();
         poll_t(0x100);

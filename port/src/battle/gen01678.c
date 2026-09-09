@@ -5,7 +5,7 @@
 #include "ff4_window.h"
 void func_8014A4DC(void)
 {
-    func_800F8F74();
+    cell_clear_bank();
     /* jr $a0 : twin of 8014A154 (same 46-entry battle item/action
        master table; entries jump to L8014A800 -> return). Handlers in
        index order:

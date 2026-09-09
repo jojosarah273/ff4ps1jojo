@@ -20,10 +20,10 @@ L174d04:
             row_read2(0x30);
             sep_b();
             func_800F7FCC(cell_peek_cur());
-            func_800F8274(0x30);
+            cell_put_hi9(0x30);
             row_read2(0x32);
             func_800F7FCC(cell_peek_cur());
-            func_800F8274(0x32);
+            cell_put_hi9(0x32);
             if (io_go() != 0)
                 goto L174DC4;
             step2();
@@ -32,14 +32,14 @@ L174d04:
         row_read2(0x30);
         sep_a();
         cell_peek0(cell_peek_cur());
-        func_800F8274(0x30);
+        cell_put_hi9(0x30);
         row_read2(0x32);
         cell_peek0(cell_peek_cur());
-        func_800F8274(0x32);
+        cell_put_hi9(0x32);
         row_sync2_cur();
         row_prep_close();
         row_open();
-        func_800F7864();
+        cell_tick_half();
         func_800F8674(0x34);
         row_close();
         cell_step();

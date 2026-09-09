@@ -9,7 +9,7 @@ Lf3f8:
     txt_set(0x1B87);
     if (gate(0x202) != 0)
         goto L470;
-    func_800F8F74(0x1B93);
+    cell_clear_bank(0x1B93);
     txt_set(0x1B81);
     row_sel_cell_cur();
     row_sel_cell2_cur();
@@ -57,7 +57,7 @@ list8_loop:
             continue;
         break;
     }
-    func_800F9200();
+    cell_cursor_dec();
     row_page(0x43);
     txt_draw(0x1B81);
     row_close2();
@@ -71,7 +71,7 @@ L5a0:
     cell_put(0x43);
     for (;;) {
         row_page(0x43);
-        func_800F61E8();
+        cell_set50_from40();
         io_poll(3);
         if (io_just() == 0)
             goto L600;
@@ -83,7 +83,7 @@ L5a0:
             continue;
         break;
     }
-    func_800F9200();
+    cell_cursor_dec();
     row_page(0x43);
     txt_draw(0x1B81);
     row_close2();
@@ -116,7 +116,7 @@ L6e8:
     if (sel(2) != 0)
         goto L740;
     txt_set(0x1B83);
-    func_800F61E8();
+    cell_set50_from40();
     io_poll(8);
     if (io_just() == 0)
         goto L738;
@@ -141,7 +141,7 @@ L790:
     if (sel(2) != 0)
         goto L7e8;
     txt_set(0x1B84);
-    func_800F61E8();
+    cell_set50_from40();
     io_poll(3);
     if (io_just() == 0)
         goto L7e0;
@@ -163,13 +163,13 @@ L7e8:
     row_prep(0x20);
     row_read2(0x45);
     sep_a();
-    func_800F4064(0x404);
-    func_800F8274(0x45);
+    cell_pos_fwd(0x404);
+    cell_put_hi9(0x45);
     row_prep_close();
     func_8011F6AC();
     goto L8e0;
 L880:
-    func_800F8F74(0x1B88);
+    cell_clear_bank(0x1B88);
     if ((func_80130058() & 0xFF) != 1)
         goto L8e0;
     return;
@@ -178,8 +178,8 @@ L8a8:
     row_read(0x80);
     if (sel(2) != 0)
         goto L8e0;
-    func_800F8F74(0x1B87);
-    func_800F8F74(0x1B88);
+    cell_clear_bank(0x1B87);
+    cell_clear_bank(0x1B88);
     func_80131294();
 L8e0:
     row_page_cur();
@@ -190,7 +190,7 @@ L8e0:
     cell_put(0x43);
     for (;;) {
         row_page(0x43);
-        func_800F61E8();
+        cell_set50_from40();
         io_poll(3);
         if (io_just() == 0)
             goto L940;
@@ -202,7 +202,7 @@ L8e0:
             continue;
         break;
     }
-    func_800F9200();
+    cell_cursor_dec();
     row_page(0x43);
     txt_draw(0x1B81);
     row_close2();

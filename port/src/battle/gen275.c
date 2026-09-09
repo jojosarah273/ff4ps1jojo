@@ -12,7 +12,7 @@ void func_801172DC(void)
     if (io_go() != 0)
         goto L117394;
     sep_b();
-    func_800F8058(0xC0);
+    cell_pos_back(0xC0);
     row_sel_cell_cur();
     cell_put(4);
     cell_put(5);
@@ -24,7 +24,7 @@ L117394:
     if (io_go() != 0)
         goto L1173DC;
     sep_b();
-    func_800F8058(0xC4);
+    cell_pos_back(0xC4);
     txt_draw(0x1705);
     goto L117544;
 L1173DC:

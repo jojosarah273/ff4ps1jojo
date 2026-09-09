@@ -7,7 +7,7 @@ void func_80172BA8(void)
 {
     row_open2();
     latch(0x15);
-    func_800F9200();
+    cell_cursor_dec();
     row_pad();
     txt_set(0x1704);
     io_poll(4);
@@ -52,7 +52,7 @@ Lcf0:
     cell_put(0xC);
     latch(0x70);
     sep_b();
-    func_800F7F48(cell_state(0xB7));
+    cell_tick_sub(cell_state(0xB7));
     cell_put(0xE);
     open_row(0xD);
     open_row(0xF);
@@ -81,7 +81,7 @@ Le20:
         txt_cell(0xBFB4);
         sep_a();
         cell_poke0(cell_state(0xC));
-        func_800F8960(0x46C);
+        cell_pull_c8(0x46C);
         row_page(0xD);
         row_open_w0();
         row_read(1);
@@ -92,15 +92,15 @@ Le20:
         txt_cell(0xBFB5);
         sep_a();
         cell_poke0(cell_state(0xE));
-        func_800F8960(0x46D);
+        cell_pull_c8(0x46D);
         txt_cell(0xBFB6);
         sep_a();
         row_open_w(0x78);
-        func_800F8960(0x46E);
+        cell_pull_c8(0x46E);
         txt_cell(0xBFB7);
         sep_a();
         row_open_w(0x18);
-        func_800F8960(0x46F);
+        cell_pull_c8(0x46F);
         cell_step();
         cell_step();
         cell_step();

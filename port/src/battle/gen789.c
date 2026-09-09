@@ -20,7 +20,7 @@ L14D004:
     sep();
 L14d038:
     for (;;) {
-        func_800F8960();
+        cell_pull_c8();
         step2();
         poll_t(0x10);
         if (io_just() == 0)

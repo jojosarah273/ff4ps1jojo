@@ -15,12 +15,12 @@ L1154a8:
         row_prep(0x20);
         sep_a();
         cell_peek0(cell_state(0xF3));
-        func_800F8274(0xC);
+        cell_put_hi9(0xC);
         sep_a();
         cell_peek0(cell_state(0xF5));
-        func_800F8274(0xE);
+        cell_put_hi9(0xE);
         row_read2(0x79);
-        func_800F4264(0xFF);
+        cell_pos_mask(0xFF);
         row_sync2_cur();
         row_prep_close();
         func_8011581C();

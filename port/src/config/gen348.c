@@ -29,7 +29,7 @@ L12A6F8:
         goto L12A850;
     txt_set(0x1B25);
     sep_b();
-    func_800F7F48(cell_state(0x1B1A));
+    cell_tick_sub(cell_state(0x1B1A));
     io_poll(0xFC);
     if (io_go() != 0)
         goto L12A7B0;

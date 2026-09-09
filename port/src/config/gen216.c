@@ -46,13 +46,13 @@ Lacac:
         cell_put(0xA8);
         sep();
         for (;;) {
-            func_800F6C68();
+            cell_push_c8();
             io_poll(0xFF);
             if (io_just() != 0)
                 return;
             if (io_press(cell_state(0x1800)) == 0)
                 goto Lae40;
-            func_800F6C68();
+            cell_push_c8();
             if (io_press(cell_state(0x1801)) == 0)
                 goto Lae40;
             row_page(0xA8);
@@ -83,7 +83,7 @@ Lacac:
         txt_set(0x38F3);
         if (gate(0x202) != 0)
             goto Laf00;
-        func_800F5D24(0x38D6);
+        cell_dec_bank(0x38D6);
         return;
     Laf00:
         txt_set(0x38E5);
@@ -128,7 +128,7 @@ Lacac:
         break;
     }
 Lb020:
-    func_800F8F74(0x352D);
+    cell_clear_bank(0x352D);
     func_80153264();
     latch(0xFF);
     txt_draw(0x33C4);

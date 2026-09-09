@@ -15,12 +15,12 @@ L115c20:
         txt_set(0xACE);
         if (gate(0x202) != 0)
             goto L115C50;
-        func_800F6C68();
-        func_800F8960(0xDDB);
+        cell_push_c8();
+        cell_pull_c8(0xDDB);
         goto L115C60;
     L115C50:
-        func_800F6C68();
-        func_800F8960(0xDFB);
+        cell_push_c8();
+        cell_pull_c8(0xDFB);
     L115C60:
         step2();
         cell_step();

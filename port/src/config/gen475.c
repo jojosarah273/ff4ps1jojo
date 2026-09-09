@@ -10,11 +10,11 @@ void func_801330F8(void)
     row_open2();
     row_open3();
     latch(0x1B);
-    func_800F9200();
+    cell_cursor_dec();
     row_pad();
     wnd_open(0x2100);
     row_open();
-    func_800F94B8();
+    cell_cursor_read();
     latch(0x80);
     cell_put(0x15);
     latch(0x10);
@@ -24,9 +24,9 @@ L133168:
         wnd_open(8);
     L133170:
         for (;;) {
-            func_800F6D70();
-            func_800F6D70(1);
-            func_800F5E48();
+            cell_push_c8_d58();
+            cell_push_c8_d58(1);
+            cell_set50_from54();
             if (poll_go(0x202) != 0)
                 continue;
             break;
@@ -34,20 +34,20 @@ L133168:
         wnd_open(8);
     L1331EC:
         for (;;) {
-            func_800F6D70();
+            cell_push_c8_d58();
             step2();
-            func_800F5E48();
+            cell_set50_from54();
             if (poll_go(0x202) != 0)
                 continue;
             break;
         }
-        func_800F5D24(0x145);
+        cell_dec_bank(0x145);
         if (poll_go(0x202) != 0)
             continue;
         break;
     }
     func_80139AFC();
-    func_800F94B8();
+    cell_cursor_read();
     row_pad();
     return;
 }

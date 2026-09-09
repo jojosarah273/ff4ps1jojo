@@ -10,8 +10,8 @@ void func_8013EB2C(void)
     row_open();
     row_prep(0x20);
     sep_a();
-    func_800F4064();
-    func_800F8274();
+    cell_pos_fwd();
+    cell_put_hi9();
     sep();
     row_prep_close();
     latch(0x16);
@@ -25,7 +25,7 @@ L13ebd4:
         cell_put(5);
         row_page(4);
         row_read(0x3F);
-        func_800F61E8();
+        cell_set50_from40();
         sep_a();
         cell_poke0(cell_state(6));
         cell_draw(0x6EFD);
@@ -34,7 +34,7 @@ L13ebd4:
         row_read(0x40);
         sep_a();
         row_open_w(4);
-        func_800F78C4(cell_state(5));
+        cell_tick_or(cell_state(5));
         cell_draw(0x6EFD);
         cell_step();
         step2();

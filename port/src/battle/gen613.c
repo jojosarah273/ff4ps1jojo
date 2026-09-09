@@ -7,7 +7,7 @@ void func_8014D5A0(void)
 {
     /* battle confirm: 5574(0x31/0x33)/6434(0x80) gates pick the
        0x80/0xC0/0x40 colors, 80177DAC commit. */
-    func_800F9200();
+    cell_cursor_dec();
     io_poll(0x31);
     if (io_just() != 0)
         goto L14D5E0;

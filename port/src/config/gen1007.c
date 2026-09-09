@@ -10,8 +10,8 @@ void func_8013F96C(void)
     sep();
 L13f9b8:
     for (;;) {
-        func_800F6C68();
-        func_800F8960();
+        cell_push_c8();
+        cell_pull_c8();
         cell_step();
         step2();
         step2();

@@ -31,14 +31,14 @@ void func_8013D14C(void)
     txt_set(0x34C2);
     if (gate(0x80) != 0)
         goto L13D264;
-    func_800F8F74();
+    cell_clear_bank();
     txt_cell_cur();
     txt_draw_cur();
     txt_cell_cur();
     sep_b();
-    func_800F8058(8);
+    cell_pos_back(8);
     txt_draw_cur();
-    func_800F8F74();
+    cell_clear_bank();
     goto L13D2B4;
 L13D264:
     latch(0x40);
@@ -47,7 +47,7 @@ L13D264:
     txt_draw_cur();
     txt_cell_cur();
     sep_b();
-    func_800F8058(0xC);
+    cell_pos_back(0xC);
     txt_draw_cur();
     latch(0xF8);
     txt_draw_cur();
@@ -81,6 +81,6 @@ L13d2cc:
     }
 L13D390:
     func_8014D728();
-    func_800F8F74();
+    cell_clear_bank();
     return;
 }

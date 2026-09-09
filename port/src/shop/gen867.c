@@ -20,7 +20,7 @@ L16dd0c:
     sep();
 L16dd5c:
     for (;;) {
-        func_800F6C68();
+        cell_push_c8();
         cell_draw(0x2883);
         cell_step();
         poll_t(0x80);

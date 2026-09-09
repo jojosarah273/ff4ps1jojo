@@ -101,7 +101,7 @@ menu2:
         if (io_just() != 0)
             break;
     }
-    func_800F8F74(0x1704);
+    cell_clear_bank(0x1704);
     open_row(0xAC);
     open_row(0x7B);
     latch(2);
@@ -150,7 +150,7 @@ submenu1:                                   /* "cast/settings" 0x21 menu */
         if (sel(0x202) == 0)
             break;
         page_open(0x1719);
-        func_800F56AC(cell_state(0x1706));
+        cell_flags_cmp(cell_state(0x1706));
         if (io_just() != 0)
             break;
         txt_set(0x171F);
@@ -158,7 +158,7 @@ submenu1:                                   /* "cast/settings" 0x21 menu */
         if (io_just() == 0)
             goto item1727;
         page_open(0x171D);
-        func_800F56AC(cell_state(0x1706));
+        cell_flags_cmp(cell_state(0x1706));
         if (io_just() != 0)
             break;
     item1727:
@@ -167,18 +167,18 @@ submenu1:                                   /* "cast/settings" 0x21 menu */
         if (io_just() == 0)
             goto success21;
         page_open(0x1725);
-        func_800F56AC(cell_state(0x1706));
+        cell_flags_cmp(cell_state(0x1706));
         if (io_just() != 0)
             break;
     success21:
         row_page(1);
-        func_800F7864();
+        cell_tick_half();
         txt_draw(0x6FD);
         poll_pair(0x79);
         poll_pair(0x79);
         if (poll_go(0x202) != 0)
             continue;
-        func_800F8F74(0x1704);
+        cell_clear_bank(0x1704);
         open_row(0xAC);
         open_row(0x7B);
         latch(2);
@@ -207,7 +207,7 @@ submenu2:                                   /* save screen */
     if (sel(0x202) == 0)
         goto flow_screen;
     func_80102414();
-    func_800F8F74(0x1704);
+    cell_clear_bank(0x1704);
     open_row(0xAC);
     open_row(0x7B);
     latch(2);
@@ -218,12 +218,12 @@ submenu2:                                   /* save screen */
     io_poll(2);
     if (io_just() == 0)
         goto flow_screen;
-    func_800F8F74(0x1715);
-    func_800F8F74(0x1712);
+    cell_clear_bank(0x1715);
+    cell_clear_bank(0x1712);
     goto flow_screen;
     /* the item gated flow (1701 gate chain) */
 flow_screen:
-    func_800F8F74(0x1A02);
+    cell_clear_bank(0x1A02);
     row_page(0xAB);
     if (gate(2) == 0)
         return;
@@ -235,7 +235,7 @@ flow_screen:
     if (gate(2) != 0)
         return;
     page_open(0x1706);
-    func_800F56AC(cell_state(0x1710));
+    cell_flags_cmp(cell_state(0x1710));
     if (io_just() == 0)
         return;
     func_80102F38();
@@ -249,7 +249,7 @@ flow_screen:
     if (gate(2) != 0)
         return;
     page_open(0x1706);
-    func_800F56AC(cell_state(0x1713));
+    cell_flags_cmp(cell_state(0x1713));
     if (io_just() == 0)
         return;
     func_80102F70();
@@ -263,7 +263,7 @@ flow_screen:
     if (gate(2) != 0)
         return;
     page_open(0x1706);
-    func_800F56AC(cell_state(0x1719));
+    cell_flags_cmp(cell_state(0x1719));
     if (io_just() == 0)
         return;
     func_80103030();
@@ -277,7 +277,7 @@ flow_screen:
     if (gate(2) != 0)
         return;
     page_open(0x1706);
-    func_800F56AC(cell_state(0x171D));
+    cell_flags_cmp(cell_state(0x171D));
     if (io_just() == 0)
         return;
     func_801031F0();
@@ -291,7 +291,7 @@ flow_screen:
     if (gate(2) != 0)
         return;
     page_open(0x1706);
-    func_800F56AC(cell_state(0x1721));
+    cell_flags_cmp(cell_state(0x1721));
     if (io_just() == 0)
         return;
     func_801033E0();
@@ -305,7 +305,7 @@ flow_screen:
     if (gate(2) != 0)
         return;
     page_open(0x1706);
-    func_800F56AC(cell_state(0x1725));
+    cell_flags_cmp(cell_state(0x1725));
     if (io_just() == 0)
         return;
     latch(0xE);
@@ -335,34 +335,34 @@ memscreen:
     latch(2);
     cell_put(0x2C);
     func_8010D9D4();
-    func_800F7864();
+    cell_tick_half();
     if (func_800F7728(0x101) != 0)
         goto mem2;
     latch(3);
     txt_draw(0x1705);
     row_page(0x2C);
-    func_800F61E8();
+    cell_set50_from40();
     cell_put(0x2C);
 mem2:
     latch(2);
     cell_put(0x2E);
     func_8010D9D4();
-    func_800F7864();
+    cell_tick_half();
     if (func_800F7728(0x101) != 0)
         goto mem_loop;
     row_page(0x2E);
-    func_800F61E8();
+    cell_set50_from40();
     cell_put(0x2E);
-    func_800F8F74(0x1704);
+    cell_clear_bank(0x1704);
 mem_loop:
     for (;;) {
-        func_800FE778();
+        wnd_fx_7d();
         func_8010D9D4();
         io_poll(0x10);
         if (io_go() != 0)
             break;
         row_page(0x2E);
-        func_800F61E8();
+        cell_set50_from40();
         cell_put(0x2E);
     }
     txt_set(0x1710);
@@ -386,14 +386,14 @@ mem_loop:
     latch(1);
     txt_draw(0x1704);
     func_80171608();
-    func_800F8F74(0x1704);
+    cell_clear_bank(0x1704);
     func_80171194();
-    func_800FE778();
-    func_800FE870();
-    func_800F8F74(0x1704);
-    func_800F8F74(0x170F);
+    wnd_fx_7d();
+    cell_clear_pad();
+    cell_clear_bank(0x1704);
+    cell_clear_bank(0x170F);
     func_800FF024();
-    func_800FE778();
+    wnd_fx_7d();
     open_row(0xAC);
     open_row(0x7B);
     page_paint2(0x1A02);

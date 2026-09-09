@@ -13,7 +13,7 @@ L2be3c:
         if (func_8012D194() == 0)
             goto L2BE94;
         txt_set(0x1B3E);
-        func_800F61E8();
+        cell_set50_from40();
         io_poll(5);
         if (io_just() == 0)
             goto L2BE84;
@@ -60,7 +60,7 @@ L2becc:
     L2bf64:
         for (;;) {
             txt_set(0x1B3E);
-            func_800F61E8();
+            cell_set50_from40();
             io_poll(5);
             if (io_go() == 0)
                 goto L2BF94;
@@ -78,7 +78,7 @@ L2becc:
             goto L2C000;
         txt_set(0x1B3E);
         func_801224D0();
-        func_800F6C68();
+        cell_push_c8();
         cell_put(0xE8);
         goto L2C098;
     L2C000:

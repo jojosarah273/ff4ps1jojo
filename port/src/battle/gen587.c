@@ -3,11 +3,10 @@
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-extern int func_800F6434();
-extern int func_800F6564();
-extern int func_800F8188();
-extern int func_800F8F74();
-extern int func_800F971C();
+
+
+
+
 
 void func_8014E38C(void)
 
@@ -27,7 +26,7 @@ void func_8014E38C(void)
   txt_set(0xf44e);
   iVar1 = gate(2);
   if (iVar1 == 0) {
-    func_800F8F74(0xef87);
+    cell_clear_bank(0xef87);
   }
   txt_set(0xf279);
   txt_draw(0xf466);

@@ -27,7 +27,7 @@ L10A340:
     for (;;) {
     L10A344:
         for (;;) {
-            func_800F6C68();
+            cell_push_c8();
             cell_step();
             io_poll_cur();
             if (io_just() != 0)
@@ -43,7 +43,7 @@ L10A384:
     open_row(7);
 L10a398:
     for (;;) {
-        func_800F6C68();
+        cell_push_c8();
         cell_step();
         key_page(7);
         io_poll_cur();
@@ -54,8 +54,8 @@ L10a398:
     cell_state(7);
     latch(0x14);
     sep_b();
-    func_800F7F48(cell_state(7));
-    func_800F7864();
+    cell_tick_sub(cell_state(7));
+    cell_tick_half();
     cell_put(6);
     goto L10A434;
 L10A424:
@@ -77,12 +77,12 @@ L10a444:
     row_page(6);
 L10a4a4:
     for (;;) {
-        func_800F6C68();
+        cell_push_c8();
         cell_step();
         if (func_80109378() != 0)
-            func_800F8960(0x774);
+            cell_pull_c8(0x774);
         else
-            func_800F8960(0x834);
+            cell_pull_c8(0x834);
     L10A540:
         step2();
         latch_cur();

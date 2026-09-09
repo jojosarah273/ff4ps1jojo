@@ -17,7 +17,7 @@ void func_801398F4(void)
     cell_fmt2(0x41);
 L139934:
     for (;;) {
-        func_800F6D70(0x1440);
+        cell_push_c8_d58(0x1440);
         if (gate(2) != 0)
             goto L1399A4;
         step2();
@@ -34,8 +34,8 @@ L139934:
     return;
 L1399A4:
     row_prep(0x20);
-    func_800F6BE0(0x1340);
-    func_800F89D4(0x1440);
+    cell_sink8_9(0x1340);
+    cell_stamp8_9_b(0x1440);
     func_800F9140(0x1340);
     row_prep_close();
     func_801399EC();

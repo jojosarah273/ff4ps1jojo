@@ -19,7 +19,7 @@ L1609C4:
     wnd_open_cur();
     latch(2);
     func_80152224();
-    func_800F9200();
+    cell_cursor_dec();
     latch(0xF8);
     txt_draw(0x26D4);
     row_close2();
@@ -27,7 +27,7 @@ L1609C4:
     row_open_w(0x3E);
 L160A0C:
     sep_b();
-    func_800F8058(0x31);
+    cell_pos_back(0x31);
     sep_a();
     row_open_w(0x4D);
 L160A2C:

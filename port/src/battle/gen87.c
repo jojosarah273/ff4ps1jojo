@@ -32,40 +32,40 @@ L14f850:
         txt_set(0x6CC0);
         if (gate(2) != 0)
             goto L14F92C;
-        func_800F6C68();
+        cell_push_c8();
         sep_a();
         cell_poke0(cell_state(0x12));
         sep_b();
-        func_800F8058(0xF);
-        func_800F8960(0x300);
-        func_800F6C68();
+        cell_pos_back(0xF);
+        cell_pull_c8(0x300);
+        cell_push_c8();
         sep_a();
         cell_poke0(cell_state(0x13));
-        func_800F8960(0x301);
-        func_800F6C68();
-        func_800F8960(0x302);
-        func_800F6C68();
-        func_800F8960(0x303);
+        cell_pull_c8(0x301);
+        cell_push_c8();
+        cell_pull_c8(0x302);
+        cell_push_c8();
+        cell_pull_c8(0x303);
         goto L14F9A8;
     L14F92C:
-        func_800F6C68();
+        cell_push_c8();
         sep_a();
         cell_poke0(cell_state(0x12));
-        func_800F8960(0x300);
-        func_800F6C68();
+        cell_pull_c8(0x300);
+        cell_push_c8();
         sep_a();
         cell_poke0(cell_state(0x13));
-        func_800F8960(0x301);
-        func_800F6C68();
-        func_800F8960(0x302);
-        func_800F6C68();
-        func_800F8960(0x303);
+        cell_pull_c8(0x301);
+        cell_push_c8();
+        cell_pull_c8(0x302);
+        cell_push_c8();
+        cell_pull_c8(0x303);
     L14F9A8:
         txt_set_cur();
         if (gate(2) != 0)
             goto L14F9E8;
-        func_800F6D70(0x303);
-        func_800F8960(0x303);
+        cell_push_c8_d58(0x303);
+        cell_pull_c8(0x303);
     L14F9E8:
         page_paint2(8);
         poll_t_cur();

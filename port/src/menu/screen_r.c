@@ -25,7 +25,7 @@ Lf5c:
     if (gate(0x8080) != 0)
         return;
     txt_set(0x1706);
-    func_800F61E8();
+    cell_set50_from40();
     cell_put(0xC);
     txt_set(0x1707);
     goto L014;
@@ -40,7 +40,7 @@ Lfbc:
     txt_set(0x1706);
     cell_put(0xC);
     txt_set(0x1707);
-    func_800F61E8();
+    cell_set50_from40();
 L014:
     cell_put(0xE);
     goto L064;
@@ -61,10 +61,10 @@ L064:
     draw_pad_cur();
     page(0x3D);
     for (;;) {
-        func_800F6C68();
+        cell_push_c8();
         if (io_press(cell_state(0xC)) == 0)
             goto L0ec;
-        func_800F6C68();
+        cell_push_c8();
         if (io_press(cell_state(0xE)) != 0)
             goto L140;
     L0ec:
@@ -94,7 +94,7 @@ L140:
     cell_put(0x3E);
     page(0x3D);
     latch(0x77);
-    func_800F885C();
+    cell_pull_c8_off();
     func_80105230();
     label(0x6FE);
     func_80100894();
@@ -112,9 +112,9 @@ L250:
     func_800FD804();
 L270:
     page(0x40);
-    func_800F6C68();
+    cell_push_c8();
     cell_put(9);
-    func_800F6C68();
+    cell_push_c8();
     cell_put(8);
     row_page(9);
     row_read(0x40);

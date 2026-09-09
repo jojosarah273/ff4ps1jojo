@@ -24,10 +24,10 @@ L138d38:
         draw_pad_cur();
     L138DA8:
         func_8011FBA4();
-        func_800F8F74(0x1A88);
+        cell_clear_bank(0x1A88);
         func_80126528();
         latch(0x17);
-        func_800F81E8(0x212C);
+        cell_pull_c8_lo(0x212C);
         func_800F5448();
         txt_set(0x1BAF);
         if (gate(2) != 0)
@@ -49,7 +49,7 @@ L138d38:
         if (sel(2) != 0)
             goto L138E80;
         txt_set(0x1BAF);
-        func_800F61E8();
+        cell_set50_from40();
         row_read(1);
         txt_draw(0x1BAF);
     L138E80:
@@ -61,9 +61,9 @@ L138d38:
         row_read(0x80);
         if (sel(2) != 0)
             continue;
-        func_800F8F74(0x1BB2);
-        func_800F8F74(0x1BB0);
-        func_800F8F74(0x1BB1);
+        cell_clear_bank(0x1BB2);
+        cell_clear_bank(0x1BB0);
+        cell_clear_bank(0x1BB1);
         wnd_open(0x1340);
         func_8012E844();
         wnd_open_cur();

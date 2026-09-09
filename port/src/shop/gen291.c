@@ -42,7 +42,7 @@ L1614A8:
         goto L161488;
     sep_b();
     txt_cell(0x321C);
-    func_800F8058(1);
+    cell_pos_back(1);
     cell_draw(0x321C);
     if (io_just() == 0)
         goto L161530;

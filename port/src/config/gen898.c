@@ -15,7 +15,7 @@ L12b958:
         row_sel_cell_cur();
         func_801224D0();
         row_prep(0x20);
-        func_800F6CF4(0x20);
+        cell_push9_bank(0x20);
         row_prep_close();
         func_8012BB68();
         page_paint2(0x1BC1);

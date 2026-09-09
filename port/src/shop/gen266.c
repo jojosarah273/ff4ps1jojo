@@ -33,7 +33,7 @@ L1639E0:
     cell_put(0x82);
     latch(8);
     func_801526F8();
-    func_800F9200();
+    cell_cursor_dec();
     txt_set(0x289C);
     func_80152BC4();
     row_read(8);
@@ -52,7 +52,7 @@ L1639E0:
     goto L163B48;
 L163AD0:
     sep_b();
-    func_800F8058(0xB0);
+    cell_pos_back(0xB0);
     tail(0xE5);
     wnd_open_cur();
     tail(0x80);
@@ -66,8 +66,8 @@ L163AD0:
 L163B48:
     txt_set(0x289C);
     row_read(0xE0);
-    func_800F78C4(cell_state(0xC7));
-    func_800F7864();
+    cell_tick_or(cell_state(0xC7));
+    cell_tick_half();
 L163B70:
     cell_draw(0x3228);
     return;

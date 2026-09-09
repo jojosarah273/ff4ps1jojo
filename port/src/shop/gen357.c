@@ -12,14 +12,14 @@ void func_80160C2C(void)
     if (gate_cur() == 0)
         goto L160DE8;
     row_prep(0x20);
-    func_800F658C();
-    func_800F81B0(0x2707);
-    func_800F658C();
-    func_800F81B0(0x2709);
+    cell_push9();
+    cell_pull9_hi(0x2707);
+    cell_push9();
+    cell_pull9_hi(0x2709);
     sep();
     row_prep_close();
-    func_800F8F74(0x359C);
-    func_800F8F74(0x359F);
+    cell_clear_bank(0x359C);
+    cell_clear_bank(0x359F);
     txt_set(0x2720);
     func_800F4280(0x2725);
     func_800F4280(0x2720);
@@ -34,7 +34,7 @@ L160CFC:
     sep();
 L160d3c:
     for (;;) {
-        func_800F76BC(cell_state(0xA9));
+        cell_word_half(cell_state(0xA9));
         if (func_800F7728(0x101) != 0)
             goto L160D90;
         sep_a();

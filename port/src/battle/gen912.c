@@ -11,10 +11,10 @@ void func_80105358(void)
     func_800F65F0();
     func_800F65F0();
     func_800F65F0();
-    func_800F81B0(0x700);
-    func_800F81B0(0x702);
-    func_800F81B0(0x704);
-    func_800F81B0(0x706);
+    cell_pull9_hi(0x700);
+    cell_pull9_hi(0x702);
+    cell_pull9_hi(0x704);
+    cell_pull9_hi(0x706);
     row_sync2_cur();
     row_prep_close();
     return;

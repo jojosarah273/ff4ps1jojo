@@ -9,9 +9,9 @@ void func_801684AC(void)
        detail row; 80168400/80168474/8016838C draw the option rows. */
     func_800F65C8(0x4219);
     cell_peek_cur();
-    func_800F78C4();
+    cell_tick_or();
     row_read(0x10);
-    func_800F78C4(cell_state(0x38));
+    cell_tick_or(cell_state(0x38));
     cell_put(0x38);
     txt_set_cur();
     io_poll(0xFF);
@@ -31,8 +31,8 @@ void func_801684AC(void)
     io_poll(0xF);
     if (io_just() == 0)
         goto L168738;
-    func_800F8F74();
-    func_800F8F74(0x38D9);
+    cell_clear_bank();
+    cell_clear_bank(0x38D9);
 L168590:
     txt_set_cur();
     io_poll(0xFE);
@@ -42,12 +42,12 @@ L168590:
     func_800F6068();
     goto L168738;
 L1685C8:
-    func_800F5D24();
+    cell_dec_bank();
     txt_set_cur();
     io_poll(4);
     if (io_just() == 0)
         goto L168738;
-    func_800F8F74();
+    cell_clear_bank();
     page_paint2(0x38D9);
     goto L168590;
 L168608:

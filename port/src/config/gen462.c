@@ -8,7 +8,7 @@ void func_8013441C(void)
     /* config weapon sub-menu: 0x1EB/0x1B37/0x1B39 texts; 8013463C/
        80134AF8/801224D0/801345B4 rows; 53C0/53D4 ladders route the
        4C40/5F4D/6C61 option texts. */
-    func_800F8F74(0x1EB);
+    cell_clear_bank(0x1EB);
     io_poll(0xB0);
     if (io_go() != 0)
         goto L13445C;
@@ -33,9 +33,9 @@ L13446C:
         goto L13454C;
     sep_a();
     func_800F7C6C();
-    func_800F7A68();
+    cell_flags_repack2();
     func_800F7C6C();
-    func_800F7A68();
+    cell_flags_repack2();
     func_800F7C6C();
     func_801224D0();
     if (io_press(cell_state(0x1B37)) == 0)

@@ -10,7 +10,7 @@ void func_801431E8(void)
     /* battle rows: 0xF42C/0xF42D texts; D54 <- D44 copy then
        80142E90. */
     txt_draw(0xF42C);
-    func_800F8F74(0xF42D);
+    cell_clear_bank(0xF42D);
     func_80140558();
     sep();
     D_8019ED54[0] = D_8019ED44[0];

@@ -3,7 +3,7 @@
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-extern int func_800F3B04(u32 v);
+
 void func_8016B650(void) {
     u32 base = cell_state(0x2FF);
     u16 k = 0x220;

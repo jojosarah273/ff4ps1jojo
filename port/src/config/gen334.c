@@ -44,7 +44,7 @@ L135054:
         if (sel(2) != 0)
             goto L1351A8;
         txt_set(0x1BB1);
-        func_800F61E8();
+        cell_set50_from40();
         io_poll(3);
         if (io_just() == 0)
             goto L1351A0;
@@ -72,7 +72,7 @@ L135054:
         io_poll(2);
         if (io_just() != 0)
             goto L135288;
-        func_800F9200();
+        cell_cursor_dec();
         row_close2();
         wnd_open_cur();
         func_80120070();

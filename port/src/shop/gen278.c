@@ -10,7 +10,7 @@ void func_80169614(void)
     func_8016BAAC();
     row_open2();
     sep();
-    func_800F9200();
+    cell_cursor_dec();
     row_pad();
     wnd_open_cur();
     open_row(4);
@@ -27,7 +27,7 @@ L696C8:
     sep();
 L696f0:
     for (;;) {
-        func_800F6C68();
+        cell_push_c8();
         cell_put_cur();
         draw_pad(8);
     L69708:
@@ -53,7 +53,7 @@ L697AC:
     sep();
 L697c0:
     for (;;) {
-        func_800F5E48();
+        cell_set50_from54();
         if (poll_go(0x202) != 0)
             continue;
         break;
@@ -61,8 +61,8 @@ L697c0:
     sep();
 L69828:
     for (;;) {
-        func_800F6C68();
-        func_800F9200();
+        cell_push_c8();
+        cell_cursor_dec();
         row_read(0xF);
         if (sel(2) != 0)
             goto L69870;

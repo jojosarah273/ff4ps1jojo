@@ -15,11 +15,11 @@ L161820:
         cell_put(0xAA);
         row_page(0xA9);
         row_read(0x7F);
-        func_800F78C4(cell_state(0xAA));
+        cell_tick_or(cell_state(0xAA));
         cell_draw(0x2001);
         row_prep(0x20);
         sep_a();
-        func_800F4064(0x80);
+        cell_pos_fwd(0x80);
         sep();
         row_prep_close();
         step2();

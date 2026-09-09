@@ -27,7 +27,7 @@ L167c20:
         if (io_just() != 0)
             break;
     }
-    func_800F8F74();
+    cell_clear_bank();
     func_8014096C();
     latch(2);
     txt_draw_cur();
@@ -35,26 +35,26 @@ L167c20:
 L167c70:
     for (;;) {
         func_80070174();
-        func_800F5E48();
+        cell_set50_from54();
         if (poll_go(0x202) != 0)
             continue;
         break;
     }
     page_paint2_cur();
     func_80167E44();
-    func_800F8F74();
+    cell_clear_bank();
     wnd_open(0x16);
 L167cb0:
     for (;;) {
         txt_cell_cur();
         cell_draw_cur();
-        func_800F5E48();
+        cell_set50_from54();
         poll_t(0xF);
         if (io_just() != 0)
             break;
     }
     txt_set_cur();
-    func_800F61E8();
+    cell_set50_from40();
     row_read(7);
     txt_draw_cur();
     sep();
@@ -74,16 +74,16 @@ L167d24:
             continue;
         break;
     }
-    func_800F5D24();
+    cell_dec_bank();
     if (poll_go(0x202) != 0)
         goto L167C68;
-    func_800F8F74();
+    cell_clear_bank();
     return;
 L167C68:
     wnd_open(4);
     for (;;) {
         func_80070174();
-        func_800F5E48();
+        cell_set50_from54();
         if (poll_go(0x202) != 0)
             continue;
         break;

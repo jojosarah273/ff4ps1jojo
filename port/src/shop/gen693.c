@@ -12,8 +12,8 @@ void func_8016ADDC(void)
     wnd_open_cur();
 L16ae14:
     for (;;) {
-        func_800F87DC(0x3319);
-        func_800F87DC(0x371B);
+        cell_stamp8_9(0x3319);
+        cell_stamp8_9(0x371B);
         func_800F9140(0x331B);
         func_800F9140(0x3719);
         cell_step();

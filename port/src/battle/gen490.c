@@ -10,10 +10,10 @@ void func_8011F210(void)
     row_sync();
     cell_put(0x30);
     latch(0xFA);
-    func_800F8960();
+    cell_pull_c8();
     step2();
     row_page(0x2F);
-    func_800F8960();
+    cell_pull_c8();
     step2();
     row_page(0x2D);
     cell_put(0x31);
@@ -21,10 +21,10 @@ void func_8011F210(void)
 L11f270:
     for (;;) {
         latch(0xFF);
-        func_800F8960();
+        cell_pull_c8();
         step2();
         row_page(0x2F);
-        func_800F8960();
+        cell_pull_c8();
         step2();
         poll_pair(0x31);
         if (poll_go(0x202) != 0)
@@ -32,10 +32,10 @@ L11f270:
         break;
     }
     latch(0xFB);
-    func_800F8960();
+    cell_pull_c8();
     step2();
     row_page(0x2F);
-    func_800F8960();
+    cell_pull_c8();
     row_done();
     func_80122334();
     return;

@@ -13,16 +13,16 @@ void func_80115A34(void)
     if (io_just() != 0)
         goto L115A7C;
     row_page(0x7A);
-    func_800F7864();
+    cell_tick_half();
     if (func_800F7728(0x101) == 0)
         goto L115BBC;
 L115A7C:
     row_page(0xAD);
     sep_b();
-    func_800F8058(0x10);
+    cell_pos_back(0x10);
     row_read(0xFC);
     row_page(0xC);
-    func_800F8960(0x350);
+    cell_pull_c8(0x350);
     row_page(0xD);
     row_read(1);
     if (sel(2) != 0)
@@ -31,15 +31,15 @@ L115A7C:
     func_801714C4();
 L115AF4:
     row_page(0xE);
-    func_800F8960(0x351);
-    func_800F6C68();
-    func_800F8960(0x352);
-    func_800F6C68();
-    func_800F8960(0x353);
+    cell_pull_c8(0x351);
+    cell_push_c8();
+    cell_pull_c8(0x352);
+    cell_push_c8();
+    cell_pull_c8(0x353);
     row_page(0xC);
     sep_a();
     row_open_w(8);
-    func_800F8960(0x354);
+    cell_pull_c8(0x354);
     row_page(0xD);
     row_open_w0();
     row_read(1);
@@ -49,11 +49,11 @@ L115AF4:
     func_801714C4();
 L115B84:
     row_page(0xE);
-    func_800F8960(0x355);
-    func_800F6C68();
-    func_800F8960(0x356);
-    func_800F6C68();
-    func_800F8960(0x357);
+    cell_pull_c8(0x355);
+    cell_push_c8();
+    cell_pull_c8(0x356);
+    cell_push_c8();
+    cell_pull_c8(0x357);
     return;
 L115BBC:
     return;

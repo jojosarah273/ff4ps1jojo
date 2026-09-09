@@ -20,7 +20,7 @@ void func_801280D4(void)
     row_sel_cell_cur();
     func_801224D0();
     row_prep(0x20);
-    func_800F8274(0x1F);
+    cell_put_hi9(0x1F);
     row_prep_close();
     latch(5);
     cell_put(0x5A);
@@ -31,7 +31,7 @@ L1281ac:
         row_sync2(0x18);
         sep_a();
         cell_peek0(cell_state(0x1F));
-        func_800F8274(0x1F);
+        cell_put_hi9(0x1F);
         row_prep_close();
         key_page(0x1D);
         poll_pair(0x5A);

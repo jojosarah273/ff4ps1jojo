@@ -9,7 +9,7 @@ void func_8013F49C(void)
        0x2A16/0x2A1E texts. */
     row_open();
     row_page(0x47);
-    func_800F6C68();
+    cell_push_c8();
     txt_cell(0x2A16);
     tail(0x1C);
     wnd_open(0xA);

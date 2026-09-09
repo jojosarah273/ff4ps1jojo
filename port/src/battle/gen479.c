@@ -41,7 +41,7 @@ L117D60:
     draw_pad_cur();
 L117d70:
     for (;;) {
-        func_800F6D70(0xAD6);
+        cell_push_c8_d58(0xAD6);
         cell_draw(0x1000);
         if (io_press(cell_state(0xE4)) == 0)
             goto L117DC0;

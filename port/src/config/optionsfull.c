@@ -16,14 +16,14 @@ void func_8015902C(void)
     func_80152AAC();
     sep_a();
     cell_poke0(cell_state(0xA9));
-    func_800F82EC(0x80);
+    cell_pull_c8_bank(0x80);
     row_page(0xAA);
     func_80152BC4();
     cell_put(0xA9);
     sep();
     for (;;) {
         sep_a();
-        func_800F66D8(0x82);
+        cell_push_c8_sel(0x82);
         row_read(0x7F);
         cell_poke0(cell_state(0xA9));
         cell_put(0xA9);
@@ -39,13 +39,13 @@ void func_8015902C(void)
     row_page(0xA9);
     cell_poke0(cell_state(0x3972));
     func_8015A30C();
-    func_800F82EC(0x80);
+    cell_pull_c8_bank(0x80);
     draw_pad(3);
     sep();
     tail(0xA9);
     for (;;) {
         sep_a();
-        func_800F66D8(0x82);
+        cell_push_c8_sel(0x82);
         cell_poke0(cell_state(0xA9));
         cell_put(0xA9);
         sep_a();
@@ -60,17 +60,17 @@ void func_8015902C(void)
     row_page(0xA9);
     cell_poke0(cell_state(0x3973));
     func_8015A344();
-    func_800F82EC(0x80);
+    cell_pull_c8_bank(0x80);
     wnd_open(0x15);
     for (;;) {
         page_paint(0x289C);
-        func_800F5E48();
+        cell_set50_from54();
         if (poll_go(0x8080) == 0)
             break;
     }
-    func_800F8F74(0x3977);
+    cell_clear_bank(0x3977);
     draw_pad(1);
-    func_800F66D8(0x80);
+    cell_push_c8_sel(0x80);
     row_read(0xF);
     io_poll(6);
     if (io_just() == 0)
@@ -78,11 +78,11 @@ void func_8015902C(void)
     page_paint2(0x3977);
 l934C:
     draw_pad(0x33);
-    func_800F66D8(0x80);
+    cell_push_c8_sel(0x80);
     if (gate(2) != 0)
         goto l9418;
     draw_pad(0x25);
-    func_800F66D8(0x82);
+    cell_push_c8_sel(0x82);
     if (gate(0x80) != 0)
         goto l9418;
     txt_set(0x3977);
@@ -90,7 +90,7 @@ l934C:
     draw_pad(0x21);
     sep();
     for (;;) {
-        func_800F66D8(0x82);
+        cell_push_c8_sel(0x82);
         cell_draw(0x289C);
         step2();
         cell_step();
@@ -100,11 +100,11 @@ l934C:
     }
 l9418:
     draw_pad(0x35);
-    func_800F66D8(0x80);
+    cell_push_c8_sel(0x80);
     if (gate(2) != 0)
         goto l94C8;
     draw_pad(0x30);
-    func_800F66D8(0x82);
+    cell_push_c8_sel(0x82);
     if (gate(0x80) != 0)
         goto l94C8;
     txt_set(0x3977);
@@ -112,7 +112,7 @@ l9418:
     draw_pad(0x2C);
     wnd_open(0xB);
     for (;;) {
-        func_800F66D8(0x82);
+        cell_push_c8_sel(0x82);
         cell_draw(0x289C);
         step2();
         cell_step();
@@ -145,7 +145,7 @@ l9528:
     draw_pad(0x16);
     for (;;) {
         txt_cell(0x289C);
-        func_800F8960(0x289C);
+        cell_pull_c8(0x289C);
         cell_step();
         step2();
         poll_t(0xB);
@@ -155,7 +155,7 @@ l9528:
     sep();
     for (;;) {
         txt_cell(0x289C);
-        func_800F8960(0x289C);
+        cell_pull_c8(0x289C);
         cell_step();
         step2();
         poll_t(0x16);
@@ -165,7 +165,7 @@ l9528:
     draw_pad(0xB);
     for (;;) {
         txt_cell(0x289C);
-        func_800F8960(0x289C);
+        cell_pull_c8(0x289C);
         cell_step();
         step2();
         poll_t(0x16);
@@ -185,7 +185,7 @@ l96AC:
     sep();
     for (;;) {
         txt_cell(0x289C);
-        func_800F8960(0x289C);
+        cell_pull_c8(0x289C);
         cell_step();
         step2();
         poll_t(0xB);
@@ -218,9 +218,9 @@ l97EC:
     cell_put(0xAA);
 l9814:
     row_page(0xA9);
-    func_800F78C4(cell_state(0xAA));
+    cell_tick_or(cell_state(0xAA));
     draw_pad(0x19);
-    func_800F82EC(0x80);
+    cell_pull_c8_bank(0x80);
     sep();
     tail(0xA9);
     txt_set(0x28A0);
@@ -236,9 +236,9 @@ l988C:
     cell_put(0xAA);
 l98B4:
     row_page(0xA9);
-    func_800F78C4(cell_state(0xAA));
+    cell_tick_or(cell_state(0xAA));
     draw_pad(0x1A);
-    func_800F82EC(0x80);
+    cell_pull_c8_bank(0x80);
     txt_set(0x3966);
     func_80152BC4();
     cell_put(0xA9);
@@ -246,9 +246,9 @@ l98B4:
     func_80152B38();
     sep_a();
     cell_poke0(cell_state(0xA9));
-    func_800F61E8();
+    cell_set50_from40();
     draw_pad(0x1B);
-    func_800F82EC(0x80);
+    cell_pull_c8_bank(0x80);
     txt_set(0x3965);
     func_80152C50();
     cell_put(0xA9);
@@ -268,7 +268,7 @@ l98B4:
     row_read(0x7F);
     cell_poke0(cell_state(0xA9));
     cell_poke0(cell_state(0xAA));
-    func_800F7864();
+    cell_tick_half();
     io_poll(0x63);
     if (io_go() != 0)
         latch(0x63);
@@ -287,7 +287,7 @@ l9A80:
     func_8015A30C();
 l9A88:
     draw_pad(0x1C);
-    func_800F82EC(0x80);
+    cell_pull_c8_bank(0x80);
     txt_set(0x3966);
     func_80152C50();
     cell_put(0xAA);
@@ -326,13 +326,13 @@ l9BD8:
     if (sel(2) != 0)
         goto l9CE8;
     txt_set(0x289D);
-    func_800F7864();
+    cell_tick_half();
     sep_a();
     cell_poke0(cell_state(0x28A8));
     cell_poke0(cell_state(0xAA));
     cell_put(0xBF);
     draw_pad_cur();
-    func_800F66D8(0x80);
+    cell_push_c8_sel(0x80);
     row_read(0xC0);
     func_800F4280(0x3978);
     if (sel(2) != 0)
@@ -344,7 +344,7 @@ l9BD8:
     func_8015254C();
     sep_b();
     row_page(0xBF);
-    func_800F7F48(cell_state(0x3949));
+    cell_tick_sub(cell_state(0x3949));
     cell_put(0xBF);
     goto l9D64;
 l9CD8:
@@ -359,20 +359,20 @@ l9D5C:
     func_8015A344();
 l9D64:
     draw_pad(0x1D);
-    func_800F82EC(0x80);
+    cell_pull_c8_bank(0x80);
     txt_set(0x28A5);
-    func_800F78C4(cell_state(0x28B0));
+    cell_tick_or(cell_state(0x28B0));
     draw_pad(0x1E);
-    func_800F82EC(0x80);
+    cell_pull_c8_bank(0x80);
     txt_set(0x28A6);
-    func_800F78C4(cell_state(0x28B1));
+    cell_tick_or(cell_state(0x28B1));
     step2();
-    func_800F82EC(0x80);
+    cell_pull_c8_bank(0x80);
     draw_pad(0x41);
-    func_800F66D8(0x80);
+    cell_push_c8_sel(0x80);
     cell_put(0xA9);
     step2();
-    func_800F66D8(0x80);
+    cell_push_c8_sel(0x80);
     cell_put(0xAA);
     txt_set(0x3977);
     row_read(0xC0);
@@ -413,7 +413,7 @@ l9F5C:
 l9F64:
     cell_put(0xA9);
     txt_set(0x289D);
-    func_800F7864();
+    cell_tick_half();
     sep_a();
     cell_poke0(cell_state(0xAA));
     func_8015A344();
@@ -421,10 +421,10 @@ l9F64:
 l9FE4:
     draw_pad(0x2D);
     row_page(0xA9);
-    func_800F82EC(0x80);
+    cell_pull_c8_bank(0x80);
     step2();
     row_page(0xAA);
-    func_800F82EC(0x80);
+    cell_pull_c8_bank(0x80);
 lA014:
     txt_set(0x3977);
     row_read(0x20);
@@ -436,7 +436,7 @@ lA014:
         return;
 lA054:
     draw_pad(1);
-    func_800F66D8(0x80);
-    func_800F82EC(0x80);
+    cell_push_c8_sel(0x80);
+    cell_pull_c8_bank(0x80);
     return;
 }

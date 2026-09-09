@@ -11,16 +11,16 @@ void func_80153518(void)
 L153560:
     for (;;) {
         txt_cell(0x2003);
-        func_800F8960(0x38BF);
+        cell_pull_c8(0x38BF);
         row_read(0xF8);
         cell_draw(0x2003);
         txt_cell(0x2004);
-        func_800F8960(0x38C0);
+        cell_pull_c8(0x38C0);
         row_read(0x40);
         cell_draw(0x2004);
         page_paint(0x2005);
         txt_cell(0x2006);
-        func_800F8960(0x38C1);
+        cell_pull_c8(0x38C1);
         page_paint(0x2006);
         func_8015330C();
         step2();

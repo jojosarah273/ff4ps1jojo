@@ -2,7 +2,7 @@
  *
  * Small numeric helpers of the catalog layer.
  *
- * Ground truth: src/func_800F3B9C.c (byte-verified; asm order mirrored).
+ * Ground truth: src/cell_add16.c (byte-verified; asm order mirrored).
  */
 #include <stdint.h>
 

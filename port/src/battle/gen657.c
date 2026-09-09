@@ -16,7 +16,7 @@ L103328:
         io_poll(0x20);
         if (io_go() != 0)
             goto L103370;
-        func_800F7864();
+        cell_tick_half();
         txt_draw(0x6FD);
         key_page(0x79);
     }

@@ -9,7 +9,7 @@ void func_8013A8CC(void)
        5958(9). */
     page(0x41);
     do {
-        func_800F8960();
+        cell_pull_c8();
         step2();
         step2();
         cell_step();

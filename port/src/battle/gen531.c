@@ -19,16 +19,16 @@ void func_80113CCC(void)
     cell_put(0x91);
 L113d24:
     for (;;) {
-        func_800FE7B0();
+        wnd_fx_7d_b();
         func_80113F3C();
         row_prep(0x20);
-        func_800F658C(0x6FB);
+        cell_push9(0x6FB);
         row_done2();
-        func_800F81B0(0x6FB);
+        cell_pull9_hi(0x6FB);
         row_read2(0x24);
         row_done2();
-        func_800F8274(0x24);
-        func_800F4264(0xFF);
+        cell_put_hi9(0x24);
+        cell_pos_mask(0xFF);
         row_prep_close();
         cell_put(0xAD);
         io_poll(0x5F);

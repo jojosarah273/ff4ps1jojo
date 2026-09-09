@@ -8,8 +8,8 @@ void func_80103A28(void)
     func_80103B38();
     latch(0x80);
     txt_draw(0x2100);
-    func_800F8F74(0x4200);
-    func_800F8F74(0x420C);
+    cell_clear_bank(0x4200);
+    cell_clear_bank(0x420C);
     latch(0x32);
     cell_put(0x76);
     wnd_open(0);

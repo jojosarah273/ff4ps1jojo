@@ -8,7 +8,7 @@ void func_80105DB4(void)
     open_row(0xDC);
 L5DC8:
     for (;;) {
-        func_800FE7B0();
+        wnd_fx_7d_b();
         func_801096F0();
         func_801060A8();
         key_page(0xDC);
@@ -22,7 +22,7 @@ L5DC8:
     open_row(0x8C);
 L5E20:
     for (;;) {
-        func_800FE7B0();
+        wnd_fx_7d_b();
         func_801096F0();
         func_801764DC();
         row_page(2);
@@ -78,7 +78,7 @@ L5FB8:
     poll_pair(0xDC);
 L5FD8:
     for (;;) {
-        func_800FE7B0();
+        wnd_fx_7d_b();
         func_801096F0();
         func_801060A8();
         poll_pair(0xDC);
@@ -86,22 +86,22 @@ L5FD8:
             continue;
         break;
     }
-    func_800FE7B0();
+    wnd_fx_7d_b();
     func_801096F0();
     row_page(0x3D);
     sep_b();
-    func_800F8058(0x20);
+    cell_pos_back(0x20);
     cell_put(0x3D);
     row_page(0x3E);
-    func_800F8058();
+    cell_pos_back();
     cell_put(0x3E);
     func_801062E8();
     row_page(0x3D);
     sep_b();
-    func_800F8058(0x20);
+    cell_pos_back(0x20);
     cell_put(0x3D);
     row_page(0x3E);
-    func_800F8058();
+    cell_pos_back();
     cell_put(0x3E);
     func_801062E8();
     return;

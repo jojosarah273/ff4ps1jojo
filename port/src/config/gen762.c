@@ -13,9 +13,9 @@ void func_8013D5C8(void)
 L13d600:
     for (;;) {
         func_800F6DE8(0x340);
-        func_800F89D4(0x380);
+        cell_stamp8_9_b(0x380);
         func_800F6DE8(0x342);
-        func_800F89D4(0x382);
+        cell_stamp8_9_b(0x382);
         step2();
         step2();
         step2();

@@ -31,7 +31,7 @@ void func_80134E74(void)
     cell_poke0(cell_state(0x1A01));
     row_prep(0x20);
     sep_a();
-    func_800F4064(0x20);
+    cell_pos_fwd(0x20);
     row_prep_close();
     wnd_open(0x46);
     func_8011F8D4();

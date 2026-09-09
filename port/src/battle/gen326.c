@@ -10,7 +10,7 @@ void func_8010415C(void)
        +71DC(0x40) mid-close; 5574(2) advances each half. */
     latch(0x70);
     cell_put(7);
-    func_800F8F74(0x2115);
+    cell_clear_bank(0x2115);
     wnd_open_cur();
     tail(0x3D);
 L104198:
@@ -40,7 +40,7 @@ L104198:
     }
     latch(0x80);
     cell_put(7);
-    func_800F8F74(0x2115);
+    cell_clear_bank(0x2115);
     wnd_open(0x40);
     tail(0x3D);
 L104280:

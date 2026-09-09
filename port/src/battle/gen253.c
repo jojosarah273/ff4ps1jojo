@@ -30,7 +30,7 @@ L1628:
         txt_draw(0x30C);
         latch(0x78);
         sep_b();
-        func_800F7F48(cell_state(0x20));
+        cell_tick_sub(cell_state(0x20));
         io_poll(0x68);
         if (io_go() != 0)
             goto L16fc;

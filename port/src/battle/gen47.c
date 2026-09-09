@@ -11,7 +11,7 @@ void func_801488D4(void)
     txt_set_cur();
     if (gate(0x202) == 0)
         return;
-    func_800F8F74();
+    cell_clear_bank();
     txt_set_cur();
     if (gate(0x202) != 0)
         goto L148924;
@@ -31,19 +31,19 @@ L148964:
 L14896C:
     txt_set_cur();
     row_sel_cell_cur();
-    func_800F6C68();
+    cell_push_c8();
     cell_put(0x14);
-    func_800F6C68();
+    cell_push_c8();
     cell_put(0x15);
     latch(0xD);
     cell_put(0x16);
     txt_set_cur();
     sep_b();
-    func_800F8058(0x18);
+    cell_pos_back(0x18);
     cell_put(0xE);
     txt_set_cur();
     sep_b();
-    func_800F8058(0x18);
+    cell_pos_back(0x18);
     cell_put(0x10);
     txt_set_cur();
     cell_put(0x12);
@@ -58,9 +58,9 @@ L148a74:
         io_poll(0xFF);
         if (io_just() != 0)
             return;
-        func_800F9200();
+        cell_cursor_dec();
         row_read(0xF0);
-        func_800F7864();
+        cell_tick_half();
         sep_a();
         cell_poke0(cell_state(0xE));
         func_80094588();

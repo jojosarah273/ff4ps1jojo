@@ -19,8 +19,8 @@ void func_801569EC(void)
     row_info(0x98);
     row_info(0x9C);
     for (;;) {
-        func_800F6C68();
-        func_800F8960(0x397F);
+        cell_push_c8();
+        cell_pull_c8(0x397F);
         cell_step();
         step2();
         io_poll(0xFF);
@@ -50,8 +50,8 @@ Laf0:
         latch(4);
         cell_put(0xA9);
         for (;;) {
-            func_800F6C68();
-            func_800F8960(0x3A1F);
+            cell_push_c8();
+            cell_pull_c8(0x3A1F);
             io_poll(0xFF);
             if (io_just() != 0)
                 goto Lb9c;
@@ -102,8 +102,8 @@ Lc64:
         latch(4);
         cell_put(0xAA);
         for (;;) {
-            func_800F6C68();
-            func_800F8960(0x3B5F);
+            cell_push_c8();
+            cell_pull_c8(0x3B5F);
             cell_step();
             step2();
             poll_pair(0xAA);
@@ -168,8 +168,8 @@ Le18:
             goto Lf0c;
         cell_fmt2(0x9A);
         for (;;) {
-            func_800F6C68();
-            func_800F8960(0x405F);
+            cell_push_c8();
+            cell_pull_c8(0x405F);
             cell_step();
             step2();
             io_poll(0xFF);
@@ -180,8 +180,8 @@ Le18:
     Lf0c:
         cell_fmt2(0x9A);
         for (;;) {
-            func_800F6C68();
-            func_800F8960(0x405F);
+            cell_push_c8();
+            cell_pull_c8(0x405F);
             cell_step();
             step2();
             io_poll(0xFF);
@@ -192,12 +192,12 @@ Le18:
         row_prep(0x20);
         sep_a();
         row_read2(0x9A);
-        func_800F4064(0x3C);
-        func_800F8274(0x9A);
+        cell_pos_fwd(0x3C);
+        cell_put_hi9(0x9A);
         sep_a();
         row_read2(0x9C);
-        func_800F4064(2);
-        func_800F8274(0x9C);
+        cell_pos_fwd(2);
+        cell_put_hi9(0x9C);
         sep();
         row_prep_close();
     }
@@ -220,9 +220,9 @@ Lfc8:
         key_page(0xA9);
     }
     row_page(0xA9);
-    func_800F7864();
-    func_800F76E8();
-    func_800F9200();
+    cell_tick_half();
+    cell_flags_repack();
+    cell_cursor_dec();
     txt_set(0x35A0);
     row_close2();
     cell_draw(0x3604);

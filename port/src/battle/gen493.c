@@ -17,7 +17,7 @@ L103678:
         io_poll(0x20);
         if (io_go() != 0)
             goto L1036C0;
-        func_800F7864();
+        cell_tick_half();
         txt_draw(0x6FD);
         key_page(0x79);
     }
@@ -29,7 +29,7 @@ L1036C0:
     row_open_w(0x10);
     cell_put(0xAD);
     row_page(0xB9);
-    func_800F7864();
+    cell_tick_half();
     func_8017559C();
     key_page(0x79);
     row_page(0x79);
@@ -39,7 +39,7 @@ L1036C0:
     txt_set(0x6C3);
     if (gate(0x202) == 0)
         return;
-    func_800F8F74(0x6C3);
+    cell_clear_bank(0x6C3);
     txt_set(0x1700);
     if (gate(2) != 0)
         goto L103778;

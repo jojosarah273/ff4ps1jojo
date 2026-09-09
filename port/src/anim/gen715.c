@@ -13,8 +13,8 @@ L175CCC:
     for (;;) {
     L175cd0:
         for (;;) {
-            func_800F6C68();
-            func_800F8960(0xDDB);
+            cell_push_c8();
+            cell_pull_c8(0xDDB);
             cell_step();
             step2();
             row_read(0xF);
@@ -25,7 +25,7 @@ L175CCC:
     L175d20:
         for (;;) {
             latch_cur();
-            func_800F8960(0xDDB);
+            cell_pull_c8(0xDDB);
             step2();
             row_read(0xF);
             if (sel(0x202) != 0)

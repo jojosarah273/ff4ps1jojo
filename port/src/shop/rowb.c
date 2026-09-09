@@ -13,9 +13,9 @@ void func_80168E30(void)
     row_open3();
     wnd_open(0x37);
     row_open();
-    func_800F94B8();
+    cell_cursor_read();
     func_8011EB9C();
-    func_800F94B8();
+    cell_cursor_read();
     /* v1/v0 gate -> L168ED8 */
     return;
 }

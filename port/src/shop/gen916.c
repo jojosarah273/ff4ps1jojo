@@ -8,7 +8,7 @@ void func_8016FFC0(void)
     /* shop rows: 0x88 window + 0x2100/0x2115 titles; linear. */
     row_open2();
     sep();
-    func_800F9200();
+    cell_cursor_dec();
     row_pad();
     latch(0x80);
     txt_draw(0x2100);

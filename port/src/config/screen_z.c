@@ -15,7 +15,7 @@ L7a8:
     tail(0xAB);
 L7ec:
     for (;;) {
-        func_800F66D8(0x86);
+        cell_push_c8_sel(0x86);
         if (gate(0x202) == 0)
             latch(0x60);
         func_800F8674(0xAD);
@@ -26,7 +26,7 @@ L7ec:
             break;
     }
     for (;;) {
-        func_800F66D8(0x86);
+        cell_push_c8_sel(0x86);
         func_800F8674(0xAD);
         step2();
         cell_step();
@@ -87,7 +87,7 @@ L9e4:
     cell_put(0xB8);
 La0c:
     row_page(0xB7);
-    func_800F78C4(cell_state(0xB8));
+    cell_tick_or(cell_state(0xB8));
     if (func_800F7918(2) != 0)
         goto La6c;
     if (func_800F5F20(2) != 0)
@@ -107,7 +107,7 @@ La6c:
     sep();
     for (;;) {
         txt_cell(0x289C);
-        func_800F82EC(0x84);
+        cell_pull_c8_bank(0x84);
         step2();
         cell_step();
         poll_t(8);
@@ -123,8 +123,8 @@ La6c:
     page(0xE3);
 La6c_loop:
     for (;;) {
-        func_800F6C68();
-        func_800F82EC(0x84);
+        cell_push_c8();
+        cell_pull_c8_bank(0x84);
         step2();
         cell_step();
         poll_t(0xB);

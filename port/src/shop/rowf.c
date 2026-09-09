@@ -27,13 +27,13 @@ void func_801769B4(void)
     func_800F5024(cell_state(0x12));
     row_read2(0x12);
     sep_a();
-    func_800F4064(0x5000);
-    func_800F8274(0x12);
+    cell_pos_fwd(0x5000);
+    cell_put_hi9(0x12);
     row_sync2_cur();
     row_prep_close();
     latch(0x80);
     txt_draw(0x2115);
-    func_800F8F74(0x420B);
+    cell_clear_bank(0x420B);
     latch(1);
     txt_draw(0x4300);
     latch(0x18);

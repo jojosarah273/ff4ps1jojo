@@ -48,11 +48,11 @@ L78e0:
         latch(8);
         cell_put(8);
         for (;;) {
-            func_800F6C68();
+            cell_push_c8();
             func_801093B8();
-            func_800F8960(0x774);
+            cell_pull_c8(0x774);
             stat_sync();
-            func_800F8960(0x834);
+            cell_pull_c8(0x834);
             latch_cur();
             stat_sync();
             step2();
@@ -64,7 +64,7 @@ L78e0:
         }
         cell_fmt2(0x40);
         latch(0xC8);
-        func_800F8960(0x77C);
+        cell_pull_c8(0x77C);
         page(0x3D);
         txt_cell(0x713);
         cell_put(0x30);
@@ -73,9 +73,9 @@ L78e0:
         func_80174CE4();
         cell_fmt2(0x40);
         row_page(0x3A);
-        func_800F8960(0x77D);
+        cell_pull_c8(0x77D);
         row_page(0x3B);
-        func_800F8960(0x77E);
+        cell_pull_c8(0x77E);
         row_page(7);
         row_read(1);
         if (sel(0x202) != 0)

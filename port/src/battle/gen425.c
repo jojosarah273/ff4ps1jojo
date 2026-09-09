@@ -16,10 +16,10 @@ L113f5c:
         row_prep(0x20);
         row_read2(0x20);
         sep_a();
-        func_800F4064(0x100);
-        func_800F8274(0x18);
-        func_800F658C(0x6FB);
-        func_800F8274(0x1A);
+        cell_pos_fwd(0x100);
+        cell_put_hi9(0x18);
+        cell_push9(0x6FB);
+        cell_put_hi9(0x1A);
         row_sync2_cur();
         row_prep_close();
         func_80174F0C();
@@ -40,9 +40,9 @@ L113f5c:
         sep_a();
         cell_poke0(cell_state(0x8F));
     L11404C:
-        func_800F8960(0x302);
+        cell_pull_c8(0x302);
         row_page(0x91);
-        func_800F8960(0x303);
+        cell_pull_c8(0x303);
         key_page(0x20);
         row_page(0x20);
         if (io_press(cell_state(0x90)) == 0)

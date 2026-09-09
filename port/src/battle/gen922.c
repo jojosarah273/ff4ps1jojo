@@ -4,11 +4,11 @@
  */
 #include "ff4_window.h"
 extern int func_8007259C();
-extern int func_800F5C64();
-extern int func_800F5E48();
-extern int func_800F71DC();
-extern int func_800F9330();
-extern int func_800F95A0();
+
+
+
+
+
 extern int func_80148CAC();
 extern int func_8014E7C4();
 
@@ -24,7 +24,7 @@ void func_8014E75C(void)
     func_8007259C();
     func_8007259C();
     row_close();
-    func_800F5E48();
+    cell_set50_from54();
     iVar1 = poll_go(0x202);
   } while (iVar1 != 0);
   func_80148CAC();

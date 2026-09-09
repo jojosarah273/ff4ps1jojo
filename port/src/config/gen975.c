@@ -16,7 +16,7 @@ void func_8012CD6C(void)
 L12CDA4:
     latch(7);
     txt_draw(0x1A03);
-    func_800F8F74(0x1B19);
+    cell_clear_bank(0x1B19);
     page(0x93);
     label(0x1BA5);
     page_open(0x1A65);

@@ -13,7 +13,7 @@ void func_8010F68C(void)
     open_row(0x7A);
 L10f6ac:
     for (;;) {
-        func_800FE778();
+        wnd_fx_7d();
         row_page(0x20);
         if (gate(2) != 0)
             goto L10F784;
@@ -23,7 +23,7 @@ L10f6ac:
         if (sel(2) != 0)
             goto L10F784;
         row_page(0x20);
-        func_800F7864();
+        cell_tick_half();
         cell_put(0x22);
         row_page(0x5C);
         sep_a();
@@ -52,7 +52,7 @@ L10f6ac:
         open_row(5);
         open_row(4);
     L10F81C:
-        func_800FE870();
+        cell_clear_pad();
         func_8011416C();
         latch(1);
         cell_put(0xD5);

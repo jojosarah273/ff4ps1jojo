@@ -9,11 +9,11 @@ void func_8013D428(void)
     row_prep(0x20);
     do {
         func_800F6DE8(0x340);
-        func_800F89D4(0x344);
+        cell_stamp8_9_b(0x344);
         func_800F6DE8(0x342);
         sep_a();
-        func_800F4064(2);
-        func_800F89D4(0x346);
+        cell_pos_fwd(2);
+        cell_stamp8_9_b(0x346);
         poll_pair_cur();
         poll_pair_cur();
         poll_pair_cur();

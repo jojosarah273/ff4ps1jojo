@@ -14,14 +14,14 @@ void func_80110334(void)
     open_row(0x7A);
 L11035c:
     for (;;) {
-        func_800FE778();
+        wnd_fx_7d();
         row_page(0x89);
         io_poll(0x10);
         if (io_go() != 0)
             goto L11038C;
         txt_draw(0x2100);
     L11038C:
-        func_800FE870();
+        cell_clear_pad();
         func_80110474();
         latch(0x68);
         cell_put(0xC);
@@ -41,7 +41,7 @@ L11035c:
         txt_draw(0x411);
         txt_draw(0x415);
         page(0x89);
-        func_800F5E48();
+        cell_set50_from54();
         tail(0x89);
         if (poll_go(0x202) != 0)
             continue;

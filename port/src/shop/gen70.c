@@ -7,7 +7,7 @@ void func_8016543C(void)
 {
     /* options sub-screen: 0x289C/0x289D/0x291C stat rows, 0xB5/0x9A/0xB9/
        0xB3/0xB7 windows; 80152640 intro, 8015240C detail; three loops. */
-    func_800F9200();
+    cell_cursor_dec();
     cell_put(0xE5);
     draw_pad_cur();
     latch(0xF);
@@ -15,8 +15,8 @@ void func_8016543C(void)
     sep();
 L1654a4:
     for (;;) {
-        func_800F6C68();
-        func_800F8960(0x289C);
+        cell_push_c8();
+        cell_pull_c8(0x289C);
         cell_step();
         step2();
         io_poll(0xFF);
@@ -34,7 +34,7 @@ L165504:
             goto L165564;
         cell_fmt2(0x9A);
         txt_cell(0x289D);
-        func_800F8960(0x291C);
+        cell_pull_c8(0x291C);
         key_page(0x9A);
     L165564:
         cell_step();
@@ -54,7 +54,7 @@ L1655d4:
         txt_cell(0x1560);
         if (gate(0x202) != 0)
             goto L1656DC;
-        func_800F6D70(0x291C);
+        cell_push_c8_d58(0x291C);
         cell_put(0xB9);
         io_poll(0xFF);
         if (io_just() != 0)

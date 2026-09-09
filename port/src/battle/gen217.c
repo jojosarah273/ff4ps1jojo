@@ -106,7 +106,7 @@ L1294:
             continue;
         break;
     }
-    func_800F8F74(0x1728);
+    cell_clear_bank(0x1728);
     func_8011EA5C();
     return;
 }

@@ -11,7 +11,7 @@ void func_80136494(void)
     txt_set(0x1B7C);
     poll_spin();
 L4c8:
-    func_800F61E8();
+    cell_set50_from40();
     cell_put(0x45);
     txt_draw(0x1B75);
     txt_set(0x1B7B);
@@ -33,10 +33,10 @@ L560:
         row_read2(0x37);
         sep_a();
         cell_peek0(cell_state(0x3B));
-        func_800F8274(0x3B);
+        cell_put_hi9(0x3B);
         row_read2(0x39);
         cell_peek0(cell_state(0x3D));
-        func_800F8274(0x3D);
+        cell_put_hi9(0x3D);
         row_prep_close();
         poll_pair(0x45);
         if (poll_go(0x202) != 0)
@@ -52,10 +52,10 @@ L560:
     row_read2(0x37);
     sep_b();
     func_800F7FCC(cell_state(0x3B));
-    func_800F8274(0x37);
+    cell_put_hi9(0x37);
     row_read2(0x39);
     func_800F7FCC(cell_state(0x3D));
-    func_800F8274(0x39);
+    cell_put_hi9(0x39);
     row_prep_close();
     row_page(0x3A);
     if (gate(0x8080) != 0)
@@ -74,7 +74,7 @@ L560:
     txt_draw(0xFE1D);
     txt_draw(0xFE21);
     txt_draw(0xFE25);
-    func_800F8F74(0x1A73);
+    cell_clear_bank(0x1A73);
     func_80125934();
     func_8011F684();
     func_80120FBC();
@@ -104,7 +104,7 @@ L758:
     txt_set(0x1B7B);
     cell_put(0x43);
     cell_fmt2(0x43);
-    func_800F6D70(0x1B55);
+    cell_push_c8_d58(0x1B55);
     cell_draw(0x1440);
     txt_set(0x1B75);
     cell_draw(0x1441);
@@ -121,7 +121,7 @@ L758:
         func_8011F684();
         func_8011F884();
         row_page(2);
-        func_800F78C4(cell_state(3));
+        cell_tick_or(cell_state(3));
         if (func_800F7918(0x202) != 0)
             continue;
         break;

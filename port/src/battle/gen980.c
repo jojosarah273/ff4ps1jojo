@@ -17,5 +17,5 @@ void func_8011B51C(void)
     } while (1);
     page(0x3D);
     func_800F4A7C(0x12E0);
-    func_800F885C(0x12E0);
+    cell_pull_c8_off(0x12E0);
 }

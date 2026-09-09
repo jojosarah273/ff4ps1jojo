@@ -21,12 +21,12 @@ void func_8011D068(void)
     row_open_w(0x20);
     cell_put(0x9A);
 L11D0D0:
-    func_800F76BC(cell_state(0x9A));
-    func_800F76E8();
-    func_800F7CC8(cell_state(0x99));
-    func_800F76BC(cell_state(0x9A));
-    func_800F76E8();
-    func_800F7CC8(cell_state(0x99));
+    cell_word_half(cell_state(0x9A));
+    cell_flags_repack();
+    cell_word_half_s(cell_state(0x99));
+    cell_word_half(cell_state(0x9A));
+    cell_flags_repack();
+    cell_word_half_s(cell_state(0x99));
     row_page(0x43);
     row_read(0x1F);
     row_sel_cell_cur();
@@ -54,7 +54,7 @@ L11D178:
     open_row(0x98);
     latch(0x40);
     sep_b();
-    func_800F7F48(cell_state(0x97));
+    cell_tick_sub(cell_state(0x97));
     cell_put(0x95);
     open_row(0x96);
     row_page(0x99);

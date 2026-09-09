@@ -9,16 +9,16 @@ void func_801225C0(void)
        texts; 80123CB4 + 801386C8 preps; loops at L122620 with the
        8012B168/80120070 sub-dispatchers; 80126550/80122538 row draws. */
     latch(0x7E);
-    func_800F9200();
+    cell_cursor_dec();
     row_pad();
     func_80123CB4();
     func_801386C8();
-    func_800F8F74(0x1A03);
+    cell_clear_bank(0x1A03);
     txt_set(0x16B7);
     if (gate(0x202) != 0)
         goto L122620;
-    func_800F8F74(0x1A76);
-    func_800F8F74(0x1A77);
+    cell_clear_bank(0x1A76);
+    cell_clear_bank(0x1A77);
 L122620:
     for (;;) {
         txt_set(0x1A76);
@@ -51,7 +51,7 @@ L122620:
         if (sel(2) != 0)
             goto L122748;
         txt_set(0x1A76);
-        func_800F61E8();
+        cell_set50_from40();
         io_poll(8);
         if (io_go() == 0)
             goto L122740;

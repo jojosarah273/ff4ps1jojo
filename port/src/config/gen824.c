@@ -15,7 +15,7 @@ void func_8015F5A0(void)
     sep_b();
 L15f5e8:
     for (;;) {
-        func_800F7CC8(cell_state(0x28A4));
+        cell_word_half_s(cell_state(0x28A4));
         func_800F7D0C();
         poll_pair_cur();
         if (poll_go(0x202) != 0)

@@ -31,9 +31,9 @@ void func_8015D4C8(void)
     cell_draw(0x2A06);
     row_prep(0x20);
     page(0xA6);
-    func_800F6BE0(0x2009);
+    cell_sink8_9(0x2009);
     func_80152BC4();
-    func_800F8274(0xA9);
+    cell_put_hi9(0xA9);
     row_read2(0xA9);
     if (func_800F64EC(0x202) != 0)
         goto L15D5D8;

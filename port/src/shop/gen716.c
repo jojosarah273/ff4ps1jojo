@@ -10,7 +10,7 @@ void func_8016E560(void)
     sep();
 L16e5a8:
     for (;;) {
-        func_800F6D70(0x3540);
+        cell_push_c8_d58(0x3540);
         if (gate(0x202) != 0)
             goto L16E5E8;
         txt_cell(0x2003);
@@ -21,7 +21,7 @@ L16e5a8:
     L16E5E8:
         row_prep(0x20);
         sep_a();
-        func_800F4064(0x80);
+        cell_pos_fwd(0x80);
         sep();
         row_prep_close();
         step2();

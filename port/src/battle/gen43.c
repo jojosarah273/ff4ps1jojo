@@ -15,19 +15,19 @@ void func_8010E58C(void)
     latch_cur();
     txt_draw(0x420C);
     latch(0xF7);
-    func_800F81E8();
+    cell_pull_c8_lo();
     latch(0x80);
-    func_800F81E8();
+    cell_pull_c8_lo();
     latch(0xEB);
-    func_800F81E8();
+    cell_pull_c8_lo();
     latch(0xF7);
-    func_800F81E8();
+    cell_pull_c8_lo();
     latch(0x78);
-    func_800F81E8();
+    cell_pull_c8_lo();
     latch(0xEC);
-    func_800F81E8();
+    cell_pull_c8_lo();
     latch_cur();
-    func_800F81E8();
+    cell_pull_c8_lo();
     latch(0x41);
     txt_draw(0x4360);
     latch(0x26);
@@ -47,7 +47,7 @@ void func_8010E58C(void)
     open_row(0x24);
 LE738:
     for (;;) {
-        func_800FE7B0();
+        wnd_fx_7d_b();
         latch(0x40);
         txt_draw(0x420C);
         row_page(0x24);
@@ -62,7 +62,7 @@ LE738:
     }
 LE790:
     for (;;) {
-        func_800FE7B0();
+        wnd_fx_7d_b();
         latch(0x40);
         txt_draw(0x420C);
         func_8010E878();
@@ -79,7 +79,7 @@ LE7e0:
     cell_put(0x24);
 LE7f0:
     for (;;) {
-        func_800FE7B0();
+        wnd_fx_7d_b();
         latch(0x40);
         txt_draw(0x420C);
         row_page(0x24);

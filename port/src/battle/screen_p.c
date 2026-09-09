@@ -7,8 +7,8 @@ void func_80156480(void)
 {
 L48c:
     for (;;) {
-        func_800F6C68();
-        func_800F8960(0x531F);
+        cell_push_c8();
+        cell_pull_c8(0x531F);
         cell_step();
         step2();
         io_poll(0xFF);
@@ -38,8 +38,8 @@ L504:
         latch(4);
         cell_put(0xA9);
         for (;;) {
-            func_800F6C68();
-            func_800F8960(0x53BF);
+            cell_push_c8();
+            cell_pull_c8(0x53BF);
             io_poll(0xFF);
             if (io_just() != 0)
                 goto L5b0;
@@ -90,8 +90,8 @@ L678:
         latch(4);
         cell_put(0xAA);
         for (;;) {
-            func_800F6C68();
-            func_800F8960(0x54FF);
+            cell_push_c8();
+            cell_pull_c8(0x54FF);
             cell_step();
             step2();
             poll_pair(0xAA);
@@ -155,8 +155,8 @@ L824:
             goto L918;
         cell_fmt2(0x9A);
         for (;;) {
-            func_800F6C68();
-            func_800F8960(0x59FF);
+            cell_push_c8();
+            cell_pull_c8(0x59FF);
             cell_step();
             step2();
             io_poll(0xFF);
@@ -167,8 +167,8 @@ L824:
     L918:
         cell_fmt2(0x9A);
         for (;;) {
-            func_800F6C68();
-            func_800F8960(0x59FF);
+            cell_push_c8();
+            cell_pull_c8(0x59FF);
             cell_step();
             step2();
             io_poll(0xFF);
@@ -179,12 +179,12 @@ L824:
         row_prep(0x20);
         sep_a();
         row_read2(0x9A);
-        func_800F4064(0x3C);
-        func_800F8274(0x9A);
+        cell_pos_fwd(0x3C);
+        cell_put_hi9(0x9A);
         sep_a();
         row_read2(0x9C);
-        func_800F4064(2);
-        func_800F8274(0x9C);
+        cell_pos_fwd(2);
+        cell_put_hi9(0x9C);
         sep();
         row_prep_close();
     }

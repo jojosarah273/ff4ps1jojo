@@ -7,7 +7,7 @@ void func_80171608(void)
 {
     row_open2();
     latch(0x15);
-    func_800F9200();
+    cell_cursor_dec();
     row_pad();
     txt_set(0x170F);
     if (gate(2) != 0)
@@ -74,7 +74,7 @@ L830:
         txt_cell(0xC034);
         sep_a();
         cell_poke0(cell_state(0xC));
-        func_800F8960(0x490);
+        cell_pull_c8(0x490);
         row_page(0xD);
         row_open_w0();
         row_read(1);
@@ -85,11 +85,11 @@ L830:
         txt_cell(0xC035);
         sep_a();
         cell_poke0(cell_state(0xE));
-        func_800F8960(0x491);
+        cell_pull_c8(0x491);
         txt_cell(0xC036);
-        func_800F8960(0x492);
+        cell_pull_c8(0x492);
         txt_cell(0xC037);
-        func_800F8960(0x493);
+        cell_pull_c8(0x493);
         cell_step();
         cell_step();
         cell_step();

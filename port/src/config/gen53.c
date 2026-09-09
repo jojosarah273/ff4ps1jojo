@@ -19,7 +19,7 @@ LCC30:
     txt_draw(0xF11C);
     latch(0x14);
     txt_draw(0xF118);
-    func_800F8F74(0xF116);
+    cell_clear_bank(0xF116);
     latch(0xAE);
     goto LCCC0;
 LCC78:
@@ -39,7 +39,7 @@ LCCC0:
     sep();
 LCCFC:
     for (;;) {
-        func_800F9200();
+        cell_cursor_dec();
         func_80143E44();
         row_close2();
         sep_a();
@@ -59,11 +59,11 @@ LCCFC:
     txt_draw(0xF111);
     txt_cell(0xF054);
     sep_b();
-    func_800F8058(8);
+    cell_pos_back(8);
     txt_draw(0xF112);
-    func_800F8F74(0xF115);
-    func_800F8F74(0xF114);
-    func_800F8F74(0xF117);
+    cell_clear_bank(0xF115);
+    cell_clear_bank(0xF114);
+    cell_clear_bank(0xF117);
 LCDD4:
     for (;;) {
         func_80140558();

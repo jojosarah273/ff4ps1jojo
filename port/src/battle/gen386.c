@@ -13,7 +13,7 @@ void func_80110818(void)
         func_80110FA4();
         latch(0x24);
         sep_b();
-        func_800F7F48(cell_state(0x24));
+        cell_tick_sub(cell_state(0x24));
         cell_put(0xB9);
         func_80173780();
         func_80110BC8();

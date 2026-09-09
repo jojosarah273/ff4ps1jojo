@@ -22,12 +22,12 @@ L514C:
     row_page(0x7A);
     row_read(0x20);
     row_prep_cur();
-    func_800F6CF4();
-    func_800F81B0(0xCFD);
-    func_800F6CF4();
-    func_800F81B0(0xD1D);
-    func_800F6CF4();
-    func_800F81B0(0xD5D);
+    cell_push9_bank();
+    cell_pull9_hi(0xCFD);
+    cell_push9_bank();
+    cell_pull9_hi(0xD1D);
+    cell_push9_bank();
+    cell_pull9_hi(0xD5D);
     row_sync2_cur();
     row_prep_close();
     txt_set(0xFDD);
@@ -46,7 +46,7 @@ L5268:
     draw_pad_cur();
 L5290:
     for (;;) {
-        func_800F6C68();
+        cell_push_c8();
         cell_step();
         step2();
         poll_t(0x10);
@@ -55,13 +55,13 @@ L5290:
     }
 L52C4:
     row_page(0x7A);
-    func_800F7864();
+    cell_tick_half();
     row_read(0x1E);
     draw_pad_cur();
 L5300:
     for (;;) {
-        func_800F6C68();
-        func_800F8960(0xDBD);
+        cell_push_c8();
+        cell_pull_c8(0xDBD);
         cell_step();
         row_read(0x1F);
         step2();
@@ -81,15 +81,15 @@ L5374:
     row_open_w(0x40);
 L5414:
     row_prep(0x20);
-    func_800F6CF4();
-    func_800F81B0(0xCFD);
-    func_800F6CF4();
-    func_800F81B0(0xCF7);
-    func_800F81B0(0xD7F);
-    func_800F6CF4();
-    func_800F81B0(0xD01);
-    func_800F6CF4();
-    func_800F81B0(0xD7D);
+    cell_push9_bank();
+    cell_pull9_hi(0xCFD);
+    cell_push9_bank();
+    cell_pull9_hi(0xCF7);
+    cell_pull9_hi(0xD7F);
+    cell_push9_bank();
+    cell_pull9_hi(0xD01);
+    cell_push9_bank();
+    cell_pull9_hi(0xD7D);
     row_sync2_cur();
     row_prep_close();
     return;

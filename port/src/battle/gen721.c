@@ -10,16 +10,16 @@ void func_8014C714(void)
     txt_set_cur();
     if (gate(0x202) == 0)
         return;
-    func_800F8F74();
+    cell_clear_bank();
     txt_set(0x1802);
     row_read(0x1F);
-    func_800F6C68();
+    cell_push_c8();
 L14c78c:
     for (;;) {
         func_8007259C();
         cell_put(2);
         func_8014C81C();
-        func_800F5E48();
+        cell_set50_from54();
         if (poll_go(0x202) != 0)
             continue;
         break;

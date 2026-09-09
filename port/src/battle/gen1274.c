@@ -15,7 +15,7 @@ L10c3ac:
     for (;;) {
         /* v0 gates -> L10C494 / L10C98C routes */
         /* L10C494 (cancel route): gates -> L10C8E8 / L10C544 */
-        func_800F9200();
+        cell_cursor_dec();
         row_close2();
         /* both routes converge here */
     L10C8E8:

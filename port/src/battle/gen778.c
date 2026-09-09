@@ -9,8 +9,8 @@ void func_80110024(void)
     txt_draw(2767);
     wnd_open(16);
     label(2770);
-    func_800F8F74(2765);
-    func_800F8F74(2766);
+    cell_clear_bank(2765);
+    cell_clear_bank(2766);
     func_80115BCC();
     func_8011053C();
     wnd_open(48);

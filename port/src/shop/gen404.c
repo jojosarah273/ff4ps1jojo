@@ -29,7 +29,7 @@ L166a44:
         func_80070174();
         txt_set_cur();
         row_read(7);
-        func_800F6C68();
+        cell_push_c8();
         func_800F8E50();
         txt_set_cur();
         row_read(0xF);

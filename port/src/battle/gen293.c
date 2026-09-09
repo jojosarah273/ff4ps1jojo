@@ -23,7 +23,7 @@ L144a50:
             goto L144AC8;
     L144A80:
         txt_cell(0x340);
-        func_800F8960();
+        cell_pull_c8();
         goto L144AD8;
     L144AB0:
         txt_set_cur();
@@ -31,13 +31,13 @@ L144a50:
             goto L144A80;
     L144AC8:
         txt_cell(0x340);
-        func_800F8960(0x340);
+        cell_pull_c8(0x340);
     L144AD8:
         txt_cell_cur();
         sep_a();
         cell_poke0(cell_state(1));
         cell_poke0(cell_state_of());
-        func_800F8960(0x341);
+        cell_pull_c8(0x341);
         cell_step();
         cell_step();
         step2();
@@ -52,12 +52,12 @@ L144a50:
     sep();
 L144b90:
     for (;;) {
-        func_800F6D70();
-        func_800F7864();
-        func_800F76E8();
-        func_800F7CC8(cell_state_of());
+        cell_push_c8_d58();
+        cell_tick_half();
+        cell_flags_repack();
+        cell_word_half_s(cell_state_of());
         sep_b();
-        func_800F7CC8(cell_state_of());
+        cell_word_half_s(cell_state_of());
         step2();
         step2();
         poll_t(0x78);

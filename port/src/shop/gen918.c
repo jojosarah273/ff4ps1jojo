@@ -11,11 +11,11 @@ void func_8016ED64(void)
     row_open2();
     row_open3();
     latch(2);
-    func_800F81E8(0x64);
+    cell_pull_c8_lo(0x64);
     latch(0xF0);
-    func_800F81E8(0x6A);
+    cell_pull_c8_lo(0x6A);
     latch(0xD);
-    func_800F81E8(0x6B);
+    cell_pull_c8_lo(0x6B);
     func_8016EF88();
     return;
 }

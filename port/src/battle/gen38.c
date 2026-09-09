@@ -16,12 +16,12 @@ L7560:
     row_read(0xF);
     cell_put(0x13);
     open_row(0x12);
-    func_800F76BC(cell_state(0x13));
-    func_800F76E8();
-    func_800F7CC8(cell_state(0x12));
-    func_800F76BC(cell_state(0x13));
-    func_800F76E8();
-    func_800F7CC8(cell_state(0x12));
+    cell_word_half(cell_state(0x13));
+    cell_flags_repack();
+    cell_word_half_s(cell_state(0x12));
+    cell_word_half(cell_state(0x13));
+    cell_flags_repack();
+    cell_word_half_s(cell_state(0x12));
     row_page(0x12);
     sep_a();
     row_open_w(4);
@@ -35,9 +35,9 @@ L7560:
     tail(0x14);
     wnd_open(0x834);
     tail(0x16);
-    func_800F8F74(0x2115);
-    func_800FCC84();
-    func_800F8F74(0x4300);
+    cell_clear_bank(0x2115);
+    wnd_fx_tags();
+    cell_clear_bank(0x4300);
     latch(4);
     cell_put(0x11);
 L7668:
@@ -56,7 +56,7 @@ L7668:
         row_page(0x13);
         row_open_w0();
         cell_put(0x13);
-        func_800F8F74(0x420B);
+        cell_clear_bank(0x420B);
         page(0x14);
         label(0x4302);
         page(0x12);
@@ -72,7 +72,7 @@ L7668:
         row_open_w0();
         cell_put(0x13);
         sep_b();
-        func_800F8058(0x30);
+        cell_pos_back(0x30);
         if (io_go() == 0)
             goto L7790;
         row_read(3);

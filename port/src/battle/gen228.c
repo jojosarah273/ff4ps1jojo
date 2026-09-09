@@ -93,11 +93,11 @@ L3a18:
             cell_put_cur();
             txt_cell(0xEBE6);
             sep_b();
-            func_800F7F48(cell_state_of());
+            cell_tick_sub(cell_state_of());
             cell_draw(0xEBE6);
             txt_cell(0xEC0A);
             sep_b();
-            func_800F8058(4);
+            cell_pos_back(4);
             cell_draw(0xEC0A);
             cell_step();
             poll_t(0x24);
@@ -105,12 +105,12 @@ L3a18:
                 break;
         }
         row_close();
-        func_800F5E48();
+        cell_set50_from54();
         if (poll_go(0x202) != 0)
             continue;
         break;
     }
-    func_800F8F74(0xEF87);
+    cell_clear_bank(0xEF87);
     func_80148C6C();
     func_801452C8();
     return;

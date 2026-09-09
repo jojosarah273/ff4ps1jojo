@@ -13,13 +13,13 @@ L142498:
         txt_cell_cur();
         sep_a();
         cell_poke0(cell_state_of());
-        func_800F8960(0x340);
+        cell_pull_c8(0x340);
         txt_cell_cur();
         sep_a();
         cell_poke0(cell_state_of());
-        func_800F8960(0x341);
-        func_800F6C68();
-        func_800F8960(0x342);
+        cell_pull_c8(0x341);
+        cell_push_c8();
+        cell_pull_c8(0x342);
         txt_set(0x6CC0);
         if (gate(2) != 0)
             goto L142574;
@@ -27,18 +27,18 @@ L142498:
         sep_a();
         cell_poke0(cell_state_of());
         sep_b();
-        func_800F8058(0x10);
-        func_800F8960(0x340);
+        cell_pos_back(0x10);
+        cell_pull_c8(0x340);
         latch(0x7F);
         goto L1425A4;
     L142574:
         txt_cell_cur();
         sep_a();
         cell_poke0(cell_state_of());
-        func_800F8960(0x340);
+        cell_pull_c8(0x340);
         latch(0x3F);
     L1425A4:
-        func_800F8960(0x343);
+        cell_pull_c8(0x343);
         step2();
         step2();
         step2();

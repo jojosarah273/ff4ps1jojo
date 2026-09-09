@@ -11,15 +11,15 @@ void func_80124D08(void)
     row_sync();
     func_80124B74();
     row_prep(0x20);
-    func_800F9410();
+    cell_cursor_adv2();
     sep_a();
-    func_800F4064(0xE);
+    cell_pos_fwd(0xE);
     row_prep_close();
     page(0x41);
 L124d70:
     for (;;) {
         txt_cell(0x163);
-        func_800F82EC(0x29);
+        cell_pull_c8_bank(0x29);
         poll_pair_cur();
         poll_pair_cur();
         cell_step();

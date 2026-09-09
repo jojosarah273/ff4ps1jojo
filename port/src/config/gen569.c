@@ -10,16 +10,16 @@ void func_80125670(void)
     page(0x41);
     row_prep(0x20);
     row_sync2(5);
-    func_800F8274(0x45);
+    cell_put_hi9(0x45);
     cell_fmt2(0x41);
 L1256a8:
     for (;;) {
         sep_a();
         cell_peek0(cell_state(0x1A71));
-        func_800F89D4();
-        func_800F89D4();
-        func_800F89D4();
-        func_800F89D4();
+        cell_stamp8_9_b();
+        cell_stamp8_9_b();
+        cell_stamp8_9_b();
+        cell_stamp8_9_b();
         step2();
         step2();
         step2();

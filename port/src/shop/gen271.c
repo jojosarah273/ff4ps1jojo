@@ -11,11 +11,11 @@ void func_80168F1C(void)
     txt_draw(62526);
     latch(1);
     txt_draw(62528);
-    func_800F8F74(62529);
-    func_800F8F74(62530);
+    cell_clear_bank(62529);
+    cell_clear_bank(62530);
     row_open2();
     sep();
-    func_800F9200();
+    cell_cursor_dec();
     row_pad();
     latch(67);
     txt_draw(17152);

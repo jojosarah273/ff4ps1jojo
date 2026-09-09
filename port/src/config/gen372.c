@@ -9,7 +9,7 @@ void func_8013F354(void)
        cells, 64EC(2) gates; loop L13F3BC (7B40/5C64). */
     row_open();
     row_prep(0x20);
-    func_800F922C();
+    cell_cursor_ret2();
     func_800F8FD8(0x20);
     func_800F8FD8(0x22);
     row_read2(0x1C);
@@ -27,23 +27,23 @@ L13f3bc:
         sep_b();
         row_read2(0x22);
         func_800F7FCC(cell_state(0x1E));
-        func_800F8274(0x22);
+        cell_put_hi9(0x22);
         if (io_go() != 0)
             goto L13F444;
         row_read2(0x22);
         cell_peek0(cell_state(0x1E));
-        func_800F8274(0x22);
+        cell_put_hi9(0x22);
         sep_a();
     L13F444:
         func_800F7B40(cell_state(0x20));
         func_800F7B7C();
-        func_800F5E48();
+        cell_set50_from54();
         if (poll_go(0x202) != 0)
             continue;
         break;
     }
 L13F474:
-    func_800F9410();
+    cell_cursor_adv2();
     row_prep_close();
     row_close();
     return;

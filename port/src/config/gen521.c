@@ -11,7 +11,7 @@ void func_80150A30(void)
     row_prep_cur();
     row_open2();
     row_open3();
-    func_800F922C();
+    cell_cursor_ret2();
     row_open();
     row_sync();
     func_800F54B8();
@@ -20,16 +20,16 @@ void func_80150A30(void)
     row_prep(0x10);
     wnd_open_cur();
     row_open();
-    func_800F94B8();
+    cell_cursor_read();
     latch(0x7E);
-    func_800F9200();
+    cell_cursor_dec();
     row_pad();
     func_801582D8();
     row_prep(0x30);
     row_done();
     row_close();
-    func_800F9410();
-    func_800F94B8();
+    cell_cursor_adv2();
+    cell_cursor_read();
     row_pad();
     return;
 }

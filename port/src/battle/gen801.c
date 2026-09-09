@@ -7,7 +7,7 @@ void func_8011B7B4(void)
 {
     /* battle rows: 0x3D/0x3E windows, 0xFE5/0x1701 texts; gates
        6434(0x80/2) route the 4008(0x20) reads. */
-    func_800F9200();
+    cell_cursor_dec();
     cell_put(0x3D);
     open_row(0x3E);
     txt_set(0xFE5);

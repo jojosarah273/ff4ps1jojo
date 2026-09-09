@@ -3,11 +3,10 @@
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-extern int func_800F5B8C();
-extern int func_800F5DA0();
-extern int func_800F654C();
-extern int func_800F824C();
-extern int func_800FE778();
+
+
+
+
 
 void func_801068B0(void)
 
@@ -17,7 +16,7 @@ void func_801068B0(void)
   latch(8);
   cell_put(7);
   do {
-    func_800FE778();
+    wnd_fx_7d();
     poll_pair(0xbb);
     poll_pair(0xbb);
     poll_pair(7);

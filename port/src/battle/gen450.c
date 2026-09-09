@@ -7,13 +7,13 @@ extern u8 *D_8019ED68;
 extern u8 *D_8019ED50;
 void func_8010F2F4(void)
 {
-    func_800F8F74(0x1704);
+    cell_clear_bank(0x1704);
     open_row(0x20);
     open_row(0x24);
     func_8010F484();
     do {
-        func_800FE778();
-        func_800FE870();
+        wnd_fx_7d();
+        cell_clear_pad();
         func_8011416C();
         key_page(0x20);
         row_page(0x24);
@@ -45,7 +45,7 @@ void func_8010F2F4(void)
         func_8010F4DC();
         func_80118938();
         row_close();
-        func_800F5E48();
+        cell_set50_from54();
     } while (poll_go(0x202) != 0);
     func_8011EA5C();
 }

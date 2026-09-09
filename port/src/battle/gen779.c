@@ -14,13 +14,13 @@ L10af5c:
         poll_t_cur();
         if (io_just() != 0)
             goto L10AF94;
-        func_800F5E48();
+        cell_set50_from54();
         sep_a();
         row_open_w(0xF);
     }
 L10AF94:
     txt_cell_cur();
-    func_800F78C4(cell_state_of());
+    cell_tick_or(cell_state_of());
     if (func_800F7918(0x202) != 0)
         goto L10AFF0;
     latch(0xFF);

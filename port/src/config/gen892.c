@@ -12,7 +12,7 @@ void func_8013AA08(void)
     row_read(0x1F);
     txt_draw(0x1BA8);
     row_prep(0x20);
-    func_800F658C(0x16AA);
+    cell_push9(0x16AA);
     *D_8019ED44 = (u16)(*D_8019ED44 >> 5);
     row_prep_close();
     row_read(0x1F);

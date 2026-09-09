@@ -30,12 +30,12 @@ L16a248:
             cell_put(8);
         L16a2a8:
             for (;;) {
-                func_800F66D8();
+                cell_push_c8_sel();
                 func_800F8A8C(0x53);
                 row_prep(0x20);
                 func_800F62F0(0x53);
                 sep_a();
-                func_800F4064(0x20);
+                cell_pos_fwd(0x20);
                 sep();
                 row_prep_close();
                 cell_step();

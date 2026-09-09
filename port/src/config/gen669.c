@@ -18,7 +18,7 @@ void func_80139CF4(void)
     func_8016EA7C();
     func_80126610();
     latch(0x13);
-    func_800F81E8(0x212C);
+    cell_pull_c8_lo(0x212C);
     wnd_open(0x4040);
     tail(0x1D);
     wnd_open_cur();
@@ -35,7 +35,7 @@ void func_80139CF4(void)
     func_80139E34();
     func_80126610();
     latch(0x1F);
-    func_800F81E8(0x212C);
+    cell_pull_c8_lo(0x212C);
     func_801240A8();
     func_801240D0();
     func_80126418();

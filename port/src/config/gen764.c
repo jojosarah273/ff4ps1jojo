@@ -29,7 +29,7 @@ L139B9C:
 L139bd4:
     for (;;) {
         func_80139C0C();
-        func_800F61E8();
+        cell_set50_from40();
         io_poll(5);
         if (io_just() == 0)
             continue;

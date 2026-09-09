@@ -12,7 +12,7 @@ void func_80111B14(void)
     latch(88);
     cell_put(46);
     func_80176060();
-    func_800F8F74(5888);
+    cell_clear_bank(5888);
     latch(7);
     txt_draw(5892);
     latch(1);
@@ -21,6 +21,6 @@ void func_80111B14(void)
     latch(16);
     cell_put(173);
     func_80111BBC();
-    func_800FE870();
+    cell_clear_pad();
     func_80111C2C();
 }

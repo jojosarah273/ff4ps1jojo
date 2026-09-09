@@ -19,8 +19,8 @@ L7510:
         row_open();
         tail(0x47);
         cell_put_cur();
-        func_800F6C68();
-        func_800F8960(0xEFC9);
+        cell_push_c8();
+        cell_pull_c8(0xEFC9);
         row_open();
         txt_cell(0x29C5);
         io_poll(0xFF);
@@ -54,32 +54,32 @@ L7510:
         row_read(0x3F);
     L7684:
         row_close();
-        func_800F8960(0xEFC4);
+        cell_pull_c8(0xEFC4);
         sep();
-        func_800F8960(0xEFC7);
-        func_800F8960(0xEFC8);
-        func_800F8960(0xEFCC);
-        func_800F8960(0xEFCE);
-        func_800F8960(0xEFCF);
-        func_800F8960(0xEFD1);
-        func_800F6D70(0x1900);
-        func_800F8960(0xEFD3);
+        cell_pull_c8(0xEFC7);
+        cell_pull_c8(0xEFC8);
+        cell_pull_c8(0xEFCC);
+        cell_pull_c8(0xEFCE);
+        cell_pull_c8(0xEFCF);
+        cell_pull_c8(0xEFD1);
+        cell_push_c8_d58(0x1900);
+        cell_pull_c8(0xEFD3);
         latch(1);
-        func_800F8960(0xEFD0);
+        cell_pull_c8(0xEFD0);
         latch(1);
-        func_800F8960(0xEFCD);
+        cell_pull_c8(0xEFCD);
         txt_set(0xF014);
         if (gate(0x202) != 0)
             goto L7728;
-        func_800F6C68();
+        cell_push_c8();
         goto L7734;
     L7728:
-        func_800F6C68();
+        cell_push_c8();
     L7734:
-        func_800F9200();
+        cell_cursor_dec();
         row_sync();
         row_page(0x47);
-        func_800F6D70(0xF015);
+        cell_push_c8_d58(0xF015);
         row_read(0xC0);
         if (sel(2) != 0)
             goto L77b8;
@@ -91,15 +91,15 @@ L7510:
         row_close2();
         latch(0xF0);
     L77d0:
-        func_800F8960(0xEFC5);
-        func_800F6C68();
-        func_800F8960(0xEFC6);
+        cell_pull_c8(0xEFC5);
+        cell_push_c8();
+        cell_pull_c8(0xEFC6);
         func_80147888();
         row_sel_cell_cur();
-        func_800F6C68();
-        func_800F8960(0xEFCA);
-        func_800F6C68();
-        func_800F8960(0xEFCB);
+        cell_push_c8();
+        cell_pull_c8(0xEFCA);
+        cell_push_c8();
+        cell_pull_c8(0xEFCB);
         row_close();
         cell_step();
         poll_t(5);

@@ -33,11 +33,11 @@ L780:
         draw_pad_cur();
         sep();
         func_8013D598();
-        func_800F5D24(0xF399);
-        func_800F5D24(0xF399);
+        cell_dec_bank(0xF399);
+        cell_dec_bank(0xF399);
         txt_set(0xF398);
         sep_b();
-        func_800F8058(8);
+        cell_pos_back(8);
         txt_draw(0xF398);
         io_poll(0x80);
         if (io_just() == 0)
@@ -142,15 +142,15 @@ Lb48:
         open_row(3);
         txt_set(0xF118);
         sep_b();
-        func_800F8058(8);
+        cell_pos_back(8);
         cell_put_cur();
         txt_set(0xF119);
         sep_b();
-        func_800F8058(8);
+        cell_pos_back(8);
         cell_put(2);
         sep();
         func_8013D598();
     }
-    func_800F8F74(0xEF87);
+    cell_clear_bank(0xEF87);
     return;
 }

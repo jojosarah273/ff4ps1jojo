@@ -11,21 +11,21 @@ void func_8013ED14(void)
     cell_put(4);
 L13ed2c:
     for (;;) {
-        func_800F6C68();
+        cell_push_c8();
         cell_put(2);
         row_read(0x80);
         cell_put(3);
         row_page(2);
         row_read(0x3F);
-        func_800F61E8();
-        func_800F8960(0x6CFD);
+        cell_set50_from40();
+        cell_pull_c8(0x6CFD);
         step2();
         row_page(2);
         row_read(0x40);
         sep_a();
         row_open_w(4);
-        func_800F78C4(cell_state(3));
-        func_800F8960(0x6CFD);
+        cell_tick_or(cell_state(3));
+        cell_pull_c8(0x6CFD);
         step2();
         cell_step();
         poll_pair(4);

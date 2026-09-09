@@ -23,6 +23,6 @@ L119040:
     }
     latch(1);
     cell_put(0xCC);
-    func_800FE778();
+    wnd_fx_7d();
     return;
 }

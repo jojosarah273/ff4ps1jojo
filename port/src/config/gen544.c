@@ -9,18 +9,18 @@ void func_8013E984(void)
        8013ED14 rows; loop L13EA9C on 5958(0x440). */
     txt_set(0x1802);
     row_read(0x1F);
-    func_800F9200();
-    func_800F6C68();
+    cell_cursor_dec();
+    cell_push_c8();
     cell_put(6);
-    func_800F6C68();
+    cell_push_c8();
     func_8013EB2C();
     sep();
-    func_800F6C68();
+    cell_push_c8();
     row_open();
     func_8013EAFC();
     func_8013ED14();
     row_close();
-    func_800F6C68();
+    cell_push_c8();
     if (gate(2) != 0)
         goto L13EA74;
     func_8013EAFC();

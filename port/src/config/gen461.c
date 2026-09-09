@@ -12,7 +12,7 @@ void func_8013E5D0(void)
     sep();
 L13e604:
     for (;;) {
-        func_800F76BC(cell_state(4));
+        cell_word_half(cell_state(4));
         if (func_800F7728(0x101) != 0)
             goto L13E6FC;
         func_8013E588();
@@ -26,11 +26,11 @@ L13e604:
         cell_put(1);
         row_page_cur();
         sep_b();
-        func_800F8058(8);
+        cell_pos_back(8);
         cell_draw_cur();
         row_page(1);
         sep_b();
-        func_800F8058(8);
+        cell_pos_back(8);
         cell_draw_cur();
     L13E6FC:
         cell_step();

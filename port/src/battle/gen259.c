@@ -3,18 +3,18 @@
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-extern int func_800F5C64();
-extern int func_800F5EA0();
-extern int func_800F6434();
-extern int func_800F654C();
-extern int func_800F6630();
-extern int func_800F71DC();
-extern int func_800F7500();
-extern int func_800F8188();
-extern int func_800F8D00();
-extern int func_800F8F74();
-extern int func_800F8FB8();
-extern int func_800FCC84();
+
+
+
+
+
+
+
+
+
+
+
+
 extern int func_800FCCBC();
 
 void func_801098C8(void)
@@ -31,7 +31,7 @@ void func_801098C8(void)
       open_row(0xeb);
       latch(0x80);
       txt_draw(0x2115);
-      func_800FCC84();
+      wnd_fx_tags();
       latch(1);
       txt_draw(0x4300);
       wnd_open(0x2840);
@@ -45,7 +45,7 @@ void func_801098C8(void)
       func_800FCCBC();
       wnd_open(0x2860);
       label(0x2116);
-      func_800F8F74(0x420b);
+      cell_clear_bank(0x420b);
       wnd_open(0xf716);
       label(0x4302);
       wnd_open(0x40);
@@ -55,7 +55,7 @@ void func_801098C8(void)
       wnd_open(0x2c00);
       label(0x2116);
       do {
-        func_800F8F74(0x420b);
+        cell_clear_bank(0x420b);
         wnd_open(0xf756);
         label(0x4302);
         wnd_open(0x40);

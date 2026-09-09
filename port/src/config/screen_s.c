@@ -13,10 +13,10 @@ void func_8015C604(void)
         func_8015A284();
         func_80155778();
         func_801583FC();
-        func_800F8F74(0x352B);
+        cell_clear_bank(0x352B);
     }
     txt_set(0x393A);
-    func_800F78C4(cell_state(0x393B));
+    cell_tick_or(cell_state(0x393B));
     if (func_800F7918(0x202) == 0) {
         row_page(0xD0);
         sep();
@@ -41,17 +41,17 @@ void func_8015C604(void)
     goto L748;
 L738:
     draw_pad(1);
-    func_800F66D8(0x80);
+    cell_push_c8_sel(0x80);
 L748:
     txt_draw(0x397B);
-    func_800F9200();
+    cell_cursor_dec();
     io_poll(0x10);
     if (io_just() == 0)
         goto L7c0;
     wnd_open(1);
     row_page(0xD0);
     if (io_press(cell_state(0x3539)) == 0)
-        func_800F5E48();
+        cell_set50_from54();
     txt_cell(0x3539);
     txt_draw(0x357B);
     goto L7e0;
@@ -81,12 +81,12 @@ L800:
     latch(2);
     cell_put(0xD6);
     draw_pad(1);
-    func_800F66D8(0x80);
+    cell_push_c8_sel(0x80);
     cell_draw(0x2052);
     step2();
-    func_800F66D8(0x80);
+    cell_push_c8_sel(0x80);
     poll_spin();
-    func_800F82EC(0x80);
+    cell_pull_c8_bank(0x80);
     func_800F5B4C();
     func_8015CEA0();
     latch(0x16);
@@ -99,7 +99,7 @@ L8e8:
     goto L920;
 L910:
     draw_pad(1);
-    func_800F66D8(0x80);
+    cell_push_c8_sel(0x80);
 L920:
     io_poll(0xB0);
     if (io_go() != 0)
@@ -121,9 +121,9 @@ L958:
     if (io_just() != 0)
         goto L9e0;
     draw_pad(2);
-    func_800F66D8(0x80);
+    cell_push_c8_sel(0x80);
     poll_spin();
-    func_800F82EC(0x80);
+    cell_pull_c8_bank(0x80);
     func_800F5B4C();
     func_8015CEA0();
 L9e0:
@@ -149,7 +149,7 @@ L9f0:
     goto La88;
 La78:
     draw_pad(1);
-    func_800F66D8(0x80);
+    cell_push_c8_sel(0x80);
 La88:
     txt_draw(0x397B);
     cell_draw(0x2052);
@@ -165,7 +165,7 @@ Laa8:
     func_8015CD98();
     page(0xA6);
     draw_pad(1);
-    func_800F66D8(0x80);
+    cell_push_c8_sel(0x80);
     cell_draw(0x2052);
     latch(1);
 Lb08:

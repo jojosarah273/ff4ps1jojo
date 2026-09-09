@@ -18,8 +18,8 @@ void func_801709E4(void)
     draw_pad_cur();
 L170a4c:
     for (;;) {
-        func_800F6C68();
-        func_800F8960(0xBD);
+        cell_push_c8();
+        cell_pull_c8(0xBD);
         cell_step();
         step2();
         poll_t(0x100);
@@ -34,7 +34,7 @@ L170a4c:
     draw_pad_cur();
 L170acc:
     for (;;) {
-        func_800F6C68();
+        cell_push_c8();
         cell_put(8);
         cell_step();
         row_read(0xF);

@@ -26,17 +26,17 @@ L100c10:
         if (io_just() != 0)
             goto L100CE4;
         page(0x3D);
-        func_800F6C68();
+        cell_push_c8();
         cell_put(0x18);
-        func_800F6C68();
+        cell_push_c8();
         cell_put(0x19);
         page(0x18);
-        func_800F6C68();
+        cell_push_c8();
         io_poll(0x78);
         if (io_just() == 0)
             goto L100CE4;
         latch(0x77);
-        func_800F885C();
+        cell_pull_c8_off();
     L100CE4:
         page(0x3D);
         tail(0x3D);

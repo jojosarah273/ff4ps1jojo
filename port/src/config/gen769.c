@@ -7,7 +7,7 @@ void func_80123BD8(void)
 {
     /* shop rows: 0x37/0x29/0x45 windows, 801222C4 row; loop L123C54
        on 5DA0(0x37)/5B8C(0x202). */
-    func_800F9200();
+    cell_cursor_dec();
     cell_put(0x37);
     row_open();
     row_prep(0x20);

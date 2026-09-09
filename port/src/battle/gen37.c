@@ -3,25 +3,25 @@
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-extern int func_800F4008();
-extern int func_800F4248();
-extern int func_800F53D4();
-extern int func_800F5410();
-extern int func_800F5574();
-extern int func_800F5B8C();
-extern int func_800F5DA0();
-extern int func_800F62BC();
-extern int func_800F6434();
-extern int func_800F654C();
-extern int func_800F6630();
-extern int func_800F71DC();
-extern int func_800F7270();
-extern int func_800F824C();
-extern int func_800F8D00();
-extern int func_800F8D6C();
-extern int func_800F8F74();
-extern int func_800F8FB8();
-extern int func_800FCC84();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 extern int func_80109D68();
 
 void func_80109B08(void)
@@ -46,9 +46,9 @@ void func_80109B08(void)
     tail(0x14);
     wnd_open(0x834);
     tail(0x16);
-    func_800F8F74(0x2115);
-    func_800FCC84();
-    func_800F8F74(0x4300);
+    cell_clear_bank(0x2115);
+    wnd_fx_tags();
+    cell_clear_bank(0x4300);
     latch(4);
     cell_put(0x11);
     do {
@@ -66,7 +66,7 @@ void func_80109B08(void)
       row_page(0x13);
       row_open_w(0);
       cell_put(0x13);
-      func_800F8F74(0x420b);
+      cell_clear_bank(0x420b);
       page(0x14);
       label(0x4302);
       page(0x12);

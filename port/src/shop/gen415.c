@@ -12,7 +12,7 @@ void func_8016FB78(void)
         goto L16FBA0;
     poll_pair(0x1F);
 L16FBA0:
-    func_800F9200();
+    cell_cursor_dec();
     cell_put(0x1D);
     cell_put(0x1E);
     row_prep(0x20);
@@ -23,7 +23,7 @@ L16FBA0:
     row_page(0x1F);
 L16fc1c:
     for (;;) {
-        func_800F8960();
+        cell_pull_c8();
         step2();
         step2();
         poll_pair(0x1D);
@@ -34,12 +34,12 @@ L16fc1c:
     row_done();
     row_prep(0x20);
     sep_a();
-    func_800F4064(0x40);
+    cell_pos_fwd(0x40);
     row_prep_close();
     row_page(0x1F);
 L16fca8:
     for (;;) {
-        func_800F8960();
+        cell_pull_c8();
         step2();
         step2();
         poll_pair(0x1E);

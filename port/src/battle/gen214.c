@@ -8,8 +8,8 @@ void func_801444FC(void)
     sep();
 L4544:
     for (;;) {
-        func_800F6C68();
-        func_800F8960(0x342);
+        cell_push_c8();
+        cell_pull_c8(0x342);
         cell_step();
         poll_t(0xC);
         if (io_just() != 0)
@@ -32,7 +32,7 @@ L45dc:
 L45f4:
     latch(0x3F);
 L45fc:
-    func_800F8960(0x343);
+    cell_pull_c8(0x343);
     step2();
     step2();
     step2();
@@ -43,12 +43,12 @@ L45fc:
     sep();
 L467c:
     for (;;) {
-        func_800F6C68();
-        func_800F8960(0xEBE6);
-        func_800F6C68();
-        func_800F8960(0xEC76);
+        cell_push_c8();
+        cell_pull_c8(0xEBE6);
+        cell_push_c8();
+        cell_pull_c8(0xEC76);
         sep();
-        func_800F8960(0xEC77);
+        cell_pull_c8(0xEC77);
         cell_step();
         cell_step();
         poll_t(0x18);
@@ -57,7 +57,7 @@ L467c:
     }
     sep();
     txt_set(0xF446);
-    func_800F8960(0xEBE7);
+    cell_pull_c8(0xEBE7);
     step2();
     step2();
     poll_t(0x90);
@@ -73,22 +73,22 @@ L4778:
             txt_set(0xF446);
             if (gate(0x202) != 0)
                 goto L47b4;
-            func_800F6C68();
+            cell_push_c8();
             goto L47c0;
         L47b4:
-            func_800F6C68();
+            cell_push_c8();
         L47c0:
             cell_put_cur();
-            func_800F6D70(0xEBE6);
+            cell_push_c8_d58(0xEBE6);
             sep_a();
             cell_poke0(cell_state_of());
-            func_800F8960(0xEBE6);
-            func_800F6C68();
+            cell_pull_c8(0xEBE6);
+            cell_push_c8();
             cell_put_cur();
-            func_800F6D70(0xEC76);
+            cell_push_c8_d58(0xEC76);
             sep_a();
             cell_poke0(cell_state_of());
-            func_800F8960(0xEC76);
+            cell_pull_c8(0xEC76);
             step2();
             step2();
             poll_pair(2);
@@ -104,7 +104,7 @@ L4778:
     }
     sep();
     for (;;) {
-        func_800F6C68(0x1900);
+        cell_push_c8(0x1900);
         cell_draw(0xED06);
         cell_step();
         poll_t(6);
@@ -126,7 +126,7 @@ L4778:
         if (io_just() != 0)
             break;
     }
-    func_800F8F74(0xF1B3);
-    func_800F8F74(0xF1F3);
+    cell_clear_bank(0xF1B3);
+    cell_clear_bank(0xF1F3);
     return;
 }

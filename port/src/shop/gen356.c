@@ -36,10 +36,10 @@ L167288:
     cell_put_cur();
 L167364:
     for (;;) {
-        func_800F6C68();
-        func_800F8960();
-        func_800F6C68();
-        func_800F8960();
+        cell_push_c8();
+        cell_pull_c8();
+        cell_push_c8();
+        cell_pull_c8();
         cell_step();
         step2();
         poll_pair_cur();

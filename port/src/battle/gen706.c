@@ -9,7 +9,7 @@ void func_8011818C(void)
        L1181F4 on 5DA0(7)/5B8C(0x202). */
     row_read(0x7F);
     row_prep(0x20);
-    func_800F8274(0x40);
+    cell_put_hi9(0x40);
     row_sync2_cur();
     row_prep_close();
     latch(0x40);
@@ -19,7 +19,7 @@ void func_8011818C(void)
 L1181f4:
     for (;;) {
         txt_cell(0x1140);
-        func_800F8960(0x1000);
+        cell_pull_c8(0x1000);
         page_paint(0x1140);
         cell_step();
         step2();

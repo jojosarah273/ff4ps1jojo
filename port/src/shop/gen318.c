@@ -21,7 +21,7 @@ void func_80163B88(void)
     if (sel(0x202) != 0)
         return;
     txt_set(0x26D2);
-    func_800F9200();
+    cell_cursor_dec();
     txt_set(0x26D2);
     io_poll(0xCA);
     if (io_just() == 0)
@@ -46,11 +46,11 @@ L163C68:
     latch_cur();
     goto L163CE8;
 L163CA8:
-    func_800F6C68();
+    cell_push_c8();
     txt_draw(0x38EC);
     page_paint2(0x38EB);
     draw_pad(3);
-    func_800F66D8(0x80);
+    cell_push_c8_sel(0x80);
 L163CE8:
     txt_draw(0x26D2);
     goto L163D00;

@@ -9,19 +9,19 @@ void func_8011F724(void)
 {
     latch(0xA);
     row_open2();
-    func_800F9200();
+    cell_cursor_dec();
     latch(0x7E);
-    func_800F9200();
+    cell_cursor_dec();
     row_pad();
     row_close2();
-    func_800F8960(2);
+    cell_pull_c8(2);
     row_prep(0x20);
     *D_8019ED44 = *D_8019ED54;
     row_prep_close();
-    func_800F8960(0);
+    cell_pull_c8(0);
     stat_sync();
-    func_800F8960(1);
+    cell_pull_c8(1);
     row_page(0x3F);
-    func_800F8960(3);
+    cell_pull_c8(3);
     row_pad();
 }

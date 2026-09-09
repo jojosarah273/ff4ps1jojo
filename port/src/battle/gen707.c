@@ -17,13 +17,13 @@ L1148b8:
     for (;;) {
         func_80114D18();
         page(0x89);
-        func_800F5E48();
+        cell_set50_from54();
         tail(0x89);
         poll_t(0x80);
         if (io_go() != 0)
             continue;
         page(0x2C);
-        func_800F5E48();
+        cell_set50_from54();
         tail(0x2C);
         poll_t_cur();
         if (io_just() == 0)

@@ -117,7 +117,7 @@ Lc0c:
         if (sel(2) != 0)
             goto Ldc4;
         txt_set(0x1B95);
-        func_800F61E8();
+        cell_set50_from40();
         row_read(1);
         txt_draw(0x1B95);
         if (sel(2) != 0)
@@ -128,7 +128,7 @@ Lc0c:
         if (sel(2) != 0)
             goto Le14;
         txt_set(0x1B95);
-        func_800F61E8();
+        cell_set50_from40();
         row_read(1);
         txt_draw(0x1B95);
         if (sel(0x202) != 0)
@@ -174,7 +174,7 @@ Lc0c:
             goto Lc0c;
     Lf14:
         txt_set(0x1B94);
-        func_800F61E8();
+        cell_set50_from40();
         io_poll(8);
         if (io_just() != 0)
             goto Lf4c;
@@ -182,7 +182,7 @@ Lc0c:
         goto Lc0c;
     Lf4c:
         txt_set(0x1B96);
-        func_800F61E8();
+        cell_set50_from40();
         io_poll(0x11);
         if (io_just() != 0)
             goto Lc0c;

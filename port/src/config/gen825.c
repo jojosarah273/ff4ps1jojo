@@ -15,7 +15,7 @@ L15e890:
     for (;;) {
         txt_cell(0x2001);
         row_read(0x7F);
-        func_800F78C4(cell_state_of());
+        cell_tick_or(cell_state_of());
         cell_draw(0x2001);
         func_8015330C();
         step2();
@@ -24,7 +24,7 @@ L15e890:
             continue;
         break;
     }
-    func_800F8F74(0x390A);
+    cell_clear_bank(0x390A);
     func_80058554();
     return;
 }

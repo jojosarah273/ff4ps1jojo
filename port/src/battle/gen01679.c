@@ -5,7 +5,7 @@
 #include "ff4_window.h"
 void func_8014A154(void)
 {
-    func_800F8F74();
+    cell_clear_bank();
     /* jr $a0 : the ~46-entry battle item/action master table (invoked
        via the item menu). Each entry calls one sub-screen then jumps to
        L8014A478 (return). Handlers in index order:

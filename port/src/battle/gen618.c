@@ -13,11 +13,11 @@ void func_8011BCD8(void)
     cell_put(64);
     cell_put(68);
     open_row(67);
-    func_800F76BC(cell_state(68));
-    func_800F76E8();
-    func_800F7CC8(cell_state(67));
-    func_800F76BC(cell_state(68));
-    func_800F76E8();
-    func_800F7CC8(cell_state(67));
+    cell_word_half(cell_state(68));
+    cell_flags_repack();
+    cell_word_half_s(cell_state(67));
+    cell_word_half(cell_state(68));
+    cell_flags_repack();
+    cell_word_half_s(cell_state(67));
     page(67);
 }

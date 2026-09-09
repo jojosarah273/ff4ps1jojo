@@ -10,7 +10,7 @@ void func_8014B044(void)
     wnd_open_cur();
 L14b058:
     for (;;) {
-        func_800F6C68();
+        cell_push_c8();
         if (io_press(cell_state(0x3523)) != 0)
             goto L14B0A8;
         cell_step();

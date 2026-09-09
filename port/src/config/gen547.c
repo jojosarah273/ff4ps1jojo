@@ -26,12 +26,12 @@ L1284a0:
         func_800F3D64(0x7E70);
         row_close();
         row_sync2(0x2000);
-        func_800F87DC(0x6AA);
+        cell_stamp8_9(0x6AA);
         row_pad();
         row_prep_close();
     L128558:
         row_page(0x48);
-        func_800F61E8();
+        cell_set50_from40();
         cell_put(0x48);
         io_poll(4);
         if (io_just() == 0)

@@ -12,8 +12,8 @@ void func_8010FD30(void)
     tail(0x89);
 L10fd60:
     for (;;) {
-        func_800FE778();
-        func_800FE870();
+        wnd_fx_7d();
+        cell_clear_pad();
         row_page(0x7A);
         row_read(6);
         txt_draw(0xAD4);
@@ -31,7 +31,7 @@ L10fd60:
         func_800FD804();
     L10FEA4:
         page(0x89);
-        func_800F5E48();
+        cell_set50_from54();
         tail(0x89);
         if (poll_go(0x202) != 0)
             continue;

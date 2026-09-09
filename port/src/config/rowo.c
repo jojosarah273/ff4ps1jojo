@@ -58,7 +58,7 @@ Lf50:
     latch_cur();
     cell_draw(0xB89F);
     txt_set(0x1BA7);
-    func_800F9200();
+    cell_cursor_dec();
     row_sel_cell_cur();
     row_sel_cell2_cur();
     row_open_w(0x30);
@@ -178,7 +178,7 @@ L3BC:
     if (sel(2) != 0)
         goto L414;
     txt_set(0x1BA7);
-    func_800F61E8();
+    cell_set50_from40();
     io_poll(0xA);
     if (io_just() == 0)
         goto L40C;
@@ -241,7 +241,7 @@ L564:
     row_sel_cell_cur();
     func_801224D0();
     row_prep(0x20);
-    func_800F8274(0x45);
+    cell_put_hi9(0x45);
     row_prep_close();
     func_800F6E30(0x45);
     poll_spin();
@@ -267,7 +267,7 @@ L69C:
     if (poll_go(0x202) != 0)
         goto L6EC;
     txt_set(0x16AC);
-    func_800F61E8();
+    cell_set50_from40();
     io_poll(6);
     if (io_just() != 0)
         goto Lf50;
@@ -278,7 +278,7 @@ L6EC:
     if (poll_go(0x202) != 0)
         goto L73C;
     txt_set(0x16AD);
-    func_800F61E8();
+    cell_set50_from40();
     io_poll(6);
     if (io_just() != 0)
         goto Lf50;
@@ -310,10 +310,10 @@ L7B4:
     row_sel_cell_cur();
     func_801224D0();
     row_prep(0x20);
-    func_800F8274(0x45);
+    cell_put_hi9(0x45);
     row_prep_close();
     func_800F6E30(0x45);
-    func_800F61E8();
+    cell_set50_from40();
     io_poll(0x20);
     if (io_just() != 0)
         goto Lf50;

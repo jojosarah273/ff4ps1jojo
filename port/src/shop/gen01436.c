@@ -13,5 +13,5 @@ void func_801675A4(void)
     func_80167604();
     func_801409E4();
     func_80167604();
-    func_800F8F74(61319);
+    cell_clear_bank(61319);
 }

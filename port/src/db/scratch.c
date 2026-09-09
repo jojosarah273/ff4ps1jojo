@@ -3,7 +3,7 @@
  * Scratch-pad byte swaps (0x1F8003C0[8] <-> [9]) used by the input
  * translation layer.
  *
- * Ground truth: src/func_800F3D48.c (byte-verified; asm order mirrored).
+ * Ground truth: src/scratch_swap_status.c (byte-verified; asm order mirrored).
  */
 #include <stdint.h>
 

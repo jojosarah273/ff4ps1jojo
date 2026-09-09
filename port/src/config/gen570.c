@@ -3,14 +3,13 @@
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-extern int func_800F5C64();
-extern int func_800F5E48();
-extern int func_800F63BC();
-extern int func_800F6558();
-extern int func_800F71DC();
-extern int func_800F89D4();
-extern int func_800F9644();
-extern int func_800F9660();
+
+
+
+
+
+
+
 
 void func_801255E8(void)
 
@@ -21,14 +20,14 @@ void func_801255E8(void)
   row_prep(0x20);
   do {
     row_sync2(0xf0ff);
-    func_800F89D4(0);
+    cell_stamp8_9_b(0);
     row_sync2(0x3000);
-    func_800F89D4(2);
+    cell_stamp8_9_b(2);
     step2();
     step2();
     step2();
     step2();
-    func_800F5E48();
+    cell_set50_from54();
     iVar1 = poll_go(0x202);
   } while (iVar1 != 0);
   row_prep_close();

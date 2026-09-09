@@ -19,8 +19,8 @@ L167a74:
         row_read(7);
         row_sel_cell_cur();
         row_prep(0x20);
-        func_800F6CF4();
-        func_800F81B0();
+        cell_push9_bank();
+        cell_pull9_hi();
         sep();
         row_prep_close();
         key_page(0x4E);

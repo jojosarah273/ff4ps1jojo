@@ -3,21 +3,21 @@
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-extern int func_800F53C0();
-extern int func_800F53D4();
-extern int func_800F5574();
-extern int func_800F5958();
-extern int func_800F6364();
-extern int func_800F654C();
-extern int func_800F6630();
-extern int func_800F71DC();
-extern int func_800F7270();
-extern int func_800F7500();
-extern int func_800F8188();
-extern int func_800F824C();
-extern int func_800F8D6C();
-extern int func_800F8EBC();
-extern int func_800FE778();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 extern int func_80114C98();
 extern int func_80115A34();
 extern int func_8011EA5C();
@@ -34,7 +34,7 @@ void func_80114BC0(void)
   wnd_open(0);
   tail(0x2e);
   do {
-    func_800FE778();
+    wnd_fx_7d();
     row_page(0x2e);
     io_poll(0x10);
     iVar1 = io_go();

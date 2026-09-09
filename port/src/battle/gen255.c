@@ -10,7 +10,7 @@ void func_8011285C(void)
        80116398/80169128/80115BCC sub-renders, 80115D2C scroll loop. */
     latch(0xEC);
     txt_draw(0x1800);
-    func_800F8F74(0x1801);
+    cell_clear_bank(0x1801);
     txt_set(0xFD6);
     row_read(0x8F);
     txt_draw(0x1802);
@@ -21,7 +21,7 @@ void func_8011285C(void)
     row_open();
     wnd_open(0x7763);
     label(0x1706);
-    func_800F8F74(0x1700);
+    cell_clear_bank(0x1700);
     func_800FB09C();
     latch(0x20);
     cell_put(0xAD);
@@ -43,7 +43,7 @@ void func_8011285C(void)
     label(0xAD4);
     wnd_open(0x40);
     label(0xAD2);
-    func_800F8F74(0xACD);
+    cell_clear_bank(0xACD);
     latch(2);
     txt_draw(0xACE);
     latch(0x42);
@@ -64,7 +64,7 @@ L1129c4:
         func_800FD6E8();
     L112A18:
         page_open(0xAD2);
-        if (func_800F7170(0x202) != 0)
+        if (cell_flags_pack(0x202) != 0)
             continue;
         break;
     }

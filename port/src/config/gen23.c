@@ -5,7 +5,7 @@
 #include "ff4_window.h"
 void func_8012FBB0(void)
 {
-    func_800F9200();
+    cell_cursor_dec();
     row_open();
     io_poll(0xE);
     if (io_go() == 0)
@@ -18,11 +18,11 @@ void func_8012FBB0(void)
     func_80130BC8();
     row_done();
     txt_draw(0x1BC4);
-    func_800F8F74(0x1BC5);
+    cell_clear_bank(0x1BC5);
     row_page(0xE8);
     func_80124EAC();
     row_prep(0x20);
-    func_800F6BE0(0xB);
+    cell_sink8_9(0xB);
     func_800F5520(cell_state(0x1BC4));
     row_prep_close();
     if (io_go() != 0)
@@ -65,7 +65,7 @@ Lfd70:
     cell_put(0xDB);
     row_close();
     row_close2();
-    func_800F9200();
+    cell_cursor_dec();
     row_prep(0x20);
     sep_a();
     cell_peek0(cell_state(0x29));
@@ -79,37 +79,37 @@ Lfd70:
     stat_sync();
     row_prep(0x20);
     row_arm_s_cur();
-    func_800F8274(0x45);
+    cell_put_hi9(0x45);
     row_arm_s_cur();
     row_arm_s2_cur();
     cell_peek0(cell_state(0x45));
-    func_800F4064(0x8900);
+    cell_pos_fwd(0x8900);
     row_prep_close();
     latch(0xF);
-    func_800F9200();
+    cell_cursor_dec();
     row_pad();
-    func_800F6D70();
+    cell_push_c8_d58();
     step2();
-    func_800F885C();
+    cell_pull_c8_off();
     latch(0xFF);
-    func_800F885C();
+    cell_pull_c8_off();
     cell_step();
     row_page(0xDB);
-    func_800F885C();
-    func_800F885C();
+    cell_pull_c8_off();
+    cell_pull_c8_off();
     cell_step();
     latch(5);
     cell_put(0x45);
     for (;;) {
-        func_800F6D70();
+        cell_push_c8_d58();
         func_801245B4();
-        func_800F885C();
+        cell_pull_c8_off();
         stat_sync();
-        func_800F885C();
+        cell_pull_c8_off();
         cell_step();
         row_page(0xDB);
-        func_800F885C();
-        func_800F885C();
+        cell_pull_c8_off();
+        cell_pull_c8_off();
         cell_step();
         step2();
         poll_pair(0x45);

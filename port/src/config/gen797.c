@@ -11,17 +11,17 @@ void func_80138920(void)
     row_open3();
     wnd_open(0x100);
     row_open();
-    func_800F94B8();
+    cell_cursor_read();
     latch(0x7E);
-    func_800F9200();
+    cell_cursor_dec();
     row_pad();
     func_8016EA9C();
-    func_800F8F74(0x1A88);
+    cell_clear_bank(0x1A88);
     func_80138A6C();
     sep();
     stat_sync();
     func_80122114();
-    func_800F94B8();
+    cell_cursor_read();
     row_pad();
     return;
 }

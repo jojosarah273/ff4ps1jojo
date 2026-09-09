@@ -20,7 +20,7 @@ void func_80120070(void)
     row_arm_s_cur();
     row_arm_s2_cur();
     cell_peek0(cell_state(0x1D));
-    func_800F8274(0x1D);
+    cell_put_hi9(0x1D);
     row_prep_close();
     s0 = *D_8019ED40;
     /* -------- category ladder on (v1,v0) --------

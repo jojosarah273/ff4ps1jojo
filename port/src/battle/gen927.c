@@ -20,9 +20,9 @@ L1450e8:
         page_paint2_cur();
         func_80144C78();
         func_801449D0();
-        func_800F8F74();
+        cell_clear_bank();
         row_close();
-        func_800F5E48();
+        cell_set50_from54();
         if (poll_go(0x202) != 0)
             continue;
         break;
@@ -30,6 +30,6 @@ L1450e8:
     page_open(0x34C4);
     label_cur();
     func_8013DC04();
-    func_800F8F74(0x38E2);
+    cell_clear_bank(0x38E2);
     return;
 }

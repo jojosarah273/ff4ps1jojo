@@ -10,7 +10,7 @@ void func_8011A690(void)
     if (io_go() != 0)
         goto La7a8;
     func_80101230();
-    func_800F8F74(0x1704);
+    cell_clear_bank(0x1704);
     txt_cell(0x9D6);
     txt_draw(0x1702);
     txt_cell(0x9D7);
@@ -40,8 +40,8 @@ La790:
     goto La888;
 La7a8:
     sep_b();
-    func_800F8058(0xFB);
-    func_800F9200();
+    cell_pos_back(0xFB);
+    cell_cursor_dec();
     txt_cell(0x9D7);
     txt_draw(0x1706);
     txt_cell(0x9D8);
@@ -78,7 +78,7 @@ La888:
     row_read(0x1F);
     if (sel(0x202) != 0)
         goto La8f8;
-    func_800F8F74(0x1704);
+    cell_clear_bank(0x1704);
     open_row(0xAC);
     open_row(0x7B);
     goto Laaa0;
@@ -96,7 +96,7 @@ La930:
         goto La970;
     latch(1);
     txt_draw(0x1712);
-    func_800F8F74(0x1715);
+    cell_clear_bank(0x1715);
     func_80102F70();
     goto Laaa0;
 La970:

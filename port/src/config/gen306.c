@@ -30,7 +30,7 @@ L12cf28:
         cell_put(0xED);
         txt_set(0x1B3B);
         sep_b();
-        func_800F8058(0xB6);
+        cell_pos_back(0xB6);
         cell_put(0x45);
         row_prep_close();
         func_800F756C(0x41);
@@ -60,7 +60,7 @@ L12cf28:
     L12D068:
         row_page(0x45);
         func_800F8930(0x15C0);
-        func_800F9200();
+        cell_cursor_dec();
         row_prep(0x10);
         func_801210AC();
         draw_pad_cur();
@@ -72,7 +72,7 @@ L12cf28:
         row_close2();
         wnd_open(0x39A);
         func_8012FBB0();
-        func_800F8F74(0x1BC8);
+        cell_clear_bank(0x1BC8);
         func_80120B6C();
         func_80169170();
         func_801240A8();

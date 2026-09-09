@@ -11,7 +11,7 @@ void func_8016BD78(void)
     row_page(0x1A);
     row_open2();
     sep();
-    func_800F9200();
+    cell_cursor_dec();
     row_pad();
     page_open(0x4218);
     tail(0x1C);

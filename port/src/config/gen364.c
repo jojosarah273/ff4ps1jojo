@@ -39,7 +39,7 @@ L15F458:
     func_800654CC();
     return;
 L15F4C8:
-    func_800F78C4(cell_state(0xAA));
+    cell_tick_or(cell_state(0xAA));
     txt_draw(0x2704);
     latch(7);
     cell_put(0xD6);

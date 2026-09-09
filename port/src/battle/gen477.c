@@ -10,10 +10,10 @@ void func_8011F118(void)
     row_sync();
     cell_put(0x30);
     row_page(0x30);
-    func_800F8960();
+    cell_pull_c8();
     step2();
     row_page(0x2F);
-    func_800F8960();
+    cell_pull_c8();
     step2();
     row_page(0x2D);
     cell_put(0x31);
@@ -21,10 +21,10 @@ void func_8011F118(void)
 L11f178:
     for (;;) {
         row_page(0x30);
-        func_800F8960();
+        cell_pull_c8();
         step2();
         row_page(0x2F);
-        func_800F8960();
+        cell_pull_c8();
         step2();
         poll_pair(0x31);
         if (poll_go(0x202) != 0)
@@ -33,10 +33,10 @@ L11f178:
     }
     key_page(0x30);
     row_page(0x30);
-    func_800F8960();
+    cell_pull_c8();
     step2();
     row_page(0x2F);
-    func_800F8960();
+    cell_pull_c8();
     row_done();
     func_80122334();
     return;

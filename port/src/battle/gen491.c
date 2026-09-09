@@ -8,7 +8,7 @@ void func_8011AB18(void)
     /* shop main: 0xCA window + 0x1700 gate picks the buy (800FEC74/
        800FD914/800FB09C/800FB160/800FB224/800FAA04) sub-rows; tail
        via 8017F9A8/800FED3C or close 0x81/0x4200. */
-    func_800F9200();
+    cell_cursor_dec();
     row_page(0xCA);
     if (gate(0x202) != 0)
         goto L11AB50;

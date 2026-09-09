@@ -11,7 +11,7 @@ void func_801266F0(void)
     row_open3();
     wnd_open(0x100);
     row_open();
-    func_800F94B8();
+    cell_cursor_read();
     row_prep(0x20);
     row_sync2_cur();
     draw_pad(0x1C);
@@ -25,7 +25,7 @@ L126740:
         break;
     }
     row_prep_close();
-    func_800F94B8();
+    cell_cursor_read();
     row_close();
     return;
 }

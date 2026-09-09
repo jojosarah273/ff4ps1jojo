@@ -9,15 +9,15 @@ void func_80140BA0(void)
        80097D34/80097D54/80140D94 rows. */
     func_80140CFC();
     txt_set(0x48);
-    func_800F9200();
+    cell_cursor_dec();
     txt_set_cur();
     txt_draw(0x48);
     func_80097D34();
     func_80140AC0();
     sep();
-    func_800F8960();
+    cell_pull_c8();
     txt_cell(0x2000);
-    func_800F9200();
+    cell_cursor_dec();
     row_close2();
     cell_draw_cur();
     func_80097D54();

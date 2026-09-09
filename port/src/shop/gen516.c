@@ -25,7 +25,7 @@ L169fb0:
             cell_draw(0x2703);
             row_prep(0x20);
             sep_a();
-            func_800F4064(0x20);
+            cell_pos_fwd(0x20);
             sep();
             row_prep_close();
             cell_step();

@@ -20,18 +20,18 @@ L12eac8:
         step2();
     L12eb10:
         for (;;) {
-            func_800F6D70();
+            cell_push_c8_d58();
             if (gate(2) != 0)
                 goto L12EB78;
             io_poll(0xFE);
             if (io_go() != 0)
                 goto L12EB78;
             func_800F8A18(0x1D);
-            func_800F6D70(1);
+            cell_push_c8_d58(1);
             func_800F8A18(0x23);
             latch_cur();
-            func_800F8960();
-            func_800F8960(1);
+            cell_pull_c8();
+            cell_pull_c8(1);
             goto L12EBA8;
         L12EB78:
             step2();
@@ -45,7 +45,7 @@ L12eac8:
         cell_step();
         cell_step();
         tail(0x1D);
-        if (func_800F56AC(cell_state(0x21)) == 0)
+        if (cell_flags_cmp(cell_state(0x21)) == 0)
             continue;
         break;
     }

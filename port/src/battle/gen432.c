@@ -18,10 +18,10 @@ L144f6c:
         func_80140558();
         func_80140310();
         row_prep(0x20);
-        func_800F658C();
+        cell_push9();
         sep_b();
         func_800F80D0(8);
-        func_800F81B0();
+        cell_pull9_hi();
         sep();
         row_prep_close();
         poll_t_cur();
@@ -39,21 +39,21 @@ L144f6c:
     page_open(0x34C4);
     label_cur();
     func_8013DC04();
-    func_800F8F74(0x38E2);
+    cell_clear_bank(0x38E2);
 L145038:
     for (;;) {
         func_80140558();
         func_80140310();
         row_prep(0x20);
-        func_800F658C();
+        cell_push9();
         sep_a();
-        func_800F4064(8);
-        func_800F81B0();
-        func_800F922C();
+        cell_pos_fwd(8);
+        cell_pull9_hi();
+        cell_cursor_ret2();
         sep();
         row_prep_close();
         row_close();
-        if (func_800F7170(0x202) != 0)
+        if (cell_flags_pack(0x202) != 0)
             continue;
         break;
     }

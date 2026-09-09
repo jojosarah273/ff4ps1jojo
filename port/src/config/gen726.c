@@ -3,11 +3,11 @@
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-extern void func_800F6630(u32 v0);
-extern void func_800F824C(u32 v0);
-extern void func_800F7594(u32 v0);
-extern void func_800F8EBC(u32 v0);
-extern void func_800F8FB8(u32 v0);
+
+
+
+
+
 extern void func_80125130(void);
 void func_8012E7CC(void) {
     row_page(0xD9);

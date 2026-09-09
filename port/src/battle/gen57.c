@@ -22,7 +22,7 @@ L142128:
         sep_a();
         row_open_w(0x10);
         cell_put_cur();
-        func_800F9200();
+        cell_cursor_dec();
         row_page(2);
         cell_draw_cur();
         sep_a();
@@ -66,11 +66,11 @@ L142278:
 L142298:
     txt_set_cur();
     sep_b();
-    func_800F8058(8);
+    cell_pos_back(8);
     txt_draw_cur();
     txt_set_cur();
     sep_b();
-    func_800F8058(8);
+    cell_pos_back(8);
     txt_draw_cur();
 L1422D8:
     for (;;) {

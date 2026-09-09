@@ -17,7 +17,7 @@ void func_80127C70(void)
     func_80125A64();
     func_80136014();
     wnd_open(0x1BE4);
-    if (func_800F56AC(cell_state(0x17FE)) == 0)
+    if (cell_flags_cmp(cell_state(0x17FE)) == 0)
         goto L127CFC;
     func_8012281C();
     goto L127D38;
@@ -67,7 +67,7 @@ L127D38:
 L127E80:
     func_80138664();
     func_80126590();
-    func_800F8F74(0x1B46);
+    cell_clear_bank(0x1B46);
     txt_set(0x1B46);
     if (gate(2) != 0)
         goto L127EC0;
@@ -82,7 +82,7 @@ L127EC8:
     func_8011F6D4();
     func_8011F684();
     func_8011F884();
-    func_800F8F74(0x1B46);
+    cell_clear_bank(0x1B46);
     sep_b();
     return;
 }

@@ -19,8 +19,8 @@ void func_8013DC04(void)
     sep();
 L13dc70:
     for (;;) {
-        func_800F6D70();
-        func_800F8960();
+        cell_push_c8_d58();
+        cell_pull_c8();
         step2();
         poll_t(5);
         if (io_just() == 0)
@@ -40,7 +40,7 @@ L13dca0:
             if (func_800F4FAC(0x101) != 0)
                 goto L13DD8C;
             latch(7);
-            func_800F8960(0x4E);
+            cell_pull_c8(0x4E);
             row_page_cur();
             row_read(4);
             cell_draw_cur();

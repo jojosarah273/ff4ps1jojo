@@ -13,13 +13,13 @@ void func_801700BC(void)
 L1700f8:
     for (;;) {
         row_read2();
-        func_800F87DC(0x3319);
+        cell_stamp8_9(0x3319);
         row_read2(6);
-        func_800F87DC(0x371B);
+        cell_stamp8_9(0x371B);
         row_read2(2);
-        func_800F87DC(0x331B);
+        cell_stamp8_9(0x331B);
         row_read2(4);
-        func_800F87DC(0x3719);
+        cell_stamp8_9(0x3719);
         cell_step();
         cell_step();
         cell_step();

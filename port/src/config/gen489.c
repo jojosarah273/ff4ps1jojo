@@ -12,8 +12,8 @@ void func_80121678(void)
         goto L121720;
     row_prep(0x20);
     func_800F6AF4(0xA1);
-    func_800F4264(0x7FFF);
-    func_800F8274(0x1D);
+    cell_pos_mask(0x7FFF);
+    cell_put_hi9(0x1D);
     func_800F6AF4(0x89);
     sep_b();
     func_800F7FCC(cell_state(0x1D));

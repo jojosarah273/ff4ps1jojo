@@ -10,7 +10,7 @@ void func_801721E8(void)
        quantity picker; scroll loop L172398 spins on 5A90(0x10). */
     row_open2();
     latch(0x15);
-    func_800F9200();
+    cell_cursor_dec();
     row_pad();
     txt_set(0x1730);
     if (gate(2) != 0)
@@ -60,7 +60,7 @@ L172398:
         txt_cell_cur();
         sep_a();
         cell_poke0(cell_state(0xC));
-        func_800F8960(0x480);
+        cell_pull_c8(0x480);
         row_page(0xD);
         row_open_w0();
         row_read(1);
@@ -72,15 +72,15 @@ L172398:
         txt_cell_cur();
         sep_a();
         cell_poke0(cell_state(0xE));
-        func_800F8960(0x481);
+        cell_pull_c8(0x481);
         txt_cell_cur();
         sep_a();
         row_open_w(0x60);
-        func_800F8960(0x482);
+        cell_pull_c8(0x482);
         txt_cell_cur();
         sep_a();
         row_open_w(0x18);
-        func_800F8960(0x483);
+        cell_pull_c8(0x483);
         cell_step();
         cell_step();
         cell_step();

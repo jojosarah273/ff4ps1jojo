@@ -21,10 +21,10 @@ L15A7BC:
     row_arm2(cell_state(0xAD));
     sep_b();
     latch(0x2C);
-    func_800F7F48(cell_state(0xAD));
+    cell_tick_sub(cell_state(0xAD));
     cell_put(0xA9);
     latch(1);
-    func_800F8058();
+    cell_pos_back();
     cell_put(0xAA);
     if (io_go() != 0)
         goto L15A844;

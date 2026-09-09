@@ -9,7 +9,7 @@ void func_80166BF8(void)
     func_80166CA8();
     txt_cell(61381);
     sep_b();
-    func_800F7F48(cell_state(0));
+    cell_tick_sub(cell_state(0));
     cell_draw(61381);
     row_close();
 }

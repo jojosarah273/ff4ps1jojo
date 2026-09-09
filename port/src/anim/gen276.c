@@ -71,7 +71,7 @@ L176418:
     latch_cur();
 L176450:
     for (;;) {
-        func_800F885C();
+        cell_pull_c8_off();
         cell_step();
         if (func_800F6180(0x202) != 0)
             continue;
@@ -79,7 +79,7 @@ L176450:
     }
 L176470:
     for (;;) {
-        func_800F885C();
+        cell_pull_c8_off();
         cell_step();
         if (func_800F6180(0x202) != 0)
             continue;
@@ -88,7 +88,7 @@ L176470:
     wnd_open_cur();
 L17649c:
     for (;;) {
-        func_800F6C68();
+        cell_push_c8();
         cell_draw(0x1900);
         cell_step();
         poll_t(0x100);

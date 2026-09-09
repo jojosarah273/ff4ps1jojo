@@ -6,12 +6,12 @@
 void func_80151F28(void)
 {
     latch_cur();
-    func_800F9200();
+    cell_cursor_dec();
     row_pad();
     txt_draw_cur();
     wnd_open(0x4200);
     row_open();
-    func_800F94B8();
+    cell_cursor_read();
     latch_cur();
     txt_draw(0x80);
     latch(0x2100);
@@ -52,7 +52,7 @@ void func_80151F28(void)
     txt_draw(0x2131);
     txt_draw(0x2133);
     latch(0x2130);
-    func_800F9200(0x7E);
+    cell_cursor_dec(0x7E);
     row_pad();
     return;
 }

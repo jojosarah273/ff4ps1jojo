@@ -16,7 +16,7 @@ void func_80149924(void)
     txt_set(0x38E6);
     func_8014D568();
 L1499A4:
-    func_800F8F74();
+    cell_clear_bank();
     func_8007259C();
     sep();
 L1499d8:

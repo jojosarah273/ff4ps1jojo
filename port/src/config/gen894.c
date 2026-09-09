@@ -10,18 +10,18 @@ void func_80132378(void)
     latch_cur();
 L132388:
     for (;;) {
-        func_800F9200();
+        cell_cursor_dec();
         func_801224D0();
         txt_cell(0x1B8B);
         if (gate(2) != 0)
             goto L1323F0;
         row_close2();
-        func_800F9200();
+        cell_cursor_dec();
         func_80132178();
         cell_draw(4);
     L1323F0:
         row_close2();
-        func_800F61E8();
+        cell_set50_from40();
         io_poll(5);
         if (io_just() == 0)
             continue;

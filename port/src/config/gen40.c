@@ -25,8 +25,8 @@ L51a4:
         step2();
     }
 L51ec:
-    func_800F6D70(0x1A68);
-    func_800F9200();
+    cell_push_c8_d58(0x1A68);
+    cell_cursor_dec();
     cell_put(0x45);
     row_sel_cell_cur();
     row_sel_cell2_cur();
@@ -39,12 +39,12 @@ L51ec:
     row_open_w0();
     cell_put(0x49);
     row_close2();
-    func_800F61E8();
-    func_800F61E8();
-    func_800F61E8();
+    cell_set50_from40();
+    cell_set50_from40();
+    cell_set50_from40();
     row_sel_cell_cur();
     row_sel_cell2_cur();
-    func_800F78C4(cell_state(0xC1));
+    cell_tick_or(cell_state(0xC1));
     cell_poke0(cell_state(0x49));
     cell_put(0x49);
     row_page(0x1E);
@@ -62,7 +62,7 @@ L5304:
     row_prep(0x20);
     row_arm_s_cur();
     row_arm_s2_cur();
-    func_800F4064(0x340);
+    cell_pos_fwd(0x340);
     row_prep_close();
     latch(6);
     cell_put(0x45);
@@ -71,11 +71,11 @@ L5384:
         row_page(0x1F);
         sep_a();
         row_open_w0();
-        func_800F8960();
+        cell_pull_c8();
         row_page(0x20);
         sep_a();
         row_open_w0();
-        func_800F8960();
+        cell_pull_c8();
         tail(1);
         row_page(0x1E);
         row_sel_cell_cur();
@@ -91,7 +91,7 @@ L5384:
         row_prep(0x20);
         sep_a();
         cell_peek0(cell_state(0x48));
-        func_800F89D4(2);
+        cell_stamp8_9_b(2);
         row_prep_close();
         step2();
         step2();

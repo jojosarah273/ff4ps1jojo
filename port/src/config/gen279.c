@@ -14,9 +14,9 @@ void func_8013E2F8(void)
     sep();
 L13e340:
     for (;;) {
-        func_800F6C68();
+        cell_push_c8();
         cell_draw_cur();
-        func_800F6C68();
+        cell_push_c8();
         cell_draw_cur();
         latch(0xFC);
         func_80143E44();
@@ -50,7 +50,7 @@ L13e398:
         L13E454:
             txt_cell_cur();
             sep_b();
-            func_800F8058(0xC);
+            cell_pos_back(0xC);
             cell_put_cur();
             txt_cell_cur();
         L13E47C:

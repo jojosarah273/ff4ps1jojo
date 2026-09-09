@@ -9,15 +9,15 @@ void func_80144344(void)
     page_paint2(0xF327);
     wnd_open(0x12);
     func_8014202C();
-    func_800F8F74(0xF327);
+    cell_clear_bank(0xF327);
     wnd_open(0x20);
     do {
         func_80140558();
         func_80141E80();
-        func_800F5E48();
+        cell_set50_from54();
     } while (poll_go(0x202) != 0);
     latch(0x62);
-    func_800F81E8(0x2107);
+    cell_pull_c8_lo(0x2107);
     sep();
     txt_draw(0xF133);
     latch(0x80);
@@ -28,10 +28,10 @@ void func_80144344(void)
         io_poll(0x10);
         if (io_go() != 0) {
             latch(2);
-            func_800F81E8(0x2130);
-            func_800F81E8(0x212D);
+            cell_pull_c8_lo(0x2130);
+            cell_pull_c8_lo(0x212D);
             latch(0x41);
-            func_800F81E8(0x2131);
+            cell_pull_c8_lo(0x2131);
             func_8014C8CC();
         }
         open_row(2);
@@ -52,6 +52,6 @@ void func_80144344(void)
             break;
     }
     latch(0x1E);
-    func_800F81E8(0x212C);
+    cell_pull_c8_lo(0x212C);
     page_paint2(0xF483);
 }

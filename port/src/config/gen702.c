@@ -7,7 +7,7 @@ void func_80132010(void)
 {
     /* ability header: 0x1B8B text, 0x4E/0x50/0x49/0x48/0x4E windows,
        801224D0/801321B4 rows; 6434(2) gate. */
-    func_800F9200();
+    cell_cursor_dec();
     func_801224D0();
     txt_cell(0x1B8B);
     if (gate(2) != 0)
@@ -15,15 +15,15 @@ void func_80132010(void)
     func_801321B4();
     tail(0x4E);
     open_row(0x50);
-    func_800F66D8(0x4E);
-    func_800F9200();
+    cell_push_c8_sel(0x4E);
+    cell_cursor_dec();
     func_800F4370(0x49);
-    func_800F82EC(0x4E);
+    cell_pull_c8_bank(0x4E);
     row_close2();
     func_800F4370(0x48);
-    func_800F78C4(func_800F3A70(0x4E));
+    cell_tick_or(cell_bank_sel(0x4E));
     cell_state_of();
-    func_800F82EC(0x4E);
+    cell_pull_c8_bank(0x4E);
     row_close2();
     return;
 }

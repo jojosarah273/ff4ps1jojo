@@ -15,10 +15,10 @@ void func_80131C50(void)
     txt_set(0x1B93);
     cell_put(0x43);
     row_prep(0x20);
-    func_800F6BE0(0xB);
+    cell_sink8_9(0xB);
     sep_a();
     cell_peek0(cell_state(0x43));
-    func_800F87DC(0xB);
+    cell_stamp8_9(0xB);
     row_prep_close();
     return;
 }

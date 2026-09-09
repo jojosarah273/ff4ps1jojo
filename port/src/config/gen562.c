@@ -22,9 +22,9 @@ L13cf50:
         txt_set_cur();
         sep_a();
         cell_poke0(cell_state_of());
-        func_800F6C68();
+        cell_push_c8();
         cell_put(4);
-        func_800F6C68();
+        cell_push_c8();
         row_close();
         func_8013D040();
         cell_step();

@@ -11,15 +11,15 @@ void func_801245B4(void)
     if (io_go() != 0)
         goto L124664;
     sep_b();
-    func_800F8058(0xF);
+    cell_pos_back(0xF);
     row_sel_cell_cur();
     row_sel_cell2_cur();
     stat_sync();
     latch_cur();
     stat_sync();
-    func_800F6C68();
+    cell_push_c8();
     stat_sync();
-    func_800F6C68();
+    cell_push_c8();
     stat_sync();
     row_close();
     return;

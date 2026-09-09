@@ -12,7 +12,7 @@ void func_80118EF8(void)
     draw_pad_cur();
 L118f18:
     for (;;) {
-        func_800F6D70(0x1440);
+        cell_push_c8_d58(0x1440);
         if (io_press(cell_state(6)) != 0)
             goto L118FF0;
         poll_t(0x60);
@@ -41,8 +41,8 @@ L118FD0:
     return;
 L118FF0:
     latch_cur();
-    func_800F8960(0x1440);
-    func_800F8960(0x1441);
+    cell_pull_c8(0x1440);
+    cell_pull_c8(0x1441);
     func_8011EA5C();
     return;
 }

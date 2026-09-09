@@ -3,14 +3,14 @@
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-extern int func_800F654C();
-extern int func_800F6564();
-extern int func_800F71DC();
-extern int func_800F7210();
-extern int func_800F8188();
-extern int func_800F824C();
-extern int func_800F8D00();
-extern int func_800F8FB8();
+
+
+
+
+
+
+
+
 extern int func_801035B0();
 extern int func_8011AB18();
 extern int func_8011EA5C();

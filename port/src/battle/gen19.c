@@ -125,7 +125,7 @@ Lc84:
         goto Ld8c;
 Lc9c:
     row_page(0xAB);
-    func_800F7864();
+    cell_tick_half();
     if (func_800F7728(0x101) != 0)
         goto Ld8c;
     io_poll_cur();
@@ -154,7 +154,7 @@ Ld34:
         goto Ld8c;
 Ld6c:
     txt_set(0x1707);
-    func_800F61E8();
+    cell_set50_from40();
     cell_put(0xE);
     func_80104DB4();
 Ld8c:

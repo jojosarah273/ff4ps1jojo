@@ -19,7 +19,7 @@ L11b5ac:
     }
 L11B5DC:
     page(0x3D);
-    func_800F78C4(cell_state_of());
+    cell_tick_or(cell_state_of());
     cell_draw(0x1280);
     return;
 }

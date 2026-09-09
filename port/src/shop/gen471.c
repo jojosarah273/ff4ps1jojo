@@ -13,11 +13,11 @@ void func_8016C4A0(void)
 L16c4dc:
     for (;;) {
         page_paint2(0x7D27);
-        func_800F9200();
+        cell_cursor_dec();
         row_open();
-        func_800F6C68();
+        cell_push_c8();
         row_info(0x4B);
-        func_800F6C68();
+        cell_push_c8();
         row_info(0x4D);
         txt_set(0x7D27);
         row_read(7);
@@ -35,7 +35,7 @@ L16c4dc:
         cell_step();
         cell_step();
         row_close2();
-        func_800F61E8();
+        cell_set50_from40();
         io_poll(0x38);
         if (io_just() == 0)
             continue;

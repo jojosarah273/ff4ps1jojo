@@ -18,10 +18,10 @@ L1242a8:
         txt_cell_cur();
         row_read(0x3F);
         cell_put(0x5A);
-        func_800F8960(0x1A67);
+        cell_pull_c8(0x1A67);
         row_page(0xE4);
         cell_put(0x5B);
-        func_800F8960(0x1A68);
+        cell_pull_c8(0x1A68);
         txt_cell(1);
         cell_put(0x5C);
         func_80124358();

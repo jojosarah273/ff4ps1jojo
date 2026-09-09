@@ -13,8 +13,8 @@ void func_80103DD8(void)
     cell_put(0x79);
 L103e0c:
     for (;;) {
-        func_800FE7B0();
-        func_800F8F74(0x420C);
+        wnd_fx_7d_b();
+        cell_clear_bank(0x420C);
         row_page(0x79);
         cell_put(0x6E);
         open_row(0x6F);

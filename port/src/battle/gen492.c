@@ -12,7 +12,7 @@ void func_801198F0(void)
     cell_step();
     tail(0xB3);
     func_80106370();
-    func_800FE7B0();
+    wnd_fx_7d_b();
     func_80109A28();
     txt_set(0x8FB);
     io_poll(0xFF);

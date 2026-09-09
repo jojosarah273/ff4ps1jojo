@@ -12,7 +12,7 @@ void func_8010CA74(void)
     label(0x9CF);
 L10ca98:
     for (;;) {
-        func_800F6C68();
+        cell_push_c8();
         func_8010D61C();
         page_open(0x9CF);
         label_cur();

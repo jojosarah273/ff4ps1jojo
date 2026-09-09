@@ -12,9 +12,9 @@ void func_8013F124(void)
     sep_a();
 L13f1bc:
     for (;;) {
-        func_800F3A70();
+        cell_bank_sel();
         cell_state_of();
-        func_800F3A70();
+        cell_bank_sel();
         cell_state_of();
         /* a2/s0 + a2/v0 + a2/a0 latch loops */
     }

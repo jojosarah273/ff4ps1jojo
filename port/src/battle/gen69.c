@@ -13,7 +13,7 @@ void func_80107C98(void)
     cell_put(0xEA);
 L107cb8:
     for (;;) {
-        func_800FE778();
+        wnd_fx_7d();
         row_page(0xEA);
         io_poll(2);
         if (io_just() != 0)
@@ -31,7 +31,7 @@ L107cb8:
     cell_put(0xEB);
     /* v1/v0 gate -> L107D4C (converge) */
 L107D4C:
-    func_800FE778();
+    wnd_fx_7d();
 L107D54:
     for (;;) {
         row_page(0x7F);
@@ -46,12 +46,12 @@ L107D54:
         goto L107D4C;
 L107D9C:
     page_open(0x8F4);
-    if (func_800F7170(2) != 0)
+    if (cell_flags_pack(2) != 0)
         goto L107DF4;
 L107db4:
     for (;;) {
         func_80177DAC();
-        if (func_800F56AC(cell_state(0x8F6)) == 0)
+        if (cell_flags_cmp(cell_state(0x8F6)) == 0)
             continue;
         break;
     }
@@ -77,7 +77,7 @@ L107E3C:
     cell_put(7);
 L107E6C:
     for (;;) {
-        func_800FE778();
+        wnd_fx_7d();
         row_page(0xCB);
         if (gate(0x202) != 0)
             goto L107EBC;

@@ -12,7 +12,7 @@ void func_8014AAA8(void)
     txt_set(0x34C4);
     txt_draw_cur();
     txt_set(0x34C5);
-    func_800F78C4(cell_state(0x3522));
+    cell_tick_or(cell_state(0x3522));
     txt_draw_cur();
     func_8014AA68();
     func_8014B9B4();

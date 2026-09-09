@@ -7,7 +7,7 @@ void func_801719C8(void)
 {
     row_open2();
     latch(0x15);
-    func_800F9200();
+    cell_cursor_dec();
     row_pad();
     txt_set(0x1712);
     if (gate(2) != 0)
@@ -54,7 +54,7 @@ Lb00:
     cell_put(0xC);
     latch(0x70);
     sep_b();
-    func_800F7F48(cell_state(0xB5));
+    cell_tick_sub(cell_state(0xB5));
     cell_put(0xE);
     txt_set(0x1705);
 Lb60:
@@ -77,7 +77,7 @@ Lc10:
         txt_cell(0xBFB4);
         sep_a();
         cell_poke0(cell_state(0xC));
-        func_800F8960(0x414);
+        cell_pull_c8(0x414);
         row_page(0xD);
         row_open_w0();
         row_read(1);
@@ -88,15 +88,15 @@ Lc10:
         txt_cell(0xBFB5);
         sep_a();
         cell_poke0(cell_state(0xE));
-        func_800F8960(0x415);
+        cell_pull_c8(0x415);
         txt_cell(0xBFB6);
         sep_a();
         row_open_w(0x90);
-        func_800F8960(0x416);
+        cell_pull_c8(0x416);
         txt_cell(0xBFB7);
         sep_a();
         row_open_w(0x1A);
-        func_800F8960(0x417);
+        cell_pull_c8(0x417);
         cell_step();
         cell_step();
         cell_step();
@@ -128,14 +128,14 @@ Ld70:
     txt_draw(0x40D);
     latch(0x43);
     txt_draw(0x40E);
-    func_800F8F74(0x40F);
+    cell_clear_bank(0x40F);
     latch(0x78);
     txt_draw(0x410);
     latch(0x78);
     txt_draw(0x411);
     latch(0x43);
     txt_draw(0x412);
-    func_800F8F74(0x413);
+    cell_clear_bank(0x413);
 Le00:
     row_pad();
     return;

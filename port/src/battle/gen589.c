@@ -19,14 +19,14 @@ L142cbc:
             if (gate(2) != 0)
                 goto L142D30;
             sep_b();
-            func_800F7F48(cell_state_of());
+            cell_tick_sub(cell_state_of());
             cell_draw_cur();
         L142D30:
             txt_cell_cur();
             if (gate(2) != 0)
                 goto L142D68;
             sep_b();
-            func_800F7F48(cell_state_of());
+            cell_tick_sub(cell_state_of());
             cell_draw_cur();
         L142D68:
             cell_step();

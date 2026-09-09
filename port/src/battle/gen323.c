@@ -3,16 +3,16 @@
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-extern void func_800F6630(u32 v0);
-extern void func_800F824C(u32 v0);
+
+
 extern void func_80105230(void);
-extern void func_800F8D00(u32 v0);
-extern void func_800F6564(u32 v0);
-extern void func_800F5410(void);
-extern void func_800F4008(u32 v0);
-extern void func_800F8188(u32 v0);
-extern void func_800F62BC(u32 v0);
-extern void func_800F5DA0(u32 v0);
+
+
+
+
+
+
+
 void func_8011A204(void) {
     row_page(0x3D);
     cell_put(0xC);

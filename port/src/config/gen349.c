@@ -3,23 +3,23 @@
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-extern int func_800F3D48();
-extern int func_800F5B8C();
-extern int func_800F5DA0();
-extern int func_800F6364();
-extern int func_800F63BC();
-extern int func_800F6434();
-extern int func_800F654C();
-extern int func_800F6564();
-extern int func_800F6B68();
-extern int func_800F71DC();
-extern int func_800F7500();
-extern int func_800F824C();
-extern int func_800F8960();
-extern int func_800F9330();
-extern int func_800F939C();
-extern int func_800F95A0();
-extern int func_800F960C();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 extern int func_801245B4();
 
 void func_80129C54(void)
@@ -44,9 +44,9 @@ void func_80129C54(void)
     txt_cell(0);
     cell_step();
     func_801245B4();
-    func_800F8960(0xc600);
+    cell_pull_c8(0xc600);
     stat_sync();
-    func_800F8960(0xc640);
+    cell_pull_c8(0xc640);
     step2();
     step2();
     poll_pair(0x45);

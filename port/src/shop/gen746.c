@@ -10,19 +10,19 @@ void func_8016D798(void)
     io_poll(0x42);
     if (io_go() != 0)
         goto L16D7E0;
-    func_800F82EC(0x3C);
+    cell_pull_c8_bank(0x3C);
     latch(0xFF);
-    func_800F82EC(0x39);
+    cell_pull_c8_bank(0x39);
     step2();
     return;
 L16D7E0:
     sep_b();
-    func_800F8058(0xF);
+    cell_pos_back(0xF);
     row_sel_cell_cur();
-    func_800F6C68();
-    func_800F82EC(0x39);
-    func_800F6C68();
-    func_800F82EC(0x3C);
+    cell_push_c8();
+    cell_pull_c8_bank(0x39);
+    cell_push_c8();
+    cell_pull_c8_bank(0x3C);
     step2();
     return;
 }

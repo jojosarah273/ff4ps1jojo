@@ -10,12 +10,12 @@ void func_80131534(void)
        with 80126528/80122904 rows. */
     func_80132428();
     row_prep(0x20);
-    func_800F87DC(0xB);
+    cell_stamp8_9(0xB);
     row_prep_close();
     txt_set(0x1B89);
     sep_b();
-    func_800F8058(0xE);
-    func_800F9200();
+    cell_pos_back(0xE);
+    cell_cursor_dec();
     func_80177178();
     row_close2();
     wnd_open_cur();

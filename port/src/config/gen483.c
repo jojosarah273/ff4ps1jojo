@@ -8,21 +8,21 @@ void func_801582D8(void)
     /* ability plot: 0x3975 text, 0xA7/0xA6 windows, 80151CD8/
        801571DC/80155778/801583FC rows; loop L158374 on 5A90(0x40). */
     txt_set(0x3975);
-    func_800F9200();
+    cell_cursor_dec();
     func_80151CD8();
     row_close2();
     txt_draw(0x3975);
     func_801571DC();
     func_80155778();
     func_801583FC();
-    func_800F76BC(cell_state(0xA7));
-    func_800F76E8();
-    func_800F7CC8(cell_state(0xA6));
+    cell_word_half(cell_state(0xA7));
+    cell_flags_repack();
+    cell_word_half_s(cell_state(0xA6));
     page(0xA6);
     sep();
 L158374:
     for (;;) {
-        func_800F66D8(0x80);
+        cell_push_c8_sel(0x80);
         cell_draw(0x1000);
         cell_step();
         step2();
@@ -32,12 +32,12 @@ L158374:
         break;
     }
     draw_pad(0x41);
-    func_800F66D8(0x80);
+    cell_push_c8_sel(0x80);
     page(0xA6);
     cell_draw(0x102D);
     step2();
     cell_step();
-    func_800F66D8(0x80);
+    cell_push_c8_sel(0x80);
     cell_draw(0x102D);
     return;
 }

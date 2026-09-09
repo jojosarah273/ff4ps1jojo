@@ -9,7 +9,7 @@ void func_80141E80(void)
     row_open();
     txt_set_cur();
     sep_b();
-    func_800F8058(8);
+    cell_pos_back(8);
     txt_draw_cur();
     if (io_just() == 0)
         goto L141EC8;
@@ -23,7 +23,7 @@ L141EC8:
     if (io_just() != 0)
         goto L141F3C;
     txt_set_cur();
-    func_800F6C68();
+    cell_push_c8();
     txt_draw_cur();
     page_paint2_cur();
 L141F3C:

@@ -30,22 +30,22 @@ void func_8011BD88(void)
     row_prep(0x20);
     row_read2(0x66);
     sep_a();
-    func_800F4064();
-    func_800F8274(0x66);
+    cell_pos_fwd();
+    cell_put_hi9(0x66);
     row_read2(0x68);
     sep_a();
-    func_800F4064();
-    func_800F8274(0x68);
+    cell_pos_fwd();
+    cell_put_hi9(0x68);
 Lbf70:
     row_prep(0x20);
     row_read2(0x5A);
     sep_a();
     cell_peek0(cell_state(0x66));
-    func_800F8274(0x5E);
+    cell_put_hi9(0x5E);
     row_read2(0x5C);
     sep_a();
     cell_peek0(cell_state(0x68));
-    func_800F8274(0x60);
+    cell_put_hi9(0x60);
     row_sync2_cur();
     row_prep_close();
     return;
@@ -69,9 +69,9 @@ Lbfe0:
     row_sel2(cell_state(0x5F));
     goto Lc0a8;
 Lc080:
-    func_800F76BC(cell_state(0x5F));
-    func_800F76E8();
-    func_800F7CC8(cell_state(0x5E));
+    cell_word_half(cell_state(0x5F));
+    cell_flags_repack();
+    cell_word_half_s(cell_state(0x5E));
 Lc0a8:
     txt_set(0xFE4);
     row_read(6);
@@ -101,9 +101,9 @@ Lc0e8:
     row_sel2(cell_state(0x61));
     goto Lc1b0;
 Lc188:
-    func_800F76BC(cell_state(0x61));
-    func_800F76E8();
-    func_800F7CC8(cell_state(0x60));
+    cell_word_half(cell_state(0x61));
+    cell_flags_repack();
+    cell_word_half_s(cell_state(0x60));
 Lc1b0:
     txt_set(0xFE4);
     row_read(6);

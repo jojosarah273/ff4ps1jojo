@@ -48,7 +48,7 @@ L91f4:
         txt_set(0x1BB1);
         if (gate(2) != 0)
             goto L930c;
-        func_800F8F74(0x1BB1);
+        cell_clear_bank(0x1BB1);
         goto L9454;
     L930c:
         page_paint2(0x1BB1);
@@ -63,7 +63,7 @@ L91f4:
         page_paint2(0x1BB1);
         goto L9384;
     L935c:
-        func_800F8F74(0x1BB1);
+        cell_clear_bank(0x1BB1);
     L9364:
         row_page(1);
         row_read(8);
@@ -76,14 +76,14 @@ L91f4:
         txt_set(0x1BB2);
         if (gate(2) != 0)
             goto L9434;
-        func_800F5D24(0x1BB2);
+        cell_dec_bank(0x1BB2);
         latch(8);
         for (;;) {
             row_prep(0x20);
             func_800F5DD4(0x99);
             func_800F5DD4(0x99);
             row_prep_close();
-            func_800F9200();
+            cell_cursor_dec();
             func_801395E4();
             func_8011F684();
             func_801264E8();
@@ -95,7 +95,7 @@ L91f4:
         }
         goto L950c;
     L942c:
-        func_800F5D24(0x1BB0);
+        cell_dec_bank(0x1BB0);
     L9434:
         row_page(1);
         row_read(4);
@@ -116,7 +116,7 @@ L91f4:
             func_800F62F0(0x99);
             func_800F62F0(0x99);
             row_prep_close();
-            func_800F9200();
+            cell_cursor_dec();
             func_801395E4();
             func_8011F684();
             func_801264E8();

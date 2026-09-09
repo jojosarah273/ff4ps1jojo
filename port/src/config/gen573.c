@@ -3,22 +3,22 @@
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-extern int func_800F654C();
-extern int func_800F71DC();
-extern int func_800F824C();
-extern int func_800F8D6C();
-extern int func_800F9200();
-extern int func_800F9330();
-extern int func_800F93DC();
-extern int func_800F95A0();
-extern int func_800F971C();
+
+
+
+
+
+
+
+
+
 extern int func_801240A8();
 
 void func_8012102C(void)
 
 {
   func_801240A8();
-  func_800F9200();
+  cell_cursor_dec();
   row_open();
   wnd_open(0xa600);
   tail(0x29);

@@ -15,7 +15,7 @@ void func_80118534(void)
 L11855c:
     for (;;) {
         cell_fmt2(0x3D);
-        func_800F6D70(0x1000);
+        cell_push_c8_d58(0x1000);
         row_read(0x1F);
         if (io_press(cell_state_of()) != 0)
             goto L11860C;
@@ -40,7 +40,7 @@ L11860C:
     if (gate(0x80) != 0)
         goto L118728;
     row_prep(0x20);
-    func_800F8274(0x40);
+    cell_put_hi9(0x40);
     row_sync2_cur();
     row_prep_close();
     latch(0x40);
@@ -50,7 +50,7 @@ L11860C:
 L1186c8:
     for (;;) {
         txt_cell(0x1000);
-        func_800F8960(0x1140);
+        cell_pull_c8(0x1140);
         cell_step();
         step2();
         poll_pair(7);

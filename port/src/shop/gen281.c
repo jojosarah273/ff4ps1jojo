@@ -42,7 +42,7 @@ L169b10:
     L169b34:
         for (;;) {
             row_page(4);
-            func_800F82EC(6);
+            cell_pull_c8_bank(6);
             key_page(4);
             step2();
             cell_step();
@@ -53,8 +53,8 @@ L169b10:
         row_prep(0x20);
         row_read2(6);
         sep_a();
-        func_800F4064(0x80);
-        func_800F8274(6);
+        cell_pos_fwd(0x80);
+        cell_put_hi9(6);
         sep();
         row_prep_close();
         poll_pair(2);
@@ -63,7 +63,7 @@ L169b10:
         break;
     }
     sep();
-    func_800F81E8(0x2115);
+    cell_pull_c8_lo(0x2115);
 L169c04:
     for (;;) {
         txt_cell(0x3D19);
@@ -74,6 +74,6 @@ L169c04:
         break;
     }
     latch(0x80);
-    func_800F81E8(0x2115);
+    cell_pull_c8_lo(0x2115);
     return;
 }

@@ -9,13 +9,13 @@ void func_8015D0B8(void)
        80152908/80152CDC/8015A284/80155778/801583FC rows; 6434
        gates. */
     txt_set(0x1822);
-    func_800F6D70(0x38FC);
+    cell_push_c8_d58(0x38FC);
     if (gate(2) != 0)
         return;
     txt_set(0x1822);
     txt_draw(0x3975);
     func_80152908();
-    func_800F6D70(0x38FC);
+    cell_push_c8_d58(0x38FC);
     if (gate_cur() != 0)
         goto L15D160;
     cell_step();
@@ -24,7 +24,7 @@ void func_8015D0B8(void)
     cell_step();
 L15D160:
     sep();
-    func_800F8960(0x38FC);
+    cell_pull_c8(0x38FC);
     page_paint(0x32DB);
     page_paint(0x32DC);
     latch(0x80);

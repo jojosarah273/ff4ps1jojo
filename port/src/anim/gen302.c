@@ -45,9 +45,9 @@ L172AD0:
     sep_a();
     cell_poke0(cell_state(6));
     txt_draw(0x4C1);
-    func_800F6C68();
+    cell_push_c8();
     txt_draw(0x4C2);
-    func_800F6C68();
+    cell_push_c8();
     txt_draw(0x4C3);
     latch(0x78);
     txt_draw(0x4C4);
@@ -55,9 +55,9 @@ L172AD0:
     sep_a();
     cell_poke0(cell_state(6));
     txt_draw(0x4C5);
-    func_800F6C68();
+    cell_push_c8();
     txt_draw(0x4C6);
-    func_800F6C68();
+    cell_push_c8();
     txt_draw(0x4C7);
     return;
 }

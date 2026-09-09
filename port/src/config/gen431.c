@@ -16,7 +16,7 @@ void func_80158190(void)
     io_poll(0xD);
     if (io_just() == 0)
         goto L1581E0;
-    func_800F8F74(0x38F6);
+    cell_clear_bank(0x38F6);
 L1581E0:
     row_page(0xD3);
     row_sel_cell_cur();

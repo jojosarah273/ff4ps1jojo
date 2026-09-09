@@ -3,8 +3,8 @@
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-extern void func_800F8D6C(u32 v0);
-extern void func_800F7500(u32 v0);
+
+
 extern void func_80141290(void);
 void func_80141240(void) {
     tail(0);

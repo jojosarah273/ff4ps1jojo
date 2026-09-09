@@ -9,7 +9,7 @@ void func_80129F54(void)
        0xAE windows, 0x1BA5/0x1BC9/0x1B1D rows; home-row renders through
        80121124/801210AC/80126920/801263F0/80120F1C, then the 8012AAC0/
        80120F94/80120CA4 option cells and 8012A190 sub-menu gate. */
-    func_800F8F74(0x1B1F);
+    cell_clear_bank(0x1B1F);
     func_801267A0();
     func_801266F0();
     func_801240A8();
@@ -21,7 +21,7 @@ void func_80129F54(void)
     func_801241B8();
     func_8011F684();
     latch(0x1B);
-    func_800F81E8(0x212C);
+    cell_pull_c8_lo(0x212C);
     draw_pad_cur();
     wnd_open_cur();
     func_80121124();
@@ -66,8 +66,8 @@ void func_80129F54(void)
     func_80122A24();
     func_8011F684();
     latch(0x1F);
-    func_800F81E8(0x212C);
-    func_800F8F74(0x1BC9);
+    cell_pull_c8_lo(0x212C);
+    cell_clear_bank(0x1BC9);
     func_8017F8F8();
     func_80120B6C();
     return;

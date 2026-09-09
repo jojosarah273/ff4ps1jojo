@@ -6,7 +6,7 @@
 void func_80120DB4(void)
 {
     func_80124158();
-    func_800F9200();
+    cell_cursor_dec();
     row_open();
     wnd_open(54784);
     tail(41);

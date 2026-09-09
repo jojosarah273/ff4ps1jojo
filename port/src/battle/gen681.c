@@ -12,14 +12,14 @@ void func_80114DC8(void)
     tail(0x89);
 L114de8:
     for (;;) {
-        func_800FE778();
+        wnd_fx_7d();
         page(0x89);
         poll_t(0xF);
         if (io_go() != 0)
             goto L114E2C;
         txt_draw(0x2100);
     L114E2C:
-        func_800FE870();
+        cell_clear_pad();
         func_80172BA8();
         func_80115080();
         latch(0x40);
@@ -29,7 +29,7 @@ L114de8:
         open_row(4);
         func_80115038();
         page(0x89);
-        func_800F5E48();
+        cell_set50_from54();
         tail(0x89);
         if (poll_go(0x202) != 0)
             continue;
