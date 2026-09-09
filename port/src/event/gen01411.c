@@ -18,7 +18,7 @@ L18D958:
     if (io_just() != 0)
         goto L18DAA4;
     func_8018D1AC();
-    func_8018A75C(3);
+    event_drive(3);
     return;
 L18DAA4:
     return;

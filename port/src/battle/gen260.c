@@ -37,7 +37,7 @@ L144084:
     func_8013EF78();
 L14411C:
     for (;;) {
-        func_80140558();
+        gpu_driver_run();
         func_80143ED4();
         txt_set_cur();
         sep_b();

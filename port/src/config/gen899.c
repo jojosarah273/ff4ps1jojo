@@ -9,7 +9,7 @@ void func_80126610(void)
        6434(0x80) gate; loop L126618 on 5B8C. */
 L126618:
     for (;;) {
-        func_8011F320();
+        midrow_pad88();
         row_page(0x88);
         if (gate(0x80) != 0)
             goto L126690;

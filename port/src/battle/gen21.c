@@ -5,7 +5,7 @@
 #include "ff4_window.h"
 void func_8011777C(void)
 {
-    func_80117594();
+    battle_tick_text();
     txt_draw(0x1800);
     txt_set(0x1701);
     if (gate(2) != 0)

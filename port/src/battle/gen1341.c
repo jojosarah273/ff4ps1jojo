@@ -18,7 +18,7 @@ L11ec58:
     L11ecd0:
         for (;;) {
             func_80194700();
-            func_80194394();
+            cb_slot15();
             cell_set50_from54();
             cell_set50_from54();
             label(0x1A65);

@@ -28,7 +28,7 @@ L13e340:
     }
 L13e398:
     for (;;) {
-        func_80140558();
+        gpu_driver_run();
         sep();
         txt_set_cur();
         cell_put(0xA);

@@ -9,6 +9,6 @@ void func_80180BB4(void)
     do {
         func_801824D8();
     } while (io_just() != 0);
-    func_80194640();
+    cb_slot2();
     return;
 }

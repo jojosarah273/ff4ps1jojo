@@ -45,7 +45,7 @@ L15CFC8:
 L15D060:
     cell_put(1);
     latch(6);
-    func_80150C38();
+    gpu_driver_run_b();
     row_close();
     row_close2();
     cell_draw(0x321C);

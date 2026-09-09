@@ -9,23 +9,23 @@ void func_80183A80(void)
        801971A8(1)/80197208 pair. */
     do {
         func_801971A8(1);
-        func_80197208();
+        tex_link_packets();
     } while (io_just() != 0);
     do {
         func_801971A8(1);
-        func_80197208();
+        tex_link_packets();
     } while (io_just() != 0);
     do {
         func_801971A8(1);
-        func_80197208();
+        tex_link_packets();
     } while (io_just() != 0);
     func_801971A8(1);
-    func_80197208();
+    tex_link_packets();
     do {
         func_801971A8(1);
-        func_80197208();
+        tex_link_packets();
     } while (io_just() != 0);
     func_801971A8(1);
-    func_80197208();
+    tex_link_packets();
     return;
 }

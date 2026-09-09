@@ -27,14 +27,14 @@ L1415C4:
     txt_draw(0x1E01);
     latch(1);
     txt_draw(0x1E00);
-    func_80169128();
+    battle_cb_86120();
     cell_clear_bank(0x388D);
 L14160C:
     txt_set_cur();
     if (gate(2) != 0)
         goto L14163C;
     txt_draw(0x1E00);
-    func_80169128();
+    battle_cb_86120();
     cell_clear_bank();
 L14163C:
     txt_set_cur();
@@ -50,7 +50,7 @@ L14163C:
     txt_set(0x1E02);
     txt_draw_cur();
 L1416B4:
-    func_80169128();
+    battle_cb_86120();
     cell_clear_bank();
 L1416C4:
     cell_clear_bank(0x352D);

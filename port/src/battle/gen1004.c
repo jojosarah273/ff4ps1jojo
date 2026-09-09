@@ -17,7 +17,7 @@ void func_80145168(void)
 L1451a0:
     for (;;) {
         row_open();
-        func_80140558();
+        gpu_driver_run();
         page_paint2_cur();
         func_80144C78();
         func_801449D0();

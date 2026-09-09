@@ -33,8 +33,8 @@ L2BEC4:
     cell_put(0x5D);
 L2becc:
     for (;;) {
-        func_8011F684();
-        func_8011F884();
+        midrow_pad88_run();
+        midrow_degen();
         row_page(1);
         row_read(8);
         if (sel(2) != 0)

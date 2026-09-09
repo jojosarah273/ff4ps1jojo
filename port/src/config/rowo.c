@@ -128,13 +128,13 @@ L0A0:
     label(0x30E);
     label(0x316);
     label(0x31A);
-    func_8011F684();
+    midrow_pad88_run();
     func_80126480();
     func_8013A8C4();
     func_8013B7B8(0xFF);
     func_8013B764();
-    func_8011EF0C();
-    func_8011F884();
+    battle_state_dc400();
+    midrow_degen();
     row_page(1);
     row_read(0x80);
     if (sel(2) == 0)
@@ -159,7 +159,7 @@ L32C:
     if (gate(2) != 0)
         goto L36C;
     func_8013B270();
-    func_801241B8();
+    midrow_paint_c();
 L36C:
     row_page(1);
     row_read(8);

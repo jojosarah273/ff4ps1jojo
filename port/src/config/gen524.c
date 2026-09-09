@@ -24,7 +24,7 @@ void func_80134C74(void)
 L134d38:
     for (;;) {
         func_80194700();
-        func_80194394();
+        cb_slot15();
         wnd_open_cur();
         label(0x1B1D);
         latch(0x20);
@@ -36,7 +36,7 @@ L134d38:
         cell_put(0x3F);
         cell_clear_bank(0x1BB4);
         func_80123FB4();
-        func_801241B8();
+        midrow_paint_c();
         func_80126330();
         func_8011F6A4();
         func_801378B0();

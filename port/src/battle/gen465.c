@@ -38,7 +38,7 @@ L1120B4:
     row_close2();
     func_8011AB18();
     cell_clear_bank(0x1E05);
-    func_80169128();
+    battle_cb_86120();
     battle_rows_run();
     open_row(0xD6);
     return;

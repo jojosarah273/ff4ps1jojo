@@ -15,12 +15,12 @@ void func_80181498(void)
             goto L181578;
         break;
     }
-    func_80194640();
+    cb_slot2();
     return;
 L181578:
     do {
         func_801824D8();
     } while (io_just() != 0);
-    func_80194640();
+    cb_slot2();
     return;
 }

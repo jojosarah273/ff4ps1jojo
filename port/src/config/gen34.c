@@ -54,7 +54,7 @@ Lbeac:
     latch(0xFF);
     cell_put(0xD0);
     latch(1);
-    func_80150C38();
+    gpu_driver_run_b();
     return;
 Lbed4:
     row_page(0xD0);
@@ -136,7 +136,7 @@ Lbf8c:
     return;
 Lc130:
     sep();
-    func_80150C38();
+    gpu_driver_run_b();
     return;
 Lc148:
     page(0xA6);

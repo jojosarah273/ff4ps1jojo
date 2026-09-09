@@ -18,7 +18,7 @@ void func_80135330(void)
         goto L1353C4;
     func_80125934();
     func_8012B168();
-    func_8011F684();
+    midrow_pad88_run();
     func_80120FBC();
     draw_pad_cur();
     func_8011FB74();
@@ -26,7 +26,7 @@ void func_80135330(void)
     func_8011FF40();
     return;
 L1353C4:
-    func_801241B8();
+    midrow_paint_c();
     func_80120F1C();
     draw_pad_cur();
     battle_rows_sync();
@@ -39,7 +39,7 @@ L1353C4:
     battle_rows_sync();
     func_80135574();
     txt_draw(0x1B7D);
-    func_8011F684();
+    midrow_pad88_run();
     func_80120B6C();
     cell_clear_bank(0x1BCB);
 L13546c:
@@ -49,9 +49,9 @@ L13546c:
         txt_set(0x1B7C);
         draw_pad(0x19A);
         func_801206DC();
-        func_8011F684();
+        midrow_pad88_run();
         func_801264E8();
-        func_8011F884();
+        midrow_degen();
         func_80137938();
         txt_set(0x1BCB);
         if (gate(2) != 0)

@@ -7,7 +7,7 @@ void func_80119128(void)
 {
     /* battle rows (twin with 78C4): 0x6/0x1003 cells, 80117DF8
        row; loop L119148 on 5958(0x140). */
-    func_80117594();
+    battle_tick_text();
     cell_put(6);
     wnd_open_cur();
 L119148:

@@ -118,11 +118,11 @@ L3C4:
     func_8012B0D8();
     func_8012B168();
     func_801320E8();
-    func_801241B8();
-    func_8011F684();
+    midrow_paint_c();
+    midrow_pad88_run();
     func_80130F90();
     func_80120B6C();
-    func_8011F684();
+    midrow_pad88_run();
     cell_clear_bank(0x1B8B);
     cell_clear_bank(0x1B8C);
     cell_clear_bank(0x1B8D);
@@ -164,8 +164,8 @@ L50C:
 L59C:
     draw_pad(0x310);
     func_80131358();
-    func_8011F684();
-    func_8011F884();
+    midrow_pad88_run();
+    midrow_degen();
     row_page(1);
     row_read(0x80);
     if (sel(2) != 0)
@@ -182,7 +182,7 @@ L5DC:
     func_8012B0D8();
     func_8012B168();
     func_80120FBC();
-    func_8011F684();
+    midrow_pad88_run();
     func_80126480();
     return;
 L654:

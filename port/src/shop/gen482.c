@@ -35,7 +35,7 @@ L162280:
     row_page(0xCD);
     cell_put_cur();
     latch(9);
-    func_80150C38();
+    gpu_driver_run_b();
     latch(0x13);
     txt_draw(0x34C8);
     latch(0x10);

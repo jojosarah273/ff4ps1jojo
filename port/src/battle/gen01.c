@@ -51,7 +51,7 @@ void func_80108458(void)
     txt_draw(0x1E01);
     latch(0x1);
     txt_draw(0x1E00);
-    func_80169128();
+    battle_cb_86120();
     func_801094A0();
     row_sel_cell_cur();
     cell_put(0x18);

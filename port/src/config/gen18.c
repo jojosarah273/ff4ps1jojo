@@ -101,6 +101,6 @@ L954:
     txt_draw(0x34CC);
 L9a4:
     latch(5);
-    func_80150C38();
+    gpu_driver_run_b();
     return;
 }

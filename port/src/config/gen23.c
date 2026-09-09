@@ -20,7 +20,7 @@ void func_8012FBB0(void)
     txt_draw(0x1BC4);
     cell_clear_bank(0x1BC5);
     row_page(0xE8);
-    func_80124EAC();
+    cell_cur_save54_b();
     row_prep(0x20);
     cell_sink8_9(0xB);
     cell_flags_cmp_pos(cell_state(0x1BC4));

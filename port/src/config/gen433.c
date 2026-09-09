@@ -29,7 +29,7 @@ L13dc70:
     }
 L13dca0:
     for (;;) {
-        func_80140558();
+        gpu_driver_run();
         txt_set_cur();
         cell_put_cur();
         sep();

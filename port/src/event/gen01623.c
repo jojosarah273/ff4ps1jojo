@@ -20,6 +20,6 @@ L18DBDC:
     func_8018E448();
     func_8018D1AC();
     func_8018E2C8();
-    func_8018A75C(3);
+    event_drive(3);
     return;
 }

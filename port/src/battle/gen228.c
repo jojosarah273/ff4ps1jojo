@@ -43,7 +43,7 @@ L3968:
 L3a18:
     for (;;) {
         row_open();
-        func_80140558();
+        gpu_driver_run();
         func_80143738();
         sep();
     L3a54:

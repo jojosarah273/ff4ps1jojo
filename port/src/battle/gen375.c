@@ -7,7 +7,7 @@ void func_80118D20(void)
 {
     /* battle stat row (twin): 0x100B gate, 0x100F/0x1011 cells,
        80174F0C/80117DF8/8011EA5C; loops L118D80/L118E48. */
-    func_80117594();
+    battle_tick_text();
     io_poll(0xFE);
     if (io_just() != 0)
         goto L118E40;

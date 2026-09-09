@@ -78,7 +78,7 @@ void func_801121C4(void)
 L24d0:
     for (;;) {
         func_80194700();
-        if (func_80194394() == 0)
+        if (cb_slot15() == 0)
             break;
     }
     wnd_open_cur();

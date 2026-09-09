@@ -5,7 +5,6 @@
 #include "ff4_window.h"
 
 extern int func_8011EE34();
-extern int func_8011F320();
 
 void func_80120CA4(void)
 
@@ -29,7 +28,7 @@ void func_80120CA4(void)
   wnd_open(0x80);
   tail(0x22);
   do {
-    func_8011F320();
+    midrow_pad88();
     func_8011EE34();
     row_prep(0x20);
     row_read2(0x1d);

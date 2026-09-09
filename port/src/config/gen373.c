@@ -80,7 +80,7 @@ L7d40:
     func_80187CD0();
 L7e88:
     func_801221EC();
-    func_801210AC();
+    midrow_paint_a();
     draw_pad_cur();
     battle_rows_sync();
     draw_pad_cur();
@@ -100,7 +100,7 @@ L7ed8:
     func_801382C8();
     func_80127C70();
     func_801221EC();
-    func_801210AC();
+    midrow_paint_a();
     draw_pad_cur();
     battle_rows_sync();
     draw_pad_cur();

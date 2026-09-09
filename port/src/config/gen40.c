@@ -7,7 +7,7 @@ void func_80125130(void)
 {
     row_open();
     row_page(0x1D);
-    func_80124EAC();
+    cell_cur_save54_b();
     tail(0x22);
     cell_push_c8_lo(0x22);
     row_read(0x3F);

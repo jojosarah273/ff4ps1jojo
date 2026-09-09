@@ -27,7 +27,7 @@ uint32_t catalog_dispatch(uint32_t a0);
 
 /* externs for the not-yet-interpreted 800F/801x dispatcher targets */
 extern void func_80177DAC(void);
-extern void func_80169128(void);
+
 extern void func_800FE110(void);
 extern void func_800FDBBC(void);
 extern void func_800FDD8C(void);
@@ -129,7 +129,7 @@ L_FD7D4:
     latch(1);
 L_FD7E4:
     txt_draw(0x1E00);
-    func_80169128();
+    battle_cb_86120();
 }
 
 /* 800FE7D8: shop view dispatcher (0x1700 gate). */

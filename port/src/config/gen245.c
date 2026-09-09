@@ -21,7 +21,7 @@ Ld78:
         func_80122A9C();
         func_80122538();
         func_80126528();
-        func_8011EF0C();
+        battle_state_dc400();
     }
 Lde8:
     row_page(0xE8);
@@ -55,10 +55,10 @@ Lde10:
     if (io_press(cell_state(0xD9)) != 0)
         goto Lde10;
     row_page(0xD9);
-    func_8012D204();
+    midrow_prep_a();
     cell_put(0x45);
     row_page(0xDA);
-    func_8012D204();
+    midrow_prep_a();
     cell_tick_or(cell_state(0x45));
     if (ticker_reblend2(0x202) != 0)
         goto Ldf70;
@@ -107,7 +107,7 @@ Ldf70:
     func_80122A9C();
     func_80122538();
     func_80126528();
-    func_8011EF0C();
+    battle_state_dc400();
     battle_mode_dispatch();
     return;
 }

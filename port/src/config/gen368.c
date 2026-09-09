@@ -46,7 +46,7 @@ L13978c:
             continue;
         break;
     }
-    func_80120E2C();
+    midrow_paint_b();
     draw_pad_cur();
     battle_rows_29();
     func_80126528();

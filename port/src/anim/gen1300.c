@@ -16,7 +16,7 @@ L17CEE0:
         goto L17D000;
 L17cfd4:
     for (;;) {
-        func_80197208();
+        tex_link_packets();
         if (io_just() != 0)
             continue;
         break;
@@ -24,7 +24,7 @@ L17cfd4:
 L17D000:
     func_801971A8();
     func_801973B8();
-    func_80197208();
+    tex_link_packets();
     return;
 L17D054:
     return;

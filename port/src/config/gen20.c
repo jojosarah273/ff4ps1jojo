@@ -16,11 +16,11 @@ La198:
         cell_put(0x21);
         wnd_open(0x140);
         tail(0x22);
-        func_8011F320();
+        midrow_pad88();
         func_8011EE34();
         func_8011F6A4();
         func_80126480();
-        func_8011F884();
+        midrow_degen();
     La208:
         row_page(1);
         row_read(2);
@@ -73,7 +73,7 @@ La198:
         La368:
             row_sync();
             func_8012C980();
-            func_8011F684();
+            midrow_pad88_run();
             func_80126418();
             func_8016EA7C();
             row_done();
@@ -124,7 +124,7 @@ La198:
         La4c8:
             row_sync();
             func_8012C980();
-            func_8011F684();
+            midrow_pad88_run();
             func_80126418();
             func_8016EA7C();
             row_done();

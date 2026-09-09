@@ -3,13 +3,11 @@
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-extern void func_80140558(void);
-
 
 void func_8014202C(void) {
     ;
     do {
-        func_80140558();
+        gpu_driver_run();
         cell_set50_from54();
     } while (poll_go(0x202) != 0);
 }

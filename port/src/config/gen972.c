@@ -8,7 +8,7 @@ void func_801369B8(void)
 {
     cell_cursor_dec();
     cell_put(0x57);
-    func_8012D204();
+    midrow_prep_a();
     if (io_just() != 0)
         goto end;
     tail(0xE5);

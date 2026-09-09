@@ -8,7 +8,7 @@ void func_8012C980(void)
     /* config save-screen: 0x1B23/0x1B1A texts, 0x1440/0x45/0x54 windows,
        801210AC/801224D0/8011EF30 preps; L12CA7C confirm loop on
        53D4/6434(0x202)/5B8C(0x202); L12CB04 alt with 801240A8. */
-    func_801210AC();
+    midrow_paint_a();
     txt_set(0x1B23);
     sep_a();
     cell_poke0(cell_state(0x1B1A));

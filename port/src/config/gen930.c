@@ -15,7 +15,7 @@ L139554:
         row_prep_close();
         cell_cursor_dec();
         func_801395E4();
-        func_8011F684();
+        midrow_pad88_run();
         func_801264E8();
         row_close2();
         poll_spin();
@@ -23,7 +23,7 @@ L139554:
             continue;
         break;
     }
-    func_8011F884();
+    midrow_degen();
     page(2);
     tail_cur();
     func_801391D4();

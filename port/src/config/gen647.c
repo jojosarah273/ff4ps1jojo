@@ -11,7 +11,7 @@ void func_80124298(void)
 L1242a8:
     for (;;) {
         row_page(0xE4);
-        func_80124EAC();
+        cell_cur_save54_b();
         row_sel_cell_cur();
         cell_put(0x43);
         cell_fmt2(0x43);

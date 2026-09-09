@@ -31,12 +31,12 @@ void func_80138A6C(void)
     cell_flags_clr4();
     page_paint2(0x1B49);
     func_80123FB4();
-    func_801241B8();
+    midrow_paint_c();
     func_80126330();
     func_80138CB0();
     func_80139AA4();
     func_8011F6A4();
-    func_8011EF0C();
+    battle_state_dc400();
     battle_mode_dispatch();
     battle_mode_dispatch();
     battle_mode_dispatch();
@@ -44,7 +44,7 @@ void func_80138A6C(void)
 L138bdc:
     for (;;) {
         func_80194700();
-        func_80194394();
+        cb_slot15();
         func_80126590();
         func_80138D24();
         cell_clear_bank(0x1B49);

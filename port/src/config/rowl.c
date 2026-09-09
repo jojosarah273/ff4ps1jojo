@@ -76,7 +76,7 @@ L560:
     txt_draw(0xFE25);
     cell_clear_bank(0x1A73);
     func_80125934();
-    func_8011F684();
+    midrow_pad88_run();
     func_80120FBC();
     draw_pad_cur();
     func_8011FB74();
@@ -112,14 +112,14 @@ L758:
     draw_pad_cur();
     func_8011FB74();
     func_80125934();
-    func_8011F684();
+    midrow_pad88_run();
     latch(0x2B);
     func_8012224C();
     func_80126458();
     func_8011FF40();
     for (;;) {
-        func_8011F684();
-        func_8011F884();
+        midrow_pad88_run();
+        midrow_degen();
         row_page(2);
         cell_tick_or(cell_state(3));
         if (ticker_reblend2(0x202) != 0)
@@ -130,7 +130,7 @@ L758:
 L890:
     func_80125934();
     func_8012B168();
-    func_8011F684();
+    midrow_pad88_run();
     func_80120FBC();
     draw_pad_cur();
     func_8011FB74();

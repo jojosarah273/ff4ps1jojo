@@ -11,7 +11,7 @@ void func_801779E4(void)
     draw_pad(0x2030);
     row_info(0x86);
     draw_pad_cur();
-    func_80194394();
+    cb_slot15();
     func_801928E8();
     /* v1/v0 gates -> L77A9C / L77AB8 */
     func_80184AF8();

@@ -1,15 +1,13 @@
-/* FF4 source-port — interpreted module for func_8012D204.
- * Ground truth: src/func_8012D204.c (byte-verified).
+/* FF4 source-port — interpreted module for midrow_prep_a.
+ * Ground truth: src/midrow_prep_a.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-extern int func_80124EAC();
-
-void func_8012D204(void)
+void midrow_prep_a(void)
 
 {
-  func_80124EAC();
+  cell_cur_save54_b();
   txt_cell(0);
   row_read(0x3f);
   cell_flags_tick2();

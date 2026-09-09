@@ -4,14 +4,6 @@
  */
 #include "ff4_window.h"
 
-
-
-
-
-
-
-extern int func_80150C38();
-
 void func_8015CEA0(void)
 
 {
@@ -29,7 +21,7 @@ void func_8015CEA0(void)
   txt_set(0x3939);
   cell_put(1);
   latch(6);
-  func_80150C38();
+  gpu_driver_run_b();
   return;
 }
 

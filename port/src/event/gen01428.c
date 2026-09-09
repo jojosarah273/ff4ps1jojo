@@ -14,7 +14,7 @@ void func_80181DA4(void)
     }
     if (io_just() == 0)
         goto L181F60;
-    func_80194640();
+    cb_slot2();
 L181F60:
     if (io_just() == 0)
         goto L1820CC;
@@ -23,7 +23,7 @@ L181F60:
             continue;
         break;
     }
-    func_80194640();
+    cb_slot2();
 L1820CC:
     return;
 }

@@ -3,4 +3,4 @@
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8016E500(void) { cell_put(0xA9); cell_clear_bank(0x1E00); cell_clear_bank(0x1E01); cell_clear_bank(0x1E05); row_page(0xA9); txt_draw(0x1E01); latch(0x1); txt_draw(0x1E00); func_80169128(); }
+void func_8016E500(void) { cell_put(0xA9); cell_clear_bank(0x1E00); cell_clear_bank(0x1E01); cell_clear_bank(0x1E05); row_page(0xA9); txt_draw(0x1E01); latch(0x1); txt_draw(0x1E00); battle_cb_86120(); }

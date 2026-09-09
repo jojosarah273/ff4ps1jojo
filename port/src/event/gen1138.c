@@ -11,7 +11,7 @@ void func_8018D1AC(void)
         goto L18D21C;
     goto L18D258;
 L18D21C:
-    func_8018A75C(2);
+    event_drive(2);
 L18D258:
     /* v1/v0 gate -> L18D3A8 */
     for (;;) {
@@ -34,6 +34,6 @@ L18D368:
 L18D3A0:
     goto L18D3A8;
 L18D3A8:
-    func_8018A75C(1);
+    event_drive(1);
     return;
 }

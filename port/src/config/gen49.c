@@ -32,8 +32,8 @@ L3064:
     latch(2);
     cell_put(0x45);
     func_8011F6D4();
-    func_8011F684();
-    func_8011F884();
+    midrow_pad88_run();
+    midrow_degen();
     row_page(1);
     row_read(8);
     if (sel(2) != 0)
@@ -49,7 +49,7 @@ L311C:
         cell_put(0xE7);
         battle_put43();
         cell_push_c8();
-        func_80124EAC();
+        cell_cur_save54_b();
         txt_set(0x1BB8);
         if (gate(0x202) != 0)
             goto L31A0;
@@ -76,7 +76,7 @@ L31C0:
         cell_put(0xE7);
         battle_put43();
         cell_push_c8();
-        func_80124EAC();
+        cell_cur_save54_b();
         txt_set(0x1BB8);
         if (gate(0x202) != 0)
             goto L324C;

@@ -18,7 +18,7 @@ void func_8013D720(void)
     func_8014086C();
 L780:
     for (;;) {
-        func_80140558();
+        gpu_driver_run();
         func_8013D5C8();
         sep();
         func_80143D14();
@@ -58,7 +58,7 @@ L780:
     txt_draw(0xF399);
 L8d4:
     for (;;) {
-        func_80140558();
+        gpu_driver_run();
         func_8013D5C8();
         sep();
         func_80143D64();
@@ -133,7 +133,7 @@ Lb18:
     func_801490AC();
 Lb48:
     for (;;) {
-        func_80140558();
+        gpu_driver_run();
         func_8013D690();
         func_80149374();
         if (io_go() != 0)

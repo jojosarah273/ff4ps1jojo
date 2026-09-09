@@ -2,7 +2,7 @@
  *
  * Battle-mode fan-out (rows vs fx by pad-latch/7 test). Exact mirror.
  *
- * Ground truth: src/func_8017F8F8.c (byte-verified).
+ * Ground truth: src/battle_mode_dispatch.c (byte-verified).
  */
 #include <stdint.h>
 #include "ff4_window.h"

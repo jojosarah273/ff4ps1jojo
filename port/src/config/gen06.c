@@ -11,7 +11,7 @@ void func_801324F8(void)
     battle_mode_dispatch();
     for (;;) {
         func_80194700();
-        if (func_80194394() == 0)
+        if (cb_slot15() == 0)
             break;
     }
     latch(0x7E);
@@ -20,7 +20,7 @@ void func_801324F8(void)
     page_paint2(0x1B49);
     func_80120F1C();
     func_80123FB4();
-    func_801241B8();
+    midrow_paint_c();
     draw_pad_cur();
     battle_rows_sync();
     draw_pad_cur();
@@ -37,7 +37,7 @@ void func_801324F8(void)
     func_80132CA4();
     battle_mode_dispatch();
     func_8011F6A4();
-    func_8011EF0C();
+    battle_state_dc400();
     func_80126590();
     cell_clear_bank(0x1B48);
 L6d8:
@@ -54,9 +54,9 @@ L6d8:
         draw_pad(0x300);
         func_8011F724();
         func_80132C0C();
-        func_8011F684();
+        midrow_pad88_run();
         func_801264E8();
-        func_8011F884();
+        midrow_degen();
         row_page_cur();
         row_read(0x80);
         if (sel(2) != 0)
@@ -86,7 +86,7 @@ L6d8:
         battle_rows_sync();
         draw_pad_cur();
         battle_rows_29();
-        func_8011F320();
+        midrow_pad88();
         func_801264E8();
         func_8011FF40();
         func_80126610();
@@ -95,7 +95,7 @@ L6d8:
         open_row(0x45);
         for (;;) {
             row_page(0x45);
-            func_8012D204();
+            midrow_prep_a();
             if (io_just() == 0)
                 break;
             key_page(0x45);
@@ -118,20 +118,20 @@ L6d8:
         battle_rows_29();
         draw_pad_cur();
         battle_rows_sync();
-        func_8011F320();
+        midrow_pad88();
         func_801264E8();
     L918:
         for (;;) {
             func_80132C0C();
             txt_set(0x1B4A);
-            func_80124EAC();
+            cell_cur_save54_b();
             tail(0x60);
             cell_push_c8_lo(0x60);
             draw_pad(0x152);
             func_80120A0C();
             func_801264C0();
             func_8011F6A4();
-            func_8011F884();
+            midrow_degen();
             row_page(1);
             row_read(1);
             if (sel(2) != 0)
@@ -148,7 +148,7 @@ L6d8:
                 sep();
             L9c8:
                 txt_draw(0x1B4A);
-                func_80124EAC();
+                cell_cur_save54_b();
                 tail(0x45);
                 cell_push_c8_lo(0x45);
                 row_read(0x3F);
@@ -171,7 +171,7 @@ L6d8:
                 latch(4);
             La58:
                 txt_draw(0x1B4A);
-                func_80124EAC();
+                cell_cur_save54_b();
                 tail(0x45);
                 cell_push_c8_lo(0x45);
                 row_read(0x3F);
@@ -191,7 +191,7 @@ L6d8:
             continue;
         Lad8:
             txt_set(0x1B4A);
-            func_8012D204();
+            midrow_prep_a();
             poll_spin();
             battle_put43();
             cell_put(0x43);

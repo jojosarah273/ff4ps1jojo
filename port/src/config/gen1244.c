@@ -4,15 +4,12 @@
  */
 #include "ff4_window.h"
 
-
-extern int func_80124EAC();
-
 void func_801321B4(void)
 
 {
   page(0x43);
   cell_push_c8(0x14ff9d);
-  func_80124EAC();
+  cell_cur_save54_b();
   return;
 }
 

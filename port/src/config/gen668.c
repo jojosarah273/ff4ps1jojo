@@ -31,7 +31,7 @@ L13ca84:
     sep_a();
     return;
 L13CB0C:
-    func_801210AC();
+    midrow_paint_a();
     draw_pad_cur();
     func_8011FB74();
     func_801263F0();

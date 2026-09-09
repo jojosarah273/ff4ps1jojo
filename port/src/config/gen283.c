@@ -17,12 +17,12 @@ L127178:
             goto L1271A0;
         cell_clear_bank(0x1A3C);
     L1271A0:
-        func_8011F684();
-        func_8011EF0C();
+        midrow_pad88_run();
+        battle_state_dc400();
         latch(0x1F);
         cell_pull_c8_lo(0x212C);
         page_paint2(0x16A7);
-        func_8011F884();
+        midrow_degen();
         row_page_cur();
         row_read(0x80);
         if (sel(2) != 0)

@@ -28,8 +28,8 @@ L13c09c:
         draw_pad(0x304);
         sep();
         func_8011F724();
-        func_8011F684();
-        func_8011F884();
+        midrow_pad88_run();
+        midrow_degen();
         row_page(1);
         row_read(0x80);
         if (sel(2) != 0)

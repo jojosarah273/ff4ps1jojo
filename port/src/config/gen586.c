@@ -8,7 +8,7 @@ void func_8015084C(void)
     /* battle splash: 80194394/801928E8/801942FC/801506BC preps; loop
        L15089C renders 0x2100/0x420C/0x420B icons and closes via
        80150C58; redraws on return. */
-    func_80194394();
+    cb_slot15();
     func_801928E8();
     func_801942FC();
     func_801506BC(8);
@@ -35,7 +35,7 @@ L15089c:
         cell_cursor_adv2();
         cell_cursor_read();
         row_pad();
-        func_80194394();
+        cb_slot15();
         func_801928E8();
         func_801942FC();
         func_801506BC();

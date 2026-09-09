@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801241B8.
- * Ground truth: src/func_801241B8.c (byte-verified).
+/* FF4 source-port — interpreted module for midrow_paint_c.
+ * Ground truth: src/midrow_paint_c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801241B8(void)
+void midrow_paint_c(void)
 {
     /* rows: 0x300/0x302/0x500 cells via 88E4(768/12288/770/1280);
        loops L1241D8/L124238 on 5C64(0x202). */

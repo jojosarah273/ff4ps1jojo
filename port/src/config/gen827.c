@@ -22,7 +22,7 @@ L150BF8:
     if (gate(0x202) == 0)
         goto L150C20;
     latch(0xD);
-    func_80150C38();
+    gpu_driver_run_b();
 L150C20:
     page_paint2(0x353F);
     return;

@@ -11,7 +11,7 @@ extern void func_8012BE34(void);
 extern void func_8012B0B0(void);
 extern void func_80126878(void);
 extern void func_801263F0(void);
-extern void func_8011EF0C(void);
+
 void func_8012BAF8(void) {
     func_8012BA14();
     func_80120B6C();
@@ -23,5 +23,5 @@ void func_8012BAF8(void) {
     func_8012B0B0();
     func_80126878();
     func_801263F0();
-    func_8011EF0C();;
+    battle_state_dc400();;
 }

@@ -7,7 +7,7 @@ void func_80119210(void)
 {
     /* battle rows: 0x18-0x1B windows, 0x16A0-0x16A2 texts,
        80174F0C row; 53C0 gate closes 0x16A0-0x16A2 fills. */
-    func_80117594();
+    battle_tick_text();
     cell_put(0x18);
     open_row(0x19);
     latch(0x64);

@@ -32,7 +32,7 @@ void func_80141760(void)
     func_80140310();
 L1898:
     for (;;) {
-        func_80140558();
+        gpu_driver_run();
         row_prep(0x20);
         cell_push9(0xF406);
         sep_a();
@@ -62,7 +62,7 @@ L1898:
     func_8014D528();
 L1968:
     for (;;) {
-        func_80140558();
+        gpu_driver_run();
         func_80149374();
         func_80097500();
         row_page(0x2B);

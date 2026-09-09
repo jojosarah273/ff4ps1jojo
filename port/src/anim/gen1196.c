@@ -10,28 +10,28 @@ void func_8017CCB0(void)
         goto L17CD3C;
     goto L17CD48;
 L17CD3C:
-    func_80197208();
+    tex_link_packets();
     if (io_just() != 0)
         goto L17CD98;
-    func_80197208();
-    func_80197208();
+    tex_link_packets();
+    tex_link_packets();
     if (io_just() != 0)
         goto L17CE50;
-    func_80197208();
+    tex_link_packets();
     return;
 L17CD48:
-    func_80197208();
+    tex_link_packets();
     goto L17CDA4;
 L17CD98:
-    func_80197208();
+    tex_link_packets();
     return;
 L17CDA4:
-    func_80197208();
+    tex_link_packets();
     if (io_just() != 0)
         goto L17CE50;
-    func_80197208();
+    tex_link_packets();
     return;
 L17CE50:
-    func_80197208();
+    tex_link_packets();
     return;
 }

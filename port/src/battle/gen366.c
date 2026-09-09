@@ -12,7 +12,7 @@ void func_80144344(void)
     cell_clear_bank(0xF327);
     wnd_open(0x20);
     do {
-        func_80140558();
+        gpu_driver_run();
         func_80141E80();
         cell_set50_from54();
     } while (poll_go(0x202) != 0);
@@ -23,7 +23,7 @@ void func_80144344(void)
     latch(0x80);
     txt_draw(0xF134);
     for (;;) {
-        func_80140558();
+        gpu_driver_run();
         txt_set(0xF133);
         io_poll(0x10);
         if (io_go() != 0) {

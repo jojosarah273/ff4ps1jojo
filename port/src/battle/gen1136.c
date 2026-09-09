@@ -3,4 +3,4 @@
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801191B0(void) { func_80117594(); cell_put(0x18); open_row(0x19); latch(0x64); cell_put(0x1A); open_row(0x1B); func_80174F0C(); func_801004D4(); wnd_fx_7d(); }
+void func_801191B0(void) { battle_tick_text(); cell_put(0x18); open_row(0x19); latch(0x64); cell_put(0x1A); open_row(0x1B); func_80174F0C(); func_801004D4(); wnd_fx_7d(); }

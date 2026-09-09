@@ -8,7 +8,7 @@ void func_80119860(void)
     /* battle rows: 0xB2 window, 80108330/80107C98/80105DB4/
        80107F3C/80109A28 rows, 0x9D5 text; 6434(2) gate via
        801175C4/8011EA5C. */
-    func_80117594();
+    battle_tick_text();
     cell_put(0xB2);
     func_80108330();
     func_80107C98();

@@ -8,7 +8,7 @@ void func_80119740(void)
     /* battle rows: 0x89/0x8A windows with 4F28/7A40 pairs, 0x1700
        text gate (800FF024 vs 80170C14/8010B010); loop L1197D8 on
        5C64(0x202). */
-    func_80117594();
+    battle_tick_text();
     cell_put(0x89);
     open_row(0x8A);
     row_arm2(cell_state(0x89));

@@ -11,9 +11,9 @@ void func_8012BA14(void)
     latch(0x30);
     cell_put(0x3F);
     func_801267E8();
-    func_8011F320();
-    func_8011EF0C();
-    func_801210AC();
+    midrow_pad88();
+    battle_state_dc400();
+    midrow_paint_a();
     draw_pad_cur();
     battle_rows_sync();
     draw_pad_cur();

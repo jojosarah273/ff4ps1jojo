@@ -10,7 +10,7 @@ void func_80125F38(void)
     cell_cursor_dec();
     cell_put(0x45);
     open_row(0x46);
-    func_8012D204();
+    midrow_prep_a();
     if (io_just() == 0)
         goto L125F80;
     row_close2();

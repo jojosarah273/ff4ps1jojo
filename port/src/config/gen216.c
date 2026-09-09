@@ -135,7 +135,7 @@ Lb020:
     latch(0x22);
     txt_draw(0x34CA);
     latch(5);
-    func_80150C38();
+    gpu_driver_run_b();
     func_8005A234();
     return;
 }

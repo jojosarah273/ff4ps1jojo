@@ -19,7 +19,7 @@ L17E7D8:
         goto L17E8F8;
 L17E8CC:
     do {
-        func_80197208();
+        tex_link_packets();
     } while (io_just() != 0);
     return;
 L17E84C:
@@ -33,7 +33,7 @@ L17E8AC:
     func_80195120();
     if (io_just() == 0)
         goto L17E8F8;
-    func_80197208();
+    tex_link_packets();
     goto L17E8CC;
 L17E8F8:
     return;

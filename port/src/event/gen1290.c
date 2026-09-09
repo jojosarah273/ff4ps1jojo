@@ -11,12 +11,12 @@ void func_80182CB4(void)
     if (io_just() != 0)
         goto L182D50;
     /* v0/v1 latch -> L182D50 */
-    func_80197208();
+    tex_link_packets();
     goto L182DCC;
 L182D50:
     if (io_just() != 0)
         goto L182DCC;
-    func_80197208();
+    tex_link_packets();
     return;
 L182DCC:
     return;

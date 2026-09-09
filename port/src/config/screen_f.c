@@ -45,9 +45,9 @@ void func_800FB430(void)
     tail(0x3D);
     func_801766B0();
     func_80194700();
-    func_80194394();
+    cb_slot15();
     func_80194700();
-    func_80194394();
+    cb_slot15();
     wnd_open(0x300);
     cell_draw_cur();
     cell_step();

@@ -264,7 +264,7 @@ f0dc:
     cell_pull_c8_lo(0x1E00);
     latch(0x15);
     cell_pull_c8_lo(0x1E01);
-    func_80169128();
+    battle_cb_86120();
     func_8016E490();
     page_paint2(0x7D25);
     for (;;) {

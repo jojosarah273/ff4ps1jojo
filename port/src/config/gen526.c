@@ -11,7 +11,7 @@ void func_801280D4(void)
     latch(0x30);
     cell_put(0xC1);
     func_8012807C();
-    func_801241B8();
+    midrow_paint_c();
     sep();
     cell_put(0x1D);
     sep();

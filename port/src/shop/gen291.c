@@ -53,7 +53,7 @@ L1614A8:
 L161530:
     cell_put(1);
     latch(6);
-    func_80150C38();
+    gpu_driver_run_b();
     latch(0xF8);
     txt_draw(0x26D4);
     latch(0xCE);

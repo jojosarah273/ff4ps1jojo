@@ -32,13 +32,13 @@ void func_80127408(void)
     label_cur();
     row_page(0x34);
     cell_cursor_dec();
-    func_801210AC();
+    midrow_paint_a();
     latch(0x30);
     cell_put(0x34);
     draw_pad_cur();
     battle_rows_sync();
     row_close2();
     cell_put(0x34);
-    func_8011EF0C();
+    battle_state_dc400();
     return;
 }

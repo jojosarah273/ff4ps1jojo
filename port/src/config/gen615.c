@@ -13,8 +13,8 @@ extern void func_8012E1C0(void);
 
 extern void func_80125130(void);
 extern void func_8012E758(void);
-extern void func_8011F684(void);
-extern void func_8011EF0C(void);
+
+
 void func_8012E264(void) {
     func_8012B0D8();
     func_801267A0();
@@ -38,6 +38,6 @@ void func_8012E264(void) {
     func_8012E758();
     row_page(0xDA);
     func_8012E758();
-    func_8011F684();
-    func_8011EF0C();;
+    midrow_pad88_run();
+    battle_state_dc400();;
 }

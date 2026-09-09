@@ -22,12 +22,12 @@ L15da08:
         /* v1/v0 gate -> L15DA08 */
         func_80061C8C();
         latch(5);
-        func_80150C38();
+        gpu_driver_run_b();
         func_80059AF4();
         latch(0x10);
-        func_80150C38();
+        gpu_driver_run_b();
         latch(2);
-        func_80150C38();
+        gpu_driver_run_b();
         break;
     }
     return;
@@ -58,8 +58,8 @@ L15dba0:
     }
 L15DC6C:
     latch(0x11);
-    func_80150C38();
+    gpu_driver_run_b();
     latch(0xC);
-    func_80150C38();
+    gpu_driver_run_b();
     return;
 }

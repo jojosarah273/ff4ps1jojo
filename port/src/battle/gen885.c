@@ -13,7 +13,7 @@ void func_801442BC(void)
     wnd_open(0x78);
 L1442e4:
     for (;;) {
-        func_80140558();
+        gpu_driver_run();
         txt_set_cur();
         cell_set50_from40();
         row_read(0xF);

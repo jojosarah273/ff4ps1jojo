@@ -9,7 +9,7 @@ void func_80120BDC(void)
        window; loop L120BE4 on 5DA0(0x45)/5B8C(0x202). */
 L120be4:
     for (;;) {
-        func_8011F320();
+        midrow_pad88();
         func_8011EE34();
         if (poll_go(0x202) == 0)
             goto L120C2C;

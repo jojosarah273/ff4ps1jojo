@@ -44,7 +44,7 @@ L128628:
         cell_put(0x4E);
         key_page(0x88);
     L1286A0:
-        func_8011F884();
+        midrow_degen();
         row_page_cur();
         row_read(0x80);
         if (sel(0x202) != 0)

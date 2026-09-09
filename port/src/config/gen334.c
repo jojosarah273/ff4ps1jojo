@@ -35,10 +35,10 @@ L135054:
         cell_put(0x46);
         func_8011F6D4();
         func_80125934();
-        func_8011F684();
+        midrow_pad88_run();
         func_801264E8();
-        func_8011EF0C();
-        func_8011F884();
+        battle_state_dc400();
+        midrow_degen();
         row_page(1);
         row_read(1);
         if (sel(2) != 0)

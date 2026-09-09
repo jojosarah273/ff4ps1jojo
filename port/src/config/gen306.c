@@ -13,7 +13,7 @@ void func_8012CF18(void)
 L12cf28:
     for (;;) {
         row_page(0x45);
-        func_8012D204();
+        midrow_prep_a();
         io_poll(3);
         if (io_just() != 0)
             goto L12CFA8;
@@ -62,7 +62,7 @@ L12cf28:
         func_800F8930(0x15C0);
         cell_cursor_dec();
         row_prep(0x10);
-        func_801210AC();
+        midrow_paint_a();
         draw_pad_cur();
         func_8011FB74();
         draw_pad(0x29A);

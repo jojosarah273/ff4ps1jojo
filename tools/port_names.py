@@ -113,6 +113,16 @@ NM = {
     "80149614": "cast_alt2",           "801539C4": "final_row",
     "8016AB14": "shop_store_run",      "8016DD9C": "shop_machine_run",
     "8016E0F8": "monster_status_run",  "80178C14": "status_table_init",
+    # ---- 801x row-mid/wrapper/cb batch (Block A) ----
+    "8012D204": "midrow_prep_a",      "801210AC": "midrow_paint_a",
+    "80120E2C": "midrow_paint_b",     "801241B8": "midrow_paint_c",
+    "8011F884": "midrow_degen",       "8011F320": "midrow_pad88",
+    "8011F684": "midrow_pad88_run",   "80117594": "battle_tick_text",
+    "8011EF0C": "battle_state_dc400", "80140558": "gpu_driver_run",
+    "80150C38": "gpu_driver_run_b",   "80169128": "battle_cb_86120",
+    "80124EAC": "cell_cur_save54_b",  "80197208": "tex_link_packets",
+    "80194640": "cb_slot2",           "80194394": "cb_slot15",
+    "8018A75C": "event_drive",
 }
 
 

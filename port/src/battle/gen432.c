@@ -15,7 +15,7 @@ void func_80144F24(void)
     func_8014D528();
 L144f6c:
     for (;;) {
-        func_80140558();
+        gpu_driver_run();
         func_80140310();
         row_prep(0x20);
         cell_push9();
@@ -42,7 +42,7 @@ L144f6c:
     cell_clear_bank(0x38E2);
 L145038:
     for (;;) {
-        func_80140558();
+        gpu_driver_run();
         func_80140310();
         row_prep(0x20);
         cell_push9();

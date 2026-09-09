@@ -4,8 +4,6 @@
  */
 #include "ff4_window.h"
 
-extern int func_8011F884();
-
 void func_8011F7D4(void)
 
 {
@@ -15,7 +13,7 @@ void func_8011F7D4(void)
   row_read(3);
   iVar1 = sel(0x202);
   if (iVar1 == 0) {
-    func_8011F884();
+    midrow_degen();
     row_page(3);
     cell_flags_scr();
     cell_put(1);

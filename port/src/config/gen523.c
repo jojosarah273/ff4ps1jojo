@@ -4,17 +4,6 @@
  */
 #include "ff4_window.h"
 
-
-
-
-
-
-
-
-
-
-
-extern int func_8012D204();
 extern int func_80134AF8();
 
 void func_80139C0C(void)
@@ -24,7 +13,7 @@ void func_80139C0C(void)
   
   cell_cursor_dec();
   cell_put(0x57);
-  func_8012D204();
+  midrow_prep_a();
   iVar1 = io_just();
   if (iVar1 == 0) {
     tail(0xe5);

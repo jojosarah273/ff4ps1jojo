@@ -12,7 +12,7 @@ void func_80141A80(void)
     label_cur();
 L141ab8:
     for (;;) {
-        func_80140558();
+        gpu_driver_run();
         func_80140310();
         row_prep(0x20);
         cell_push9();

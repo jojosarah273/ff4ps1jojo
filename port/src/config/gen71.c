@@ -11,7 +11,7 @@ void func_80125ACC(void)
     cell_cursor_dec();
     cell_put(0x45);
     open_row(0x46);
-    if (func_8012D204() != 0)
+    if (midrow_prep_a() != 0)
         goto L125B14;
     row_close2();
     return;

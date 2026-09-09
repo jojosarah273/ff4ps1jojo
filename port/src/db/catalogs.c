@@ -13,8 +13,8 @@
  * the & 0x1FFFF mask). Behavior of the *selection* is the 1:1 mirror;
  * only the final address space differs (documented in ARCHITECTURE.md).
  *
- * Ground truth: src/func_800F3B04.c, src/func_800F3C3C.c,
- *              src/func_800F3C6C.c, src/func_800F3C94.c
+ * Ground truth: src/catalog_base.c, src/cell_addr16.c,
+ *              src/cell_read32.c, src/cell_window.c
  *              (byte-verified; branch order mirrored 1:1).
  */
 #include <stdint.h>

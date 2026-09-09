@@ -10,7 +10,7 @@ void func_80136A58(void)
     tail(0x9F);
     func_80124130();
     func_80134E74();
-    func_801241B8();
+    midrow_paint_c();
     func_801264C0();
     func_8011F6A4();
     func_80120FBC();
@@ -20,12 +20,12 @@ void func_80136A58(void)
     battle_rows_29();
     draw_pad_cur();
     battle_rows_29();
-    func_80120E2C();
+    midrow_paint_b();
     func_8016EA7C();
     func_8012AAC0();
     func_80126528();
     func_80120FBC();
-    func_8011F684();
+    midrow_pad88_run();
     func_80126480();
     func_80120B6C();
 Lb24:
@@ -46,9 +46,9 @@ Lb24:
         txt_set(0x1B7C);
         draw_pad(0x19A);
         func_801206DC();
-        func_8011F684();
+        midrow_pad88_run();
         func_80126480();
-        func_8011F884();
+        midrow_degen();
         func_80137938();
         row_page_cur();
         row_read(0x80);
@@ -81,8 +81,8 @@ Lc0c:
     Lc8c:
         cell_put(0x45);
         func_8011F6D4();
-        func_8011F684();
-        func_8011F884();
+        midrow_pad88_run();
+        midrow_degen();
     Lcac:
         row_page(1);
         row_read(0x80);
@@ -98,7 +98,7 @@ Lc0c:
         func_80136FFC();
         if (io_go() == 0)
             goto Ld4c;
-        func_801241B8();
+        midrow_paint_c();
         func_80120DB4();
         func_8012AAC0();
         func_80126528();

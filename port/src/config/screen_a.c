@@ -277,7 +277,7 @@ q8A0:
     if (gate(2) != 0)
         goto q8D8;
     latch(5);
-    func_80150C38();
+    gpu_driver_run_b();
 q8D8:
     latch(0xFF);
     txt_draw(0x34CB);
@@ -437,7 +437,7 @@ q8D8:
         latch(0x21);
         txt_draw(0x34CA);
         latch(5);
-        func_80150C38();
+        gpu_driver_run_b();
         latch(0x23);
         txt_draw(0x34CA);
         sep();
@@ -450,7 +450,7 @@ q8D8:
                 goto ad0;
             txt_draw(0x359A);
             latch(5);
-            func_80150C38();
+            gpu_driver_run_b();
             key_page(0xAF);
         }
     f2C:

@@ -14,7 +14,7 @@ void func_80132CFC(void)
         return;
     }
     cell_clear_bank(0x1BAD);
-    func_801241B8();
+    midrow_paint_c();
     func_801266F0();
     latch(0x30);
     cell_put(0xC1);
@@ -22,7 +22,7 @@ void func_80132CFC(void)
     row_page(0xE8);
     cell_put(0xD3);
     func_80122CF0();
-    func_8011F684();
+    midrow_pad88_run();
     row_page(0xE8);
     func_80122B54();
     row_prep(0x20);
@@ -73,7 +73,7 @@ void func_80132CFC(void)
     row_prep_close();
     latch(0x79);
     cell_pull_c8_lo(0x210A);
-    func_80120E2C();
+    midrow_paint_b();
     func_801240A8();
     func_801240D0();
     wnd_open(0xFFB0);

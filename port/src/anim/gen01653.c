@@ -18,9 +18,9 @@ L17A2BC:
     goto L17A908;
 L17A540:
     /* v0 gate -> L17A5D4 / L17A908 */
-    func_80197208();
+    tex_link_packets();
     /* v0/v1 latch -> L17A714 */
-    func_80197208();
+    tex_link_packets();
     /* a3/v0 latch -> L17A8A4 */
     func_8017CCB0();
     return;

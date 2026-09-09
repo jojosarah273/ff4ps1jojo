@@ -13,7 +13,7 @@ void func_80193924(void)
 L1939B8:
     func_801972B8();
     /* gate tree -> L193A50/L193AB8/L193B44/L193B5C */
-    func_80197208();
+    tex_link_packets();
     func_801972B8();
     return;
 L193C10:

@@ -15,7 +15,7 @@ void func_801317F0(void)
     cell_pull9_hi(0x1B91);
     row_prep_close();
     row_page(0xE8);
-    func_80124EAC();
+    cell_cur_save54_b();
     txt_cell(0x18);
     cell_set50_from40();
     cell_put(0x54);

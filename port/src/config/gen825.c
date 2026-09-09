@@ -8,7 +8,7 @@ void func_8015E84C(void)
     /* options: 0x14/0x280/0x2001 cells, 80150C38/8015330C/80058554
        rows; loop L15E890 on 5A90(8). */
     latch(0x14);
-    func_80150C38();
+    gpu_driver_run_b();
     wnd_open(0x280);
     sep();
 L15e890:

@@ -30,10 +30,10 @@ L122620:
         cell_put(0x45);
         func_8011F6D4();
         func_80122538();
-        func_8011F684();
+        midrow_pad88_run();
         func_80126550();
-        func_8011EF0C();
-        func_8011F884();
+        battle_state_dc400();
+        midrow_degen();
         row_page(1);
         row_read(8);
         if (sel(2) != 0)
@@ -64,7 +64,7 @@ L122620:
         if (sel(2) != 0)
             goto L1227EC;
         func_8012B168();
-        func_8011F684();
+        midrow_pad88_run();
         txt_set(0x1A76);
         if (io_press(cell_state(0x1A77)) != 0)
             goto L1227A8;

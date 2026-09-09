@@ -18,20 +18,20 @@ void func_80129F54(void)
     cell_put(0xC2);
     latch(6);
     cell_put(0xAE);
-    func_801241B8();
-    func_8011F684();
+    midrow_paint_c();
+    midrow_pad88_run();
     latch(0x1B);
     cell_pull_c8_lo(0x212C);
     draw_pad_cur();
     wnd_open_cur();
     func_80121124();
-    func_801210AC();
+    midrow_paint_a();
     draw_pad_cur();
     func_8011FB74();
     latch(3);
     func_80126920();
     func_801263F0();
-    func_8011EF0C();
+    battle_state_dc400();
     page_open(0x1BA5);
     tail(0x93);
     func_8016EA7C();
@@ -44,8 +44,8 @@ void func_80129F54(void)
     func_80120B6C();
     func_8012A190();
     /* v0/v1 gate -> L12A180 */
-    func_801241B8();
-    func_8011F684();
+    midrow_paint_c();
+    midrow_pad88_run();
     page(0x93);
     label(0x1BA5);
     func_80120F94();
@@ -53,7 +53,7 @@ void func_80129F54(void)
     func_801240A8();
     func_80126830();
     func_801263F0();
-    func_8011EF0C();
+    battle_state_dc400();
     func_80120F1C();
     latch(0x1C);
     cell_put(0xC2);
@@ -64,7 +64,7 @@ void func_80129F54(void)
     func_80121124();
     func_80122A9C();
     func_80122A24();
-    func_8011F684();
+    midrow_pad88_run();
     latch(0x1F);
     cell_pull_c8_lo(0x212C);
     cell_clear_bank(0x1BC9);

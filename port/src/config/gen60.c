@@ -100,8 +100,8 @@ L3bf38:
         goto L3BFE4;
     key_page(0x60);
     func_8013C44C();
-    func_8011F684();
-    func_801210AC();
+    midrow_pad88_run();
+    midrow_paint_a();
     func_801263F0();
     func_8011FF40();
     return;

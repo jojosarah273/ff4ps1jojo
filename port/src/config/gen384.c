@@ -41,7 +41,7 @@ L12C1E0:
     draw_pad_cur();
     page_paint2(0x1A82);
     row_sync();
-    func_801210AC();
+    midrow_paint_a();
     draw_pad_cur();
     battle_rows_sync();
     row_done();

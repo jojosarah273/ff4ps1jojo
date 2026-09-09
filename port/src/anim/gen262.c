@@ -63,7 +63,7 @@ L170608:
             continue;
         break;
     }
-    func_80194394();
+    cb_slot15();
     func_80181300();
     return;
 }

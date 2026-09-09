@@ -6,7 +6,7 @@
 void func_80132428(void)
 {
     row_page(232);
-    func_80124EAC();
+    cell_cur_save54_b();
     txt_set(7059);
     cell_put(67);
     row_prep(32);

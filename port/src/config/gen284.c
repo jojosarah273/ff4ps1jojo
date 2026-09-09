@@ -55,13 +55,13 @@ L15D5D8:
     latch(0x35);
     txt_draw(0x34CA);
     latch(5);
-    func_80150C38();
+    gpu_driver_run_b();
     func_80059AF4();
     latch(0x11);
-    func_80150C38();
+    gpu_driver_run_b();
     latch(0xC);
-    func_80150C38();
+    gpu_driver_run_b();
     latch(0x10);
-    func_80150C38();
+    gpu_driver_run_b();
     return;
 }

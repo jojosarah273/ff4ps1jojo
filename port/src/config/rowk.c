@@ -31,9 +31,9 @@ L478:
     wnd_open(0x20A);
     draw_pad_cur();
     func_801223A4();
-    func_8011F684();
+    midrow_pad88_run();
     func_801264E8();
-    func_8011F884();
+    midrow_degen();
     txt_set(0x1B87);
     if (gate(0x202) != 0)
         goto L698;

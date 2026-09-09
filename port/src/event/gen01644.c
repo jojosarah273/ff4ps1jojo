@@ -13,6 +13,6 @@ L180E74:
             continue;
         break;
     }
-    func_80194640();
+    cb_slot2();
     return;
 }

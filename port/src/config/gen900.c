@@ -8,7 +8,7 @@ void func_80122A9C(void)
     /* config rows: 8012281C/80120E2C/8011EF30/80120F1C/8011FB74
        rows, 0x1A02 text, 0x24 window; gate 6434(0x202). */
     func_8012281C();
-    func_80120E2C();
+    midrow_paint_b();
     draw_pad_cur();
     battle_rows_sync();
     draw_pad_cur();

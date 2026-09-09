@@ -9,7 +9,7 @@ void func_8013B270(void)
        80124EAC/80120A0C/801224F8/80122518/80122334/801241B8/8011F684/
        80120B6C/801263F0/8011F6A4/8011F884 rows; loops L13B2CC,
        L13B3BC, L13B458/L13B4D0, L13B638, L13B6A0. */
-    func_801210AC();
+    midrow_paint_a();
     draw_pad_cur();
     battle_rows_sync();
     draw_pad_cur();
@@ -22,7 +22,7 @@ L13b2cc:
         page(0x48);
         cell_push_c8();
         row_sync();
-        func_80124EAC();
+        cell_cur_save54_b();
         txt_cell_cur();
         func_80120A0C();
         row_done();
@@ -59,8 +59,8 @@ L13b3bc:
 L13B414:
     row_page(0x45);
     txt_draw(0x1BC7);
-    func_801241B8();
-    func_8011F684();
+    midrow_paint_c();
+    midrow_pad88_run();
     func_80120B6C(1);
 L13b458:
     for (;;) {
@@ -99,7 +99,7 @@ L13b458:
         func_8013B764();
         func_801263F0();
         func_8011F6A4();
-        func_8011F884();
+        midrow_degen();
         row_page(1);
         row_read(0x80);
         if (sel(2) != 0)

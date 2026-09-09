@@ -12,7 +12,7 @@ void func_80126E08(void)
     txt_draw(0x1E01);
     latch(1);
     txt_draw(0x1E00);
-    func_80169128();
+    battle_cb_86120();
     func_80123D3C();
     battle_mode_dispatch();
     battle_mode_dispatch();
@@ -20,7 +20,7 @@ void func_80126E08(void)
     battle_mode_dispatch();
 L26ef0:
     func_80194700();
-    func_80194394();
+    cb_slot15();
     latch(0x30);
     cell_put(0xC1);
     func_80128480();
@@ -43,7 +43,7 @@ L27080:
 L26F74:
     for (;;) {
         func_80123FB4();
-        func_801241B8();
+        midrow_paint_c();
         func_8011F6A4();
         txt_set(0x1A3C);
         func_80127668();
@@ -53,7 +53,7 @@ L26F74:
         func_80124298();
         func_801280D4();
         func_80127408();
-        func_801210AC();
+        midrow_paint_a();
         draw_pad_cur();
         battle_rows_29();
         func_80126330();

@@ -11,7 +11,7 @@ void func_801431E8(void)
        80142E90. */
     txt_draw(0xF42C);
     cell_clear_bank(0xF42D);
-    func_80140558();
+    gpu_driver_run();
     sep();
     D_8019ED54[0] = D_8019ED44[0];
     func_80142E90();

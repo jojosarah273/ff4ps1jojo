@@ -10,7 +10,7 @@ void func_801823F8(void)
     do {
         func_801808D8();
     } while (io_just() != 0);
-    func_80194394();
+    cb_slot15();
     do {
         func_801808D8();
     } while (io_just() != 0);

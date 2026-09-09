@@ -10,7 +10,7 @@ void func_8012B950(void)
 L12b958:
     for (;;) {
         txt_set(0x1BC3);
-        func_80124EAC();
+        cell_cur_save54_b();
         txt_set(0x1BC1);
         row_sel_cell_cur();
         battle_put43();

@@ -15,7 +15,7 @@ void func_80131A2C(void)
         return;
     page(0x43);
     cell_push_c8();
-    func_80124EAC();
+    cell_cur_save54_b();
     txt_cell(3);
     row_read(0xC0);
     if (sel(0x202) != 0)

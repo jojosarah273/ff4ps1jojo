@@ -10,13 +10,13 @@ void func_8013C2FC(void)
        L13C304 on 4120(2). */
 L13c304:
     for (;;) {
-        func_801210AC();
+        midrow_paint_a();
         draw_pad_cur();
         battle_rows_29();
         func_8013C44C();
-        func_8011F684();
+        midrow_pad88_run();
         func_80126418();
-        func_8011F884();
+        midrow_degen();
         row_page(1);
         row_read(3);
         if (sel(2) != 0)

@@ -23,8 +23,8 @@ L15B4C4:
     func_8015B6FC();
 L15B544:
     /* v0 gates */
-    func_80150C38();
+    gpu_driver_run_b();
     /* L15B5AC loop: regcmp latches */
-    func_80150C38();
+    gpu_driver_run_b();
     return;
 }

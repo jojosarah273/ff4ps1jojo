@@ -16,10 +16,10 @@ L17A0A0:
 L17A148:
     if (io_just() == 0)
         goto L17A174;
-    func_80197208();
+    tex_link_packets();
     return;
 L17A174:
-    func_80197208();
+    tex_link_packets();
 L17A198:
     /* v0/v1 latch loop -> L17A0D4 */
     return;

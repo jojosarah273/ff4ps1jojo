@@ -234,7 +234,7 @@ view74:
         func_8016E500();
     }
     latch(3);
-    func_80150C38();
+    gpu_driver_run_b();
 l146C:
     txt_set(0x16AC);
     cell_push_c8();
@@ -243,7 +243,7 @@ l146C:
     cell_clear_bank(0x38E6);
     for (;;) {
         latch(2);
-        func_80150C38();
+        gpu_driver_run_b();
         txt_set(0x38D9);
         cell_tick_or(cell_state(0x38DA));
         if (ticker_reblend2(0x202) != 0)
@@ -282,7 +282,7 @@ l15A0:
     txt_draw(0x33C4);
     func_80153264();
     latch(5);
-    func_80150C38();
+    gpu_driver_run_b();
     cell_clear_bank(0x38D7);
     cell_clear_bank(0x3581);
 l15E8:
@@ -335,7 +335,7 @@ l1718:
     if (gate(2) != 0)
         goto l1758;
     latch(1);
-    func_80150C38();
+    gpu_driver_run_b();
 l1758:
     row_page(0xA8);
     txt_draw(0x1803);
@@ -347,7 +347,7 @@ l1758:
     if (sel(2) != 0)
         goto l17C8;
     latch(0x15);
-    func_80150C38();
+    gpu_driver_run_b();
     func_80153518();
     func_8016571C();
     goto l19F0;
@@ -361,11 +361,11 @@ l17C8:
     txt_draw(0x35F3);
 l1800:
     latch(0xC);
-    func_80150C38();
+    gpu_driver_run_b();
     latch(2);
-    func_80150C38();
+    gpu_driver_run_b();
     latch(0x15);
-    func_80150C38();
+    gpu_driver_run_b();
     func_80153264();
     latch(0x24);
     txt_draw(0x34CA);
@@ -379,14 +379,14 @@ l1800:
     if (gate(0x202) != 0)
         goto l19F0;
     latch(5);
-    func_80150C38();
+    gpu_driver_run_b();
     goto l19F0;
 l18A8:
     row_read(0x40);
     if (sel(2) != 0)
         goto l1908;
     latch(0x13);
-    func_80150C38();
+    gpu_driver_run_b();
     func_80153518();
     func_8016571C();
     txt_set(0x38F3);
@@ -411,13 +411,13 @@ l1950:
 l1968:
     func_80153518();
     latch(2);
-    func_80150C38();
+    gpu_driver_run_b();
     func_801534D8();
     row_page(0xA9);
     if (gate(0x202) != 0)
         goto l19B0;
     latch(0x12);
-    func_80150C38();
+    gpu_driver_run_b();
 l19B0:
     func_8016571C();
     row_page(0xA8);
@@ -474,7 +474,7 @@ l1A5C:
 l1B34:
     txt_set(0x35F3);
     txt_draw(0x1E00);
-    func_80169128();
+    battle_cb_86120();
 l1B4C:
     latch(0xFF);
     cell_put(0xA9);
@@ -492,7 +492,7 @@ l1B4C:
         row_page(0xAA);
         txt_draw(0x6CC1);
         latch(2);
-        func_80150C38();
+        gpu_driver_run_b();
     }
 l1BEC:
     latch(0);

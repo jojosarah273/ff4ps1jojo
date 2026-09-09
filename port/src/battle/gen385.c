@@ -9,7 +9,7 @@ void func_801193F8(void)
        0x32 windows; 801082C8/80107C98(row family)/801196F8/80174CE4/
        801196B0 plus the 80105AF0/80105DB4/80105D2C/80107F3C/80109A28
        sub-screens; L119548 renders the 0x16A0/0x16A1/0x16A2 stat rows. */
-    func_80117594();
+    battle_tick_text();
     row_sel_cell_cur();
     txt_draw(0x8F8);
     txt_draw(0x8F9);

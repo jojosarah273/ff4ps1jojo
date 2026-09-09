@@ -12,7 +12,7 @@ void func_80138CB0(void)
     func_8012807C();
     func_801257BC();
     open_row(0xE0);
-    func_80120E2C();
+    midrow_paint_b();
     draw_pad_cur();
     battle_rows_sync();
     draw_pad_cur();

@@ -10,7 +10,7 @@ void func_80141DC0(void)
     open_row(0x4E);
 L141dd0:
     for (;;) {
-        func_80140558();
+        gpu_driver_run();
         row_page(0x4E);
         row_read(4);
         if (cell_flags_nz50(0x202) != 0)

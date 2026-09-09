@@ -28,7 +28,7 @@ void func_80139CF4(void)
     wnd_open(0x20);
     label(0x122);
     func_8011EE34();
-    func_801241B8();
+    midrow_paint_c();
     func_8011F6A4();
     func_8011F864();
     battle_mode_dispatch();
@@ -39,7 +39,7 @@ void func_80139CF4(void)
     func_801240A8();
     func_801240D0();
     func_80126418();
-    func_801241B8();
+    midrow_paint_c();
     func_80122A24();
     func_8011F6A4();
     func_80126480();

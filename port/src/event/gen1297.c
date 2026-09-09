@@ -14,7 +14,7 @@ L180524:
             continue;
         break;
     }
-    func_80194640();
+    cb_slot2();
     return;
 L180534:
     if (io_just() != 0)

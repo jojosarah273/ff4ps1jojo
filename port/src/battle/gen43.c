@@ -8,7 +8,7 @@ void func_8010E58C(void)
     wnd_fx_2100();
     func_80103FE8();
     func_80194518();
-    func_80194394();
+    cb_slot15();
     battle_mode_dispatch();
     latch(0x22);
     txt_draw(0x2123);

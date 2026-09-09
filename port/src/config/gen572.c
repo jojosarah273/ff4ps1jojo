@@ -1,5 +1,5 @@
-/* FF4 source-port — interpreted module for func_801210AC.
- * Ground truth: src/func_801210AC.c (byte-verified).
+/* FF4 source-port — interpreted module for midrow_paint_a.
+ * Ground truth: src/midrow_paint_a.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
@@ -12,7 +12,7 @@
 
 
 
-void func_801210AC(void)
+void midrow_paint_a(void)
 
 {
   cell_cursor_dec();

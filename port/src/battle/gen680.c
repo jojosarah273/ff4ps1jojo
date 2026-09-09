@@ -7,7 +7,7 @@ void func_801192F8(void)
 {
     /* battle rows: 0x6/0x1000 gate, 54D4(3C3C(6)) latch; loop
        L119320 ends with 0xCC window + 0x1703 text. */
-    func_80117594();
+    battle_tick_text();
     cell_put(6);
     wnd_open_cur();
     draw_pad_cur();

@@ -9,7 +9,7 @@ void func_80141B30(void)
     sep();
 L141b5c:
     for (;;) {
-        func_80140558();
+        gpu_driver_run();
         func_80140310();
         row_prep(0x20);
         cell_push9();

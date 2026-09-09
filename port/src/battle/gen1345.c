@@ -1,6 +1,6 @@
-/* FF4 source-port — interpreted module for func_80117594.
- * Ground truth: src/func_80117594.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_tick_text.
+ * Ground truth: src/battle_tick_text.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80117594(void) { cell_step(); tail(0xB3); txt_cell(0x9D5); }
+void battle_tick_text(void) { cell_step(); tail(0xB3); txt_cell(0x9D5); }

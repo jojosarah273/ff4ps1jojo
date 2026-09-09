@@ -30,7 +30,7 @@ Ld64:
     txt_draw(0x1E00);
     latch(1);
     txt_draw(0x1E01);
-    func_80169128();
+    battle_cb_86120();
     return;
 Ldb4:
     key_page(0x88);
@@ -176,7 +176,7 @@ Ld2c4:
     latch(2);
     txt_draw(0x1E00);
     cell_clear_bank(0x1E01);
-    func_80169128();
+    battle_cb_86120();
     return;
 Ld30c:
     page(0x3D);

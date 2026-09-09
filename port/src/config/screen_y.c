@@ -25,8 +25,8 @@ L13c55c:
     L13C5CC:
         cell_put(0x45);
         func_8011F6D4();
-        func_8011F684();
-        func_8011F884();
+        midrow_pad88_run();
+        midrow_degen();
     L13C5EC:
         row_page(1);
         row_read(0x80);
@@ -126,7 +126,7 @@ L13c55c:
             break;
         }
     L13C86C:
-        func_8011F884();
+        midrow_degen();
         page(2);
         tail_cur();
         continue;

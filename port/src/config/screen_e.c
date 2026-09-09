@@ -17,13 +17,13 @@ void func_8013389C(void)
     row_prep_close();
     func_80120F1C();
     row_page(0xE8);
-    func_80124EAC();
+    cell_cur_save54_b();
     tail(0xE5);
     func_8012AAC0();
     func_801264C0();
     func_8016EA7C();
     row_page(0xE8);
-    func_80124EAC();
+    cell_cur_save54_b();
     tail(0x60);
 main_loop:
     cell_push_c8_lo(0x51);
@@ -37,8 +37,8 @@ main_loop:
     row_open_w(8);
     cell_put(0x45);
     func_8011F6AC();
-    func_8011F684();
-    func_8011F884();
+    midrow_pad88_run();
+    midrow_degen();
 loop_bottom:
     row_page(1);
     row_read(1);

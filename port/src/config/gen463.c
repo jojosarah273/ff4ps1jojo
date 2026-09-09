@@ -19,7 +19,7 @@ L12e5c0:
         key_page(0xD7);
         key_page(0xD7);
         func_8012E7CC();
-        func_8011F684();
+        midrow_pad88_run();
         cell_set50_from54();
         if (poll_go(0x202) != 0)
             continue;
@@ -39,7 +39,7 @@ L12e620:
         cell_put_hi9(0xD7);
         row_prep_close();
         func_8012E7CC();
-        func_8011F684();
+        midrow_pad88_run();
         cell_dec_bank(0x1B9C);
         if (poll_go(0x202) != 0)
             continue;
@@ -52,7 +52,7 @@ L12e620:
     row_page(0xDA);
     cell_put(0x1D);
     func_801255C0();
-    func_8011F684();
+    midrow_pad88_run();
     func_80126830();
     return;
 }

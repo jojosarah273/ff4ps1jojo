@@ -57,7 +57,7 @@ L13D2B4:
     func_801490AC();
 L13d2cc:
     for (;;) {
-        func_80140558();
+        gpu_driver_run();
         func_8013D428();
         func_80149374();
         if (io_go() != 0)

@@ -9,7 +9,7 @@ void func_80124704(void)
     row_sync();
     cell_put(0x1D);
     row_info(0x1E);
-    func_8012D204();
+    midrow_prep_a();
     if (io_just() == 0)
         goto L810;
     sep();

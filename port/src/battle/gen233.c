@@ -53,7 +53,7 @@ Leba4:
     battle_mode_dispatch();
     for (;;) {
         func_80194700();
-        func_80194394();
+        cb_slot15();
         /* spin on s1 (register) */
     }
     wnd_open_cur();
@@ -119,7 +119,7 @@ Lee34:
     battle_mode_dispatch();
     for (;;) {
         func_80194700();
-        func_80194394();
+        cb_slot15();
         /* spin on s1 (register) */
     }
     return;

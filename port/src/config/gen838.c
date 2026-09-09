@@ -11,7 +11,7 @@ void func_80131C50(void)
     if (gate(0x202) != 0)
         return;
     row_page(0xE8);
-    func_80124EAC();
+    cell_cur_save54_b();
     txt_set(0x1B93);
     cell_put(0x43);
     row_prep(0x20);

@@ -312,7 +312,7 @@ flow_screen:
     txt_draw(0x1E01);
     latch(1);
     txt_draw(0x1E00);
-    func_80169128();
+    battle_cb_86120();
     latch(0x54);
     func_8011AEAC();
     return;

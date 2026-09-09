@@ -40,6 +40,6 @@ L1623A8:
     row_page(0xCD);
     cell_put_cur();
     latch(9);
-    func_80150C38();
+    gpu_driver_run_b();
     return;
 }

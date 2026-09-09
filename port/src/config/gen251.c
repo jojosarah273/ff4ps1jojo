@@ -67,7 +67,7 @@ L1450:
         if (1) {
             func_80126990();
         }
-        func_8011F320();
+        midrow_pad88();
         row_page(0xC3);
         wnd_open(0x85B8);
         func_80120070();

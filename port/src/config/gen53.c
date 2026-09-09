@@ -66,7 +66,7 @@ LCCFC:
     cell_clear_bank(0xF117);
 LCDD4:
     for (;;) {
-        func_80140558();
+        gpu_driver_run();
         func_8013CF08();
         func_8014D96C();
         txt_set(0xF117);

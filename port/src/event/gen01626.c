@@ -14,10 +14,10 @@ void func_8018C468(void)
 L18C4C0:
     goto L18C5D8;
 L18C4C8:
-    func_8018A75C(2);
-    func_8018A75C();
-    func_8018A75C(1);
-    func_8018A75C(3);
+    event_drive(2);
+    event_drive();
+    event_drive(1);
+    event_drive(3);
     func_80197678();
     return;
 L18C5D8:

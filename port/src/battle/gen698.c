@@ -11,7 +11,7 @@ void func_8014046C(void)
 L140498:
     for (;;) {
         row_sync();
-        func_80140558();
+        gpu_driver_run();
         row_done();
         wnd_open(1);
         latch(0x26);

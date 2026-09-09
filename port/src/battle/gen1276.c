@@ -4,6 +4,4 @@
  */
 #include "ff4_window.h"
 
-
-extern void func_80169128(void);
-void func_80106830(void) { latch(0x11); txt_draw(0x1E00); func_80169128(); }
+void func_80106830(void) { latch(0x11); txt_draw(0x1E00); battle_cb_86120(); }

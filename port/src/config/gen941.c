@@ -20,7 +20,7 @@ void func_8012C250(void)
     if (gate(0x202) != 0)
         goto L12C2D8;
     func_8012B168();
-    func_8011F684();
+    midrow_pad88_run();
 L12C2D8:
     func_8012219C();
     func_8011FF40();

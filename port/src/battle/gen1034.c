@@ -5,7 +5,7 @@
 #include "ff4_window.h"
 void func_8010DA88(void)
 {
-    func_80117594();
+    battle_tick_text();
     open_row(0x3E);
     row_sel_cell_cur();
     row_sel_cell2_cur();

@@ -19,10 +19,10 @@ void func_8018CFF8(void)
     func_8018E4B8();
     func_8018ABE8();
 L18D114:
-    func_8018A75C(2);
-    func_8018A75C();
-    func_8018A75C(1);
-    func_8018A75C(3);
+    event_drive(2);
+    event_drive();
+    event_drive(1);
+    event_drive(3);
     return;
 L18D194:
     return;

@@ -11,7 +11,7 @@ void func_80138D24(void)
     func_80139AFC();
 L138d38:
     for (;;) {
-        func_80120E2C();
+        midrow_paint_b();
         txt_set(0x1A88);
         if (gate(2) != 0)
             goto L138D9C;
@@ -42,8 +42,8 @@ L138d38:
         func_80139CA4();
         wnd_open(0x3188);
         func_80126070();
-        func_8011F684();
-        func_8011F884();
+        midrow_pad88_run();
+        midrow_degen();
         row_page(1);
         row_read(3);
         if (sel(2) != 0)

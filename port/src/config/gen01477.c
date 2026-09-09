@@ -4,14 +4,12 @@
  */
 #include "ff4_window.h"
 
-extern int func_8012D204();
-
 void func_8012D1D0(void)
 
 {
   battle_put43();
   cell_push_c8(0x14ff9d);
-  func_8012D204();
+  midrow_prep_a();
   return;
 }
 

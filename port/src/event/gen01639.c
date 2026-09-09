@@ -13,7 +13,7 @@ L182F0C:
     /* t0/v0 latch -> L182FC4 / L182FD0 */
 L182FA4:
     func_801971A8(1);
-    func_80197208();
+    tex_link_packets();
     return;
 L182FC4:
     goto L182FA4;

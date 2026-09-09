@@ -3,7 +3,7 @@
  * Battle/UI event-queue primitives. Exact mirrors of the Phase A
  * decodes; state cells from the D_8019B0xx/D_8019B1xx family exported
  * here with semantic names.
- * Ground truth: src/func_8018A75C, 8018C608, 8018E0C8.
+ * Ground truth: src/event_drive, 8018C608, 8018E0C8.
  */
 #include <stdint.h>
 

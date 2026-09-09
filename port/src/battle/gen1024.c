@@ -1,5 +1,5 @@
-/* FF4 source-port — interpreted module for func_8011F320.
- * Ground truth: src/func_8011F320.c (byte-verified).
+/* FF4 source-port — interpreted module for midrow_pad88.
+ * Ground truth: src/midrow_pad88.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
@@ -9,7 +9,7 @@
 
 extern int func_80177DEC();
 
-void func_8011F320(void)
+void midrow_pad88(void)
 
 {
   cell_cursor_dec();

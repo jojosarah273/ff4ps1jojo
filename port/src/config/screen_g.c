@@ -27,7 +27,7 @@ dE8:
 E00:
     draw_pad_cur();
     battle_rows_sync();
-    func_80120E2C();
+    midrow_paint_b();
     draw_pad_cur();
     battle_rows_sync();
     func_80129AD4();
@@ -135,9 +135,9 @@ L10C:
     draw_pad(0x300);
     func_8011F724();
     func_80129D2C();
-    func_8011F684();
+    midrow_pad88_run();
     func_801264E8();
-    func_8011F884();
+    midrow_degen();
     row_page_cur();
     row_read(0x40);
     if (sel(2) != 0)
@@ -299,8 +299,8 @@ L5C8:
     cell_put(0x45);
     func_8011F6D4();
     func_80129D2C();
-    func_8011F684();
-    func_8011F884();
+    midrow_pad88_run();
+    midrow_degen();
     row_page_cur();
     row_read(0x80);
     if (sel(2) != 0)

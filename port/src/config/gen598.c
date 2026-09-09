@@ -1,5 +1,5 @@
-/* FF4 source-port — interpreted module for func_80120E2C.
- * Ground truth: src/func_80120E2C.c (byte-verified).
+/* FF4 source-port — interpreted module for midrow_paint_b.
+ * Ground truth: src/midrow_paint_b.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
@@ -12,7 +12,7 @@
 
 
 
-void func_80120E2C(void)
+void midrow_paint_b(void)
 
 {
   cell_cursor_dec();

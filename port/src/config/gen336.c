@@ -32,7 +32,7 @@ void func_80124358(void)
     cell_push9_bank();
     cell_put_hi9(0x1D);
     row_prep_close();
-    func_8011F320();
+    midrow_pad88();
     func_8011EE34();
     sep();
     stat_sync();

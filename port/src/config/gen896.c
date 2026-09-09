@@ -33,7 +33,7 @@ void func_80131534(void)
     battle_mode_dispatch();
     func_8011F6A4();
     func_8011FF40();
-    func_80120E2C();
+    midrow_paint_b();
     func_80122904();
     func_80126528();
     return;

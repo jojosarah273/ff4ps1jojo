@@ -11,7 +11,7 @@ void func_8012EC48(void)
     if (gate(0x8080) == 0)
         return;
     row_page(0xE8);
-    func_8012D204();
+    midrow_prep_a();
     if (io_just() != 0)
         return;
     row_open();
@@ -36,10 +36,10 @@ void func_8012EC48(void)
     if (io_just() != 0)
         goto L3d0;
     row_open();
-    func_801241B8();
+    midrow_paint_c();
     row_page(0xE8);
     func_80122CF0();
-    func_8011F684();
+    midrow_pad88_run();
     func_80124158();
     func_80122844();
     func_80126528();
@@ -117,7 +117,7 @@ Lfd4:
 Lfdc:
     battle_rows_29();
     row_page(0xE8);
-    func_8012D204();
+    midrow_prep_a();
     io_poll(0x12);
     if (io_just() == 0)
         goto L01c;
@@ -154,7 +154,7 @@ L03c:
     latch(0x9A);
     cell_put(0xAA);
     func_80126458();
-    func_80120E2C();
+    midrow_paint_b();
     func_801228B4();
     row_page(0xE7);
     row_sel_cell_cur();
@@ -166,7 +166,7 @@ L03c:
     func_8012F3F0();
     latch(0x30);
     cell_put(0x3F);
-    func_801241B8();
+    midrow_paint_c();
     func_80120F1C();
     draw_pad(0x20A);
     latch(0xD);
@@ -189,7 +189,7 @@ L03c:
     cell_put(0xAD);
     latch(6);
     cell_put(0xAB);
-    func_80120E2C();
+    midrow_paint_b();
     row_page(0xE7);
     row_sel_cell_cur();
     battle_put43();

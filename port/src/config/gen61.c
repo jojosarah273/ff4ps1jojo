@@ -49,7 +49,7 @@ void func_80123D3C(void)
     wnd_open(0x1000);
     tail(0x22);
     func_8011EE34();
-    func_801241B8();
+    midrow_paint_c();
     func_80123FB4();
     func_80126330();
     func_80176E98();
@@ -60,7 +60,7 @@ void func_80123D3C(void)
     row_sync2(0xF);
     battle_wait_just(0xD7E);
     row_prep_close();
-    func_8011EF0C();
+    battle_state_dc400();
     func_8011F6A4();
     func_80126330();
     open_row(0x84);

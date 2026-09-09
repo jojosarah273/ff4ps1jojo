@@ -50,7 +50,7 @@ void func_8011285C(void)
     txt_draw(0x1E01);
     latch(1);
     txt_draw(0x1E00);
-    func_80169128();
+    battle_cb_86120();
     func_80115BCC();
 L1129c4:
     for (;;) {

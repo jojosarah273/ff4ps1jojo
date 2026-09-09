@@ -12,5 +12,5 @@ void func_8012E160(void)
     func_80122A9C();
     func_80122538();
     func_80126528();
-    func_8011EF0C();
+    battle_state_dc400();
 }

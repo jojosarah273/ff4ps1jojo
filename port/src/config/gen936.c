@@ -4,11 +4,6 @@
  */
 #include "ff4_window.h"
 
-
-
-
-
-extern int func_8011F684();
 extern int func_8012E7CC();
 
 void func_8012E700(void)
@@ -21,7 +16,7 @@ void func_8012E700(void)
     poll_pair(0xd7);
     key_page(0xd5);
     func_8012E7CC();
-    func_8011F684();
+    midrow_pad88_run();
     cell_set50_from54();
     iVar1 = poll_go(0x202);
   } while (iVar1 != 0);

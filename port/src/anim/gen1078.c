@@ -19,14 +19,14 @@ L17E974:
         goto L17EA58;
 L17EA2C:
     do {
-        func_80197208();
+        tex_link_packets();
     } while (io_just() != 0);
     return;
 L17E9EC:
     func_80195120();
     if (io_just() == 0)
         goto L17EA58;
-    func_80197208();
+    tex_link_packets();
     goto L17EA2C;
 L17EA58:
     return;
