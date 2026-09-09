@@ -83,3 +83,35 @@ uint16_t panel_cursor_next(void)
     return idx + 2;
 }
 
+
+/* cell-and family (byte-verified on gcc-2.95.2; exact decodes).
+ * Ground truth: src/func_800F4998, 800F4B78, 800F4BB0. */
+
+extern uint8_t *g_sel_cell;     /* D_8019ED5C */
+extern uint8_t *g_sel_cell2;    /* D_8019ED60 */
+extern uint16_t g_cursor_idx2;  /* D_8019ED58 */
+
+/* 800F4B78: arm byte AND the table cell at (offset + sel2). */
+void panel_cell_and_v(uint32_t off)
+{
+    *(uint8_t *)g_panel_mask_addr() &= *(uint8_t *)func_800F3B04(off + *g_sel_cell2);
+}
+
+/* 800F4BB0: same via the cursor-index cell. */
+void panel_cell_and_c(uint32_t off)
+{
+    *(uint8_t *)g_panel_mask_addr() &= *(uint8_t *)func_800F3B04(off + g_cursor_idx2);
+}
+
+/* 800F4998: two-cell AND (offsets from the sel cell + 0/1). */
+void panel_cell_and2(uint32_t off)
+{
+    uint8_t *q = (uint8_t *)func_800F3B04(off + *g_sel_cell);
+    g_panel_mask_addr()[0] &= q[0];
+    g_panel_mask_addr()[1] &= q[1];
+}
+
+uint8_t *g_panel_mask_addr(void)
+{
+    return &g_panel_mask;
+}
