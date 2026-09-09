@@ -18,7 +18,7 @@ path — the same recipe used by every modern decomp-port.
 | Phase | Goal | State |
 |---|---|---|
 | 0 — Verified disassembly | Full text coverage byte-verified (maspsx lanes, splat, asm-differ) | ✅ done (2516/2516) |
-| A — Complete C decomp | Every function as harness-verified C (byte-match where the compiler reproduces it; runtime-verified where it doesn't) | ▶ in progress (2516/2516 C-written, 744 byte-verified) |
+| A — Complete C decomp | Every function as harness-verified C (byte-match where the compiler reproduces it; runtime-verified where it doesn't) | ▶ in progress (2516/2516 C-written, 746 byte-verified) |
 | B — Interpretation | Rename/restructure into modern readable C; native host: SDL, stdio assets, no BIOS; native renderer/audio swap | — |
 | C — Expansion | Widescreen, hi-res, new modes, randomizer/mod framework, cross-platform (DC-class portability = plain C) | — |
 
@@ -82,8 +82,8 @@ More detail: `PROGRESS.md`. Verification harness: `tools/check_integrity.sh`.
 <!-- STATUS:BEGIN -->
 | state | count | % |
 |---|---|---|
-| byte-verified (matched) | 744 | 29.6% |
-| real-C (match pending) | 1772 | 70.4% |
+| byte-verified (matched) | 746 | 29.7% |
+| real-C (match pending) | 1770 | 70.3% |
 | asm shell (to do) | 0 | 0.0% |
 | **total** | 2516 | 100% |
 | **C-written** | **2516** | **100.0%** |
@@ -525,3 +525,33 @@ More detail: `PROGRESS.md`. Verification harness: `tools/check_integrity.sh`.
 
 
 
+
+
+## Phase B — the interpreted source port (in progress)
+
+`port/` is the deliverable: a **native FF4** rebuilt from the Phase A C,
+in the Ship-of-Harkinian / Zelda64-Recomp / SM64-PC / Link-to-the-Past
+tradition — readable, moddable, widescreen, portable C.
+
+**Track: `.c/.h` module pairs.** Every module is an *exact interpretation*
+of one or more byte-verified Phase A functions: the asm-ordered behavior
+kept 1:1, but with semantic names, a declared primitive table, and a
+ground-truth reference comment. Format: see `port/FORMAT.md`. Architecture:
+see `port/docs/ARCHITECTURE.md`.
+
+```
+port/src/
+  gpu/      command-word builders, bit-gather
+  sprite/   tile blits, 5-bit color scaler
+  event/    event-queue primitives
+  math/     trig folds, atan, pan, float-bit compares
+  anim/     tick counters, row drivers
+  battle/   targeting hub, row drivers
+  config/   options/ability rows, config-root driver
+  status/   panel grid, status pane, status init, state dispatch
+  dev/      device command chains
+```
+
+Byte-match track continues in parallel (ladder lane micro-sweeps).
+Status: `expected/matched` count in `decomp/STATUS.md`; latest sweep
+results in `port/docs/results/`.
