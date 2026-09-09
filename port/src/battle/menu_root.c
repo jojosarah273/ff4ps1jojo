@@ -94,7 +94,7 @@ void battle_menu_run(void)
         if (io_go() != 0)
             option_screen_d();      /* 801172DC */
         step();
-        clear(0xB3);
+        clear_id(0xB3);
     }
     /* phase 2: command gate + item screens */
     clear_done();
