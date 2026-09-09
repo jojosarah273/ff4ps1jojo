@@ -17,7 +17,7 @@ uint32_t gate(uint32_t id);     /* 800F6434           */
 void io_poll(uint32_t k);       /* 800F5574           */
 uint32_t io_just(void);         /* 800F53D4           */
 void sep(void);                 /* 800F5410           */
-void row_prep2(void);           /* 800F9644           */
+void row_prep2(uint32_t id);    /* 800F9644           */
 void refresh_cell(void);        /* 800F6DE8           */
 void open2(void);               /* 800F8D??           */
 
@@ -55,5 +55,4 @@ done:
     cursor_row();
     return;
 }
-void row_prep2(uint32_t id);
 void row_prep2_close(void);
