@@ -385,3 +385,23 @@ All pushed.
   near-misses re-probed (still plateau 827; lane-sweep-1.md updated).
 - Clean tree state: 1512 modules, 411 fn stubs (was 885), ~1460/2516
   funcs interpreted, config+battle smoke exit 0, byte-verified 827.
+
+=== 2026-09-09 21:40 ===
+**Resource track opened + Block A/B/C progress.**
+- RESOURCES.md inventory: 1821 deck-addressed text/window ids by page
+  (charset 0x20xx, messages 0x38xx/39xx/14xx/43xx, icons 0x21xx,
+  portraits 0xEBxx, windows 0x17xx/1Exx, battle anim 0xF1xx..),
+  memory map (0x800D base + 2100/2200/2400 + 0x800C8000 + 0x7FFC8000),
+  10-item rip list + unknowns (loader file, compression, string base).
+- tools/rip/iso.py (PS1 ISO9660 reader, raw 2352 sectors; needs an
+  ISO), tools/rip/atlas.py (glyph page -> PNG sheet; verified).
+- Block A: NM bindings +22 (batch 2) +16 (batch 3) via rowmap+dedup;
+  new mirrors: cbs.c (cb tables + slots), texpool.c, roww.c, dev/
+  selfloop.c, anim/regstub.c, battle/window24.c, db/fillaa.c,
+  config/row26528.c; stub surface 411 -> 391.
+- Readability: device paints 0x20xx page with an embedded 8x8 font
+  (+) PPM dump for headless verification.
+- Block C: battle/animrows.c (battle_anim_rows_a, anim_pack_word K&R,
+  anim_cmd_tail); NM +4.
+- EXECUTE.md gains AVENUE 5 (resource ripping) with the ISO worklist.
+- Build: clean 1523 modules; config+battle boot exit 0; byte-match 827.
