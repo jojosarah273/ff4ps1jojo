@@ -12,14 +12,14 @@ void func_80130058(void)
     func_800F8F74(0x1B88);
     func_8012B0D8();
     txt_set(0x1B83);
-    row_sel_cell();
-    row_sel_cell2();
+    row_sel_cell_cur();
+    row_sel_cell2_cur();
     cell_poke0(cell_state(0x1B83));
     cell_poke0(cell_state(0x1B84));
     func_801308B4();
     txt_set(0x1B85);
-    row_sel_cell();
-    row_sel_cell2();
+    row_sel_cell_cur();
+    row_sel_cell2_cur();
     cell_poke0(cell_state(0x1B85));
     cell_poke0(cell_state(0x1B86));
     func_801308B4();
@@ -61,8 +61,8 @@ L234:
     func_80120FBC();
     func_800F8F74(0x1B88);
     txt_set(0x1B83);
-    row_sel_cell();
-    row_sel_cell2();
+    row_sel_cell_cur();
+    row_sel_cell2_cur();
     cell_poke0(cell_state(0x1B83));
     cell_poke0(cell_state(0x1B84));
     func_801308B4();
@@ -151,11 +151,11 @@ L4E4:
     goto L59C;
 L50C:
     txt_set(0x1B8A);
-    row_sel_cell();
-    row_sel_cell2();
+    row_sel_cell_cur();
+    row_sel_cell2_cur();
     cell_poke0(cell_state(0x1B8A));
-    row_sel_cell();
-    row_sel_cell2();
+    row_sel_cell_cur();
+    row_sel_cell2_cur();
     row_open_w(0x20);
     cell_put(0x46);
     latch(0x40);

@@ -231,7 +231,7 @@ Lfc8:
     cell_put(0xE1);
     func_8015240C();
     txt_set(0x35A0);
-    row_sel_cell();
+    row_sel_cell_cur();
     sep_a();
     txt_set(0x2896);
     cell_poke0(cell_state(0xE3));

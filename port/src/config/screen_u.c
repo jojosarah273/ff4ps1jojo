@@ -118,8 +118,8 @@ L288:
         latch_cur();
         stat_sync();
         txt_set(0x1B37);
-        row_sel_cell();
-        row_sel_cell2();
+        row_sel_cell_cur();
+        row_sel_cell2_cur();
         cell_poke0(cell_state(0x1B37));
         row_prep(0x20);
         func_800F4064(0x1B28);
@@ -130,8 +130,8 @@ L288:
         func_800F8274(0x57);
         row_prep_close();
         txt_set(0x1B37);
-        row_sel_cell();
-        row_sel_cell2();
+        row_sel_cell_cur();
+        row_sel_cell2_cur();
         row_open_w(0x10);
         cell_put(0x46);
         latch(0x60);
@@ -170,7 +170,7 @@ L288:
         if (sel(2) != 0)
             goto L86c;
         txt_set(0x1B37);
-        row_sel_cell();
+        row_sel_cell_cur();
         func_801224D0();
         txt_draw(0x1B1D);
         txt_draw(0x1B1E);

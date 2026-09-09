@@ -54,7 +54,7 @@ Lc368:
     open_row(0x9C);
     open_row(0xA0);
     row_page(0x40);
-    row_sel_cell();
+    row_sel_cell_cur();
     row_read(0x7F);
     cell_put(0x99);
     cell_put(0x9B);
@@ -67,7 +67,7 @@ Lc368:
     row_read(0x3F);
     cell_put(0x9A);
     cell_put(0x9E);
-    row_sel_cell();
+    row_sel_cell_cur();
     cell_put(0x97);
     latch(0x80);
     sep_b();
@@ -132,7 +132,7 @@ Lc5a4:
     sep_b();
     func_800F8058(0x1F);
     row_read(0x3F);
-    row_sel_cell();
+    row_sel_cell_cur();
     cell_put(0x99);
     sep_a();
     row_open_w(0x80);

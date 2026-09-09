@@ -293,7 +293,7 @@ s080:
             goto l460;
     l3d0:
         row_arm2(cell_state(0xD4));
-        row_sel_cell2();
+        row_sel_cell2_cur();
         row_sel2(cell_state(0xD5));
         row_page(0xD4);
         func_800F78C4(cell_state(0xD5));

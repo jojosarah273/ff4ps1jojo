@@ -101,10 +101,10 @@ df4:
     for (;;) {
         page_paint(0x29CA);
         row_arm2(cell_state(0xAB));
-        row_sel_cell2();
+        row_sel_cell2_cur();
         row_sel2(cell_state(0x29CA + *(u16 *)D_8019ED54[0]));
         row_arm2(cell_state(0xAB));
-        row_sel_cell2();
+        row_sel_cell2_cur();
         row_sel2(cell_state(0x29CA + *(u16 *)D_8019ED54[0]));
         cell_step();
         poll_t(3);

@@ -46,7 +46,7 @@ L354:
     if (sel(0x202) != 0)
         goto L59c;
     row_page(0xA9);
-    row_sel_cell();
+    row_sel_cell(0x40);
     latch_cur();
     cell_draw(0x29EB);
     row_prep(0x20);

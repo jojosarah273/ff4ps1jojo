@@ -11,8 +11,8 @@ void func_8016A4E4(void)
 La51c:
     for (;;) {
         txt_cell(0x2703);
-        row_sel_cell();
-        row_sel_cell2();
+        row_sel_cell_cur();
+        row_sel_cell2_cur();
         func_8016A390();
         func_8016A390();
         row_prep(0x20);
@@ -50,7 +50,7 @@ La51c:
         for (;;) {
             func_80169C7C();
             row_arm2(cell_state(0x47));
-            row_sel_cell2();
+            row_sel_cell2_cur();
             row_sel2(cell_state(0x46));
             func_800F7A68();
             row_sel2(cell_state(0x45));

@@ -95,7 +95,7 @@ fEC:
 ff4:
     func_80129808();
     txt_set(0x1B06);
-    row_sel_cell();
+    row_sel_cell_cur();
     cell_put(0x45);
     open_row(0x46);
     page(0x45);
@@ -108,7 +108,7 @@ ff4:
     row_prep_close();
     txt_set(0x1B06);
     cell_put(0x45);
-    row_sel_cell();
+    row_sel_cell_cur();
     cell_put(0x45);
     open_row(0x46);
     row_prep(0x20);

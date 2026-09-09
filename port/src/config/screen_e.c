@@ -27,8 +27,8 @@ void func_8013389C(void)
     tail(0x60);
 main_loop:
     func_800F6E30(0x51);
-    row_sel_cell();
-    row_sel_cell2();
+    row_sel_cell_cur();
+    row_sel_cell2_cur();
     row_open_w(0x76);
     cell_put(0x46);
     func_800F6E30(0x54);
@@ -139,10 +139,10 @@ c38:
     func_800F6E30(0x51);
     sep_a();
     cell_poke0(cell_state(func_800F3A70(0x57)));
-    row_sel_cell();
-    row_sel_cell2();
+    row_sel_cell_cur();
+    row_sel_cell2_cur();
     cell_poke0(cell_state(func_800F3A70(0x54)));
-    row_sel_cell();
+    row_sel_cell_cur();
     func_801224D0();
     txt_cell(0x1440);
     tail(0x4B);

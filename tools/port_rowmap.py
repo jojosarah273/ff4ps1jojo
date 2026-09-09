@@ -72,8 +72,11 @@ def map_calls(txt):
 def main():
     for arg in sys.argv[1:]:
         func, out = arg.split("=")
-        body = Path("src") / (func + ".c")
-        body = body.read_text()
+        p = Path("src") / (func + ".c")
+        if not p.exists():
+            print("SKIP (missing src):", func)
+            continue
+        body = p.read_text()
         body = re.sub(r'#include "common.h"\n', "", body)
         exter = re.findall(r"extern[^;]*;\n", body)
         body = re.sub(r"extern[^;]*;\n", "", body)

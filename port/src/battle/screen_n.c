@@ -53,7 +53,7 @@ Lb9c:
 Lbc4:
     for (;;) {
         row_page(0x79);
-        row_sel_cell();
+        row_sel_cell(0x20);
         row_prep_cur();
         row_read2(0x2C);
         sep_a();

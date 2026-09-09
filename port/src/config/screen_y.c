@@ -11,8 +11,8 @@ void func_8013C554(void)
 L13c55c:
     for (;;) {
         txt_set(0x1BB5);
-        row_sel_cell();
-        row_sel_cell2();
+        row_sel_cell_cur();
+        row_sel_cell2_cur();
         row_open_w(0x86);
         cell_put(0x46);
         txt_set(0x1BB6);
@@ -135,18 +135,18 @@ L13c55c:
         continue;
     L13C89C:
         txt_set(0x1BB3);
-        row_sel_cell();
-        row_sel_cell2();
+        row_sel_cell_cur();
+        row_sel_cell2_cur();
         cell_poke0(cell_state(0x1BB4));
-        row_sel_cell();
+        row_sel_cell_cur();
         func_801224D0();
         txt_set(0x1BB5);
         sep_a();
         cell_poke0(cell_state(0x1BB7));
-        row_sel_cell();
-        row_sel_cell2();
+        row_sel_cell_cur();
+        row_sel_cell2_cur();
         cell_poke0(cell_state(0x1BB6));
-        row_sel_cell();
+        row_sel_cell_cur();
         cell_put(0x43);
         cell_fmt2(0x43);
         func_800F6D70(0x1440);

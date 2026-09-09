@@ -9,7 +9,7 @@ void func_8014DA2C(void)
     u32 s0 = 1;
     if (*(u16 *)(D_801CFD68[0] + 0x8000 + 0x726A) == 0x2040)
         s0 = 1;
-    row_sel_cell_cur();
+    row_sel_cell(0xF44E);
     func_800F8F74();
     latch(1);
     txt_draw(0xF261);

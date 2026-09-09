@@ -25,7 +25,7 @@ void func_80170C14(void)
     txt_cell(0x1001);
     row_read(0x1F);
     txt_cell(0xB2FA);
-    row_sel_cell();
+    row_sel_cell_cur();
     txt_draw(0x710);
     row_page(0xD8);
     if (gate(2) == 0) {

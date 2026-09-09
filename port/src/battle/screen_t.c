@@ -72,7 +72,7 @@ L80c:
     func_800F7CC8(cell_state(0x99));
     row_page(0x43);
     row_read(0x1F);
-    row_sel_cell();
+    row_sel_cell_cur();
     cell_put(0x43);
     row_read(0x20);
     if (sel(2) != 0)
