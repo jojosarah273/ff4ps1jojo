@@ -24,12 +24,11 @@ void formation_row_loop(void)
         row_poke(0xD5);
         row_mix();
         row_close();
-        if (poll_done() != 0)
+        if (io_just() != 0)
             break;
     }
 }
 void row_prep_a(void);
-uint32_t poll_done(void);
 
 /* 8012E844: member row with the 0x1340 gate split. */
 void formation_member_row(void)
