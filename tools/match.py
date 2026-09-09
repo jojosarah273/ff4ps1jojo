@@ -27,9 +27,13 @@ SRC = ROOT / "src"
 MATCHED = ROOT / "expected" / "matched"
 DIFF = os.path.expanduser("~/.venvs/ff4_decomp/bin/asm-differ")
 LADDERS = {
+    "L260": "tools/gcc-ladder/gcc-2.6.0-psx.cc1.exe",
     "L26": "tools/gcc-ladder/gcc-2.6.3-psx.cc1.exe",
     "L27": "tools/gcc-ladder/gcc-2.7.2-psx.cc1.exe",
+    "L2724": "tools/gcc-ladder/gcc-2.7.2-970404-psx.cc1.exe",
+    "L280": "tools/gcc-ladder/gcc-2.8.0-psx.cc1.exe",
     "L28": "tools/gcc-ladder/gcc-2.8.1-psx.cc1.exe",
+    "L291": "tools/gcc-ladder/gcc-2.91.66-psx.cc1.exe",
     "L295": "tools/gcc-ladder/gcc-2.95.2-psx.cc1.exe",
 }
 
@@ -104,13 +108,13 @@ def main():
     ap.add_argument("--bincmp", action="store_true",
                     help="use byte-exact .text compare instead of asm-differ")
     a = ap.parse_args()
-    lanes = ["MODERN", "PSX", "PSXS", "L26", "L27", "L28", "L295"]
+    lanes = ["MODERN", "PSX", "PSXS", "L260", "L26", "L27", "L2724", "L280", "L28", "L291", "L295"]
     if a.lane == "ALL":
         want = lanes
     elif a.lane in lanes:
         want = [a.lane]
     else:
-        sys.exit(f"bad lane {a.lane}; use ALL/MODERN/PSX/PSXS/L26/L27/L28/L295")
+        sys.exit(f"bad lane {a.lane}; use ALL/MODERN/PSX/PSXS/L260/L26/L27/L2724/L280/L28/L291/L295")
     for name in a.names:
         src = SRC / f"{name}.c"
         if not src.exists():

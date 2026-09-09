@@ -10,9 +10,11 @@ maspsx) and re-checked the 8 near-misses on the psx/CC1PSX lane.
 | 100–400 bytes off | 8 |
 | > 400 bytes off | 1768 |
 
-Near-misses (200–320 bytes): 800F3A68, 8015902C, 80196018, 801976E8,
-801976F8, 80193194, 801932B8, 80193560. The psx lane did not improve them
-(200–1160 bytes).
+Near-misses still open (200-400 bytes): 800F3A68 (200, MODERN), 80196018
+(400), 801976E8 (260), 801976F8 (260). (8015902C matched since; 80193194/
+801932B8/80193560 were already matched - the original list was stale.)
+Re-probed on the full 8-rung ladder (L260/L26/L27/L2724/L280/L28/L291/L295
++ PSX + MODERN); no new lane closed any. Count held at 827.
 
 ## Reading
 The modern lane reproduces none of the remaining pool; era lanes are not
