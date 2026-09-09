@@ -23,7 +23,7 @@ L8b0:
         row_prep(0x20);
         sep_a();
         cell_pos_fwd(0x100);
-        func_800F88E4();
+        cell_pull89_fn();
         row_sync2_cur();
         row_prep_close();
         cell_fmt2(0x3D);
@@ -76,7 +76,7 @@ Lac8:
         row_prep(0x20);
         sep_a();
         cell_pos_fwd(0x100);
-        func_800F88E4();
+        cell_pull89_fn();
         row_sync2_cur();
         row_prep_close();
         cell_fmt2(0x3D);

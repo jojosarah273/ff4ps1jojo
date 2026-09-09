@@ -30,7 +30,7 @@ void func_801038D4(void)
     txt_draw(0x1727);
     page_open(0x1708);
     label(0x1706);
-    func_800FB09C();
+    shop_view2_run();
     latch(0x10);
     func_8017559C();
     latch(0x81);

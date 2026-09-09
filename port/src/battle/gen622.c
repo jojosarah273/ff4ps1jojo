@@ -21,7 +21,7 @@ L103e0c:
         row_arm2(cell_state(0x6E));
         row_sel_cell2_cur();
         row_sel2(cell_state(0x6F));
-        func_800FE6E4();
+        battle_gate_early();
         func_80103F00();
         func_8010408C();
         poll_pair(0x79);

@@ -24,11 +24,11 @@ L167288:
     wnd_open(1);
     cell_put(0x2A);
     row_prep(0x20);
-    func_800F5024(cell_state(0x2A));
-    func_800F5024(cell_state(0x2A));
-    func_800F5024(cell_state(0x2A));
-    func_800F5024(cell_state(0x2A));
-    func_800F5024(cell_state(0x2A));
+    cell_pair_dbl2(cell_state(0x2A));
+    cell_pair_dbl2(cell_state(0x2A));
+    cell_pair_dbl2(cell_state(0x2A));
+    cell_pair_dbl2(cell_state(0x2A));
+    cell_pair_dbl2(cell_state(0x2A));
     sep();
     row_prep_close();
     page(0x2A);

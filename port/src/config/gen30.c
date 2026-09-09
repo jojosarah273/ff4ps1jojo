@@ -95,7 +95,7 @@ L77c:
     row_prep(0x20);
     row_sync2(0xB6C0);
     for (;;) {
-        func_800F88E4();
+        cell_pull89_fn();
         sep_a();
         cell_pos_fwd(0x18);
         cell_step();

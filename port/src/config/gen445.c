@@ -28,7 +28,7 @@ void func_80138A6C(void)
     latch(0x21);
     cell_pull_c8_lo(0x4200);
     cell_push_c8_cur(0x4211);
-    func_800F5448();
+    cell_flags_clr4();
     page_paint2(0x1B49);
     func_80123FB4();
     func_801241B8();

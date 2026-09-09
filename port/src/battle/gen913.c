@@ -19,6 +19,6 @@ L100B00:
     txt_set(0x8FC);
     row_read(7);
     cell_set50_from40();
-    func_800F96E0();
+    cell_cur_save58();
     return;
 }

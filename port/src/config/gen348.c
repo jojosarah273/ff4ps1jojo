@@ -34,7 +34,7 @@ L12A6F8:
     if (io_go() != 0)
         goto L12A7B0;
     io_poll_cur();
-    if (func_800F53FC() != 0)
+    if (cell_flags_hi7() != 0)
         goto L12A848;
     io_poll(0xB);
     if (io_go() != 0)

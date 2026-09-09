@@ -4,7 +4,7 @@
  * repacks that decide cursor visibility/labels from the cell state.
  * Exact asm-order mirrors.
  *
- * Ground truth: src/func_800F56AC.c, 5520, 55C0, 4FAC, 7728, 7170,
+ * Ground truth: src/cell_flags_cmp.c, 5520, 55C0, 4FAC, 7728, 7170,
  * 7A68, 7D0C, 76E8, 63F8, 54B8, 7918, 3A70 (byte-verified).
  */
 #include <stdint.h>
@@ -173,4 +173,51 @@ uint32_t cell_bank_sel(uint32_t a0, uint32_t a1, uint32_t a2)
 void cell_cur_save54(void)
 {
     D_8019ED54 = D_8019ED44;
+}
+
+/* 800F53FC: flags bit7 test (cursor-show hi). */
+uint32_t cell_flags_hi7(void)
+{
+    return D_8019ED68 & 0x80;
+}
+
+/* 800F40E8: flags repack from ticker. */
+void cell_flags_tick2(void)
+{
+    uint8_t x = D_8019ED68;
+    uint8_t y = *D_8019ED40;
+    uint8_t r = (uint8_t)((x & 0x7D) | (y & 0x80));
+    if (y != 0)
+        D_8019ED68 = r;
+    else
+        D_8019ED68 = (uint8_t)(r | 0x2);
+}
+
+/* 800F7B7C: flags overflow/zero repack from the cell word. */
+void cell_flags_overflow(void)
+{
+    uint8_t r = (D_8019ED50 & 0x10000) ? (uint8_t)((D_8019ED68 & 0x7C) | 1)
+                                       : (uint8_t)(D_8019ED68 & 0x7C);
+    if (D_8019ED50 & 0x8000)
+        r |= 0x80;
+    if ((uint16_t)D_8019ED50 != 0)
+        r &= 0xFF;
+    D_8019ED68 = (uint8_t)(r | ((D_8019ED50 & 0x10000) ? 0 : 0x20));
+}
+
+/* 800F64EC / 800F41E8 (aliased ids): pos==0 -> flags repack. */
+void cell_flags_pos0(void)
+{
+    if ((uint16_t)D_8019ED44 != 0)
+        D_8019ED68 = (uint8_t)(((D_8019ED68 & 0x7D) |
+                                (D_8019ED40[1] & 0x80)) & 0xFF);
+    else
+        D_8019ED68 = (uint8_t)(((D_8019ED68 & 0x7D) |
+                                (D_8019ED40[1] & 0x80)) & 0xFF);
+}
+
+/* 800F5448: flags &= ~4. */
+void cell_flags_clr4(void)
+{
+    D_8019ED68 &= 0xFB;
 }

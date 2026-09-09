@@ -123,13 +123,13 @@ void func_80108458(void)
     cell_put(0x32);
     func_80174CE4();
     wnd_open_cur();
-    func_800F6A78(0x36);
+    cell_push_c8_c2(0x36);
     io_poll(0x80);
     io_just();
     cell_step();
     poll_t(0x5);
     io_just();
-    func_800F6A78(0x36);
+    cell_push_c8_c2(0x36);
     cell_pull_c8();
     step2();
     cell_step();

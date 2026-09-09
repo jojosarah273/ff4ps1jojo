@@ -120,7 +120,7 @@ Lddac:
     }
     func_8014D98C();
     txt_set(0xF27E);
-    func_800F4280(0xF29F);
+    cell_tick_and2(0xF29F);
     if (sel(0x202) == 0) {
         txt_set(0xF2A0);
         io_poll(3);
@@ -185,7 +185,7 @@ Le04c:
     page_paint2(0xF27E);
 Le054:
     for (;;) {
-        func_800F7534(0xF27C);
+        cell_push60(0xF27C);
         row_info(2);
         txt_set(0xF280);
         cell_put(4);
@@ -254,7 +254,7 @@ Le054:
         latch(1);
         txt_draw(0xF247);
         txt_set(0xF27E);
-        func_800F4280(0xF29F);
+        cell_tick_and2(0xF29F);
         if (sel(0x202) != 0)
             goto Lde20;
         page_paint2(0xF27F);

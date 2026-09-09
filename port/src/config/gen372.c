@@ -13,17 +13,17 @@ void func_8013F354(void)
     func_800F8FD8(0x20);
     func_800F8FD8(0x22);
     row_read2(0x1C);
-    if (func_800F64EC(2) != 0)
+    if (cell_flags_pos0(2) != 0)
         goto L13F474;
     row_read2(0x1E);
-    if (func_800F64EC(2) != 0)
+    if (cell_flags_pos0(2) != 0)
         goto L13F474;
     wnd_open(0x10);
 L13f3bc:
     for (;;) {
-        func_800F7B40(cell_state(0x1C));
-        func_800F7B7C();
-        func_800F7B40(cell_state(0x22));
+        cell_pair_dbl(cell_state(0x1C));
+        cell_flags_overflow();
+        cell_pair_dbl(cell_state(0x22));
         sep_b();
         row_read2(0x22);
         cell_pos_sub16(cell_state(0x1E));
@@ -35,8 +35,8 @@ L13f3bc:
         cell_put_hi9(0x22);
         sep_a();
     L13F444:
-        func_800F7B40(cell_state(0x20));
-        func_800F7B7C();
+        cell_pair_dbl(cell_state(0x20));
+        cell_flags_overflow();
         cell_set50_from54();
         if (poll_go(0x202) != 0)
             continue;

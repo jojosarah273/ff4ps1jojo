@@ -96,7 +96,7 @@ La0c:
     open_row(0xB1);
 La6c:
     page(0xAB);
-    func_800F6A78(0xAD);
+    cell_push_c8_c2(0xAD);
     tail(0xE5);
     wnd_open(0x9100);
     tail(0x80);

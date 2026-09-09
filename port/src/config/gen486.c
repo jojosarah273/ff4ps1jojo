@@ -15,7 +15,7 @@ void func_8012CB34(void)
     cell_put_hi9(0x45);
     row_read2(0x5D);
     cell_pos_mask(1);
-    if (func_800F41E8(2) != 0)
+    if (cell_flags_pos0(2) != 0)
         goto L12CBAC;
     row_sync2(0x20);
 L12CBAC:

@@ -35,7 +35,7 @@ void func_8015D4C8(void)
     func_80152BC4();
     cell_put_hi9(0xA9);
     row_read2(0xA9);
-    if (func_800F64EC(0x202) != 0)
+    if (cell_flags_pos0(0x202) != 0)
         goto L15D5D8;
     cell_inc_cell(0xA9);
 L15D5D8:

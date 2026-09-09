@@ -35,7 +35,7 @@ L166a44:
         row_read(0xF);
         if (sel(0x202) != 0)
             goto L166AD8;
-        func_800F7534();
+        cell_push60();
         poll_pair_cur();
         cell_pull60();
     L166AD8:
@@ -54,7 +54,7 @@ L166a44:
     L166B30:
         page_paint2_cur();
         func_80140310();
-        func_800F7534();
+        cell_push60();
         poll_t_cur();
         if (io_just() == 0)
             continue;

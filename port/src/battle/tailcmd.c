@@ -146,7 +146,7 @@ Laaa0:
     latch(0x81);
     txt_draw(0x4200);
     shop_view_run();
-    func_800F5448();
+    cell_flags_clr4();
     page(0xB3);
     tail(0xB3);
     func_8011EA5C();

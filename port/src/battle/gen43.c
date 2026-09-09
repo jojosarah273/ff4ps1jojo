@@ -5,7 +5,7 @@
 #include "ff4_window.h"
 void func_8010E58C(void)
 {
-    func_800FB3F8();
+    wnd_fx_2100();
     func_80103FE8();
     func_80194518();
     func_80194394();

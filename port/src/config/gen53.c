@@ -91,7 +91,7 @@ LCDD4:
     LCE98:
         page_paint2(0xF114);
         txt_set(0xF114);
-        func_800F4280(0xF11B);
+        cell_tick_and2(0xF11B);
         if (sel(0x202) != 0)
             goto LCEC8;
         page_paint2(0xF115);

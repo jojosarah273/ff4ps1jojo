@@ -163,7 +163,7 @@ L218:
             goto L260;
         latch(7);
    L260:
-        func_800F8A18(0x60);
+        cell_pull_c8_sel2(0x60);
         func_80129B04();
         if (io_just() != 0)
             continue;
@@ -185,7 +185,7 @@ L298:
             goto L2E8;
         sep();
    L2E8:
-        func_800F8A18(0x60);
+        cell_pull_c8_sel2(0x60);
         func_80129B04();
         if (io_just() != 0)
             continue;
@@ -203,7 +203,7 @@ L320:
     poll_spin();
     if (poll_go(0x8080) == 0)
         goto L408;
-    func_800F8A18(0x5D);
+    cell_pull_c8_sel2(0x5D);
     func_80129B04();
     for (;;) {
         if (io_just() != 0)
@@ -213,7 +213,7 @@ L320:
             goto L3C0;
         cell_push_c8_lo(0x5D);
         poll_spin();
-        func_800F8A18(0x5D);
+        cell_pull_c8_sel2(0x5D);
         func_80129B04();
     }
 L3C0:
@@ -230,7 +230,7 @@ L408:
     cell_clear_bank(0x1B07);
     goto L5B8;
 L418:
-    func_800F8A18(0x5D);
+    cell_pull_c8_sel2(0x5D);
     func_80129B04();
     for (;;) {
         if (io_just() != 0)
@@ -240,13 +240,13 @@ L418:
             goto L498;
         cell_push_c8_lo(0x5D);
         cell_set50_from40();
-        func_800F8A18(0x5D);
+        cell_pull_c8_sel2(0x5D);
         func_80129B04();
     }
 L478:
     cell_push_c8_lo(0x5D);
     poll_spin();
-    func_800F8A18(0x5D);
+    cell_pull_c8_sel2(0x5D);
     goto L408;
 L498:
     row_page_cur();

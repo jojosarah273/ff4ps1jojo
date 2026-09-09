@@ -7,7 +7,7 @@ void func_80121678(void)
 {
     /* battle row: 6A78(0xA2)/6434 gate routes the 6AF4(0xA1) stat
        cells (0x1D/0x89/0x8B windows); 53C0 check. */
-    func_800F6A78(0xA2);
+    cell_push_c8_c2(0xA2);
     if (gate_cur() != 0)
         goto L121720;
     row_prep(0x20);

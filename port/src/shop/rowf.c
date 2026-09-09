@@ -21,10 +21,10 @@ void func_801769B4(void)
     cell_put(0x12);
     open_row(0x13);
     row_prep(0x20);
-    func_800F5024(cell_state(0x12));
-    func_800F5024(cell_state(0x12));
-    func_800F5024(cell_state(0x12));
-    func_800F5024(cell_state(0x12));
+    cell_pair_dbl2(cell_state(0x12));
+    cell_pair_dbl2(cell_state(0x12));
+    cell_pair_dbl2(cell_state(0x12));
+    cell_pair_dbl2(cell_state(0x12));
     row_read2(0x12);
     sep_a();
     cell_pos_fwd(0x5000);

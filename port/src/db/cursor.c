@@ -7,7 +7,7 @@
  *
  * Every function is an exact asm-order mirror (register reloads and
  * double stores kept).
- * Ground truth: src/func_800F9200.c, 9410, 922C, 94B8, 4064, 3F94,
+ * Ground truth: src/cell_cursor_dec.c, 9410, 922C, 94B8, 4064, 3F94,
  * 8058, 7FCC, 4264, 7F48, 78C4, 7864, 7C6C, 4370, 5E48, 61E8, 76BC,
  * 7CC8, 62F0, 5DD4, 5D24 (byte-verified).
  */
@@ -17,6 +17,7 @@ extern uint8_t *D_8019ED40;
 extern uint16_t D_8019ED44;
 extern uint16_t D_8019ED48;
 extern uint16_t D_8019ED4C;
+extern uint16_t D_8019ED58;
 extern uint32_t D_8019ED50;
 extern uint16_t D_8019ED54;
 extern uint8_t  D_8019ED68;
@@ -225,4 +226,41 @@ void cell_dec_bank(void)
     uint8_t v = (uint8_t)(*p - 1);
     *p = v;
     D_8019ED50 = v;
+}
+/* 800F4280: ticker &= a1 (alias shape of 800F4370). */
+void cell_tick_and2(uint32_t a1)
+{
+    *D_8019ED40 = (uint8_t)(*D_8019ED40 & a1);
+}
+
+/* 800F5024: u16 pair at p <<= 1; cell = v. */
+void cell_pair_dbl2(uint8_t *p)
+{
+    int32_t v = (int32_t)((int32_t)(p[0] | (p[1] << 8)) << 1);
+    p[0] = (uint8_t)v;
+    p[1] = (uint8_t)(v >> 8);
+    D_8019ED50 = (uint32_t)v;
+}
+
+/* 800F7B40: u16 pair at a0 <<= 1 (+ parity); cell = v. */
+uint32_t cell_pair_dbl(uint32_t a0, uint32_t a1, uint32_t a2)
+{
+    uint16_t v = (uint16_t)(((uint16_t)(((volatile uint8_t *)a0)[0] |
+                                        ((volatile uint8_t *)a0)[1] << 8) << 1) +
+                            (D_8019ED68 & 1));
+    ((volatile uint8_t *)a0)[0] = (uint8_t)v;
+    ((volatile uint8_t *)a0)[1] = (uint8_t)((int32_t)v >> 8);
+    return (D_8019ED50 = v);
+}
+
+/* 800F5ECC: ticker ^= *m. */
+void cell_tick_xor(uint8_t *m)
+{
+    *D_8019ED40 ^= *m;
+}
+
+/* 800F96E0: base-index register = pos. */
+void cell_cur_save58(void)
+{
+    D_8019ED58 = D_8019ED44;
 }

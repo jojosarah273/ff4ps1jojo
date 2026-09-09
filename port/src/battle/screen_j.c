@@ -142,7 +142,7 @@ Lc64:
     wnd_open(0x258);
     label(0x393F);
     func_8015236C();
-    func_800F7534(0x3941);
+    cell_push60(0x3941);
     row_info(0x9A);
     cell_pull60(0x2896);
 Le18:

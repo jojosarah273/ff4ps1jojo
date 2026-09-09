@@ -10,14 +10,14 @@ void func_80160B8C(void)
     if (io_just() == 0)
         return;
     txt_set(0x2721);
-    func_800F4280(0x28A2);
+    cell_tick_and2(0x28A2);
     if (sel(2) == 0) {
         latch(8);
         txt_draw(0x38FE);
         return;
     }
     txt_set(0x2720);
-    func_800F4280(0x28A2);
+    cell_tick_and2(0x28A2);
     if (sel(2) == 0) {
         latch(4);
         txt_draw(0x38FE);

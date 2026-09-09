@@ -28,7 +28,7 @@ L103bf8:
         row_open_w(9);
         cell_put(0x6E);
         open_row(0x6F);
-        func_800FE6E4();
+        battle_gate_early();
         row_page(0x79);
         row_read(7);
         if (sel(0x202) != 0)
@@ -60,7 +60,7 @@ L103cec:
         row_open_w(9);
         cell_put(0x6E);
         open_row(0x6F);
-        func_800FE6E4();
+        battle_gate_early();
         row_page(0x79);
         row_read(7);
         if (sel(0x202) != 0)

@@ -16,7 +16,7 @@ void func_80104E14(void)
         goto L104F04;
     txt_set(0x709);
     row_sel_cell_cur();
-    func_800F96E0();
+    cell_cur_save58();
     row_page(0xA1);
     row_read(4);
     if (sel(2) != 0)

@@ -20,7 +20,7 @@ L145CA4:
     txt_set_cur();
     tail_cur();
     wnd_open_cur();
-    func_800F7534();
+    cell_push60();
     txt_set_cur();
     func_8007411C();
     cell_word_half(cell_state_of());

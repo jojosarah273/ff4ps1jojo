@@ -22,7 +22,7 @@ L13D520:
     cell_pull_c8();
     latch(0x7F);
 L13D550:
-    func_800F5ECC(cell_state_of());
+    cell_tick_xor(cell_state_of());
     cell_pull_c8(0x343);
     step2();
     step2();

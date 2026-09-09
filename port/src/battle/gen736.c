@@ -17,7 +17,7 @@ void func_80111B14(void)
     txt_draw(5892);
     latch(1);
     txt_draw(5928);
-    func_800FB09C();
+    shop_view2_run();
     latch(16);
     cell_put(173);
     func_80111BBC();

@@ -89,7 +89,7 @@ L8360:
             row_open();
             row_page(0xE);
             poll_spin();
-            func_800F6A78(0x13);
+            cell_push_c8_c2(0x13);
             row_close();
             cell_draw(0x340);
             cell_step();

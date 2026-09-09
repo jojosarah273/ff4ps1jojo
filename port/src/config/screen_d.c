@@ -285,7 +285,7 @@ s080:
         txt_set(0x38D8);
         if (gate(2) != 0)
             goto l478;
-        if (func_800F53FC() != 0)
+        if (cell_flags_hi7() != 0)
             goto l440;
         row_page(0xC7);
         io_poll(5);
@@ -330,7 +330,7 @@ s080:
     sep();
     for (;;) {
         cell_sink8_9(0x2A07);
-        if (func_800F64EC(2) != 0)
+        if (cell_flags_pos0(2) != 0)
             goto l534;
         cell_poke0(cell_state(0xA9));
         cell_flags_cmp_pos();
@@ -349,7 +349,7 @@ s080:
     for (;;) {
         sep_b();
         cell_sink8_9(0x2A07);
-        if (func_800F64EC(2) != 0)
+        if (cell_flags_pos0(2) != 0)
             goto l5e0;
         cell_poke0(cell_state(0xA9));
         cell_pos_sub16();

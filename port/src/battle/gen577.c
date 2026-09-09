@@ -4,11 +4,6 @@
  */
 #include "ff4_window.h"
 
-
-
-
-
-extern int func_800FB09C();
 extern int func_8017559C();
 
 void func_801146F0(void)
@@ -17,7 +12,7 @@ void func_801146F0(void)
   cell_clear_bank(0x1700);
   latch(4);
   txt_draw(0x1704);
-  func_800FB09C();
+  shop_view2_run();
   latch(0x20);
   cell_put(0xad);
   latch(0x10);

@@ -10,7 +10,7 @@ void func_80105098(void)
        4120(2) gates. */
     row_page(0xAB);
     row_sel_cell_cur();
-    func_800F96E0();
+    cell_cur_save58();
     cell_push_c8_d58(0x6A1);
     row_read(4);
     if (sel(2) != 0)
@@ -22,7 +22,7 @@ void func_80105098(void)
         return;
 L105100:
     row_page(0xAB);
-    func_800F96E0();
+    cell_cur_save58();
     txt_set(0x1706);
     sep_a();
     row_open_w0();

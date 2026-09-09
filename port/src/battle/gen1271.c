@@ -4,7 +4,6 @@
  */
 #include "ff4_window.h"
 
-extern int func_800FB3F8();
 extern int func_8010E338();
 extern int func_8011EA5C();
 extern int func_8016E99C();
@@ -12,7 +11,7 @@ extern int func_8016E99C();
 void func_8010E278(void)
 
 {
-  func_800FB3F8();
+  wnd_fx_2100();
   cell_flags_set4();
   func_8016E99C();
   func_8010E338();

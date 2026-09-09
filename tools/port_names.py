@@ -91,7 +91,19 @@ NM = {
     "800F8F94": "cell_clear_bank2",    "800F54B8": "cell_flags_set4",
     "800F67FC": "cell_push_c8_b4o",    "800FD718": "battle_rows_run",
     "800F7728": "cell_flags_nz50",     "800F55C0": "cell_flags_cmp3",
+    # ---- batch 5: tail cell ops + shop dispatch ----
+    "800F4280": "cell_tick_and2",     "800F5024": "cell_pair_dbl2",
+    "800F5ECC": "cell_tick_xor",      "800F7B40": "cell_pair_dbl",
+    "800F96E0": "cell_cur_save58",    "800F6A78": "cell_push_c8_c2",
+    "800F8A18": "cell_pull_c8_sel2",  "800F88E4": "cell_pull89_fn",
+    "800F7534": "cell_push60",        "800F53FC": "cell_flags_hi7",
+    "800F40E8": "cell_flags_tick2",   "800F7B7C": "cell_flags_overflow",
+    "800F64EC": "cell_flags_pos0",    "800F41E8": "cell_flags_pos0",
+    "800F5448": "cell_flags_clr4",    "800FB3F8": "wnd_fx_2100",
+    "800FE6E4": "battle_gate_early",  "800FD85C": "shop_rows_run",
+    "800FD914": "shop_rows2_run",     "800FB09C": "shop_view2_run",
 }
+
 
 
 # ids whose extern declarations should be dropped (declared by the header)

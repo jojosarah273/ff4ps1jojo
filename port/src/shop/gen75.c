@@ -30,11 +30,11 @@ L16e688:
     wnd_open(0x20);
 L16e6f0:
     for (;;) {
-        func_800F7B40(cell_state(0xA9));
-        func_800F7B7C();
-        func_800F7B40(cell_state(0xAB));
-        func_800F7B7C();
-        func_800F7B40(cell_state(0xB5));
+        cell_pair_dbl(cell_state(0xA9));
+        cell_flags_overflow();
+        cell_pair_dbl(cell_state(0xAB));
+        cell_flags_overflow();
+        cell_pair_dbl(cell_state(0xB5));
         sep_b();
         row_read2(0xB5);
         cell_pos_sub16(cell_state(0xAD));
@@ -52,10 +52,10 @@ L16e6f0:
         cell_put_hi9(0xB7);
         sep_a();
     L16E7E8:
-        func_800F7B40(cell_state(0xB1));
-        func_800F7B7C();
-        func_800F7B40(cell_state(0xB3));
-        func_800F7B7C();
+        cell_pair_dbl(cell_state(0xB1));
+        cell_flags_overflow();
+        cell_pair_dbl(cell_state(0xB3));
+        cell_flags_overflow();
         cell_set50_from54();
         if (poll_go(0x202) != 0)
             continue;

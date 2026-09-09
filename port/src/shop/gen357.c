@@ -21,8 +21,8 @@ void func_80160C2C(void)
     cell_clear_bank(0x359C);
     cell_clear_bank(0x359F);
     txt_set(0x2720);
-    func_800F4280(0x2725);
-    func_800F4280(0x2720);
+    cell_tick_and2(0x2725);
+    cell_tick_and2(0x2720);
     row_read(0x3F);
     cell_put(0xA9);
     if (sel(0x202) != 0)

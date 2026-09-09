@@ -24,7 +24,7 @@ LF37C:
         txt_cell(0xEBE6);
         sep_a();
         row_open_w(0xF);
-        if (func_800F53FC() == 0)
+        if (cell_flags_hi7() == 0)
             goto LF46c;
         sep_a();
         cell_poke0(cell_state(0x12));

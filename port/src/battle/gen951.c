@@ -5,13 +5,11 @@
 #include "ff4_window.h"
 extern void func_800FC548(void);
 extern void func_80176060(void);
-extern void func_800F5448(void);
-
 
 void func_8010E338(void) {
     func_800FC548();
     func_80176060();
-    func_800F5448();
+    cell_flags_clr4();
     latch(0);
     txt_draw(0x2100);
     latch(0x81);

@@ -9,7 +9,7 @@
  * (p = (u8*)catalog_base) mirrors the Phase A source literally; when
  * the text layer maps the real catalog, these bind to g_vram_.
  *
- * Ground truth: src/func_800F8960.c, 8F74, 8F94, 6C68, 6D70, 66D8,
+ * Ground truth: src/cell_pull_c8.c, 8F74, 8F94, 6C68, 6D70, 66D8,
  * 81E8, 885C, 82EC, 8274, 81B0, 87DC, 89D4, 658C, 6CF4, 6BE0, 6DE8,
  * 65F0, 6EA8, 65C8, 67FC, 6E30, 6764, 8378, 8E50 (byte-verified).
  */
@@ -194,4 +194,31 @@ uint32_t cell_pull60(void)
 {
     ((volatile uint8_t *)catalog_base())[0] = D_8019ED60[0];
     return (((volatile uint8_t *)catalog_base())[1] = D_8019ED60[1]);
+}
+/* 800F6A78: scratch tag = bank byte at (cell_addr16(a0) + a0). */
+void cell_push_c8_c2(uint32_t a0)
+{
+    g_scratch[0x08] = ((volatile uint8_t *)(cell_addr16(a0) + a0))[0];
+}
+
+/* 800F8A18: cell(sel(a0))[0] = scratch tag. */
+uint32_t cell_pull_c8_sel2(uint32_t a0)
+{
+    return (((volatile uint8_t *)catalog_base(cell_bank_sel((uint16_t)a0)))[0] =
+            g_scratch[0x08]);
+}
+
+/* 800F88E4: fn-addr cell bytes = scratch 0x08/0x09 (quirk kept). */
+void cell_pull89_fn(void)
+{
+    uint8_t *p = (uint8_t *)cell_add16;
+    p[0] = g_scratch[0x08];
+    p[1] = g_scratch[0x09];
+}
+
+/* 800F7534: cell-pair source = bank base bytes. */
+uint32_t cell_push60(void)
+{
+    ((volatile uint8_t *)&D_8019ED60[0])[0] = ((volatile uint8_t *)catalog_base())[0];
+    return (((volatile uint8_t *)&D_8019ED60[0])[1] = ((volatile uint8_t *)catalog_base())[1]);
 }

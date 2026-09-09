@@ -41,7 +41,7 @@ L134bfc:
     }
 L134C24:
     func_800F43A0(0x45);
-    if (func_800F41E8(0x202) != 0)
+    if (cell_flags_pos0(0x202) != 0)
         goto L134C54;
     row_prep_close();
 L134C44:

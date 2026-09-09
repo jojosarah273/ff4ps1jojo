@@ -5,9 +5,6 @@
 #include "ff4_window.h"
 
 
-
-extern int func_800FD85C();
-extern int func_800FD914();
 extern int func_8011EA5C();
 
 void func_80118A40(void)
@@ -19,12 +16,12 @@ void func_80118A40(void)
   iVar1 = gate(0x202);
   if (iVar1 == 0) {
     latch(7);
-    func_800FD85C();
+    shop_rows_run();
     func_8011EA5C();
   }
   else {
     latch(7);
-    func_800FD914();
+    shop_rows2_run();
     func_8011EA5C();
   }
   return;

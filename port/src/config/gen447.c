@@ -26,9 +26,9 @@ L12eac8:
             io_poll(0xFE);
             if (io_go() != 0)
                 goto L12EB78;
-            func_800F8A18(0x1D);
+            cell_pull_c8_sel2(0x1D);
             cell_push_c8_d58(1);
-            func_800F8A18(0x23);
+            cell_pull_c8_sel2(0x23);
             latch_cur();
             cell_pull_c8();
             cell_pull_c8(1);

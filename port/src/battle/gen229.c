@@ -5,7 +5,7 @@
 #include "ff4_window.h"
 void func_801121C4(void)
 {
-    func_800FB3F8();
+    wnd_fx_2100();
     latch(0x17);
     txt_draw(0x212C);
     cell_clear_bank(0x2130);
@@ -109,7 +109,7 @@ L24d0:
     latch(0x81);
     txt_draw(0x4200);
     latch(7);
-    func_800FD85C();
+    shop_rows_run();
     latch(1);
     cell_put(0xCB);
     latch(0xD0);
@@ -120,7 +120,7 @@ L24d0:
     open_row(0xCB);
     func_800FD6E8();
     latch(7);
-    func_800FD914();
+    shop_rows2_run();
     func_8011EA5C();
     return;
 }

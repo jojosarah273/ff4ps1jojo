@@ -24,7 +24,7 @@ LDCD4:
             goto LDD68;
         txt_cell(0x2004);
         row_read(0x30);
-        func_800F40E8();
+        cell_flags_tick2();
     LDD68:
         if (io_just() == 0)
             goto LDFA8;

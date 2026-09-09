@@ -22,13 +22,13 @@ void func_8011285C(void)
     wnd_open(0x7763);
     label(0x1706);
     cell_clear_bank(0x1700);
-    func_800FB09C();
+    shop_view2_run();
     latch(0x20);
     cell_put(0xAD);
     latch(0x81);
     txt_draw(0x4200);
     latch(3);
-    func_800FD85C();
+    shop_rows_run();
     wnd_open(0x40);
     func_80116398();
     latch(1);

@@ -73,7 +73,7 @@ Lbed4:
 Lbf3c:
     wnd_open(5);
     for (;;) {
-        func_800F6A78(0xD7);
+        cell_push_c8_c2(0xD7);
         cell_draw(0x3937);
         cell_set50_from54();
         if (poll_go(0x8080) != 0)

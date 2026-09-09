@@ -6,7 +6,7 @@
 void func_8012E160(void)
 {
     latch(1);
-    func_800F5ECC(cell_state(5800));
+    cell_tick_xor(cell_state(5800));
     txt_draw(5800);
     key_page(132);
     func_80122A9C();

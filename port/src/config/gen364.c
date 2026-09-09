@@ -18,7 +18,7 @@ void func_8015F3E0(void)
     return;
 L15F428:
     txt_set(0x2724);
-    func_800F4280(0x28A4);
+    cell_tick_and2(0x28A4);
     if (sel(2) != 0)
         goto L15F458;
     func_801608C4();

@@ -48,7 +48,7 @@ L2e8ec:
             io_poll(0x64);
             if (io_go() != 0)
                 goto L2E9D4;
-            func_800F8A18(0x23);
+            cell_pull_c8_sel2(0x23);
             latch_cur();
             cell_pull_c8_bank(0x1F);
             poll_pair_cur();

@@ -57,7 +57,7 @@ L1006C0:
     cell_clear_bank(0x180A);
     cell_clear_bank(0x180B);
     latch_cur();
-    func_800FD914();
+    shop_rows2_run();
     func_8011EB5C();
     func_800FC548();
     wnd_open_cur();
@@ -74,13 +74,13 @@ L100774:
     cell_put(0xC5);
     func_800FAD48();
     func_8010CA74();
-    func_800F5448();
+    cell_flags_clr4();
     latch(0x81);
     txt_draw(0x4200);
     func_80170C14();
     func_8010B010();
     latch_cur();
-    func_800FD85C();
+    shop_rows_run();
     return;
 L100804:
     txt_set(0x8FB);

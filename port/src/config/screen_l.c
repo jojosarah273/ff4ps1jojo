@@ -99,7 +99,7 @@ L354:
         goto L1E4;
 L394:
     func_80132428();
-    if (func_800F53FC() == 0)
+    if (cell_flags_hi7() == 0)
         goto L3C4;
     func_801320E8();
     func_8012219C();
@@ -257,7 +257,7 @@ L77C:
         break;
     }
     latch(0xFF);
-    func_800F5ECC(cell_state(0x1BBB));
+    cell_tick_xor(cell_state(0x1BBB));
     txt_draw(0x1BBB);
     goto L4E4;
 }

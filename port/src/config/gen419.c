@@ -39,7 +39,7 @@ L15B2EC:
     row_read2(0xAB);
     func_800F43A0(0xA9);
     row_prep_close();
-    if (func_800F41E8(0x202) != 0)
+    if (cell_flags_pos0(0x202) != 0)
         goto L15B3CC;
 L15B3C4:
     page_paint2(0x353D);

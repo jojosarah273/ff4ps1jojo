@@ -8,7 +8,7 @@ void func_800FB430(void)
     /* MAIN SYSTEM MENU root (0xA14): register dispatch ladder
        L800FB520..L800FBE08 (v0/v1 gates per segment). Linear call
        chain with constants pulled from asm, in order. */
-    func_800FB3F8();
+    wnd_fx_2100();
     cell_clear_bank(0x420B);
     cell_clear_bank(0x420C);
     latch(0x1);
@@ -223,7 +223,7 @@ void func_800FB430(void)
     row_read(0x7E);
     io_poll(0x16);
     io_go();
-    func_800F96E0();
+    cell_cur_save58();
     row_prep(0x20);
     row_sync2_cur();
     cell_stamp8_9_b(0xD3D);
@@ -232,7 +232,7 @@ void func_800FB430(void)
     stat_sync();
     row_prep_close();
     latch_cur();
-    func_800FD914();
-    func_800FB3F8();
+    shop_rows2_run();
+    wnd_fx_2100();
     return;
 }

@@ -6,7 +6,7 @@
  * an asm register ladder and stays a documented stub until the lanes
  * are mapped). Exact mirrors of the Phase A sources.
  *
- * Ground truth: src/func_800FE778.c, FE7B0, FC84, E870, 3D64, FD718,
+ * Ground truth: src/wnd_fx_7d.c, FE7B0, FC84, E870, 3D64, FD718,
  * FE7D8, FF024, CCBC, 9868 (byte-verified).
  */
 #include <stdint.h>
@@ -187,4 +187,17 @@ uint32_t catalog_dispatch(uint32_t a0)
 {
     (void)a0;
     return 0;
+}
+/* 800FB3F8: god-text 0x2100/0x4200 latch window. */
+void wnd_fx_2100(void)
+{
+    latch(0x80);
+    txt_draw(0x2100);
+    latch(0);
+    txt_draw(0x4200);
+}
+
+/* 800FE6E4: early battle gate (a1/v0 latch; documented stub ladder). */
+void battle_gate_early(void)
+{
 }

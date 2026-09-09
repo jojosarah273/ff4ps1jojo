@@ -15,7 +15,7 @@ L11ccac:
         cell_put(0x18);
         open_row(0x19);
         row_prep(0x20);
-        func_800F5024(cell_state(0x18));
+        cell_pair_dbl2(cell_state(0x18));
         page(0x18);
         cell_push9_bank();
         cell_push9_bank();

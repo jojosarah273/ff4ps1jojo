@@ -18,7 +18,7 @@ void func_8013DE38(void)
         goto L3DEB8;
     /* branch-skip: v1 = *D_8019ED68 | 2 (dead) */
 L3DEB8:
-    if (func_800F53FC() == 0)
+    if (cell_flags_hi7() == 0)
         goto L3DF38;
     sep_a();
     cell_poke0(cell_state_of());
@@ -62,7 +62,7 @@ L3E0D0:
     cell_push_c8();
     cell_pull_c8(0x342);
     cell_push_c8();
-    func_800F5ECC(cell_state(5));
+    cell_tick_xor(cell_state(5));
     cell_cursor_dec();
     txt_set(0x6CC0);
     if (gate(2) != 0)

@@ -18,7 +18,7 @@ L11f430:
         cell_inc_cell(0x5A);
         sep_b();
         cell_pos_back2(0x3E8);
-        if (func_800F53FC() != 0)
+        if (cell_flags_hi7() != 0)
             break;
     }
     sep_a();

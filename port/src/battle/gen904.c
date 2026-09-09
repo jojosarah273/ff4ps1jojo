@@ -23,7 +23,7 @@ L119E1C:
     wnd_fx_7d_b();
     latch(0xF);
     txt_draw(0x2100);
-    func_800F5448();
+    cell_flags_clr4();
     func_8011EA5C();
     return;
 }

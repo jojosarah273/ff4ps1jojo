@@ -16,7 +16,7 @@ L125964:
     latch(0xA);
     txt_draw(0x1A73);
     latch(0xFF);
-    func_800F5ECC(cell_state(0x1A75));
+    cell_tick_xor(cell_state(0x1A75));
     txt_draw(0x1A75);
     if (func_800F5F20(2) != 0)
         goto L1259B4;

@@ -140,7 +140,7 @@ Ld40:
     txt_draw(0x1801);
     row_page(0xA2);
     row_read(7);
-    func_800F96E0(0x1802);
+    cell_cur_save58(0x1802);
     txt_draw_cur();
     open_row(0xC0);
     latch(1);

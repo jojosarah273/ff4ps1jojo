@@ -4,11 +4,6 @@
  */
 #include "ff4_window.h"
 
-
-
-extern int func_800F7534();
-
-
 void func_8011EE34(void)
 
 {
@@ -20,7 +15,7 @@ void func_8011EE34(void)
   txt_draw(0x2115);
   sep();
   txt_draw(0x420c);
-  func_800F7534(0x11d);
+  cell_push60(0x11d);
   cell_pull60(0x2116);
   latch(1);
   txt_draw(0x4300);

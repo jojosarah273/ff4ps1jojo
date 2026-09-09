@@ -13,9 +13,9 @@ void func_801241B8(void)
 L1241d8:
     for (;;) {
         row_sync2_cur();
-        func_800F88E4(0x300);
+        cell_pull89_fn(0x300);
         row_sync2(0x3000);
-        func_800F88E4(0x302);
+        cell_pull89_fn(0x302);
         poll_pair_cur();
         if (poll_go(0x202) != 0)
             continue;
@@ -25,7 +25,7 @@ L1241d8:
     row_sync2_cur();
 L124238:
     for (;;) {
-        func_800F88E4(0x300);
+        cell_pull89_fn(0x300);
         poll_pair_cur();
         if (poll_go(0x202) != 0)
             continue;

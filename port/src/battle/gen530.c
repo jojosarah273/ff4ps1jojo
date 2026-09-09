@@ -31,7 +31,7 @@ L113e84:
         cell_pos_mask(0xFF);
         row_prep_close();
         cell_put(0xAD);
-        if (func_800F41E8(2) == 0)
+        if (cell_flags_pos0(2) == 0)
             continue;
         break;
     }

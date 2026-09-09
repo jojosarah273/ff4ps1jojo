@@ -18,7 +18,7 @@ L10E9B4:
         cell_clear_bank(0x420C);
         key_page(0xAD);
         func_800FE5D4();
-        func_800FE6E4();
+        battle_gate_early();
         row_page(0xAD);
         cell_set50_from40();
         func_8017559C();
@@ -32,7 +32,7 @@ L10EA2C:
     for (;;) {
         wnd_fx_7d_b();
         cell_clear_bank(0x420C);
-        func_800FE6E4();
+        battle_gate_early();
         row_page(2);
         if (gate(0x202) != 0)
             goto L10EA74;
@@ -49,7 +49,7 @@ L10EA7C:
         cell_clear_bank(0x420C);
         poll_pair(0xAD);
         func_800FE5D4();
-        func_800FE6E4();
+        battle_gate_early();
         row_page(0xAD);
         func_8017559C();
         row_page(0xAD);

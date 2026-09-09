@@ -16,7 +16,7 @@ Ld78:
         if (io_just() == 0)
             goto Lde8;
         latch(1);
-        func_800F5ECC(cell_state(0x16A8));
+        cell_tick_xor(cell_state(0x16A8));
         txt_draw(0x16A8);
         func_80122A9C();
         func_80122538();

@@ -129,7 +129,7 @@ l94C8:
         goto l96AC;
     txt_set(0x28A2);
     row_read(0xC0);
-    func_800F40E8();
+    cell_flags_tick2();
 l9528:
     if (io_just() != 0)
         goto l979C;
@@ -334,7 +334,7 @@ l9BD8:
     draw_pad_cur();
     cell_push_c8_sel(0x80);
     row_read(0xC0);
-    func_800F4280(0x3978);
+    cell_tick_and2(0x3978);
     if (sel(2) != 0)
         goto l9CD8;
     row_page(0xBF);

@@ -3,8 +3,6 @@
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-extern int func_800F40E8();
-
 
 extern int func_80124EAC();
 
@@ -14,7 +12,7 @@ void func_8012D204(void)
   func_80124EAC();
   txt_cell(0);
   row_read(0x3f);
-  func_800F40E8();
+  cell_flags_tick2();
   return;
 }
 

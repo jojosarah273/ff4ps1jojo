@@ -33,7 +33,7 @@ L5634:
         if (io_just() != 0)
             return;
         cell_put(0x5D);
-        func_800F8A18(0x51);
+        cell_pull_c8_sel2(0x51);
         func_80136174();
         row_sync();
         func_801224D0();
@@ -69,7 +69,7 @@ L5634:
         cell_inc_cell(0x51);
         row_prep_close();
         row_page(0x47);
-        func_800F8A18(0x51);
+        cell_pull_c8_sel2(0x51);
         func_80136174();
         goto L59d8;
     L58b0:
@@ -81,7 +81,7 @@ L5634:
         cell_inc_cell(0x51);
         row_prep_close();
         latch_cur();
-        func_800F8A18(0x51);
+        cell_pull_c8_sel2(0x51);
         func_80136174();
     L59d8:
         func_801376F0();

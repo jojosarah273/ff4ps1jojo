@@ -112,10 +112,10 @@ f0dc:
         cell_inc_cell(0x9A);
         row_read2(0x9A);
         cell_pos_mask(3);
-        if (func_800F41E8(0x202) != 0)
+        if (cell_flags_pos0(0x202) != 0)
             goto f3f4;
         cell_push9(0x2105);
-        if (func_800F64EC(2) != 0)
+        if (cell_flags_pos0(2) != 0)
             goto f3f4;
         sep_b();
         cell_pos_back2(0x421);

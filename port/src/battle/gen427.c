@@ -8,10 +8,10 @@ void func_80104F1C(void)
     /* shop buy-row: 0x709/0x1706/0x1707 texts, 0xD2/0xC/0xE/0x3D/0xEE
        windows, 8010D54C; 6A78(0xA1) gate. */
     txt_set(0x709);
-    func_800F96E0();
+    cell_cur_save58();
     row_sel_cell_cur();
     cell_cur_save54();
-    func_800F6A78(0xA1);
+    cell_push_c8_c2(0xA1);
     row_read(4);
     if (sel(2) != 0)
         goto L104F94;

@@ -11,7 +11,7 @@ void func_8014D98C(void)
     if (gate(2) != 0)
         return;
     txt_set_cur();
-    func_800F4280();
+    cell_tick_and2();
     if (sel(0x202) != 0)
         goto L14DA14;
     page_paint2_cur();

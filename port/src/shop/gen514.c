@@ -11,7 +11,7 @@ void func_8016DB94(void)
     cell_pos_mask(0x1FF);
     row_arm_s_cur();
     cell_push9_bank();
-    if (func_800F64EC() != 0)
+    if (cell_flags_pos0() != 0)
         goto L16DC78;
     cell_put_hi9(0x10);
     func_8016D028();
@@ -32,7 +32,7 @@ L16DC78:
     func_8016D028();
     row_prep(0x20);
     row_read2(0x14);
-    if (func_800F64EC(0x80) != 0)
+    if (cell_flags_pos0(0x80) != 0)
         goto L16DC50;
 L16DCB0:
     cell_put_hi9(0x14);

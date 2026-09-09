@@ -247,7 +247,7 @@ L564:
     poll_spin();
     if (poll_go(0x80) != 0)
         goto L654;
-    func_800F8A18(0x45);
+    cell_pull_c8_sel2(0x45);
     goto L654;
 L62C:
     txt_set(0x16B7);
@@ -317,7 +317,7 @@ L7B4:
     io_poll(0x20);
     if (io_just() != 0)
         goto Lf50;
-    func_800F8A18(0x45);
+    cell_pull_c8_sel2(0x45);
     goto Lf50;
 L884:
     txt_set(0x16B7);

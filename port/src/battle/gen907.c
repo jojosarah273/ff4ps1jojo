@@ -13,7 +13,7 @@ void func_80119020(void)
 L119040:
     for (;;) {
         txt_cell(0x1003);
-        func_800F5ECC(cell_state(6));
+        cell_tick_xor(cell_state(6));
         cell_draw(0x1003);
         func_80117DF8();
         poll_t(0x140);

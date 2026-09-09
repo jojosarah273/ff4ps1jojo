@@ -33,7 +33,7 @@ Lffc0:
     cell_put_hi9(8);
     row_sync2(0xF000);
     cell_put_hi9(4);
-    func_800F7534(0xF469);
+    cell_push60(0xF469);
 L004c:
     for (;;) {
         row_sync();
@@ -49,7 +49,7 @@ L004c:
         cell_put_hi9(0xA);
         cell_cursor_adv2();
         cell_pos_mask(0x8000);
-        if (func_800F41E8(0x202) != 0)
+        if (cell_flags_pos0(0x202) != 0)
             goto L01a0;
         draw_pad_cur();
         for (;;) {

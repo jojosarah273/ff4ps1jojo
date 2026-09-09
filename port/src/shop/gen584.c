@@ -8,7 +8,7 @@ void func_80160AAC(void)
     /* options banner: 0x2726/0x2725/0x28A2/0x38FE texts; 4120 gates
        pick the 0xFE values. */
     txt_set(0x2726);
-    func_800F4280(0x28A2);
+    cell_tick_and2(0x28A2);
     if (sel(2) != 0)
         goto L160B1C;
     sep();
@@ -22,7 +22,7 @@ void func_80160AAC(void)
     return;
 L160B1C:
     txt_set(0x2725);
-    func_800F4280(0x28A2);
+    cell_tick_and2(0x28A2);
     if (sel(2) != 0)
         return;
     latch(1);

@@ -12,7 +12,7 @@ void func_80119E7C(void)
     txt_set(0x1707);
     sep_b();
     cell_pos_back(7);
-    if (func_800F53FC() == 0)
+    if (cell_flags_hi7() == 0)
         goto L19EF8;
     sep_a();
     row_open_w(0xF);

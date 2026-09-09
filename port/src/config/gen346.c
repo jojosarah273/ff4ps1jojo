@@ -28,7 +28,7 @@ L138d38:
         func_80126528();
         latch(0x17);
         cell_pull_c8_lo(0x212C);
-        func_800F5448();
+        cell_flags_clr4();
         txt_set(0x1BAF);
         if (gate(2) != 0)
             goto L138E00;

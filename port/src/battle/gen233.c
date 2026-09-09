@@ -73,7 +73,7 @@ Leba4:
     latch(0x81);
     txt_draw(0x4200);
     latch(3);
-    func_800FD85C();
+    shop_rows_run();
     open_row(0x2E);
     open_row(0x2F);
 Lee34:
@@ -110,7 +110,7 @@ Lee34:
         break;
     }
     latch(3);
-    func_800FD914();
+    shop_rows2_run();
     func_80174710();
     func_801745F4();
     latch(0x81);

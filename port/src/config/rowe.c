@@ -198,7 +198,7 @@ void func_801583FC(void)
     cell_put(0xB1);
     sep();
     for (;;) {
-        func_800F6A78(0xAD);
+        cell_push_c8_c2(0xAD);
         if (gate(0x80) != 0)
             goto opt_b;
         cell_tick_or(cell_state(0xA9));

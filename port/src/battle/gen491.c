@@ -19,13 +19,13 @@ L11AB50:
     if (gate(2) != 0)
         goto L11AB78;
     latch_cur();
-    func_800FD914();
+    shop_rows2_run();
 L11AB78:
     row_close2();
     txt_draw(0x1700);
     if (gate(0x202) != 0)
         goto L11ABA8;
-    func_800FB09C();
+    shop_view2_run();
     goto L11AC00;
 L11ABA8:
     io_poll(1);
