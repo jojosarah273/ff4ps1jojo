@@ -5,7 +5,14 @@ also in git (this file)._
 ## STATE SNAPSHOT (latest verified numbers)
 - Phase A: **2516/2516 C-written (100.0%)**; whole src/ gcc-clean.
 - Byte-verified: **827 (32.9%)** (`expected/matched/*.o` count; `decomp/STATUS.md`).
-- Callgraph: `expected/callgraph.json` = 2517 callers / 22,544 edges.
+- Callgraph: `expected/callgraph.json` = 2517 call
+- **AVENUE 1 MILESTONE (SDL device layer)**: `make -C port native` from clean
+  compiles the 1395-module deck, builds the SDL device layer
+  (`port/src/device/sdl_device.c`), auto-stubs deck-only unresolved symbols
+  (nm-driven, D_*/g_*/fn rules in `port/tools/native_link.sh`), and links
+  `port/build/ff4-native` which RUNS the interpreted config-menu state and
+  exits 0 under SDL_VIDEODRIVER=dummy. Boot drives `config_menu_run()` frames
+  0..60; the io_just self-inject keeps menus advancing headless.json` = 2517 callers / 22,544 edges.
 - Port: **port/src has 1137 .c modules (0 syntax failures)**; `make deck` in
   `port/` compiles all 1139 objects. Coverage: `port/docs/coverage.md` (~1726 funcs).
 - All work pushed to `main`. Latest commit at time of writing: `dfc177ab`.

@@ -6,14 +6,20 @@ also in git (this file)._
 - Phase A: **2516/2516 C-written (100.0%)**; whole src/ gcc-clean.
 - Byte-verified: **827 (32.9%)** (`expected/matched/*.o` count; `decomp/STATUS.md`).
 - Callgraph: `expected/callgraph.json` = 2517 callers / 22,544 edges.
-- Port: **port/src has 1137 .c modules (0 syntax failures)**; `make deck` in
-  `port/` compiles all 1139 objects. Coverage: `port/docs/coverage.md` (~1726 funcs).
-- All work pushed to `main`. AVENUE 1 consolidated LINK milestone achieved:
-`bash port/tools/native_link.sh` (or `make -C port native`) links the full
-1137-module deck -> `port/build/ff4-native` (runs, exit 0), auto-stubbing
-~885 callees via nm. Duplicate names renamed (panel_more, miscrows).
-Remaining Avenue 1 = the DEVICE LAYER (SDL text/pages/input mapping) so the
-binary paints instead of returning immediately.
+- Port: **port/src has 1395 .c modules (0 syntax failures)**; `make deck` in
+  `port/` compiles the whole fleet. Coverage: `port/docs/coverage.md` (~2035 funcs).
+- All work pushed to `main`. **AVENUE 1 DEVICE LAYER DONE**: from clean,
+`make -C port native` (or `bash port/tools/native_link.sh`) compiles the deck,
+builds the SDL device layer (`port/src/device/sdl_device.c` — window, cell-bank
+sim, hex-glyph renderer, PS1 pad-bit keyboard input), auto-stubs deck-only
+unresolved symbols (nm-driven: D_* → vram-sim slot pointers, g_* → data
+arrays, else 0-return fns; runtime exports excluded unless the deck needs
+names like `step` vs glibc), and links -> **`port/build/ff4-native` (runs,
+exit 0 under SDL_VIDEODRIVER=dummy with the config-menu state executing
+through the window API)**. Boot drives `config_menu_run()` frames 0..60;
+the io_just self-inject keeps menus advancing without input.
+Remaining Avenue 1 = richer paint (glyph atlas decode instead of hex ids)
+and confirming the PS1 pad-bit poll codes against asm.
 
 ## KEY TOOLS (stable, don't rewrite from scratch)
 - `tools/port_rowmap.py` — maps a Phase A window-driven screen into an
@@ -27,29 +33,24 @@ binary paints instead of returning immediately.
 - The row-map ARGLESS/CURFIX lists live in `tools/port_rowmap.py` (top);
   the auto-fix loop converges arity errors automatically.
 
-## AVENUE 1 — CONSOLIDATION + NATIVE LINK (NEXT PRIORITY; my pick)
-Goal: first linkable native executable (stubs-backed) + then the device layer.
-1. Find duplicate definitions: `cd port && gcc -O0 build/*.o build/*/*/*.o
-   build/*/*.o -o /tmp/t 2>&1 | grep "multiple definition"`.
-   Known dupes: `panel_cursor_next` (panel.c vs panel_more.c),
-   `miscrows.c` vs earlier rows modules (row_* names duplicated).
-   Fix = rename the hand-written module functions to unique port names
-   (e.g. `panel_cursor_next_v(state*)` in panel_more; suffixed row_* names).
-2. Regenerate stubs (`python3 ../tools/port_stubs.py > platform/stubs.c`
-   is WRONG for link — the right one is link-error-driven: run gcc, capture
-   `undefined reference to \`X'`, emit `void X(void){}` per symbol. Was done
-   once into `port/platform/stubs.c` — regenerate after renames).
-3. `gcc -O0 build/stubs.o build/boot.o build/main.o build/*.o ... -o /tmp/ff4_deck_test`
-   until it links. Then it runs (boots a window eventually).
-4. **Device layer (B.2)** — map the window API to SDL2:
-   - txt/cell writes (`txt_set/8168/81E8/8xxx codes 0x20xx`) -> glyph atlas
-     once the text-encoding table is decoded from the disc data.
-   - `page/page_paint` -> SDL render commands.
-   - key polls `io_poll(0xNN)` -> SDL input translation (the 0xNN codes are
-     PS1 pad bits: 0x200..? USE the art: left=0x20,right=0x10,up=0x08,down=0x04,
-     cross=0x40,circle=0x80 — verify against asm).
-   - config root driver: `port/src/config/root.c` + `screen_f.c` (800FB430).
-5. Success signal: SDL window opens and the config menu state runs.
+## AVENUE 1 — DEVICE LAYER DONE; NATIVE BUILD STANDARDIZED
+Milestone reached: the native binary runs the interpreted config-menu state
+through the SDL device layer (see state snapshot). Build recipe now live:
+- `make -C port native` = deck + `boot` (device.o/boot2.o/main.o) + stubs + SDL
+  -> `port/build/ff4-native`. Smoke: `SDL_VIDEODRIVER=dummy ./build/ff4-native`
+  (exit 0; keeps the menu moving via the io_just self-inject, then closes after
+  60 frames). With a display it opens a real window and paints hex-glyph cells.
+- Stub rules are codified in `port/tools/native_link.sh` (deck-only candidates;
+  D_* -> vram-sim slot pointers; g_* -> data arrays; else 0-return fns; `step`
+  keeps overriding weak glibc export). Don't revert to blanket void stubs -
+  they crashed on value usage and collided with libc (fwrite/signal).
+NEXT under Avenue 1:
+1. Decode the text atlas from disc data (0x20xx codes -> real glyphs) and
+   paint via textured quads instead of hex ids.
+2. Verify PS1 pad-bit polls against asm (0x10/0x20/0x40/0x80/0x2000/0x4000...)
+   and hook SDL key repeats into g_pressed/g_pad properly.
+3. Drive deeper deck states (battle menus) once more window rows are
+   interpreted (Avenue 2 pours into the same harness).
 
 ## AVENUE 2 — REGISTER-MACHINE INTERPRETATION (the remaining ~500 funcs)
 Mapped pool is exhausted (funcs with >=6 window calls). The rest are the

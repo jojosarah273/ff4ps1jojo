@@ -59,12 +59,12 @@ void battle_row_poll9(void)
 }
 
 /* 80143DB4 / 80143E44 / 80148D58 / 80148ED0 (twins) */
-void battle_row_pair(void)
+void battle_row_pair_probe(void)
 {
     row_prep(0, 0);
     cell_pair();
     cell_pair();
-    row_close();
+    battle_row_close();
 }
 void cell_pair(void)
 {
@@ -72,7 +72,7 @@ void cell_pair(void)
     cell_fmt(0);
     cell_fmt(0);
 }
-void row_close(void)
+void battle_row_close(void)
 {
     row_prep(0, 0);
 }

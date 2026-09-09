@@ -7,7 +7,7 @@ CC      ?= gcc
 CFLAGS  ?= -O2 -std=gnu99 -Wall -I../include -Iinclude -I../port/include
 PY      = python3
 
-SRC := $(shell find src -name '*.c')
+SRC := $(shell find src -path 'src/device' -prune -o -name '*.c' -print)
 OBJ := $(SRC:%.c=build/%.o)
 
 all: deck
@@ -22,12 +22,20 @@ build/%.o: %.c ../tools/port_rowmap.py
 stubs: ../tools/port_stubs.py
 	$(PY) ../tools/port_stubs.py > include/stubs.h
 
-native: all
-	$(PY) ../tools/port_stubs.py 2>/dev/null > /tmp/stubs_now.c || true
-	gcc -O0 -c /tmp/stubs_now.c -o build/stubs.o 2>/dev/null || gcc -O0 -c platform/stubs.c -o build/stubs.o
-	$(CC) -O0 build/src/*/*.o build/*.o -o build/ff4-native 2>/dev/null || 	  $(CC) -O0 $$(find build -name '*.o') -o build/ff4-native
+native: all boot
+	bash tools/native_link.sh
+	$(CC) -O0 $$(find build -path '*src*' -name '*.o' ! -path '*src/device*') build/device.o build/platform/boot2.o build/main.o build/stubs.o -lSDL2 -o build/ff4-native
+
+boot: all
+	mkdir -p build/platform
+	$(CC) -O2 -Iinclude -I../include -I/usr/include/SDL2 -D_REENTRANT -c src/device/sdl_device.c -o build/device.o
+	$(CC) -O0 -Iinclude -I../include -c platform/boot.c -o build/platform/boot2.o
+	$(CC) -O0 -Iinclude -I../include -c platform/main.c -o build/main.o
 
 clean:
 	rm -rf build
 
-.PHONY: all deck native clean
+.PHONY: all deck native boot clean
+
+sdl: native
+

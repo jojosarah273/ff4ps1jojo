@@ -318,3 +318,28 @@ HEADLESS LEG 16 — NATIVE EXECUTABLE ACHIEVED (Avenue 1 core)
 - Byte-match 827 (32.9%). Phase A 2516/2516.
 All pushed.
 ================================================================================
+
+
+=== %s ===
+**Avenue 1 milestone: SDL device layer + native SDL binary.**
+- `port/src/device/sdl_device.c`: SDL2 window, simulated 0x800D0000 cell bank,
+  64x32 cell screen, hex-glyph renderer for 0x20xx codes, PS1 pad-bit keyboard
+  input, full window-API implementation (cell_state/peek/txt/cell/page/row/
+  poll/io/gate/sel...).
+- Link fix chain (all learned, codified in native_link.sh):
+  1. hand-written row_close collision -> battle_row_close;
+  2. void stubs crashed on value usage -> uint32_t stubs returning 0;
+  3. D_* externs got function stubs -> code-as-data segv -> vram-sim slot
+     pointers (+g_* -> data arrays);
+  4. workhorse bug: boot prints never emitted + SIGSEGV-handler-set before any
+     write + exit 1: the stub generator OVERRODE libc (fwrite/signal/fprintf)
+     because nm -u included platform objects -> restrict candidates to deck
+     objects only; versioned exports (fwrite@@GLIBC_2.2.5) needed @-stripping.
+  5. `step` (deck 800F6364) collides with glibc's weak step export - kept in
+     stubs (executable def wins).
+  6. build/src/device/sdl_device.o duplicate -> deck excludes src/device/.
+- `make -C port native` from clean: deck + boot + stubs + SDL -> build/ff4-native
+  (704KB, runs under SDL_VIDEODRIVER=dummy, exit 0, config_menu_run executes).
+- Boot: frames 0..60 of config_menu_run, io_just self-inject (auto-press after
+  many polls) keeps menus advancing headless; real SDL keys map to pad bits.
+- Docs refreshed: RESUME.md, port/docs/EXECUTE.md, README Phase B line.

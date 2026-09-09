@@ -1,888 +1,800 @@
-/* auto stubs (nm-driven, one shot) */
+/* auto stubs (nm-driven, one shot; deck-only unresolved). */
 #include <stdint.h>
 
-void D_800D1E05(void) { }
-void D_8019ED40(void) { }
-void D_8019ED44(void) { }
-void D_8019ED4C(void) { }
-void D_8019ED50(void) { }
-void D_8019ED54(void) { }
-void D_8019ED58(void) { }
-void D_8019ED60(void) { }
-void D_8019ED68(void) { }
-void D_8019EE60(void) { }
-void D_8019EF0C(void) { }
-void ability_row_a(void) { }
-void ability_screen_a(void) { }
-void ability_screen_b(void) { }
-void anim_cmd(void) { }
-void anim_cmd_g(void) { }
-void anim_cmd_pole(void) { }
-void anim_cmd_s(void) { }
-void anim_cmd_sd(void) { }
-void anim_cmd_w(void) { }
-void anim_cmd_w1(void) { }
-void arm_sub(void) { }
-void aux_row(void) { }
-void bank_rows(void) { }
-void bank_rows2(void) { }
-void battle_commands(void) { }
-void cancel_handler(void) { }
-void cast_alt2(void) { }
-void cast_alt_rows(void) { }
-void cast_cell(void) { }
-void cast_commit(void) { }
-void cast_row(void) { }
-void cast_tail(void) { }
-void cat_reset(void) { }
-void catalog(void) { }
-void catalog_base(void) { }
-void catalog_guard(void) { }
-void cd_row(void) { }
-void cell_dispatch(void) { }
-void cell_dispatch_cur(void) { }
-void cell_draw(void) { }
-void cell_draw2(void) { }
-void cell_draw_cur(void) { }
-void cell_fmt(void) { }
-void cell_fmt2(void) { }
-void cell_go(void) { }
-void cell_mix(void) { }
-void cell_pad(void) { }
-void cell_peek0(void) { }
-void cell_peek_cur(void) { }
-void cell_peek_v(void) { }
-void cell_poke(void) { }
-void cell_poke0(void) { }
-void cell_poke2(void) { }
-void cell_put(void) { }
-void cell_put_cur(void) { }
-void cell_refresh(void) { }
-void cell_state(void) { }
-void cell_state_of(void) { }
-void cell_step(void) { }
-void cell_step2(void) { }
-void cell_v(void) { }
-void clear_done(void) { }
-void clear_id(void) { }
-void cmd_subscreen(void) { }
-void cursor_arm(void) { }
-void cursor_row(void) { }
-void detail_close(void) { }
-void detail_pair(void) { }
-void detail_row(void) { }
-void device_pts_a(void) { }
-void device_pts_b(void) { }
-void done_row(void) { }
-void door_close(void) { }
-void draw_pad(void) { }
-void draw_pad_cur(void) { }
-void event_drive_cb1(void) { }
-void event_drive_cb2(void) { }
-void final_row(void) { }
-void func_80058554(void) { }
-void func_80059AF4(void) { }
-void func_8005A234(void) { }
-void func_8005F188(void) { }
-void func_8005FFEC(void) { }
-void func_80061860(void) { }
-void func_80061C1C(void) { }
-void func_80061C8C(void) { }
-void func_80062578(void) { }
-void func_80062B08(void) { }
-void func_8006508C(void) { }
-void func_800654CC(void) { }
-void func_80065534(void) { }
-void func_80065774(void) { }
-void func_80070174(void) { }
-void func_80071C2C(void) { }
-void func_80072068(void) { }
-void func_800723D0(void) { }
-void func_800723F0(void) { }
-void func_8007259C(void) { }
-void func_8007262C(void) { }
-void func_80072720(void) { }
-void func_8007275C(void) { }
-void func_800728AC(void) { }
-void func_80072CB0(void) { }
-void func_80073C98(void) { }
-void func_80073EB0(void) { }
-void func_8007411C(void) { }
-void func_800744A0(void) { }
-void func_80074B98(void) { }
-void func_80075FE0(void) { }
-void func_800760D0(void) { }
-void func_800761C8(void) { }
-void func_80091AB8(void) { }
-void func_80094588(void) { }
-void func_80094D14(void) { }
-void func_800953F4(void) { }
-void func_8009546C(void) { }
-void func_80095A4C(void) { }
-void func_80097438(void) { }
-void func_80097500(void) { }
-void func_80097D34(void) { }
-void func_80097D54(void) { }
-void func_800999A0(void) { }
-void func_800999C8(void) { }
-void func_8009A0A0(void) { }
-void func_8009B8E4(void) { }
-void func_800F3A70(void) { }
-void func_800F3AB4(void) { }
-void func_800F3B04(void) { }
-void func_800F3D64(void) { }
-void func_800F4064(void) { }
-void func_800F40E8(void) { }
-void func_800F41E8(void) { }
-void func_800F4264(void) { }
-void func_800F4280(void) { }
-void func_800F4370(void) { }
-void func_800F43A0(void) { }
-void func_800F4960(void) { }
-void func_800F4A7C(void) { }
-void func_800F4B1C(void) { }
-void func_800F4FAC(void) { }
-void func_800F5024(void) { }
-void func_800F52BC(void) { }
-void func_800F53FC(void) { }
-void func_800F5448(void) { }
-void func_800F54B8(void) { }
-void func_800F5520(void) { }
-void func_800F55C0(void) { }
-void func_800F56AC(void) { }
-void func_800F5804(void) { }
-void func_800F58BC(void) { }
-void func_800F59F4(void) { }
-void func_800F5B2C(void) { }
-void func_800F5B4C(void) { }
-void func_800F5BE8(void) { }
-void func_800F5C14(void) { }
-void func_800F5D24(void) { }
-void func_800F5E48(void) { }
-void func_800F5ECC(void) { }
-void func_800F5F20(void) { }
-void func_800F5F70(void) { }
-void func_800F6068(void) { }
-void func_800F60A8(void) { }
-void func_800F6104(void) { }
-void func_800F6130(void) { }
-void func_800F6180(void) { }
-void func_800F61E8(void) { }
-void func_800F6338(void) { }
-void func_800F6390(void) { }
-void func_800F63F8(void) { }
-void func_800F64A8(void) { }
-void func_800F64EC(void) { }
-void func_800F658C(void) { }
-void func_800F65C8(void) { }
-void func_800F65F0(void) { }
-void func_800F66D8(void) { }
-void func_800F6764(void) { }
-void func_800F67FC(void) { }
-void func_800F68A0(void) { }
-void func_800F6A78(void) { }
-void func_800F6AF4(void) { }
-void func_800F6B38(void) { }
-void func_800F6BE0(void) { }
-void func_800F6C68(void) { }
-void func_800F6CF4(void) { }
-void func_800F6D40(void) { }
-void func_800F6D70(void) { }
-void func_800F6DE8(void) { }
-void func_800F6E30(void) { }
-void func_800F6EA8(void) { }
-void func_800F6EDC(void) { }
-void func_800F70BC(void) { }
-void func_800F712C(void) { }
-void func_800F7170(void) { }
-void func_800F7248(void) { }
-void func_800F73E0(void) { }
-void func_800F7494(void) { }
-void func_800F7534(void) { }
-void func_800F756C(void) { }
-void func_800F76BC(void) { }
-void func_800F76E8(void) { }
-void func_800F7728(void) { }
-void func_800F7864(void) { }
-void func_800F78C4(void) { }
-void func_800F78E0(void) { }
-void func_800F7918(void) { }
-void func_800F7A68(void) { }
-void func_800F7AC8(void) { }
-void func_800F7B40(void) { }
-void func_800F7B7C(void) { }
-void func_800F7C6C(void) { }
-void func_800F7CC8(void) { }
-void func_800F7D0C(void) { }
-void func_800F7EE8(void) { }
-void func_800F7F48(void) { }
-void func_800F7FCC(void) { }
-void func_800F8058(void) { }
-void func_800F80D0(void) { }
-void func_800F81B0(void) { }
-void func_800F81E8(void) { }
-void func_800F8210(void) { }
-void func_800F8274(void) { }
-void func_800F82EC(void) { }
-void func_800F8378(void) { }
-void func_800F8674(void) { }
-void func_800F86F0(void) { }
-void func_800F87DC(void) { }
-void func_800F885C(void) { }
-void func_800F88E4(void) { }
-void func_800F8930(void) { }
-void func_800F8960(void) { }
-void func_800F89D4(void) { }
-void func_800F8A18(void) { }
-void func_800F8A48(void) { }
-void func_800F8A8C(void) { }
-void func_800F8CD4(void) { }
-void func_800F8D40(void) { }
-void func_800F8E50(void) { }
-void func_800F8F74(void) { }
-void func_800F8F94(void) { }
-void func_800F8FD8(void) { }
-void func_800F902C(void) { }
-void func_800F9140(void) { }
-void func_800F9200(void) { }
-void func_800F922C(void) { }
-void func_800F92D8(void) { }
-void func_800F9410(void) { }
-void func_800F94B8(void) { }
-void func_800F9538(void) { }
-void func_800F9690(void) { }
-void func_800F96E0(void) { }
-void func_800F9868(void) { }
-void func_800FA9B4(void) { }
-void func_800FC0DC(void) { }
-void func_800FCCBC(void) { }
-void func_800FD6B8(void) { }
-void func_800FD6E8(void) { }
-void func_800FDA9C(void) { }
-void func_800FDD28(void) { }
-void func_800FE634(void) { }
-void func_800FE6E4(void) { }
-void func_800FE7B0(void) { }
-void func_800FE870(void) { }
-void func_800FE8B4(void) { }
-void func_800FEF7C(void) { }
-void func_800FF024(void) { }
-void func_800FFB1C(void) { }
-void func_80100978(void) { }
-void func_80102414(void) { }
-void func_801026EC(void) { }
-void func_80102D68(void) { }
-void func_801031F0(void) { }
-void func_80103EAC(void) { }
-void func_801048EC(void) { }
-void func_80105230(void) { }
-void func_80106830(void) { }
-void func_80106960(void) { }
-void func_801082C8(void) { }
-void func_80108330(void) { }
-void func_80109378(void) { }
-void func_801096F0(void) { }
-void func_80109D68(void) { }
-void func_8010B010(void) { }
-void func_8010C1AC(void) { }
-void func_8010C368(void) { }
-void func_8010D2A0(void) { }
-void func_8010D4EC(void) { }
-void func_8010D9D4(void) { }
-void func_8010E0D0(void) { }
-void func_8010E128(void) { }
-void func_8011050C(void) { }
-void func_80110FA4(void) { }
-void func_801111C4(void) { }
-void func_80111ADC(void) { }
-void func_8011416C(void) { }
-void func_80115038(void) { }
-void func_80115D2C(void) { }
-void func_80116348(void) { }
-void func_80116720(void) { }
-void func_80117594(void) { }
-void func_80117DF8(void) { }
-void func_80117E64(void) { }
-void func_80117F40(void) { }
-void func_801183B0(void) { }
-void func_801183D8(void) { }
-void func_80119C7C(void) { }
-void func_8011B744(void) { }
-void func_8011E9EC(void) { }
-void func_8011EA14(void) { }
-void func_8011EA3C(void) { }
-void func_8011EA5C(void) { }
-void func_8011EA7C(void) { }
-void func_8011EADC(void) { }
-void func_8011EB3C(void) { }
-void func_8011EB5C(void) { }
-void func_8011EB9C(void) { }
-void func_8011EC44(void) { }
-void func_8011EF0C(void) { }
-void func_8011F300(void) { }
-void func_8011F67C(void) { }
-void func_8011F684(void) { }
-void func_8011F6A4(void) { }
-void func_8011F6AC(void) { }
-void func_8011F6D4(void) { }
-void func_8011F6FC(void) { }
-void func_8011F844(void) { }
-void func_8011F864(void) { }
-void func_8011F884(void) { }
-void func_8011F9C4(void) { }
-void func_8011FB74(void) { }
-void func_80120F94(void) { }
-void func_80121A74(void) { }
-void func_80121BE4(void) { }
-void func_80121D64(void) { }
-void func_80121E6C(void) { }
-void func_80121E94(void) { }
-void func_80121F14(void) { }
-void func_80121F64(void) { }
-void func_8012202C(void) { }
-void func_801220EC(void) { }
-void func_80122114(void) { }
-void func_8012214C(void) { }
-void func_8012219C(void) { }
-void func_801222A4(void) { }
-void func_801224D0(void) { }
-void func_801224F8(void) { }
-void func_80122518(void) { }
-void func_80122538(void) { }
-void func_8012281C(void) { }
-void func_80122844(void) { }
-void func_801228B4(void) { }
-void func_80122904(void) { }
-void func_80122CF0(void) { }
-void func_80123908(void) { }
-void func_80123AA8(void) { }
-void func_80123FB4(void) { }
-void func_801240A8(void) { }
-void func_801240D0(void) { }
-void func_80124130(void) { }
-void func_80124158(void) { }
-void func_80124C64(void) { }
-void func_80124EAC(void) { }
-void func_80125100(void) { }
-void func_801255C0(void) { }
-void func_80126330(void) { }
-void func_801263C8(void) { }
-void func_801263F0(void) { }
-void func_80126418(void) { }
-void func_80126458(void) { }
-void func_80126480(void) { }
-void func_801264C0(void) { }
-void func_801264E8(void) { }
-void func_80126528(void) { }
-void func_80126550(void) { }
-void func_80126590(void) { }
-void func_801266A0(void) { }
-void func_801266C8(void) { }
-void func_80126920(void) { }
-void func_80126B88(void) { }
-void func_80127F2C(void) { }
-void func_8012821C(void) { }
-void func_80129808(void) { }
-void func_80129838(void) { }
-void func_80129AAC(void) { }
-void func_80129AD4(void) { }
-void func_80129D2C(void) { }
-void func_80129E94(void) { }
-void func_8012AAC0(void) { }
-void func_8012B0B0(void) { }
-void func_8012B0D8(void) { }
-void func_8012B168(void) { }
-void func_8012C2F8(void) { }
-void func_8012CC4C(void) { }
-void func_8012D194(void) { }
-void func_8012D1D0(void) { }
-void func_8012DB6C(void) { }
-void func_8012DD30(void) { }
-void func_8012E160(void) { }
-void func_8012E1C0(void) { }
-void func_8012EBF8(void) { }
-void func_8012F9A0(void) { }
-void func_8012F9D0(void) { }
-void func_80130884(void) { }
-void func_80130A74(void) { }
-void func_80131294(void) { }
-void func_80132178(void) { }
-void func_801321B4(void) { }
-void func_80132310(void) { }
-void func_80134FBC(void) { }
-void func_80135298(void) { }
-void func_8013554C(void) { }
-void func_80135B54(void) { }
-void func_80135BE4(void) { }
-void func_80136014(void) { }
-void func_801360AC(void) { }
-void func_801360EC(void) { }
-void func_80136148(void) { }
-void func_801378B0(void) { }
-void func_80137B18(void) { }
-void func_8013836C(void) { }
-void func_80138664(void) { }
-void func_801386C8(void) { }
-void func_80138A34(void) { }
-void func_80138CB0(void) { }
-void func_801399EC(void) { }
-void func_8013A8C4(void) { }
-void func_8013AAA8(void) { }
-void func_8013AAF0(void) { }
-void func_8013B04C(void) { }
-void func_8013B0C4(void) { }
-void func_8013B160(void) { }
-void func_8013B1A8(void) { }
-void func_8013B1E8(void) { }
-void func_8013B228(void) { }
-void func_8013B764(void) { }
-void func_8013B7B8(void) { }
-void func_8013B804(void) { }
-void func_8013B92C(void) { }
-void func_8013C4B4(void) { }
-void func_8013C50C(void) { }
-void func_8013CB94(void) { }
-void func_8013D12C(void) { }
-void func_8013D598(void) { }
-void func_8013E588(void) { }
-void func_8013EF78(void) { }
-void func_80140310(void) { }
-void func_80140558(void) { }
-void func_801407EC(void) { }
-void func_8014086C(void) { }
-void func_80140894(void) { }
-void func_80140944(void) { }
-void func_8014096C(void) { }
-void func_80140994(void) { }
-void func_801409BC(void) { }
-void func_801409E4(void) { }
-void func_80141290(void) { }
-void func_80141C98(void) { }
-void func_80141DA0(void) { }
-void func_80141FC4(void) { }
-void func_80141FEC(void) { }
-void func_8014202C(void) { }
-void func_80142B4C(void) { }
-void func_80142DC0(void) { }
-void func_80142E34(void) { }
-void func_801431E8(void) { }
-void func_801442B4(void) { }
-void func_801444D4(void) { }
-void func_801449A0(void) { }
-void func_80145278(void) { }
-void func_801452C8(void) { }
-void func_80146954(void) { }
-void func_80146980(void) { }
-void func_80147000(void) { }
-void func_801470F8(void) { }
-void func_801473A4(void) { }
-void func_80147414(void) { }
-void func_80147434(void) { }
-void func_80148C6C(void) { }
-void func_80148C8C(void) { }
-void func_80148CAC(void) { }
-void func_80148D04(void) { }
-void func_80148DE8(void) { }
-void func_80148E60(void) { }
-void func_80148FA0(void) { }
-void func_801490AC(void) { }
-void func_80149374(void) { }
-void func_801495D4(void) { }
-void func_801495F4(void) { }
-void func_8014A154(void) { }
-void func_8014A488(void) { }
-void func_8014ADD4(void) { }
-void func_8014AEC4(void) { }
-void func_8014B248(void) { }
-void func_8014B5A8(void) { }
-void func_8014B98C(void) { }
-void func_8014B9FC(void) { }
-void func_8014BA34(void) { }
-void func_8014BAA4(void) { }
-void func_8014C96C(void) { }
-void func_8014C994(void) { }
-void func_8014C9CC(void) { }
-void func_8014D414(void) { }
-void func_8014D43C(void) { }
-void func_8014D4D4(void) { }
-void func_8014D500(void) { }
-void func_8014D528(void) { }
-void func_8014D708(void) { }
-void func_8014D728(void) { }
-void func_8014D96C(void) { }
-void func_8014E984(void) { }
-void func_8014E9C4(void) { }
-void func_8014EAE4(void) { }
-void func_8014FE84(void) { }
-void func_80150364(void) { }
-void func_80150400(void) { }
-void func_801506BC(void) { }
-void func_80150C38(void) { }
-void func_80151C0C(void) { }
-void func_8015236C(void) { }
-void func_8015240C(void) { }
-void func_8015254C(void) { }
-void func_80152908(void) { }
-void func_80152994(void) { }
-void func_80152A20(void) { }
-void func_80152AAC(void) { }
-void func_80152B38(void) { }
-void func_80152BC4(void) { }
-void func_80152C50(void) { }
-void func_80152CDC(void) { }
-void func_80153074(void) { }
-void func_80153098(void) { }
-void func_801530E0(void) { }
-void func_8015310C(void) { }
-void func_8015316C(void) { }
-void func_8015319C(void) { }
-void func_801531CC(void) { }
-void func_80153218(void) { }
-void func_80153374(void) { }
-void func_8015A284(void) { }
-void func_8015A344(void) { }
-void func_8015A56C(void) { }
-void func_8015ABEC(void) { }
-void func_8015B3F4(void) { }
-void func_8015C1B0(void) { }
-void func_80160A4C(void) { }
-void func_80161368(void) { }
-void func_80161C48(void) { }
-void func_8016694C(void) { }
-void func_80166E58(void) { }
-void func_80167074(void) { }
-void func_80167604(void) { }
-void func_8016762C(void) { }
-void func_80167914(void) { }
-void func_80167B48(void) { }
-void func_80168148(void) { }
-void func_8016838C(void) { }
-void func_80168474(void) { }
-void func_80168B94(void) { }
-void func_801690F8(void) { }
-void func_80169100(void) { }
-void func_80169128(void) { }
-void func_801691F0(void) { }
-void func_8016AA54(void) { }
-void func_8016B530(void) { }
-void func_8016B650(void) { }
-void func_8016B68C(void) { }
-void func_8016BD2C(void) { }
-void func_8016D028(void) { }
-void func_8016DD9C(void) { }
-void func_8016E0F8(void) { }
-void func_8016E490(void) { }
-void func_8016EA1C(void) { }
-void func_8016EA7C(void) { }
-void func_8016EA9C(void) { }
-void func_80170084(void) { }
-void func_80170198(void) { }
-void func_80174F0C(void) { }
-void func_8017668C(void) { }
-void func_80176F60(void) { }
-void func_80177178(void) { }
-void func_801771AC(void) { }
-void func_801773D4(void) { }
-void func_801773FC(void) { }
-void func_80177DAC(void) { }
-void func_80177DCC(void) { }
-void func_8017841C(void) { }
-void func_80178BB4(void) { }
-void func_80178C14(void) { }
-void func_80178D00(void) { }
-void func_801793F8(void) { }
-void func_80179670(void) { }
-void func_801798F0(void) { }
-void func_80179930(void) { }
-void func_8017D078(void) { }
-void func_8017E220(void) { }
-void func_8017E740(void) { }
-void func_8017EA90(void) { }
-void func_8017F8F8(void) { }
-void func_8017F9A8(void) { }
-void func_80181300(void) { }
-void func_801813C0(void) { }
-void func_80181498(void) { }
-void func_80181DA4(void) { }
-void func_801820F4(void) { }
-void func_8018226C(void) { }
-void func_80185764(void) { }
-void func_80187B00(void) { }
-void func_80187C20(void) { }
-void func_8018AC90(void) { }
-void func_8018F098(void) { }
-void func_8018F0C8(void) { }
-void func_80190004(void) { }
-void func_80190078(void) { }
-void func_80190088(void) { }
-void func_80191638(void) { }
-void func_80191838(void) { }
-void func_80192888(void) { }
-void func_801928E8(void) { }
-void func_801942FC(void) { }
-void func_80194394(void) { }
-void func_80194518(void) { }
-void func_80194640(void) { }
-void func_80194700(void) { }
-void func_801947B8(void) { }
-void func_80194988(void) { }
-void func_80195120(void) { }
-void func_80197208(void) { }
-void func_80197288(void) { }
-void g_anim_pause(void) { }
-void g_box(void) { }
-void g_box_null(void) { }
-void g_catalog(void) { }
-void g_cur_cell(void) { }
-void g_cursor_idx(void) { }
-void g_cursor_idx2(void) { }
-void g_cursor_out(void) { }
-void g_df_count(void) { }
-void g_df_delay(void) { }
-void g_df_hold(void) { }
-void g_df_phase(void) { }
-void g_held_cell(void) { }
-void g_io_just(void) { }
-void g_msg_cb(void) { }
-void g_pan1(void) { }
-void g_pan2(void) { }
-void g_panel_cell(void) { }
-void g_panel_flags(void) { }
-void g_panel_geometry(void) { }
-void g_panel_held(void) { }
-void g_panel_mask(void) { }
-void g_queue1(void) { }
-void g_queue2(void) { }
-void g_queue4(void) { }
-void g_queue8(void) { }
-void g_sel_cell(void) { }
-void g_sel_cell2(void) { }
-void g_sin_full(void) { }
-void g_sin_half(void) { }
-void g_sin_quad(void) { }
-void g_slt_b(void) { }
-void g_slt_l(void) { }
-void g_slt_r(void) { }
-void g_slt_t(void) { }
-void g_slt_tl(void) { }
-void g_slt_tr(void) { }
-void g_sprite_h(void) { }
-void g_sprite_w(void) { }
-void g_status_pane(void) { }
-void g_status_rec(void) { }
-void g_tan_hi(void) { }
-void g_ui_latch(void) { }
-void g_ui_state(void) { }
-void g_ui_state2(void) { }
-void g_ui_state3(void) { }
-void gate(void) { }
-void gate2(void) { }
-void gate_b(void) { }
-void gate_cur(void) { }
-void gate_p(void) { }
-void gate_row(void) { }
-void inp_held(void) { }
-void inp_just(void) { }
-void inp_press(void) { }
-void io_gate(void) { }
-void io_go(void) { }
-void io_just(void) { }
-void io_poll(void) { }
-void io_poll_cur(void) { }
-void io_press(void) { }
-void io_press_cur(void) { }
-void io_sel(void) { }
-void item_screen(void) { }
-void key_page(void) { }
-void key_page_cur(void) { }
-void key_poll(void) { }
-void l1_draw(void) { }
-void label(void) { }
-void label_cur(void) { }
-void label_row(void) { }
-void latch(void) { }
-void latch_cur(void) { }
-void line(void) { }
-void line_paint(void) { }
-void menu_screen_0(void) { }
-void menu_screen_1(void) { }
-void menu_screen_10(void) { }
-void menu_screen_11(void) { }
-void menu_screen_12(void) { }
-void menu_screen_13(void) { }
-void menu_screen_14(void) { }
-void menu_screen_15(void) { }
-void menu_screen_16(void) { }
-void menu_screen_17(void) { }
-void menu_screen_18(void) { }
-void menu_screen_19(void) { }
-void menu_screen_2(void) { }
-void menu_screen_20(void) { }
-void menu_screen_21(void) { }
-void menu_screen_22(void) { }
-void menu_screen_23(void) { }
-void menu_screen_24(void) { }
-void menu_screen_25(void) { }
-void menu_screen_26(void) { }
-void menu_screen_27(void) { }
-void menu_screen_28(void) { }
-void menu_screen_29(void) { }
-void menu_screen_3(void) { }
-void menu_screen_30(void) { }
-void menu_screen_31(void) { }
-void menu_screen_32(void) { }
-void menu_screen_33(void) { }
-void menu_screen_34(void) { }
-void menu_screen_35(void) { }
-void menu_screen_36(void) { }
-void menu_screen_37(void) { }
-void menu_screen_4(void) { }
-void menu_screen_5(void) { }
-void menu_screen_6(void) { }
-void menu_screen_7(void) { }
-void menu_screen_8(void) { }
-void menu_screen_9(void) { }
-void menu_screen_tramp(void) { }
-void mon_prep(void) { }
-void ok_row(void) { }
-void open2(void) { }
-void open_row(void) { }
-void open_row_cur(void) { }
-void opt_end(void) { }
-void opt_flat(void) { }
-void opt_next(void) { }
-void opt_row_a(void) { }
-void option_commit_flags(void) { }
-void option_pages(void) { }
-void option_screen_d(void) { }
-void page(void) { }
-void page_cur(void) { }
-void page_open(void) { }
-void page_open_cur(void) { }
-void page_paint(void) { }
-void page_paint2(void) { }
-void page_paint2_cur(void) { }
-void page_paint_cur(void) { }
-void paint_arrows(void) { }
-void panel_alpha(void) { }
-void party_end(void) { }
-void party_prep(void) { }
-void party_rows(void) { }
-void poll_go(void) { }
-void poll_go_cur(void) { }
-void poll_h(void) { }
-void poll_pair(void) { }
-void poll_pair_cur(void) { }
-void poll_spin(void) { }
-void poll_t(void) { }
-void poll_t_cur(void) { }
-void press(void) { }
-void refresh_cell(void) { }
-void repaint_loop(void) { }
-void rfn_row(void) { }
-void row_a(void) { }
-void row_act(void) { }
-void row_arm(void) { }
-void row_arm2(void) { }
-void row_arm2_cur(void) { }
-void row_arm_s(void) { }
-void row_arm_s2_cur(void) { }
-void row_arm_s_cur(void) { }
-void row_b(void) { }
-void row_c(void) { }
-void row_cell(void) { }
-void row_close2(void) { }
-void row_d(void) { }
-void row_done(void) { }
-void row_done2(void) { }
-void row_drive(void) { }
-void row_e(void) { }
-void row_flat(void) { }
-void row_helper(void) { }
-void row_info(void) { }
-void row_init_a(void) { }
-void row_loop2(void) { }
-void row_mix(void) { }
-void row_open(void) { }
-void row_open2(void) { }
-void row_open3(void) { }
-void row_open_big(void) { }
-void row_open_w(void) { }
-void row_open_w0(void) { }
-void row_pad(void) { }
-void row_page(void) { }
-void row_page_cur(void) { }
-void row_paint(void) { }
-void row_pair(void) { }
-void row_pair_a(void) { }
-void row_pair_b(void) { }
-void row_poke(void) { }
-void row_prep(void) { }
-void row_prep2(void) { }
-void row_prep2_close(void) { }
-void row_prep_a(void) { }
-void row_prep_close(void) { }
-void row_prep_cur(void) { }
-void row_ptr(void) { }
-void row_read(void) { }
-void row_read2(void) { }
-void row_read_cur(void) { }
-void row_scan(void) { }
-void row_scan_cur(void) { }
-void row_scan_v(void) { }
-void row_sel(void) { }
-void row_sel2(void) { }
-void row_sel2_cur(void) { }
-void row_sel_cell(void) { }
-void row_sel_cell2_cur(void) { }
-void row_sel_cell_cur(void) { }
-void row_set(void) { }
-void row_sync(void) { }
-void row_sync2(void) { }
-void row_sync2_cur(void) { }
-void row_tail(void) { }
-void row_tail2(void) { }
-void row_tick(void) { }
-void screens_commit(void) { }
-void sel(void) { }
-void sell_row(void) { }
-void sep(void) { }
-void sep_a(void) { }
-void sep_b(void) { }
-void set(void) { }
-void shop_close(void) { }
-void shop_feeder(void) { }
-void shop_row(void) { }
-void shop_row_a(void) { }
-void shop_row_b(void) { }
-void spell_commit_row(void) { }
-void spell_done(void) { }
-void spell_panel(void) { }
-void stat_pair(void) { }
-void stat_sync(void) { }
-void state_ok(void) { }
-void state_open(void) { }
-void step(void) { }
-void step2(void) { }
-void step_cell(void) { }
-void sub_row(void) { }
-void tail(void) { }
-void tail_cur(void) { }
-void txt_cell(void) { }
-void txt_cell_cur(void) { }
-void txt_draw(void) { }
-void txt_draw2(void) { }
-void txt_draw_cur(void) { }
-void txt_label(void) { }
-void txt_rows(void) { }
-void txt_set(void) { }
-void txt_set_cur(void) { }
-void wnd_clear(void) { }
-void wnd_gate(void) { }
-void wnd_held(void) { }
-void wnd_key(void) { }
-void wnd_open(void) { }
-void wnd_open_cur(void) { }
-void wnd_page(void) { }
-void wnd_poll(void) { }
-void wnd_read(void) { }
+static uint32_t g_vram_sim[4096];
+static uint32_t g_slots[64];
+
+uint32_t *D_800D1E05 = g_slots;
+uint32_t *D_80199230 = g_slots;
+uint32_t *D_8019A12C = g_slots;
+uint32_t *D_8019ED30 = g_slots;
+uint32_t *D_8019ED40 = g_slots;
+uint32_t *D_8019ED44 = g_slots;
+uint32_t *D_8019ED48 = g_slots;
+uint32_t *D_8019ED4C = g_slots;
+uint32_t *D_8019ED50 = g_slots;
+uint32_t *D_8019ED54 = g_slots;
+uint32_t *D_8019ED58 = g_slots;
+uint32_t *D_8019ED60 = g_slots;
+uint32_t *D_8019ED68 = g_slots;
+uint32_t *D_8019EE60 = g_slots;
+uint32_t *D_8019EF0C = g_slots;
+uint32_t *D_8019FFE8 = g_slots;
+
+__attribute__((constructor)) static void init_slots(void)
+{ int i; for (i = 0; i < 64; i++)
+    g_slots[i] = (uint32_t)(uintptr_t)g_vram_sim; }
+
+uint32_t ability_row_a() { return 0; }
+uint32_t ability_screen_a() { return 0; }
+uint32_t ability_screen_b() { return 0; }
+uint32_t anim_cmd() { return 0; }
+uint32_t anim_cmd_g() { return 0; }
+uint32_t anim_cmd_pole() { return 0; }
+uint32_t anim_cmd_s() { return 0; }
+uint32_t anim_cmd_sd() { return 0; }
+uint32_t anim_cmd_w() { return 0; }
+uint32_t anim_cmd_w1() { return 0; }
+uint32_t arm_sub() { return 0; }
+uint32_t aux_row() { return 0; }
+uint32_t bank_rows() { return 0; }
+uint32_t bank_rows2() { return 0; }
+uint32_t battle_commands() { return 0; }
+uint32_t cancel_handler() { return 0; }
+uint32_t cast_alt2() { return 0; }
+uint32_t cast_alt_rows() { return 0; }
+uint32_t cast_cell() { return 0; }
+uint32_t cast_commit() { return 0; }
+uint32_t cast_row() { return 0; }
+uint32_t cast_tail() { return 0; }
+uint32_t cat_reset() { return 0; }
+uint32_t catalog() { return 0; }
+uint32_t catalog_base() { return 0; }
+uint32_t catalog_guard() { return 0; }
+uint32_t cd_row() { return 0; }
+uint32_t cell_dispatch() { return 0; }
+uint32_t cell_dispatch_cur() { return 0; }
+uint32_t cell_draw2() { return 0; }
+uint32_t cell_fmt() { return 0; }
+uint32_t cell_fmt2() { return 0; }
+uint32_t cell_go() { return 0; }
+uint32_t cell_mix() { return 0; }
+uint32_t cell_pad() { return 0; }
+uint32_t cell_peek0() { return 0; }
+uint32_t cell_peek_cur() { return 0; }
+uint32_t cell_peek_v() { return 0; }
+uint32_t cell_poke() { return 0; }
+uint32_t cell_poke0() { return 0; }
+uint32_t cell_poke2() { return 0; }
+uint32_t cell_refresh() { return 0; }
+uint32_t cell_step2() { return 0; }
+uint32_t cell_v() { return 0; }
+uint32_t clear_done() { return 0; }
+uint32_t clear_id() { return 0; }
+uint32_t cmd_subscreen() { return 0; }
+uint32_t cursor_arm() { return 0; }
+uint32_t cursor_row() { return 0; }
+uint32_t detail_close() { return 0; }
+uint32_t detail_pair() { return 0; }
+uint32_t detail_row() { return 0; }
+uint32_t device_pts_a() { return 0; }
+uint32_t device_pts_b() { return 0; }
+uint32_t done_row() { return 0; }
+uint32_t door_close() { return 0; }
+uint32_t draw_pad_cur() { return 0; }
+uint32_t event_drive_cb1() { return 0; }
+uint32_t event_drive_cb2() { return 0; }
+uint32_t final_row() { return 0; }
+uint32_t func_80058554() { return 0; }
+uint32_t func_80059AF4() { return 0; }
+uint32_t func_8005A234() { return 0; }
+uint32_t func_8005F188() { return 0; }
+uint32_t func_8005FFEC() { return 0; }
+uint32_t func_80061860() { return 0; }
+uint32_t func_80061C1C() { return 0; }
+uint32_t func_80061C8C() { return 0; }
+uint32_t func_80062578() { return 0; }
+uint32_t func_80062B08() { return 0; }
+uint32_t func_8006508C() { return 0; }
+uint32_t func_800654CC() { return 0; }
+uint32_t func_80065534() { return 0; }
+uint32_t func_80065774() { return 0; }
+uint32_t func_80070174() { return 0; }
+uint32_t func_80071C2C() { return 0; }
+uint32_t func_80072068() { return 0; }
+uint32_t func_800723D0() { return 0; }
+uint32_t func_800723F0() { return 0; }
+uint32_t func_8007259C() { return 0; }
+uint32_t func_8007262C() { return 0; }
+uint32_t func_80072720() { return 0; }
+uint32_t func_8007275C() { return 0; }
+uint32_t func_800728AC() { return 0; }
+uint32_t func_80072CB0() { return 0; }
+uint32_t func_80073C98() { return 0; }
+uint32_t func_80073EB0() { return 0; }
+uint32_t func_8007411C() { return 0; }
+uint32_t func_800744A0() { return 0; }
+uint32_t func_80074B50() { return 0; }
+uint32_t func_80074B98() { return 0; }
+uint32_t func_80075FE0() { return 0; }
+uint32_t func_800760D0() { return 0; }
+uint32_t func_800761C8() { return 0; }
+uint32_t func_800888C0() { return 0; }
+uint32_t func_8008CB5C() { return 0; }
+uint32_t func_80091AB8() { return 0; }
+uint32_t func_80094588() { return 0; }
+uint32_t func_80094D14() { return 0; }
+uint32_t func_800953F4() { return 0; }
+uint32_t func_8009546C() { return 0; }
+uint32_t func_80095A4C() { return 0; }
+uint32_t func_80097438() { return 0; }
+uint32_t func_80097500() { return 0; }
+uint32_t func_80097D34() { return 0; }
+uint32_t func_80097D54() { return 0; }
+uint32_t func_800996A8() { return 0; }
+uint32_t func_800999A0() { return 0; }
+uint32_t func_800999C8() { return 0; }
+uint32_t func_8009A018() { return 0; }
+uint32_t func_8009A0A0() { return 0; }
+uint32_t func_8009A0E0() { return 0; }
+uint32_t func_8009B8E4() { return 0; }
+uint32_t func_800F3A70() { return 0; }
+uint32_t func_800F3AB4() { return 0; }
+uint32_t func_800F3B04() { return 0; }
+uint32_t func_800F3D64() { return 0; }
+uint32_t func_800F4064() { return 0; }
+uint32_t func_800F40E8() { return 0; }
+uint32_t func_800F41E8() { return 0; }
+uint32_t func_800F4264() { return 0; }
+uint32_t func_800F4280() { return 0; }
+uint32_t func_800F4370() { return 0; }
+uint32_t func_800F43A0() { return 0; }
+uint32_t func_800F4960() { return 0; }
+uint32_t func_800F4A7C() { return 0; }
+uint32_t func_800F4B1C() { return 0; }
+uint32_t func_800F4FAC() { return 0; }
+uint32_t func_800F5024() { return 0; }
+uint32_t func_800F52BC() { return 0; }
+uint32_t func_800F53FC() { return 0; }
+uint32_t func_800F5448() { return 0; }
+uint32_t func_800F54B8() { return 0; }
+uint32_t func_800F5520() { return 0; }
+uint32_t func_800F55C0() { return 0; }
+uint32_t func_800F56AC() { return 0; }
+uint32_t func_800F5804() { return 0; }
+uint32_t func_800F58BC() { return 0; }
+uint32_t func_800F59F4() { return 0; }
+uint32_t func_800F5B2C() { return 0; }
+uint32_t func_800F5B4C() { return 0; }
+uint32_t func_800F5BE8() { return 0; }
+uint32_t func_800F5C14() { return 0; }
+uint32_t func_800F5D24() { return 0; }
+uint32_t func_800F5DD4() { return 0; }
+uint32_t func_800F5E48() { return 0; }
+uint32_t func_800F5ECC() { return 0; }
+uint32_t func_800F5F20() { return 0; }
+uint32_t func_800F5F70() { return 0; }
+uint32_t func_800F6068() { return 0; }
+uint32_t func_800F60A8() { return 0; }
+uint32_t func_800F6104() { return 0; }
+uint32_t func_800F6130() { return 0; }
+uint32_t func_800F6180() { return 0; }
+uint32_t func_800F61E8() { return 0; }
+uint32_t func_800F62F0() { return 0; }
+uint32_t func_800F6338() { return 0; }
+uint32_t func_800F6390() { return 0; }
+uint32_t func_800F63F8() { return 0; }
+uint32_t func_800F64A8() { return 0; }
+uint32_t func_800F64EC() { return 0; }
+uint32_t func_800F658C() { return 0; }
+uint32_t func_800F65C8() { return 0; }
+uint32_t func_800F65F0() { return 0; }
+uint32_t func_800F66D8() { return 0; }
+uint32_t func_800F6764() { return 0; }
+uint32_t func_800F67FC() { return 0; }
+uint32_t func_800F68A0() { return 0; }
+uint32_t func_800F6A78() { return 0; }
+uint32_t func_800F6AF4() { return 0; }
+uint32_t func_800F6B38() { return 0; }
+uint32_t func_800F6BE0() { return 0; }
+uint32_t func_800F6C68() { return 0; }
+uint32_t func_800F6CF4() { return 0; }
+uint32_t func_800F6D40() { return 0; }
+uint32_t func_800F6D70() { return 0; }
+uint32_t func_800F6DE8() { return 0; }
+uint32_t func_800F6E30() { return 0; }
+uint32_t func_800F6EA8() { return 0; }
+uint32_t func_800F6EDC() { return 0; }
+uint32_t func_800F70BC() { return 0; }
+uint32_t func_800F712C() { return 0; }
+uint32_t func_800F7170() { return 0; }
+uint32_t func_800F7248() { return 0; }
+uint32_t func_800F73E0() { return 0; }
+uint32_t func_800F7494() { return 0; }
+uint32_t func_800F7534() { return 0; }
+uint32_t func_800F756C() { return 0; }
+uint32_t func_800F76BC() { return 0; }
+uint32_t func_800F76E8() { return 0; }
+uint32_t func_800F7728() { return 0; }
+uint32_t func_800F77CC() { return 0; }
+uint32_t func_800F7864() { return 0; }
+uint32_t func_800F78C4() { return 0; }
+uint32_t func_800F78E0() { return 0; }
+uint32_t func_800F7918() { return 0; }
+uint32_t func_800F7A68() { return 0; }
+uint32_t func_800F7AC8() { return 0; }
+uint32_t func_800F7B40() { return 0; }
+uint32_t func_800F7B7C() { return 0; }
+uint32_t func_800F7C6C() { return 0; }
+uint32_t func_800F7CC8() { return 0; }
+uint32_t func_800F7D0C() { return 0; }
+uint32_t func_800F7EE8() { return 0; }
+uint32_t func_800F7F48() { return 0; }
+uint32_t func_800F7FCC() { return 0; }
+uint32_t func_800F8058() { return 0; }
+uint32_t func_800F80D0() { return 0; }
+uint32_t func_800F81B0() { return 0; }
+uint32_t func_800F81E8() { return 0; }
+uint32_t func_800F8210() { return 0; }
+uint32_t func_800F8274() { return 0; }
+uint32_t func_800F82EC() { return 0; }
+uint32_t func_800F8378() { return 0; }
+uint32_t func_800F8674() { return 0; }
+uint32_t func_800F86F0() { return 0; }
+uint32_t func_800F87DC() { return 0; }
+uint32_t func_800F885C() { return 0; }
+uint32_t func_800F88E4() { return 0; }
+uint32_t func_800F8930() { return 0; }
+uint32_t func_800F8960() { return 0; }
+uint32_t func_800F89D4() { return 0; }
+uint32_t func_800F8A18() { return 0; }
+uint32_t func_800F8A48() { return 0; }
+uint32_t func_800F8A8C() { return 0; }
+uint32_t func_800F8CD4() { return 0; }
+uint32_t func_800F8D40() { return 0; }
+uint32_t func_800F8E50() { return 0; }
+uint32_t func_800F8F74() { return 0; }
+uint32_t func_800F8F94() { return 0; }
+uint32_t func_800F8FD8() { return 0; }
+uint32_t func_800F902C() { return 0; }
+uint32_t func_800F9140() { return 0; }
+uint32_t func_800F9200() { return 0; }
+uint32_t func_800F922C() { return 0; }
+uint32_t func_800F92D8() { return 0; }
+uint32_t func_800F9410() { return 0; }
+uint32_t func_800F94B8() { return 0; }
+uint32_t func_800F9538() { return 0; }
+uint32_t func_800F9690() { return 0; }
+uint32_t func_800F96E0() { return 0; }
+uint32_t func_800F9868() { return 0; }
+uint32_t func_800F9BD0() { return 0; }
+uint32_t func_800FAA04() { return 0; }
+uint32_t func_800FAD48() { return 0; }
+uint32_t func_800FB09C() { return 0; }
+uint32_t func_800FB160() { return 0; }
+uint32_t func_800FB224() { return 0; }
+uint32_t func_800FB3F8() { return 0; }
+uint32_t func_800FBE44() { return 0; }
+uint32_t func_800FBF50() { return 0; }
+uint32_t func_800FC07C() { return 0; }
+uint32_t func_800FC0DC() { return 0; }
+uint32_t func_800FC1CC() { return 0; }
+uint32_t func_800FC548() { return 0; }
+uint32_t func_800FC5A8() { return 0; }
+uint32_t func_800FC5D8() { return 0; }
+uint32_t func_800FCA08() { return 0; }
+uint32_t func_800FCC84() { return 0; }
+uint32_t func_800FCCBC() { return 0; }
+uint32_t func_800FD37C() { return 0; }
+uint32_t func_800FD404() { return 0; }
+uint32_t func_800FD494() { return 0; }
+uint32_t func_800FD6B8() { return 0; }
+uint32_t func_800FD6E8() { return 0; }
+uint32_t func_800FD718() { return 0; }
+uint32_t func_800FD804() { return 0; }
+uint32_t func_800FD85C() { return 0; }
+uint32_t func_800FD914() { return 0; }
+uint32_t func_800FD9FC() { return 0; }
+uint32_t func_800FDA4C() { return 0; }
+uint32_t func_800FDB5C() { return 0; }
+uint32_t func_800FE5D4() { return 0; }
+uint32_t func_800FE634() { return 0; }
+uint32_t func_800FE6E4() { return 0; }
+uint32_t func_800FE778() { return 0; }
+uint32_t func_800FE7B0() { return 0; }
+uint32_t func_800FE7D8() { return 0; }
+uint32_t func_800FE870() { return 0; }
+uint32_t func_800FE8B4() { return 0; }
+uint32_t func_800FEB10() { return 0; }
+uint32_t func_800FEC74() { return 0; }
+uint32_t func_800FED3C() { return 0; }
+uint32_t func_800FEF7C() { return 0; }
+uint32_t func_800FF024() { return 0; }
+uint32_t func_800FF0AC() { return 0; }
+uint32_t func_800FFB5C() { return 0; }
+uint32_t func_800FFCAC() { return 0; }
+uint32_t func_801031F0() { return 0; }
+uint32_t func_80105230() { return 0; }
+uint32_t func_80109D68() { return 0; }
+uint32_t func_8010B010() { return 0; }
+uint32_t func_801111C4() { return 0; }
+uint32_t func_8011416C() { return 0; }
+uint32_t func_80115D2C() { return 0; }
+uint32_t func_80116720() { return 0; }
+uint32_t func_8011EADC() { return 0; }
+uint32_t func_8011EB1C() { return 0; }
+uint32_t func_8011EB5C() { return 0; }
+uint32_t func_8011EB7C() { return 0; }
+uint32_t func_8011EB9C() { return 0; }
+uint32_t func_8011EF0C() { return 0; }
+uint32_t func_8011F300() { return 0; }
+uint32_t func_8011F67C() { return 0; }
+uint32_t func_8011F684() { return 0; }
+uint32_t func_8011F6A4() { return 0; }
+uint32_t func_8011F844() { return 0; }
+uint32_t func_8011F864() { return 0; }
+uint32_t func_8011F9C4() { return 0; }
+uint32_t func_8011FB74() { return 0; }
+uint32_t func_80120F94() { return 0; }
+uint32_t func_80121A74() { return 0; }
+uint32_t func_80121BE4() { return 0; }
+uint32_t func_80121D64() { return 0; }
+uint32_t func_80121E6C() { return 0; }
+uint32_t func_80121E94() { return 0; }
+uint32_t func_80121F64() { return 0; }
+uint32_t func_8012202C() { return 0; }
+uint32_t func_801220EC() { return 0; }
+uint32_t func_8012214C() { return 0; }
+uint32_t func_801222A4() { return 0; }
+uint32_t func_801224F8() { return 0; }
+uint32_t func_80122518() { return 0; }
+uint32_t func_80122538() { return 0; }
+uint32_t func_8012281C() { return 0; }
+uint32_t func_80122844() { return 0; }
+uint32_t func_801228B4() { return 0; }
+uint32_t func_80123AA8() { return 0; }
+uint32_t func_80123FB4() { return 0; }
+uint32_t func_80124EAC() { return 0; }
+uint32_t func_80126330() { return 0; }
+uint32_t func_801263C8() { return 0; }
+uint32_t func_801263F0() { return 0; }
+uint32_t func_80126458() { return 0; }
+uint32_t func_801264C0() { return 0; }
+uint32_t func_80126528() { return 0; }
+uint32_t func_801266A0() { return 0; }
+uint32_t func_801266C8() { return 0; }
+uint32_t func_80127F2C() { return 0; }
+uint32_t func_80129808() { return 0; }
+uint32_t func_80129AD4() { return 0; }
+uint32_t func_8012AAC0() { return 0; }
+uint32_t func_8012C2F8() { return 0; }
+uint32_t func_8012CEA8() { return 0; }
+uint32_t func_8012EBF8() { return 0; }
+uint32_t func_8012F9A0() { return 0; }
+uint32_t func_8012F9D0() { return 0; }
+uint32_t func_80131294() { return 0; }
+uint32_t func_80132178() { return 0; }
+uint32_t func_80132310() { return 0; }
+uint32_t func_80134FBC() { return 0; }
+uint32_t func_80135298() { return 0; }
+uint32_t func_8013554C() { return 0; }
+uint32_t func_80135B54() { return 0; }
+uint32_t func_80135EE4() { return 0; }
+uint32_t func_80136014() { return 0; }
+uint32_t func_801360AC() { return 0; }
+uint32_t func_801360EC() { return 0; }
+uint32_t func_80136148() { return 0; }
+uint32_t func_8013836C() { return 0; }
+uint32_t func_80138664() { return 0; }
+uint32_t func_801386C8() { return 0; }
+uint32_t func_801399EC() { return 0; }
+uint32_t func_8013A8C4() { return 0; }
+uint32_t func_8013AAF0() { return 0; }
+uint32_t func_8013B04C() { return 0; }
+uint32_t func_8013B0C4() { return 0; }
+uint32_t func_8013B764() { return 0; }
+uint32_t func_8013B7B8() { return 0; }
+uint32_t func_8013C50C() { return 0; }
+uint32_t func_8013D12C() { return 0; }
+uint32_t func_8013E588() { return 0; }
+uint32_t func_8013EF78() { return 0; }
+uint32_t func_80140558() { return 0; }
+uint32_t func_80141DA0() { return 0; }
+uint32_t func_80141F84() { return 0; }
+uint32_t func_80141FC4() { return 0; }
+uint32_t func_80142B4C() { return 0; }
+uint32_t func_801442B4() { return 0; }
+uint32_t func_80147000() { return 0; }
+uint32_t func_801473A4() { return 0; }
+uint32_t func_80147414() { return 0; }
+uint32_t func_80148C6C() { return 0; }
+uint32_t func_80148C8C() { return 0; }
+uint32_t func_80148DE8() { return 0; }
+uint32_t func_80148E60() { return 0; }
+uint32_t func_80148FA0() { return 0; }
+uint32_t func_801490AC() { return 0; }
+uint32_t func_80149374() { return 0; }
+uint32_t func_801495D4() { return 0; }
+uint32_t func_801495F4() { return 0; }
+uint32_t func_8014B248() { return 0; }
+uint32_t func_8014B914() { return 0; }
+uint32_t func_8014B93C() { return 0; }
+uint32_t func_8014D43C() { return 0; }
+uint32_t func_8014D500() { return 0; }
+uint32_t func_8014D528() { return 0; }
+uint32_t func_8014D708() { return 0; }
+uint32_t func_8014D728() { return 0; }
+uint32_t func_8014D96C() { return 0; }
+uint32_t func_8014E9C4() { return 0; }
+uint32_t func_8014FE84() { return 0; }
+uint32_t func_801506BC() { return 0; }
+uint32_t func_80150C38() { return 0; }
+uint32_t func_801531CC() { return 0; }
+uint32_t func_80153218() { return 0; }
+uint32_t func_8015A284() { return 0; }
+uint32_t func_80161368() { return 0; }
+uint32_t func_80167B48() { return 0; }
+uint32_t func_80169100() { return 0; }
+uint32_t func_80169128() { return 0; }
+uint32_t func_8016DD9C() { return 0; }
+uint32_t func_8016E0F8() { return 0; }
+uint32_t func_8016E490() { return 0; }
+uint32_t func_8016E99C() { return 0; }
+uint32_t func_8016E9BC() { return 0; }
+uint32_t func_8016E9DC() { return 0; }
+uint32_t func_8016EA1C() { return 0; }
+uint32_t func_8016EA7C() { return 0; }
+uint32_t func_8016EA9C() { return 0; }
+uint32_t func_8017668C() { return 0; }
+uint32_t func_80177178() { return 0; }
+uint32_t func_801773FC() { return 0; }
+uint32_t func_801774B4() { return 0; }
+uint32_t func_80177790() { return 0; }
+uint32_t func_8017794C() { return 0; }
+uint32_t func_80177DAC() { return 0; }
+uint32_t func_80177DCC() { return 0; }
+uint32_t func_8017841C() { return 0; }
+uint32_t func_80178BB4() { return 0; }
+uint32_t func_80178C14() { return 0; }
+uint32_t func_80178D00() { return 0; }
+uint32_t func_801792D0() { return 0; }
+uint32_t func_8017D078() { return 0; }
+uint32_t func_8017D7D8() { return 0; }
+uint32_t func_8017D898() { return 0; }
+uint32_t func_8017DD08() { return 0; }
+uint32_t func_8017E220() { return 0; }
+uint32_t func_8017E740() { return 0; }
+uint32_t func_8017EA90() { return 0; }
+uint32_t func_8017F8F8() { return 0; }
+uint32_t func_8017F9A8() { return 0; }
+uint32_t func_8017F9FC() { return 0; }
+uint32_t func_801808D8() { return 0; }
+uint32_t func_801817EC() { return 0; }
+uint32_t func_801824D8() { return 0; }
+uint32_t func_80182DDC() { return 0; }
+uint32_t func_80182E18() { return 0; }
+uint32_t func_80184AF8() { return 0; }
+uint32_t func_80185764() { return 0; }
+uint32_t func_801875AC() { return 0; }
+uint32_t func_8018767C() { return 0; }
+uint32_t func_80187C20() { return 0; }
+uint32_t func_80187CD0() { return 0; }
+uint32_t func_801881AC() { return 0; }
+uint32_t func_80188240() { return 0; }
+uint32_t func_80188AE8() { return 0; }
+uint32_t func_80188C58() { return 0; }
+uint32_t func_801890E4() { return 0; }
+uint32_t func_80189B8C() { return 0; }
+uint32_t func_8018A75C() { return 0; }
+uint32_t func_8018AAC4() { return 0; }
+uint32_t func_8018AB08() { return 0; }
+uint32_t func_8018ABE8() { return 0; }
+uint32_t func_8018AC90() { return 0; }
+uint32_t func_8018ACF8() { return 0; }
+uint32_t func_8018B16C() { return 0; }
+uint32_t func_8018B1C8() { return 0; }
+uint32_t func_8018B838() { return 0; }
+uint32_t func_8018B9A8() { return 0; }
+uint32_t func_8018C3E8() { return 0; }
+uint32_t func_8018C608() { return 0; }
+uint32_t func_8018C9B8() { return 0; }
+uint32_t func_8018CA18() { return 0; }
+uint32_t func_8018CB88() { return 0; }
+uint32_t func_8018DCD8() { return 0; }
+uint32_t func_8018DFA0() { return 0; }
+uint32_t func_8018DFC4() { return 0; }
+uint32_t func_8018DFE8() { return 0; }
+uint32_t func_8018E0C8() { return 0; }
+uint32_t func_8018E408() { return 0; }
+uint32_t func_8018E448() { return 0; }
+uint32_t func_8018E4B8() { return 0; }
+uint32_t func_8018E4E8() { return 0; }
+uint32_t func_8018F078() { return 0; }
+uint32_t func_8018F098() { return 0; }
+uint32_t func_8018F0C8() { return 0; }
+uint32_t func_8018F0E8() { return 0; }
+uint32_t func_8018F538() { return 0; }
+uint32_t func_8018F688() { return 0; }
+uint32_t func_8018F9E0() { return 0; }
+uint32_t func_80190004() { return 0; }
+uint32_t func_80190078() { return 0; }
+uint32_t func_80190088() { return 0; }
+uint32_t func_801905FC() { return 0; }
+uint32_t func_80190B44() { return 0; }
+uint32_t func_80190FD8() { return 0; }
+uint32_t func_80191620() { return 0; }
+uint32_t func_80191638() { return 0; }
+uint32_t func_801917D8() { return 0; }
+uint32_t func_80191818() { return 0; }
+uint32_t func_80191838() { return 0; }
+uint32_t func_80191858() { return 0; }
+uint32_t func_80191C58() { return 0; }
+uint32_t func_801920F0() { return 0; }
+uint32_t func_80192858() { return 0; }
+uint32_t func_80192888() { return 0; }
+uint32_t func_801928A8() { return 0; }
+uint32_t func_801928C8() { return 0; }
+uint32_t func_80192BEC() { return 0; }
+uint32_t func_80193194() { return 0; }
+uint32_t func_801931B8() { return 0; }
+uint32_t func_801931C8() { return 0; }
+uint32_t func_801932E8() { return 0; }
+uint32_t func_80193C40() { return 0; }
+uint32_t func_801942FC() { return 0; }
+uint32_t func_80194394() { return 0; }
+uint32_t func_801943FC() { return 0; }
+uint32_t func_80194518() { return 0; }
+uint32_t func_80194640() { return 0; }
+uint32_t func_80194988() { return 0; }
+uint32_t func_801949F8() { return 0; }
+uint32_t func_80195120() { return 0; }
+uint32_t func_80196074() { return 0; }
+uint32_t func_801960BC() { return 0; }
+uint32_t func_801963C0() { return 0; }
+uint32_t func_80196898() { return 0; }
+uint32_t func_801968CC() { return 0; }
+uint32_t func_801970A8() { return 0; }
+uint32_t func_80197168() { return 0; }
+uint32_t func_801971A8() { return 0; }
+uint32_t func_801971E8() { return 0; }
+uint32_t func_80197208() { return 0; }
+uint32_t func_80197248() { return 0; }
+uint32_t func_80197288() { return 0; }
+uint32_t func_801972B8() { return 0; }
+uint32_t func_801972D8() { return 0; }
+uint32_t func_80197308() { return 0; }
+uint32_t func_80197338() { return 0; }
+uint32_t func_80197358() { return 0; }
+uint32_t func_80197378() { return 0; }
+uint32_t func_80197398() { return 0; }
+uint32_t func_801973B8() { return 0; }
+uint32_t func_801975E8() { return 0; }
+uint32_t func_80197608() { return 0; }
+uint32_t func_80197630() { return 0; }
+uint32_t func_80197648() { return 0; }
+uint32_t func_80197668() { return 0; }
+uint32_t func_80197678() { return 0; }
+uint32_t func_80197688() { return 0; }
+uint32_t func_801976A8() { return 0; }
+uint32_t func_801976B8() { return 0; }
+uint32_t func_801976D8() { return 0; }
+uint32_t func_801976E8() { return 0; }
+uint32_t func_801976F8() { return 0; }
+uint32_t func_80197798() { return 0; }
+uint32_t func_80197A68() { return 0; }
+uint32_t func_80197FB8() { return 0; }
+uint32_t func_80198058() { return 0; }
+uint32_t func_801982E8() { return 0; }
+uint32_t func_80198990() { return 0; }
+uint32_t g_anim_pause[4096];
+uint32_t g_box[4096];
+uint32_t g_box_null[4096];
+uint32_t g_catalog[4096];
+uint32_t g_cur_cell[4096];
+uint32_t g_cursor_idx[4096];
+uint32_t g_cursor_idx2[4096];
+uint32_t g_cursor_out[4096];
+uint32_t g_df_count[4096];
+uint32_t g_df_delay[4096];
+uint32_t g_df_hold[4096];
+uint32_t g_df_phase[4096];
+uint32_t g_held_cell[4096];
+uint32_t g_io_just[4096];
+uint32_t g_msg_cb[4096];
+uint32_t g_pan1[4096];
+uint32_t g_pan2[4096];
+uint32_t g_panel_cell[4096];
+uint32_t g_panel_flags[4096];
+uint32_t g_panel_geometry[4096];
+uint32_t g_panel_held[4096];
+uint32_t g_panel_mask[4096];
+uint32_t g_queue1[4096];
+uint32_t g_queue2[4096];
+uint32_t g_queue4[4096];
+uint32_t g_queue8[4096];
+uint32_t g_sel_cell[4096];
+uint32_t g_sel_cell2[4096];
+uint32_t g_sin_full[4096];
+uint32_t g_sin_half[4096];
+uint32_t g_sin_quad[4096];
+uint32_t g_slt_b[4096];
+uint32_t g_slt_l[4096];
+uint32_t g_slt_r[4096];
+uint32_t g_slt_t[4096];
+uint32_t g_slt_tl[4096];
+uint32_t g_slt_tr[4096];
+uint32_t g_sprite_h[4096];
+uint32_t g_sprite_w[4096];
+uint32_t g_status_pane[4096];
+uint32_t g_status_rec[4096];
+uint32_t g_tan_hi[4096];
+uint32_t g_ui_latch[4096];
+uint32_t g_ui_state[4096];
+uint32_t g_ui_state2[4096];
+uint32_t g_ui_state3[4096];
+uint32_t gate2() { return 0; }
+uint32_t gate_b() { return 0; }
+uint32_t gate_cur() { return 0; }
+uint32_t gate_p() { return 0; }
+uint32_t gate_row() { return 0; }
+uint32_t inp_held() { return 0; }
+uint32_t inp_just() { return 0; }
+uint32_t inp_press() { return 0; }
+uint32_t io_gate() { return 0; }
+uint32_t io_press_cur() { return 0; }
+uint32_t io_sel() { return 0; }
+uint32_t item_screen() { return 0; }
+uint32_t key_page_cur() { return 0; }
+uint32_t key_poll() { return 0; }
+uint32_t l1_draw() { return 0; }
+uint32_t label_row() { return 0; }
+uint32_t line() { return 0; }
+uint32_t line_paint() { return 0; }
+uint32_t menu_screen_0() { return 0; }
+uint32_t menu_screen_1() { return 0; }
+uint32_t menu_screen_10() { return 0; }
+uint32_t menu_screen_11() { return 0; }
+uint32_t menu_screen_12() { return 0; }
+uint32_t menu_screen_13() { return 0; }
+uint32_t menu_screen_14() { return 0; }
+uint32_t menu_screen_15() { return 0; }
+uint32_t menu_screen_16() { return 0; }
+uint32_t menu_screen_17() { return 0; }
+uint32_t menu_screen_18() { return 0; }
+uint32_t menu_screen_19() { return 0; }
+uint32_t menu_screen_2() { return 0; }
+uint32_t menu_screen_20() { return 0; }
+uint32_t menu_screen_21() { return 0; }
+uint32_t menu_screen_22() { return 0; }
+uint32_t menu_screen_23() { return 0; }
+uint32_t menu_screen_24() { return 0; }
+uint32_t menu_screen_25() { return 0; }
+uint32_t menu_screen_26() { return 0; }
+uint32_t menu_screen_27() { return 0; }
+uint32_t menu_screen_28() { return 0; }
+uint32_t menu_screen_29() { return 0; }
+uint32_t menu_screen_3() { return 0; }
+uint32_t menu_screen_30() { return 0; }
+uint32_t menu_screen_31() { return 0; }
+uint32_t menu_screen_32() { return 0; }
+uint32_t menu_screen_33() { return 0; }
+uint32_t menu_screen_34() { return 0; }
+uint32_t menu_screen_35() { return 0; }
+uint32_t menu_screen_36() { return 0; }
+uint32_t menu_screen_37() { return 0; }
+uint32_t menu_screen_4() { return 0; }
+uint32_t menu_screen_5() { return 0; }
+uint32_t menu_screen_6() { return 0; }
+uint32_t menu_screen_7() { return 0; }
+uint32_t menu_screen_8() { return 0; }
+uint32_t menu_screen_9() { return 0; }
+uint32_t menu_screen_tramp() { return 0; }
+uint32_t mon_prep() { return 0; }
+uint32_t ok_row() { return 0; }
+uint32_t open2() { return 0; }
+uint32_t opt_end() { return 0; }
+uint32_t opt_flat() { return 0; }
+uint32_t opt_next() { return 0; }
+uint32_t opt_row_a() { return 0; }
+uint32_t option_commit_flags() { return 0; }
+uint32_t option_pages() { return 0; }
+uint32_t option_screen_d() { return 0; }
+uint32_t page_open_cur() { return 0; }
+uint32_t page_paint2_cur() { return 0; }
+uint32_t page_paint_cur() { return 0; }
+uint32_t paint_arrows() { return 0; }
+uint32_t panel_alpha() { return 0; }
+uint32_t party_end() { return 0; }
+uint32_t party_prep() { return 0; }
+uint32_t party_rows() { return 0; }
+uint32_t poll_h() { return 0; }
+uint32_t poll_pair_cur() { return 0; }
+uint32_t poll_spin() { return 0; }
+uint32_t press() { return 0; }
+uint32_t refresh_cell() { return 0; }
+uint32_t repaint_loop() { return 0; }
+uint32_t rfn_row() { return 0; }
+uint32_t row_a() { return 0; }
+uint32_t row_act() { return 0; }
+uint32_t row_arm() { return 0; }
+uint32_t row_arm2() { return 0; }
+uint32_t row_arm2_cur() { return 0; }
+uint32_t row_arm_s() { return 0; }
+uint32_t row_arm_s2_cur() { return 0; }
+uint32_t row_arm_s_cur() { return 0; }
+uint32_t row_b() { return 0; }
+uint32_t row_c() { return 0; }
+uint32_t row_cell() { return 0; }
+uint32_t row_close2() { return 0; }
+uint32_t row_d() { return 0; }
+uint32_t row_done2() { return 0; }
+uint32_t row_drive() { return 0; }
+uint32_t row_e() { return 0; }
+uint32_t row_flat() { return 0; }
+uint32_t row_helper() { return 0; }
+uint32_t row_info() { return 0; }
+uint32_t row_init_a() { return 0; }
+uint32_t row_loop2() { return 0; }
+uint32_t row_mix() { return 0; }
+uint32_t row_open3() { return 0; }
+uint32_t row_open_big() { return 0; }
+uint32_t row_open_w() { return 0; }
+uint32_t row_open_w0() { return 0; }
+uint32_t row_pad() { return 0; }
+uint32_t row_page_cur() { return 0; }
+uint32_t row_paint() { return 0; }
+uint32_t row_pair() { return 0; }
+uint32_t row_pair_a() { return 0; }
+uint32_t row_pair_b() { return 0; }
+uint32_t row_poke() { return 0; }
+uint32_t row_prep2() { return 0; }
+uint32_t row_prep2_close() { return 0; }
+uint32_t row_prep_a() { return 0; }
+uint32_t row_ptr() { return 0; }
+uint32_t row_read2() { return 0; }
+uint32_t row_read_cur() { return 0; }
+uint32_t row_scan() { return 0; }
+uint32_t row_scan_cur() { return 0; }
+uint32_t row_scan_v() { return 0; }
+uint32_t row_sel() { return 0; }
+uint32_t row_sel2() { return 0; }
+uint32_t row_sel2_cur() { return 0; }
+uint32_t row_sel_cell() { return 0; }
+uint32_t row_sel_cell2_cur() { return 0; }
+uint32_t row_sel_cell_cur() { return 0; }
+uint32_t row_set() { return 0; }
+uint32_t row_sync() { return 0; }
+uint32_t row_sync2() { return 0; }
+uint32_t row_sync2_cur() { return 0; }
+uint32_t row_tail() { return 0; }
+uint32_t row_tail2() { return 0; }
+uint32_t row_tick() { return 0; }
+uint32_t screens_commit() { return 0; }
+uint32_t sell_row() { return 0; }
+uint32_t set() { return 0; }
+uint32_t shop_close() { return 0; }
+uint32_t shop_feeder() { return 0; }
+uint32_t shop_row() { return 0; }
+uint32_t shop_row_a() { return 0; }
+uint32_t shop_row_b() { return 0; }
+uint32_t spell_commit_row() { return 0; }
+uint32_t spell_done() { return 0; }
+uint32_t spell_panel() { return 0; }
+uint32_t stat_pair() { return 0; }
+uint32_t stat_sync() { return 0; }
+uint32_t state_ok() { return 0; }
+uint32_t state_open() { return 0; }
+uint32_t step() { return 0; }
+uint32_t step_cell() { return 0; }
+uint32_t sub_row() { return 0; }
+uint32_t txt_cell_cur() { return 0; }
+uint32_t txt_draw2() { return 0; }
+uint32_t txt_label() { return 0; }
+uint32_t txt_rows() { return 0; }
+uint32_t wnd_clear() { return 0; }
+uint32_t wnd_gate() { return 0; }
+uint32_t wnd_held() { return 0; }
+uint32_t wnd_key() { return 0; }
+uint32_t wnd_page() { return 0; }
+uint32_t wnd_poll() { return 0; }
+uint32_t wnd_read() { return 0; }

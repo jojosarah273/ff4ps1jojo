@@ -6,6 +6,7 @@
  * Ground truth: src/func_801539C4.c (ordered call chain).
  */
 #include <stdint.h>
+/* TEMP DEBUG */
 
 void txt_set(uint32_t id);
 void label(uint32_t id);
@@ -29,8 +30,8 @@ void status_panel_install_labels(void);
 /* segment: title bar + launcher state */
 static void seg_title(void)
 {
-    txt_set(0x1800);
-    key_poll(0xB6);
+        txt_set(0x1800);
+        key_poll(0xB6);
     if (io_just() == 0) {
         key_poll(0xB7);
         if (io_just() == 0)
@@ -45,12 +46,12 @@ static void seg_title(void)
 /* segment: main option list */
 static void seg_list(void)
 {
-    options_row_main();
-    options_row_latch();
-    status_pane_build();
-    status_panel_install_labels();
-    row_paint(0x29A2);
-}
+        options_row_main();
+        options_row_latch();
+        status_pane_build();
+        status_panel_install_labels();
+        row_paint(0x29A2);
+    }
 
 /* segment: value pages */
 static void seg_values(void)
@@ -62,8 +63,8 @@ static void seg_values(void)
 
 void config_menu_run(void)
 {
-    seg_title();
-    seg_list();
+        seg_title();
+        seg_list();
     seg_values();
     final_row();
 }

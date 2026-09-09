@@ -536,6 +536,7 @@ More detail: `PROGRESS.md`. Verification harness: `tools/check_integrity.sh`.
 
 
 
+
 ## Phase B — the interpreted source port (in progress)
 
 `port/` is the deliverable: a **native FF4** rebuilt from the Phase A C,
@@ -549,7 +550,7 @@ ground-truth reference comment. Format: see `port/FORMAT.md`. Architecture:
 see `port/docs/ARCHITECTURE.md`.
 
 ```
-port/src/       1137 interpreted modules (0 failures, gcc clean)
+port/src/       1395 interpreted modules (0 failures, gcc clean)
   battle/       battle screens, targeting, spell/item-cast, menu root
   config/       options/status/store/formation screens + root driver
   shop/         store/confirm/detail screens + buy-sell machine
@@ -557,8 +558,19 @@ port/src/       1137 interpreted modules (0 failures, gcc clean)
   event/        event queues, confirm dialog, list init
   status/       panel grid/pane/state + status table init
   gpu, sprite, math, dev   exact-mirror subsystems
+  device/       SDL2 device layer (window, cell bank sim, hex-glyph
+                renderer, PS1 pad-bit input) - the native paint path
   mapped via tools/port_rowmap.py + port/include/ff4_window.h
 ```
+
+Running the interpreted deck natively (device layer online, stubs for
+the not-yet-interpreted register machines):
+
+```
+make -C port native          # deck + device + stubs + SDL -> port/build/ff4-native
+SDL_VIDEODRIVER=dummy ./port/build/ff4-native   # headless smoke: exit 0
+```
+
 
 Byte-match track continues in parallel (ladder lane micro-sweeps).
 Status: `expected/matched` count in `decomp/STATUS.md`; latest sweep
