@@ -73,6 +73,23 @@ SoH-style mod-hook seam: each interpreted module documents the forward
 call sites (menu row order, targeting scan loop, item tables) for
 randomizer/mode patches. Widescreen/expansion = Phase C ONLY (per user).
 
+## AVENUE 5 — RESOURCE RIPPING (non-code assets; user-added track)
+The deck addresses 1821 distinct text/window/gfx ids; the disc data that
+maps into 0x800D0000 is not in the repo (no ISO present). Inventory +
+tooling live in:
+- port/docs/RESOURCES.md  (id-page table, memory map, rip list, unknowns)
+- tools/rip/iso.py  (PS1 disc reader: ISO9660 tree + raw 2352 sectors)
+- tools/rip/atlas.py (glyph-page decoder -> PNG font sheet, verified)
+- tools/rip/ids.py   (TODO: regenerate the page table from the deck)
+When an ISO is dropped in (any .bin/.img path):
+  1. `python3 tools/rip/iso.py <disc> --list` -> file tree
+  2. find the file that loads into 0x800D0000 (boot kernel read;
+     verify by sector hash against the RAM base pattern)
+  3. `atlas.py` the text region -> font; then wire cell_char to the
+     real atlas and decode the 0x38xx/0x14xx message strings.
+  4. portraits/icons/windows (0xEBxx/0x21xx/0x17xx) -> TIM/CLUT decode
+     into the port's renderer (device layer swap).
+
 ## CADENCE CONVENTIONS (keep)
 - Commit + push at every boundary (module batch, milestone, docs refresh).
 - Refresh `port/docs/coverage.md`, `expected/callgraph.json`, CHATLOG

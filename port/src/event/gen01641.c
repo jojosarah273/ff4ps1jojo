@@ -12,13 +12,13 @@ void func_80181C20(void)
         func_801808D8();
     } while (io_just() != 0);
     func_801817EC();
-    func_801971A8(1);
+    anim_pack_word(1);
     /* s5/s6 latch -> L181D40 */
     goto L181D74;
 L181D58:
-    func_801971A8(1);
+    anim_pack_word(1);
     goto L181D74;
 L181D74:
-    func_8017F9FC();
+    anim_cmd_tail();
     return;
 }

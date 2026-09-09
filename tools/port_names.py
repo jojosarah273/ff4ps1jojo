@@ -163,6 +163,11 @@ NM = {
     "8015329C": "config_row_5329c",
     "8018AC90": "self_test_loop",
     "8018F0C8": "anim_reg_stub",
+    # ---- Block C: battle anim fan-out ----
+    "8017F9FC": "anim_cmd_tail",
+    "8017FA2C": "battle_anim_rows_a",
+    "80181604": "battle_anim_rows_b",
+    "801971A8": "anim_pack_word",
 }
 # ids whose extern declarations should be dropped (declared by the header)
 HEADER = Path(__file__).resolve().parent.parent / "port/include/ff4_window.h"

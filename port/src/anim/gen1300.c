@@ -22,7 +22,7 @@ L17cfd4:
         break;
     }
 L17D000:
-    func_801971A8();
+    anim_pack_word();
     anim_cmd_header();
     tex_link_packets();
     return;

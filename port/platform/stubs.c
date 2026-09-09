@@ -11,6 +11,7 @@ uint32_t *D_8019ED30 = g_slots;
 uint32_t *D_8019EE60 = g_slots;
 uint32_t *D_8019EF0C = g_slots;
 uint32_t *D_8019FFE8 = g_slots;
+uint32_t *D_801B57A0 = g_slots;
 
 __attribute__((constructor)) static void init_slots(void)
 { int i; for (i = 0; i < 64; i++)
@@ -361,8 +362,6 @@ uint32_t func_8017E220() { return 0; }
 uint32_t func_8017E740() { return 0; }
 uint32_t func_8017EA90() { return 0; }
 uint32_t func_8017F9A8() { return 0; }
-uint32_t func_8017F9FC() { return 0; }
-uint32_t func_8017FA2C() { return 0; }
 uint32_t func_801808D8() { return 0; }
 uint32_t func_801817EC() { return 0; }
 uint32_t func_801824D8() { return 0; }
@@ -445,7 +444,6 @@ uint32_t func_80196898() { return 0; }
 uint32_t func_801968CC() { return 0; }
 uint32_t func_801970A8() { return 0; }
 uint32_t func_80197168() { return 0; }
-uint32_t func_801971A8() { return 0; }
 uint32_t func_801971E8() { return 0; }
 uint32_t func_80197248() { return 0; }
 uint32_t func_80197288() { return 0; }

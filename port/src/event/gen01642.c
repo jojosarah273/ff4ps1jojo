@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80181604.
- * Ground truth: src/func_80181604.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_anim_rows_b.
+ * Ground truth: src/battle_anim_rows_b.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80181604(void)
+void battle_anim_rows_b(void)
 {
     /* battle anim: s4 gates; 801808D8/80180504/80180414/80180314
        row loop L1816CC; closes 801971A8/8017F9FC. */
@@ -17,12 +17,12 @@ void func_80181604(void)
             continue;
         break;
     }
-    func_801971A8();
+    anim_pack_word();
     /* s4/s6 latch -> L181780 */
     goto L1817B8;
 L18179C:
-    func_801971A8();
+    anim_pack_word();
 L1817B8:
-    func_8017F9FC();
+    anim_cmd_tail();
     return;
 }
