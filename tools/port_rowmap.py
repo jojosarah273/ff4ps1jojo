@@ -88,6 +88,7 @@ def main():
         for name in CURFIX:
             body = body.replace(name + "()", name + "_cur()")
         body = body.replace("cell_state_cur()", "cell_state_of()")
+        body = re.sub(r"cell_peek\(([^,)]+), ([^)]+)\)", "cell_peek_v(\\1, \\2)", body)
         body = body.replace("row_open_w()", "row_open_w0()")
         if exter:
             body = "".join(exter) + body

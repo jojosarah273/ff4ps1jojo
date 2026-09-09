@@ -17,6 +17,7 @@ uint32_t cell_state(uint32_t off);       /* 800F3B04 (catalog base)   */
 uint32_t cell_state_of(void);            /* 800F3B04() (held cell)   */
 uint32_t cell_poke(uint32_t v);          /* 800F3F38(3B04())          */
 uint32_t cell_peek(void);                /* 800F3B9C/3C3C             */
+uint32_t cell_peek_v(uint32_t id, uint32_t v); /* 800F3B9C(id,v)      */
 
 /* windows / rows */
 void wnd_open(uint32_t id);              /* 800F71DC                  */
