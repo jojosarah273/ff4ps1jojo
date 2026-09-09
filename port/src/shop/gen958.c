@@ -1,0 +1,47 @@
+/* FF4 source-port — interpreted module for func_80169290.
+ * Ground truth: src/func_80169290.c (byte-verified).
+ * Primitives: port/include/ff4_window.h.
+ */
+#include "ff4_window.h"
+void func_80169290(void)
+{
+    /* battle loop: 8018F098 intro + 0x9A window; loops L169408
+       (80194640/94394) and L16942C (62BC(0x9A)/6630(0x9A) gates);
+       ends on 5574(0xF)/0x3303 text reads. */
+    func_8018F098();
+    func_8018F098();
+    open_row(0x9A);
+    func_8017F8F8();
+    func_80194394();
+    func_801928E8();
+    func_801942FC();
+    func_80194640();
+    func_80194394();
+    func_80194640();
+    func_80194394();
+    func_8017F8F8();
+    /* v1/v0 gate -> L16942C */
+    func_80194640();
+L169408:
+    for (;;) {
+        if (func_80194394() != 0)
+            continue;
+        break;
+    }
+L16942C:
+    for (;;) {
+        func_8016BB44();
+        key_page(0x9A);
+        row_page(0x9A);
+        row_read(0xF);
+        if (sel(0x202) != 0)
+            continue;
+        page_paint2(0x3303);
+        txt_set(0x3303);
+        io_poll(0xF);
+        if (io_just() == 0)
+            continue;
+        break;
+    }
+    return;
+}

@@ -1,0 +1,23 @@
+/* FF4 source-port — interpreted module for func_80121D24.
+ * Ground truth: src/func_80121D24.c (byte-verified).
+ * Primitives: port/include/ff4_window.h.
+ */
+#include "ff4_window.h"
+extern int func_800F5140();
+extern int func_800F6630();
+extern int func_800F824C();
+extern int func_80121C4C();
+
+void func_80121D24(void)
+
+{
+  row_page(0x65);
+  row_sel_cell_cur();
+  cell_put(0x43);
+  row_page(100);
+  func_80121C4C();
+  return;
+}
+
+
+
