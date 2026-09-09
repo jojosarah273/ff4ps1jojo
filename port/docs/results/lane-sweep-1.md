@@ -21,3 +21,9 @@ pipeline cooperates. The Phase A exit criterion (≥50% byte-verified) needs
 either the deep-pass restructure of candidate C toward the observed lanes,
 or a lane/toolchain tuning effort — meanwhile Phase B interpretation uses
 the C as-is (its readability is the deliverable).
+
+## Update: ladder micro-sweep (tiny candidates, <=0x80)
+Swept the tiny pool over gcc-2.6.0/2.6.3/2.7.2/2.7.2cdk/2.8.1/2.95.2 +
+psx lanes. First matches (all gcc-2.95.2):
+- func_800F4998, func_800F4B78, func_800F4BB0 (window flag helpers)
+- more pending as the sweep continues; 746 matched so far.
