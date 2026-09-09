@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80122D20.
- * Ground truth: src/func_80122D20.c (byte-verified).
+/* FF4 source-port — interpreted module for equip_cells_render.
+ * Ground truth: src/equip_cells_render.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80122D20(void)
+void equip_cells_render(void)
 {
     /* equip sub-cell renderer (called by the 80130C74/80130F90 family):
        0x48/0x4B/0x4D/0x4F/0x46/0x57/0x49/0x51/0x4A/0x4E/0x4C/0xC7

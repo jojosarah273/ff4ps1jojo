@@ -14,7 +14,7 @@ void func_8013DC04(void)
     txt_set_cur();
     if (gate(0x80) != 0)
         return;
-    func_8013D12C();
+    battle_row_wrap();
     open_row(0x4E);
     sep();
 L13dc70:

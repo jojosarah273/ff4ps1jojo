@@ -23,7 +23,7 @@ L17cfd4:
     }
 L17D000:
     func_801971A8();
-    func_801973B8();
+    anim_cmd_header();
     tex_link_packets();
     return;
 L17D054:

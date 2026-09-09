@@ -98,7 +98,7 @@ L13b458:
         }
         func_8013B764();
         func_801263F0();
-        func_8011F6A4();
+        anim_noop();
         midrow_degen();
         row_page(1);
         row_read(0x80);

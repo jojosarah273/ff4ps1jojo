@@ -6,15 +6,13 @@
 extern int func_800996A8();
 
 
-extern int func_8014B98C();
-
 void func_8014A8E8(void)
 
 {
   wnd_open(0x10);
   func_800996A8();
   cell_clear_bank(0xef87);
-  func_8014B98C();
+  battle_row_f2a0();
   return;
 }
 

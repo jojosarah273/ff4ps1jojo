@@ -12,7 +12,7 @@ void func_801922D8(void)
 L192300:
     /* v0 gates -> L192324 / L192380 / L192AC */
     for (;;) {
-        func_801928E8();
+        event_spin_wait();
         if (io_just() == 0)
             goto L192324;
         if (io_just() != 0)
@@ -20,7 +20,7 @@ L192300:
         break;
     }
 L192380:
-    func_801928E8();
+    event_spin_wait();
     goto L192380;
 L1923A8:
 L1923AC:
@@ -35,10 +35,10 @@ L1923EC:
     func_801919B4();
     if (io_just() == 0)
         goto L192464;
-    func_801928E8();
+    event_spin_wait();
 L19243c:
     for (;;) {
-        func_801928E8();
+        event_spin_wait();
         if (io_just() == 0)
             goto L192344;
         if (io_just() != 0)

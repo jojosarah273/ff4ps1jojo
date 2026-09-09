@@ -75,10 +75,10 @@ L138d38:
         func_80124158();
         func_80138CB0();
         func_8012B168();
-        func_8012B0D8();
+        animation_row_310();
         func_801264C0();
         func_80126528();
-        func_8011F6A4();
+        anim_noop();
         continue;
     }
     return;

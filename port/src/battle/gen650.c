@@ -26,7 +26,7 @@ L118f78:
         txt_cell(0x1033);
         if (io_press(cell_state(6)) != 0)
             goto L118FD0;
-        func_80117DF8();
+        rows_swap44_54();
         poll_t(0x140);
         if (io_just() == 0)
             continue;

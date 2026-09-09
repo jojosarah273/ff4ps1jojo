@@ -15,7 +15,7 @@ L119148:
         txt_cell(0x1003);
         cell_tick_or(cell_state(6));
         cell_draw(0x1003);
-        func_80117DF8();
+        rows_swap44_54();
         poll_t(0x140);
         if (io_just() == 0)
             continue;

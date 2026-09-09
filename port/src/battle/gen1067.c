@@ -19,9 +19,9 @@ L10b7a0:
     for (;;) {
         /* v0 gates -> L10BF70 / L10BE54 / L10B8AC pathways */
         func_8010C1AC();
-        func_8010D9D4();
-        func_8010D9D4();
-        if (func_8010D9D4() != 0)
+        battle_row_linear();
+        battle_row_linear();
+        if (battle_row_linear() != 0)
             goto L10BA5C;
         func_8010C1AC();
         func_8010D34C();
@@ -31,7 +31,7 @@ L10b7a0:
         func_8010D34C();
         goto L10BBC4;
     L10BAC8:
-        if (func_8010D9D4() != 0)
+        if (battle_row_linear() != 0)
             goto L10BB5C;
         func_8010C1AC();
         func_8010D34C();

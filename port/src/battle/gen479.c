@@ -47,7 +47,7 @@ L117d70:
             goto L117DC0;
         func_80117E64();
     L117DC0:
-        func_80117DF8();
+        rows_swap44_54();
         step2();
         poll_t(5);
         if (io_just() == 0)

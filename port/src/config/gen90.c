@@ -41,7 +41,7 @@ L13471C:
     return;
 L13475C:
     wnd_open(0x4C44);
-    func_801345B4();
+    ability_rows_45();
     if (io_go() == 0)
         goto L134794;
 L13477C:
@@ -52,12 +52,12 @@ L134784:
 L134794:
     txt_set(0x1B39);
     wnd_open(0x4C44);
-    func_801345B4();
+    ability_rows_45();
     if (io_go() != 0)
         goto L13477C;
     txt_set(0x1B39);
     wnd_open(0x4300);
-    func_801345B4();
+    ability_rows_45();
     if (io_go() == 0)
         goto L13484C;
     cell_push_c8_lo(0xE5);
@@ -71,33 +71,33 @@ L13480C:
 L13481C:
     txt_set(0x1B38);
     wnd_open(0x4300);
-    func_801345B4();
+    ability_rows_45();
     if (io_go() == 0)
         goto L13480C;
     return;
 L13484C:
     wnd_open(0x6C61);
-    func_801345B4();
+    ability_rows_45();
     if (io_go() == 0)
         goto L13487C;
     txt_set(0x1B38);
     goto L1348D8;
 L13487C:
     wnd_open(0x5354);
-    func_801345B4();
+    ability_rows_45();
     if (io_go() == 0)
         goto L1348AC;
     txt_set(0x1B38);
     goto L1348D8;
 L1348AC:
     wnd_open(0x5F54);
-    func_801345B4();
+    ability_rows_45();
     if (io_go() == 0)
         goto L134784;
     txt_set(0x1B38);
 L1348D8:
     wnd_open_cur();
-    func_801345B4();
+    ability_rows_45();
     return;
 L1348F0:
     wnd_open_cur();
@@ -109,7 +109,7 @@ L134910:
     wnd_open_cur();
 L134918:
     txt_set(0x1B39);
-    func_801345B4();
+    ability_rows_45();
     return;
 L134930:
     sep_b();

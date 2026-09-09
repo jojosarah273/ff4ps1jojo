@@ -13,7 +13,7 @@ void func_80129F54(void)
     func_801267A0();
     func_801266F0();
     func_801240A8();
-    func_80120F1C();
+    config_row_d600b();
     latch(0x1C);
     cell_put(0xC2);
     latch(6);
@@ -54,7 +54,7 @@ void func_80129F54(void)
     func_80126830();
     func_801263F0();
     battle_state_dc400();
-    func_80120F1C();
+    config_row_d600b();
     latch(0x1C);
     cell_put(0xC2);
     latch(0x86);

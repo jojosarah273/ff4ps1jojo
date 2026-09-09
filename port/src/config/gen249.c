@@ -37,7 +37,7 @@ L60c8:
 L6188:
     page(0x63);
     tail(0x1F);
-    func_80125130();
+    config_row_1d();
     latch(1);
     cell_put(0x1D);
     txt_set(0x1B4D);
@@ -50,7 +50,7 @@ L6188:
 L61e8:
     page(0x65);
     tail(0x1F);
-    func_80125130();
+    config_row_1d();
     latch(2);
     cell_put(0x1D);
     txt_set(0x1B4F);
@@ -63,7 +63,7 @@ L61e8:
 L6248:
     page(0x67);
     tail(0x1F);
-    func_80125130();
+    config_row_1d();
     latch(3);
     cell_put(0x1D);
     txt_set(0x1B51);
@@ -76,7 +76,7 @@ L6248:
 L62a8:
     page(0x69);
     tail(0x1F);
-    func_80125130();
+    config_row_1d();
     latch(4);
     cell_put(0x1D);
     txt_set(0x1B53);
@@ -89,6 +89,6 @@ L62a8:
 L6308:
     page(0x6B);
     tail(0x1F);
-    func_80125130();
+    config_row_1d();
     return;
 }

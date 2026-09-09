@@ -39,7 +39,7 @@ L126be4:
             goto L126D00;
         func_80126E08();
         /* v1/v0 gate -> L126CF8 */
-        func_80126610();
+        battle_row_88();
         func_80178BB4();
         continue;
         func_80126D48();

@@ -36,7 +36,7 @@ L1259c4:
         row_prep_close();
         row_open();
         row_sync();
-        func_80125130();
+        config_row_1d();
         row_done();
         row_close();
         step2();

@@ -26,7 +26,7 @@ void func_801280D4(void)
     cell_put(0x5A);
 L1281ac:
     for (;;) {
-        func_80125130();
+        config_row_1d();
         row_prep(0x20);
         row_sync2(0x18);
         sep_a();

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80115BCC.
- * Ground truth: src/func_80115BCC.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_row_e5.
+ * Ground truth: src/battle_row_e5.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80115BCC(void)
+void battle_row_e5(void)
 {
     /* battle rows: 0xE5/0xACD/0xACE texts, gates 6434(0x202); loops
        L115C20 (0xDD4/0xDFC cells) and L115C90 (0xA6D/0x40 reads). */

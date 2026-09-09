@@ -86,7 +86,7 @@ L361ac:
         txt_draw(0x1B7A);
         func_801378E0();
         func_8013554C();
-        func_8011F6A4();
+        anim_noop();
     L363EC:
         row_page_cur();
         row_read(0x40);

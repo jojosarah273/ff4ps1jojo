@@ -3,4 +3,4 @@
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80122964(void) { wnd_open(0x4E); draw_pad(0x1040); func_80122D20(); }
+void func_80122964(void) { wnd_open(0x4E); draw_pad(0x1040); equip_cells_render(); }

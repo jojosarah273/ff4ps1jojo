@@ -24,7 +24,7 @@ L1458d4:
         cell_draw_cur();
         row_open();
         latch(0xC);
-        func_80143E44();
+        battle_rows_twin();
         txt_set_cur();
         if (gate(2) != 0)
             goto L145A58;

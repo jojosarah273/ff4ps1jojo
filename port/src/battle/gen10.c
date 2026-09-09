@@ -13,7 +13,7 @@ void func_8014BB94(void)
     txt_draw(0xF2D0);
     wnd_open(0x8060);
     label(0xF289);
-    func_8014B98C();
+    battle_row_f2a0();
     latch(0x8D);
     func_8014D780();
     func_8014096C();

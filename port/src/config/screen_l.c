@@ -10,7 +10,7 @@ void func_80130058(void)
     if (io_just() != 0)
         goto L234;
     cell_clear_bank(0x1B88);
-    func_8012B0D8();
+    animation_row_310();
     txt_set(0x1B83);
     row_sel_cell_cur();
     row_sel_cell2_cur();
@@ -115,7 +115,7 @@ L3C4:
     io_poll(0x1B);
     if (io_just() != 0)
         goto L194;
-    func_8012B0D8();
+    animation_row_310();
     func_8012B168();
     func_801320E8();
     midrow_paint_c();
@@ -179,7 +179,7 @@ L5DC:
     func_80132130();
     latch_cur();
     cell_put(0xC1);
-    func_8012B0D8();
+    animation_row_310();
     func_8012B168();
     func_80120FBC();
     midrow_pad88_run();

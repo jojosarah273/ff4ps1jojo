@@ -4,13 +4,11 @@
  */
 #include "ff4_window.h"
 
-extern int func_8014B98C();
-
 void func_8014B964(void)
 
 {
   page_paint2(0xf285);
-  func_8014B98C();
+  battle_row_f2a0();
   return;
 }
 

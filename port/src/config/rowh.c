@@ -219,7 +219,7 @@ L850:
     latch(0x85);
     txt_draw(0x1E00);
     battle_cb_86120();
-    func_80126610();
+    battle_row_88();
     latch(0x4C);
     func_8012224C();
     latch(0xF0);

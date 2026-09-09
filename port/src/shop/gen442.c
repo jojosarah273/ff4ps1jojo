@@ -24,7 +24,7 @@ L162AD8:
     wnd_open(4);
     tail(0xD4);
     latch(3);
-    func_80153374();
+    option_row_d4();
     latch(8);
     cell_draw(0x2A06);
     page(0xA6);

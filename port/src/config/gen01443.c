@@ -10,7 +10,7 @@ void func_8015A9BC(void)
     cell_state_of();
     cell_state(0x2000);
     options_row_run();
-    func_8015ABEC();
-    func_8015A56C();
+    options_rows_b();
+    options_cursor_cells();
     return;
 }

@@ -11,13 +11,13 @@ void func_8010408C(void)
     wnd_open_cur();
 L1040a4:
     for (;;) {
-        func_8010D9D4();
+        battle_row_linear();
         cell_pull_c8(0x300);
-        func_8010D9D4();
+        battle_row_linear();
         cell_pull_c8(0x301);
         latch(0x2F);
         cell_pull_c8(0x302);
-        func_8010D9D4();
+        battle_row_linear();
         row_read(7);
         row_sel_cell_cur();
         cell_pull_c8(0x303);

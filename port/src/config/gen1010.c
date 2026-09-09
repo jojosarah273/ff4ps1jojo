@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801345B4.
- * Ground truth: src/func_801345B4.c (byte-verified).
+/* FF4 source-port — interpreted module for ability_rows_45.
+ * Ground truth: src/ability_rows_45.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801345B4(void)
+void ability_rows_45(void)
 {
     /* ability rows: 0x45/0x46 windows with 54D4 gates pick the
        5480/5410 tails. */

@@ -60,7 +60,7 @@ void func_80104354(void)
             row_open_w(0x10);
             cell_put(0xAD);
             row_page(0xB7);
-            func_8017559C();
+            shop_buy_list();
             poll_pair(0x79);
             continue;
         }

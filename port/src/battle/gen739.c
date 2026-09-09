@@ -26,7 +26,7 @@ L10dfa8:
         cell_draw(0x1007);
         page_paint(0x1008);
         page_paint(0x1004);
-        func_80117DF8();
+        rows_swap44_54();
         poll_t(0x140);
         if (io_just() == 0)
             continue;

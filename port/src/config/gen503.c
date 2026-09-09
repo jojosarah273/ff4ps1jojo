@@ -27,7 +27,7 @@ void func_80135330(void)
     return;
 L1353C4:
     midrow_paint_c();
-    func_80120F1C();
+    config_row_d600b();
     draw_pad_cur();
     battle_rows_sync();
     func_80135298();
@@ -65,7 +65,7 @@ L13546c:
             goto L13551C;
         draw_pad(0x310);
         func_801361A4();
-        func_8012B0D8();
+        animation_row_310();
         return;
     L13551C:
         row_page(1);

@@ -8,7 +8,7 @@ void func_80127C70(void)
     /* ability/status details screen: 80126610..80136014 header chain,
        0x1BE4/0x17FE stat block, 0x1B47/0x1B46 detail rows with the
        s2/6434(2) gates, 0x46/0x45 windows. */
-    func_80126610();
+    battle_row_88();
     func_801266A0();
     func_80123FB4();
     func_80126330();
@@ -29,9 +29,9 @@ L127CFC:
     draw_pad_cur();
     func_8011F8D4();
 L127D38:
-    func_8011F6A4();
+    anim_noop();
     battle_mode_dispatch();
-    func_80120F1C();
+    config_row_d600b();
     draw_pad_cur();
     battle_rows_sync();
     draw_pad_cur();

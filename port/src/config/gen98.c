@@ -16,7 +16,7 @@ void func_8013D14C(void)
     func_801409BC();
     latch(2);
     txt_draw_cur();
-    func_8013D12C();
+    battle_row_wrap();
     sep();
     txt_draw_cur();
     latch(0x80);

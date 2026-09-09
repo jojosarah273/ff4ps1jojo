@@ -7,7 +7,7 @@ void func_80169228(void)
 {
     open_row(0x9A);
     for (;;) {
-        func_8016BB44();
+        shop_row_41();
         key_page(0x9A);
         row_page(0x9A);
         row_read(0xF);

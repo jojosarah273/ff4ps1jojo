@@ -76,7 +76,7 @@ L135054:
         row_close2();
         wnd_open_cur();
         func_80120070();
-        func_8012B0D8();
+        animation_row_310();
         continue;
     L135268:
         row_page(1);

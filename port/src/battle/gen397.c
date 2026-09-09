@@ -6,7 +6,7 @@
 
 
 extern int func_800FE8B4();
-extern int func_80115BCC();
+
 extern int func_80115D2C();
 extern int func_80119AC8();
 
@@ -25,7 +25,7 @@ void func_8011356C(void)
   latch(6);
   txt_draw(0xacd);
   cell_clear_bank(0xace);
-  func_80115BCC();
+  battle_row_e5();
   do {
     shop_view_run();
     func_80119AC8();

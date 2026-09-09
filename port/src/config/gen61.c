@@ -61,7 +61,7 @@ void func_80123D3C(void)
     battle_wait_just(0xD7E);
     row_prep_close();
     battle_state_dc400();
-    func_8011F6A4();
+    anim_noop();
     func_80126330();
     open_row(0x84);
     open_row(0x85);

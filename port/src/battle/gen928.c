@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80143E44.
- * Ground truth: src/func_80143E44.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_twin.
+ * Ground truth: src/battle_rows_twin.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80143E44(void)
+void battle_rows_twin(void)
 {
     /* battle rows (twin): two 3F38(3B04) pair reads; linear. */
     cell_cursor_dec();

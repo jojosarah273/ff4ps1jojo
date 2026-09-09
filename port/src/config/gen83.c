@@ -6,7 +6,7 @@
 void func_80127808(void)
 {
     func_801360AC();
-    func_80126610();
+    battle_row_88();
     func_801266A0();
     func_80123FB4();
     func_80126330();
@@ -28,9 +28,9 @@ L78b8:
     draw_pad_cur();
     func_8011F8D4();
 L78f4:
-    func_8011F6A4();
+    anim_noop();
     battle_mode_dispatch();
-    func_80120F1C();
+    config_row_d600b();
     draw_pad_cur();
     battle_rows_sync();
     draw_pad_cur();

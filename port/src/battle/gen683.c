@@ -9,7 +9,6 @@
 
 
 extern int func_8011053C();
-extern int func_80115BCC();
 
 void func_8010FCA8(void)
 
@@ -27,7 +26,7 @@ void func_8010FCA8(void)
   latch(0x60);
   txt_draw(0xad4);
   txt_draw(0xad5);
-  func_80115BCC();
+  battle_row_e5();
   return;
 }
 

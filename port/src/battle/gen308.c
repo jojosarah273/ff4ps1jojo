@@ -18,7 +18,7 @@ void func_801126A0(void)
     latch(0x20);
     cell_put(0xAD);
     latch(0x10);
-    func_8017559C();
+    shop_buy_list();
     latch(0x81);
     txt_draw(0x4200);
     latch(3);
@@ -42,7 +42,7 @@ void func_801126A0(void)
     txt_draw(0xACE);
     latch(0x5E);
     wnd_fx_pads();
-    func_80115BCC();
+    battle_row_e5();
 L1127c0:
     for (;;) {
         shop_view_run();

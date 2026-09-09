@@ -5,7 +5,7 @@
 #include "ff4_window.h"
 void func_801425FC(void)
 {
-    func_8013D12C();
+    battle_row_wrap();
     func_8013EF78();
     latch(0x84);
     txt_draw(0xF427);

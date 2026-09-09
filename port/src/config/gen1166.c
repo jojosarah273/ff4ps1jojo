@@ -9,7 +9,7 @@ void func_80137B18(void)
     func_80123FB4();
     midrow_paint_c();
     func_801266F0();
-    func_8011F6A4();
+    anim_noop();
     sep();
     func_801387D8();
     label(0x17FC);

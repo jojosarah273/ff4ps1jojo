@@ -9,7 +9,7 @@ void func_801428FC(void)
        wait loop L142938, L142988/L1429BC/L142A6C cast loops
        (801431E8/80177DCC/8014096C rows); L142B1C loops back via
        5C64(0x202). */
-    func_8013D12C();
+    battle_row_wrap();
     sep();
     poll_spin();
     txt_draw_cur();

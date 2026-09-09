@@ -44,9 +44,9 @@ L15F4C8:
     latch(7);
     cell_put(0xD6);
     row_page(0xCF);
-    func_8015A374();
+    options_value_table();
     latch(0xC);
-    func_80153374();
+    option_row_d4();
     latch(0x40);
     cell_draw(0x2A06);
     row_page(0xCF);

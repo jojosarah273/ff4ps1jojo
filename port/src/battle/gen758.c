@@ -4,13 +4,6 @@
  */
 #include "ff4_window.h"
 
-
-
-
-
-
-extern int func_8014B98C();
-
 void func_8014B8AC(void)
 
 {
@@ -23,7 +16,7 @@ void func_8014B8AC(void)
     label(0xf289);
     latch(1);
     txt_draw(0xf2d0);
-    func_8014B98C();
+    battle_row_f2a0();
     wnd_open(0);
     label(0xf289);
   }

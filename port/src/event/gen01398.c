@@ -12,7 +12,7 @@ void func_80193668(void)
     return;
 L1936C0:
     /* gate -> L193704 */
-    func_801973B8();
+    anim_cmd_header();
     func_80197398();
     func_801972D8();
     for (;;) {

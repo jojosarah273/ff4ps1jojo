@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80125130.
- * Ground truth: src/func_80125130.c (byte-verified).
+/* FF4 source-port — interpreted module for config_row_1d.
+ * Ground truth: src/config_row_1d.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80125130(void)
+void config_row_1d(void)
 {
     row_open();
     row_page(0x1D);

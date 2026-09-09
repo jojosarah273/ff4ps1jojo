@@ -7,7 +7,6 @@ extern int func_800953F4();
 
 
 extern int func_801442B4();
-extern int func_8014B98C();
 
 void func_8014B648(void)
 
@@ -16,7 +15,7 @@ void func_8014B648(void)
   txt_draw(0xf2d0);
   latch(8);
   txt_draw(0xf326);
-  func_8014B98C();
+  battle_row_f2a0();
   func_801442B4();
   func_800953F4();
   return;

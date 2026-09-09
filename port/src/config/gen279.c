@@ -9,7 +9,7 @@ void func_8013E2F8(void)
        (43E44/5958), row read L13E3EC (4FAC(0x101)/6434(0x80) gates),
        8013E200 cast helper loop L13E494, exit loop L13E510. */
     txt_draw_cur();
-    func_8013D12C();
+    battle_row_wrap();
     func_80148DE8();
     sep();
 L13e340:
@@ -19,7 +19,7 @@ L13e340:
         cell_push_c8();
         cell_draw_cur();
         latch(0xFC);
-        func_80143E44();
+        battle_rows_twin();
         cell_step();
         poll_t(4);
         if (io_just() == 0)
@@ -78,7 +78,7 @@ L13e398:
         sep();
     L13e510:
         for (;;) {
-            func_80143E44();
+            battle_rows_twin();
             cell_step();
             poll_t(4);
             if (io_just() == 0)

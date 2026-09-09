@@ -15,7 +15,7 @@ void func_8013389C(void)
     cell_pos_fwd(0xFF98);
     cell_put_hi9(0x99);
     row_prep_close();
-    func_80120F1C();
+    config_row_d600b();
     row_page(0xE8);
     cell_cur_save54_b();
     tail(0xE5);
@@ -345,12 +345,12 @@ L36C:
     row_page(0xEB);
     if (gate(2) != 0)
         goto ec;
-    func_8012B0D8();
+    animation_row_310();
     func_80120FBC();
     draw_pad_cur();
     func_8011FB74();
     func_80126458();
-    func_8011F6A4();
+    anim_noop();
     func_8011FF40();
     func_801240D0();
     draw_pad_cur();

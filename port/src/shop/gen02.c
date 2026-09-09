@@ -53,7 +53,7 @@ f0dc:
     sep();
     label(0x68);
     for (;;) {
-        func_8016BB44();
+        shop_row_41();
         page_open(0x68);
         cell_step();
         label(0x68);
@@ -69,7 +69,7 @@ f0dc:
     page_paint2(0x7D1F);
     wnd_open(0x100);
     for (;;) {
-        func_8016BB44();
+        shop_row_41();
         func_8016ADDC();
         sep_b();
         cell_pos_back(8);
@@ -86,7 +86,7 @@ f0dc:
     sep();
     tail(0x9A);
     for (;;) {
-        func_8016BB44();
+        shop_row_41();
         row_prep(0x20);
         row_read2(0x9C);
         sep_b();
@@ -132,7 +132,7 @@ f0dc:
             continue;
         break;
     }
-    func_8016BB44();
+    shop_row_41();
     latch(0x10);
     txt_draw(0x7D28);
     wnd_open(0x7FFF);
@@ -140,7 +140,7 @@ f0dc:
     wnd_open(0xCC0);
     label(0x2107);
     sep();
-    func_8016BB44();
+    shop_row_41();
     sep();
     for (;;) {
         cell_draw(0x3D19);
@@ -149,7 +149,7 @@ f0dc:
         if (io_just() != 0)
             break;
     }
-    func_8016BB44();
+    shop_row_41();
     sep();
     for (;;) {
         cell_draw(0x3D19);
@@ -158,7 +158,7 @@ f0dc:
         if (io_just() != 0)
             break;
     }
-    func_8016BB44();
+    shop_row_41();
     sep();
     for (;;) {
         cell_draw(0x3D19);
@@ -167,7 +167,7 @@ f0dc:
         if (io_just() != 0)
             break;
     }
-    func_8016BB44();
+    shop_row_41();
     sep();
     for (;;) {
         cell_draw(0x3D19);
@@ -193,7 +193,7 @@ f0dc:
         if (io_just() != 0)
             break;
     }
-    func_8016BB44();
+    shop_row_41();
     sep();
     tail(0x66);
     tail(0x92);
@@ -203,7 +203,7 @@ f0dc:
     tail(0x90);
     page_paint2(0x7D20);
     for (;;) {
-        func_8016BB44();
+        shop_row_41();
         txt_set(0x7D20);
         if (gate(0x202) != 0)
             continue;
@@ -216,7 +216,7 @@ f0dc:
     tail_cur();
     tail(6);
     func_801700BC();
-    func_8016BB44();
+    shop_row_41();
     latch(0x80);
     cell_put(0xA0);
     latch(0x11);
@@ -226,7 +226,7 @@ f0dc:
     wnd_open(0x800);
     tail(0x9E);
     for (;;) {
-        func_8016BB44();
+        shop_row_41();
         row_prep(0x20);
         row_read2(0x9E);
         sep_b();
@@ -268,7 +268,7 @@ f0dc:
     func_8016E490();
     page_paint2(0x7D25);
     for (;;) {
-        func_8016BB44();
+        shop_row_41();
     }
 f8dc:
     func_80169228();

@@ -9,7 +9,7 @@ void func_80177DEC(void)
        80178C14/8011EF0C/800FEF7C/801947B8/8017D078/8017E220/
        8017E740/80178D00; linear. */
     cb_slot15();
-    func_801928E8();
+    event_spin_wait();
     func_80194988();
     func_8017841C();
     status_table_init();

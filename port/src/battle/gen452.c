@@ -6,7 +6,6 @@
 
 extern int func_801030F8();
 extern int func_801034E0();
-extern int func_8017559C();
 
 void func_801033E0(void)
 
@@ -28,7 +27,7 @@ void func_801033E0(void)
       cell_put(0xad);
       latch(0x10);
       cell_put(0xb8);
-      func_8017559C();
+      shop_buy_list();
       latch(0xf);
       txt_draw(0x6fd);
     }

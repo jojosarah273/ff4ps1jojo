@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8017559C.
- * Ground truth: src/func_8017559C.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_buy_list.
+ * Ground truth: src/shop_buy_list.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8017559C(void)
+void shop_buy_list(void)
 {
     /* shop buy list: 0x1700 gate picks the 0xD25 cells vs the 0xCF5/
        0xCF7/0xD1D/0xD1F/0xD21/0xCD7/0xCD9/0xCDD/0xCE0 families

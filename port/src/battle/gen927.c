@@ -9,7 +9,7 @@ void func_801450B8(void)
        L1450E8 loop runs 80140558 + 80144C78 + 801449D0; closes with
        8013DC04 + 0x38E2 text. */
     func_8013EF78();
-    func_8013D12C();
+    battle_row_wrap();
     func_801444D4();
     func_80144C78();
     wnd_open(0x40);

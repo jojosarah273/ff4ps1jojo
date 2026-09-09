@@ -14,7 +14,7 @@ void func_80167A34(void)
 L167a74:
     for (;;) {
         func_80070174();
-        func_80140310();
+        config_row_8468();
         row_page(0x4E);
         row_read(7);
         row_sel_cell_cur();
@@ -32,6 +32,6 @@ L167a74:
     }
     sep();
     label_cur();
-    func_80140310();
+    config_row_8468();
     return;
 }

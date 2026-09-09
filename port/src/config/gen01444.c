@@ -10,6 +10,6 @@ void func_8015A5B8(void)
     s[0xAA] = 0;
     if (*(u8 *)cell_state(0x3558) != 0)
         s[0xA9] = 1;
-    func_8015ABEC();
-    func_8015A56C();
+    options_rows_b();
+    options_cursor_cells();
 }

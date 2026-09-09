@@ -13,7 +13,7 @@ void func_80122A9C(void)
     battle_rows_sync();
     draw_pad_cur();
     battle_rows_sync();
-    func_80120F1C();
+    config_row_d600b();
     draw_pad_cur();
     func_8011FB74();
     txt_set(0x1A02);

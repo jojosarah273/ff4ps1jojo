@@ -22,7 +22,7 @@ L470:
     func_8012FF9C();
 L478:
     func_8011F6D4();
-    func_80120F1C();
+    config_row_d600b();
     func_8013095C();
     func_80130AA4();
     txt_draw(0x1B93);

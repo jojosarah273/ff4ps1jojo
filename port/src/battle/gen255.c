@@ -51,7 +51,7 @@ void func_8011285C(void)
     latch(1);
     txt_draw(0x1E00);
     battle_cb_86120();
-    func_80115BCC();
+    battle_row_e5();
 L1129c4:
     for (;;) {
         shop_view_run();

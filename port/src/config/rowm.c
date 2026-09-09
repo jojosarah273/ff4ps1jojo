@@ -12,7 +12,7 @@ void func_80136A58(void)
     func_80134E74();
     midrow_paint_c();
     func_801264C0();
-    func_8011F6A4();
+    anim_noop();
     func_80120FBC();
     draw_pad_cur();
     battle_rows_sync();
@@ -108,7 +108,7 @@ Lc0c:
     Ld4c:
         latch(0x20);
         cell_put(0x3F);
-        func_80120F1C();
+        config_row_d600b();
         draw_pad(0x31C);
         func_8012B100();
     Ld74:

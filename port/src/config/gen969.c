@@ -8,7 +8,7 @@ void func_8013D3B0(void)
     cell_cursor_dec();
     row_sync();
     latch(16);
-    func_80143E44();
+    battle_rows_twin();
     func_80143D14();
     sep_a();
     cell_poke0(cell_state(61721));

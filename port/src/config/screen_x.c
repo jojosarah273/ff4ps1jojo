@@ -23,7 +23,7 @@ void func_80161C88(void)
 Ld18:
     open_row(0xD6);
     txt_cell(0x3539);
-    func_8015A374();
+    options_value_table();
     page(0xA6);
     txt_cell(0x2005);
     row_read(0xFB);
@@ -57,7 +57,7 @@ Le38:
     return;
 Le68:
     latch(3);
-    func_80153374();
+    option_row_d4();
     page_paint(0x2A06);
     page(0xA6);
     tail(0x92);

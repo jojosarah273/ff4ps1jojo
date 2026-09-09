@@ -7,7 +7,7 @@ void func_80119AC8(void)
 {
     /* battle rows: 8010D9D4 prep; gates 5574(0x80); 0x5C/0x5D/0x60/
        0x61 window rows. */
-    func_8010D9D4();
+    battle_row_linear();
     io_poll(0x80);
     if (io_go() != 0)
         return;

@@ -53,7 +53,7 @@ L166a44:
         func_80166B80();
     L166B30:
         page_paint2_cur();
-        func_80140310();
+        config_row_8468();
         cell_push60();
         poll_t_cur();
         if (io_just() == 0)

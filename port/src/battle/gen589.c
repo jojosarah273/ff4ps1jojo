@@ -14,7 +14,7 @@ L142cbc:
     L142ce8:
         for (;;) {
             latch(8);
-            func_80143E44();
+            battle_rows_twin();
             txt_cell_cur();
             if (gate(2) != 0)
                 goto L142D30;

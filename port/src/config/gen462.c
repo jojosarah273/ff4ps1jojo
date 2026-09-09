@@ -46,12 +46,12 @@ L13454C:
 L13455C:
     txt_set(0x1B39);
     wnd_open(0x5F4D);
-    func_801345B4();
+    ability_rows_45();
     if (io_go() != 0)
         goto L13459C;
 L134584:
     wnd_open(0x4C40);
-    func_801345B4();
+    ability_rows_45();
     return;
 L13459C:
     sep_b();

@@ -5,7 +5,7 @@
 #include "ff4_window.h"
 void func_8013D720(void)
 {
-    func_8013D12C();
+    battle_row_wrap();
     func_80148DE8();
     latch(0x10);
     txt_draw(0xF1B3);
@@ -29,7 +29,7 @@ L780:
         cell_put_cur();
         sep();
         latch(0x20);
-        func_80143E44();
+        battle_rows_twin();
         draw_pad_cur();
         sep();
         func_8013D598();
@@ -73,7 +73,7 @@ L8d4:
         func_8013D598();
         sep();
         latch(0x20);
-        func_80143E44();
+        battle_rows_twin();
         txt_set(0xF1B3);
         io_poll(8);
         if (io_go() == 0)

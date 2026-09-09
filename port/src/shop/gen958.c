@@ -13,7 +13,7 @@ void func_80169290(void)
     open_row(0x9A);
     battle_mode_dispatch();
     cb_slot15();
-    func_801928E8();
+    event_spin_wait();
     func_801942FC();
     cb_slot2();
     cb_slot15();
@@ -30,7 +30,7 @@ L169408:
     }
 L16942C:
     for (;;) {
-        func_8016BB44();
+        shop_row_41();
         key_page(0x9A);
         row_page(0x9A);
         row_read(0xF);

@@ -18,7 +18,7 @@ void func_8015A6CC(void)
     sep();
     tail(0xA9);
 L15A764:
-    func_8015ABEC();
-    func_8015A56C();
+    options_rows_b();
+    options_cursor_cells();
     return;
 }

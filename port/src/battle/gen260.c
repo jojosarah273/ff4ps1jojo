@@ -32,7 +32,7 @@ L144084:
             continue;
         break;
     }
-    func_8013D12C();
+    battle_row_wrap();
     func_80140894();
     func_8013EF78();
 L14411C:
@@ -49,7 +49,7 @@ L14411C:
     L144180:
         for (;;) {
             latch(0x10);
-            func_80143E44();
+            battle_rows_twin();
             cell_step();
             poll_t(0x40);
             if (io_just() != 0)

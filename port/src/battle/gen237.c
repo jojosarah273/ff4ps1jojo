@@ -18,7 +18,7 @@ void func_801151BC(void)
     latch(0x40);
     txt_draw(0xAD4);
     txt_draw(0xAD5);
-    func_80115BCC();
+    battle_row_e5();
     wnd_open(0xFF);
     tail(0xF3);
     wnd_open_cur();

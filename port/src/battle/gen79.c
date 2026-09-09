@@ -21,7 +21,7 @@ void func_80102494(void)
             cell_put(0xAD);
             row_page(0xB9);
             cell_tick_half();
-            func_8017559C();
+            shop_buy_list();
             poll_pair(0x79);
             continue;
         }

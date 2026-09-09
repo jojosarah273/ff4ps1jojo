@@ -31,7 +31,7 @@ L15A7BC:
     wnd_open(1);
     tail(0xA9);
 L15A844:
-    func_8015ABEC();
+    options_rows_b();
     page(0xAB);
     label(0x3945);
     wnd_open(6);
@@ -39,6 +39,6 @@ L15A844:
     func_8015254C();
     page_open(0x3949);
     tail(0xAB);
-    func_8015A56C();
+    options_cursor_cells();
     return;
 }

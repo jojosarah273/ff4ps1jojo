@@ -10,7 +10,7 @@ void func_80135574(void)
     label(0x1A7A);
     label(0x1A7C);
     label(0x1A7E);
-    func_80120F1C();
+    config_row_d600b();
     wnd_open(0x1B55);
     tail(0x51);
     latch_cur();

@@ -1,12 +1,12 @@
-/* FF4 source-port — interpreted module for func_8014B98C.
- * Ground truth: src/func_8014B98C.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_row_f2a0.
+ * Ground truth: src/battle_row_f2a0.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
 extern int func_8014B93C();
 
-void func_8014B98C(void)
+void battle_row_f2a0(void)
 
 {
   cell_clear_bank(0xf2a0);

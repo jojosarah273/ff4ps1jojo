@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801928E8.
- * Ground truth: src/func_801928E8.c (byte-verified).
+/* FF4 source-port — interpreted module for event_spin_wait.
+ * Ground truth: src/event_spin_wait.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801928E8(void)
+void event_spin_wait(void)
 {
     /* event: v1/v0 spin loop L19290C; a0/v0 latches; 2x 80192A60
        rows with spin loops; returns at L192A4C. */

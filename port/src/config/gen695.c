@@ -4,15 +4,6 @@
  */
 #include "ff4_window.h"
 
-
-
-
-
-
-extern void func_8015A374(void);
-
-extern void func_80153374(void);
-
 void func_8015D3E8(void) {
     page(0xA6);
     txt_cell(0x2004);
@@ -20,8 +11,8 @@ void func_8015D3E8(void) {
     cell_draw(0x2004);
     open_row(0xD6);
     row_page(0xD2);
-    func_8015A374();
+    options_value_table();
     latch(0x3);
-    func_80153374();
+    option_row_d4();
     page_paint(0x2A06);;
 }

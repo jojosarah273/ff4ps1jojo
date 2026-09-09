@@ -23,7 +23,7 @@ L11ec58:
             cell_set50_from54();
             label(0x1A65);
             func_801225C0();
-            func_80126610();
+            battle_row_88();
             func_80122114();
             /* v1/v0 latch -> L11EC58 */
             continue;

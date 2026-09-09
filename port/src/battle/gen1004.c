@@ -9,7 +9,7 @@ void func_80145168(void)
        preps; L1451A0 loop runs 80140558 + 80144C78 + 801449D0 +
        8014D43C; exits via 8014D414. */
     func_8013EF78();
-    func_8013D12C();
+    battle_row_wrap();
     func_801449A0();
     func_80144C78();
     func_8014086C();
@@ -29,7 +29,7 @@ L1451a0:
             continue;
         break;
     }
-    func_8013D12C();
+    battle_row_wrap();
     cell_clear_bank();
     func_8014D414();
     return;

@@ -13,9 +13,9 @@ void func_80162490(void)
     latch(0xC);
     cell_put(0xD6);
     row_page(0xCD);
-    func_8015A374();
+    options_value_table();
     latch(3);
-    func_80153374();
+    option_row_d4();
     latch(8);
     cell_draw(0x2A06);
     sep_a();

@@ -4,8 +4,6 @@
  */
 #include "ff4_window.h"
 
-extern int func_8015A56C();
-extern int func_8015ABEC();
 
 void func_8015AA6C(void)
 
@@ -17,8 +15,8 @@ void func_8015AA6C(void)
   options_row_run();
   page(0xe3);
   tail(0xa9);
-  func_8015ABEC();
-  func_8015A56C();
+  options_rows_b();
+  options_cursor_cells();
   return;
 }
 

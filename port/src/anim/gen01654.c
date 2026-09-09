@@ -8,7 +8,7 @@ void func_801793F8(void)
     /* battle anim: 80194394/801928E8/801942FC preps; v1/v0 gate picks
        8008CB5C/800888C0 rows; 801792D0 closes. */
     cb_slot15();
-    func_801928E8();
+    event_spin_wait();
     func_801942FC();
     /* v1/v0 latch -> L179438 */
     if (func_801792D0() != 0)

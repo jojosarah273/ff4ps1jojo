@@ -20,7 +20,7 @@ void func_8013BB0C(void)
     label(0x1B1D);
     page_paint2(0x1BC6);
     func_8012A868();
-    func_80120F1C();
+    config_row_d600b();
     draw_pad_cur();
     battle_rows_sync();
     midrow_paint_b();

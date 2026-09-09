@@ -146,7 +146,7 @@ L140:
         goto L1a0;
     latch(1);
     cell_put(0x10);
-    func_8010D9D4();
+    battle_row_linear();
     row_read(1);
     if (sel(0x202) != 0)
         goto L254;

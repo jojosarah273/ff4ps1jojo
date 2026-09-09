@@ -16,7 +16,7 @@ void func_801035B0(void)
         latch(0x20);
         cell_put(0xB9);
         cell_tick_half();
-        func_8017559C();
+        shop_buy_list();
         latch(0xF);
         txt_draw(0x6FD);
     } else {

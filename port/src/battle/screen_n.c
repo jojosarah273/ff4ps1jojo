@@ -8,7 +8,7 @@ void func_80112A68(void)
     latch(4);
     txt_draw(0xACD);
     cell_clear_bank(0xACE);
-    func_80115BCC();
+    battle_row_e5();
     wnd_open_cur();
     latch(0xFF);
     for (;;) {
@@ -31,7 +31,7 @@ Lb14:
         row_page(0xAD);
         sep_b();
         cell_pos_back(0x10);
-        func_8017559C();
+        shop_buy_list();
         txt_set(0x67A);
         row_read(3);
         if (sel(0x202) != 0)
@@ -177,7 +177,7 @@ L00c:
         row_page(0xAD);
         sep_b();
         cell_pos_back(0x10);
-        func_8017559C();
+        shop_buy_list();
         txt_set(0x67A);
         row_read(3);
         if (sel(0x202) != 0)

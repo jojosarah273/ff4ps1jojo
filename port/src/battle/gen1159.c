@@ -14,7 +14,7 @@ void func_80142DC0(void)
     D_8019ED54[0] = D_8019ED44[0];
     do {
         latch(8);
-        func_80143E44();
+        battle_rows_twin();
         cell_step();
         poll_t(0x10);
     } while (io_just() == 0);

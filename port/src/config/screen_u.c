@@ -138,7 +138,7 @@ L288:
         cell_put(0x45);
         func_8011F6D4();
         func_801263F0();
-        func_8011F6A4();
+        anim_noop();
         midrow_degen();
         row_page(1);
         row_read(8);
@@ -175,10 +175,10 @@ L288:
         txt_draw(0x1B1D);
         txt_draw(0x1B1E);
         func_8013389C();
-        func_8012B0D8();
+        animation_row_310();
         func_80124130();
         func_801264C0();
-        func_8011F6A4();
+        anim_noop();
         continue;
     L86c:
         row_page(1);

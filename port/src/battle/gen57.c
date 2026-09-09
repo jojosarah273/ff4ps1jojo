@@ -9,7 +9,7 @@ void func_801420D4(void)
        (4008 0x10/0x70 reads + 8768 row draws), then detail rows and the
        L1422D8/L14230C loops with 8014202C / 80143D64 / 80143D14 /
        80142450 / 80142394. */
-    func_8013D12C();
+    battle_row_wrap();
     func_8013EF78();
     open_row_cur();
     latch(0x40);
@@ -84,7 +84,7 @@ L1422D8:
             func_80143D14();
             cell_draw_cur();
             latch(0xF0);
-            func_80143E44();
+            battle_rows_twin();
             cell_step();
             poll_t(8);
             if (io_just() != 0)

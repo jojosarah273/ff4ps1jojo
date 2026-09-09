@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8015A374.
- * Ground truth: src/func_8015A374.c (byte-verified).
+/* FF4 source-port — interpreted module for options_value_table.
+ * Ground truth: src/options_value_table.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8015A374(void)
+void options_value_table(void)
 {
     /* options value table: 0x3558/0x2060/0x2061/0x203B texts, 0xA9/
        0xAA windows, 80152CDC header; the 10-entry jr-a0 dispatch picks

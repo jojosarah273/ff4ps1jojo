@@ -31,7 +31,7 @@ void func_8010F4DC(void)
     latch(0x70);
     txt_draw(0xAD4);
     txt_draw(0xAD5);
-    func_80115BCC();
+    battle_row_e5();
     latch(0x23);
     wnd_fx_pads();
     latch(1);

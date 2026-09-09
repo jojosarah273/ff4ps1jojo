@@ -1,5 +1,5 @@
-/* FF4 source-port — interpreted module for func_8016BB44.
- * Ground truth: src/func_8016BB44.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_row_41.
+ * Ground truth: src/shop_row_41.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
@@ -9,7 +9,7 @@
 extern int func_8016BB84();
 extern int func_80177DAC();
 
-void func_8016BB44(void)
+void shop_row_41(void)
 
 {
   row_open();

@@ -30,7 +30,7 @@ L27080:
     txt_set(0x1A3C);
     if (gate(0x202) != 0)
         goto L270E8;
-    func_80126610();
+    battle_row_88();
     func_80128C4C();
     func_8013AAA8();
     row_prep(0x20);
@@ -44,7 +44,7 @@ L26F74:
     for (;;) {
         func_80123FB4();
         midrow_paint_c();
-        func_8011F6A4();
+        anim_noop();
         txt_set(0x1A3C);
         func_80127668();
         /* v0/s0 gate -> L26FB4 (or L26F74 tail) */
@@ -72,11 +72,11 @@ L26F74:
             func_8013B04C();
             func_8013AAA8();
             func_80187C20();
-            func_80126610();
+            battle_row_88();
             return;
         }
         func_80187C20();
-        func_80126610();
+        battle_row_88();
         /* v1/v0 latch -> L26F74 while unequal, else return */
         continue;
     }

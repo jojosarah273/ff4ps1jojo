@@ -29,7 +29,7 @@ void func_8012D23C(void)
     latch(4);
     cell_put(0xB1);
     cell_put(0xA5);
-    func_80120F1C();
+    config_row_d600b();
     draw_pad(0x270);
     latch(5);
     cell_flags_scr();
@@ -51,7 +51,7 @@ void func_8012D23C(void)
     battle_rows_29();
     func_801263F0();
     battle_state_dc400();
-    func_8011F6A4();
+    anim_noop();
     func_80120FBC();
     func_8012DB9C();
     cell_push_c8_lo(0x60);
@@ -254,7 +254,7 @@ La88:
     latch(0x84);
     cell_put(0xB1);
     cell_put(0xA5);
-    func_80120F1C();
+    config_row_d600b();
     draw_pad_cur();
     wnd_open_cur();
     func_80121124();

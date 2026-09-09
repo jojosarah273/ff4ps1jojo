@@ -27,7 +27,7 @@ L103370:
     row_open_w(0x10);
     cell_put(0xAD);
     row_page(0xB7);
-    func_8017559C();
+    shop_buy_list();
     key_page(0x79);
     row_page(0x79);
     io_poll(0x30);

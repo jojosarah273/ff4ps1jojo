@@ -4,15 +4,12 @@
  */
 #include "ff4_window.h"
 
-
-extern int func_80122D20();
-
 void func_801229C4(void)
 
 {
   wnd_open(0x18e);
   draw_pad(0x10c0);
-  func_80122D20();
+  equip_cells_render();
   return;
 }
 

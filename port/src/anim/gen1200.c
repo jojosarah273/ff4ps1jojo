@@ -3,13 +3,11 @@
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-extern void func_8016BB44(void);
-
 
 void func_80170084(void) {
     ;
     do {
-        func_8016BB44();
+        shop_row_41();
         cell_set50_from54();
     } while (poll_go(0x202) != 0);
 }

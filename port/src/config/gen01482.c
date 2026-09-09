@@ -4,13 +4,11 @@
  */
 #include "ff4_window.h"
 
-extern int func_8012B0D8();
-
 void func_8012B0B0(void)
 
 {
   cell_clear_bank(0x1b19);
-  func_8012B0D8();
+  animation_row_310();
   return;
 }
 

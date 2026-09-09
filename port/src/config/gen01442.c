@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8015ABEC.
- * Ground truth: src/func_8015ABEC.c (byte-verified).
+/* FF4 source-port — interpreted module for options_rows_b.
+ * Ground truth: src/options_rows_b.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8015ABEC(void)
+void options_rows_b(void)
 {
     /* options: 3C3C/3B04(0x2000) + 8015236C/8015254C rows. */
     cell_state_of();

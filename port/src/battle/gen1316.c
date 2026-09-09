@@ -9,8 +9,8 @@ void func_80145220(void)
     func_8014202C();
     latch(8);
     txt_draw(62246);
-    func_8013D12C();
+    battle_row_wrap();
     func_8013EF78();
     func_80167BA0();
-    func_8013D12C();
+    battle_row_wrap();
 }

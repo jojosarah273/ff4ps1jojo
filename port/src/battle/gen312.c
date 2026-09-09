@@ -42,7 +42,7 @@ L144ca4:
         sep();
         row_prep_close();
         latch(2);
-        func_80143E44();
+        battle_rows_twin();
         txt_cell_cur();
         cell_draw_cur();
         func_80143D14();

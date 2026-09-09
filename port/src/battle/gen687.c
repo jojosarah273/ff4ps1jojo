@@ -30,7 +30,7 @@ void func_80103790(void)
     label(0x1706);
     func_800FB224();
     latch(0x10);
-    func_8017559C();
+    shop_buy_list();
     latch(0x81);
     txt_draw(0x4200);
     return;

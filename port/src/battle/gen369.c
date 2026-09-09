@@ -4,8 +4,6 @@
  */
 #include "ff4_window.h"
 
-
-extern int func_80115BCC();
 extern int func_80115D2C();
 
 void func_801030F8(void)
@@ -27,7 +25,7 @@ void func_801030F8(void)
   txt_draw(0xacd);
   latch(2);
   txt_draw(0xace);
-  func_80115BCC();
+  battle_row_e5();
   do {
     shop_view_run();
     func_80115D2C();

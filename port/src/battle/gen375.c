@@ -36,7 +36,7 @@ L118d80:
         row_sync2_cur();
         row_prep_close();
     L118E10:
-        func_80117DF8();
+        rows_swap44_54();
         poll_t(0x140);
         if (io_just() == 0)
             continue;
@@ -57,7 +57,7 @@ L118e48:
         row_sync2_cur();
         row_prep_close();
     L118E88:
-        func_80117DF8();
+        rows_swap44_54();
         poll_t(0x140);
         if (io_just() == 0)
             continue;

@@ -16,7 +16,7 @@ void func_80144F24(void)
 L144f6c:
     for (;;) {
         gpu_driver_run();
-        func_80140310();
+        config_row_8468();
         row_prep(0x20);
         cell_push9();
         sep_b();
@@ -29,7 +29,7 @@ L144f6c:
             continue;
         break;
     }
-    func_80140310();
+    config_row_8468();
     latch(0x2C);
     func_8009A0A0();
     wnd_open(0x10);
@@ -43,7 +43,7 @@ L144f6c:
 L145038:
     for (;;) {
         gpu_driver_run();
-        func_80140310();
+        config_row_8468();
         row_prep(0x20);
         cell_push9();
         sep_a();
@@ -57,6 +57,6 @@ L145038:
             continue;
         break;
     }
-    func_80140310();
+    config_row_8468();
     return;
 }

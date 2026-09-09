@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80126610.
- * Ground truth: src/func_80126610.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_row_88.
+ * Ground truth: src/battle_row_88.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80126610(void)
+void battle_row_88(void)
 {
     /* rows: 0x88 window, 0x2100 text, 8011F320/8011F844 rows;
        6434(0x80) gate; loop L126618 on 5B8C. */

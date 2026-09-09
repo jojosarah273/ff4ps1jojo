@@ -8,7 +8,7 @@ void func_80134E74(void)
     /* ability summary: 0x48C0/0x1A71/0x1A01/0x1A02 texts,
        80120F1C/8012807C/801257BC/8011EF30/80135298/8011F8D4/
        8011FBA4 rows; linear render. */
-    func_80120F1C();
+    config_row_d600b();
     wnd_open(0x48C0);
     label(0x1A71);
     func_8012807C();

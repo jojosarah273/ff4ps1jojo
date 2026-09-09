@@ -29,7 +29,7 @@ void func_80141760(void)
     row_sync2(0x50);
     cell_pull9_hi(0xF408);
     row_prep_close();
-    func_80140310();
+    config_row_8468();
 L1898:
     for (;;) {
         gpu_driver_run();
@@ -44,7 +44,7 @@ L1898:
         cell_pull9_hi(0xF408);
         sep();
         row_prep_close();
-        func_80140310();
+        config_row_8468();
         cell_dec_bank(0xF137);
         if (poll_go(0x202) != 0)
             continue;
@@ -96,6 +96,6 @@ L1a50:
     wnd_open_cur();
     label(0xF406);
     label(0xF408);
-    func_80140310();
+    config_row_8468();
     return;
 }

@@ -29,7 +29,7 @@ L1136e4:
         txt_draw(0xAD4);
         cell_push_c8();
         txt_draw(0xAD5);
-        func_80115BCC();
+        battle_row_e5();
     L11379c:
         for (;;) {
             shop_view_run();

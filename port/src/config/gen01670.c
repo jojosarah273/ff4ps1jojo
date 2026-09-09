@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8015A56C.
- * Ground truth: src/func_8015A56C.c (byte-verified).
+/* FF4 source-port — interpreted module for options_cursor_cells.
+ * Ground truth: src/options_cursor_cells.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8015A56C(void)
+void options_cursor_cells(void)
 {
     /* options: s16 cursor from buf[0xAB:AC], sign-clean 0x8000,
        latched into buf[0xD4:D5]. */

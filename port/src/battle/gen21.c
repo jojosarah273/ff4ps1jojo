@@ -61,7 +61,7 @@ L970:
     for (;;) {
         txt_cell(0x1000);
         cell_pull_c8(0xAD6);
-        func_80117DF8();
+        rows_swap44_54();
         step2();
         poll_t(5);
         if (io_just() != 0)
@@ -110,7 +110,7 @@ L9e8:
         if (io_just() != 0)
             page_paint(0x1000);
     Lb4c:
-        func_80117DF8();
+        rows_swap44_54();
         poll_t(0x140);
         if (io_just() == 0)
             goto L9e8;
@@ -129,7 +129,7 @@ Lb74:
     wnd_open_cur();
     for (;;) {
         page_paint(0x1000);
-        func_80117DF8();
+        rows_swap44_54();
         poll_t(0x140);
         if (io_just() != 0)
             break;

@@ -21,16 +21,19 @@ uint32_t ability_screen_a() { return 0; }
 uint32_t ability_screen_b() { return 0; }
 uint32_t anim_cmd() { return 0; }
 uint32_t anim_cmd_g() { return 0; }
+uint32_t anim_cmd_header() { return 0; }
 uint32_t anim_cmd_pole() { return 0; }
 uint32_t anim_cmd_s() { return 0; }
 uint32_t anim_cmd_sd() { return 0; }
 uint32_t anim_cmd_w() { return 0; }
 uint32_t anim_cmd_w1() { return 0; }
+uint32_t anim_noop() { return 0; }
 uint32_t arm_sub() { return 0; }
 uint32_t aux_row() { return 0; }
 uint32_t bank_rows() { return 0; }
 uint32_t bank_rows2() { return 0; }
 uint32_t battle_commands() { return 0; }
+uint32_t battle_row_wrap() { return 0; }
 uint32_t cancel_handler() { return 0; }
 uint32_t cast_alt2() { return 0; }
 uint32_t cast_alt_rows() { return 0; }
@@ -236,7 +239,6 @@ uint32_t func_8011EB7C() { return 0; }
 uint32_t func_8011EB9C() { return 0; }
 uint32_t func_8011F300() { return 0; }
 uint32_t func_8011F67C() { return 0; }
-uint32_t func_8011F6A4() { return 0; }
 uint32_t func_8011F844() { return 0; }
 uint32_t func_8011F864() { return 0; }
 uint32_t func_8011FB74() { return 0; }
@@ -298,7 +300,6 @@ uint32_t func_8013B0C4() { return 0; }
 uint32_t func_8013B764() { return 0; }
 uint32_t func_8013B7B8() { return 0; }
 uint32_t func_8013C50C() { return 0; }
-uint32_t func_8013D12C() { return 0; }
 uint32_t func_8013E588() { return 0; }
 uint32_t func_8013EF78() { return 0; }
 uint32_t func_80141DA0() { return 0; }
@@ -460,7 +461,6 @@ uint32_t func_80197338() { return 0; }
 uint32_t func_80197358() { return 0; }
 uint32_t func_80197378() { return 0; }
 uint32_t func_80197398() { return 0; }
-uint32_t func_801973B8() { return 0; }
 uint32_t func_801975E8() { return 0; }
 uint32_t func_80197608() { return 0; }
 uint32_t func_80197630() { return 0; }

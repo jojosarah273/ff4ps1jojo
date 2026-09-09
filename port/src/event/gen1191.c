@@ -8,10 +8,10 @@ void func_80192478(void)
     /* event: 801928E8 spins, 80191838/80191858/80192858 rows, then
        801928E8/80192718/80191AE8(9)/801920F0 tail. */
     if (io_just() != 0)
-        func_801928E8();
+        event_spin_wait();
 L1924cc:
     for (;;) {
-        func_801928E8();
+        event_spin_wait();
         if (io_just() == 0)
             goto L192524;
         if (io_just() != 0)
@@ -29,7 +29,7 @@ L192568:
     func_80192858();
 L1925bc:
     for (;;) {
-        func_801928E8();
+        event_spin_wait();
         func_80192718();
         if (io_just() == 0)
             goto L1925E8;

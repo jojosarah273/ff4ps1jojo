@@ -34,13 +34,13 @@ LCC78:
     latch(0x9E);
 LCCC0:
     func_8014D708();
-    func_8013D12C();
+    battle_row_wrap();
     func_80148DE8();
     sep();
 LCCFC:
     for (;;) {
         cell_cursor_dec();
-        func_80143E44();
+        battle_rows_twin();
         row_close2();
         sep_a();
         row_open_w(0x20);
@@ -82,7 +82,7 @@ LCDD4:
         sep();
         for (;;) {
             latch(4);
-            func_80143E44();
+            battle_rows_twin();
             cell_step();
             poll_t(8);
             if (io_just() != 0)
@@ -101,6 +101,6 @@ LCDD4:
             continue;
         break;
     }
-    func_8013D12C();
+    battle_row_wrap();
     return;
 }

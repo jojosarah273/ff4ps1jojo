@@ -141,7 +141,7 @@ submenu1:                                   /* "cast/settings" 0x21 menu */
             row_open_w(0x10);
             cell_put(0xAD);
             row_page(0xB8);
-            func_8017559C();
+            shop_buy_list();
             poll_pair(0x79);
             continue;
         }
@@ -334,7 +334,7 @@ memscreen:
     txt_draw(0x1705);
     latch(2);
     cell_put(0x2C);
-    func_8010D9D4();
+    battle_row_linear();
     cell_tick_half();
     if (cell_flags_nz50(0x101) != 0)
         goto mem2;
@@ -346,7 +346,7 @@ memscreen:
 mem2:
     latch(2);
     cell_put(0x2E);
-    func_8010D9D4();
+    battle_row_linear();
     cell_tick_half();
     if (cell_flags_nz50(0x101) != 0)
         goto mem_loop;
@@ -357,7 +357,7 @@ mem2:
 mem_loop:
     for (;;) {
         wnd_fx_7d();
-        func_8010D9D4();
+        battle_row_linear();
         io_poll(0x10);
         if (io_go() != 0)
             break;

@@ -30,7 +30,7 @@ L1036C0:
     cell_put(0xAD);
     row_page(0xB9);
     cell_tick_half();
-    func_8017559C();
+    shop_buy_list();
     key_page(0x79);
     row_page(0x79);
     io_poll(0x30);

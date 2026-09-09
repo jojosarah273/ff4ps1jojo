@@ -18,7 +18,7 @@ void func_8010E388(void)
     latch(2);
     txt_draw(0xAD0);
     txt_draw(0xAD1);
-    func_80115BCC();
+    battle_row_e5();
     latch(1);
     cell_put(0xE3);
     latch(0x23);

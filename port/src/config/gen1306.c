@@ -21,7 +21,7 @@ L15AB7C:
 L15ABBC:
     goto L15ABC4;
 L15ABC4:
-    func_8015ABEC();
-    func_8015A56C();
+    options_rows_b();
+    options_cursor_cells();
     return;
 }

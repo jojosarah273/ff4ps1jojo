@@ -8,7 +8,7 @@ void func_8014B6E8(void)
     /* battle item: 801442BC/8014B98C/80148CAC/800953F4 preps; loop
        L14B738 (6D70(0x29C5)/5A90(5) gates), closes 8014DA2C/8014D568. */
     func_801442BC();
-    func_8014B98C();
+    battle_row_f2a0();
     func_80148CAC();
     func_800953F4();
     txt_set(0x34C2);

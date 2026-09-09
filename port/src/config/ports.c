@@ -32,9 +32,9 @@ void func_8016046C(void)
     cell_draw(0x2008);
     open_row(0xD6);
     row_page(0x88);
-    func_8015A374();
+    options_value_table();
     latch(3);
-    func_80153374();
+    option_row_d4();
     page_paint(0x2A06);
     row_page(0x88);
     row_sel_cell_cur();

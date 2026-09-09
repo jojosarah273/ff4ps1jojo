@@ -47,7 +47,7 @@ Lde10:
     row_page(0xE8);
     if (gate(0x8080) == 0) {
         open_row(0xE8);
-        func_8012B0D8();
+        animation_row_310();
         func_8012B168();
         return;
     }
@@ -62,7 +62,7 @@ Lde10:
     cell_tick_or(cell_state(0x45));
     if (ticker_reblend2(0x202) != 0)
         goto Ldf70;
-    func_8012B0D8();
+    animation_row_310();
     return;
 Ldf70:
     func_80124298();
@@ -103,7 +103,7 @@ Ldf70:
     cell_draw(0x16B9);
     func_801772E4();
     func_80125A64();
-    func_8012B0D8();
+    animation_row_310();
     func_80122A9C();
     func_80122538();
     func_80126528();

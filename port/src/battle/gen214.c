@@ -120,7 +120,7 @@ L4778:
         row_open_w(4);
         cell_draw(0xF1B3);
         cell_draw(0xF1F3);
-        func_80143E44();
+        battle_rows_twin();
         cell_step();
         poll_t(8);
         if (io_just() != 0)

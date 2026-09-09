@@ -9,7 +9,7 @@ void func_8015084C(void)
        L15089C renders 0x2100/0x420C/0x420B icons and closes via
        80150C58; redraws on return. */
     cb_slot15();
-    func_801928E8();
+    event_spin_wait();
     func_801942FC();
     func_801506BC(8);
 L15089c:
@@ -36,7 +36,7 @@ L15089c:
         cell_cursor_read();
         row_pad();
         cb_slot15();
-        func_801928E8();
+        event_spin_wait();
         func_801942FC();
         func_801506BC();
         break;

@@ -55,7 +55,7 @@ L12A808:
     func_8011F724();
     return;
 L12A848:
-    func_8012B0D8();
+    animation_row_310();
     return;
 L12A850:
     row_done();

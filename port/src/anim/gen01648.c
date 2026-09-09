@@ -6,25 +6,25 @@
 void func_8017F644(void)
 {
     /* battle anim: 6x 801973B8 rows, v0 gate, 8x 801973B8 tail. */
-    func_801973B8();
-    func_801973B8();
-    func_801973B8();
-    func_801973B8();
-    func_801973B8();
-    func_801973B8();
+    anim_cmd_header();
+    anim_cmd_header();
+    anim_cmd_header();
+    anim_cmd_header();
+    anim_cmd_header();
+    anim_cmd_header();
     if (io_just() == 0)
         goto L17F78C;
-    func_801973B8();
+    anim_cmd_header();
     goto L17F7A8;
 L17F78C:
-    func_801973B8();
+    anim_cmd_header();
 L17F7A8:
-    func_801973B8();
-    func_801973B8();
-    func_801973B8();
-    func_801973B8();
-    func_801973B8();
-    func_801973B8();
-    func_801973B8();
+    anim_cmd_header();
+    anim_cmd_header();
+    anim_cmd_header();
+    anim_cmd_header();
+    anim_cmd_header();
+    anim_cmd_header();
+    anim_cmd_header();
     return;
 }

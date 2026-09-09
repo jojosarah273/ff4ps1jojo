@@ -13,7 +13,7 @@ void func_80141A80(void)
 L141ab8:
     for (;;) {
         gpu_driver_run();
-        func_80140310();
+        config_row_8468();
         row_prep(0x20);
         cell_push9();
         sep_b();

@@ -18,9 +18,9 @@ void func_8015FD14(void)
     cell_clear_bank(0x2706);
     open_row(0xD6);
     row_page(0xCF);
-    func_8015A374();
+    options_value_table();
     latch(3);
-    func_80153374();
+    option_row_d4();
     page_paint(0x2A06);
     txt_set(0x353F);
     row_sel_cell_cur();

@@ -38,12 +38,12 @@ L134d38:
         func_80123FB4();
         midrow_paint_c();
         func_80126330();
-        func_8011F6A4();
+        anim_noop();
         func_801378B0();
         latch(0xA);
         txt_draw(0x1BB4);
         func_80134FF4();
-        func_80126610();
+        battle_row_88();
         func_80122114();
         sep();
         stat_sync();

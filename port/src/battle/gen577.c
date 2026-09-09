@@ -4,8 +4,6 @@
  */
 #include "ff4_window.h"
 
-extern int func_8017559C();
-
 void func_801146F0(void)
 
 {
@@ -16,7 +14,7 @@ void func_801146F0(void)
   latch(0x20);
   cell_put(0xad);
   latch(0x10);
-  func_8017559C();
+  shop_buy_list();
   latch(2);
   cell_put(0xac);
   latch(0x81);

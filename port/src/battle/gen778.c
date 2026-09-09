@@ -11,7 +11,7 @@ void func_80110024(void)
     label(2770);
     cell_clear_bank(2765);
     cell_clear_bank(2766);
-    func_80115BCC();
+    battle_row_e5();
     func_8011053C();
     wnd_open(48);
     tail(239);

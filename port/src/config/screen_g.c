@@ -10,7 +10,7 @@ void func_80128D4C(void)
         goto dE8;
     func_80123D3C();
     func_80125A64();
-    func_80120F1C();
+    config_row_d600b();
     draw_pad_cur();
     battle_rows_sync();
     draw_pad_cur();
@@ -37,7 +37,7 @@ E00:
     draw_pad(0xB600);
     battle_wait_just(0x7E7E);
     row_prep_close();
-    func_80120F1C();
+    config_row_d600b();
     txt_set(0x1B49);
     if (gate(2) == 0) {
         draw_pad_cur();
@@ -86,7 +86,7 @@ E00:
     tail(0x90);
     tail(0x9C);
     func_8016EA7C();
-    func_8011F6A4();
+    anim_noop();
     func_80126590();
     cell_clear_bank(0x1BBA);
     goto L5C0;
@@ -312,14 +312,14 @@ L5C8:
     txt_set(0x1B08);
     if (gate(0x80) != 0)
         goto L69C;
-    func_80126610();
+    battle_row_88();
     return;
 L69C:
     func_80129838();
     func_80129C54();
     func_801264C0();
     func_8011FF40();
-    func_80126610();
+    battle_row_88();
     return;
 L6CC:
     txt_set(0x1BBA);

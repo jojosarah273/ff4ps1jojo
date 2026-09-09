@@ -21,7 +21,7 @@ L10E9B4:
         battle_gate_early();
         row_page(0xAD);
         cell_set50_from40();
-        func_8017559C();
+        shop_buy_list();
         row_page(0xAD);
         io_poll(0x78);
         if (io_just() == 0)
@@ -51,7 +51,7 @@ L10EA7C:
         func_800FE5D4();
         battle_gate_early();
         row_page(0xAD);
-        func_8017559C();
+        shop_buy_list();
         row_page(0xAD);
         io_poll(0x20);
         if (io_just() == 0)

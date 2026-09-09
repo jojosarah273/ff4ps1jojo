@@ -18,6 +18,6 @@ void func_8015A91C(void)
     row_page(174);
     row_open_w(0);
     cell_put(170);
-    func_8015ABEC();
-    func_8015A56C();
+    options_rows_b();
+    options_cursor_cells();
 }

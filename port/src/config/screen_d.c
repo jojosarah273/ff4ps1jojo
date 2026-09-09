@@ -281,7 +281,7 @@ s080:
     l35c:
         open_row(0xD6);
         page(0xC7);
-        func_8015A374();
+        options_value_table();
         txt_set(0x38D8);
         if (gate(2) != 0)
             goto l478;
@@ -314,7 +314,7 @@ s080:
         open_row(0xD5);
     l478:
         latch(3);
-        func_80153374();
+        option_row_d4();
     l488:
         key_page(0xC7);
         row_page(0xC7);

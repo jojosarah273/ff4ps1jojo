@@ -11,7 +11,7 @@ void func_80137BB8(void)
     func_8012219C();
     return;
 L7c00:
-    func_80126610();
+    battle_row_88();
 L7c08:
     func_80137B18();
     func_80178BB4();
@@ -120,7 +120,7 @@ L7fcc:
     func_8011FF40();
     /* v0/s1 branch */
     func_80138408();
-    func_80126610();
+    battle_row_88();
     /* v1/v0 + s2 branches */
     func_80178BB4();
     func_801793F8();
@@ -131,7 +131,7 @@ L80dc:
     draw_pad_cur();
     battle_rows_sync();
     draw_pad_cur();
-    func_80126610();
+    battle_row_88();
     func_80138788();
     goto L7c08;
     return;

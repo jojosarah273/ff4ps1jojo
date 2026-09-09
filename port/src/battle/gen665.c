@@ -11,7 +11,7 @@ extern int func_800953F4();
 
 
 extern int func_80141FC4();
-extern int func_8014B98C();
+
 extern int func_8014DA2C();
 
 void func_8014B36C(void)
@@ -30,7 +30,7 @@ void func_8014B36C(void)
   latch(0xff);
   txt_draw(0xf320);
   cell_clear_bank(0xf2d0);
-  func_8014B98C();
+  battle_row_f2a0();
   func_800953F4();
   return;
 }

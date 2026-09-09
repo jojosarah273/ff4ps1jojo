@@ -35,7 +35,7 @@ void func_80138A6C(void)
     func_80126330();
     func_80138CB0();
     func_80139AA4();
-    func_8011F6A4();
+    anim_noop();
     battle_state_dc400();
     battle_mode_dispatch();
     battle_mode_dispatch();
@@ -48,7 +48,7 @@ L138bdc:
         func_80126590();
         func_80138D24();
         cell_clear_bank(0x1B49);
-        func_80126610();
+        battle_row_88();
         cell_flags_set4();
         row_prep(0x20);
         cell_cursor_adv2();

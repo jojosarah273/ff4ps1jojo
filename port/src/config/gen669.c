@@ -16,7 +16,7 @@ void func_80139CF4(void)
     tail(0x8D);
     tail(0x8A);
     func_8016EA7C();
-    func_80126610();
+    battle_row_88();
     latch(0x13);
     cell_pull_c8_lo(0x212C);
     wnd_open(0x4040);
@@ -29,11 +29,11 @@ void func_80139CF4(void)
     label(0x122);
     func_8011EE34();
     midrow_paint_c();
-    func_8011F6A4();
+    anim_noop();
     func_8011F864();
     battle_mode_dispatch();
     func_80139E34();
-    func_80126610();
+    battle_row_88();
     latch(0x1F);
     cell_pull_c8_lo(0x212C);
     func_801240A8();
@@ -41,7 +41,7 @@ void func_80139CF4(void)
     func_80126418();
     midrow_paint_c();
     func_80122A24();
-    func_8011F6A4();
+    anim_noop();
     func_80126480();
     func_80126590();
     return;

@@ -5,7 +5,7 @@
  * paint/prep names alongside are owned by the earlier gen wave;
  * this module only carries the ones that were still stubbed.)
  *
- * Ground truth: src/func_8011F684, 8011EF0C, 80140558, 80150C38,
+ * Ground truth: src/midrow_pad88_run, 8011EF0C, 80140558, 80150C38,
  * 80169128, 80124EAC (byte-verified).
  */
 #include <stdint.h>

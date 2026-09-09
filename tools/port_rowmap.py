@@ -64,9 +64,12 @@ CURFIX = ("open_row", "tail", "wnd_open", "txt_set", "txt_cell", "row_prep", "po
           "row_sel_cell", "row_sel_cell2", "row_arm_s", "row_arm_s2", "open_row", "row_read", "page_open", "gate")
 
 def map_calls(txt):
-    for a, b in M:
-        if b:
-            txt = txt.replace(a, b)
+    if "port_names" not in globals():
+        import sys
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        globals()["port_names"] = __import__("port_names")
+    for a, b in port_names.NM.items():
+        txt = re.sub(r"\bfunc_%s\b" % a, b, txt)
     return txt
 
 def main():

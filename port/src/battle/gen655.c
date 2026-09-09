@@ -12,19 +12,19 @@ void func_8010E878(void)
     wnd_open_cur();
 L10e898:
     for (;;) {
-        func_8010D9D4();
+        battle_row_linear();
         cell_tick_half();
         sep_a();
         row_open_w(0x40);
         cell_pull_c8(0x300);
-        func_8010D9D4();
+        battle_row_linear();
         cell_tick_half();
         sep_a();
         row_open_w(0x40);
         cell_pull_c8(0x301);
         latch(0xFF);
         cell_pull_c8(0x302);
-        func_8010D9D4();
+        battle_row_linear();
         row_read(7);
         row_sel_cell_cur();
         cell_pull_c8(0x303);

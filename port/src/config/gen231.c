@@ -62,7 +62,7 @@ void func_80132CFC(void)
     func_8013327C();
     row_page(0xE8);
     func_80150A30();
-    func_8012B0D8();
+    animation_row_310();
     func_80124130();
     func_801264C0();
     row_prep(0x20);
