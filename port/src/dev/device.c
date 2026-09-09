@@ -9,9 +9,6 @@
 #define CHAIN_LIVE 0x40
 #define KICK_BUSY  0x1000000
 
-cmd_pts *device_pts_a(void);
-cmd_pts *device_pts_b(void);
-
 typedef struct cmd_pts {
     volatile uint8_t  *live;   /* +0x00: armed/live byte  */
     volatile uint8_t  *busy;   /* +0x04: busy byte        */
@@ -21,6 +18,9 @@ typedef struct cmd_pts {
     volatile uint32_t *kick;   /* +0x14: kick             */
     volatile uint32_t *fin;    /* +0x18: finish           */
 } cmd_pts;
+
+cmd_pts *device_pts_a(void);
+cmd_pts *device_pts_b(void);
 
 /* 80191C78: 0x20943 CVT chain with 0x1323/0x1325 opwords. */
 void device_chain_a(uint32_t a0, uint32_t a1)
