@@ -27,3 +27,8 @@ Swept the tiny pool over gcc-2.6.0/2.6.3/2.7.2/2.7.2cdk/2.8.1/2.95.2 +
 psx lanes. First matches (all gcc-2.95.2):
 - func_800F4998, func_800F4B78, func_800F4BB0 (window flag helpers)
 - more pending as the sweep continues; 746 matched so far.
+
+## Update: ladder lane sweep (tiny band) — 25 more matches
+gcc-2.8.1 × 15, gcc-2.6.0 × 5, gcc-2.95.2 × 3, gcc-2.7.2 × 2.
+**Byte-verified 746 → 780 (31.0%).** The era lanes are the productive
+track for the remaining pool; mid-size band sweep next.
