@@ -262,3 +262,18 @@ README/PLAN/ARCH: pitch focused on the technical goal — native port;
 widescreen/expansion moved to a separate Phase C track per user.
 All pushed.
 ================================================================================
+
+================================================================================
+HEADLESS LEG 13 — PORT SCALED TO 774 MODULES (row-map fleet)
+Built tools/port_rowmap.py + port/include/ff4_window.h: a semantic
+window/input primitive API and a faithful call-mapper that turns every
+window-driven Phase A screen into an interpreted module (names the 0x800F
+primitives, keeps row-helper func ids, re-emits d-externs, normalizes
+arity with *_cur variants + an auto-fix loop). Fleet: 452 -> 774 modules
+across battle/config/shop/anim/event/menu domains; whole tree gcc-clean
+(0 failures). Coverage table: ~1900+ funcs referenced.
+Byte-match held at 827 (32.9%) — the era-lane plateau; restructure track
+noted as the only lever (idiot-proof: evaluated 12 candidates, 580+
+bytes off even at best rung).
+All pushed.
+================================================================================
