@@ -33,7 +33,8 @@ import sys
 und = set(sys.argv[1].split())
 defl = set(sys.argv[2].split())
 stub = sorted(u for u in und
-              if u not in defl and not u.startswith("__") and u != "main")
+              if u not in defl and not u.startswith("__") and u != "main"
+              and not u.startswith("_GLOBAL"))
 lines = ["/* auto stubs (nm-driven, one shot; deck-only unresolved). */",
          "#include <stdint.h>", "",
          "static uint32_t g_vram_sim[4096];",

@@ -18,14 +18,20 @@
 /* exported state (was raw PS1 cells)                                  */
 /* ------------------------------------------------------------------ */
 uint8_t  g_scratch[0x400];       /* 0x1F8003C0 scratch pad (low bytes) */
-uint8_t  g_vram_[0x800];         /* host backing for the 800D bank     */
+uint8_t  g_vram_[0x10000];       /* host backing for the 800D/800C bank */
+uint8_t *D_800D0000 = &g_vram_[0x0000];   /* main catalog bank          */
+uint8_t *D_800C8000 = &g_vram_[0x8000];   /* pos-hi side bank           */
 uint16_t D_8019ED44;             /* position counter (u16)             */
+uint16_t D_8019ED48;             /* cursor-table word (u16)            */
 uint16_t D_8019ED4C;             /* cell cursor word                   */
 uint32_t D_8019ED50;             /* merged cell word                   */
 uint16_t D_8019ED54;             /* delta register (u16)               */
+uint16_t D_8019ED58;             /* base index register (u16)          */
+uint8_t  D_8019ED5C[2];          /* aux status bytes                  */
+uint8_t  D_8019ED60[2];          /* cell-pair source bytes             */
 uint8_t  D_8019ED68;             /* cursor-show mask byte              */
-uint8_t  g_ticker_byte;          /* the byte D_8019ED40 points at      */
-uint8_t *D_8019ED40 = &g_ticker_byte;
+uint8_t  g_tick[2];              /* ticker byte pair D_8019ED40 points */
+uint8_t *D_8019ED40 = g_tick;
 
 uint32_t catalog_base(uint32_t a0);
 

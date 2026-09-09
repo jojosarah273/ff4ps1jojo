@@ -8,9 +8,6 @@ uint32_t *D_800D1E05 = g_slots;
 uint32_t *D_80199230 = g_slots;
 uint32_t *D_8019A12C = g_slots;
 uint32_t *D_8019ED30 = g_slots;
-uint32_t *D_8019ED48 = g_slots;
-uint32_t *D_8019ED58 = g_slots;
-uint32_t *D_8019ED60 = g_slots;
 uint32_t *D_8019EE60 = g_slots;
 uint32_t *D_8019EF0C = g_slots;
 uint32_t *D_8019FFE8 = g_slots;
@@ -34,8 +31,6 @@ uint32_t aux_row() { return 0; }
 uint32_t bank_rows() { return 0; }
 uint32_t bank_rows2() { return 0; }
 uint32_t battle_commands() { return 0; }
-uint32_t battle_rows_run() { return 0; }
-uint32_t battle_wait_just() { return 0; }
 uint32_t cancel_handler() { return 0; }
 uint32_t cast_alt2() { return 0; }
 uint32_t cast_alt_rows() { return 0; }
@@ -45,39 +40,15 @@ uint32_t cast_row() { return 0; }
 uint32_t cast_tail() { return 0; }
 uint32_t cat_reset() { return 0; }
 uint32_t catalog() { return 0; }
-uint32_t catalog_dispatch() { return 0; }
-uint32_t catalog_dispatch_0() { return 0; }
 uint32_t catalog_guard() { return 0; }
 uint32_t cd_row() { return 0; }
-uint32_t cell_bank_sel() { return 0; }
-uint32_t cell_clear_bank() { return 0; }
-uint32_t cell_clear_bank2() { return 0; }
-uint32_t cell_clear_pad() { return 0; }
-uint32_t cell_cur_save54() { return 0; }
-uint32_t cell_cursor_adv2() { return 0; }
-uint32_t cell_cursor_dec() { return 0; }
-uint32_t cell_cursor_read() { return 0; }
-uint32_t cell_cursor_ret2() { return 0; }
-uint32_t cell_dec_bank() { return 0; }
-uint32_t cell_dec_cell() { return 0; }
 uint32_t cell_dispatch() { return 0; }
 uint32_t cell_dispatch_cur() { return 0; }
 uint32_t cell_draw2() { return 0; }
-uint32_t cell_flags_cmp() { return 0; }
-uint32_t cell_flags_cmp3() { return 0; }
-uint32_t cell_flags_cmp_pos() { return 0; }
-uint32_t cell_flags_nz50() { return 0; }
-uint32_t cell_flags_pack() { return 0; }
-uint32_t cell_flags_pack3() { return 0; }
-uint32_t cell_flags_repack() { return 0; }
 uint32_t cell_flags_repack2() { return 0; }
-uint32_t cell_flags_scr() { return 0; }
-uint32_t cell_flags_set4() { return 0; }
-uint32_t cell_flags_zero50() { return 0; }
 uint32_t cell_fmt() { return 0; }
 uint32_t cell_fmt2() { return 0; }
 uint32_t cell_go() { return 0; }
-uint32_t cell_inc_cell() { return 0; }
 uint32_t cell_mix() { return 0; }
 uint32_t cell_pad() { return 0; }
 uint32_t cell_peek0() { return 0; }
@@ -86,46 +57,11 @@ uint32_t cell_peek_v() { return 0; }
 uint32_t cell_poke() { return 0; }
 uint32_t cell_poke0() { return 0; }
 uint32_t cell_poke2() { return 0; }
-uint32_t cell_pos_back() { return 0; }
 uint32_t cell_pos_back2() { return 0; }
-uint32_t cell_pos_fwd() { return 0; }
-uint32_t cell_pos_mask() { return 0; }
-uint32_t cell_pos_sub16() { return 0; }
-uint32_t cell_pull60() { return 0; }
-uint32_t cell_pull89_bank() { return 0; }
-uint32_t cell_pull9_hi() { return 0; }
-uint32_t cell_pull_c8() { return 0; }
-uint32_t cell_pull_c8_bank() { return 0; }
-uint32_t cell_pull_c8_lo() { return 0; }
-uint32_t cell_pull_c8_off() { return 0; }
-uint32_t cell_push89_sel() { return 0; }
-uint32_t cell_push9() { return 0; }
-uint32_t cell_push9_bank() { return 0; }
-uint32_t cell_push_c8() { return 0; }
-uint32_t cell_push_c8_b4() { return 0; }
-uint32_t cell_push_c8_b4o() { return 0; }
-uint32_t cell_push_c8_cur() { return 0; }
-uint32_t cell_push_c8_d58() { return 0; }
-uint32_t cell_push_c8_lo() { return 0; }
-uint32_t cell_push_c8_sel() { return 0; }
-uint32_t cell_put_hi9() { return 0; }
 uint32_t cell_refresh() { return 0; }
-uint32_t cell_set50_from40() { return 0; }
-uint32_t cell_set50_from54() { return 0; }
-uint32_t cell_sink89() { return 0; }
-uint32_t cell_sink89_c() { return 0; }
 uint32_t cell_sink8_9() { return 0; }
-uint32_t cell_stamp8_9() { return 0; }
-uint32_t cell_stamp8_9_b() { return 0; }
 uint32_t cell_step2() { return 0; }
-uint32_t cell_tick_and() { return 0; }
-uint32_t cell_tick_dbl() { return 0; }
-uint32_t cell_tick_half() { return 0; }
-uint32_t cell_tick_or() { return 0; }
-uint32_t cell_tick_sub() { return 0; }
 uint32_t cell_v() { return 0; }
-uint32_t cell_word_half() { return 0; }
-uint32_t cell_word_half_s() { return 0; }
 uint32_t clear_done() { return 0; }
 uint32_t clear_id() { return 0; }
 uint32_t cmd_subscreen() { return 0; }
@@ -287,6 +223,10 @@ uint32_t func_800FD914() { return 0; }
 uint32_t func_800FD9FC() { return 0; }
 uint32_t func_800FDA4C() { return 0; }
 uint32_t func_800FDB5C() { return 0; }
+uint32_t func_800FDBBC() { return 0; }
+uint32_t func_800FDD8C() { return 0; }
+uint32_t func_800FDF34() { return 0; }
+uint32_t func_800FE110() { return 0; }
 uint32_t func_800FE5D4() { return 0; }
 uint32_t func_800FE634() { return 0; }
 uint32_t func_800FE6E4() { return 0; }
@@ -757,13 +697,11 @@ uint32_t row_tick() { return 0; }
 uint32_t screens_commit() { return 0; }
 uint32_t sell_row() { return 0; }
 uint32_t set() { return 0; }
-uint32_t shop_buy_run() { return 0; }
 uint32_t shop_close() { return 0; }
 uint32_t shop_feeder() { return 0; }
 uint32_t shop_row() { return 0; }
 uint32_t shop_row_a() { return 0; }
 uint32_t shop_row_b() { return 0; }
-uint32_t shop_view_run() { return 0; }
 uint32_t spell_commit_row() { return 0; }
 uint32_t spell_done() { return 0; }
 uint32_t spell_panel() { return 0; }
@@ -774,16 +712,12 @@ uint32_t state_open() { return 0; }
 uint32_t step() { return 0; }
 uint32_t step_cell() { return 0; }
 uint32_t sub_row() { return 0; }
-uint32_t ticker_reblend2() { return 0; }
 uint32_t txt_cell_cur() { return 0; }
 uint32_t txt_draw2() { return 0; }
 uint32_t txt_label() { return 0; }
 uint32_t txt_rows() { return 0; }
 uint32_t wnd_clear() { return 0; }
-uint32_t wnd_fx_7d() { return 0; }
-uint32_t wnd_fx_7d_b() { return 0; }
 uint32_t wnd_fx_pads() { return 0; }
-uint32_t wnd_fx_tags() { return 0; }
 uint32_t wnd_gate() { return 0; }
 uint32_t wnd_held() { return 0; }
 uint32_t wnd_key() { return 0; }

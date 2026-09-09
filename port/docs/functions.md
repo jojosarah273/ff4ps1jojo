@@ -7,7 +7,7 @@ column is the semantic 0x800F primitive name (tool:
 `bv` marks byte-verified. Unassigned rows are stubbed until the
 register machines are interpreted (Avenue 2).
 
-- functions: 2516   interpreted: 1473   stub-only: 1043
+- functions: 2516   interpreted: 1477   stub-only: 1039
 - byte-verified: 827   named primitives: 142
 
 | id | name | module fn | module | bv | role |
@@ -108,7 +108,7 @@ register machines are interpreted (Avenue 2).
 | 800F5574 | io_poll | - | - |  |  |
 | 800F55C0 | cell_flags_cmp3 | - | - |  |  |
 | 800F560C | - | - | - |  |  |
-| 800F56AC | cell_flags_cmp | - | - |  |  |
+| 800F56AC | cell_flags_cmp | cell_flags_cmp | src/db/flags.c |  |  |
 | 800F5764 | - | - | - | Y |  |
 | 800F5804 | - | - | - |  |  |
 | 800F58BC | - | - | - | Y |  |
@@ -304,7 +304,7 @@ register machines are interpreted (Avenue 2).
 | 800F8898 | - | - | - |  |  |
 | 800F88E4 | - | - | - |  |  |
 | 800F8930 | - | - | - |  |  |
-| 800F8960 | cell_pull_c8 | - | - |  |  |
+| 800F8960 | cell_pull_c8 | catalog_base | src/db/cellstore.c |  |  |
 | 800F8990 | - | - | - |  |  |
 | 800F89D4 | cell_stamp8_9_b | - | - |  |  |
 | 800F8A18 | - | - | - |  |  |
@@ -349,7 +349,7 @@ register machines are interpreted (Avenue 2).
 | 800F9140 | - | - | - | Y |  |
 | 800F916C | - | - | - |  |  |
 | 800F91A4 | - | - | - |  |  |
-| 800F9200 | cell_cursor_dec | - | - |  |  |
+| 800F9200 | cell_cursor_dec | cell_addr16 | src/db/cursor.c |  |  |
 | 800F922C | cell_cursor_ret2 | - | - |  |  |
 | 800F926C | row_open2 | - | - |  |  |
 | 800F9298 | row_open3 | - | - |  |  |
@@ -440,7 +440,7 @@ register machines are interpreted (Avenue 2).
 | 800FE5D4 | - | - | - | Y |  |
 | 800FE634 | - | - | - |  |  |
 | 800FE6E4 | - | - | - |  | battle: 3C3C + a1/v0 latch. |
-| 800FE778 | wnd_fx_7d | - | - | Y |  |
+| 800FE778 | wnd_fx_7d | txt_draw | src/db/dispatch.c | Y |  |
 | 800FE7B0 | wnd_fx_7d_b | - | - | Y |  |
 | 800FE7D8 | shop_view_run | - | - | Y | shop view dispatcher: 0x1700 gate picks 800FE110/800FDBBC vs 800FDD8C/800FDF34/80175494; tail always runs 801769B4/ 80174F64/80175004. |
 | 800FE870 | cell_clear_pad | - | - |  |  |
