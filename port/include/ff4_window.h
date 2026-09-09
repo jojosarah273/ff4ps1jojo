@@ -102,3 +102,6 @@ void row_sync2_cur(void);      /* 800F6558()  */
 void row_sel2_cur(void);       /* 800F7894()  */
 void row_arm2_cur(void);       /* 800F4F28()  */
 void row_act2_cur(void);       /* 800F7828()  */
+void cell_put_cur(void);       /* 800F824C()  */
+void label_cur(void);          /* 800F8D00()  */
+void row_sel2_w(uint32_t id);  /* 800F7894(id) */

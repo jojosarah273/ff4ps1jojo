@@ -54,12 +54,13 @@ M = [
 ARGLESS = ("sep", "step2", "io_just", "io_go", "row_close", "row_open",
            "row_prep_close", "row_sync", "row_done", "stat_sync",
            "cell_dispatch", "row_pad", "row_sel_cell", "row_sel_cell2",
-           "row_open2", "row_open3", "poll_go")
+           "row_open2", "row_open3", "poll_go", "row_sel2", "row_arm2")
 CURFIX = ("tail", "wnd_open", "txt_set", "txt_cell", "row_prep", "poll_t",
           "io_poll", "io_press", "cell_draw", "page", "latch",
           "cell_state", "cell_peek", "draw_pad", "key_page",
           "poll_pair", "page_paint", "page_paint2", "txt_draw",
-          "row_scan", "row_sync2", "row_sel2", "row_arm2", "row_act2")
+          "row_scan", "row_sync2", "row_sel2", "row_arm2", "row_act2",
+          "cell_put", "label")
 
 def map_calls(txt):
     for a, b in M:
