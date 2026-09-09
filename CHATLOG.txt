@@ -234,3 +234,18 @@ config options/ability/root/banner/store/formation, shop confirm/detail,
 status state/statusinit, dev device, docs poles/menu_screens.
 Next: continue interpretation families; near-miss restructure for matches.
 ================================================================================
+
+================================================================================
+HEADLESS LEG 11 — PORT BUILD-OUT CONTINUES (38 modules) + SWEEP COMPLETE
+Interpretation: 18 -> 38 modules (+20). Battle menu screens/dispatch/spell/
+itemcast/party/panels/gates, shop store/machine/confirm/detail, config
+store/banner/party/formation/rows2/ability/options/root, event listinit,
+gpu bitgather, sprite blits+scaler, math trig, anim ticker+rows, status
+state/statusinit, dev device. Coverage table tracks func->module (38 funcs).
+Whole port/ tree gcc -fsyntax-only clean.
+Byte-match: ladder sweep fully complete across all size bands (743 -> 816 =
+32.4%; +73). Plateau reached on current C shapes; era lanes gcc-2.8.1/
+2.95.2 dominant, 2.6.0 caught the big screens. Next lever: near-miss
+restructures (countdown-loop style).
+All pushed. Callgraph still 2517 callers / 22544 edges.
+================================================================================
