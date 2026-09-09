@@ -8,15 +8,11 @@ uint32_t *D_800D1E05 = g_slots;
 uint32_t *D_80199230 = g_slots;
 uint32_t *D_8019A12C = g_slots;
 uint32_t *D_8019ED30 = g_slots;
-uint32_t *D_8019ED40 = g_slots;
 uint32_t *D_8019ED44 = g_slots;
 uint32_t *D_8019ED48 = g_slots;
-uint32_t *D_8019ED4C = g_slots;
-uint32_t *D_8019ED50 = g_slots;
 uint32_t *D_8019ED54 = g_slots;
 uint32_t *D_8019ED58 = g_slots;
 uint32_t *D_8019ED60 = g_slots;
-uint32_t *D_8019ED68 = g_slots;
 uint32_t *D_8019EE60 = g_slots;
 uint32_t *D_8019EF0C = g_slots;
 uint32_t *D_8019FFE8 = g_slots;
@@ -49,7 +45,6 @@ uint32_t cast_row() { return 0; }
 uint32_t cast_tail() { return 0; }
 uint32_t cat_reset() { return 0; }
 uint32_t catalog() { return 0; }
-uint32_t catalog_base() { return 0; }
 uint32_t catalog_guard() { return 0; }
 uint32_t cd_row() { return 0; }
 uint32_t cell_dispatch() { return 0; }
