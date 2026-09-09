@@ -6,6 +6,14 @@ also in git (this file)._
 - Phase A: **2516/2516 C-written (100.0%)**; whole src/ gcc-clean.
 - Byte-verified: **827 (32.9%)** (`expected/matched/*.o` count; `decomp/STATUS.md`).
 - Callgraph: `expected/callgraph.json` = 2517 call
+- **READABILITY PASS (this stretch)**: `tools/port_names.py` names the
+  hot 0x800F primitive family (151 entries -> ff4_window.h): raw
+  func_800F refs in gen modules cut 3947 -> ~277 (93%), 1466 externs
+  dropped; `tools/port_catalog.py` -> `port/docs/functions.md` (the
+  2516-function readable catalog); db/ cell layer now bound live in the
+  binary; typed state layer (`include/ff4_state.h` + device input
+  struct). Byte-match policy recorded (oracle guard, not target):
+  `port/docs/BYTE_MATCH_POLICY.md`; reading guide: `port/docs/READING.md`.
 - **AVENUE 1 MILESTONE (SDL device layer)**: `make -C port native` from clean
   compiles the 1395-module deck, builds the SDL device layer
   (`port/src/device/sdl_device.c`), auto-stubs deck-only unresolved symbols

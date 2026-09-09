@@ -4,23 +4,17 @@ also in git (this file)._
 
 ## STATE SNAPSHOT (latest verified numbers)
 - Phase A: **2516/2516 C-written (100.0%)**; whole src/ gcc-clean.
-- Byte-verified: **827 (32.9%)** (`expected/matched/*.o` count; `decomp/STATUS.md`).
-- Callgraph: `expected/callgraph.json` = 2517 callers / 22,544 edges.
-- Port: **port/src has 1395 .c modules (0 syntax failures)**; `make deck` in
-  `port/` compiles the whole fleet. Coverage: `port/docs/coverage.md` (~2035 funcs).
-- All work pushed to `main`. **AVENUE 1 DEVICE LAYER DONE**: from clean,
-`make -C port native` (or `bash port/tools/native_link.sh`) compiles the deck,
-builds the SDL device layer (`port/src/device/sdl_device.c` — window, cell-bank
-sim, hex-glyph renderer, PS1 pad-bit keyboard input), auto-stubs deck-only
-unresolved symbols (nm-driven: D_* → vram-sim slot pointers, g_* → data
-arrays, else 0-return fns; runtime exports excluded unless the deck needs
-names like `step` vs glibc), and links -> **`port/build/ff4-native` (runs,
-exit 0 under SDL_VIDEODRIVER=dummy with the config-menu state executing
-through the window API)**. Boot drives `config_menu_run()` frames 0..60;
-the io_just self-inject keeps menus advancing without input.
-Remaining Avenue 1 = richer paint (glyph atlas decode instead of hex ids)
-and confirming the PS1 pad-bit poll codes against asm.
-
+- Byte-verified: **827 (32.9%)** — see port/docs/BYTE_MATCH_POLICY.md
+  (policy: oracle guard only, not a completion target).
+- Port: **1395+ modules (0 syntax failures)**; coverage 1473 funcs
+  (`port/docs/coverage.md`, `port/docs/functions.md` catalog).
+- Readability pass done: raw func_800F refs in gen modules cut
+  **3947 -> ~277 (93%)** via the `tools/port_names.py` manifest (151
+  semantic names, declared in ff4_window.h); db/ layer live in the
+  binary; typed state layer (ff4_state.h).
+- Native: `make -C port native` -> `port/build/ff4-native` runs the
+  config-menu state, exit 0 under SDL_VIDEODRIVER=dummy; with a display
+  it paints hex-glyph cells.
 ## KEY TOOLS (stable, don't rewrite from scratch)
 - `tools/port_rowmap.py` — maps a Phase A window-driven screen into an
   interpreted module (semantic names, ground truth, primitive table).

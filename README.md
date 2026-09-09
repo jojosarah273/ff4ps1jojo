@@ -547,7 +547,10 @@ tradition — readable, moddable, portable C.
 of one or more byte-verified Phase A functions: the asm-ordered behavior
 kept 1:1, but with semantic names, a declared primitive table, and a
 ground-truth reference comment. Format: see `port/FORMAT.md`. Architecture:
-see `port/docs/ARCHITECTURE.md`.
+see `port/docs/ARCHITECTURE.md`. Reading guide:
+see `port/docs/READING.md`.
+Function catalog (every function, its port name, its byte-match status):
+`port/docs/functions.md`.
 
 ```
 port/src/       1395 interpreted modules (0 failures, gcc clean)
