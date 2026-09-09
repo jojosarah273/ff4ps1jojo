@@ -337,7 +337,7 @@ void func_801539C4(void)
     sep_a();
     row_open_w(0x5);
     cell_state_of();
-    cell_dispatch();
+    cell_dispatch_cur();
     txt_set_cur();
     func_801530E0();
     io_just();

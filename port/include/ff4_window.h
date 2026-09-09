@@ -68,7 +68,8 @@ void step2(void);                        /* 800F63BC                  */
 void draw_pad(uint32_t id);              /* 800F7500                  */
 void key_page(uint32_t id);              /* 800F62BC                  */
 void page_paint2(uint32_t id);           /* 800F6240                  */
-void cell_dispatch(void);                /* 800F6048                  */
+void cell_dispatch(uint32_t id);
+void cell_dispatch_cur(void);         /* 800F6048(id)              */
 void row_open_w(uint32_t id);            /* 800F4008                  */
 void cell_fmt2(uint32_t id);             /* 800F7594                  */
 void row_sel2(uint32_t cell);            /* 800F7894 / 7A40           */

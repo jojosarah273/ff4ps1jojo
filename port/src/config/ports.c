@@ -11,7 +11,7 @@ void func_8016046C(void)
     page(0x8A);
     cell_draw(0x29B5);
     cell_state_of();
-    cell_dispatch();
+    cell_dispatch_cur();
     page_paint2(0x29CD);
     sep_a();
     row_page(0x8A);

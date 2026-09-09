@@ -51,7 +51,7 @@ M = [
     ("func_800F7320", "row_frame"), ("func_800F8070", "row_attr"),
 ]
 
-ARGLESS = ("sep", "step2", "io_just", "io_go", "row_close", "row_open",
+ARGLESS = ("sep", "sep_a", "sep_b", "step2", "io_just", "io_go", "row_close", "row_open",
            "row_prep_close", "row_sync", "row_done", "stat_sync",
            "cell_dispatch", "row_pad", "row_sel_cell", "row_sel_cell2",
            "row_open2", "row_open3")
@@ -60,7 +60,7 @@ CURFIX = ("tail", "wnd_open", "txt_set", "txt_cell", "row_prep", "poll_t",
           "cell_state", "cell_peek", "draw_pad", "key_page",
           "poll_pair", "page_paint", "page_paint2", "txt_draw",
           "row_scan", "row_sync2", "row_sel2", "row_arm2", "row_act2",
-          "cell_put", "label", "poll_go", "row_sel2")
+          "cell_put", "label", "poll_go", "row_sel2", "cell_dispatch")
 
 def map_calls(txt):
     for a, b in M:
@@ -80,6 +80,7 @@ def main():
         # arity normalizations
         for name in ARGLESS:
             body = re.sub(r"\b%s\(0x[0-9A-Fa-f]+\)" % name, name + "()", body)
+        body = re.sub(r"(\b(?:sep_a|sep_b|cell_dispatch|sep|step2)\()\(u32\)D_8019ED40\[[0-9]\]\)", r"\1)", body)
         for name in CURFIX:
             body = body.replace(name + "()", name + "_cur()")
         body = body.replace("cell_state_cur()", "cell_state_of()")
