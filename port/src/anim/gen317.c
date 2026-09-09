@@ -53,6 +53,6 @@ L17079C:
     label(0x4302);
     page(0x45);
     label(0x4305);
-    func_800F9868();
+    catalog_dispatch();
     return;
 }

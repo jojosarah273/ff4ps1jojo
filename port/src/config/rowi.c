@@ -13,7 +13,7 @@ void func_8012D23C(void)
     row_page(0xE8);
     func_80124EAC();
     tail(0x60);
-    func_800F6E30(0x60);
+    cell_push_c8_lo(0x60);
     row_read(0x3F);
     if (sel(0x202) == 0)
         return;
@@ -54,7 +54,7 @@ void func_8012D23C(void)
     func_8011F6A4();
     func_80120FBC();
     func_8012DB9C();
-    func_800F6E30(0x60);
+    cell_push_c8_lo(0x60);
     row_read(0x3F);
     draw_pad(0x84);
     func_80120A0C();
@@ -122,19 +122,19 @@ void func_8012D23C(void)
     func_80124D08();
     row_prep(0x20);
     draw_pad(7);
-    func_800F6764(0x60);
+    cell_push89_sel(0x60);
     draw_pad(0x288);
     func_801208C8();
     draw_pad(9);
-    func_800F6764(0x60);
+    cell_push89_sel(0x60);
     draw_pad(0x292);
     func_801208C8();
     draw_pad(0xB);
-    func_800F6764(0x60);
+    cell_push89_sel(0x60);
     draw_pad(0x308);
     func_801208C8();
     draw_pad(0xD);
-    func_800F6764(0x60);
+    cell_push89_sel(0x60);
     draw_pad(0x312);
     func_801208C8();
     row_prep_close();
@@ -152,7 +152,7 @@ void func_8012D23C(void)
     cell_push_c8_sel(0x60);
     draw_pad(0x5B2);
     func_80120774();
-    func_800F6E30(0x60);
+    cell_push_c8_lo(0x60);
     row_read(0xC0);
     cell_put(0x45);
     open_row(0x46);
@@ -184,7 +184,7 @@ void func_8012D23C(void)
     step2();
     cell_push_c8_sel(0x60);
     cell_put(0x47);
-    func_800F6E30(0x60);
+    cell_push_c8_lo(0x60);
     row_read(0x3F);
     poll_spin();
     row_sel_cell_cur();

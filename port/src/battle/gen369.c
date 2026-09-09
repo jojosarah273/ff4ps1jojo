@@ -5,15 +5,6 @@
 #include "ff4_window.h"
 
 
-
-
-
-
-
-
-
-extern int func_800FE7D8();
-extern int func_800FF024();
 extern int func_80115BCC();
 extern int func_80115D2C();
 
@@ -38,7 +29,7 @@ void func_801030F8(void)
   txt_draw(0xace);
   func_80115BCC();
   do {
-    func_800FE7D8();
+    shop_view_run();
     func_80115D2C();
     page_open(0xad2);
     poll_t(8);
@@ -46,7 +37,7 @@ void func_801030F8(void)
     if (iVar1 == 0) {
       latch(1);
       cell_put(0xe5);
-      func_800FF024();
+      shop_buy_run();
     }
     page_open(0xad2);
     poll_t(0);

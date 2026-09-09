@@ -26,17 +26,17 @@ L13446C:
     io_poll(2);
     if (io_go() != 0)
         return;
-    func_800F6E30(0xE5);
+    cell_push_c8_lo(0xE5);
     row_read(0xC0);
     io_poll(0xC0);
     if (io_just() != 0)
         goto L13454C;
     sep_a();
-    func_800F7C6C();
+    cell_tick_dbl();
     cell_flags_repack2();
-    func_800F7C6C();
+    cell_tick_dbl();
     cell_flags_repack2();
-    func_800F7C6C();
+    cell_tick_dbl();
     func_801224D0();
     if (io_press(cell_state(0x1B37)) == 0)
         goto L13455C;

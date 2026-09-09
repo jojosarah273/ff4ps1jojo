@@ -80,7 +80,7 @@ L10f6ac:
         if (io_just() == 0)
             goto L10F8F4;
         latch(0x48);
-        func_800FD804();
+        wnd_fx_pads();
     L10F8F4:
         func_80173780();
         row_page(0x7A);

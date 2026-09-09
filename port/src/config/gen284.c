@@ -37,7 +37,7 @@ void func_8015D4C8(void)
     row_read2(0xA9);
     if (func_800F64EC(0x202) != 0)
         goto L15D5D8;
-    func_800F62F0(0xA9);
+    cell_inc_cell(0xA9);
 L15D5D8:
     sep();
     row_prep_close();

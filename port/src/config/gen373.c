@@ -71,7 +71,7 @@ L7d40:
     row_open2();
     row_prep(0x20);
     row_sync2(0x7FF);
-    func_800F3D64(0x7E70);
+    battle_wait_just(0x7E70);
     row_prep_close();
     row_pad();
     func_80138788();

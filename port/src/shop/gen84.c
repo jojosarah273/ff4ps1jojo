@@ -16,11 +16,11 @@ void func_8016F97C(void)
     row_sync2(0x17);
     wnd_open_cur();
     draw_pad(0x1A05);
-    func_800F3D64(0x147E);
+    battle_wait_just(0x147E);
     row_sync2(0x17);
     wnd_open_cur();
     draw_pad(0x1A1D);
-    func_800F3D64(0x147E);
+    battle_wait_just(0x147E);
     row_prep_close();
     txt_set(0x16A9);
     txt_draw(0x1A64);

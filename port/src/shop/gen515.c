@@ -19,7 +19,7 @@ L16a10c:
         wnd_open(8);
     L16a124:
         for (;;) {
-            func_800F6764(2);
+            cell_push89_sel(2);
             step2();
             step2();
             cell_set50_from54();

@@ -88,7 +88,7 @@ L6b4:
                 goto L80c;
             cell_pull_c8(0x302);
             row_arm2(cell_state(0xF32A));
-            if (func_800F4FAC(1) != 0)
+            if (cell_flags_zero50(1) != 0)
                 goto L80c;
             txt_set(0x6CC0);
             if (gate(0x202) != 0)

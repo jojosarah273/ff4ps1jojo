@@ -4,17 +4,6 @@
  */
 #include "ff4_window.h"
 
-
-
-
-
-
-
-
-
-
-extern int func_800FCCBC();
-
 void func_8010A204(void)
 
 {
@@ -37,7 +26,7 @@ void func_8010A204(void)
     label(0x4302);
     wnd_open(0x100);
     label(0x4305);
-    func_800FCCBC();
+    catalog_dispatch_0();
   }
   return;
 }

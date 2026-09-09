@@ -4,19 +4,6 @@
  */
 #include "ff4_window.h"
 
-
-
-
-
-
-
-
-
-
-
-
-extern int func_800FCCBC();
-
 void func_801098C8(void)
 
 {
@@ -42,7 +29,7 @@ void func_801098C8(void)
       txt_draw(0x4304);
       wnd_open(0x40);
       label(0x4305);
-      func_800FCCBC();
+      catalog_dispatch_0();
       wnd_open(0x2860);
       label(0x2116);
       cell_clear_bank(0x420b);
@@ -50,7 +37,7 @@ void func_801098C8(void)
       label(0x4302);
       wnd_open(0x40);
       label(0x4305);
-      func_800FCCBC();
+      catalog_dispatch_0();
       draw_pad(0x20);
       wnd_open(0x2c00);
       label(0x2116);
@@ -60,7 +47,7 @@ void func_801098C8(void)
         label(0x4302);
         wnd_open(0x40);
         label(0x4305);
-        func_800FCCBC();
+        catalog_dispatch_0();
         poll_pair_cur();
         iVar1 = poll_go(0x202);
       } while (iVar1 != 0);

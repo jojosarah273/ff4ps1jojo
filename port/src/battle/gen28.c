@@ -22,7 +22,7 @@ L2804:
 L2840:
     key_page(0x7B);
     row_page(0xAC);
-    func_800F9690();
+    cell_cur_save54();
     row_page(0xAB);
     io_poll(1);
     if (io_just() == 0)
@@ -43,7 +43,7 @@ L2840:
     if (io_go() != 0)
         goto L2c18;
     txt_set(0x6FA);
-    func_800F9690();
+    cell_cur_save54();
     txt_set(0x1707);
     poll_spin();
     goto L2ad4;
@@ -64,7 +64,7 @@ L2948:
     if (sel(0x202) != 0)
         goto L2c18;
     txt_set(0x6FA);
-    func_800F9690();
+    cell_cur_save54();
     txt_set(0x1706);
     cell_set50_from40();
     goto L2af4;
@@ -85,7 +85,7 @@ L2a20:
     if (sel(0x202) != 0)
         goto L2c18;
     txt_set(0x6FA);
-    func_800F9690();
+    cell_cur_save54();
     txt_set(0x1707);
     cell_set50_from40();
 L2ad4:
@@ -113,7 +113,7 @@ L2b08:
     if (io_go() != 0)
         goto L2c18;
     txt_set(0x6FA);
-    func_800F9690();
+    cell_cur_save54();
     txt_set(0x1706);
     poll_spin();
     txt_draw(0x1706);

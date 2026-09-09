@@ -73,7 +73,17 @@ NM = {
     "800FE778": "wnd_fx_7d",          "800FE7B0": "wnd_fx_7d_b",
     "800FCC84": "wnd_fx_tags",        "800FE870": "cell_clear_pad",
     "800F3A70": "cell_bank_sel",
+    # ---- next tier (catalog/shop/battle dispatchers + cell ops) ----
+    "800FCCBC": "catalog_dispatch_0",  "800F9868": "catalog_dispatch",
+    "800F3D64": "battle_wait_just",    "800F62F0": "cell_inc_cell",
+    "800F5DD4": "cell_dec_cell",       "800F8E50": "cell_pull60",
+    "800F7C6C": "cell_tick_dbl",       "800F80D0": "cell_pos_back2",
+    "800F5520": "cell_flags_cmp_pos",  "800F4FAC": "cell_flags_zero50",
+    "800F9690": "cell_cur_save54",     "800F6E30": "cell_push_c8_lo",
+    "800F6764": "cell_push89_sel",     "800FE7D8": "shop_view_run",
+    "800FF024": "shop_buy_run",        "800FD804": "wnd_fx_pads",
 }
+
 
 # ids whose extern declarations should be dropped (declared by the header)
 HEADER = Path(__file__).resolve().parent.parent / "port/include/ff4_window.h"

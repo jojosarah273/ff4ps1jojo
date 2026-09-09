@@ -51,7 +51,7 @@ Ldb4:
     txt_set(0x1706);
     sep_a();
     cell_poke0(cell_state(6));
-    func_800F9690();
+    cell_cur_save54();
     cell_push_c8();
     cell_put(6);
     row_open();
@@ -60,7 +60,7 @@ Ldb4:
     if (gate(0x202) != 0)
         goto Lf0c;
     row_page(0x86);
-    func_800F9690();
+    cell_cur_save54();
     cell_push_c8();
     sep_a();
     cell_poke0(cell_state(0x17EF));
@@ -79,7 +79,7 @@ Lf30:
     if (gate(0x202) != 0)
         goto Lfbc;
     row_page(0x86);
-    func_800F9690();
+    cell_cur_save54();
     cell_push_c8();
     sep_a();
     cell_poke0(cell_state(0x17EF));
@@ -94,7 +94,7 @@ Lfbc:
     txt_set(0x1706);
     sep_a();
     cell_poke0(cell_state(6));
-    func_800F9690();
+    cell_cur_save54();
     cell_push_c8();
     goto Ld40;
 Ld038:
@@ -105,7 +105,7 @@ Ld038:
     if (gate(0x202) != 0)
         goto Ld0c4;
     row_page(0x86);
-    func_800F9690();
+    cell_cur_save54();
     cell_push_c8();
     sep_a();
     cell_poke0(cell_state(0x17EF));
@@ -126,7 +126,7 @@ Ld0c4:
     if (io_go() != 0)
         key_page(6);
     row_page(6);
-    func_800F9690();
+    cell_cur_save54();
     cell_push_c8();
 Ld40:
     func_800FD494();
@@ -162,7 +162,7 @@ Ld1f4:
     if (gate(0x202) != 0)
         goto Ld30c;
     row_page(0x86);
-    func_800F9690();
+    cell_cur_save54();
     cell_push_c8();
     sep_a();
     cell_poke0(cell_state(0x17EF));

@@ -155,8 +155,8 @@ Lc0c:
         cell_put(0x45);
         for (;;) {
             row_prep(0x20);
-            func_800F5DD4(0x9F);
-            func_800F5DD4(0x9F);
+            cell_dec_cell(0x9F);
+            cell_dec_cell(0x9F);
             row_prep_close();
             func_801266C8();
             poll_pair(0x45);
@@ -191,8 +191,8 @@ Lc0c:
         cell_put(0x45);
         for (;;) {
             row_prep(0x20);
-            func_800F62F0(0x9F);
-            func_800F62F0(0x9F);
+            cell_inc_cell(0x9F);
+            cell_inc_cell(0x9F);
             row_prep_close();
             func_801266C8();
             poll_pair(0x45);

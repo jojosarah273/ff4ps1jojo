@@ -30,12 +30,12 @@ L128628:
     for (;;) {
         func_801266C8();
         row_prep(0x20);
-        func_800F5DD4(0x93);
-        func_800F5DD4(0x99);
-        func_800F5DD4(0x99);
-        func_800F5DD4(0x9F);
-        func_800F5DD4(0x9F);
-        func_800F5DD4(0x9F);
+        cell_dec_cell(0x93);
+        cell_dec_cell(0x99);
+        cell_dec_cell(0x99);
+        cell_dec_cell(0x9F);
+        cell_dec_cell(0x9F);
+        cell_dec_cell(0x9F);
         row_prep_close();
         poll_pair(0x4E);
         if (poll_go(0x202) != 0)

@@ -18,13 +18,13 @@ void func_8012BB68(void)
     row_done();
     cell_cursor_dec();
     cell_push_c8_d58(3);
-    func_800F7C6C();
+    cell_tick_dbl();
     cell_flags_repack2();
-    func_800F7C6C();
+    cell_tick_dbl();
     cell_flags_repack2();
-    func_800F7C6C();
+    cell_tick_dbl();
     cell_flags_repack2();
-    func_800F7C6C();
+    cell_tick_dbl();
     row_read(4);
     cell_tick_or(cell_state(0x34));
     cell_put(0x45);

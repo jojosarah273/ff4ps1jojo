@@ -23,7 +23,7 @@ L15A3A8:
     txt_cell(0x2061);
     cell_put(0xAA);
     txt_cell(0x203B);
-    func_800F8E50();
+    cell_pull60();
     row_open();
     row_page(0xD6);
     row_sel_cell_cur();

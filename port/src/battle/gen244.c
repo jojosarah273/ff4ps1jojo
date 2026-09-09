@@ -11,13 +11,13 @@ void func_80141760(void)
     row_read(0xF8);
     txt_draw(0xF111);
     row_info();
-    func_800F8E50(0xF133);
+    cell_pull60(0xF133);
     txt_cell(0xF054);
     row_read(0xF8);
     txt_draw(0xF112);
-    func_800F8E50(0xF135);
+    cell_pull60(0xF135);
     row_info();
-    func_800F8E50(2);
+    cell_pull60(2);
     txt_draw(0xF137);
     row_prep(0x20);
     row_sync2(0x28);
@@ -40,7 +40,7 @@ L1898:
         cell_pull9_hi(0xF406);
         cell_push9(0xF408);
         sep_b();
-        func_800F80D0(8);
+        cell_pos_back2(8);
         cell_pull9_hi(0xF408);
         sep();
         row_prep_close();

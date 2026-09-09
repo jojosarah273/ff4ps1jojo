@@ -17,7 +17,7 @@ L141ab8:
         row_prep(0x20);
         cell_push9();
         sep_b();
-        func_800F80D0(8);
+        cell_pos_back2(8);
         cell_pull9_hi();
         sep();
         row_prep_close();

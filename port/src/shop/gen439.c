@@ -4,17 +4,6 @@
  */
 #include "ff4_window.h"
 
-
-
-
-extern int func_800F8E50();
-
-
-
-
-
-extern int func_800F9868();
-
 void func_8016BBCC(void)
 
 {
@@ -24,7 +13,7 @@ void func_8016BBCC(void)
   cell_cursor_dec();
   row_pad();
   row_close2();
-  func_800F8E50(0x2116);
+  cell_pull60(0x2116);
   label(0x4342);
   txt_draw(0x4344);
   latch(1);
@@ -33,7 +22,7 @@ void func_8016BBCC(void)
   txt_draw(0x4341);
   page(0x28);
   label(0x4345);
-  func_800F9868(0x40);
+  catalog_dispatch(0x40);
   row_pad();
   return;
 }

@@ -27,7 +27,7 @@ L1197d8:
         io_poll(3);
         if (io_just() != 0)
             goto L119810;
-        func_800FF024();
+        shop_buy_run();
         goto L119820;
     L119810:
         func_80170C14();

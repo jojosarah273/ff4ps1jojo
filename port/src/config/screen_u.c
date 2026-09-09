@@ -15,7 +15,7 @@ L288:
         wnd_open(0xA600);
         draw_pad(0xF600);
         row_sync2(0x7FF);
-        func_800F3D64(0x7E7E);
+        battle_wait_just(0x7E7E);
         row_prep_close();
     L2dc:
         draw_pad_cur();
@@ -43,10 +43,10 @@ L288:
         txt_draw(0xA710);
         latch(0x41);
         txt_draw(0xA790);
-        func_800F6E30(0x60);
+        cell_push_c8_lo(0x60);
         draw_pad(0x1C6);
         func_80120A0C();
-        func_800F6E30(0x60);
+        cell_push_c8_lo(0x60);
         row_read(0xC0);
         cell_put(0x45);
         open_row(0x46);
@@ -102,7 +102,7 @@ L288:
         wnd_open(0xC600);
         draw_pad(0xF600);
         row_sync2(0x7FF);
-        func_800F3D64(0x7E7E);
+        battle_wait_just(0x7E7E);
         row_prep_close();
         func_80124130();
         func_801264C0();

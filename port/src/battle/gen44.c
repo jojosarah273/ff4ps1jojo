@@ -47,7 +47,7 @@ L42fd0:
     for (;;) {
         cell_state(0xC);
         row_arm2_cur();
-        if (func_800F4FAC(0x101) != 0)
+        if (cell_flags_zero50(0x101) != 0)
             goto L4309C;
         txt_cell(0x29C5);
         io_poll(0xFF);
@@ -80,7 +80,7 @@ L430f4:
     for (;;) {
         cell_state(0xC);
         row_arm2_cur();
-        if (func_800F4FAC(0x101) != 0)
+        if (cell_flags_zero50(0x101) != 0)
             goto L431B8;
         txt_cell(0x29C5);
         io_poll(0xFF);

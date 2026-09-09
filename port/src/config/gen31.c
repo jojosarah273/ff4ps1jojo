@@ -27,7 +27,7 @@ void func_80135574(void)
     cell_fmt2(0x41);
 L5634:
     for (;;) {
-        func_800F8E50(0x1A80);
+        cell_pull60(0x1A80);
         func_800F67FC(0x5A);
         io_poll(0xFF);
         if (io_just() != 0)
@@ -65,8 +65,8 @@ L5634:
         page(0x45);
         row_prep(0x20);
         func_800F8A48(0x51);
-        func_800F62F0(0x51);
-        func_800F62F0(0x51);
+        cell_inc_cell(0x51);
+        cell_inc_cell(0x51);
         row_prep_close();
         row_page(0x47);
         func_800F8A18(0x51);
@@ -77,8 +77,8 @@ L5634:
         row_arm_s_cur();
         func_800F65F0(0x4216);
         func_800F8A48(0x51);
-        func_800F62F0(0x51);
-        func_800F62F0(0x51);
+        cell_inc_cell(0x51);
+        cell_inc_cell(0x51);
         row_prep_close();
         latch_cur();
         func_800F8A18(0x51);
@@ -87,7 +87,7 @@ L5634:
         func_801376F0();
         row_prep(0x20);
         sep_b();
-        func_800F80D0(0x30);
+        cell_pos_back2(0x30);
         row_prep_close();
         draw_pad_cur();
         func_8011F8D4();

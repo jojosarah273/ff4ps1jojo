@@ -23,7 +23,7 @@ L1284a0:
         row_sync();
         wnd_open(0x1000);
         row_sync2(0x7FF);
-        func_800F3D64(0x7E70);
+        battle_wait_just(0x7E70);
         row_close();
         row_sync2(0x2000);
         cell_stamp8_9(0x6AA);

@@ -4,13 +4,6 @@
  */
 #include "ff4_window.h"
 
-
-
-
-
-
-extern int func_800FCCBC();
-
 void func_801062E8(void)
 
 {
@@ -27,7 +20,7 @@ void func_801062E8(void)
   txt_draw(0x4304);
   wnd_open(0x10);
   label(0x4305);
-  func_800FCCBC();
+  catalog_dispatch_0();
   return;
 }
 

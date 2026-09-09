@@ -9,7 +9,7 @@ void func_8013389C(void)
 {
     latch_cur();
     stat_sync();
-    func_800F6E30(0x57);
+    cell_push_c8_lo(0x57);
     row_prep(0x20);
     sep_a();
     cell_pos_fwd(0xFF98);
@@ -26,12 +26,12 @@ void func_8013389C(void)
     func_80124EAC();
     tail(0x60);
 main_loop:
-    func_800F6E30(0x51);
+    cell_push_c8_lo(0x51);
     row_sel_cell_cur();
     row_sel_cell2_cur();
     row_open_w(0x76);
     cell_put(0x46);
-    func_800F6E30(0x54);
+    cell_push_c8_lo(0x54);
     if (gate(2) == 0)
         latch(0x68);
     row_open_w(8);
@@ -44,7 +44,7 @@ loop_bottom:
     row_read(1);
     if (sel(2) != 0)
         goto a28;
-    func_800F6E30(0x54);
+    cell_push_c8_lo(0x54);
     cell_set50_from40();
     row_read(1);
     func_800F8A18(0x54);
@@ -55,7 +55,7 @@ a28:
     row_read(2);
     if (sel(2) != 0)
         goto a78;
-    func_800F6E30(0x54);
+    cell_push_c8_lo(0x54);
     cell_set50_from40();
     row_read(1);
     func_800F8A18(0x54);
@@ -67,11 +67,11 @@ a78:
     if (sel(2) != 0)
         goto b50;
 a98:
-    func_800F6E30(0x51);
+    cell_push_c8_lo(0x51);
     poll_spin();
     if (poll_go(0x8080) != 0)
         goto b48;
-    func_800F6E30(0x57);
+    cell_push_c8_lo(0x57);
     poll_spin();
     if (poll_go(0x80) != 0)
         goto b50;
@@ -79,8 +79,8 @@ a98:
     latch(8);
     for (;;) {
         row_prep(0x20);
-        func_800F5DD4(0x99);
-        func_800F5DD4(0x99);
+        cell_dec_cell(0x99);
+        cell_dec_cell(0x99);
         row_prep_close();
         func_801266C8();
         poll_spin();
@@ -100,12 +100,12 @@ b50:
     if (sel(2) != 0)
         goto c38;
 b70:
-    func_800F6E30(0x51);
+    cell_push_c8_lo(0x51);
     cell_set50_from40();
     io_poll(6);
     if (io_just() == 0)
         goto c30;
-    func_800F6E30(0x57);
+    cell_push_c8_lo(0x57);
     cell_set50_from40();
     io_poll(0x13);
     if (io_just() != 0)
@@ -114,8 +114,8 @@ b70:
     latch(8);
     for (;;) {
         row_prep(0x20);
-        func_800F62F0(0x99);
-        func_800F62F0(0x99);
+        cell_inc_cell(0x99);
+        cell_inc_cell(0x99);
         row_prep_close();
         func_801266C8();
         poll_spin();
@@ -136,7 +136,7 @@ c38:
         goto ec;
     page(0x60);
     tail(0x5D);
-    func_800F6E30(0x51);
+    cell_push_c8_lo(0x51);
     sep_a();
     cell_poke0(cell_state(cell_bank_sel(0x57)));
     row_sel_cell_cur();

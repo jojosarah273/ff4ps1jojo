@@ -22,7 +22,7 @@ L1388b4:
     for (;;) {
         cell_peek0(func_800F3AB4(0x4E));
         cell_peek_cur();
-        func_800F62F0(0x4E);
+        cell_inc_cell(0x4E);
         poll_pair_cur();
         if (poll_go(0x202) != 0)
             continue;

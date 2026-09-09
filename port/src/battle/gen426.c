@@ -42,7 +42,7 @@ L10fbb8:
         if (io_just() == 0)
             goto L10FC60;
         latch(0x23);
-        func_800FD804();
+        wnd_fx_pads();
     L10FC60:
         func_80110474();
         page(0x89);

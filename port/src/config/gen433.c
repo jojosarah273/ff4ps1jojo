@@ -37,7 +37,7 @@ L13dca0:
         for (;;) {
             cell_state_of();
             row_arm2_cur();
-            if (func_800F4FAC(0x101) != 0)
+            if (cell_flags_zero50(0x101) != 0)
                 goto L13DD8C;
             latch(7);
             cell_pull_c8(0x4E);

@@ -8,8 +8,6 @@
 
 extern int func_800F55C0();
 
-extern int func_800F6764();
-
 extern int func_800F8378();
 
 
@@ -22,7 +20,7 @@ void func_8012C82C(void)
   
   row_prep(0x20);
   draw_pad(0xd);
-  func_800F6764(0x60);
+  cell_push89_sel(0x60);
   sep_a();
   cell_pos_fwd(10);
   func_800F55C0(999);

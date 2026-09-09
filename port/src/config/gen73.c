@@ -35,7 +35,7 @@ L2e8ec:
         tail(0x23);
     L2e90c:
         for (;;) {
-            func_800F6E30(0x1F);
+            cell_push_c8_lo(0x1F);
             if (gate(2) != 0)
                 goto L2E9CC;
             cell_bank_sel(0x1F);
@@ -60,15 +60,15 @@ L2e8ec:
             row_prep(0x20);
             sep_a();
             cell_peek0(cell_state(0x1F));
-            func_800F5520(cell_state(0x25));
+            cell_flags_cmp_pos(cell_state(0x25));
             row_prep_close();
             if (io_just() == 0)
                 continue;
             break;
         }
         row_prep(0x20);
-        func_800F62F0(0x1F);
-        func_800F62F0(0x1F);
+        cell_inc_cell(0x1F);
+        cell_inc_cell(0x1F);
         row_prep_close();
         page(0x1F);
         if (cell_flags_cmp(cell_state(0x21)) == 0)

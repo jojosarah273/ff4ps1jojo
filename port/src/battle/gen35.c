@@ -6,9 +6,9 @@
 void func_8014FEC8(void)
 {
     draw_pad(0x80);
-    func_800F8E50(0xF469);
+    cell_pull60(0xF469);
     draw_pad(0x1000);
-    func_800F8E50(0xF46B);
+    cell_pull60(0xF46B);
     cell_cursor_dec();
     io_poll(0x15);
     if (io_go() == 0)
@@ -56,8 +56,8 @@ L004c:
             func_800F6EDC();
             func_80150364();
             func_800F8378(8);
-            func_800F62F0();
-            func_800F62F0(0x10);
+            cell_inc_cell();
+            cell_inc_cell(0x10);
             poll_t_cur();
             if (io_just() != 0)
                 break;
@@ -67,7 +67,7 @@ L004c:
             func_80150364();
             cell_pos_mask(0xFF);
             func_800F8378(8);
-            func_800F62F0(0x20);
+            cell_inc_cell(0x20);
             poll_t_cur();
             if (io_just() != 0)
                 break;
@@ -79,8 +79,8 @@ L004c:
             func_800F6EDC();
             func_80150364();
             func_800F8378(8);
-            func_800F62F0();
-            func_800F62F0(0xFFFE);
+            cell_inc_cell();
+            cell_inc_cell(0xFFFE);
             poll_t_cur();
             if (io_just() != 0)
                 break;
@@ -91,7 +91,7 @@ L004c:
             func_80150364();
             cell_pos_mask(0xFF);
             func_800F8378(8);
-            func_800F62F0(0xE);
+            cell_inc_cell(0xE);
             poll_t_cur();
             if (io_just() != 0)
                 break;

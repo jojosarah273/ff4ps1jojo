@@ -392,7 +392,7 @@ mem_loop:
     cell_clear_pad();
     cell_clear_bank(0x1704);
     cell_clear_bank(0x170F);
-    func_800FF024();
+    shop_buy_run();
     wnd_fx_7d();
     open_row(0xAC);
     open_row(0x7B);

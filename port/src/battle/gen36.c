@@ -92,7 +92,7 @@ Lfd08:
     }
     goto Lfc58;
 Lfd48:
-    func_800F8E50(0xF2B2);
+    cell_pull60(0xF2B2);
     txt_set(0xF2A0);
     io_poll(4);
     if (io_just() != 0)

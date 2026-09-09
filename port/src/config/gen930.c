@@ -10,8 +10,8 @@ void func_8013954C(void)
 L139554:
     for (;;) {
         row_prep(0x20);
-        func_800F5DD4(0x99);
-        func_800F5DD4(0x99);
+        cell_dec_cell(0x99);
+        cell_dec_cell(0x99);
         row_prep_close();
         cell_cursor_dec();
         func_801395E4();

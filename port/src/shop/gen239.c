@@ -17,7 +17,7 @@ void func_8016501C(void)
 L5080:
     for (;;) {
         row_arm2(cell_state(0x289C));
-        if (func_800F4FAC(0x101) != 0)
+        if (cell_flags_zero50(0x101) != 0)
             goto L5148;
         row_page(0xAF);
         io_poll(7);

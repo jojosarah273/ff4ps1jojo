@@ -30,7 +30,7 @@ L157f58:
     L157fe0:
         for (;;) {
             row_arm2(cell_state(0xAB));
-            if (func_800F4FAC(0x101) != 0)
+            if (cell_flags_zero50(0x101) != 0)
                 goto L158020;
             func_801580B0();
             row_page(0xD1);

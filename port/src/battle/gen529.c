@@ -11,7 +11,7 @@ void func_80118938(void)
     open_row(0x79);
 L118948:
     for (;;) {
-        func_800FE7D8();
+        shop_view_run();
         row_page(0x83);
         row_read(0xE0);
         cell_tick_or(cell_state(0x81));

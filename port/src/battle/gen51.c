@@ -32,7 +32,7 @@ void func_801060A8(void)
     cell_put(0x3E);
     page(0x3D);
     label(0x2116);
-    func_800FCCBC();
+    catalog_dispatch_0();
     row_page(0x3D);
     sep_a();
     row_open_w(0x20);
@@ -47,7 +47,7 @@ void func_801060A8(void)
     label(0x4302);
     wnd_open(0x10);
     label(0x4305);
-    func_800FCCBC();
+    catalog_dispatch_0();
     row_page(0x3D);
     sep_a();
     row_open_w(0x20);
@@ -68,6 +68,6 @@ void func_801060A8(void)
     txt_draw(0x4304);
     wnd_open(0x10);
     label(0x4305);
-    func_800FCCBC();
+    catalog_dispatch_0();
     return;
 }

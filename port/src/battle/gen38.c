@@ -48,7 +48,7 @@ L7668:
         label(0x2116);
         wnd_open(0x18);
         label(0x4305);
-        func_800FCCBC();
+        catalog_dispatch_0();
         row_page(0x12);
         sep_a();
         row_open_w(0x20);
@@ -63,7 +63,7 @@ L7668:
         label(0x2116);
         wnd_open(0x18);
         label(0x4305);
-        func_800FCCBC();
+        catalog_dispatch_0();
         row_page(0x12);
         sep_a();
         row_open_w(0x20);

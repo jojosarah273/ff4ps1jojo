@@ -4,16 +4,6 @@
  */
 #include "ff4_window.h"
 
-
-
-
-
-
-
-
-
-extern int func_800F9868();
-
 void func_8017091C(void)
 
 {
@@ -31,13 +21,13 @@ void func_8017091C(void)
     txt_draw(0x4300);
     wnd_open(0x10);
     label(0x4305);
-    func_800F9868(0);
+    catalog_dispatch(0);
     cell_clear_bank(0x420b);
     cell_clear_bank(0x2115);
     cell_clear_bank(0x4300);
     wnd_open(8);
     label(0x4305);
-    func_800F9868(0);
+    catalog_dispatch(0);
     step2();
     poll_t(0x180);
     iVar1 = io_just();

@@ -4,27 +4,6 @@
  */
 #include "ff4_window.h"
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-extern int func_800F9868();
-
 void func_8016D850(void)
 
 {
@@ -51,7 +30,7 @@ void func_8016D850(void)
     txt_draw(0x4351);
     wnd_open(0x100);
     label(0x4355);
-    func_800F9868(0x50);
+    catalog_dispatch(0x50);
     latch(0x80);
     txt_draw(0x2115);
     row_pad();

@@ -25,7 +25,7 @@ void func_80170458(void)
     label(0x4302);
     page(0x4E);
     label(0x4305);
-    func_800F9868();
+    catalog_dispatch();
     page_open(0x2116);
     cell_clear_bank(0x420B);
     for (i = 0; i < 4; i++) {
@@ -51,13 +51,13 @@ L170608:
         txt_draw(0x4300);
         wnd_open(0x10);
         label(0x4305);
-        func_800F9868();
+        catalog_dispatch();
         cell_clear_bank(0x420B);
         cell_clear_bank(0x2115);
         cell_clear_bank(0x4300);
         wnd_open(8);
         label(0x4305);
-        func_800F9868();
+        catalog_dispatch();
         step2();
         if (func_800F5804(cell_state(0x4E)) == 0)
             continue;

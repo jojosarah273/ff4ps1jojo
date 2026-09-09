@@ -4,13 +4,6 @@
  */
 #include "ff4_window.h"
 
-
-
-
-
-
-
-extern int func_800FF024();
 extern int func_80103EAC();
 extern int func_80103F00();
 
@@ -24,7 +17,7 @@ void func_80103AC8(void)
   cell_put(0xa1);
   do {
     func_80103EAC();
-    func_800FF024();
+    shop_buy_run();
     wnd_fx_7d_b();
     func_80103F00();
     key_page(0x79);

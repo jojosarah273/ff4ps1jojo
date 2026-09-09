@@ -22,7 +22,7 @@ void func_80105AF0(void)
     label(0x2116);
     wnd_open(0x18);
     label(0x4305);
-    func_800FCCBC();
+    catalog_dispatch_0();
     wnd_open(0x28B2);
     label(0x2116);
     cell_clear_bank(0x420B);
@@ -30,7 +30,7 @@ void func_80105AF0(void)
     label(0x4302);
     wnd_open(0x18);
     label(0x4305);
-    func_800FCCBC();
+    catalog_dispatch_0();
     wnd_open(0x28E2);
     label(0x2116);
     cell_clear_bank(0x420B);
@@ -38,7 +38,7 @@ void func_80105AF0(void)
     label(0x4302);
     wnd_open(0x18);
     label(0x4305);
-    func_800FCCBC();
+    catalog_dispatch_0();
     wnd_open(0x2912);
     label(0x2116);
     cell_clear_bank(0x420B);
@@ -46,7 +46,7 @@ void func_80105AF0(void)
     label(0x4302);
     wnd_open(0x18);
     label(0x4305);
-    func_800FCCBC();
+    catalog_dispatch_0();
     open_row(0xA);
     wnd_open_cur();
 L105c48:

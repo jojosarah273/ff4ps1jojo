@@ -17,7 +17,7 @@ void func_80113E3C(void)
     cell_put(0x90);
 L113e84:
     for (;;) {
-        func_800FE7D8();
+        shop_view_run();
         func_80113F3C();
         row_prep(0x20);
         cell_push9(0x6FB);

@@ -62,7 +62,7 @@ La198:
         for (;;) {
             row_read2(0x93);
             sep_b();
-            func_800F80D0(2);
+            cell_pos_back2(2);
             cell_put_hi9(0x93);
             row_prep_close();
             txt_set(0x1B19);

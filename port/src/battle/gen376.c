@@ -28,7 +28,7 @@ L118be0:
         cell_sink8_9(0x1007);
         sep_a();
         cell_peek0(cell_state(0x30));
-        func_800F5520(cell_state_of());
+        cell_flags_cmp_pos(cell_state_of());
         if (io_go() == 0)
             goto L118C58;
         cell_sink8_9(0x1009);

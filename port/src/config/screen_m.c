@@ -51,19 +51,19 @@ L354:
     cell_draw(0x29EB);
     row_prep(0x20);
     draw_pad(9);
-    func_800F6764(0x80);
+    cell_push89_sel(0x80);
     func_80152C50();
     draw_pad(7);
-    func_800F5520(cell_state(cell_bank_sel(0x80)));
+    cell_flags_cmp_pos(cell_state(cell_bank_sel(0x80)));
     if (io_go() == 0)
         goto L44c;
     draw_pad(5);
-    func_800F6764(0x80);
+    cell_push89_sel(0x80);
     func_800F8378(0x80);
     goto L46c;
 L44c:
     draw_pad(5);
-    func_800F6764(0x80);
+    cell_push89_sel(0x80);
     cell_pos_mask(0xFEFF);
     func_800F8378(0x80);
 L46c:

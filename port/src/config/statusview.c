@@ -30,7 +30,7 @@ void func_801652FC(void)
     page(0xB5);
     cell_sink8_9(0x1000);
     cell_peek0(cell_state(0xAF));
-    func_800F5520(cell_state(0xB3));
+    cell_flags_cmp_pos(cell_state(0xB3));
     if (io_go() == 0)
         goto L165414;
     row_read2(0xB3);

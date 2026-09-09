@@ -56,7 +56,7 @@ void func_80150C58(void)
     if (io_go() == 0)
         goto df4;
     sep_b();
-    func_800F80D0();
+    cell_pos_back2();
     cell_pull9_hi(0x1800);
 df4:
     cell_push9(0x1800);

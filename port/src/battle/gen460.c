@@ -27,7 +27,7 @@ void func_80149A98(void)
 L149b6c:
     for (;;) {
         cell_stamp8_9_b(0x7600);
-        func_800F5DD4();
+        cell_dec_cell();
         if (poll_go(0x202) != 0)
             continue;
         break;

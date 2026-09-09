@@ -5,16 +5,6 @@
 #include "ff4_window.h"
 
 
-
-
-
-
-
-
-
-
-extern int func_800FD804();
-extern int func_800FE7D8();
 extern int func_800FE8B4();
 extern int func_80115BCC();
 extern int func_80115D2C();
@@ -37,7 +27,7 @@ void func_8011356C(void)
   cell_clear_bank(0xace);
   func_80115BCC();
   do {
-    func_800FE7D8();
+    shop_view_run();
     func_80119AC8();
     func_80115D2C();
     row_page(0x7a);
@@ -45,7 +35,7 @@ void func_8011356C(void)
     iVar1 = sel(0x202);
     if (iVar1 == 0) {
       latch(0x23);
-      func_800FD804();
+      wnd_fx_pads();
     }
     page_open(0xad2);
     iVar1 = cell_flags_pack(0x202);

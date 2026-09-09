@@ -12,7 +12,7 @@ void func_8015EA00(void)
     sep_a();
     row_read2(0xA4);
     cell_peek0(cell_state(0x270B));
-    func_800F5520(cell_state(0x270D));
+    cell_flags_cmp_pos(cell_state(0x270D));
     if (io_go() == 0)
         goto L15EA60;
     cell_push9(0x270D);

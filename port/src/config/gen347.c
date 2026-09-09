@@ -11,7 +11,7 @@ void func_8012A8A8(void)
     open_row(0x5E);
 L12a8c0:
     for (;;) {
-        func_800F6E30(0x5A);
+        cell_push_c8_lo(0x5A);
         if (gate(2) != 0)
             goto L12AA20;
         io_poll(0xFF);
@@ -27,7 +27,7 @@ L12a8c0:
         cell_put(0x5C);
         latch_cur();
         stat_sync();
-        func_800F6E30(0x5A);
+        cell_push_c8_lo(0x5A);
         io_poll(0xED);
         if (io_just() != 0)
             goto L12A970;
@@ -42,7 +42,7 @@ L12a8c0:
         cell_put(0xDB);
         goto L12A9B0;
     L12A9A0:
-        func_800F6E30(0x5A);
+        cell_push_c8_lo(0x5A);
         func_8012AE00();
     L12A9B0:
         row_prep(0x20);
@@ -55,8 +55,8 @@ L12a8c0:
         func_8012AB18();
     L12AA20:
         row_prep(0x20);
-        func_800F62F0(0x5A);
-        func_800F62F0(0x5A);
+        cell_inc_cell(0x5A);
+        cell_inc_cell(0x5A);
         row_prep_close();
         key_page(0x5D);
         row_page(0x5D);

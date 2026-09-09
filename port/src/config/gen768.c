@@ -9,13 +9,13 @@ void func_80128B3C(void)
        80128C4C/8012821C/80126D48 row block; 53D4 latches. */
     row_prep(0x20);
     row_sync2(0x1BE4);
-    if (func_800F5520(cell_peek_cur()) != 0)
+    if (cell_flags_cmp_pos(cell_peek_cur()) != 0)
         goto L128C24;
-    if (func_800F5520(cell_peek_cur()) != 0)
+    if (cell_flags_cmp_pos(cell_peek_cur()) != 0)
         goto L128C24;
-    if (func_800F5520(cell_peek_cur()) != 0)
+    if (cell_flags_cmp_pos(cell_peek_cur()) != 0)
         goto L128C24;
-    if (func_800F5520(cell_peek_cur()) != 0)
+    if (cell_flags_cmp_pos(cell_peek_cur()) != 0)
         goto L128C24;
     row_prep_close();
     func_80128C4C();

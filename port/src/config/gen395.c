@@ -4,18 +4,6 @@
  */
 #include "ff4_window.h"
 
-
-
-
-
-extern int func_800F7C6C();
-
-
-
-
-
-
-
 extern int func_80123BD8();
 
 void func_80123B00(void)
@@ -27,13 +15,13 @@ void func_80123B00(void)
   cell_push_c8_d58(3);
   row_read(0x80);
   sep_a();
-  func_800F7C6C();
+  cell_tick_dbl();
   cell_flags_repack2();
-  func_800F7C6C();
+  cell_tick_dbl();
   cell_flags_repack2();
-  func_800F7C6C();
+  cell_tick_dbl();
   cell_flags_repack2();
-  func_800F7C6C();
+  cell_tick_dbl();
   cell_put(0x45);
   latch(7);
   func_80123BD8();

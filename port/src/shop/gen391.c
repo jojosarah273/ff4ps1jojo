@@ -43,7 +43,7 @@ L16638c:
         txt_set_cur();
         row_read(7);
         cell_push_c8();
-        func_800F8E50();
+        cell_pull60();
         func_80166458();
         txt_set_cur();
         row_read(3);

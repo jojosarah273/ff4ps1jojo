@@ -49,7 +49,7 @@ L176af4:
         label(0x4302);
         wnd_open(0x80);
         label(0x4305);
-        func_800F9868();
+        catalog_dispatch();
         row_page(0x13);
         sep_a();
         row_open_w(2);

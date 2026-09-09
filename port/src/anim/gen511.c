@@ -4,12 +4,6 @@
  */
 #include "ff4_window.h"
 
-
-
-
-
-
-extern void func_800F9868(u32 v0);
 void func_80170884(void) {
     cell_clear_bank(0x420B);
     latch(0x80);
@@ -26,5 +20,5 @@ void func_80170884(void) {
     cell_clear_bank(0x4304);
     wnd_open(0x1800);
     label(0x4305);
-    func_800F9868(0);;
+    catalog_dispatch(0);;
 }

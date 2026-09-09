@@ -11,16 +11,16 @@ void func_8012C360(void)
     /* regcmp v0/v1 -> L12C41C */
     draw_pad(7);
     row_prep(0x20);
-    func_800F6764(0x60);
+    cell_push89_sel(0x60);
     sep_a();
     cell_peek0(cell_state(0x45));
     step2();
     step2();
-    func_800F5520(cell_bank_sel(0x60));
+    cell_flags_cmp_pos(cell_bank_sel(0x60));
     cell_state_of();
     if (io_go() == 0)
         goto L12C3FC;
-    func_800F6764(0x60);
+    cell_push89_sel(0x60);
 L12C3FC:
     poll_pair_cur();
     poll_pair_cur();

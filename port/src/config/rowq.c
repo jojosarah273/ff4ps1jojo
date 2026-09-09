@@ -89,7 +89,7 @@ L9f8:
 La28:
     for (;;) {
         row_arm2(cell_state(4));
-        if (func_800F4FAC(0x101) != 0)
+        if (cell_flags_zero50(0x101) != 0)
             goto Laa8;
         txt_set(0xF462);
         if (gate(0x80) != 0)

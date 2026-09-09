@@ -69,7 +69,7 @@ void func_80132CFC(void)
     wnd_open(0xF600);
     draw_pad(0xC600);
     row_sync2(0x7FF);
-    func_800F3D64(0x7E7E);
+    battle_wait_just(0x7E7E);
     row_prep_close();
     latch(0x79);
     cell_pull_c8_lo(0x210A);

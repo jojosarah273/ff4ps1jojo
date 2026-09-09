@@ -83,7 +83,7 @@ void func_801583FC(void)
         draw_pad(0x14);
         for (;;) {
             row_arm2(cell_state(0xA9));
-            if (func_800F4FAC(0x101) != 0)
+            if (cell_flags_zero50(0x101) != 0)
                 goto sprite_b;
             sep_a();
             cell_push_c8_sel(0x80);

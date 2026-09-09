@@ -15,11 +15,11 @@ void func_801046F4(void)
 L104724:
     for (;;) {
         cell_clear_pad();
-        func_800FF024();
+        shop_buy_run();
         row_page(0x79);
-        func_800F9690();
+        cell_cur_save54();
         txt_draw(0x6F8);
-        func_800FE7D8();
+        shop_view_run();
         key_page(0x79);
         row_page(0x79);
         io_poll(0x20);

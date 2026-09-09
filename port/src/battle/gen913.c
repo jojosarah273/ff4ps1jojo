@@ -8,13 +8,13 @@ void func_80100A98(void)
     /* shop rows: 0x8FC/0x1701 texts; gate 6434(2) picks the 0x8FC
        reads. */
     txt_set(0x8FC);
-    func_800F9690();
+    cell_cur_save54();
     txt_set(0x1701);
     if (gate(2) != 0)
         goto L100B00;
     sep_a();
     row_open_w(0x20);
-    func_800F9690();
+    cell_cur_save54();
 L100B00:
     txt_set(0x8FC);
     row_read(7);

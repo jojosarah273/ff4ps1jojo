@@ -9,12 +9,12 @@ void func_8011D658(void)
     cell_push9(0x1707);
     cell_pos_mask(0xFF);
     sep_b();
-    func_800F80D0(7);
+    cell_pos_back2(7);
     cell_put_hi9(0x5C);
     cell_push9(0x1706);
     cell_pos_mask(0xFF);
     sep_b();
-    func_800F80D0(7);
+    cell_pos_back2(7);
     cell_put_hi9(0x5A);
     row_sync2_cur();
     row_prep_close();
@@ -50,7 +50,7 @@ LD738:
         label(0x4302);
         page(0x95);
         label(0x4305);
-        func_800FCCBC();
+        catalog_dispatch_0();
         page(0x9B);
         label(0x2116);
         cell_clear_bank(0x420B);
@@ -58,7 +58,7 @@ LD738:
         if (cell_flags_pack(2) != 0)
             goto LD830;
         label(0x4305);
-        func_800FCCBC();
+        catalog_dispatch_0();
     LD830:
         page(0x9D);
         label(0x2116);
@@ -67,7 +67,7 @@ LD738:
         label(0x4302);
         page(0x95);
         label(0x4305);
-        func_800FCCBC();
+        catalog_dispatch_0();
         page(0x9F);
         label(0x2116);
         cell_clear_bank(0x420B);
@@ -75,7 +75,7 @@ LD738:
         if (cell_flags_pack(2) != 0)
             goto LD8b0;
         label(0x4305);
-        func_800FCCBC();
+        catalog_dispatch_0();
     LD8b0:
         key_page(8);
         poll_pair(7);

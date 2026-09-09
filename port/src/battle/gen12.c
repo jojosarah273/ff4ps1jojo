@@ -62,7 +62,7 @@ L440:
         sep_a();
         cell_poke0(cell_state(0x8B));
         row_sel_cell_cur();
-        func_800F9690();
+        cell_cur_save54();
         txt_cell(0x712);
     L508:
         txt_draw(0x8FB);

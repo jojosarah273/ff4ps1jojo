@@ -9,15 +9,6 @@
 extern int func_800F7534();
 
 
-extern int func_800F8E50();
-
-
-
-
-
-
-extern int func_800F9868();
-
 void func_8011EE34(void)
 
 {
@@ -30,7 +21,7 @@ void func_8011EE34(void)
   sep();
   txt_draw(0x420c);
   func_800F7534(0x11d);
-  func_800F8E50(0x2116);
+  cell_pull60(0x2116);
   latch(1);
   txt_draw(0x4300);
   latch(0x18);
@@ -43,7 +34,7 @@ void func_8011EE34(void)
   row_prep_close();
   txt_set(0x123);
   txt_draw(0x4306);
-  func_800F9868(0);
+  catalog_dispatch(0);
   row_pad();
   return;
 }

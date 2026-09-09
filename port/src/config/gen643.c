@@ -15,11 +15,11 @@ void func_8012C8A4(void)
     page(0x43);
     draw_pad(3);
     row_prep(0x20);
-    func_800F6764(0x60);
+    cell_push89_sel(0x60);
     cell_put_hi9(0x45);
     func_800F4B1C();
     func_800F8378(0x60);
-    func_800F5520(cell_state(0x45));
+    cell_flags_cmp_pos(cell_state(0x45));
     if (io_just() != 0)
         goto L12C948;
     row_prep_close();

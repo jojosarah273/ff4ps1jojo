@@ -26,7 +26,7 @@ void func_80131A2C(void)
     cell_sink8_9(7);
     sep_a();
     cell_peek0(cell_state(0x45));
-    func_800F5520(cell_state_of());
+    cell_flags_cmp_pos(cell_state_of());
     if (io_go() == 0)
         goto L131B10;
     cell_sink8_9(9);

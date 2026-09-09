@@ -29,7 +29,7 @@ L118848:
     open_row(0x81);
 L118860:
     for (;;) {
-        func_800FE7D8();
+        shop_view_run();
         cell_clear_bank(0x2130);
         cell_clear_bank(0x212D);
         latch(0x83);

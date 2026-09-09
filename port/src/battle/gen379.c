@@ -47,7 +47,7 @@ L10f9a4:
         if (io_just() == 0)
             goto L10FA7C;
         latch(0x23);
-        func_800FD804();
+        wnd_fx_pads();
         latch(1);
         cell_put(0xE5);
     L10FA7C:

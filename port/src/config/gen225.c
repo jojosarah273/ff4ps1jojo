@@ -15,11 +15,11 @@ void func_80123320(void)
     row_sel_cell2_cur();
     cell_put(0x45);
     txt_cell(4);
-    func_800F7C6C();
+    cell_tick_dbl();
     cell_flags_repack2();
-    func_800F7C6C();
+    cell_tick_dbl();
     cell_flags_repack2();
-    func_800F7C6C();
+    cell_tick_dbl();
     row_read(1);
     cell_tick_or(cell_state(0x45));
     if (func_800F7918(2) != 0)
@@ -73,7 +73,7 @@ L34fc:
         row_sync();
         row_prep(0x20);
         sep_b();
-        func_800F80D0(0x40);
+        cell_pos_back2(0x40);
         row_prep_close();
         latch(0xFF);
         cell_pull_c8();

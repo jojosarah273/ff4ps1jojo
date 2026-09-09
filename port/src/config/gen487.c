@@ -26,7 +26,7 @@ L12C5D0:
     cell_peek0(cell_state(0x43));
     draw_pad(7);
     cell_bank_sel(0x60);
-    func_800F5520(cell_state_of());
+    cell_flags_cmp_pos(cell_state_of());
     if (io_go() == 0)
         goto L12C678;
     func_800F8378(0x60);

@@ -25,7 +25,7 @@ void func_801151BC(void)
     tail(0xF5);
 L5254:
     for (;;) {
-        func_800FE7D8();
+        shop_view_run();
         cell_clear_pad();
         page(0xF3);
         cell_set50_from54();
@@ -43,7 +43,7 @@ L5254:
         if (sel(0x202) != 0)
             goto L52ec;
         latch(0x23);
-        func_800FD804();
+        wnd_fx_pads();
     L52ec:
         wnd_open(0x70);
         tail(0xC);

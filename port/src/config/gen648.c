@@ -12,7 +12,7 @@ void func_80122F2C(void)
     tail(0x45);
     sep_a();
     cell_peek0(cell_state(0x45));
-    func_800F6764(0x48);
+    cell_push89_sel(0x48);
     func_8011F3F8();
     row_prep_close();
     row_page(0x5A);

@@ -11,8 +11,8 @@ void func_80153608(void)
         goto L9a4;
     draw_pad_cur();
     row_info(0xAB);
-    func_800F8E50(0x289C);
-    func_800F8E50(0x289E);
+    cell_pull60(0x289C);
+    cell_pull60(0x289E);
 L65c:
     for (;;) {
         cell_fmt2(0xAB);

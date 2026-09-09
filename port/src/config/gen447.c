@@ -12,7 +12,7 @@ L12eac8:
         page(0x1D);
         cell_step();
         tail(0x23);
-        func_800F6E30(0x1D);
+        cell_push_c8_lo(0x1D);
         if (gate(0x202) != 0)
             goto L12EBA8;
         cell_fmt2(0x1D);

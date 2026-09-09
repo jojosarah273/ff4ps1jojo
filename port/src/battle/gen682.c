@@ -7,14 +7,14 @@ void func_801120F4(void)
 {
     /* battle rows: 0x1700/0x7070/0x300/0x1A03 texts, 800FF024/
        8011EA5C rows; 5574(3) gate. */
-    func_800FE7D8();
+    shop_view_run();
     cell_clear_pad();
     func_8011416C();
     txt_set(0x1700);
     io_poll(3);
     if (io_just() != 0)
         goto L11213C;
-    func_800FF024();
+    shop_buy_run();
 L11213C:
     wnd_open(0x7070);
     label(0x300);

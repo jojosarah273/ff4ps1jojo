@@ -36,7 +36,7 @@ L13e398:
         for (;;) {
             cell_state(0xA);
             row_arm2_cur();
-            if (func_800F4FAC(0x101) != 0)
+            if (cell_flags_zero50(0x101) != 0)
                 goto L13E4C4;
             txt_set_cur();
             if (gate(0x80) != 0)

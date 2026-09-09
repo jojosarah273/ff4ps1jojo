@@ -243,7 +243,7 @@ L564:
     row_prep(0x20);
     cell_put_hi9(0x45);
     row_prep_close();
-    func_800F6E30(0x45);
+    cell_push_c8_lo(0x45);
     poll_spin();
     if (poll_go(0x80) != 0)
         goto L654;
@@ -312,7 +312,7 @@ L7B4:
     row_prep(0x20);
     cell_put_hi9(0x45);
     row_prep_close();
-    func_800F6E30(0x45);
+    cell_push_c8_lo(0x45);
     cell_set50_from40();
     io_poll(0x20);
     if (io_just() != 0)

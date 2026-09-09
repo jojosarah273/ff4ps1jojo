@@ -27,7 +27,7 @@ L1283E0:
     func_801387D8();
     row_prep(0x20);
     page(0x45);
-    func_800F5520(cell_peek_cur());
+    cell_flags_cmp_pos(cell_peek_cur());
     if (io_just() == 0)
         goto L1283C8;
     row_prep_close();

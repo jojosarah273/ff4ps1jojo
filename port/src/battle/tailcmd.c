@@ -145,7 +145,7 @@ Laaa0:
     open_row(0x7B);
     latch(0x81);
     txt_draw(0x4200);
-    func_800FE7D8();
+    shop_view_run();
     func_800F5448();
     page(0xB3);
     tail(0xB3);

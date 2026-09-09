@@ -9,7 +9,7 @@ void func_80138788(void)
     row_sync2(2047);
     wnd_open(62976);
     draw_pad(4096);
-    func_800F3D64(32382);
+    battle_wait_just(32382);
     row_prep_close();
     func_80135B54();
 }

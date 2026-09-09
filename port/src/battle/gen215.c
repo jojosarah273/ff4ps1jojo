@@ -80,7 +80,7 @@ L650:
     cell_set50_from40();
     txt_draw(0x709);
     row_sel_cell_cur();
-    func_800F9690();
+    cell_cur_save54();
     row_page(0xB1);
     if (gate(0x202) != 0)
         goto L7e0;

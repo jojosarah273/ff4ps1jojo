@@ -9,6 +9,6 @@ void func_80132130(void)
     row_sync2(599);
     wnd_open(41472);
     draw_pad(768);
-    func_800F3D64(32382);
+    battle_wait_just(32382);
     row_prep_close();
 }

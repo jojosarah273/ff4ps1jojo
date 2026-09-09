@@ -19,11 +19,11 @@ void func_8012E33C(void)
     row_pad();
     row_prep(0x20);
     sep_b();
-    func_800F80D0();
+    cell_pos_back2();
     if (io_go() != 0)
         goto L12E540;
     sep_b();
-    func_800F80D0();
+    cell_pos_back2();
     row_pad();
     stat_sync();
     cell_pull9_hi(0x1B9C);

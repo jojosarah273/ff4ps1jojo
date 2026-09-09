@@ -6,7 +6,7 @@
 void func_8011383C(void)
 {
     latch(0x51);
-    func_800FD804();
+    wnd_fx_pads();
     latch(0x60);
     cell_put(0xAD);
     open_row(0x79);
@@ -86,7 +86,7 @@ L1388c:
             break;
     }
     latch_cur();
-    func_800FD804();
+    wnd_fx_pads();
     func_8011EA5C();
     return;
 }

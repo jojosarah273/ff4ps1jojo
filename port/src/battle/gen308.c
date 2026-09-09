@@ -41,11 +41,11 @@ void func_801126A0(void)
     latch(2);
     txt_draw(0xACE);
     latch(0x5E);
-    func_800FD804();
+    wnd_fx_pads();
     func_80115BCC();
 L1127c0:
     for (;;) {
-        func_800FE7D8();
+        shop_view_run();
         func_80115D2C();
         page_open(0xAD2);
         poll_t(0x10);

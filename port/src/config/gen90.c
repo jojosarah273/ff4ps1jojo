@@ -60,7 +60,7 @@ L134794:
     func_801345B4();
     if (io_go() == 0)
         goto L13484C;
-    func_800F6E30(0xE5);
+    cell_push_c8_lo(0xE5);
     row_read(0xC0);
     io_poll(0xC0);
     if (io_just() != 0)

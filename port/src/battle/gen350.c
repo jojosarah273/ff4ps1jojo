@@ -30,14 +30,14 @@ L11DAE0:
     label(0x4302);
     page(0x95);
     label(0x4305);
-    func_800FCCBC();
+    catalog_dispatch_0();
     page(0x9B);
     label(0x2116);
     page(0x97);
     if (cell_flags_pack(2) != 0)
         goto L11DB70;
     label(0x4305);
-    func_800FCCBC();
+    catalog_dispatch_0();
 L11DB70:
     page(0x9D);
     label(0x2116);
@@ -45,14 +45,14 @@ L11DB70:
     label(0x4302);
     page(0x95);
     label(0x4305);
-    func_800FCCBC();
+    catalog_dispatch_0();
     page(0x9F);
     label(0x2116);
     page(0x97);
     if (cell_flags_pack(2) != 0)
         return;
     label(0x4305);
-    func_800FCCBC();
+    catalog_dispatch_0();
     return;
 L11DBE0:
     return;

@@ -22,7 +22,7 @@ void func_8010E388(void)
     latch(1);
     cell_put(0xE3);
     latch(0x23);
-    func_800FD804();
+    wnd_fx_pads();
     wnd_open(0xC0);
     tail(0x89);
 L10e428:
@@ -39,7 +39,7 @@ L10e428:
         row_open_w0();
         txt_draw(0xAD5);
         func_80115D2C();
-        func_800FF024();
+        shop_buy_run();
         page(0x89);
         cell_set50_from54();
         tail(0x89);

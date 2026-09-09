@@ -167,6 +167,22 @@ uint32_t ticker_reblend();
 uint32_t wnd_fx_7d();
 uint32_t wnd_fx_7d_b();
 uint32_t wnd_fx_tags();
+uint32_t battle_wait_just();
+uint32_t catalog_dispatch();
+uint32_t catalog_dispatch_0();
+uint32_t cell_cur_save54();
+uint32_t cell_dec_cell();
+uint32_t cell_flags_cmp_pos();
+uint32_t cell_flags_zero50();
+uint32_t cell_inc_cell();
+uint32_t cell_pos_back2();
+uint32_t cell_pull60();
+uint32_t cell_push89_sel();
+uint32_t cell_push_c8_lo();
+uint32_t cell_tick_dbl();
+uint32_t shop_buy_run();
+uint32_t shop_view_run();
+uint32_t wnd_fx_pads();
 #endif
 
 /* more no-arg variants (mapper output) */

@@ -12,7 +12,7 @@ void func_80101350(void)
     open_row(0x7B);
 L1380:
     row_page(0xAC);
-    func_800F9690();
+    cell_cur_save54();
     row_page(0x7B);
     if (sel(2) != 0)
         goto L13e0;
@@ -66,7 +66,7 @@ L14f0:
     open_row(0xD6);
     txt_set(0x1700);
     row_sel_cell_cur();
-    func_800F9690();
+    cell_cur_save54();
     cell_push_c8();
     cell_put(0x3D);
     cell_push_c8();

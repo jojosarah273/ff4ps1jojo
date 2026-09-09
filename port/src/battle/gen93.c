@@ -9,7 +9,7 @@ void func_80105828(void)
        through the buy amounts (1719-1726 detail rows); L15A78 closes the
        list window 0xA. */
     txt_set(0x709);
-    func_800F9690();
+    cell_cur_save54();
     txt_set(0x1706);
     sep_a();
     row_open_w0();

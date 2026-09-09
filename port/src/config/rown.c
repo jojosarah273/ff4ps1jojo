@@ -98,9 +98,9 @@ L2e0:
         cell_peek0(cell_state(0x5A));
         if (io_go() == 0)
             goto L3a8;
-        func_800F62F0(0x39);
+        cell_inc_cell(0x39);
     L3a8:
-        func_800F5DD4(0x60);
+        cell_dec_cell(0x60);
         if (poll_go(0x202) != 0)
             continue;
         break;

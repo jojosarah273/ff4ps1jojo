@@ -144,7 +144,7 @@ Lc64:
     func_8015236C();
     func_800F7534(0x3941);
     row_info(0x9A);
-    func_800F8E50(0x2896);
+    cell_pull60(0x2896);
 Le18:
     for (;;) {
         page(0x9C);

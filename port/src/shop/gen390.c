@@ -18,7 +18,7 @@ L1664d0:
     for (;;) {
         row_read2();
         cell_stamp8_9_b(0x7600);
-        func_800F5DD4(2);
+        cell_dec_cell(2);
         if (poll_go_cur() != 0)
             goto L166560;
         cell_push9();

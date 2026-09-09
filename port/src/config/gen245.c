@@ -76,7 +76,7 @@ Ldf70:
     row_open();
     draw_pad(0xF600);
     row_sync2(0x3F);
-    func_800F3D64(0x7E);
+    battle_wait_just(0x7E);
     row_done();
     row_read2(0xD9);
     cell_pos_mask(0xFF);
@@ -85,11 +85,11 @@ Ldf70:
     cell_pos_fwd(0x1000);
     row_open();
     row_sync2(0x3F);
-    func_800F3D64(0x7E7E);
+    battle_wait_just(0x7E7E);
     row_done();
     wnd_open(0xF600);
     row_sync2(0x3F);
-    func_800F3D64(0x7E7E);
+    battle_wait_just(0x7E7E);
     row_prep_close();
     row_page(0xD9);
     func_801224D0();

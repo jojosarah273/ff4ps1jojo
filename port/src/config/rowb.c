@@ -17,7 +17,7 @@ void func_80155C88(void)
     row_arm_s_cur();
     sep_b();
     cell_push9_bank();
-    func_800F80D0(0xA860);
+    cell_pos_back2(0xA860);
     sep();
     row_prep_close();
     sep();

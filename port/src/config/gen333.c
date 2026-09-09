@@ -37,7 +37,7 @@ L137790:
         row_read2(0x75);
         cell_peek0(cell_state(0x79));
         cell_put_hi9(0x75);
-        func_800F5DD4(0x63);
+        cell_dec_cell(0x63);
         if (poll_go(0x202) != 0)
             continue;
         break;

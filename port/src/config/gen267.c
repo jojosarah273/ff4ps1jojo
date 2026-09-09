@@ -32,7 +32,7 @@ L1318d0:
     for (;;) {
         sep_a();
         cell_peek0(cell_state(0x57));
-        func_800F5DD4(0x54);
+        cell_dec_cell(0x54);
         if (poll_go(0x202) != 0)
             continue;
         break;

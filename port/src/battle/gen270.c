@@ -15,9 +15,9 @@ void func_8011F3F8(void)
     tail(0x5A);
 L11f430:
     for (;;) {
-        func_800F62F0(0x5A);
+        cell_inc_cell(0x5A);
         sep_b();
-        func_800F80D0(0x3E8);
+        cell_pos_back2(0x3E8);
         if (func_800F53FC() != 0)
             break;
     }

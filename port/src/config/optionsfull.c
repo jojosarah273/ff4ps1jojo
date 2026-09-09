@@ -404,7 +404,7 @@ l9E84:
 l9F2C:
     cell_poke0(cell_state(0xA9));
     row_arm2_cur();
-    if (func_800F4FAC(0x101) != 0)
+    if (cell_flags_zero50(0x101) != 0)
         goto l9F5C;
     latch(0x63);
     goto l9F64;

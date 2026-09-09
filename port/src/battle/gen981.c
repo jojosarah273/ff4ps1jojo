@@ -12,7 +12,7 @@ void func_8011B4A4(void)
         if (io_just() != 0)
             break;
         sep_b();
-        func_800F7C6C();
+        cell_tick_dbl();
         poll_pair_cur();
     } while (1);
     page(0x3D);

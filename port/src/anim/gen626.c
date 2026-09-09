@@ -23,7 +23,7 @@ void func_80176C6C(void)
     sep_a();
     cell_pos_fwd(0x7F);
     row_sync2_cur();
-    func_800F3D64(0x7E7E);
+    battle_wait_just(0x7E7E);
     row_prep_close();
     return;
 }

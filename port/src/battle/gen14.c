@@ -12,7 +12,7 @@ void func_80100D50(void)
     open_row(0x7B);
 Ld80:
     row_page(0xAC);
-    func_800F9690();
+    cell_cur_save54();
     row_page(0x7B);
     if (sel(2) != 0)
         goto Lde0;

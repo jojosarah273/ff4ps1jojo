@@ -17,7 +17,7 @@ void func_80127668(void)
     page(0x45);
     draw_pad(0x1000);
     row_sync2(0x7FF);
-    func_800F3D64(0x7000);
+    battle_wait_just(0x7000);
     row_prep_close();
     func_80135B54();
     row_pad();

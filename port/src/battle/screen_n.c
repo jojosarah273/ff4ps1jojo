@@ -25,9 +25,9 @@ void func_80112A68(void)
     tail(0x2E);
 Lb14:
     for (;;) {
-        func_800FE7D8();
+        shop_view_run();
         cell_clear_pad();
-        func_800FF024();
+        shop_buy_run();
         row_page(0xAD);
         sep_b();
         cell_pos_back(0x10);
@@ -45,7 +45,7 @@ Lb14:
         break;
     }
 Lb9c:
-    func_800FE7D8();
+    shop_view_run();
     func_801130C0();
     func_800FE8B4();
     func_80116348();
@@ -97,7 +97,7 @@ Lbc4:
         goto Lec4;
     key_page(0xC4);
     latch(0x23);
-    func_800FD804();
+    wnd_fx_pads();
     wnd_open_cur();
     for (;;) {
         txt_cell(0xA6D);
@@ -171,9 +171,9 @@ L00c:
     latch(0x23);
     func_80117F40();
     for (;;) {
-        func_800FE7D8();
+        shop_view_run();
         cell_clear_pad();
-        func_800FF024();
+        shop_buy_run();
         row_page(0xAD);
         sep_b();
         cell_pos_back(0x10);

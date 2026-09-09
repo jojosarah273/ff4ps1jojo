@@ -3,11 +3,6 @@
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-extern int func_800F3D64();
-
-
-
-
 
 void func_80176E98(void)
 
@@ -16,23 +11,23 @@ void func_80176E98(void)
   wnd_open(0x87d0);
   draw_pad(0xa000);
   row_sync2(0x1f);
-  func_800F3D64(0xd7e);
+  battle_wait_just(0xd7e);
   wnd_open(0x87d0);
   draw_pad(0xa040);
   row_sync2(0x1f);
-  func_800F3D64(0xd7e);
+  battle_wait_just(0xd7e);
   wnd_open(0x87d0);
   draw_pad(0xa080);
   row_sync2(0x1f);
-  func_800F3D64(0xd7e);
+  battle_wait_just(0xd7e);
   wnd_open(0x87d0);
   draw_pad(0xa0c0);
   row_sync2(0x1f);
-  func_800F3D64(0xd7e);
+  battle_wait_just(0xd7e);
   wnd_open(0x87d0);
   draw_pad(0xa060);
   row_sync2(7);
-  func_800F3D64(0xd7e);
+  battle_wait_just(0xd7e);
   row_prep_close();
   return;
 }

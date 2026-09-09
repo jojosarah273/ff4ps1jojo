@@ -23,7 +23,7 @@ void func_8012FBB0(void)
     func_80124EAC();
     row_prep(0x20);
     cell_sink8_9(0xB);
-    func_800F5520(cell_state(0x1BC4));
+    cell_flags_cmp_pos(cell_state(0x1BC4));
     row_prep_close();
     if (io_go() != 0)
         goto Lfcb0;

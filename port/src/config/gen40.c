@@ -9,7 +9,7 @@ void func_80125130(void)
     row_page(0x1D);
     func_80124EAC();
     tail(0x22);
-    func_800F6E30(0x22);
+    cell_push_c8_lo(0x22);
     row_read(0x3F);
     if (sel(0x202) != 0)
         goto L5190;

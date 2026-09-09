@@ -12,7 +12,7 @@ void func_801136D4(void)
 L1136e4:
     for (;;) {
         latch(0x23);
-        func_800FD804();
+        wnd_fx_pads();
         latch(0x20);
         txt_draw(0xACF);
         latch(2);
@@ -32,7 +32,7 @@ L1136e4:
         func_80115BCC();
     L11379c:
         for (;;) {
-            func_800FE7D8();
+            shop_view_run();
             func_80119AC8();
             func_80115D2C();
             page_open(0xAD2);

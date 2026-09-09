@@ -196,7 +196,7 @@ f0c:
         sep();
     }
 s078:
-    func_800F8E50(0x355E);
+    cell_pull60(0x355E);
 s080:
     txt_cell(0x2015);
     label(0x393D);
@@ -333,7 +333,7 @@ s080:
         if (func_800F64EC(2) != 0)
             goto l534;
         cell_poke0(cell_state(0xA9));
-        func_800F5520();
+        cell_flags_cmp_pos();
         if (io_go() != 0)
             goto l534;
         cell_put_hi9(0xA9);
@@ -345,7 +345,7 @@ s080:
             continue;
         break;
     }
-    func_800F5DD4(0xA9);
+    cell_dec_cell(0xA9);
     for (;;) {
         sep_b();
         cell_sink8_9(0x2A07);

@@ -4,13 +4,6 @@
  */
 #include "ff4_window.h"
 
-
-
-
-
-
-extern int func_800F9868();
-
 void func_801766B0(void)
 
 {
@@ -29,7 +22,7 @@ void func_801766B0(void)
   label(0x4302);
   page(0x45);
   label(0x4305);
-  func_800F9868(0);
+  catalog_dispatch(0);
   return;
 }
 

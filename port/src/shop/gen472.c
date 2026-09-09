@@ -4,16 +4,6 @@
  */
 #include "ff4_window.h"
 
-
-
-
-extern int func_800F8E50();
-
-
-
-
-extern int func_800F9868();
-
 void func_8016BAAC(void)
 
 {
@@ -30,8 +20,8 @@ void func_8016BAAC(void)
   txt_draw(0x4351);
   latch(0x13);
   txt_draw(0x4354);
-  func_800F8E50(0x4355);
-  func_800F9868(0x50);
+  cell_pull60(0x4355);
+  catalog_dispatch(0x50);
   row_pad();
   return;
 }

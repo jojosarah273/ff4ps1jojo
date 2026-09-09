@@ -39,7 +39,7 @@ L15f110:
     for (;;) {
         cell_state(0xA9);
         row_arm2_cur();
-        if (func_800F4FAC(0x101) != 0)
+        if (cell_flags_zero50(0x101) != 0)
             goto L15F198;
         sep_a();
         row_page(0xAB);

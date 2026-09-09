@@ -10,7 +10,7 @@ void func_80129B04(void)
        tails; 5574 close. */
     row_sync();
     cell_fmt2(0x41);
-    func_800F6E30(0x60);
+    cell_push_c8_lo(0x60);
     row_sel_cell_cur();
     cell_put(0x45);
     sep_a();

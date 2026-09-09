@@ -11,6 +11,6 @@ void func_80138730(void)
     row_sync2(2047);
     wnd_open(4096);
     draw_pad(62976);
-    func_800F3D64(32382);
+    battle_wait_just(32382);
     row_prep_close();
 }

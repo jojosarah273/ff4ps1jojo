@@ -33,7 +33,7 @@ void func_8010F4DC(void)
     txt_draw(0xAD5);
     func_80115BCC();
     latch(0x23);
-    func_800FD804();
+    wnd_fx_pads();
     latch(1);
     cell_put(0xE3);
 L10f5c4:

@@ -83,7 +83,7 @@ L140:
     if (io_just() == 0)
         goto L46c;
     txt_set(0x1705);
-    func_800F9690();
+    cell_cur_save54();
     txt_cell(0x70C);
     io_poll(0x78);
     if (io_just() == 0)
@@ -99,7 +99,7 @@ L140:
     label(0x6FE);
     func_80100894();
     latch(0x30);
-    func_800FD804();
+    wnd_fx_pads();
     latch(1);
     cell_put(0xD4);
     latch(1);
@@ -109,7 +109,7 @@ L250:
     latch(0x16);
     cell_put(0xB2);
     latch(0x37);
-    func_800FD804();
+    wnd_fx_pads();
 L270:
     page(0x40);
     cell_push_c8();
@@ -177,7 +177,7 @@ L44c:
     return;
 L46c:
     txt_set(0x1705);
-    func_800F9690();
+    cell_cur_save54();
     txt_cell(0x70C);
     io_poll(0x77);
     if (io_just() == 0)

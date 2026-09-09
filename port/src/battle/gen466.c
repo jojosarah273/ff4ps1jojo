@@ -36,7 +36,7 @@ L110694:
         if (sel(0x202) != 0)
             goto L110758;
         latch(0x23);
-        func_800FD804();
+        wnd_fx_pads();
     L110758:
         page(0x89);
         cell_set50_from54();

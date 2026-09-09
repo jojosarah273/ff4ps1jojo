@@ -54,7 +54,7 @@ void func_8011285C(void)
     func_80115BCC();
 L1129c4:
     for (;;) {
-        func_800FE7D8();
+        shop_view_run();
         func_80115D2C();
         page_open(0xAD2);
         poll_t(0x10);

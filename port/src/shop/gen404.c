@@ -30,14 +30,14 @@ L166a44:
         txt_set_cur();
         row_read(7);
         cell_push_c8();
-        func_800F8E50();
+        cell_pull60();
         txt_set_cur();
         row_read(0xF);
         if (sel(0x202) != 0)
             goto L166AD8;
         func_800F7534();
         poll_pair_cur();
-        func_800F8E50();
+        cell_pull60();
     L166AD8:
         txt_set_cur();
         io_poll(0x8C);

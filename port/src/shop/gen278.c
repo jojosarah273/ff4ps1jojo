@@ -35,7 +35,7 @@ L696f0:
             cell_state_of();
             row_arm2_cur();
             row_sel_cell2_cur();
-            func_800F7C6C();
+            cell_tick_dbl();
             row_read(1);
             poll_pair_cur();
             if (poll_go(0x202) != 0)

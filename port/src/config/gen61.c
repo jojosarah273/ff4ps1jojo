@@ -58,7 +58,7 @@ void func_80123D3C(void)
     wnd_open(0x80C0);
     draw_pad(0xA100);
     row_sync2(0xF);
-    func_800F3D64(0xD7E);
+    battle_wait_just(0xD7E);
     row_prep_close();
     func_8011EF0C();
     func_8011F6A4();

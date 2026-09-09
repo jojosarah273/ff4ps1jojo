@@ -35,7 +35,7 @@ E00:
     row_sync2(0x800);
     wnd_open(0xD600);
     draw_pad(0xB600);
-    func_800F3D64(0x7E7E);
+    battle_wait_just(0x7E7E);
     row_prep_close();
     func_80120F1C();
     txt_set(0x1B49);
@@ -121,13 +121,13 @@ ff4:
     row_prep_close();
 L10C:
     func_80129C54();
-    func_800F6E30(0x5D);
+    cell_push_c8_lo(0x5D);
     cell_put(0x45);
     open_row(0x46);
     page(0x45);
     cell_push_c8();
     cell_put(0x48);
-    func_800F6E30(0x60);
+    cell_push_c8_lo(0x60);
     sep_a();
     row_open_w(0x50);
     cell_put(0x49);
@@ -157,7 +157,7 @@ L218:
     if (io_just() != 0)
         goto L298;
     for (;;) {
-        func_800F6E30(0x60);
+        cell_push_c8_lo(0x60);
         poll_spin();
         if (poll_go(0x8080) != 0)
             goto L260;
@@ -178,7 +178,7 @@ L298:
     if (io_just() != 0)
         goto L320;
     for (;;) {
-        func_800F6E30(0x60);
+        cell_push_c8_lo(0x60);
         cell_set50_from40();
         io_poll(8);
         if (io_go() == 0)
@@ -199,7 +199,7 @@ L320:
     func_800F52BC(2);
     if (io_just() != 0)
         goto L3C0;
-    func_800F6E30(0x5D);
+    cell_push_c8_lo(0x5D);
     poll_spin();
     if (poll_go(0x8080) == 0)
         goto L408;
@@ -211,7 +211,7 @@ L320:
         io_poll(0xFF);
         if (io_just() == 0)
             goto L3C0;
-        func_800F6E30(0x5D);
+        cell_push_c8_lo(0x5D);
         poll_spin();
         func_800F8A18(0x5D);
         func_80129B04();
@@ -221,7 +221,7 @@ L3C0:
     func_800F52BC(1);
     if (io_just() != 0)
         goto L498;
-    func_800F6E30(0x5D);
+    cell_push_c8_lo(0x5D);
     cell_set50_from40();
     io_poll(0xA);
     if (io_go() == 0)
@@ -238,13 +238,13 @@ L418:
         io_poll(0xFF);
         if (io_just() == 0)
             goto L498;
-        func_800F6E30(0x5D);
+        cell_push_c8_lo(0x5D);
         cell_set50_from40();
         func_800F8A18(0x5D);
         func_80129B04();
     }
 L478:
-    func_800F6E30(0x5D);
+    cell_push_c8_lo(0x5D);
     poll_spin();
     func_800F8A18(0x5D);
     goto L408;

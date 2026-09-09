@@ -3,12 +3,6 @@
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-extern int func_800F4FAC();
-
-
-
-
-
 
 void func_80152EAC(void)
 
@@ -19,7 +13,7 @@ void func_80152EAC(void)
   draw_pad(8);
   do {
     row_sel_cell_cur();
-    iVar1 = func_800F4FAC(0x101);
+    iVar1 = cell_flags_zero50(0x101);
     if (iVar1 == 0) {
       cell_step();
     }

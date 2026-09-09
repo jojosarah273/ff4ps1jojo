@@ -31,7 +31,7 @@ L125810:
         step2();
         cell_step();
         cell_step();
-        func_800F5DD4(0x45);
+        cell_dec_cell(0x45);
         if (poll_go(0x202) != 0)
             continue;
         break;

@@ -86,7 +86,7 @@ L19f2c:
         latch(1);
         cell_put(0xE2);
         latch(0x31);
-        func_800FD804();
+        wnd_fx_pads();
     L1A1EC:
         func_8011EA5C();
         return;

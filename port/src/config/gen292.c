@@ -32,7 +32,7 @@ L1504D0:
     row_close2();
     txt_draw_cur();
     label_cur();
-    func_800F8E50();
+    cell_pull60();
     wnd_open(0x40);
     label_cur();
     row_prep(0x20);

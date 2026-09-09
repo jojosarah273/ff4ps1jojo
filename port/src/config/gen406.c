@@ -34,7 +34,7 @@ void func_80134AF8(void)
     row_sync2(1);
 L134bfc:
     for (;;) {
-        func_800F5DD4(0x48);
+        cell_dec_cell(0x48);
         if (poll_go(2) != 0)
             goto L134C24;
         row_arm_s_cur();

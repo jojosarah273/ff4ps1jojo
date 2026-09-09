@@ -27,14 +27,14 @@ L144ca4:
         L144d48:
             for (;;) {
                 func_800F5BE8(cell_state_of());
-                func_800F5DD4(4);
+                cell_dec_cell(4);
                 if (poll_go(0x202) != 0)
                     continue;
                 break;
             }
             cell_step();
             cell_step();
-            func_800F5DD4();
+            cell_dec_cell();
             if (poll_go(0x202) != 0)
                 continue;
             break;

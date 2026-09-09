@@ -20,13 +20,13 @@ L12AB84:
     row_read(1);
     if (sel(0x202) != 0)
         goto L12ACA8;
-    func_800F6E30(0x5A);
+    cell_push_c8_lo(0x5A);
     func_80125100();
     row_prep(0x20);
     sep_a();
     cell_pos_fwd(0x52);
     row_prep_close();
-    func_800F6E30(0x5A);
+    cell_push_c8_lo(0x5A);
     io_poll(0xFE);
     if (io_just() != 0)
         return;
@@ -52,13 +52,13 @@ L12ACA8:
     sep_a();
     cell_pos_fwd(0x1C);
     row_prep_close();
-    func_800F6E30(0x5A);
+    cell_push_c8_lo(0x5A);
     func_80125100();
     row_prep(0x20);
     sep_a();
     cell_pos_fwd(0x52);
     row_prep_close();
-    func_800F6E30(0x5A);
+    cell_push_c8_lo(0x5A);
     io_poll(0xFE);
     if (io_just() != 0)
         return;

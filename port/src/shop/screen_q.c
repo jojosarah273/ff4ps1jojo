@@ -25,11 +25,11 @@ Lf14:
         cell_stamp8_9_b(0x371B);
         row_read2();
         sep_b();
-        func_800F80D0(2);
+        cell_pos_back2(2);
         cell_put_hi9();
         row_read2(6);
         sep_b();
-        func_800F80D0(1);
+        cell_pos_back2(1);
         cell_put_hi9(6);
         sep_a();
         cell_pos_fwd(4);
@@ -51,7 +51,7 @@ Lf14:
         func_800F6DE8(0x371B);
         cell_stamp8_9(0x371B);
         sep_b();
-        func_800F80D0(4);
+        cell_pos_back2(4);
         sep_a();
         cell_pos_fwd(4);
         poll_t(0x400);

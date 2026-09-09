@@ -40,14 +40,14 @@ L14F144:
 L14f1cc:
     for (;;) {
         row_arm2(cell_state_of());
-        if (func_800F4FAC(0x101) != 0)
+        if (cell_flags_zero50(0x101) != 0)
             goto L14F20C;
         row_arm2(cell_state_of());
         func_8014F7A8();
         goto L14F22C;
     L14F20C:
         row_arm2(cell_state_of());
-        if (func_800F4FAC(1) != 0)
+        if (cell_flags_zero50(1) != 0)
             goto L14F294;
     L14F22C:
         key_page(0x18);

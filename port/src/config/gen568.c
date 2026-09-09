@@ -29,7 +29,7 @@ L125F80:
     row_arm_s2_cur();
     cell_pos_fwd(0xF);
     row_sync2_cur();
-    func_800F3D64(0xD7E);
+    battle_wait_just(0xD7E);
     row_prep_close();
     row_close2();
     return;

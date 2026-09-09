@@ -10,7 +10,7 @@ void func_80104F1C(void)
     txt_set(0x709);
     func_800F96E0();
     row_sel_cell_cur();
-    func_800F9690();
+    cell_cur_save54();
     func_800F6A78(0xA1);
     row_read(4);
     if (sel(2) != 0)

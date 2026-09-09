@@ -18,14 +18,14 @@ void func_8011DBF0(void)
     label(0x4302);
     page(0x95);
     label(0x4305);
-    func_800FCCBC();
+    catalog_dispatch_0();
     page(0x9B);
     label(0x2116);
     page(0x97);
     if (cell_flags_pack(2) != 0)
         goto LDCA0;
     label(0x4305);
-    func_800FCCBC();
+    catalog_dispatch_0();
 LDCA0:
     page(0x9D);
     label(0x2116);
@@ -33,14 +33,14 @@ LDCA0:
     label(0x4302);
     page(0x95);
     label(0x4305);
-    func_800FCCBC();
+    catalog_dispatch_0();
     page(0x9F);
     label(0x2116);
     page(0x97);
     if (cell_flags_pack(2) != 0)
         return;
     label(0x4305);
-    func_800FCCBC();
+    catalog_dispatch_0();
     return;
 LDD18:
     row_page(0xAB);
@@ -56,14 +56,14 @@ LDD18:
     label(0x4302);
     page(0x95);
     label(0x4305);
-    func_800FCCBC();
+    catalog_dispatch_0();
     page(0x9B);
     label(0x2116);
     page(0x97);
     if (cell_flags_pack(2) != 0)
         goto LDDC0;
     label(0x4305);
-    func_800FCCBC();
+    catalog_dispatch_0();
 LDDC0:
     page(0x9D);
     label(0x2116);
@@ -71,13 +71,13 @@ LDDC0:
     label(0x4302);
     page(0x95);
     label(0x4305);
-    func_800FCCBC();
+    catalog_dispatch_0();
     page(0x9F);
     label(0x2116);
     page(0x97);
     if (cell_flags_pack(2) != 0)
         return;
     label(0x4305);
-    func_800FCCBC();
+    catalog_dispatch_0();
     return;
 }

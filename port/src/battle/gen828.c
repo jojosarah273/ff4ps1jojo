@@ -14,7 +14,7 @@ L14ea34:
     for (;;) {
         cell_state(2);
         row_arm2_cur();
-        if (func_800F4FAC(0x101) != 0)
+        if (cell_flags_zero50(0x101) != 0)
             goto L14EAB4;
         row_page_cur();
         cell_pull_c8();

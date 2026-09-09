@@ -33,7 +33,7 @@ void func_8016D9B0(void)
     txt_draw(0x4351);
     wnd_open(0x80);
     label(0x4355);
-    func_800F9868();
+    catalog_dispatch();
     latch(0x50);
     latch(0x80);
     txt_draw(0x2115);

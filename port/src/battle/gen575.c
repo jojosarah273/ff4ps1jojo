@@ -4,11 +4,6 @@
  */
 #include "ff4_window.h"
 
-
-
-
-extern int func_800FCCBC();
-
 void func_8011D9F0(void)
 
 {
@@ -19,7 +14,7 @@ void func_8011D9F0(void)
   label(0x4302);
   wnd_open(0x40);
   label(0x4305);
-  func_800FCCBC();
+  catalog_dispatch_0();
   page(0x9d);
   label(0x2116);
   cell_clear_bank(0x420b);
@@ -27,7 +22,7 @@ void func_8011D9F0(void)
   label(0x4302);
   wnd_open(0x40);
   label(0x4305);
-  func_800FCCBC();
+  catalog_dispatch_0();
   return;
 }
 

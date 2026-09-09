@@ -28,7 +28,7 @@ L10fd60:
         if (sel(0x202) != 0)
             goto L10FEA4;
         latch(0x23);
-        func_800FD804();
+        wnd_fx_pads();
     L10FEA4:
         page(0x89);
         cell_set50_from54();

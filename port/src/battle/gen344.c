@@ -24,7 +24,7 @@ L14d1b4:
     for (;;) {
         cell_state(0x26);
         row_arm2_cur();
-        if (func_800F4FAC(0x101) != 0)
+        if (cell_flags_zero50(0x101) != 0)
             goto L14D290;
         row_sync();
         latch_cur();
