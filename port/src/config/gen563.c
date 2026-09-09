@@ -1,0 +1,44 @@
+/* FF4 source-port — interpreted module for func_80134948.
+ * Ground truth: src/func_80134948.c (byte-verified).
+ * Primitives: port/include/ff4_window.h.
+ */
+#include "ff4_window.h"
+void func_80134948(void)
+{
+    /* ability rows: 0x41 window, 54D4(3B04) gate routes the 0x1441/
+       0xE3 check; loops L134968 (5EA0/5C64(0x202)) and L134998. */
+    row_sync();
+    draw_pad(0x30);
+    page(0x41);
+L134968:
+    for (;;) {
+        if (io_press(cell_state_of()) != 0)
+            goto L1349E0;
+    L134998:
+        for (;;) {
+            cell_step();
+            cell_step();
+            poll_pair_cur();
+            if (poll_go(0x202) != 0)
+                continue;
+            break;
+        }
+        row_done();
+        latch(1);
+        func_800F63F8();
+        return;
+    L1349E0:
+        func_800F9200();
+        txt_cell(0x1441);
+        if (io_press(cell_state(0xE3)) == 0)
+            goto L134A20;
+        row_close2();
+        goto L134998;
+    L134A20:
+        row_close2();
+        row_done();
+        latch_cur();
+        func_800F63F8();
+        return;
+    }
+}

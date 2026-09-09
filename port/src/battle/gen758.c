@@ -1,0 +1,34 @@
+/* FF4 source-port — interpreted module for func_8014B8AC.
+ * Ground truth: src/func_8014B8AC.c (byte-verified).
+ * Primitives: port/include/ff4_window.h.
+ */
+#include "ff4_window.h"
+extern int func_800F6434();
+extern int func_800F654C();
+extern int func_800F6564();
+extern int func_800F71DC();
+extern int func_800F8188();
+extern int func_800F8D00();
+extern int func_8014B98C();
+
+void func_8014B8AC(void)
+
+{
+  int iVar1;
+  
+  txt_set(0x34c5);
+  iVar1 = gate(2);
+  if (iVar1 == 0) {
+    wnd_open(0x80b0);
+    label(0xf289);
+    latch(1);
+    txt_draw(0xf2d0);
+    func_8014B98C();
+    wnd_open(0);
+    label(0xf289);
+  }
+  return;
+}
+
+
+

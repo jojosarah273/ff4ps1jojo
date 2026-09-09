@@ -1,0 +1,35 @@
+/* FF4 source-port — interpreted module for func_8010FCA8.
+ * Ground truth: src/func_8010FCA8.c (byte-verified).
+ * Primitives: port/include/ff4_window.h.
+ */
+#include "ff4_window.h"
+extern int func_800F654C();
+extern int func_800F71DC();
+extern int func_800F8188();
+extern int func_800F8D00();
+extern int func_800F8F74();
+extern int func_8011053C();
+extern int func_80115BCC();
+
+void func_8010FCA8(void)
+
+{
+  func_8011053C();
+  latch(8);
+  txt_draw(0xacf);
+  wnd_open(0x10);
+  label(0xad2);
+  func_800F8F74(0xacd);
+  func_800F8F74(0xace);
+  latch(2);
+  txt_draw(0xad0);
+  txt_draw(0xad1);
+  latch(0x60);
+  txt_draw(0xad4);
+  txt_draw(0xad5);
+  func_80115BCC();
+  return;
+}
+
+
+

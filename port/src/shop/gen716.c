@@ -1,0 +1,34 @@
+/* FF4 source-port — interpreted module for func_8016E560.
+ * Ground truth: src/func_8016E560.c (byte-verified).
+ * Primitives: port/include/ff4_window.h.
+ */
+#include "ff4_window.h"
+void func_8016E560(void)
+{
+    /* options: 0x3540/0x2003 cells, 90EC(0x2007/0x2008) rows; loop
+       L16E5A8 on 5A90(5). */
+    sep();
+L16e5a8:
+    for (;;) {
+        func_800F6D70(0x3540);
+        if (gate(0x202) != 0)
+            goto L16E5E8;
+        txt_cell(0x2003);
+        if (gate_cur() != 0)
+            goto L16E5E8;
+        page_paint(0x2007);
+        page_paint(0x2008);
+    L16E5E8:
+        row_prep(0x20);
+        sep_a();
+        func_800F4064(0x80);
+        sep();
+        row_prep_close();
+        step2();
+        poll_t(5);
+        if (io_just() == 0)
+            continue;
+        break;
+    }
+    return;
+}

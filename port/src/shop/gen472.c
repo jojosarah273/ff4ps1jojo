@@ -1,0 +1,40 @@
+/* FF4 source-port — interpreted module for func_8016BAAC.
+ * Ground truth: src/func_8016BAAC.c (byte-verified).
+ * Primitives: port/include/ff4_window.h.
+ */
+#include "ff4_window.h"
+extern int func_800F654C();
+extern int func_800F71DC();
+extern int func_800F8188();
+extern int func_800F8D00();
+extern int func_800F8E50();
+extern int func_800F9200();
+extern int func_800F926C();
+extern int func_800F9448();
+extern int func_800F971C();
+extern int func_800F9868();
+
+void func_8016BAAC(void)
+
+{
+  row_open2();
+  sep();
+  func_800F9200();
+  row_pad();
+  label(0x2116);
+  wnd_open(0xdf3f);
+  label(0x4352);
+  latch(9);
+  txt_draw(0x4350);
+  latch(0x18);
+  txt_draw(0x4351);
+  latch(0x13);
+  txt_draw(0x4354);
+  func_800F8E50(0x4355);
+  func_800F9868(0x50);
+  row_pad();
+  return;
+}
+
+
+

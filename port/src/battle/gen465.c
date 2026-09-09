@@ -1,0 +1,45 @@
+/* FF4 source-port — interpreted module for func_80111FCC.
+ * Ground truth: src/func_80111FCC.c (byte-verified).
+ * Primitives: port/include/ff4_window.h.
+ */
+#include "ff4_window.h"
+void func_80111FCC(void)
+{
+    /* shop detail: 0xCA window, 0x172C/0x172E-0x172F/0x1726/0x1706-
+       0x1707 texts, 8011AB18/80169128/800FD718 rows; 5574(0xFB)
+       gate. */
+    open_row(0xCA);
+    page_open(0x172C);
+    txt_cell(0x172E);
+    io_poll(0xFB);
+    if (io_go() != 0)
+        goto L11207C;
+    txt_draw(0x1722);
+    latch(3);
+    func_800F9200();
+    txt_cell(0x172F);
+    row_read(0x3F);
+    txt_draw(0x1706);
+    txt_cell(0x1730);
+    txt_draw(0x1707);
+    txt_cell(0x172F);
+    row_read(0xC0);
+    txt_draw(0x1725);
+    goto L1120B4;
+L11207C:
+    sep_b();
+    func_800F8058(0xFB);
+    func_800F9200();
+    txt_cell(0x172F);
+    txt_draw(0x1706);
+    txt_cell(0x1730);
+    txt_draw(0x1707);
+L1120B4:
+    row_close2();
+    func_8011AB18();
+    func_800F8F74(0x1E05);
+    func_80169128();
+    func_800FD718();
+    open_row(0xD6);
+    return;
+}

@@ -1,0 +1,40 @@
+/* FF4 source-port — interpreted module for func_8011511C.
+ * Ground truth: src/func_8011511C.c (byte-verified).
+ * Primitives: port/include/ff4_window.h.
+ */
+#include "ff4_window.h"
+extern int func_800F654C();
+extern int func_800F7270();
+extern int func_800F7500();
+extern int func_800F824C();
+extern int func_800F8D6C();
+extern int func_800F9200();
+extern int func_800F93DC();
+extern int func_8011581C();
+extern int func_80115A34();
+
+void func_8011511C(void)
+
+{
+  func_800F9200();
+  draw_pad(0x1d0);
+  latch(0x1c);
+  cell_put(0x91);
+  latch(0x78);
+  cell_put(0x8f);
+  page(0x2c);
+  tail(0xc);
+  page(0x2e);
+  tail(0xe);
+  latch(0x20);
+  cell_put(0xad);
+  row_close2();
+  cell_put(0x92);
+  func_8011581C();
+  draw_pad(400);
+  func_80115A34();
+  return;
+}
+
+
+
