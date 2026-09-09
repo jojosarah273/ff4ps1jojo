@@ -249,3 +249,16 @@ Byte-match: ladder sweep fully complete across all size bands (743 -> 816 =
 restructures (countdown-loop style).
 All pushed. Callgraph still 2517 callers / 22544 edges.
 ================================================================================
+
+================================================================================
+HEADLESS LEG 12 — PORT 43 MODULES + SWEEP PLATEAU (827 / 32.9%)
+Byte-match: ladder matrix extended to G8/G0 x O1/O2/O3 on the tiny band —
+G0 rungs +9 (2.6.0-G0 x7 etc), O1 rungs +2; 827 byte-verified. Mid band
+exhausted across the full matrix. Plateau at 827: remaining pool needs
+targeted restructures (near-miss idiom work), not more lane sweeps.
+Port: 41 -> 43 modules (battle monster status, config confirm, stat rows,
+battle rows2, misc battle/shop, panel cell-and family). Tree clean.
+README/PLAN/ARCH: pitch focused on the technical goal — native port;
+widescreen/expansion moved to a separate Phase C track per user.
+All pushed.
+================================================================================
