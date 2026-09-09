@@ -36,3 +36,9 @@ track for the remaining pool; mid-size band sweep next.
 ## Update: mid-size band (0x81..0x200) — 34 more
 gcc-2.8.1 × 22, gcc-2.95.2 × 12. **Byte-verified 780 → 814 (32.4%).**
 Includes battle-menu screens 80119DE4/80119740 and shop 8011DA88.
+
+## Update: full ladder sweep complete (0x81..0x500)
+Big-band yield is minimal (1 match — 8011DBF0 [2.95.2]); the era lanes
+match small/simple shapes, not the mid register machines.
+**Byte-verified 814 → 815 (32.4%).** Next lever = targeted restructure
+of near-misses (countdown-loop style), not more lane sweeps.
