@@ -42,3 +42,9 @@ Big-band yield is minimal (1 match — 8011DBF0 [2.95.2]); the era lanes
 match small/simple shapes, not the mid register machines.
 **Byte-verified 814 → 815 (32.4%).** Next lever = targeted restructure
 of near-misses (countdown-loop style), not more lane sweeps.
+
+## Final: top band (>0x500) — 8015902C [gcc-2.6.0]
+**Total sweep yield this pass: +73 (743 → 816, 32.4%).** Lanes: 2.8.1/2.95.2
+dominate small shapes; 2.6.0 caught a big screen (8015902C). The era lanes
+are exhausted for the current C; remaining byte-match work is targeted
+near-miss restructure.
