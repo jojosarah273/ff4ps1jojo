@@ -10,6 +10,8 @@ extern uint8_t  g_panel_mask;   /* D_8019ED40 */
 extern uint16_t g_panel_held;   /* D_8019ED44 */
 extern uint32_t g_panel_cell;   /* D_8019ED50 */
 extern uint8_t  g_panel_flags;  /* D_8019ED68 */
+extern uint16_t g_cursor_idx;   /* D_8019ED4C */
+extern uint16_t g_cursor_out;   /* D_8019ED48 */
 
 /* 800F9730: clear the mask-armed bits and drop the parity flag. */
 uint8_t panel_arm_clear_flag(uint8_t *p)
@@ -80,5 +82,4 @@ uint16_t panel_cursor_next(void)
     g_cursor_idx = idx + 2;
     return idx + 2;
 }
-extern uint16_t g_cursor_idx;
-extern uint16_t g_cursor_out;
+
