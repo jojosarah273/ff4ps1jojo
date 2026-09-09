@@ -42,6 +42,6 @@ onto a native host exactly like the SM64-PC / SoH decomp-ports:
 - [ ] boot to title on SDL2 with the config-menu driver
 - [ ] battle menu + targeting on the native input path
 - [ ] save/load via file-based memcard
-- [ ] widescreen + hi-res through the renderer seam (Phase C)
+- [ ] renderer seam on SDL2 (Phase C tracks expansion after the native port)
 ```
 gcc -fsyntax-only -I include port/src/panel.h 2>/dev/null; git add -A && git commit -q -m "port: ARCHITECTURE.md — layered source-port plan (SoH/SM64-inspired)" && git push origin main 2>&1 | tail -1; grep -c MATCH /tmp/micro_sweep.log; ls expected/matched | wc -l; tail -1 /tmp/micro_sweep.log

@@ -10,7 +10,7 @@ flowchart LR
     R --> C
     B --> N[naming: symbols/ + SNES disasm]
     C --> P[SDL2 platform + stdio assets]
-    D --> E[widescreen / hi-res / mod hooks / randomizer]
+    D --> E[mod hooks / randomizer / expansion]
 ```
 
 ## 0. Interpretation pass
@@ -37,7 +37,7 @@ flowchart LR
   parity check against reference build.
 
 ## 3. Expansion (Phase C)
-- Widescreen + hi-res via renderer seam; 60/30 FPS policy decided w/ user.
+- Renderer seam first (native window + upscale); widescreen/expansion is a later track (Phase C), not a port goal.
 - Mod hooks: event/status patches (SoH-style), randomizer seed framework.
 - Portability: plain C + SDL2 → DC-class targets by construction.
 

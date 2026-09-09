@@ -2,7 +2,7 @@
 
 The end goal is a **Ship of Harkinian / SM64-PC / Zeld64Recomp-class native
 port of Final Fantasy IV (PlayStation, USA)**: the game rebuilt from
-verified C source — readable, moddable, widescreen/hi-res, portable — not an
+verified C source — readable, moddable, portable — not an
 emulator, not a machine-translated recomp.
 
 The PS1 FF4 is a **C-compiled R3000 game** (Tose's original PS1 rebuild —
@@ -19,8 +19,8 @@ path — the same recipe used by every modern decomp-port.
 |---|---|---|
 | 0 — Verified disassembly | Full text coverage byte-verified (maspsx lanes, splat, asm-differ) | ✅ done (2516/2516) |
 | A — Complete C decomp | Every function as harness-verified C (byte-match where the compiler reproduces it; runtime-verified where it doesn't) | ▶ in progress (2516/2516 C-written, 816 byte-verified) |
-| B — Interpretation | Rename/restructure into modern readable C; native host: SDL, stdio assets, no BIOS; native renderer/audio swap | — |
-| C — Expansion | Widescreen, hi-res, new modes, randomizer/mod framework, cross-platform (DC-class portability = plain C) | — |
+| B — Interpretation | Rename/restructure into modern readable C; native host: SDL, stdio assets, no BIOS; native renderer/audio swap | ▶ in progress (port/src) |
+| C — Expansion | New modes, randomizer/mod framework, cross-platform (portability = plain C) — separate track, after the native port | — |
 
 **Phase A milestones** (regenerated every session by `tools/decomp_status.py`):
 <!-- MILESTONES:BEGIN -->
@@ -535,7 +535,7 @@ More detail: `PROGRESS.md`. Verification harness: `tools/check_integrity.sh`.
 
 `port/` is the deliverable: a **native FF4** rebuilt from the Phase A C,
 in the Ship-of-Harkinian / Zelda64-Recomp / SM64-PC / Link-to-the-Past
-tradition — readable, moddable, widescreen, portable C.
+tradition — readable, moddable, portable C.
 
 **Track: `.c/.h` module pairs.** Every module is an *exact interpretation*
 of one or more byte-verified Phase A functions: the asm-ordered behavior

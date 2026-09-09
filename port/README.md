@@ -2,8 +2,8 @@
 
 This is the **deliverable** of the project: a native Final Fantasy IV (PS1,
 SLUS-013.60) **source port** rebuilt from the verified C under `src/`, in the
-Ship-of-Harkinian / SM64-PC class — readable, moddable, widescreen/hi-res,
-portable C, no BIOS, no disc image requirement.
+Ship-of-Harkinian / SM64-PC class — readable, moddable, portable C,
+no BIOS, no disc image requirement.
 
 Contrast with `reference/`: that is the psxrecomp machine-translation of the
 original binary, kept only as a playable correctness oracle for Phase A
@@ -22,7 +22,7 @@ starts in anger, but the shape of the port is decided now so Phase A decisions
 | audio | SPU semantics → SDL audio / libretro-style callback |
 | assets | disc image decoupled: asset-manifest + extracted files (FMVs stay dropped by design) |
 | naming | `everything8215/ff4` (SNES disasm) + `symbols/` for the interpretation pass |
-| modding | explicit event/status hooks + widescreen, hi-res, randomizer seed hooks (Phase C) |
+| modding | explicit event/status hooks + randomizer seed hooks (Phase C) |
 
 ## Why this is the right end state
 
