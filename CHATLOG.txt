@@ -306,3 +306,15 @@ HEADLESS LEG 15 — PORT DECK BUILDS: 1139 OBJECTS CLEAN; POOL EXHAUSTED
   only residual lever.
 All pushed.
 ================================================================================
+
+================================================================================
+HEADLESS LEG 16 — NATIVE EXECUTABLE ACHIEVED (Avenue 1 core)
+- Consolidation: deduped the 2 duplicate semantic names (panel_more's
+  panel_cursor_next -> _raw; miscrows battle_row_pair -> _screen).
+- tools/native_link.sh: one-shot nm-driven auto-stub (885 symbols) +
+  deck link -> port/build/ff4-native (606KB ELF, 2113 symbols, runs exit 0).
+- `make -C port native` reproducible. EXECUTE.md/RESUME.md updated.
+- Avenue 1 remainder: device layer (SDL text/pages/input) = the paint path.
+- Byte-match 827 (32.9%). Phase A 2516/2516.
+All pushed.
+================================================================================
