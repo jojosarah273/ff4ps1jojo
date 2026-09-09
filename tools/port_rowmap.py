@@ -53,7 +53,7 @@ M = [
 
 ARGLESS = ("sep", "sep_a", "sep_b", "step2", "io_just", "io_go", "row_close", "row_open",
            "row_prep_close", "row_sync", "row_done", "stat_sync",
-           "cell_dispatch", "row_pad", "row_sel_cell", "row_sel_cell2",
+           "cell_dispatch", "row_pad",
            "row_open2", "row_open3", "row_pad")
 CURFIX = ("tail", "wnd_open", "txt_set", "txt_cell", "row_prep", "poll_t",
           "io_poll", "io_press", "cell_draw", "page", "latch",
