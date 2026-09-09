@@ -8,7 +8,12 @@ also in git (this file)._
 - Callgraph: `expected/callgraph.json` = 2517 callers / 22,544 edges.
 - Port: **port/src has 1137 .c modules (0 syntax failures)**; `make deck` in
   `port/` compiles all 1139 objects. Coverage: `port/docs/coverage.md` (~1726 funcs).
-- All work pushed to `main`. Latest commit at time of writing: `dfc177ab`.
+- All work pushed to `main`. AVENUE 1 consolidated LINK milestone achieved:
+`bash port/tools/native_link.sh` (or `make -C port native`) links the full
+1137-module deck -> `port/build/ff4-native` (runs, exit 0), auto-stubbing
+~885 callees via nm. Duplicate names renamed (panel_more, miscrows).
+Remaining Avenue 1 = the DEVICE LAYER (SDL text/pages/input mapping) so the
+binary paints instead of returning immediately.
 
 ## KEY TOOLS (stable, don't rewrite from scratch)
 - `tools/port_rowmap.py` — maps a Phase A window-driven screen into an
