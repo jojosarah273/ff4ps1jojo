@@ -67,7 +67,7 @@ uint8_t panel_load_cell(const uint8_t *p)
 }
 
 /* 800F94B8: advance the cursor through the bank table. */
-uint16_t panel_cursor_next(void)
+uint16_t panel_cursor_next_raw(void)
 {
     uint16_t idx = g_cursor_idx;                 /* D_8019ED4C */
     uint8_t  *p = (uint8_t *)(0x800D0000 + idx);

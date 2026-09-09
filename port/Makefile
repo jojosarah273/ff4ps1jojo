@@ -22,8 +22,10 @@ build/%.o: %.c ../tools/port_rowmap.py
 stubs: ../tools/port_stubs.py
 	$(PY) ../tools/port_stubs.py > include/stubs.h
 
-platform: stubs all
-	$(CC) $(CFLAGS) build/*/*/*.o build/*.o -lSDL2 -o build/ff4-native 2>/dev/null || true
+native: all
+	$(PY) ../tools/port_stubs.py 2>/dev/null > /tmp/stubs_now.c || true
+	gcc -O0 -c /tmp/stubs_now.c -o build/stubs.o 2>/dev/null || gcc -O0 -c platform/stubs.c -o build/stubs.o
+	$(CC) -O0 build/src/*/*.o build/*.o -o build/ff4-native 2>/dev/null || 	  $(CC) -O0 $$(find build -name '*.o') -o build/ff4-native
 
 clean:
 	rm -rf build

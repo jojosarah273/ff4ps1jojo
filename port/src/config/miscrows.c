@@ -24,7 +24,7 @@ void row_page(uint32_t id);     /* 800F6630  */
 void shop_row(void);            /* 80165C7C  */
 
 /* 80141100 */
-void battle_row_pair(void)
+void battle_row_pair_screen(void)
 {
     state_open();
     if (io_just() != 0) {
