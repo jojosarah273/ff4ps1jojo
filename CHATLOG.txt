@@ -291,3 +291,18 @@ Next: register machines (interpretation), struct consolidation, platform/
 device layer (SDL boot path), then native integration.
 All pushed.
 ================================================================================
+
+================================================================================
+HEADLESS LEG 15 — PORT DECK BUILDS: 1139 OBJECTS CLEAN; POOL EXHAUSTED
+- tools/port_rowmap.py + port/include/ff4_window.h scale lever complete;
+  window-driven pool (>=6 window calls) fully mapped: 1137 .c modules,
+  gcc -fsyntax-only clean (0 failures), 1726 funcs covered.
+- Deck build: `make deck` compiles all 1139 objects.
+- Stub infra: tools/port_stubs.py + link-error-driven platform/stubs.c
+  (886 symbols); link pending a consolidation pass (duplicate semantic
+  names across hand-written modules) + the device layer (devnotes.md).
+- Platform boot skeleton (SDL window + config-root driver hook) written.
+- Byte-match held 827 (32.9%); era-lane plateau; restructure track = the
+  only residual lever.
+All pushed.
+================================================================================
