@@ -216,3 +216,21 @@ exit criterion, (2) oracle-tape runtime verification of the register band,
 (3) deep-pass interpretation of the documented register stubs.
 Next: Phase B source port (port/ charter ready).
 ================================================================================
+
+================================================================================
+HEADLESS LEG 10 — PORT BUILD-OUT + LADDER BYTE-VERIFY (816 / 32.4%)
+Byte-match: full ladder-lane sweep across ALL bands (gcc-2.6.0/2.6.3/2.7.2/
+2.7.2cdk/2.8.1/2.95.2 + psx). +73 matches this leg (743->816):
+  - tiny band: 25 (2.8.1 x15, 2.6.0 x5, 2.95.2 x3, 2.7.2 x2)
+  - mid band (0x81..0x200): 34 (2.8.1 x22, 2.95.2 x12)
+  - big band: 8011DBF0 [2.95.2]; top band: 8015902C [2.6.0]
+  Lanes recorded in expected/lanes.txt. Era lanes are the productive track;
+  the remainder needs targeted near-miss restructure.
+Port build-out: README Phase B track + port/FORMAT.md + ARCHITECTURE.md
+(SoH/SM64-inspired layered plan); 13 new interpreted modules this leg
+(18 -> 31): gpu bitgather, sprite blits+scaler, event eventq, math trig,
+anim ticker+rows, battle rows/screens/dispatch/panels/targeting/spell,
+config options/ability/root/banner/store/formation, shop confirm/detail,
+status state/statusinit, dev device, docs poles/menu_screens.
+Next: continue interpretation families; near-miss restructure for matches.
+================================================================================
