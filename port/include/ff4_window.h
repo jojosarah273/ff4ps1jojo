@@ -50,7 +50,7 @@ void label(uint32_t id);                 /* 800F8D00                  */
 void open_row(uint32_t id);              /* 800F8FB8                  */
 
 /* input */
-void io_poll(uint32_t k);                /* 800F5574                  */
+uint32_t io_poll(uint32_t k);            /* 800F5574 (returns result) */
 uint32_t io_just(void);                  /* 800F53D4                  */
 uint32_t io_go(void);                    /* 800F53C0                  */
 uint32_t io_press(uint32_t c);           /* 800F54D4(3B04(c))         */
@@ -90,7 +90,7 @@ void txt_set_cur(void);       /* 800F6564()  */
 void txt_cell_cur(void);      /* 800F6B68()  */
 void row_prep_cur(void);      /* 800F9644()  */
 void poll_t_cur(void);        /* 800F5958()  */
-void io_poll_cur(void);       /* 800F5574()  */
+uint32_t io_poll_cur(void);   /* 800F5574()  */
 uint32_t io_press_cur(void);  /* 800F54D4()  */
 void cell_draw_cur(void);     /* 800F8768()  */
 void page_cur(void);          /* 800F7270()  */
