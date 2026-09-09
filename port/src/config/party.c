@@ -12,6 +12,7 @@ void cell_put(uint32_t id);
 void page(uint32_t id);
 void sep(void);
 void row_open(void);
+void row_open2(uint32_t id);
 void row_prep(uint32_t id);
 void row_sel(void);             /* 800F80D0  */
 uint32_t io_go(void);           /* 800F53C0  */
@@ -89,7 +90,7 @@ void ability_page(void)
         return;
     txt_set(0x1B7C);
     sep();
-    row_open(0xA);
+    row_open2(0xA);
     io_poll(0x64);
     if (io_go() != 0)
         latch(0xA);
