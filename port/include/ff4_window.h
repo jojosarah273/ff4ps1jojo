@@ -100,7 +100,7 @@ void page_cur(void);          /* 800F7270()  */
 /* more no-arg variants (mapper output) */
 void latch_cur(void);          /* 800F654C()  */
 uint32_t cell_state_of(void);  /* 800F3B04()  */
-void cell_peek_cur(void);      /* 800F3B9C()  */
+uint32_t cell_peek_cur(void);  /* 800F3B9C()  */
 void draw_pad_cur(void);       /* 800F7500()  */
 void key_page_cur(void);       /* 800F62BC()  */
 void poll_pair_cur(void);      /* 800F5DA0()  */

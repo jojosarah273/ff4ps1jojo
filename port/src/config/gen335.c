@@ -1,0 +1,63 @@
+/* FF4 source-port — interpreted module for func_80131358.
+ * Ground truth: src/func_80131358.c (byte-verified).
+ * Primitives: port/include/ff4_window.h.
+ */
+#include "ff4_window.h"
+void func_80131358(void)
+{
+    /* ability/spell screen: 0x1B9B/0x1B8B texts, 0x45/0x46/0x43 windows,
+       801224D0 cursor, 8011F724 commit; L1313A8 row loop on
+       5DA0(0x45)/5B8C(0x202), L1314 960C tail. */
+    txt_set(0x1B9B);
+    func_800F9200();
+    row_sync();
+    func_801224D0();
+    txt_cell(0x1B8B);
+    if (gate(0x202) != 0)
+        goto L1313F8;
+    latch(8);
+    cell_put(0x45);
+L1313a8:
+    for (;;) {
+        latch(0xFF);
+        func_800F8960();
+        step2();
+        latch(0xF0);
+        func_800F8960();
+        step2();
+        poll_pair(0x45);
+        if (poll_go(0x202) != 0)
+            continue;
+        break;
+    }
+    goto L131498;
+L1313F8:
+    row_page(0x43);
+    row_sel_cell_cur();
+    row_sel_cell2_cur();
+    cell_poke0(cell_state(0x43));
+    row_sel_cell_cur();
+    row_sel_cell2_cur();
+    row_open_w(0x24);
+    cell_put(0x46);
+    latch(0x44);
+    cell_put(0x45);
+    page(0x45);
+    sep();
+    func_8011F724();
+L131498:
+    row_done();
+    row_prep(0x20);
+    sep_a();
+    func_800F4064(0x10);
+    row_prep_close();
+    row_close2();
+    func_800F61E8();
+    io_poll(5);
+    if (io_go() == 0)
+        goto L13151C;
+    sep();
+L13151C:
+    txt_draw(0x1B9B);
+    return;
+}

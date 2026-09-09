@@ -61,7 +61,7 @@ CURFIX = ("open_row", "tail", "wnd_open", "txt_set", "txt_cell", "row_prep", "po
           "poll_pair", "page_paint", "page_paint2", "txt_draw",
           "row_scan", "row_sync2", "row_sel2", "row_arm2", "row_act2",
           "cell_put", "label", "poll_go", "row_sel2", "cell_dispatch",
-          "row_sel_cell", "row_sel_cell2", "row_arm_s", "row_arm_s2", "open_row")
+          "row_sel_cell", "row_sel_cell2", "row_arm_s", "row_arm_s2", "open_row", "row_read", "page_open", "gate")
 
 def map_calls(txt):
     for a, b in M:
@@ -83,7 +83,7 @@ def main():
         body = map_calls(body)
         # arity normalizations
         for name in ARGLESS:
-            body = re.sub(r"\b%s\(0x[0-9A-Fa-f]+\)" % name, name + "()", body)
+            body = re.sub(r"\b%s\((?:0x[0-9A-Fa-f]+|\d+)\)" % name, name + "()", body)
         body = re.sub(r"(\b(?:sep_a|sep_b|cell_dispatch|sep|step2)\()\(u32\)D_8019ED40\[[0-9]\]\)", r"\1)", body)
         for name in CURFIX:
             body = body.replace(name + "()", name + "_cur()")

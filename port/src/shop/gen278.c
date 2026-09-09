@@ -1,0 +1,84 @@
+/* FF4 source-port — interpreted module for func_80169614.
+ * Ground truth: src/func_80169614.c (byte-verified).
+ * Primitives: port/include/ff4_window.h.
+ */
+#include "ff4_window.h"
+void func_80169614(void)
+{
+    wnd_open_cur();
+    draw_pad_cur();
+    func_8016BAAC();
+    row_open2();
+    sep();
+    func_800F9200();
+    row_pad();
+    wnd_open_cur();
+    open_row(4);
+    row_page(0x64);
+    io_poll(1);
+    if (io_just() != 0)
+        goto L697AC;
+    io_poll(2);
+    if (io_just() == 0)
+        goto L696C8;
+    latch(0x40);
+    cell_put(4);
+L696C8:
+    sep();
+L696f0:
+    for (;;) {
+        func_800F6C68();
+        cell_put_cur();
+        draw_pad(8);
+    L69708:
+        for (;;) {
+            cell_state_of();
+            row_arm2_cur();
+            row_sel_cell2_cur();
+            func_800F7C6C();
+            row_read(1);
+            poll_pair_cur();
+            if (poll_go(0x202) != 0)
+                continue;
+            break;
+        }
+        cell_step();
+        cell_step();
+        poll_t(0x1000);
+        if (io_just() != 0)
+            goto L69940;
+    }
+L697AC:
+    wnd_open(0x40);
+    sep();
+L697c0:
+    for (;;) {
+        func_800F5E48();
+        if (poll_go(0x202) != 0)
+            continue;
+        break;
+    }
+    sep();
+L69828:
+    for (;;) {
+        func_800F6C68();
+        func_800F9200();
+        row_read(0xF);
+        if (sel(2) != 0)
+            goto L69870;
+    L69870:
+        row_close2();
+        row_read(0xF0);
+        if (sel(2) != 0)
+            goto L698F4;
+    L698F4:
+        cell_step();
+        poll_t(0x800);
+        if (io_just() == 0)
+            continue;
+        break;
+    }
+    row_pad();
+L69940:
+    return;
+}

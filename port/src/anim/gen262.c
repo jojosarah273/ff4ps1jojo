@@ -1,0 +1,69 @@
+/* FF4 source-port — interpreted module for func_80170458.
+ * Ground truth: src/func_80170458.c (byte-verified).
+ * Primitives: port/include/ff4_window.h.
+ */
+#include "ff4_window.h"
+void func_80170458(void)
+{
+    int i;
+    /* shop row render: 0x2115/0x4300/0x4301 title, 0x421F/0x2116/
+       0x4302/0x4305 desc rows, 800F9868 catalog dispatch, then the
+       0x4F/0x79/0x50 item cells; L170608 repeats the header/detail row
+       pack while 5804(3C3C(0x4E)) holds, then commits 80194394/80181300. */
+    func_800F8F74(0x420B);
+    latch(0x80);
+    txt_draw(0x2115);
+    latch(8);
+    txt_draw(0x4300);
+    latch(0x19);
+    txt_draw(0x4301);
+    func_800F8F74(0x4304);
+    page(0x4C);
+    label(0x2116);
+    open_row(0x10);
+    wnd_open(0x610);
+    label(0x4302);
+    page(0x4E);
+    label(0x4305);
+    func_800F9868();
+    page_open(0x2116);
+    func_800F8F74(0x420B);
+    for (i = 0; i < 4; i++) {
+        func_800F76BC(cell_state(0x4F));
+        func_800F76E8();
+        func_800F7CC8(cell_state(0x4E));
+    }
+    latch(0x18);
+    txt_draw(0x4301);
+    page(0x4C);
+    label(0x2116);
+    page(0x4A);
+    label(0x4302);
+    row_page(0x49);
+    txt_draw(0x4304);
+    draw_pad_cur();
+L170608:
+    for (;;) {
+        func_800F8F74(0x420B);
+        latch(0x80);
+        txt_draw(0x2115);
+        latch(1);
+        txt_draw(0x4300);
+        wnd_open(0x10);
+        label(0x4305);
+        func_800F9868();
+        func_800F8F74(0x420B);
+        func_800F8F74(0x2115);
+        func_800F8F74(0x4300);
+        wnd_open(8);
+        label(0x4305);
+        func_800F9868();
+        step2();
+        if (func_800F5804(cell_state(0x4E)) == 0)
+            continue;
+        break;
+    }
+    func_80194394();
+    func_80181300();
+    return;
+}

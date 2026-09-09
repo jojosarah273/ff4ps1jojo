@@ -1,0 +1,60 @@
+/* FF4 source-port — interpreted module for func_80163D68.
+ * Ground truth: src/func_80163D68.c (byte-verified).
+ * Primitives: port/include/ff4_window.h.
+ */
+#include "ff4_window.h"
+void func_80163D68(void)
+{
+    /* options dialog: 0xE5/0x33C4/0x38ED/0x3584 texts, 80152224/
+       8015240C/80153098; loop L163E1C polls 6434(0x514)/4120(0x202)
+       gates; 0xDF/0xE1/0xE3/0xA9 windows. */
+    latch(0xE5);
+    txt_draw(0x33C4);
+    page_paint2(0x38ED);
+    page_paint2(0x3584);
+    sep();
+    latch(9);
+    func_80152224();
+    func_800F6C68();
+    func_800F9200();
+    row_read(0x7F);
+    txt_draw(0x26D2);
+    txt_draw(0x33C5);
+    row_close2();
+    if (gate_cur() != 0)
+        goto L163F38;
+L163e1c:
+    for (;;) {
+        wnd_open(5);
+        latch(0xC);
+        func_80152224();
+        row_info(0xA9);
+        func_800F6D70(0x3540);
+        if (gate(0x202) != 0)
+            continue;
+        cell_put(0xDF);
+        latch(0x80);
+        cell_put(0xE1);
+        func_8015240C();
+        page(0xE3);
+        txt_cell(0x2003);
+        row_read(0xC0);
+        if (sel(0x202) != 0)
+            continue;
+        sep_b();
+        row_page(0xA9);
+        func_800F8058(5);
+        cell_put(0xCE);
+        sep();
+        func_80153098();
+        goto L163F50;
+    }
+L163F38:
+    latch(0x80);
+    cell_put(0xCE);
+    latch(0xFF);
+    goto L163F50;
+L163F50:
+    txt_draw(0x26D3);
+    return;
+}

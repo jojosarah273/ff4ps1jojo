@@ -1,0 +1,52 @@
+/* FF4 source-port — interpreted module for func_8016FB78.
+ * Ground truth: src/func_8016FB78.c (byte-verified).
+ * Primitives: port/include/ff4_window.h.
+ */
+#include "ff4_window.h"
+void func_8016FB78(void)
+{
+    /* config bars: 0x1F/0x1D/0x1E windows, 0x29 window cells; loops
+       L16FC1C (5DA0(0x1D)) and L16FCA8 (5DA0(0x1E)). */
+    open_row(0x1F);
+    if (io_go() != 0)
+        goto L16FBA0;
+    poll_pair(0x1F);
+L16FBA0:
+    func_800F9200();
+    cell_put(0x1D);
+    cell_put(0x1E);
+    row_prep(0x20);
+    sep_a();
+    cell_peek0(cell_state(0x29));
+    row_prep_close();
+    row_sync();
+    row_page(0x1F);
+L16fc1c:
+    for (;;) {
+        func_800F8960();
+        step2();
+        step2();
+        poll_pair(0x1D);
+        if (poll_go(0x202) != 0)
+            continue;
+        break;
+    }
+    row_done();
+    row_prep(0x20);
+    sep_a();
+    func_800F4064(0x40);
+    row_prep_close();
+    row_page(0x1F);
+L16fca8:
+    for (;;) {
+        func_800F8960();
+        step2();
+        step2();
+        poll_pair(0x1E);
+        if (poll_go(0x202) != 0)
+            continue;
+        break;
+    }
+    row_close2();
+    return;
+}

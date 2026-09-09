@@ -1,0 +1,54 @@
+/* FF4 source-port — interpreted module for func_80110334.
+ * Ground truth: src/func_80110334.c (byte-verified).
+ * Primitives: port/include/ff4_window.h.
+ */
+#include "ff4_window.h"
+void func_80110334(void)
+{
+    /* battle single-row: 0x89/0x7A windows, 0x2100 text, 0xC/0xE/0x91/
+       0x8F/0x92 windows, 0x411/0x415 texts, 8011581C/80110474/
+       80110024/8011EA5C; loop L11035C. */
+    func_80110024();
+    wnd_open(0x30);
+    tail(0x89);
+    open_row(0x7A);
+L11035c:
+    for (;;) {
+        func_800FE778();
+        row_page(0x89);
+        io_poll(0x10);
+        if (io_go() != 0)
+            goto L11038C;
+        txt_draw(0x2100);
+    L11038C:
+        func_800FE870();
+        func_80110474();
+        latch(0x68);
+        cell_put(0xC);
+        row_page(0x89);
+        sep_a();
+        row_open_w(0x80);
+        cell_put(0xE);
+        latch(0x18);
+        cell_put(0x91);
+        latch(0x78);
+        cell_put(0x8F);
+        draw_pad(0xB0);
+        latch_cur();
+        cell_put(0x92);
+        func_8011581C();
+        latch(0xF0);
+        txt_draw(0x411);
+        txt_draw(0x415);
+        page(0x89);
+        func_800F5E48();
+        tail(0x89);
+        if (poll_go(0x202) != 0)
+            continue;
+        break;
+    }
+    open_row(0x80);
+    open_row(0xC8);
+    func_8011EA5C();
+    return;
+}

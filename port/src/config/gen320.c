@@ -1,0 +1,72 @@
+/* FF4 source-port — interpreted module for func_80128598.
+ * Ground truth: src/func_80128598.c (byte-verified).
+ * Primitives: port/include/ff4_window.h.
+ */
+#include "ff4_window.h"
+void func_80128598(void)
+{
+    /* party-stat block: 0x1B9A gate; main path renders the 0x88/0x4E
+       windows and the L128628 row loop (801266C8 + 5DD4 cells) with the
+       80128750/8016EA7C/80126590 variants; exit 8011F884/5C64 latch. */
+    txt_set(0x1B9A);
+    if (gate(2) != 0)
+        goto L1285D8;
+    func_80128750();
+    func_8016EA7C();
+    func_80126590();
+    return;
+L1285D8:
+    page_paint2(0x1B9A);
+    sep();
+    cell_put(0x88);
+    wnd_open_cur();
+    tail(0x93);
+    tail(0x99);
+    tail(0x9F);
+    latch(3);
+    cell_put(0x4E);
+    draw_pad(0x30);
+L128628:
+    for (;;) {
+        func_801266C8();
+        row_prep(0x20);
+        func_800F5DD4(0x93);
+        func_800F5DD4(0x99);
+        func_800F5DD4(0x99);
+        func_800F5DD4(0x9F);
+        func_800F5DD4(0x9F);
+        func_800F5DD4(0x9F);
+        row_prep_close();
+        poll_pair(0x4E);
+        if (poll_go(0x202) != 0)
+            goto L1286A0;
+        latch(3);
+        cell_put(0x4E);
+        key_page(0x88);
+    L1286A0:
+        func_8011F884();
+        row_page_cur();
+        row_read(0x80);
+        if (sel(0x202) != 0)
+            goto L1286E8;
+        row_page(1);
+        row_read(0xC);
+        if (sel(2) != 0)
+            goto L128718;
+    L1286E8:
+        func_80128750();
+        latch(3);
+        cell_put(0x4E);
+        latch(0xF);
+        cell_put(0x88);
+        draw_pad(2);
+    L128718:
+        poll_pair_cur();
+        if (poll_go(0x202) != 0)
+            continue;
+        break;
+    }
+    latch(0xF);
+    cell_put(0x88);
+    return;
+}

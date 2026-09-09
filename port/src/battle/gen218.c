@@ -1,0 +1,111 @@
+/* FF4 source-port — interpreted module for func_80104354.
+ * Ground truth: src/func_80104354.c (byte-verified).
+ * Primitives: port/include/ff4_window.h.
+ */
+#include "ff4_window.h"
+void func_80104354(void)
+{
+    txt_set(0x6D0);
+    if (gate(0x202) == 0) {
+        latch(0x36);
+        func_8011B6B4();
+        io_poll(0);
+        if (io_just() == 0) {
+            txt_set(0x171F);
+            io_press(cell_state(0x171B));
+            if (io_just() != 0) {
+                page_open(0x1719);
+                func_800F56AC(cell_state(0x1706));
+                if (io_just() != 0) {
+                    func_80104804();
+                    return;
+                }
+            }
+        }
+    } else {
+        txt_set(0x1723);
+        io_press(cell_state(0x1701));
+        if (io_just() != 0) {
+            page_open(0x1706);
+            func_800F56AC(cell_state(0x1721));
+            if (io_just() != 0)
+                return;
+        }
+        txt_set(0x1727);
+        io_press(cell_state(0x1701));
+        if (io_just() != 0) {
+            page_open(0x1706);
+            func_800F56AC(cell_state(0x1725));
+            if (io_just() != 0)
+                return;
+        }
+        row_page(0xA1);
+        row_read(0x10);
+        if (sel(2) != 0)
+            return;
+        func_801046F4();
+        return;
+    }
+    latch(0x30);
+    cell_put(0x79);
+    open_row(0x7A);
+    for (;;) {
+        func_80102E78();
+        row_page(0x79);
+        io_poll(0x21);
+        if (io_go() != 0) {
+            poll_pair(0xB7);
+            row_page(0xB7);
+            sep_a();
+            row_open_w(0x10);
+            cell_put(0xAD);
+            row_page(0xB7);
+            func_8017559C();
+            poll_pair(0x79);
+            continue;
+        }
+        row_page(0xA2);
+        row_read(0x10);
+        if (sel(0x202) == 0)
+            break;
+        page_open(0x1719);
+        func_800F56AC(cell_state(0x1706));
+        if (io_just() != 0)
+            break;
+        txt_set(0x1723);
+        io_press(cell_state(0x171F));
+        if (io_just() != 0) {
+            page_open(0x1721);
+            func_800F56AC(cell_state(0x1706));
+            if (io_just() != 0)
+                break;
+        }
+        txt_set(0x1727);
+        io_press(cell_state(0x171F));
+        if (io_just() != 0) {
+            page_open(0x1725);
+            func_800F56AC(cell_state(0x1706));
+            if (io_just() != 0)
+                break;
+        }
+        row_page(0x79);
+        func_800F7864();
+        txt_draw(0x6FD);
+        poll_pair(0x79);
+        if (poll_go(0x202) == 0) {
+            func_800F8F74(0x1704);
+            open_row(0xAC);
+            open_row(0x7B);
+            latch(2);
+            txt_draw(0x1705);
+            page_open(0x1706);
+            label(0x171D);
+            txt_set(0x1701);
+            txt_draw(0x171F);
+            func_800FD718();
+            page_paint2(0x1A02);
+            return;
+        }
+    }
+    func_80103310();
+}

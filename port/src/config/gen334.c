@@ -1,0 +1,91 @@
+/* FF4 source-port — interpreted module for func_80134FF4.
+ * Ground truth: src/func_80134FF4.c (byte-verified).
+ * Primitives: port/include/ff4_window.h.
+ */
+#include "ff4_window.h"
+void func_80134FF4(void)
+{
+    /* ability/config screen: 1BB1 text, 45/46 windows; header renders
+       (L135054 vs L13507C variants) with 80124298/80134FBC/801264C0/
+       80126590/80123FB4/80126528/80126458; sub-dispatchers 80120070 +
+       8012B0D8; loops to L135054/L13507C. */
+    func_80124298();
+    func_80134FBC();
+    func_801264C0();
+    func_8017F8F8();
+    func_80126590();
+    goto L13507C;
+L135054:
+    for (;;) {
+        func_80123FB4();
+        func_80134FBC();
+        func_80126528();
+        func_80126458();
+        func_801264C0();
+    L13507C:
+        txt_set(0x1BB1);
+        cell_put(0x45);
+        row_sel_cell_cur();
+        row_sel_cell2_cur();
+        cell_poke0(cell_state(0x45));
+        row_open_w(0x10);
+        /* v0 gate -> L135108 + row renders */
+        cell_put(0x45);
+        latch(0x30);
+        cell_put(0x46);
+        func_8011F6D4();
+        func_80125934();
+        func_8011F684();
+        func_801264E8();
+        func_8011EF0C();
+        func_8011F884();
+        row_page(1);
+        row_read(1);
+        if (sel(2) != 0)
+            goto L1351A8;
+        txt_set(0x1BB1);
+        func_800F61E8();
+        io_poll(3);
+        if (io_just() == 0)
+            goto L1351A0;
+        latch_cur();
+    L1351A0:
+        txt_draw(0x1BB1);
+    L1351A8:
+        row_page(1);
+        row_read(2);
+        if (sel(2) != 0)
+            goto L1351F8;
+        txt_set(0x1BB1);
+        poll_spin();
+        if (poll_go_cur() != 0)
+            goto L1351F0;
+        latch(2);
+    L1351F0:
+        txt_draw(0x1BB1);
+    L1351F8:
+        row_page_cur();
+        row_read(0x80);
+        if (sel(2) != 0)
+            goto L135268;
+        txt_set(0x1BB1);
+        io_poll(2);
+        if (io_just() != 0)
+            goto L135288;
+        func_800F9200();
+        row_close2();
+        wnd_open_cur();
+        func_80120070();
+        func_8012B0D8();
+        continue;
+    L135268:
+        row_page(1);
+        row_read(0x80);
+        if (sel(2) == 0)
+            break;
+        continue;
+    L135288:
+        return;
+    }
+    return;
+}

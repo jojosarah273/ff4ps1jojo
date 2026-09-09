@@ -1,0 +1,69 @@
+/* FF4 source-port — interpreted module for func_80122D20.
+ * Ground truth: src/func_80122D20.c (byte-verified).
+ * Primitives: port/include/ff4_window.h.
+ */
+#include "ff4_window.h"
+void func_80122D20(void)
+{
+    /* equip sub-cell renderer (called by the 80130C74/80130F90 family):
+       0x48/0x4B/0x4D/0x4F/0x46/0x57/0x49/0x51/0x4A/0x4E/0x4C/0xC7
+       stat cells through 80123B00/80120A0C/80123320/8011F360/80122F2C;
+       early exit when 4120(2) holds. */
+    func_800F6D70();
+    row_read(0x3F);
+    if (sel(2) != 0)
+        return;
+    row_info(0x48);
+    tail(0x4B);
+    func_80123B00();
+    func_80120A0C();
+    cell_fmt2(0x4B);
+    page(0x48);
+    func_80123320();
+    row_prep(0x20);
+    row_read2(0x4B);
+    sep_a();
+    func_800F4064(0x84);
+    func_800F8274(0x4B);
+    cell_peek0(cell_state(0x29));
+    row_prep_close();
+    latch(0x4D);
+    cell_draw_cur();
+    cell_draw(8);
+    latch(0x46);
+    cell_draw(2);
+    cell_draw(6);
+    latch(0x57);
+    cell_draw(4);
+    latch(0x49);
+    cell_draw(0x40);
+    latch(0x51);
+    cell_draw(0x42);
+    cell_draw(0x82);
+    latch(0x4A);
+    cell_draw(0x80);
+    latch(0xC7);
+    cell_draw(0x4E);
+    cell_draw(0x8E);
+    draw_pad(2);
+    func_800F66D8(0x48);
+    func_8011F360();
+    cell_draw(0x14);
+    stat_sync();
+    cell_draw(0x16);
+    row_prep(0x20);
+    row_sync2(0x46);
+    draw_pad(7);
+    func_80122F2C();
+    row_sync2(0x50);
+    draw_pad(9);
+    func_80122F2C();
+    row_sync2(0x86);
+    draw_pad(0xB);
+    func_80122F2C();
+    row_sync2(0x90);
+    draw_pad(0xD);
+    func_80122F2C();
+    row_prep_close();
+    return;
+}
