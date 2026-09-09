@@ -77,7 +77,7 @@ int32_t event_drive(uint32_t mode, uint32_t arg1, uint32_t arg2)
         else
             event_drive_cb2();
         {
-            uint32_t *slot = (uint32_t *)g_evtarget;
+            uint32_t *slot = (uint32_t *)g_evuser_b;
             slot[0] = g_evuser;
             g_evdirty = (arg1 >> 6) + ((arg1 & 0x3F) != 0);
             g_evkick = (g_evslot == 1) ? 0x1000200u : 0x1000201u;
