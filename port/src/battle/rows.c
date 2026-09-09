@@ -30,7 +30,7 @@ void battle_row_hold_label(void)
 void battle_row_poll5(void)
 {
     do {
-        cell_fmt(0x28XX);   /* 0x2800-ish cells (8960/63BC) */
+        cell_fmt(0x2800);   /* 0x2800 cell page               */
         cell_step();
         wnd_poll(5);
     } while (io_just() == 0);

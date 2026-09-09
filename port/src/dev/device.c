@@ -9,6 +9,9 @@
 #define CHAIN_LIVE 0x40
 #define KICK_BUSY  0x1000000
 
+cmd_pts *device_pts_a(void);
+cmd_pts *device_pts_b(void);
+
 typedef struct cmd_pts {
     volatile uint8_t  *live;   /* +0x00: armed/live byte  */
     volatile uint8_t  *busy;   /* +0x04: busy byte        */
@@ -23,13 +26,15 @@ typedef struct cmd_pts {
 void device_chain_a(uint32_t a0, uint32_t a1)
 {
     cmd_pts *c = device_pts_a();            /* D_8019BD74..90 */
+    (void)c;
+    cmd_pts *k = device_pts_a();
     *c->live = 0;
     *c->busy = 0x80;
     *c->op = 0x20943;
     *c->arg = 0x1323;
-    *c->aux |= 0x8000;
+    *c->aux = (uint32_t)(*c->aux | 0x8000);
     *c->fin = a0;
-    device_pts_a()->kick = a1 | 0x10000;
+    k->kick = a1 | 0x10000;
     while ((*c->live & CHAIN_LIVE) == 0)
         ;
     *c->kick = 0x11000000;
