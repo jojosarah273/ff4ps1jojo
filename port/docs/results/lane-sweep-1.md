@@ -32,3 +32,7 @@ psx lanes. First matches (all gcc-2.95.2):
 gcc-2.8.1 × 15, gcc-2.6.0 × 5, gcc-2.95.2 × 3, gcc-2.7.2 × 2.
 **Byte-verified 746 → 780 (31.0%).** The era lanes are the productive
 track for the remaining pool; mid-size band sweep next.
+
+## Update: mid-size band (0x81..0x200) — 34 more
+gcc-2.8.1 × 22, gcc-2.95.2 × 12. **Byte-verified 780 → 814 (32.4%).**
+Includes battle-menu screens 80119DE4/80119740 and shop 8011DA88.
