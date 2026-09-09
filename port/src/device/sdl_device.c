@@ -11,6 +11,8 @@
  */
 #include <stdint.h>
 #include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include <SDL2/SDL.h>
 
 #include "ff4_state.h"
@@ -117,14 +119,26 @@ uint32_t poll_go(uint32_t id)     { (void)id; return io_just(); }
 void     poll_go_cur(void)        { }
 void     io_poll(uint32_t k)      { (void)k; }
 void     io_poll_cur(void)        { }
+static int g_autopress;      /* headless smoke: self-press        */
+
 uint32_t io_just(void)
 {
     /* headless smoke: auto-press after many polls so the menu cannot
-       block forever without real input (counter resets per press). */
+       block forever without real input (only when g_autopress, i.e.
+       SDL dummy driver or FF4_AUTOPRESS=1; real displays stay manual). */
     static int jc;
-    if (jc++ > 4000) {
-        jc = 0;
-        return 1;
+    static int hold;
+    if (g_autopress) {
+        if (hold > 0) {            /* a short held press (<=50 polls) */
+            hold--;
+            if (hold == 0)
+                jc = 0;
+            return 1;
+        }
+        if (jc++ > 4000) {         /* press every ~4000 polls          */
+            hold = 50;
+            return 1;
+        }
     }
     return g_in.keypress;
 }
@@ -169,9 +183,9 @@ void device_poll_events(void)
         }
         if (ev.type == SDL_QUIT) { g_in.keypress = 0xFF; }
     }
-    /* headless smoke: inject a confirm press after ~300 poll cycles so
-       the menu can advance without real input. */
-    {
+    /* headless smoke (gated on g_autopress): confirm press every 300
+       poll cycles so the menu can advance without real input. */
+    if (g_autopress) {
         static int cyc;
         if (++cyc == 300)
             g_in.keypress = 1;
@@ -201,14 +215,30 @@ void device_render(void)
     SDL_RenderPresent(g_ren);
 }
 
+static int is_headless(void)
+{
+    const char *drv = SDL_GetCurrentVideoDriver();
+    const char *env = getenv("FF4_AUTOPRESS");
+    if (drv && strstr(drv, "dummy") != 0)
+        return 1;
+    if (env && env[0] == '1')
+        return 1;
+    return 0;
+}
+
 int device_open_window(const char *title, int w, int h)
 {
     if (SDL_Init(SDL_INIT_VIDEO) != 0)
         return -1;
-    g_win = SDL_CreateWindow(title, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, w, h, 0);
+    g_win = SDL_CreateWindow(title, SDL_WINDOWPOS_CENTERED,
+                             SDL_WINDOWPOS_CENTERED, w, h, 0);
     if (!g_win)
         return -1;
+    g_autopress = is_headless();
+    /* accelerated first, software fallback (remote-desktop friendly) */
     g_ren = SDL_CreateRenderer(g_win, -1, 0);
+    if (!g_ren)
+        g_ren = SDL_CreateRenderer(g_win, -1, SDL_RENDERER_SOFTWARE);
     return g_ren ? 0 : -1;
 }
 

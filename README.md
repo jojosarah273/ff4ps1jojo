@@ -572,8 +572,15 @@ the not-yet-interpreted register machines):
 
 ```
 make -C port native          # deck + device + stubs + SDL -> port/build/ff4-native
-SDL_VIDEODRIVER=dummy ./port/build/ff4-native   # headless smoke: exit 0
+./port/build/ff4-native      # real display: window + menu (manual input)
+./port/build/ff4-native battle            # battle-menu state driver
+SDL_VIDEODRIVER=dummy ./port/build/ff4-native      # headless smoke: exit 0
+FF4_AUTOPRESS=1 ./port/build/ff4-native           # force menu self-press
 ```
+Headless/remote-desktop notes: the renderer falls back to software mode
+when hardware acceleration is unavailable (RDP-safe), and the menu
+self-press injector is only active under the SDL dummy driver or
+FF4_AUTOPRESS=1 — a real display keeps manual input.
 
 
 Byte-match track continues in parallel (ladder lane micro-sweeps).

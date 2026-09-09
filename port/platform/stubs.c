@@ -393,6 +393,7 @@ uint32_t func_8017EA90() { return 0; }
 uint32_t func_8017F8F8() { return 0; }
 uint32_t func_8017F9A8() { return 0; }
 uint32_t func_8017F9FC() { return 0; }
+uint32_t func_8017FA2C() { return 0; }
 uint32_t func_801808D8() { return 0; }
 uint32_t func_801817EC() { return 0; }
 uint32_t func_801824D8() { return 0; }
