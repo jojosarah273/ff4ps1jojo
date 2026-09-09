@@ -25,6 +25,45 @@ void set(uint32_t id);            /* 800F6564  */
 void cmd_subscreen(void);         /* 8010B010  */
 void battle_commands(void);       /* 8010DA88 (73-entry table) */
 
+void menu_screen_0(void);
+void menu_screen_1(void);
+void menu_screen_2(void);
+void menu_screen_3(void);
+void menu_screen_4(void);
+void menu_screen_5(void);
+void menu_screen_6(void);
+void menu_screen_7(void);
+void menu_screen_8(void);
+void menu_screen_9(void);
+void menu_screen_10(void);
+void menu_screen_11(void);
+void menu_screen_12(void);
+void menu_screen_13(void);
+void menu_screen_14(void);
+void menu_screen_15(void);
+void menu_screen_16(void);
+void menu_screen_17(void);
+void menu_screen_18(void);
+void menu_screen_19(void);
+void menu_screen_20(void);
+void menu_screen_21(void);
+void menu_screen_22(void);
+void menu_screen_23(void);
+void menu_screen_24(void);
+void menu_screen_25(void);
+void menu_screen_26(void);
+void menu_screen_27(void);
+void menu_screen_28(void);
+void menu_screen_29(void);
+void menu_screen_30(void);
+void menu_screen_31(void);
+void menu_screen_32(void);
+void menu_screen_33(void);
+void menu_screen_34(void);
+void menu_screen_35(void);
+void menu_screen_36(void);
+void menu_screen_37(void);
+
 /* 40-slot menu-screen dispatch (jr-$a0 index order) */
 void (*const g_menu_screens[40])(void) = {
     menu_screen_0,  menu_screen_1,  menu_screen_2,  menu_screen_3,
@@ -94,41 +133,3 @@ void item_screen(void);
 void l1_draw(void);
 void page_paint(uint32_t id);
 void menu_screen_tramp(void);
-void menu_screen_0(void);
-void menu_screen_1(void);
-void menu_screen_2(void);
-void menu_screen_3(void);
-void menu_screen_4(void);
-void menu_screen_5(void);
-void menu_screen_6(void);
-void menu_screen_7(void);
-void menu_screen_8(void);
-void menu_screen_9(void);
-void menu_screen_10(void);
-void menu_screen_11(void);
-void menu_screen_12(void);
-void menu_screen_13(void);
-void menu_screen_14(void);
-void menu_screen_15(void);
-void menu_screen_16(void);
-void menu_screen_17(void);
-void menu_screen_18(void);
-void menu_screen_19(void);
-void menu_screen_20(void);
-void menu_screen_21(void);
-void menu_screen_22(void);
-void menu_screen_23(void);
-void menu_screen_24(void);
-void menu_screen_25(void);
-void menu_screen_26(void);
-void menu_screen_27(void);
-void menu_screen_28(void);
-void menu_screen_29(void);
-void menu_screen_30(void);
-void menu_screen_31(void);
-void menu_screen_32(void);
-void menu_screen_33(void);
-void menu_screen_34(void);
-void menu_screen_35(void);
-void menu_screen_36(void);
-void menu_screen_37(void);
