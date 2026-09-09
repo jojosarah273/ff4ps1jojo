@@ -67,8 +67,8 @@ Lc0c:
         latch(0x20);
         cell_put(0x3F);
         txt_set(0x1B94);
-        row_sel_cell();
-        row_sel_cell2();
+        row_sel_cell_cur();
+        row_sel_cell2_cur();
         row_open_w(0x58);
         cell_put(0x46);
         txt_set(0x1B95);

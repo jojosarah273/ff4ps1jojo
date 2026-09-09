@@ -37,7 +37,7 @@ void func_80145408(void)
     if (gate(2) != 0)
         goto L60c;
     txt_set(0xF1B3);
-    row_sel_cell();
+    row_sel_cell_cur();
     cell_put(0x1E);
     txt_set(0xF133);
     sep_a();
@@ -46,7 +46,7 @@ void func_80145408(void)
     func_80147000();
     txt_draw(0xF32F);
     txt_set(0xF1F3);
-    row_sel_cell();
+    row_sel_cell_cur();
     cell_put(0x1E);
     txt_set(0xF173);
     sep_a();
@@ -56,7 +56,7 @@ void func_80145408(void)
     txt_draw(0xF32E);
 L60c:
     txt_set(0xF328);
-    row_sel_cell();
+    row_sel_cell_cur();
     func_800F6C68();
     cell_put(0x1C);
     func_800F6C68();

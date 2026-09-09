@@ -296,7 +296,7 @@ l9A88:
     if (sel(2) != 0)
         goto l9B08;
     txt_set(0x3965);
-    row_sel_cell();
+    row_sel_cell_cur();
     sep_a();
     cell_poke0(cell_state(0xAA));
     row_open_w(2);

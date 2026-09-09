@@ -8,8 +8,8 @@ void func_8013AB18(void)
 Lab24:
     for (;;) {
         txt_set(0x1BB9);
-        row_sel_cell();
-        row_sel_cell2();
+        row_sel_cell_cur();
+        row_sel_cell2_cur();
         row_open_w(0x4B);
         cell_put(0x46);
         latch(0xA);

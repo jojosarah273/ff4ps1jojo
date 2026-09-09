@@ -59,8 +59,8 @@ Lf50:
     cell_draw(0xB89F);
     txt_set(0x1BA7);
     func_800F9200();
-    row_sel_cell();
-    row_sel_cell2();
+    row_sel_cell_cur();
+    row_sel_cell2_cur();
     row_open_w(0x30);
     cell_put(0x46);
     row_close2();
@@ -75,22 +75,22 @@ L0A0:
     cell_put(0x45);
     func_8011F6AC();
     txt_set(0x1BA8);
-    row_sel_cell();
-    row_sel_cell2();
+    row_sel_cell_cur();
+    row_sel_cell2_cur();
     row_open_w(0x86);
     txt_draw(0x320);
     latch(0xA0);
     txt_draw(0x321);
     txt_set(0x1BA9);
-    row_sel_cell();
-    row_sel_cell2();
+    row_sel_cell_cur();
+    row_sel_cell2_cur();
     row_open_w(0x86);
     txt_draw(0x324);
     latch(0xB0);
     txt_draw(0x325);
     txt_set(0x1BAA);
-    row_sel_cell();
-    row_sel_cell2();
+    row_sel_cell_cur();
+    row_sel_cell2_cur();
     row_open_w(0x86);
     txt_draw(0x328);
     latch(0xC0);
@@ -238,7 +238,7 @@ L564:
     if (poll_go(2) != 0)
         goto L62C;
     poll_spin();
-    row_sel_cell();
+    row_sel_cell_cur();
     func_801224D0();
     row_prep(0x20);
     func_800F8274(0x45);
@@ -307,7 +307,7 @@ L7B4:
     if (poll_go(2) != 0)
         goto L884;
     poll_spin();
-    row_sel_cell();
+    row_sel_cell_cur();
     func_801224D0();
     row_prep(0x20);
     func_800F8274(0x45);

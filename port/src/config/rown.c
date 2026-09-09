@@ -10,8 +10,8 @@ void func_80136FFC(void)
     txt_set(0x1B94);
     sep_a();
     cell_poke0(cell_state(0x1B96));
-    row_sel_cell();
-    row_sel_cell2();
+    row_sel_cell_cur();
+    row_sel_cell2_cur();
     cell_poke0(cell_state(0x1B95));
     cell_poke0(cell_state(0x1B95));
     func_801224D0();
@@ -45,14 +45,14 @@ void func_80136FFC(void)
     cell_put(0x43);
     row_prep(0x20);
     row_read2(0x43);
-    row_arm_s();
-    row_arm_s2();
+    row_arm_s_cur();
+    row_arm_s2_cur();
     cell_peek0(cell_state(0x43));
     func_800F8274(0x5A);
     row_prep_close();
     goto L238;
 L1d0:
-    row_sel_cell();
+    row_sel_cell_cur();
     row_open();
     row_close();
     row_prep(0x20);

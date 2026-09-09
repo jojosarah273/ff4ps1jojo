@@ -37,7 +37,7 @@ void func_8016046C(void)
     func_80153374();
     page_paint(0x2A06);
     row_page(0x88);
-    row_sel_cell();
+    row_sel_cell_cur();
     latch(0x40);
     cell_draw(0x29EB);
     key_page(0x8A);

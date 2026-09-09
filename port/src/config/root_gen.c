@@ -84,7 +84,7 @@ void func_801539C4(void)
     txt_cell(0x2001);
     row_read(0xF);
     cell_put(0xB7);
-    row_sel_cell();
+    row_sel_cell_cur();
     sep_a();
     cell_state(0xB7);
     cell_poke0();

@@ -9,8 +9,8 @@ void func_8010CB08(void)
     func_8010D24C();
     txt_set(0xFDE);
     open_row(0x3E);
-    row_sel_cell();
-    row_sel_cell2();
+    row_sel_cell_cur();
+    row_sel_cell2_cur();
     row_sel2(cell_state(0x3E));
     cell_put(0x3D);
     txt_set(0xFE5);
@@ -135,7 +135,7 @@ Lc64:
         cell_put(0x3D);
         open_row(0x3E);
         row_arm2(cell_state(0x3D));
-        row_sel_cell2();
+        row_sel_cell2_cur();
         row_sel2(cell_state(0x3E));
         page(0x3D);
         txt_cell(0xEDC);

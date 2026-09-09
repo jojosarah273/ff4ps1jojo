@@ -35,7 +35,7 @@ L157978:
         latch(0x40);
         cell_draw(0x2A06);
         row_page(0xCD);
-        row_sel_cell();
+        row_sel_cell_cur();
         txt_cell(0x29EB);
         cell_draw_cur();
         row_page(0xD4);

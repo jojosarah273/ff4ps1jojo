@@ -25,7 +25,7 @@ fe8:
         cell_put(0xAF);
         open_row(0xB0);
         row_arm2(cell_state(0xAF));
-        row_sel_cell2();
+        row_sel_cell2_cur();
         row_sel2(cell_state(0xB0));
         page(0xAF);
         sep_a();
@@ -43,7 +43,7 @@ fe8:
         cell_put(0xAF);
         open_row(0xB0);
         row_arm2(cell_state(0xAF));
-        row_sel_cell2();
+        row_sel_cell2_cur();
         row_sel2(cell_state(0xB0));
         page(0xAF);
         sep_a();
@@ -343,7 +343,7 @@ q8D8:
         txt_cell(0x1000);
         row_read(0x1F);
         poll_spin();
-        row_sel_cell();
+        row_sel_cell_cur();
         func_800F6C68();
         cell_put(0x80);
         func_800F6C68();

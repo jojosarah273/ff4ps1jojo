@@ -73,7 +73,7 @@ void func_801583FC(void)
         cell_put(0xA9);
         row_close2();
         row_read(7);
-        row_sel_cell();
+        row_sel_cell_cur();
         func_800F6C68();
         cell_put(0xAB);
         cell_step();

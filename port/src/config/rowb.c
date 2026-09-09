@@ -7,14 +7,14 @@ void func_80155C88(void)
 {
     row_page(0xB9);
     txt_draw(0x35A0);
-    row_sel_cell();
+    row_sel_cell_cur();
     sep_a();
     row_open_w(0xA);
     latch(0x40);
     cell_draw(0x29EB);
     row_prep(0x20);
     row_read2(0xBB);
-    row_arm_s();
+    row_arm_s_cur();
     sep_b();
     func_800F6CF4();
     func_800F80D0(0xA860);
@@ -72,7 +72,7 @@ Le5c:
     row_open();
     txt_set(0x28A2);
     row_read(0x3F);
-    row_sel_cell();
+    row_sel_cell_cur();
     func_800F6C68();
     cell_put(0xA9);
     func_800F6C68(0xA9);

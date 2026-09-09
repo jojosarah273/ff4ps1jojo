@@ -187,7 +187,7 @@ void func_8012D23C(void)
     func_800F6E30(0x60);
     row_read(0x3F);
     poll_spin();
-    row_sel_cell();
+    row_sel_cell_cur();
     func_801224D0();
     row_prep(0x20);
     func_800F6CF4();
@@ -204,8 +204,8 @@ L8b0:
     cell_put(0x43);
     row_prep(0x20);
     row_read2(0x43);
-    row_arm_s();
-    row_arm_s2();
+    row_arm_s_cur();
+    row_arm_s2_cur();
     cell_peek0(cell_state(0x43));
     cell_peek0(cell_state(0x48));
     func_800F4064(2);

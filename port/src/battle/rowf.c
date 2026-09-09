@@ -7,7 +7,7 @@ void func_8010A964(void)
 {
     txt_set(0x1705);
     cell_put(8);
-    row_sel_cell();
+    row_sel_cell_cur();
     if (func_800F73E0() != 0)
         goto La9e4;
     func_800F6D70(0x6A4);
