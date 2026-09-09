@@ -1,0 +1,284 @@
+/* FF4 source-port — interpreted module for func_8016EF88.
+ * Ground truth: src/func_8016EF88.c (byte-verified).
+ * Primitives: port/include/ff4_window.h.
+ */
+#include "ff4_window.h"
+void func_8016EF88(u32 a0)
+{
+    if (a0 != 0) {
+        for (;;) {
+            if (a0 == 0)
+                break;
+        }
+    }
+    func_8016B6D0();
+    func_8016B650();
+    func_8016AE94();
+    func_80169F58();
+    func_80169614();
+    func_801694A4();
+    func_80169A18();
+    open_row(0x95);
+    wnd_open(0x8000);
+    tail(0x57);
+    sep();
+    tail(0x66);
+    row_page(0x64);
+    io_poll(1);
+    if (io_just() != 0)
+        goto f0dc;
+    io_poll(2);
+    if (io_just() != 0)
+        goto f0b4;
+    func_8016A208();
+    func_8016AB14();
+    goto f0dc;
+f0b4:
+    wnd_open(0x50);
+    tail(0x96);
+    func_8016A080();
+    func_8016DCE0();
+    func_8016AB14();
+f0dc:
+    func_800F8F74(0x7D1F);
+    func_800F8F74(0x7D20);
+    func_800F8F74(0x3303);
+    key_page(0x63);
+    latch(0x11);
+    txt_draw(0x7D28);
+    func_800F81E8(0x212C);
+    latch(0x81);
+    func_800F81E8(0x4200);
+    func_80169290();
+    sep();
+    label(0x68);
+    for (;;) {
+        func_8016BB44();
+        page_open(0x68);
+        cell_step();
+        label(0x68);
+        func_800F56AC(cell_state(0x6A));
+        if (io_go() == 0)
+            continue;
+        break;
+    }
+    row_page(0x64);
+    io_poll(2);
+    if (io_just() == 0)
+        goto f8dc;
+    page_paint2(0x7D1F);
+    wnd_open(0x100);
+    for (;;) {
+        func_8016BB44();
+        func_8016ADDC();
+        sep_b();
+        func_800F8058(8);
+        poll_t(0x78);
+        if (io_just() != 0)
+            break;
+    }
+    sep();
+    tail(0x9C);
+    wnd_open(1);
+    func_80170084();
+    wnd_open(0x100);
+    tail(0x9E);
+    sep();
+    tail(0x9A);
+    for (;;) {
+        func_8016BB44();
+        row_prep(0x20);
+        row_read2(0x9C);
+        sep_b();
+        func_800F80D0(8);
+        func_800F8274(0x9C);
+        func_800F5DD4(0x9E);
+        func_800F5DD4(0x9E);
+        row_read2(0x9E);
+        func_800F8274(0xE);
+        row_read2(0x9C);
+        sep_a();
+        func_800F4064(0x80);
+        func_8016DB94();
+        row_prep(0x20);
+        row_read2(0x14);
+        func_800F8274();
+        func_800F8274(6);
+        row_read2(0x9E);
+        func_800F8274(0xE);
+        row_read2(0x9C);
+        func_8016DB94();
+        row_prep(0x20);
+        func_800F62F0(0x9A);
+        row_read2(0x9A);
+        func_800F4264(3);
+        if (func_800F41E8(0x202) != 0)
+            goto f3f4;
+        func_800F658C(0x2105);
+        if (func_800F64EC(2) != 0)
+            goto f3f4;
+        sep_b();
+        func_800F80D0(0x421);
+        func_800F81B0(0x2105);
+        func_801773FC();
+    f3f4:
+        row_read2(0x14);
+        func_800F8274(2);
+        func_800F8274(4);
+        func_801700BC();
+        row_prep_close();
+        txt_set(0x2105);
+        if (gate(0x202) != 0)
+            continue;
+        break;
+    }
+    func_8016BB44();
+    latch(0x10);
+    txt_draw(0x7D28);
+    wnd_open(0x7FFF);
+    label(0x2105);
+    wnd_open(0xCC0);
+    label(0x2107);
+    sep();
+    func_8016BB44();
+    sep();
+    for (;;) {
+        cell_draw(0x3D19);
+        cell_step();
+        poll_t(0x1000);
+        if (io_just() != 0)
+            break;
+    }
+    func_8016BB44();
+    sep();
+    for (;;) {
+        cell_draw(0x3D19);
+        cell_step();
+        poll_t(0x2000);
+        if (io_just() != 0)
+            break;
+    }
+    func_8016BB44();
+    sep();
+    for (;;) {
+        cell_draw(0x3D19);
+        cell_step();
+        poll_t(0x3000);
+        if (io_just() != 0)
+            break;
+    }
+    func_8016BB44();
+    sep();
+    for (;;) {
+        cell_draw(0x3D19);
+        cell_step();
+        poll_t(0x4000);
+        if (io_just() != 0)
+            break;
+    }
+    latch(0xC0);
+    cell_put_cur();
+    latch(0xCC);
+    cell_put(2);
+    sep();
+    for (;;) {
+        row_page_cur();
+        cell_draw(0x43A3);
+        row_page(2);
+        cell_draw(0x4423);
+        key_page_cur();
+        key_page(2);
+        cell_step();
+        poll_t(0xC);
+        if (io_just() != 0)
+            break;
+    }
+    func_8016BB44();
+    sep();
+    tail(0x66);
+    tail(0x92);
+    wnd_open(0x70);
+    tail(0x8E);
+    wnd_open(0x3D19);
+    tail(0x90);
+    page_paint2(0x7D20);
+    for (;;) {
+        func_8016BB44();
+        txt_set(0x7D20);
+        if (gate(0x202) != 0)
+            continue;
+        break;
+    }
+    wnd_open_cur();
+    tail(2);
+    tail(4);
+    wnd_open(0x4000);
+    tail_cur();
+    tail(6);
+    func_801700BC();
+    func_8016BB44();
+    latch(0x80);
+    cell_put(0xA0);
+    latch(0x11);
+    txt_draw(0x7D28);
+    sep();
+    tail(0x9C);
+    wnd_open(0x800);
+    tail(0x9E);
+    for (;;) {
+        func_8016BB44();
+        row_prep(0x20);
+        row_read2(0x9E);
+        sep_b();
+        func_800F80D0(0x10);
+        func_800F8274(0x9E);
+        row_read2(0x9E);
+        func_800F8274(0xE);
+        row_read2(0x9C);
+        sep_a();
+        func_800F4064(0x80);
+        func_8016DB94();
+        row_prep(0x20);
+        row_read2(0x14);
+        func_800F8274();
+        func_800F8274(6);
+        row_read2(0x9E);
+        func_800F8274(0xE);
+        row_read2(0x9C);
+        func_8016DB94();
+        row_prep(0x20);
+        row_read2(0x14);
+        func_800F8274(2);
+        func_800F8274(4);
+        func_801700BC();
+        row_prep_close();
+        page(0x9E);
+        poll_t(0x200);
+        if (io_just() == 0)
+            continue;
+        break;
+    }
+    wnd_open(0xB4);
+    func_80170084();
+    latch(1);
+    func_800F81E8(0x1E00);
+    latch(0x15);
+    func_800F81E8(0x1E01);
+    func_80169128();
+    func_8016E490();
+    page_paint2(0x7D25);
+    for (;;) {
+        func_8016BB44();
+    }
+f8dc:
+    func_80169228();
+    sep();
+    func_800F81E8(0x4200);
+    func_800F81E8(0x420B);
+    func_800F81E8(0x420C);
+    latch(0x80);
+    func_800F81E8(0x2100);
+    func_800F94B8();
+    row_pad();
+    return;
+}
