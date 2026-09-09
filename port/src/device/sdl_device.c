@@ -183,11 +183,21 @@ void device_poll_events(void)
 
 void device_render(void)
 {
+    int x, y;
     if (!g_ren) return;
     SDL_SetRenderDrawColor(g_ren, 0, 10, 20, 255);
     SDL_RenderClear(g_ren);
-    /* draw the debug glyph ids */
-    SDL_SetRenderDrawColor(g_ren, 80, 255, 120, 255);
+    /* blit the cell screen (the hex-glyph ids written by cell_put) */
+    for (y = 0; y < CELL_H; y++) {
+        for (x = 0; x < CELL_W; x++) {
+            SDL_Rect rr = { x * 8, y * 16, 7, 15 };
+            SDL_SetRenderDrawColor(g_ren,
+                g_cell[y][x][0] ? g_cell[y][x][0] : 8,
+                g_cell[y][x][1] ? g_cell[y][x][1] : 60,
+                g_cell[y][x][2] ? g_cell[y][x][2] : 90, 255);
+            SDL_RenderFillRect(g_ren, &rr);
+        }
+    }
     SDL_RenderPresent(g_ren);
 }
 
