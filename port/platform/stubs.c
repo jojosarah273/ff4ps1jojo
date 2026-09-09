@@ -1,6 +1,17 @@
-/* auto stubs: every deck symbol with no body yet. */
+/* auto stubs (nm-driven, one shot) */
 #include <stdint.h>
 
+void D_800D1E05(void) { }
+void D_8019ED40(void) { }
+void D_8019ED44(void) { }
+void D_8019ED4C(void) { }
+void D_8019ED50(void) { }
+void D_8019ED54(void) { }
+void D_8019ED58(void) { }
+void D_8019ED60(void) { }
+void D_8019ED68(void) { }
+void D_8019EE60(void) { }
+void D_8019EF0C(void) { }
 void ability_row_a(void) { }
 void ability_screen_a(void) { }
 void ability_screen_b(void) { }
@@ -23,10 +34,10 @@ void cast_cell(void) { }
 void cast_commit(void) { }
 void cast_row(void) { }
 void cast_tail(void) { }
+void cat_reset(void) { }
 void catalog(void) { }
 void catalog_base(void) { }
 void catalog_guard(void) { }
-void cat_reset(void) { }
 void cd_row(void) { }
 void cell_dispatch(void) { }
 void cell_dispatch_cur(void) { }
@@ -57,17 +68,6 @@ void clear_id(void) { }
 void cmd_subscreen(void) { }
 void cursor_arm(void) { }
 void cursor_row(void) { }
-void D_800D1E05(void) { }
-void D_8019ED40(void) { }
-void D_8019ED44(void) { }
-void D_8019ED4C(void) { }
-void D_8019ED50(void) { }
-void D_8019ED54(void) { }
-void D_8019ED58(void) { }
-void D_8019ED60(void) { }
-void D_8019ED68(void) { }
-void D_8019EE60(void) { }
-void D_8019EF0C(void) { }
 void detail_close(void) { }
 void detail_pair(void) { }
 void detail_row(void) { }
@@ -630,12 +630,6 @@ void func_80195120(void) { }
 void func_80197208(void) { }
 void func_80197288(void) { }
 void g_anim_pause(void) { }
-void gate(void) { }
-void gate2(void) { }
-void gate_b(void) { }
-void gate_cur(void) { }
-void gate_p(void) { }
-void gate_row(void) { }
 void g_box(void) { }
 void g_box_null(void) { }
 void g_catalog(void) { }
@@ -681,6 +675,12 @@ void g_ui_latch(void) { }
 void g_ui_state(void) { }
 void g_ui_state2(void) { }
 void g_ui_state3(void) { }
+void gate(void) { }
+void gate2(void) { }
+void gate_b(void) { }
+void gate_cur(void) { }
+void gate_p(void) { }
+void gate_row(void) { }
 void inp_held(void) { }
 void inp_just(void) { }
 void inp_press(void) { }
@@ -750,11 +750,11 @@ void open_row(void) { }
 void open_row_cur(void) { }
 void opt_end(void) { }
 void opt_flat(void) { }
+void opt_next(void) { }
+void opt_row_a(void) { }
 void option_commit_flags(void) { }
 void option_pages(void) { }
 void option_screen_d(void) { }
-void opt_next(void) { }
-void opt_row_a(void) { }
 void page(void) { }
 void page_cur(void) { }
 void page_open(void) { }
@@ -768,7 +768,6 @@ void panel_alpha(void) { }
 void party_end(void) { }
 void party_prep(void) { }
 void party_rows(void) { }
-void platform_open_window(void) { }
 void poll_go(void) { }
 void poll_go_cur(void) { }
 void poll_h(void) { }
@@ -859,10 +858,10 @@ void shop_row_b(void) { }
 void spell_commit_row(void) { }
 void spell_done(void) { }
 void spell_panel(void) { }
-void state_ok(void) { }
-void state_open(void) { }
 void stat_pair(void) { }
 void stat_sync(void) { }
+void state_ok(void) { }
+void state_open(void) { }
 void step(void) { }
 void step2(void) { }
 void step_cell(void) { }

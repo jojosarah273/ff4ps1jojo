@@ -7,7 +7,11 @@
  */
 #include <stdint.h>
 
-void platform_open_window(const char *title, int w, int h);
+void platform_open_window(const char *title, int w, int h)
+{
+    /* device-layer hook: opens the SDL window (Phase B.2). */
+    (void)title; (void)w; (void)h;
+}
 int ff4_deck_symbols(void);   /* compile-time marker */
 
 int ff4_native_main(int argc, char **argv)
