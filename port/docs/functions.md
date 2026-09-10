@@ -7,7 +7,7 @@ column is the semantic 0x800F primitive name (tool:
 `bv` marks byte-verified. Unassigned rows are stubbed until the
 register machines are interpreted (Avenue 2).
 
-- functions: 2516   interpreted: 1847   stub-only: 669
+- functions: 2516   interpreted: 1859   stub-only: 657
 - byte-verified: 827   named primitives: 1812
 
 | id | name | module fn | module | bv | role |
@@ -140,7 +140,7 @@ register machines are interpreted (Avenue 2).
 | 800F6048 | - | - | - | Y |  |
 | 800F6068 | cell_0xf6068 | cell_0xf6068 | src/rows/gen_800F6068.c |  |  |
 | 800F60A8 | cell_0xf60a8 | cell_0xf60a8 | src/rows/gen_800F60A8.c |  |  |
-| 800F6104 | - | - | - |  |  |
+| 800F6104 | - | cell_pair_inc | src/rows3/gen_800F6104.c |  |  |
 | 800F6130 | cell_0xf6130 | cell_0xf6130 | src/rows/gen_800F6130.c |  |  |
 | 800F6180 | cell_0xf6180 | cell_0xf6180 | src/rows/gen_800F6180.c |  |  |
 | 800F61E8 | - | - | - |  |  |
@@ -323,9 +323,9 @@ register machines are interpreted (Avenue 2).
 | 800F8C98 | - | - | - | Y |  |
 | 800F8CC0 | - | - | - | Y |  |
 | 800F8CC8 | - | - | - | Y |  |
-| 800F8CD4 | - | - | - |  |  |
+| 800F8CD4 | - | cell_push5c | src/rows3/gen_800F8CD4.c |  |  |
 | 800F8D00 | - | - | - |  |  |
-| 800F8D40 | - | - | - |  |  |
+| 800F8D40 | - | cell_put5c | src/rows3/gen_800F8D40.c |  |  |
 | 800F8D6C | - | - | - |  |  |
 | 800F8DAC | - | - | - |  |  |
 | 800F8DE0 | - | - | - |  |  |
@@ -385,9 +385,9 @@ register machines are interpreted (Avenue 2).
 | 800F9868 | - | - | - |  | catalog dispatch (0x368): a0/v0 regcmp ladder routes into a jr-$a0 sub-table (L800F990C..); each slot resolves a scratch-armed bank and disp |
 | 800F9BD0 | rows_f9c98_f9ce8_pair | rows_f9c98_f9ce8_pair | src/rows/gen_800F9BD0.c |  | rows: 800F9C98/800F9CE8 pair. |
 | 800F9C90 | - | - | - | Y |  |
-| 800F9C98 | - | - | - |  |  |
-| 800F9CE8 | - | - | - |  |  |
-| 800FA460 | - | - | - | Y |  |
+| 800F9C98 | - | cell_clear_icon | src/rows3/gen_800F9C98.c |  |  |
+| 800F9CE8 | - | cell_rows_420d | src/rows3/gen_800F9CE8.c |  |  |
+| 800FA460 | - | shop_pass_a460 | src/rows3/gen_800FA460.c | Y |  |
 | 800FA5B8 | - | - | - |  | battle item-use confirm: 0xD5/0x50/2 window gates, 0x1700/0x1704 headers, 0xA04 name row, 801163E8 executes the use. |
 | 800FA834 | - | - | - | Y |  |
 | 800FA9B4 | - | - | - |  |  |
@@ -396,21 +396,21 @@ register machines are interpreted (Avenue 2).
 | 800FB09C | - | - | - | Y |  |
 | 800FB160 | cell_0xfb160 | cell_0xfb160 | src/rows/gen_800FB160.c | Y |  |
 | 800FB224 | cell_0xfb224 | cell_0xfb224 | src/rows/gen_800FB224.c | Y |  |
-| 800FB2E8 | - | - | - | Y |  |
-| 800FB3A0 | - | - | - | Y |  |
+| 800FB2E8 | - | shop_pass_b2e8 | src/rows3/gen_800FB2E8.c | Y |  |
+| 800FB3A0 | - | battle_title_rows_1004 | src/rows3/gen_800FB3A0.c | Y |  |
 | 800FB3F8 | - | - | - | Y |  |
 | 800FB430 | - | func_800FB430 | src/config/screen_f.c |  | MAIN SYSTEM MENU root (0xA14): register dispatch ladder L800FB520..L800FBE08 (v0/v1 gates per segment). Linear call chain with constants pul |
-| 800FBE44 | - | - | - |  | shop rows: 0x47/0x45/0x60/0x61 windows, 0x2800 texts, 801766B0 rows + 8017F8F8 preps; ends 80194700/80194394. |
+| 800FBE44 | - | shop_rows_47 | src/rows3/gen_800FBE44.c |  | shop rows: 0x47/0x45/0x60/0x61 windows, 0x2800 texts, 801766B0 rows + 8017F8F8 preps; ends 80194700/80194394. |
 | 800FBF50 | - | - | - |  | shop rows: 0x47/0x61 windows, loop L8FBF94 on 4120(0x202); 4064(8)/8274(0x61) cells. |
 | 800FC07C | cell_0xfc07c | cell_0xfc07c | src/rows/gen_800FC07C.c | Y |  |
 | 800FC0DC | cell_0xfc0dc | cell_0xfc0dc | src/rows/gen_800FC0DC.c |  |  |
 | 800FC110 | - | - | - |  | battle rows: 0x3F/0x212C/0x79 windows, 0x420C texts, 0xAD window, 800FC2AC close; loop L8FC140 on 5574(0x28). |
 | 800FC1CC | battle_rows_x3f_x212c_x79_windows | battle_rows_x3f_x212c_x79_windows | src/rows/gen_800FC1CC.c |  | battle rows: 0x3F/0x212C/0x79 windows, 0x2106/0xC6 texts, 800FD37C/800FC2AC rows; loop L8FC200 on 5574(0x2A). |
-| 800FC2AC | - | - | - |  | battle confirm-dialog: two 5958/53C0 key-gates select the 0x1802 header, then the 0x1700-0x1702 option rows, then 0x1803 dispatch (801762D0/ |
+| 800FC2AC | - | battle_confirm_dialog | src/rows3/gen_800FC2AC.c |  | battle confirm-dialog: two 5958/53C0 key-gates select the 0x1802 header, then the 0x1700-0x1702 option rows, then 0x1803 dispatch (801762D0/ |
 | 800FC548 | cell_0xfc548 | cell_0xfc548 | src/rows/gen_800FC548.c | Y |  |
 | 800FC5A8 | cell_0xfc5a8 | cell_0xfc5a8 | src/rows/gen_800FC5A8.c | Y |  |
 | 800FC5D8 | battle_confirm_dialog_x1700_test_b | battle_confirm_dialog_x1700_test_b | src/rows/gen_800FC5D8.c |  | battle confirm-dialog: 0x1700 test branches to the 0x2105 help (800FFADC/8017F9A8) vs 0x2120 detail (800FFB1C/8010CA74) rows; fee-check 0xFE |
-| 800FC8E8 | - | - | - |  | shop banner: 0x7F window, 0x5800 cells; loops LFC918/LFC968 (5A90(0x100) gate). |
+| 800FC8E8 | - | shop_banner_7f | src/rows3/gen_800FC8E8.c |  | shop banner: 0x7F window, 0x5800 cells; loops LFC918/LFC968 (5A90(0x100) gate). |
 | 800FCA08 | battle_item_xfd8_text_x2115_x4300 | battle_item_xfd8_text_x2115_x4300 | src/rows/gen_800FCA08.c |  | battle item: 0xFD8 text, 0x2115/0x4300-0x4305 cells; gate 5574(0xE). |
 | 800FCAB8 | - | - | - | Y |  |
 | 800FCC0C | - | - | - | Y |  |
@@ -431,7 +431,7 @@ register machines are interpreted (Avenue 2).
 | 800FDA9C | - | - | - |  |  |
 | 800FDAFC | - | - | - | Y |  |
 | 800FDB5C | cell_0xfdb5c | cell_0xfdb5c | src/rows/gen_800FDB5C.c | Y |  |
-| 800FDBBC | - | - | - |  | shop title-screen: 0x7C window with 800FDA9C/8018226C rows and the 0x2115/0x2116/0x420B/0x4300-0x4305 register rows (801820F4 commit); 0x200 |
+| 800FDBBC | - | shop_rows_dbbc | src/rows3/gen_800FDBBC.c |  | shop title-screen: 0x7C window with 800FDA9C/8018226C rows and the 0x2115/0x2116/0x420B/0x4300-0x4305 register rows (801820F4 commit); 0x200 |
 | 800FDD28 | - | - | - |  |  |
 | 800FDD8C | - | - | - |  | shop title rows: 0x7C window gate, 0x6/0x7 windows with 885C fill loops (L8FDE30/L8FDEB8 on 5C64(0x202)); 4248(0xF8)/ 9690/4008(0x47) reads. |
 | 800FDF34 | - | - | - |  | shop title: 0x7C window, 0x2115 title + 0x4209 row, 800FDA9C + 8018226C(0x3800); close via 62BC(0x7C). |
