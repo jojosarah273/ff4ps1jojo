@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801401CC.
- * Ground truth: src/func_801401CC.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x401cc.
+ * Ground truth: src/fn_1x401cc.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801401CC(void)
+void fn_1x401cc(void)
 {
     row_open();
     row_prep(32);
@@ -11,5 +11,5 @@ void func_801401CC(void)
     sep_a();
     cell_peek0(cell_state(42));
     cell_put_hi9(2);
-    func_80140224();
+    battle_rows_x4_dc_cell_sets_x7612();
 }

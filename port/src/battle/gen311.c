@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801471C4.
- * Ground truth: src/func_801471C4.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_status_cast_x29c5_x2003_x20.
+ * Ground truth: src/battle_status_cast_x29c5_x2003_x20.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801471C4(void)
+void battle_status_cast_x29c5_x2003_x20(void)
 {
     /* battle status-cast: 0x29C5/0x2003/0x2001 texts, 80147434 +
        801473A4 rows, 8007275C/80072CB0 commits; loop L1471DC polls
@@ -18,7 +18,7 @@ L1471dc:
         if (io_just() != 0)
             goto L147334;
         row_open();
-        func_80147434();
+        fn_1x47434();
         txt_cell(0x2003);
         row_read(8);
         if (sel(2) != 0)

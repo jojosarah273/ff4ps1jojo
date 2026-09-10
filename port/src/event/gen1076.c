@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8018FD68.
- * Ground truth: src/func_8018FD68.c (byte-verified).
+/* FF4 source-port — interpreted module for event_s6_gate_f0c8_rows_with_s2_v0.
+ * Ground truth: src/event_s6_gate_f0c8_rows_with_s2_v0.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8018FD68(void)
+void event_s6_gate_f0c8_rows_with_s2_v0(void)
 {
     /* event: s6 gate; 80190004(1) + 8018F0C8/80191638/80190088
        rows with s2/v0 + v0 latches. */

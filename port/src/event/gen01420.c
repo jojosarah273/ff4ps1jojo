@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80187DAC.
- * Ground truth: src/func_80187DAC.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_ff0ac_row_loop_l187dc0.
+ * Ground truth: src/battle_ff0ac_row_loop_l187dc0.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80187DAC(void)
+void battle_ff0ac_row_loop_l187dc0(void)
 {
     /* battle: 800FF0AC row loop L187DC0. */
     do {

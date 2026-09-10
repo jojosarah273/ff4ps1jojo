@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80119740.
- * Ground truth: src/func_80119740.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_x89_x8a_windows_with_f.
+ * Ground truth: src/battle_rows_x89_x8a_windows_with_f.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80119740(void)
+void battle_rows_x89_x8a_windows_with_f(void)
 {
     /* battle rows: 0x89/0x8A windows with 4F28/7A40 pairs, 0x1700
        text gate (800FF024 vs 80170C14/8010B010); loop L1197D8 on
@@ -30,7 +30,7 @@ L1197d8:
         shop_buy_run();
         goto L119820;
     L119810:
-        func_80170C14();
+        fn_1x70c14();
         state_ok();
     L119820:
         page(0x89);

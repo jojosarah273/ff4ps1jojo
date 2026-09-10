@@ -1,13 +1,13 @@
-/* FF4 source-port — interpreted module for func_8011B61C.
- * Ground truth: src/func_8011B61C.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_twin_with_b9c_b7b4_pre.
+ * Ground truth: src/battle_rows_twin_with_b9c_b7b4_pre.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8011B61C(void)
+void battle_rows_twin_with_b9c_b7b4_pre(void)
 {
     /* battle rows (twin with 3B9C/4832): 8011B7B4 prep; loop
        L11B634 on 5A90/53D4. */
-    func_8011B7B4();
+    battle_rows_x3d_x3e_windows_xfe5_x();
     latch(1);
 L11b634:
     for (;;) {

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801444FC.
- * Ground truth: src/func_801444FC.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x444fc.
+ * Ground truth: src/fn_1x444fc.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801444FC(void)
+void fn_1x444fc(void)
 {
     sep();
 L4544:

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8012A8A8.
- * Ground truth: src/func_8012A8A8.c (byte-verified).
+/* FF4 source-port — interpreted module for config_sub_options_x5d_x5e_windows.
+ * Ground truth: src/config_sub_options_x5d_x5e_windows.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8012A8A8(void)
+void config_sub_options_x5d_x5e_windows(void)
 {
     /* config sub-options: 0x5D/0x5E windows, 0x34 window; 8012CB34 page,
        8012AE00 save-load, 8012AB18 detail row; loop L12A8C0. */
@@ -17,7 +17,7 @@ L12a8c0:
         io_poll(0xFF);
         if (io_just() == 0)
             goto L12A900;
-        func_8012CB34();
+        config_dead_key_row_x5d_window_x45();
         goto L12AA20;
     L12A900:
         draw_pad(1);
@@ -43,7 +43,7 @@ L12a8c0:
         goto L12A9B0;
     L12A9A0:
         cell_push_c8_lo(0x5A);
-        func_8012AE00();
+        save_load_status_screen_x1b1f_canc();
     L12A9B0:
         row_prep(0x20);
         row_read2(0x5D);
@@ -52,7 +52,7 @@ L12a8c0:
         row_arm_s2_cur();
         cell_pos_fwd(4);
         row_prep_close();
-        func_8012AB18();
+        config_status_row_x1bcc_gate_x5d_x();
     L12AA20:
         row_prep(0x20);
         cell_inc_cell(0x5A);

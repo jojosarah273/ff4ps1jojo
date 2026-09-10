@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801622F0.
- * Ground truth: src/func_801622F0.c (byte-verified).
+/* FF4 source-port — interpreted module for options_timer_alt_x1d_x34c8_x34c7.
+ * Ground truth: src/options_timer_alt_x1d_x34c8_x34c7.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801622F0(void)
+void options_timer_alt_x1d_x34c8_x34c7(void)
 {
     /* options timer (alt): 0x1D/0x34C8/0x34C7/0x357A/0x2006/0x3534/
        0x3303 texts/windows, 80152CDC + 80150C38; loop L162360 on

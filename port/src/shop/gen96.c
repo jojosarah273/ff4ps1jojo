@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80168BC4.
- * Ground truth: src/func_80168BC4.c (byte-verified).
+/* FF4 source-port — interpreted module for config_help_credits_x180f_x1813_x1.
+ * Ground truth: src/config_help_credits_x180f_x1813_x1.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80168BC4(void)
+void config_help_credits_x180f_x1813_x1(void)
 {
     /* config help/credits: 0x180F/0x1813/0x1900 texts; key confirms
        (5574 0xD/0x10, 13/10 ladders), two scroll loops (L168D60/

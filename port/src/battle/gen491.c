@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8011AB18.
- * Ground truth: src/func_8011AB18.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_main_xca_window_x1700_gate_pi.
+ * Ground truth: src/shop_main_xca_window_x1700_gate_pi.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8011AB18(void)
+void shop_main_xca_window_x1700_gate_pi(void)
 {
     /* shop main: 0xCA window + 0x1700 gate picks the buy (800FEC74/
        800FD914/800FB09C/800FB160/800FB224/800FAA04) sub-rows; tail

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80127408.
- * Ground truth: src/func_80127408.c (byte-verified).
+/* FF4 source-port — interpreted module for status_c_header_f0_b0_cells_x_b8.
+ * Ground truth: src/status_c_header_f0_b0_cells_x_b8.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80127408(void)
+void status_c_header_f0_b0_cells_x_b8(void)
 {
     /* status: 8012214C header + 65F0/81B0(!=) cells + 4 x 801287B8
        blocks, then the 0x34 window save row (801210AC/8011EF30/
@@ -24,10 +24,10 @@ void func_80127408(void)
     cell_pull9_hi();
     row_prep_close();
     sep();
-    func_801287B8();
-    func_801287B8();
-    func_801287B8();
-    func_801287B8();
+    config_save_screen_x4b_x48_x49_win();
+    config_save_screen_x4b_x48_x49_win();
+    config_save_screen_x4b_x48_x49_win();
+    config_save_screen_x4b_x48_x49_win();
     wnd_open(0x4000);
     label_cur();
     row_page(0x34);

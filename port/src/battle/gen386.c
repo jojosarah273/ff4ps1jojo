@@ -1,22 +1,22 @@
-/* FF4 source-port — interpreted module for func_80110818.
- * Ground truth: src/func_80110818.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x10818.
+ * Ground truth: src/fn_1x10818.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 extern u8 *D_8019ED40;
-void func_80110818(void)
+void fn_1x10818(void)
 {
-    func_80110F2C();
+    fn_1x10f2c();
     latch(1);
     txt_draw(0x6C8);
     do {
-        func_80110FA4();
+        fn_1x10fa4();
         latch(0x24);
         sep_b();
         cell_tick_sub(cell_state(0x24));
         cell_put(0xB9);
-        func_80173780();
-        func_80110BC8();
+        fn_1x73780();
+        battle_rows_x7a_x21_windows_xebb_c();
         row_page(0x24);
         io_poll(0x24);
         if (io_go() != 0) {

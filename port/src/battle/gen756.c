@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8014C664.
- * Ground truth: src/func_8014C664.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_loop_l14c67c_on_x40_wi.
+ * Ground truth: src/battle_rows_loop_l14c67c_on_x40_wi.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8014C664(void)
+void battle_rows_loop_l14c67c_on_x40_wi(void)
 {
     /* battle rows: loop L14C67C on 5958(0x40) with 80094D14 row. */
     row_open();

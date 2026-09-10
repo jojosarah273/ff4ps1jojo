@@ -1,14 +1,11 @@
-/* FF4 source-port — interpreted module for func_80125A64.
- * Ground truth: src/func_80125A64.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x25a64.
+ * Ground truth: src/fn_1x25a64.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
 
-extern int func_80125ACC();
-extern int func_80125F38();
-
-void func_80125A64(void)
+void fn_1x25a64(void)
 
 {
   int iVar1;
@@ -16,8 +13,8 @@ void func_80125A64(void)
   sep();
   do {
     midrow_pad88();
-    func_80125ACC();
-    func_80125F38();
+    config_equip_form_confirm_x45_x46();
+    shop_rows_x45_x46_windows_x1_x43_t();
     cell_set50_from40();
     io_poll(5);
     iVar1 = io_just();

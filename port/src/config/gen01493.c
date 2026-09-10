@@ -1,16 +1,14 @@
-/* FF4 source-port — interpreted module for func_8012219C.
- * Ground truth: src/func_8012219C.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x2219c.
+ * Ground truth: src/fn_1x2219c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-extern int func_801221C4();
-
-void func_8012219C(void)
+void fn_1x2219c(void)
 
 {
   latch(0x12);
-  func_801221C4();
+  fn_1x221c4();
   return;
 }
 

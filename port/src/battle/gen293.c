@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801449D0.
- * Ground truth: src/func_801449D0.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_magic_confirm_x1813_x1901_t.
+ * Ground truth: src/battle_magic_confirm_x1813_x1901_t.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801449D0(void)
+void battle_magic_confirm_x1813_x1901_t(void)
 {
     /* battle magic-confirm: 0x1813/0x1901 texts, 0x340/0x341 state
        cells with 6434(2) gates; loops L144A50 (5958(0x78)) and

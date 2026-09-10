@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80123D3C.
- * Ground truth: src/func_80123D3C.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x23d3c.
+ * Ground truth: src/fn_1x23d3c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80123D3C(void)
+void fn_1x23d3c(void)
 {
     cell_flags_set4();
     latch_cur();
@@ -17,8 +17,8 @@ void func_80123D3C(void)
     wnd_open(0x2100);
     row_open();
     cell_cursor_read();
-    func_80176D40();
-    func_801266F0();
+    shop_stat_icons_the_fixed_icon_cel();
+    rows_x100_x1c_x41_windows_f0_x89_c();
     wnd_open(0x4000);
     tail(0x16);
     row_open2();
@@ -27,7 +27,7 @@ void func_80123D3C(void)
     row_pad();
     latch(0x20);
     draw_pad_cur();
-    func_80125DF8();
+    rows_x145_text_loops_l125e28_d70_c();
     row_pad();
     wnd_open(0x100);
     row_open();
@@ -52,7 +52,7 @@ void func_80123D3C(void)
     midrow_paint_c();
     func_80123FB4();
     config_row_q18();
-    func_80176E98();
+    fn_1x76e98();
     row_prep(0x20);
     func_8012214C();
     wnd_open(0x80C0);

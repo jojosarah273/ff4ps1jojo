@@ -1,15 +1,15 @@
-/* FF4 source-port — interpreted module for func_80188940.
- * Ground truth: src/func_80188940.c (byte-verified).
+/* FF4 source-port — interpreted module for event_f538_d8_a8_rows_spin_l1889b8.
+ * Ground truth: src/event_f538_d8_a8_rows_spin_l1889b8.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80188940(void)
+void event_f538_d8_a8_rows_spin_l1889b8(void)
 {
     /* event: 8018F538/801917D8/80191838/801928A8/80191858 rows;
        spin L1889B8; 80191878(0xE) closes. */
     if (io_just() == 0)
         goto L188968;
-    func_80188940();
+    event_f538_d8_a8_rows_spin_l1889b8();
     return;
 L188968:
     func_8018F538();
@@ -22,6 +22,6 @@ L188968:
             continue;
         break;
     }
-    func_80191878(0xE);
+    event_b44_rows_on_s3_t0_s0_fp(0xE);
     return;
 }

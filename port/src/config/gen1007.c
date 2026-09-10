@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8013F96C.
- * Ground truth: src/func_8013F96C.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_c68_bcx2_cells_loop_l1.
+ * Ground truth: src/battle_rows_c68_bcx2_cells_loop_l1.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8013F96C(void)
+void battle_rows_c68_bcx2_cells_loop_l1(void)
 {
     /* battle rows: 6C68/8960/63BCx2 cells; loop L13F9B8 on
        5958(5). */

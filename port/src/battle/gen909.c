@@ -1,5 +1,5 @@
-/* FF4 source-port — interpreted module for func_80116398.
- * Ground truth: src/func_80116398.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x16398.
+ * Ground truth: src/fn_1x16398.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
@@ -8,7 +8,7 @@
 
 
 
-void func_80116398(void) {
+void fn_1x16398(void) {
     tail(0x89);
     do {
         wnd_fx_7d();

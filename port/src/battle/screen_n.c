@@ -18,7 +18,7 @@ void func_80112A68(void)
             break;
     }
     latch(0x3E);
-    func_80117F40();
+    fn_1x17f40();
     wnd_open(0x100);
     tail(0x2C);
     wnd_open(0x10);
@@ -46,9 +46,9 @@ Lb14:
     }
 Lb9c:
     shop_view_run();
-    func_801130C0();
+    battle_rows_x2c_window_x60_key_x21();
     func_800FE8B4();
-    func_80116348();
+    fn_1x16348();
     open_row(0x79);
 Lbc4:
     for (;;) {
@@ -137,7 +137,7 @@ Led4:
         io_poll(6);
         if (io_go() != 0)
             goto Lf5c;
-        func_80116098();
+        battle_party_status_rows_xa6d_xa6f();
         row_page(0x7A);
         row_read(7);
         if (sel(0x202) != 0)
@@ -169,7 +169,7 @@ Lfec:
     goto Lb9c;
 L00c:
     latch(0x23);
-    func_80117F40();
+    fn_1x17f40();
     for (;;) {
         shop_view_run();
         cell_clear_pad();

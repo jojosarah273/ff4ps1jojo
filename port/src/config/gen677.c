@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801218EC.
- * Ground truth: src/func_801218EC.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_twin_variant_x66_x65_x.
+ * Ground truth: src/battle_rows_twin_variant_x66_x65_x.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801218EC(void)
+void battle_rows_twin_variant_x66_x65_x(void)
 {
     /* battle rows (twin variant): 0x66/0x65/0x63/0x1D windows,
        80121E94/80121D64/80121CE4 rows. */
@@ -16,7 +16,7 @@ L12191C:
     func_80121D64();
     key_page(0x66);
 L12192C:
-    func_80121CE4();
+    fn_1x21ce4();
     row_page(0x65);
     sep_b();
     cell_tick_sub(cell_state(0x63));

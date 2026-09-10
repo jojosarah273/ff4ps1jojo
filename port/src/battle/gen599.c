@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80115684.
- * Ground truth: src/func_80115684.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_xef_xf1_xc_xe_x91_x8f.
+ * Ground truth: src/battle_rows_xef_xf1_xc_xe_x91_x8f.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80115684(void)
+void battle_rows_xef_xf1_xc_xe_x91_x8f(void)
 {
     /* battle rows: 0xEF/0xF1/0xC/0xE/0x91/0x8F windows, custom
        4264(7)/7894/4064(0x144) cells. */

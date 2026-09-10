@@ -32,20 +32,19 @@ extern void func_800FE110(void);
 extern void func_800FDBBC(void);
 extern void func_800FDD8C(void);
 extern void func_800FDF34(void);
-extern void func_80175494(void);
-extern void func_801769B4(void);
-extern void func_80174F64(void);
-extern void func_80175004(void);
-extern void func_80171194(void);
-extern void func_80171608(void);
-extern void func_801719C8(void);
+
+
+
+
+
+
+
 extern void func_801724D0(void);
-extern void func_80172BA8(void);
+
 extern void func_80173008(void);
-extern void func_80173780(void);
-extern void func_801721E8(void);
-extern void func_8011B6B4(void);
-extern void func_80171F90(void);
+
+
+
 
 /* 800FE778: cursor-icon 0x7d fx: latch + put + tail + keypage. */
 void wnd_fx_7d(void)
@@ -148,30 +147,30 @@ L_E818:
         goto L_E848;
     func_800FDD8C();
     func_800FDF34();
-    func_80175494();
+    shop_rows_x1700_text_x7a_window_xc();
 L_E848:
-    func_801769B4();
-    func_80174F64();
-    func_80175004();
+    shop_sell_flow_x1700_header_x7a_x1();
+    fn_1x74f64();
+    shop_rows_x1700_x1288_texts_x7a_xc();
 }
 
 /* 800FF024: shop buy-row chain dispatcher. */
 void shop_buy_run(void)
 {
-    func_80171194();
-    func_80171608();
-    func_801719C8();
+    fn_1x71194();
+    fn_1x71608();
+    fn_1x719c8();
     func_801724D0();
-    func_80172BA8();
+    fn_1x72ba8();
     func_80173008();
-    func_80173780();
-    func_801721E8();
+    fn_1x73780();
+    shop_sell_detail_screen_headers_bu();
     latch(0x3E);
-    func_8011B6B4();
+    battle_rows_b744_prep_x3d_x1280_ce();
     io_poll();
     if (io_just() != 0)
         return;
-    func_80171F90();
+    shop_sell_row_screen_twin_of_e8_wi();
 }
 
 /* 800FCCBC: catalog dispatch with bank tag 0. */

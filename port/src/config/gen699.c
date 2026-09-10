@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8013D4C8.
- * Ground truth: src/func_8013D4C8.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_twin_of_d040_x342_x341.
+ * Ground truth: src/battle_rows_twin_of_d040_x342_x341.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8013D4C8(void)
+void battle_rows_twin_of_d040_x342_x341(void)
 {
     /* battle rows (twin of 8013D040): 0x342/0x341/0x343 cells with
        0x3F/0x7F cursor codes; gates 6434(0x202). */

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8011D658.
- * Ground truth: src/func_8011D658.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x1d658.
+ * Ground truth: src/fn_1x1d658.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8011D658(void)
+void fn_1x1d658(void)
 {
     row_prep(0x20);
     cell_push9(0x1707);
@@ -18,8 +18,8 @@ void func_8011D658(void)
     cell_put_hi9(0x5A);
     row_sync2_cur();
     row_prep_close();
-    func_8011E9EC();
-    func_80100BE0();
+    fn_1x1e9ec();
+    shop_buy_row_x711_gate_x3d_x18_x19();
     latch(0x10);
     cell_put(7);
     txt_set(0x1707);
@@ -37,8 +37,8 @@ LD738:
         cell_put(0x3D);
         page(0x3D);
         tail(0x43);
-        func_8011CC98();
-        func_8011CE18();
+        shop_rows_x3d_x18_x19_windows_cell();
+        fn_1x1ce18();
         latch(0x80);
         txt_draw(0x2115);
         wnd_fx_tags();

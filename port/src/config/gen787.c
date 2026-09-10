@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80152640.
- * Ground truth: src/func_80152640.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_rows_x82_x80_xe5_windows_loop.
+ * Ground truth: src/shop_rows_x82_x80_xe5_windows_loop.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80152640(void)
+void shop_rows_x82_x80_xe5_windows_loop(void)
 {
     /* shop rows: 0x82/0x80/0xE5 windows; loop L152690 on
        67FC(0x80)/5574(0xFF) gates; closes via 63BC. */

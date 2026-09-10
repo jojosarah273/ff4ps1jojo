@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80149394.
- * Ground truth: src/func_80149394.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_spell_detail_f38_b04_row_pa.
+ * Ground truth: src/battle_spell_detail_f38_b04_row_pa.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80149394(void)
+void battle_spell_detail_f38_b04_row_pa(void)
 {
     /* battle spell-detail: 3F38(3B04) row pair draws (L1493BC loop),
        gate on 54D4(3B04)/53C0 with 658C/4264/8274 stat cells

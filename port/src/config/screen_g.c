@@ -1,15 +1,15 @@
-/* FF4 source-port — interpreted module for func_80128D4C.
- * Ground truth: src/func_80128D4C.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x28d4c.
+ * Ground truth: src/fn_1x28d4c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80128D4C(void)
+void fn_1x28d4c(void)
 {
     cell_push_c8_cur(0x1B49);
     if (gate(0x202) != 0)
         goto dE8;
-    func_80123D3C();
-    func_80125A64();
+    fn_1x23d3c();
+    fn_1x25a64();
     config_row_d600b();
     draw_pad_cur();
     battle_rows_sync();
@@ -19,7 +19,7 @@ void func_80128D4C(void)
     latch(0x30);
     txt_draw(0x1C1);
     txt_set(0x1B18);
-    func_80124704();
+    fn_1x24704();
     goto E00;
 dE8:
     draw_pad_cur();
@@ -73,8 +73,8 @@ E00:
     cell_dec_bank(0x1B08);
     txt_set(0x1B08);
     txt_draw(0x1B09);
-    func_80129AAC();
-    func_80129C54();
+    fn_1x29aac();
+    fn_1x29c54();
     latch(2);
     txt_draw(0x1B06);
     config_row_264e8();
@@ -87,11 +87,11 @@ E00:
     tail(0x9C);
     shop_row_kick_f0();
     anim_noop();
-    func_80126590();
+    fn_1x26590();
     cell_clear_bank(0x1BBA);
     goto L5C0;
 fEC:
-    func_80129DFC();
+    fn_1x29dfc();
 ff4:
     func_80129808();
     txt_set(0x1B06);
@@ -120,7 +120,7 @@ ff4:
     cell_put_hi9(0x60);
     row_prep_close();
 L10C:
-    func_80129C54();
+    fn_1x29c54();
     cell_push_c8_lo(0x5D);
     cell_put(0x45);
     open_row(0x46);
@@ -134,7 +134,7 @@ L10C:
     page(0x48);
     draw_pad(0x300);
     row_latch_7e();
-    func_80129D2C();
+    fn_1x29d2c();
     midrow_pad88_run();
     config_row_7800();
     midrow_degen();
@@ -149,7 +149,7 @@ L10C:
     latch(0xFF);
     txt_draw(0x1B06);
 L208:
-    func_80129E94();
+    fn_1x29e94();
     goto ff4;
 L218:
     row_page(1);
@@ -164,7 +164,7 @@ L218:
         latch(7);
    L260:
         cell_pull_c8_sel2(0x60);
-        func_80129B04();
+        rows_x41_x60_x45_x5d_windows_f38_c();
         if (io_just() != 0)
             continue;
         io_poll(0xFF);
@@ -186,7 +186,7 @@ L298:
         sep();
    L2E8:
         cell_pull_c8_sel2(0x60);
-        func_80129B04();
+        rows_x41_x60_x45_x5d_windows_f38_c();
         if (io_just() != 0)
             continue;
         io_poll(0xFF);
@@ -204,7 +204,7 @@ L320:
     if (poll_go(0x8080) == 0)
         goto L408;
     cell_pull_c8_sel2(0x5D);
-    func_80129B04();
+    rows_x41_x60_x45_x5d_windows_f38_c();
     for (;;) {
         if (io_just() != 0)
             goto L408;
@@ -214,7 +214,7 @@ L320:
         cell_push_c8_lo(0x5D);
         poll_spin();
         cell_pull_c8_sel2(0x5D);
-        func_80129B04();
+        rows_x41_x60_x45_x5d_windows_f38_c();
     }
 L3C0:
     row_page(1);
@@ -231,7 +231,7 @@ L408:
     goto L5B8;
 L418:
     cell_pull_c8_sel2(0x5D);
-    func_80129B04();
+    rows_x41_x60_x45_x5d_windows_f38_c();
     for (;;) {
         if (io_just() != 0)
             goto L478;
@@ -241,7 +241,7 @@ L418:
         cell_push_c8_lo(0x5D);
         cell_set50_from40();
         cell_pull_c8_sel2(0x5D);
-        func_80129B04();
+        rows_x41_x60_x45_x5d_windows_f38_c();
     }
 L478:
     cell_push_c8_lo(0x5D);
@@ -259,7 +259,7 @@ L498:
     if (io_go() != 0)
         goto L528;
     txt_draw(0x1B08);
-    func_80129B04();
+    rows_x41_x60_x45_x5d_windows_f38_c();
     cell_cursor_dec();
     txt_set(0x1B08);
     cell_put(0x45);
@@ -285,10 +285,10 @@ L528:
     cell_pull_c8(0x1B0A);
     goto L10C;
 L5A8:
-    func_80129838();
+    fn_1x29838();
     goto L10C;
 L5B8:
-    func_80129D64();
+    fn_1x29d64();
 L5C0:
     func_80129808();
 L5C8:
@@ -298,7 +298,7 @@ L5C8:
     latch(0xC);
     cell_put(0x45);
     config_pad_300();
-    func_80129D2C();
+    fn_1x29d2c();
     midrow_pad88_run();
     midrow_degen();
     row_page_cur();
@@ -315,17 +315,17 @@ L5C8:
     battle_row_88();
     return;
 L69C:
-    func_80129838();
-    func_80129C54();
+    fn_1x29838();
+    fn_1x29c54();
     config_row_264e8();
-    func_8011FF40();
+    fn_1x1ff40();
     battle_row_88();
     return;
 L6CC:
     txt_set(0x1BBA);
     if (gate(0x202) != 0)
         goto L7DC;
-    func_80129EF4();
+    fn_1x29ef4();
     goto L7DC;
 L6F4:
     row_page(1);
@@ -346,7 +346,7 @@ L754:
     func_800F52BC(4);
     if (io_just() != 0)
         goto L77C;
-    func_80129E94();
+    fn_1x29e94();
 L77C:
     row_page(1);
     func_800F52BC(3);
@@ -355,7 +355,7 @@ L77C:
     txt_set(0x1BBA);
     if (gate(0x202) != 0)
         goto L7BC;
-    func_80129EF4();
+    fn_1x29ef4();
 L7BC:
     txt_set(0x1B06);
     io_poll(2);

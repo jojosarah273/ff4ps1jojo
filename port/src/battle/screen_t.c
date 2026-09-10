@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8011C768.
- * Ground truth: src/func_8011C768.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x1c768.
+ * Ground truth: src/fn_1x1c768.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8011C768(void)
+void fn_1x1c768(void)
 {
     row_page(0xAB);
     if (gate(0x202) == 0)
@@ -142,7 +142,7 @@ Lc48:
     cell_put(0x3D);
     page(0x3D);
     tail(0x43);
-    func_8011CC98();
-    func_8011CE18();
+    shop_rows_x3d_x18_x19_windows_cell();
+    fn_1x1ce18();
     return;
 }

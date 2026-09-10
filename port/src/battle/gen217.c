@@ -1,11 +1,11 @@
-/* FF4 source-port — interpreted module for func_8011124C.
- * Ground truth: src/func_8011124C.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x1124c.
+ * Ground truth: src/fn_1x1124c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8011124C(void)
+void fn_1x1124c(void)
 {
-    func_80111B14();
+    fn_1x11b14();
     latch(0x81);
     txt_draw(0x4200);
     open_row(0xAC);
@@ -17,7 +17,7 @@ L1294:
         row_page(0x7A);
         row_read(3);
         txt_draw(0x1705);
-        func_80111ADC();
+        fn_1x11adc();
         row_page(0x7A);
         row_read(1);
         if (sel(0x202) != 0)
@@ -28,8 +28,8 @@ L1294:
         latch_cur();
     L1320:
         cell_put(0xAB);
-        func_80102770();
-        func_80111C2C();
+        fn_1x02770();
+        battle_rows_xc_xe_windows_x2c_x2e();
         row_page(0x2C);
         txt_draw(0x340);
         txt_draw(0x300);

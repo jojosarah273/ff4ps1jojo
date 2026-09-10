@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801217EC.
- * Ground truth: src/func_801217EC.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_x64_x65_x63_x1d_window.
+ * Ground truth: src/battle_rows_x64_x65_x63_x1d_window.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801217EC(void)
+void battle_rows_x64_x65_x63_x1d_window(void)
 {
     /* battle rows: 0x64/0x65/0x63/0x1D windows, 0xF7-0xF9 codes,
        80121E6C/80121F64/80121C0C rows; 53C0 gate + loop L121894
@@ -17,7 +17,7 @@ L12181C:
     func_80121F64();
     key_page(0x64);
 L12182C:
-    func_80121C0C();
+    fn_1x21c0c();
     row_page(0x65);
     sep_b();
     cell_tick_sub(cell_state(0x63));

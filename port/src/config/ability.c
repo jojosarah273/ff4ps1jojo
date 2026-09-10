@@ -1,7 +1,7 @@
 /* FF4 source-port — config/ability.c
  *
  * Ability-bank row drivers (exact Phase A decodes).
- * Ground truth: src/func_8012CC74, 8012CD6C.
+ * Ground truth: src/config_rows_x1a02_text_x202_cell_g, 8012CD6C.
  */
 #include <stdint.h>
 

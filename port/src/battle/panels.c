@@ -1,7 +1,7 @@
 /* FF4 source-port — battle/panels.c
  *
  * Battle panel-state rows (exact Phase A decodes).
- * Ground truth: src/func_801466E0, 80146980, 80147020, 8014654C.
+ * Ground truth: src/battle_c3c_b04_x2000_x3_b9c_gates, 80146980, 80147020, 8014654C.
  */
 #include <stdint.h>
 

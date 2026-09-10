@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80173654.
- * Ground truth: src/func_80173654.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_banner_x15_window_xc8_x7a_xb9.
+ * Ground truth: src/shop_banner_x15_window_xc8_x7a_xb9.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80173654(void)
+void shop_banner_x15_window_xc8_x7a_xb9(void)
 {
     /* shop banner: 0x15 window, 0xC8/0x7A/0xB9 windows, 0x4C0 gate;
        loop L173730 on 5A90(0x20). */

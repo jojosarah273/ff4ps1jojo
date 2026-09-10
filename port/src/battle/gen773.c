@@ -20,6 +20,6 @@ void battle_rows_100(void)
     sep_a();
     cell_peek0(cell_state(0x29));
     row_prep_close();
-    func_8011FD34();
+    config_dialog_gates_b4_c_d48_cell();
     return;
 }

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8013E200.
- * Ground truth: src/func_8013E200.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_item_rows_x1_x2_x3_x4_x5.
+ * Ground truth: src/battle_item_rows_x1_x2_x3_x4_x5.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8013E200(void)
+void battle_item_rows_x1_x2_x3_x4_x5(void)
 {
     /* battle item rows: 0x1/0x2/0x3/0x4/0x5 windows, 80143D64 +
        80143D14 + 8013DE38 rows. */
@@ -13,14 +13,14 @@ void func_8013E200(void)
     sep_b();
     cell_pos_back(0x10);
     cell_put_cur();
-    func_80143D64();
+    fn_1x43d64();
     cell_put(1);
-    func_80143D14();
+    fn_1x43d14();
     cell_put(3);
     txt_cell_cur();
     cell_put(4);
     open_row(5);
-    func_8013DE38();
+    fn_1x3de38();
     row_page_cur();
     sep_a();
     row_open_w(0x20);
@@ -29,7 +29,7 @@ void func_8013E200(void)
     cell_put_cur();
     latch(0x40);
     cell_put(5);
-    func_8013DE38();
+    fn_1x3de38();
     row_close2();
     cell_put_cur();
     return;

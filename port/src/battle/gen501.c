@@ -1,14 +1,14 @@
-/* FF4 source-port — interpreted module for func_8014B454.
- * Ground truth: src/func_8014B454.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_item_cell_x49_x8_windows_b2.
+ * Ground truth: src/battle_item_cell_x49_x8_windows_b2.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8014B454(void)
+void battle_item_cell_x49_x8_windows_b2(void)
 {
     /* battle item cell: 0x49/0x8 windows, 8014B294/801490CC/8014B5A8/
        80141FEC/800953F4 rows; 8058(0x10) gate. */
     draw_pad_cur();
-    func_8014B294();
+    fn_1x4b294();
     page_open_cur();
     row_open();
     latch(8);
@@ -25,17 +25,17 @@ void func_8014B454(void)
     sep_b();
     cell_pos_back(0x10);
     txt_draw_cur();
-    func_801490CC();
-    func_8014B5A8();
-    func_80141FEC();
+    battle_info_dialog_two_identical_c();
+    fn_1x4b5a8();
+    fn_1x41fec();
     row_close();
     label_cur();
     page_open_cur();
     label_cur();
     latch(8);
     txt_draw_cur();
-    func_801490CC();
-    func_8014B5A8();
+    battle_info_dialog_two_identical_c();
+    fn_1x4b5a8();
     func_800953F4();
     return;
 }

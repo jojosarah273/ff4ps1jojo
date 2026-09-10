@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801607F4.
- * Ground truth: src/func_801607F4.c (byte-verified).
+/* FF4 source-port — interpreted module for options_x2000_xa9_x2a04_x2a06_text.
+ * Ground truth: src/options_x2000_xa9_x2a04_x2a06_text.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801607F4(void)
+void options_x2000_xa9_x2a04_x2a06_text(void)
 {
     /* options: 0x2000/0xA9/0x2A04-0x2A06 texts/windows, 8015330C/
        80152CDC/8015310C rows; loops L160824 and L160864. */
@@ -16,7 +16,7 @@ L160824:
         io_poll(0x11);
         if (io_just() != 0)
             goto L160864;
-        func_8015330C();
+        rows_u16_d44_d54_swap_chain_with_c();
         key_page(0xA9);
     }
 L160864:

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80109774.
- * Ground truth: src/func_80109774.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_choose_twin_x7f_xdf_xbb_windo.
+ * Ground truth: src/shop_choose_twin_x7f_xdf_xbb_windo.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80109774(void)
+void shop_choose_twin_x7f_xdf_xbb_windo(void)
 {
     /* shop choose (twin): 0x7F/0xDF/0xBB windows, 0x4209/0x420A
        texts; gate 6434(0x202). */

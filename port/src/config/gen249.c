@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80126070.
- * Ground truth: src/func_80126070.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x26070.
+ * Ground truth: src/fn_1x26070.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80126070(void)
+void fn_1x26070(void)
 {
     cell_dec_bank(0x1A73);
     if (poll_go(0x202) != 0)

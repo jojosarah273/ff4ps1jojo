@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8011DFE4.
- * Ground truth: src/func_8011DFE4.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_c3c_b9c_gates_a1_v0_latch_l.
+ * Ground truth: src/battle_c3c_b9c_gates_a1_v0_latch_l.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8011DFE4(void)
+void battle_c3c_b9c_gates_a1_v0_latch_l(void)
 {
     /* battle: 3C3C/3B9C gates; a1/v0 latch loops L11E044/L11E068. */
     cell_state_of();

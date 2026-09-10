@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801361A4.
- * Ground truth: src/func_801361A4.c (byte-verified).
+/* FF4 source-port — interpreted module for item_equip_configuration_screen_tw.
+ * Ground truth: src/item_equip_configuration_screen_tw.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801361A4(void)
+void item_equip_configuration_screen_tw(void)
 {
     /* item/equip configuration screen. Two 6434(0x202) sub-loops (equip
        browse L362AC / detail L36324); 4008(0x50) reads the confirm key
@@ -18,8 +18,8 @@ L361ac:
         latch(0x10);
         cell_put(0x45);
         config_pad_300();
-        func_801368E8();
-        func_80125934();
+        ability_rows_x1b7b_x1b55_texts_d0();
+        sub_menu_x1a73_x1a75_texts_row_loo();
         midrow_pad88_run();
         midrow_degen();
         row_page(1);
@@ -30,10 +30,10 @@ L361ac:
         row_read(0x80);
         if (sel(2) != 0)
             goto L3628C;
-        func_80136494();
-        func_801240D0();
+        fn_1x36494();
+        fn_1x240d0();
         func_80126458();
-        func_801352F0();
+        fn_1x352f0();
         config_row_264e8();
     L3628C:
         row_page(1);
@@ -84,7 +84,7 @@ L361ac:
         txt_set(0x1B7A);
         row_read(1);
         txt_draw(0x1B7A);
-        func_801378E0();
+        fn_1x378e0();
         func_8013554C();
         anim_noop();
     L363EC:
@@ -105,7 +105,7 @@ L361ac:
     L3645C:
         txt_draw(0x1B7C);
         draw_pad(0x19A);
-        func_801206DC();
+        rows_f360_prep_x29_x1d_x1e_window();
         func_8013554C();
     }
     return;

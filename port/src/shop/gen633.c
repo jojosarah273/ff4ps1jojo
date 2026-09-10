@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80167A34.
- * Ground truth: src/func_80167A34.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_x4e_window_x70174_rows.
+ * Ground truth: src/battle_rows_x4e_window_x70174_rows.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80167A34(void)
+void battle_rows_x4e_window_x70174_rows(void)
 {
     /* battle rows: 0x4E window, 0x70174/80140310 rows; loop L167A74
        on 5574(0x40)/5A90 gates. */

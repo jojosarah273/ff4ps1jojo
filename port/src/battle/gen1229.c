@@ -1,11 +1,11 @@
-/* FF4 source-port — interpreted module for func_80142E34.
- * Ground truth: src/func_80142E34.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_xf42c_xf42d_texts_d54.
+ * Ground truth: src/battle_rows_xf42c_xf42d_texts_d54.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 extern u16 *D_8019ED44;
 extern u16 *D_8019ED54;
-void func_80142E34(void)
+void battle_rows_xf42c_xf42d_texts_d54(void)
 {
     /* battle rows: 0xF42C/0xF42D texts; D54 <- D44 copy then
        80142E90. */
@@ -15,5 +15,5 @@ void func_80142E34(void)
     gpu_driver_run();
     sep();
     D_8019ED54[0] = D_8019ED44[0];
-    func_80142E90();
+    fn_1x42e90();
 }

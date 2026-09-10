@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801322AC.
- * Ground truth: src/func_801322AC.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x322ac.
+ * Ground truth: src/fn_1x322ac.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-u32 func_801322AC(void)
+u32 fn_1x322ac(void)
 {
     txt_set(0x1A04);
     row_read(0x40);
@@ -13,6 +13,6 @@ u32 func_801322AC(void)
         return 1;
     }
     func_80131294();
-    func_8012219C();
+    fn_1x2219c();
     return 2;
 }

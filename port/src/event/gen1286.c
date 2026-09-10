@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80191AE8.
- * Ground truth: src/func_80191AE8.c (byte-verified).
+/* FF4 source-port — interpreted module for event_s3_fp_s0_s7_latch_loops_on.
+ * Ground truth: src/event_s3_fp_s0_s7_latch_loops_on.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80191AE8(void)
+void event_s3_fp_s0_s7_latch_loops_on(void)
 {
     /* event: s3/fp + s0/s7 latch loops on 80190B44(1/2/0);
        801905FC tail. */

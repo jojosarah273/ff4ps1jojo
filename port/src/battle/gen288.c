@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80114938.
- * Ground truth: src/func_80114938.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_magic_list_x2c_x2e_x89_xc_x.
+ * Ground truth: src/battle_magic_list_x2c_x2e_x89_xc_x.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80114938(void)
+void battle_magic_list_x2c_x2e_x89_xc_x(void)
 {
     /* battle magic list: 0x2C/0x2E/0x89/0xC/0xE/0xF/0x91/0x92 windows,
        0x2100 title, 80114C98/8011581C/80115A34/8011EA5C rows; the
@@ -23,7 +23,7 @@ L114970:
             goto L1149A0;
         txt_draw(0x2100);
     L1149A0:
-        func_80114C98();
+        fn_1x14c98();
         page(0x2C);
         tail(0xC);
         row_page(0x2E);

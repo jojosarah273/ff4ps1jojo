@@ -1,12 +1,12 @@
-/* FF4 source-port — interpreted module for func_80166BF8.
- * Ground truth: src/func_80166BF8.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x66bf8.
+ * Ground truth: src/fn_1x66bf8.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80166BF8(void)
+void fn_1x66bf8(void)
 {
     row_open();
-    func_80166CA8();
+    shop_rows_x1d_window_x30_x20_gates();
     txt_cell(61381);
     sep_b();
     cell_tick_sub(cell_state(0));

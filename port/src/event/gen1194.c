@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80183A80.
- * Ground truth: src/func_80183A80.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_anim_x_a8_spin_loops_plus_a.
+ * Ground truth: src/battle_anim_x_a8_spin_loops_plus_a.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80183A80(void)
+void battle_anim_x_a8_spin_loops_plus_a(void)
 {
     /* battle anim: 3x 801971A8(1)/80197208 spin loops plus a final
        801971A8(1)/80197208 pair. */

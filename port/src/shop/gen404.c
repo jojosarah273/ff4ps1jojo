@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801669BC.
- * Ground truth: src/func_801669BC.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_confirm_flow_x42_x38be_x38b.
+ * Ground truth: src/battle_confirm_flow_x42_x38be_x38b.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801669BC(void)
+void battle_confirm_flow_x42_x38be_x38b(void)
 {
     /* battle confirm flow: 0x42/0x38BE/0x38BD texts, 8016694C/80166B80/
        8016762C/80140944 preps, L166A44 loop with 70174/7534 gates and
@@ -11,15 +11,15 @@ void func_801669BC(void)
     latch(0x42);
     txt_draw(0x38BE);
     page_paint2(0x38BD);
-    func_8016694C();
-    func_80166B80();
+    shop_rows_x13_window_x03_cells_d54();
+    fn_1x66b80();
     wnd_open(0x40);
-    func_8016762C();
-    func_8016694C();
-    func_80140944();
+    fn_1x6762c();
+    shop_rows_x13_window_x03_cells_d54();
+    fn_1x40944();
     wnd_open(0x20);
-    func_8016762C();
-    func_80166B80();
+    fn_1x6762c();
+    fn_1x66b80();
     wnd_open_cur();
     label_cur();
     label_cur();
@@ -50,7 +50,7 @@ L166a44:
         if (io_just() == 0)
             goto L166B30;
     L166B28:
-        func_80166B80();
+        fn_1x66b80();
     L166B30:
         page_paint2_cur();
         config_row_8468();

@@ -4,10 +4,6 @@
  */
 #include "ff4_window.h"
 
-
-
-extern int func_8014B9FC();
-
 void battle_row_34c4(void)
 
 {
@@ -16,7 +12,7 @@ void battle_row_34c4(void)
   cell_put(0);
   txt_set(0x34c5);
   cell_put(1);
-  func_8014B9FC();
+  fn_1x4b9fc();
   return;
 }
 

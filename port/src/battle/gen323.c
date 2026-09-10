@@ -1,5 +1,5 @@
-/* FF4 source-port — interpreted module for func_8011A204.
- * Ground truth: src/func_8011A204.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x1a204.
+ * Ground truth: src/fn_1x1a204.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
@@ -13,7 +13,7 @@ extern void func_80105230(void);
 
 
 
-void func_8011A204(void) {
+void fn_1x1a204(void) {
     row_page(0x3D);
     cell_put(0xC);
     row_page(0x3E);

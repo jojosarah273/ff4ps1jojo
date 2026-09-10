@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8013A8CC.
- * Ground truth: src/func_8013A8CC.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_x41_then_bcx2_loop_on.
+ * Ground truth: src/battle_rows_x41_then_bcx2_loop_on.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8013A8CC(void)
+void battle_rows_x41_then_bcx2_loop_on(void)
 {
     /* battle rows: 7270(0x41) then 8960/63BCx2/6364 loop on
        5958(9). */

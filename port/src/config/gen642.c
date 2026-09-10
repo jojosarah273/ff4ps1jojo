@@ -1,12 +1,10 @@
-/* FF4 source-port — interpreted module for func_80131B80.
- * Ground truth: src/func_80131B80.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x31b80.
+ * Ground truth: src/fn_1x31b80.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-extern int func_801321B4();
-
-void func_80131B80(void)
+void fn_1x31b80(void)
 
 {
   int iVar1;
@@ -16,7 +14,7 @@ void func_80131B80(void)
   txt_cell(0x1b8b);
   iVar1 = gate(2);
   if (iVar1 == 0) {
-    func_801321B4();
+    fn_1x321b4();
     row_prep(0x20);
     cell_sink8_9(3);
     cell_pos_mask(0x7c80);

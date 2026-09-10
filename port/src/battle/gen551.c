@@ -1,5 +1,5 @@
-/* FF4 source-port — interpreted module for func_8011C1F8.
- * Ground truth: src/func_8011C1F8.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x1c1f8.
+ * Ground truth: src/fn_1x1c1f8.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
@@ -13,7 +13,7 @@
 
 
 
-void func_8011C1F8(void)
+void fn_1x1c1f8(void)
 
 {
   int iVar1;

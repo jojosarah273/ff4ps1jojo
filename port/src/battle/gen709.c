@@ -1,13 +1,11 @@
-/* FF4 source-port — interpreted module for func_80103AC8.
- * Ground truth: src/func_80103AC8.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x03ac8.
+ * Ground truth: src/fn_1x03ac8.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-extern int func_80103EAC();
-extern int func_80103F00();
 
-void func_80103AC8(void)
+void fn_1x03ac8(void)
 
 {
   int iVar1;
@@ -16,10 +14,10 @@ void func_80103AC8(void)
   latch(4);
   cell_put(0xa1);
   do {
-    func_80103EAC();
+    fn_1x03eac();
     shop_buy_run();
     wnd_fx_7d_b();
-    func_80103F00();
+    fn_1x03f00();
     key_page(0x79);
     io_poll(0x28);
     iVar1 = io_just();

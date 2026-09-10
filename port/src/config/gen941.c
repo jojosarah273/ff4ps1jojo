@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8012C250.
- * Ground truth: src/func_8012C250.c (byte-verified).
+/* FF4 source-port — interpreted module for config_rows_x1b3c_x1b3b_x1440_text.
+ * Ground truth: src/config_rows_x1b3c_x1b3b_x1440_text.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8012C250(void)
+void config_rows_x1b3c_x1b3b_x1440_text(void)
 {
     /* config rows: 0x1B3C/0x1B3B/0x1440 texts, 0xE8 window,
        8012B168/8011F684/8012219C/8011FF40 rows; gates 5574(3)/
@@ -22,7 +22,7 @@ void func_8012C250(void)
     animation_row_300b();
     midrow_pad88_run();
 L12C2D8:
-    func_8012219C();
-    func_8011FF40();
+    fn_1x2219c();
+    fn_1x1ff40();
     return;
 }

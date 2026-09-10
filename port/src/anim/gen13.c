@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801719C8.
- * Ground truth: src/func_801719C8.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x719c8.
+ * Ground truth: src/fn_1x719c8.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801719C8(void)
+void fn_1x719c8(void)
 {
     row_open2();
     latch(0x15);
@@ -31,7 +31,7 @@ La78:
     cell_put(0xC);
     txt_set(0x1714);
     cell_put(0xE);
-    func_80173ED8();
+    shop_stat_block_called_by_the_e8_f();
     row_page(0xD7);
     if (gate(0x202) == 0)
         goto Le00;
@@ -40,14 +40,14 @@ La78:
     if (io_just() != 0)
         goto Laf0;
     latch(2);
-    func_80171E18();
+    shop_rows_xc_xe_xad_windows_x4f1_x();
     return;
 Laf0:
     latch(3);
     goto Lb60;
 Lb00:
     latch_cur();
-    func_801729E0();
+    shop_detail_wanted_x4c0_x4c7_texts();
     open_row(0xD);
     open_row(0xF);
     latch(0x70);

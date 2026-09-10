@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8017DB7C.
- * Ground truth: src/func_8017DB7C.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_anim_dispatch_a0_v0_v0_gate.
+ * Ground truth: src/battle_anim_dispatch_a0_v0_v0_gate.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8017DB7C(void)
+void battle_anim_dispatch_a0_v0_v0_gate(void)
 {
     /* battle anim dispatch: a0/v0 + v0 gate tree routes
        8017D7D8 / 8017D898 / 8017D980 / 8017DA64 rows. */

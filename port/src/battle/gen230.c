@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801474B0.
- * Ground truth: src/func_801474B0.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x474b0.
+ * Ground truth: src/fn_1x474b0.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801474B0(void)
+void fn_1x474b0(void)
 {
     txt_set(0x16A8);
     txt_draw(0xF014);
@@ -29,7 +29,7 @@ L7510:
         sep();
         goto L7684;
     L75bc:
-        func_80147434();
+        fn_1x47434();
         txt_set(0x1801);
         if (gate(2) != 0)
             goto L7674;
@@ -94,7 +94,7 @@ L7510:
         cell_pull_c8(0xEFC5);
         cell_push_c8();
         cell_pull_c8(0xEFC6);
-        func_80147888();
+        battle_item_detail_twin_of_dc_x47();
         row_sel_cell_cur();
         cell_push_c8();
         cell_pull_c8(0xEFCA);

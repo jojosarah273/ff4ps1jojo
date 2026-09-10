@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8010F944.
- * Ground truth: src/func_8010F944.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_row_info_xef_xf1_xf3_xf5_x8.
+ * Ground truth: src/battle_row_info_xef_xf1_xf3_xf5_x8.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8010F944(void)
+void battle_row_info_xef_xf1_xf3_xf5_x8(void)
 {
     /* battle row info: 0xEF/0xF1/0xF3/0xF5/0x89 windows with 8010FCA8
        header; loop L10F9A4 (weights on 5958(0xC0/0x138)) with the
@@ -16,7 +16,7 @@ void func_8010F944(void)
     tail(0xF3);
     wnd_open_cur();
     tail(0xF5);
-    func_8010FCA8();
+    fn_1x0fca8();
     wnd_open(0x140);
     tail(0x89);
 L10f9a4:
@@ -27,7 +27,7 @@ L10f9a4:
         if (io_just() == 0)
             goto L10F9DC;
         latch(0x2C);
-        func_80117F40();
+        fn_1x17f40();
     L10F9DC:
         cell_clear_pad();
         page(0x89);
@@ -51,7 +51,7 @@ L10f9a4:
         latch(1);
         cell_put(0xE5);
     L10FA7C:
-        func_80110474();
+        fn_1x10474();
         page(0x89);
         cell_set50_from54();
         tail(0x89);

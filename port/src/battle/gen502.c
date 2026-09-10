@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8014588C.
- * Ground truth: src/func_8014588C.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_name_rows_d64_d14_e44_db4_r.
+ * Ground truth: src/battle_name_rows_d64_d14_e44_db4_r.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8014588C(void)
+void battle_name_rows_d64_d14_e44_db4_r(void)
 {
     /* battle name rows: 80143D64/80143D14/80143E44/80143DB4 rows;
        loop L1458D4 on 5958(0x10) with 6434(2) gate. */
@@ -11,13 +11,13 @@ void func_8014588C(void)
 L1458d4:
     for (;;) {
         row_open();
-        func_80143D64();
+        fn_1x43d64();
         row_close();
         sep_a();
         cell_poke0(cell_peek_cur());
         cell_draw_cur();
         row_open();
-        func_80143D14();
+        fn_1x43d14();
         row_close();
         sep_a();
         cell_poke0(cell_peek_cur());
@@ -29,7 +29,7 @@ L1458d4:
         if (gate(2) != 0)
             goto L145A58;
         latch(0xFF);
-        func_80143DB4();
+        battle_rows_two_f38_b04_pair_reads();
     L145A58:
         row_close();
         step2();

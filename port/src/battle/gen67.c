@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8011AEAC.
- * Ground truth: src/func_8011AEAC.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_item_select_right_side_vari.
+ * Ground truth: src/battle_item_select_right_side_vari.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8011AEAC(void)
+void battle_item_select_right_side_vari(void)
 {
     /* battle item-select (right-side variant): 62/61 label window, 64/65
        slot rows, BE/BF select rows; 8011B6B4 row draw, 801163E8 use. */
@@ -49,13 +49,13 @@ L11af98:
         cell_step();
         tail(0xBE);
         cell_push_c8();
-        func_8011B6B4();
+        battle_rows_b744_prep_x3d_x1280_ce();
         io_poll_cur();
         if (io_just() != 0)
             goto L11B048;
         goto L11B0B4;
     L11B028:
-        func_8011B6B4();
+        battle_rows_b744_prep_x3d_x1280_ce();
         io_poll_cur();
         if (io_just() != 0)
             goto L11B0B4;
@@ -88,7 +88,7 @@ L11B0D4:
     cell_push_c8();
     if (gate(2) != 0)
         goto L11B13C;
-    func_801163E8();
+    fn_1x163e8();
     if (io_go() != 0)
         goto L11B148;
 L11B13C:

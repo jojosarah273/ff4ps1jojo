@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801126A0.
- * Ground truth: src/func_801126A0.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_item_status_twin_of_c_x1706.
+ * Ground truth: src/battle_item_status_twin_of_c_x1706.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801126A0(void)
+void battle_item_status_twin_of_c_x1706(void)
 {
     /* battle item-status (twin of 8011285C): 0x1706/0x1700 headers,
        0xACF-0xAD8 texts, 80115BCC/80115D2C sub-renders; loop L1127C0
@@ -24,7 +24,7 @@ void func_801126A0(void)
     latch(3);
     shop_rows_run();
     wnd_open(0x40);
-    func_80116398();
+    fn_1x16398();
     latch(1);
     cell_put(0xE3);
     latch(0x20);

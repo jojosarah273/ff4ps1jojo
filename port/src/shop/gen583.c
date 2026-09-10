@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80162D20.
- * Ground truth: src/func_80162D20.c (byte-verified).
+/* FF4 source-port — interpreted module for options_timeline_xcd_window_x2009.
+ * Ground truth: src/options_timeline_xcd_window_x2009.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80162D20(void)
+void options_timeline_xcd_window_x2009(void)
 {
     /* options timeline: 0xCD window, 0x2009/0x2007/0x2003 gates,
        80152BC4/80162DF8 rows; 53C0/6434(0x80) gates. */
@@ -31,6 +31,6 @@ L162DC0:
 L162DD0:
     latch(1);
     cell_put(0xC1);
-    func_80162DF8();
+    fn_1x62df8();
     return;
 }

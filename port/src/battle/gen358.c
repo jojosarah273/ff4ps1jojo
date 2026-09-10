@@ -1,14 +1,14 @@
-/* FF4 source-port — interpreted module for func_8014E7C4.
- * Ground truth: src/func_8014E7C4.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_item_rows_x8_x50_x22_xff_x3.
+ * Ground truth: src/battle_item_rows_x8_x50_x22_xff_x3.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8014E7C4(void)
+void battle_item_rows_x8_x50_x22_xff_x3(void)
 {
     /* battle item rows: 0x8/0x50/0x22/0xFF/0x3E windows, 8014D568 +
        8014E984 rows; two 7F48(3C3C)/3F38(3B04) cell blocks. */
     latch(8);
-    func_8014D568();
+    fn_1x4d568();
     latch(0x50);
     txt_draw_cur();
     latch(0x22);

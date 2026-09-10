@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80193668.
- * Ground truth: src/func_80193668.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_anim_v0_gates_route_b8_d8_r.
+ * Ground truth: src/battle_anim_v0_gates_route_b8_d8_r.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80193668(void)
+void battle_anim_v0_gates_route_b8_d8_r(void)
 {
     /* battle anim: v0 gates route 801973B8/80197398/801972D8 rows
        and the 80197358 spin loop L1938A8. */

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80149BE4.
- * Ground truth: src/func_80149BE4.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_item_flow_x48_x4_x49_window.
+ * Ground truth: src/battle_item_flow_x48_x4_x49_window.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80149BE4(void)
+void battle_item_flow_x48_x4_x49_window(void)
 {
     /* battle item flow: 0x48/0x4/0x49 windows, 0x38E2/0x34C2 texts,
        8014FE84/800760D0/8014B248/8014DA2C/80148CAC rows. */
@@ -34,9 +34,9 @@ void func_80149BE4(void)
     txt_set(0x34C2);
     txt_draw_cur();
     row_page(4);
-    func_8014DA2C();
+    fn_1x4da2c();
     row_close2();
     txt_draw(0x38E2);
-    func_80148CAC();
+    battle_rows_xf42b_text_x_xaa_bytes();
     return;
 }

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8017DC28.
- * Ground truth: src/func_8017DC28.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_anim_dispatch_twin_a0_v0_v0.
+ * Ground truth: src/battle_anim_dispatch_twin_a0_v0_v0.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8017DC28(void)
+void battle_anim_dispatch_twin_a0_v0_v0(void)
 {
     /* battle anim dispatch (twin): a0/v0 + v0 gates route
        8017D7D8 / 8017DD08 / 8017D980 / 8017DF20 rows. */

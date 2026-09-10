@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8017E794.
- * Ground truth: src/func_8017E794.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_anim_spin_loop_l17e8cc_gate.
+ * Ground truth: src/battle_anim_spin_loop_l17e8cc_gate.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8017E794(void)
+void battle_anim_spin_loop_l17e8cc_gate(void)
 {
     /* battle anim: 80195120 + 80197208 spin loop (L17E8CC); gates;
        returns at L17E90C. */

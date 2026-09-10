@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8016E560.
- * Ground truth: src/func_8016E560.c (byte-verified).
+/* FF4 source-port — interpreted module for options_x3540_x2003_cells_ec_x2007.
+ * Ground truth: src/options_x3540_x2003_cells_ec_x2007.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8016E560(void)
+void options_x3540_x2003_cells_ec_x2007(void)
 {
     /* options: 0x3540/0x2003 cells, 90EC(0x2007/0x2008) rows; loop
        L16E5A8 on 5A90(5). */

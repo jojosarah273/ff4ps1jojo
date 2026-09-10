@@ -19,18 +19,18 @@ Lf3f8:
     cell_put(0x45);
     goto L478;
 L470:
-    func_8012FF9C();
+    ability_rows_x1b83_x1b84_texts_x46();
 L478:
     config_pad_300();
     config_row_d600b();
-    func_8013095C();
-    func_80130AA4();
+    ability_tabs_x24_window_x130_x1b0();
+    ability_detail_x1b87_x1b83_x1b84_t();
     txt_draw(0x1B93);
     draw_pad(0x21A);
-    func_801206DC();
+    rows_f360_prep_x29_x1d_x1e_window();
     wnd_open(0x20A);
     draw_pad_cur();
-    func_801223A4();
+    rows_x29_window_c_bc_fills_loop_l1();
     midrow_pad88_run();
     config_row_7800();
     midrow_degen();
@@ -159,14 +159,14 @@ L7e8:
     page_paint2(0x1B88);
     page_open(0x1B83);
     label(0x1B85);
-    func_8012FF9C();
+    ability_rows_x1b83_x1b84_texts_x46();
     row_prep(0x20);
     row_read2(0x45);
     sep_a();
     cell_pos_fwd(0x404);
     cell_put_hi9(0x45);
     row_prep_close();
-    func_8011F6AC();
+    fn_1x1f6ac();
     goto L8e0;
 L880:
     cell_clear_bank(0x1B88);

@@ -1,5 +1,5 @@
-/* FF4 source-port — interpreted module for func_801110CC.
- * Ground truth: src/func_801110CC.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x110cc.
+ * Ground truth: src/fn_1x110cc.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
@@ -10,7 +10,7 @@
 
 extern int func_801111C4();
 
-void func_801110CC(void)
+void fn_1x110cc(void)
 
 {
   latch(0x16);

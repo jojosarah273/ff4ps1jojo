@@ -1,16 +1,16 @@
-/* FF4 source-port — interpreted module for func_8012BE34.
- * Ground truth: src/func_8012BE34.c (byte-verified).
+/* FF4 source-port — interpreted module for item_equip_sub_screen_x1b3e_x1b22.
+ * Ground truth: src/item_equip_sub_screen_x1b3e_x1b22.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8012BE34(void)
+void item_equip_sub_screen_x1b3e_x1b22(void)
 {
     /* item/equip sub-screen: 0x1B3E/0x1B22 texts, 0x70/0x8/0xE8/0x5D
        windows; 8012D194 cursor gate and 801224D0 detail; loops at
        L2BE3C/L2BEFC/L2BF64 and the L2BECC option ring. */
 L2be3c:
     for (;;) {
-        if (func_8012D194() == 0)
+        if (fn_1x2d194() == 0)
             goto L2BE94;
         txt_set(0x1B3E);
         cell_set50_from40();
@@ -48,7 +48,7 @@ L2becc:
             latch(4);
         L2BF24:
             txt_draw(0x1B3E);
-            if (func_8012D194() != 0)
+            if (fn_1x2d194() != 0)
                 continue;
             goto L2BF44;
         }
@@ -67,7 +67,7 @@ L2becc:
             latch_cur();
         L2BF94:
             txt_draw(0x1B3E);
-            if (func_8012D194() != 0)
+            if (fn_1x2d194() != 0)
                 continue;
             break;
         }

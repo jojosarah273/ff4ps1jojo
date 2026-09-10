@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8015CF18.
- * Ground truth: src/func_8015CF18.c (byte-verified).
+/* FF4 source-port — interpreted module for options_screen_x321b_x321c_texts_c.
+ * Ground truth: src/options_screen_x321b_x321c_texts_c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8015CF18(void)
+void options_screen_x321b_x321c_texts_c(void)
 {
     /* options screen: 0x321B/0x321C texts, 80150C38 row; loop L15CF60
        (5958(0xC0)) with the 5574(0xCE)/53D4 and 53C0 ladders. */

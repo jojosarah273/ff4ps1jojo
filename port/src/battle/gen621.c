@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8010A5A0.
- * Ground truth: src/func_8010A5A0.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_banner_xe9_window_x2115_gate.
+ * Ground truth: src/shop_banner_xe9_window_x2115_gate.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8010A5A0(void)
+void shop_banner_xe9_window_x2115_gate(void)
 {
     /* shop banner: 0xE9 window + 0x2115 gate; spins on L10A620,
        then 0x834/0x774 text rows (L10A748/L10A84C) before restoring

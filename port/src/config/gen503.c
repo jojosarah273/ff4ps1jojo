@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80135330.
- * Ground truth: src/func_80135330.c (byte-verified).
+/* FF4 source-port — interpreted module for ability_skill_screen_x34_window_xd.
+ * Ground truth: src/ability_skill_screen_x34_window_xd.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80135330(void)
+void ability_skill_screen_x34_window_xd(void)
 {
     /* ability/skill screen: 0x34 window + 0xDB cell, 0x1B7C/0x1BCB
        texts; 80134948/80125934/8012B168/80120FBC/801241B8/80120F1C
@@ -12,18 +12,18 @@ void func_80135330(void)
     row_page(0x34);
     cell_put(0xDB);
     latch_cur();
-    func_80134948();
+    ability_rows_x41_window_d4_b04_gat();
     io_poll_cur();
     if (io_just() != 0)
         goto L1353C4;
-    func_80125934();
+    sub_menu_x1a73_x1a75_texts_row_loo();
     animation_row_300b();
     midrow_pad88_run();
     config_row_b600();
     draw_pad_cur();
     func_8011FB74();
     battle_row_45b();
-    func_8011FF40();
+    fn_1x1ff40();
     return;
 L1353C4:
     midrow_paint_c();
@@ -37,22 +37,22 @@ L1353C4:
     battle_rows_29();
     draw_pad_cur();
     battle_rows_sync();
-    func_80135574();
+    fn_1x35574();
     txt_draw(0x1B7D);
     midrow_pad88_run();
     battle_row_45b();
     cell_clear_bank(0x1BCB);
 L13546c:
     for (;;) {
-        func_801378E0();
-        func_80125934();
+        fn_1x378e0();
+        sub_menu_x1a73_x1a75_texts_row_loo();
         txt_set(0x1B7C);
         draw_pad(0x19A);
-        func_801206DC();
+        rows_f360_prep_x29_x1d_x1e_window();
         midrow_pad88_run();
         config_row_7800();
         midrow_degen();
-        func_80137938();
+        ability_page_four_gated_blocks_eac();
         txt_set(0x1BCB);
         if (gate(2) != 0)
             goto L1354DC;
@@ -64,7 +64,7 @@ L13546c:
         if (sel(2) != 0)
             goto L13551C;
         draw_pad(0x310);
-        func_801361A4();
+        item_equip_configuration_screen_tw();
         animation_row_310();
         return;
     L13551C:

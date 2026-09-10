@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8014CF14.
- * Ground truth: src/func_8014CF14.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_x1802_x7992_x7b36_cell.
+ * Ground truth: src/battle_rows_x1802_x7992_x7b36_cell.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8014CF14(void)
+void battle_rows_x1802_x7992_x7b36_cell(void)
 {
     /* battle rows: 0x1802/0x7992-0x7B36 cells; gate 5574(0x10);
        loop L14CF64 on 5958(0x8C). */

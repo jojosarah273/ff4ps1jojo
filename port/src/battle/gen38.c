@@ -1,14 +1,14 @@
-/* FF4 source-port — interpreted module for func_80107530.
- * Ground truth: src/func_80107530.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x07530.
+ * Ground truth: src/fn_1x07530.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80107530(void)
+void fn_1x07530(void)
 {
     row_page(0xE6);
     if (gate(0x202) != 0)
         goto L7560;
-    func_80106B1C();
+    shop_detail_xda_xe7_x8d_xba_window();
     return;
 L7560:
     open_row(0xE6);
@@ -99,6 +99,6 @@ L7668:
             continue;
         break;
     }
-    func_80106B1C();
+    shop_detail_xda_xe7_x8d_xba_window();
     return;
 }

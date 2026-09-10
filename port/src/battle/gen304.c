@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80149F20.
- * Ground truth: src/func_80149F20.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_item_help_mix_gates_x4d_x5e.
+ * Ground truth: src/battle_item_help_mix_gates_x4d_x5e.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80149F20(void)
+void battle_item_help_mix_gates_x4d_x5e(void)
 {
     /* battle item/help mix: 5574 gates (0x4D/0x5E), 80149D68 +
        80168BC4 detail, 0x34C5 gate; then the 8014FEC8 stats rows with
@@ -20,12 +20,12 @@ void func_80149F20(void)
     if (io_go() != 0)
         goto L149FF0;
     cell_cursor_dec();
-    func_80149D68();
-    func_80168BC4();
+    battle_confirm_fe0_c_rows_with_the();
+    config_help_credits_x180f_x1813_x1();
     latch(1);
     txt_draw_cur();
-    func_8016752C();
-    func_8014C57C();
+    fn_1x6752c();
+    battle_rows_x1802_text_c_c664_rows();
     txt_set(0x34C5);
     if (gate(0x202) != 0)
         goto L149FE8;
@@ -47,7 +47,7 @@ L149FF0:
     row_close();
     cell_push_c8();
     row_open();
-    func_8014FEC8();
+    fn_1x4fec8();
     txt_set(0x34C4);
     txt_draw_cur();
     row_close();
@@ -64,9 +64,9 @@ L149FF0:
     if (io_just() != 0)
         goto L14A134;
     row_sel_cell_cur();
-    func_8014A154();
+    jr_a0_the_entry_battle_item_action();
 L14A134:
     cell_clear_bank();
-    func_80148CAC();
+    battle_rows_xf42b_text_x_xaa_bytes();
     return;
 }

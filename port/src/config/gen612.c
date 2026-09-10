@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801580B0.
- * Ground truth: src/func_801580B0.c (byte-verified).
+/* FF4 source-port — interpreted module for options_xa9_xd2_xad_xaf_windows_x2.
+ * Ground truth: src/options_xa9_xd2_xad_xaf_windows_x2.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801580B0(void)
+void options_xa9_xd2_xad_xaf_windows_x2(void)
 {
     /* options: 0xA9/0xD2/0xAD/0xAF windows, 0x2A04/0x3598 texts,
        80152CDC/8015310C rows; gates 7918(0x202)/4120(2). */

@@ -1,13 +1,13 @@
-/* FF4 source-port — interpreted module for func_80110664.
- * Ground truth: src/func_80110664.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_spell_row_xca_x89_windows_x.
+ * Ground truth: src/battle_spell_row_xca_x89_windows_x.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80110664(void)
+void battle_spell_row_xca_x89_windows_x(void)
 {
     /* battle spell row: 0xCA/0x89 windows, 0x2100/0xAD4/0xAD5 texts,
        80115D2C/80110474/8011EA5C; loop L110694 on 5C64(0x202). */
-    func_80110024();
+    fn_1x10024();
     latch(2);
     cell_put(0xCA);
     wnd_open(0x180);
@@ -30,7 +30,7 @@ L110694:
         txt_draw(0xAD0);
         txt_draw(0xAD1);
         battle_window_24();
-        func_80110474();
+        fn_1x10474();
         row_page(0x89);
         row_read(0x3F);
         if (sel(0x202) != 0)

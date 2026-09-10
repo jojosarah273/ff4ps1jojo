@@ -1,23 +1,10 @@
-/* FF4 source-port — interpreted module for func_80176B6C.
- * Ground truth: src/func_80176B6C.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x76b6c.
+ * Ground truth: src/fn_1x76b6c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-
-
-
-
-
-
-
-
-
-
-
-extern int func_80176C6C();
-
-void func_80176B6C(void)
+void fn_1x76b6c(void)
 
 {
   int iVar1;
@@ -32,7 +19,7 @@ void func_80176B6C(void)
     poll_spin();
     do {
       cell_cursor_dec();
-      func_80176C6C();
+      shop_row_x43_window_x1fff_xfff_x7f();
       row_close2();
       cell_set50_from40();
       poll_pair(0x45);

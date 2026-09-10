@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8012FBB0.
- * Ground truth: src/func_8012FBB0.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x2fbb0.
+ * Ground truth: src/fn_1x2fbb0.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8012FBB0(void)
+void fn_1x2fbb0(void)
 {
     cell_cursor_dec();
     row_open();
@@ -15,7 +15,7 @@ void func_8012FBB0(void)
         goto Lfc70;
     txt_draw(0x1A87);
     row_sync();
-    func_80130BC8();
+    ability_rows_x45_x1b93_cells_windo();
     row_done();
     txt_draw(0x1BC4);
     cell_clear_bank(0x1BC5);

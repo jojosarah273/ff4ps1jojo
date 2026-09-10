@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8019675C.
- * Ground truth: src/func_8019675C.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_anim_intro_loops_l1967b8_l1.
+ * Ground truth: src/battle_anim_intro_loops_l1967b8_l1.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8019675C(void)
+void battle_anim_intro_loops_l1967b8_l1(void)
 {
     /* battle anim: 80196898 intro; loops L1967B8/L1967C8 on
        801963C0/801968CC rows; 80196888 tail. */

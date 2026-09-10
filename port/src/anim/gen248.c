@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8017583C.
- * Ground truth: src/func_8017583C.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_dungeon_item_menu_x93_window.
+ * Ground truth: src/shop_dungeon_item_menu_x93_window.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8017583C(void)
+void shop_dungeon_item_menu_x93_window(void)
 {
     /* shop/dungeon item menu: 0x93 window, 0x1281-0x1286 texts; 5574
        key-code ladders route through 885C color fills; exits at L75B50. */

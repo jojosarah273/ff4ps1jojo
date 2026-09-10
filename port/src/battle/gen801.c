@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8011B7B4.
- * Ground truth: src/func_8011B7B4.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_x3d_x3e_windows_xfe5_x.
+ * Ground truth: src/battle_rows_x3d_x3e_windows_xfe5_x.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8011B7B4(void)
+void battle_rows_x3d_x3e_windows_xfe5_x(void)
 {
     /* battle rows: 0x3D/0x3E windows, 0xFE5/0x1701 texts; gates
        6434(0x80/2) route the 4008(0x20) reads. */

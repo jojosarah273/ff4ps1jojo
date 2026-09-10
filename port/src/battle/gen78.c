@@ -1,14 +1,14 @@
-/* FF4 source-port — interpreted module for func_80103B98.
- * Ground truth: src/func_80103B98.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_list_x5c_x70_x73_window_rows.
+ * Ground truth: src/shop_list_x5c_x70_x73_window_rows.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80103B98(void)
+void shop_list_x5c_x70_x73_window_rows(void)
 {
     /* shop list: 0x5C/0x70-0x73 window rows, 0x4200 title, 0x79 current
        row; two loops (L103BF8 menu / L103CEC detail) with 8010408C +
        80103F00 renders and the 0x6E/0x6F stat pairs. */
-    func_8010408C();
+    battle_rows_x300_x301_x2f_x303_x20();
     wnd_open_cur();
     tail(0x5C);
     open_row(0x70);
@@ -41,8 +41,8 @@ L103bf8:
         cell_pos_back();
         cell_put(0x5D);
     L103CA4:
-        func_80103F00();
-        func_8010408C();
+        fn_1x03f00();
+        battle_rows_x300_x301_x2f_x303_x20();
         key_page(0x79);
         row_page(0x79);
         io_poll(0x60);
@@ -73,7 +73,7 @@ L103cec:
         cell_pos_back();
         cell_put(0x5D);
     L103D98:
-        func_8010408C();
+        battle_rows_x300_x301_x2f_x303_x20();
         poll_pair(0x79);
         row_page(0x79);
         io_poll(0xFF);

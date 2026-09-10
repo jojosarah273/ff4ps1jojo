@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80141468.
- * Ground truth: src/func_80141468.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_gate_x202_loop_l1414e0.
+ * Ground truth: src/battle_rows_gate_x202_loop_l1414e0.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80141468(void)
+void battle_rows_gate_x202_loop_l1414e0(void)
 {
     /* battle rows: gate 6434(0x202); loop L1414E0 on 5A90(6). */
     txt_set_cur();

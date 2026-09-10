@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8018F4B8.
- * Ground truth: src/func_8018F4B8.c (byte-verified).
+/* FF4 source-port — interpreted module for event_e8_prep_t2_t1_latch_loop_f8.
+ * Ground truth: src/event_e8_prep_t2_t1_latch_loop_f8.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8018F4B8(void)
+void event_e8_prep_t2_t1_latch_loop_f8(void)
 {
     /* event: 801976E8 prep; t2/t1 latch loop; 80197608/801976F8
        tail. */

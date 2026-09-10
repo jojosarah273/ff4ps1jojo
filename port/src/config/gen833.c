@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8013BB0C.
- * Ground truth: src/func_8013BB0C.c (byte-verified).
+/* FF4 source-port — interpreted module for ability_menu_x93_x9f_x60_windows_x.
+ * Ground truth: src/ability_menu_x93_x9f_x60_windows_x.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8013BB0C(void)
+void ability_menu_x93_x9f_x60_windows_x(void)
 {
     /* ability menu: 0x93/0x9F/0x60 windows, 0x1B1D/0x1BC6 texts,
        8013CB94/8012A868/8013C2FC/8013CA70 sub-rows; loop L13BC38
@@ -14,12 +14,12 @@ void func_8013BB0C(void)
     wnd_open_cur();
     tail(0x9F);
     midrow_paint_a();
-    func_8013CB94();
+    fn_1x3cb94();
     config_row_b600();
     wnd_open_cur();
     label(0x1B1D);
     page_paint2(0x1BC6);
-    func_8012A868();
+    fn_1x2a868();
     config_row_d600b();
     draw_pad_cur();
     battle_rows_sync();
@@ -36,20 +36,20 @@ L13bc38:
     for (;;) {
         battle_anim_gate_a();
         cb_slot15();
-        func_80126590();
+        fn_1x26590();
     L13bca4:
         for (;;) {
-            func_8013C2FC();
+            ability_menu_x60_window_x1a83_text();
             row_page(0x60);
             if (gate(2) != 0)
                 goto L13BCE4;
-            func_8013CA70();
+            ability_menu_x41_window_ladder_x19();
             if (io_go() != 0)
                 continue;
             goto L13BCEC;
         }
     L13BCE4:
-        func_8013BD04();
+        battle_summon_party_cast_screen_x4();
     L13BCEC:
         return;
     }

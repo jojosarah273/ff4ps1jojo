@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80174CE4.
- * Ground truth: src/func_80174CE4.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_stats_x30_x32_windows_x33_x34.
+ * Ground truth: src/shop_stats_x30_x32_windows_x33_x34.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80174CE4(void)
+void shop_stats_x30_x32_windows_x33_x34(void)
 {
     /* shop stats: 0x30/0x32 windows, 0x33/0x34 profit cells, 3F94/
        7FCC(3B9C) rows; loops L174D04/L174D14 (5A90(0x10)). */

@@ -1,11 +1,11 @@
-/* FF4 source-port — interpreted module for func_8015E6DC.
- * Ground truth: src/func_8015E6DC.c (byte-verified).
+/* FF4 source-port — interpreted module for rows_x2050_text_d54_d44_copy_c_xa6.
+ * Ground truth: src/rows_x2050_text_d54_d44_copy_c_xa6.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 extern u16 *D_8019ED44;
 extern u16 *D_8019ED54;
-void func_8015E6DC(void)
+void rows_x2050_text_d54_d44_copy_c_xa6(void)
 {
     /* rows: 0x2050 text; D54 <- D44 copy + 971C; 80153098/
        7270(0xA6)/8768(0x2054)/71DC(1)/8D6C(0xD4). */

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8013441C.
- * Ground truth: src/func_8013441C.c (byte-verified).
+/* FF4 source-port — interpreted module for config_weapon_sub_menu_x1eb_x1b37.
+ * Ground truth: src/config_weapon_sub_menu_x1eb_x1b37.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8013441C(void)
+void config_weapon_sub_menu_x1eb_x1b37(void)
 {
     /* config weapon sub-menu: 0x1EB/0x1B37/0x1B39 texts; 8013463C/
        80134AF8/801224D0/801345B4 rows; 53C0/53D4 ladders route the
@@ -12,14 +12,14 @@ void func_8013441C(void)
     io_poll(0xB0);
     if (io_go() != 0)
         goto L13445C;
-    func_8013463C();
+    config_weapon_switch_screen_b37_b3();
     if (io_go() != 0)
         goto L13446C;
 L13445C:
     sep_a();
     return;
 L13446C:
-    func_80134AF8();
+    weapon_sub_menu_x1b39_text_x45_x48();
     if (io_go() == 0)
         return;
     txt_set(0x1B37);

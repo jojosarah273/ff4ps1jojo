@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80168750.
- * Ground truth: src/func_80168750.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x68750.
+ * Ground truth: src/fn_1x68750.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80168750(void)
+void fn_1x68750(void)
 {
     txt_set(0xEF87);
     if (gate(0x202) == 0)
@@ -16,7 +16,7 @@ void func_80168750(void)
 L8798:
     latch(3);
 L87a0:
-    func_80168B94();
+    fn_1x68b94();
     latch(0xE0);
     func_8017EA90();
     txt_set(0xEF87);
@@ -126,13 +126,13 @@ L8b14:
     cell_pull_c8_lo(0x2130);
     cell_pull_c8_lo(0x212D);
     latch(0x41);
-    func_80168B94();
+    fn_1x68b94();
     goto L8b84;
 L8b64:
     sep();
     cell_pull_c8_lo(0x2130);
     cell_pull_c8_lo(0x212D);
-    func_80168B94();
+    fn_1x68b94();
 L8b84:
     return;
 }

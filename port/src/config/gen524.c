@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80134C74.
- * Ground truth: src/func_80134C74.c (byte-verified).
+/* FF4 source-port — interpreted module for ability_wrapper_ea9c_d3c_preps_x1b.
+ * Ground truth: src/ability_wrapper_ea9c_d3c_preps_x1b.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80134C74(void)
+void ability_wrapper_ea9c_d3c_preps_x1b(void)
 {
     /* ability wrapper: 8016EA9C/80123D3C preps, 0x1B1D/0x1BB1/0x1BB2
        rows, then 80134FF4 sub-dispatcher; loop L134D38 pulls
@@ -17,7 +17,7 @@ void func_80134C74(void)
     cell_cursor_dec();
     row_pad();
     func_8016EA9C();
-    func_80123D3C();
+    fn_1x23d3c();
     battle_mode_dispatch();
     battle_mode_dispatch();
     battle_mode_dispatch();
@@ -39,12 +39,12 @@ L134d38:
         midrow_paint_c();
         config_row_q18();
         anim_noop();
-        func_801378B0();
+        fn_1x378b0();
         latch(0xA);
         txt_draw(0x1BB4);
-        func_80134FF4();
+        ability_config_screen_bb1_text_win();
         battle_row_88();
-        func_80122114();
+        fn_1x22114();
         sep();
         stat_sync();
         cell_cursor_read();

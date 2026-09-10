@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8018B4C8.
- * Ground truth: src/func_8018B4C8.c (byte-verified).
+/* FF4 source-port — interpreted module for event_v0_v1_a0_latch_loop_b1c8_tai.
+ * Ground truth: src/event_v0_v1_a0_latch_loop_b1c8_tai.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8018B4C8(void)
+void event_v0_v1_a0_latch_loop_b1c8_tai(void)
 {
     /* event: v0 + v1/a0 latch loop; 8018B1C8 tail. */
     for (;;) {

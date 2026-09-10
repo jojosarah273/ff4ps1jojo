@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80150A30.
- * Ground truth: src/func_80150A30.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_splash_x30_window_x7e_windo.
+ * Ground truth: src/battle_splash_x30_window_x7e_windo.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80150A30(void)
+void battle_splash_x30_window_x7e_windo(void)
 {
     /* battle splash: 0x30 window, 0x7E window, 801582D8 row; linear
        render + 0x30 icon set. */
@@ -24,7 +24,7 @@ void func_80150A30(void)
     latch(0x7E);
     cell_cursor_dec();
     row_pad();
-    func_801582D8();
+    ability_plot_x3975_text_xa7_xa6_wi();
     row_prep(0x30);
     row_done();
     row_close();

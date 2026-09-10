@@ -1,15 +1,15 @@
-/* FF4 source-port — interpreted module for func_8016C280.
- * Ground truth: src/func_8016C280.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_row_render_x74_x76_x70_x72.
+ * Ground truth: src/battle_row_render_x74_x76_x70_x72.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8016C280(void)
+void battle_row_render_x74_x76_x70_x72(void)
 {
     /* battle row render: 0x74/0x76/0x70/0x72 stat windows with
        3F94(3C3C) / 4064(8) value cells, 0x5B/0x5D headers; then the
        0x61/0xA1 secondary cells and the 80C0 gate read (80176F60). */
     wnd_open_cur();
-    func_8016C734();
+    fn_1x6c734();
     row_prep(0x20);
     row_read2(0x74);
     sep_a();

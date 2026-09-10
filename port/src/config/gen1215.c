@@ -1,12 +1,12 @@
-/* FF4 source-port — interpreted module for func_801530E0.
- * Ground truth: src/func_801530E0.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x530e0.
+ * Ground truth: src/fn_1x530e0.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
 extern int func_800F4A7C();
 
-void func_801530E0(void)
+void fn_1x530e0(void)
 
 {
   func_800F4A7C(0x13fefe);

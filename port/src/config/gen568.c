@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80125F38.
- * Ground truth: src/func_80125F38.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_rows_x45_x46_windows_x1_x43_t.
+ * Ground truth: src/shop_rows_x45_x46_windows_x1_x43_t.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80125F38(void)
+void shop_rows_x45_x46_windows_x1_x43_t(void)
 {
     /* shop rows: 0x45/0x46 windows, 0x1/0x43 texts, 8012D204 gate;
        renders the 0x45 rows with 4064/3454 values. */

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8018BA38.
- * Ground truth: src/func_8018BA38.c (byte-verified).
+/* FF4 source-port — interpreted module for event_b9a8_gate_at_l18bab8_wide_a1.
+ * Ground truth: src/event_b9a8_gate_at_l18bab8_wide_a1.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8018BA38(void)
+void event_b9a8_gate_at_l18bab8_wide_a1(void)
 {
     /* event: 8018B9A8 gate at L18BAB8; wide a1/a3 + a0/a2 regcmp
        gate trees; returns at L18BE5C. */

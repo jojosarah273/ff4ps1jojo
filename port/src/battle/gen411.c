@@ -1,20 +1,20 @@
-/* FF4 source-port — interpreted module for func_801101E4.
- * Ground truth: src/func_801101E4.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_row_x89_x7a_windows_c_bc_ea.
+ * Ground truth: src/battle_row_x89_x7a_windows_c_bc_ea.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801101E4(void)
+void battle_row_x89_x7a_windows_c_bc_ea(void)
 {
     /* battle row: 0x89/0x7A windows, 80110024/8011050C/801100BC/
        8011EA5C rows; loops L11020C (row read) and L11029C (7F48
        detail). */
-    func_80110024();
+    fn_1x10024();
     wnd_open(0x20);
     tail(0x89);
     open_row(0x7A);
 L11020c:
     for (;;) {
-        func_8011050C();
+        fn_1x1050c();
         open_row(0x28);
         row_page(0x89);
         cell_tick_half();
@@ -23,7 +23,7 @@ L11020c:
         cell_put(0x29);
         latch(0x20);
         cell_put(0x2B);
-        func_801100BC();
+        battle_rows_x3b0_x3b1_x410_x411_ce();
         page(0x89);
         cell_set50_from54();
         tail(0x89);
@@ -36,7 +36,7 @@ L11020c:
     open_row(0x7A);
 L11029c:
     for (;;) {
-        func_8011050C();
+        fn_1x1050c();
         latch_cur();
         sep_b();
         cell_tick_sub(cell_state(0x89));
@@ -44,7 +44,7 @@ L11029c:
         latch(0x20);
         cell_put(0x29);
         cell_put(0x2B);
-        func_801100BC();
+        battle_rows_x3b0_x3b1_x410_x411_ce();
         page(0x89);
         cell_step();
         tail(0x89);

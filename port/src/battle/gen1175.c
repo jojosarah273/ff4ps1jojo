@@ -1,19 +1,16 @@
-/* FF4 source-port — interpreted module for func_80113DCC.
- * Ground truth: src/func_80113DCC.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x13dcc.
+ * Ground truth: src/fn_1x13dcc.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-
-extern int func_80113E3C();
-
-void func_80113DCC(void)
+void fn_1x13dcc(void)
 
 {
   latch(0x39);
   cell_put(0x91);
   latch(0xc0);
-  func_80113E3C();
+  battle_rows_twin_of_ccc_x8f_x5f_xa();
   return;
 }
 

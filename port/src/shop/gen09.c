@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8016CA94.
- * Ground truth: src/func_8016CA94.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x6ca94.
+ * Ground truth: src/fn_1x6ca94.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8016CA94(void)
+void fn_1x6ca94(void)
 {
     row_prep(0x30);
     cell_cursor_ret2();
@@ -99,20 +99,20 @@ Ld48:
     row_page(0x8F);
     cell_pull_c8_lo(0x2120);
 Le68:
-    func_8016BD2C();
+    fn_1x6bd2c();
     row_page(0x64);
     io_poll(2);
     if (io_just() == 0)
         goto Lea8;
-    func_8016D9B0();
+    global_stats_screen_x7d1f_gate_x4a();
     monster_status_run();
     goto Lf24;
 Lea8:
-    func_8016BC6C();
-    func_80181498();
-    func_8016B68C();
-    func_8016AC7C();
-    func_8016C858();
+    shop_row_x4a_x57_windows_x400_x28();
+    battle_anim_d8_spin_loops_l181500();
+    battle_prep_x118_x_xf0_bytes_at_bu();
+    shop_status_x4a_window_x2203_x22c1();
+    battle_terrain_affinity_screen_x21();
     row_page(0x64);
     if (gate(2) != 0)
         goto Lf24;
@@ -132,12 +132,12 @@ Lf24:
         goto Lf74;
     wnd_open(0xA);
     draw_pad(1);
-    func_8016BE1C();
+    shop_rows_f94_b04_reads_x2000_x204();
 Lf74:
     txt_set(0x7D25);
     if (gate(2) != 0)
         goto Lf94;
-    func_8016E358();
+    shop_memory_x7d21_gate_x2121_x2123();
 Lf94:
     open_row(0x40);
     open_row(0x41);

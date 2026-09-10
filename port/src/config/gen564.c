@@ -1,11 +1,11 @@
-/* FF4 source-port — interpreted module for func_8012DC80.
- * Ground truth: src/func_8012DC80.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x2dc80.
+ * Ground truth: src/fn_1x2dc80.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
 
-void func_8012DC80(void)
+void fn_1x2dc80(void)
 
 {
   latch(0xc3);

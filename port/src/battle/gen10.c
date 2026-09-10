@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8014BB94.
- * Ground truth: src/func_8014BB94.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x4bb94.
+ * Ground truth: src/fn_1x4bb94.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8014BB94(void)
+void fn_1x4bb94(void)
 {
     txt_draw(0xF133);
     txt_set(0x34C5);
@@ -15,8 +15,8 @@ void func_8014BB94(void)
     label(0xF289);
     battle_row_f2a0();
     latch(0x8D);
-    func_8014D780();
-    func_8014096C();
+    battle_item_flow_gate_routes_to_d7();
+    fn_1x4096c();
     latch(2);
     txt_draw(0xEF87);
     cell_clear_bank(0xF2D0);
@@ -39,7 +39,7 @@ void func_8014BB94(void)
 Lbcb8:
     for (;;) {
         func_8007259C();
-        func_8014D98C();
+        battle_rows_gates_x202_route_the_d();
         wnd_open_cur();
     Lbcd0:
         txt_cell(0xEBE7);

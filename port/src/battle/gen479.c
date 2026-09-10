@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80117CB8.
- * Ground truth: src/func_80117CB8.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_xe4_window_x1100_x1180.
+ * Ground truth: src/battle_rows_xe4_window_x1100_x1180.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80117CB8(void)
+void battle_rows_xe4_window_x1100_x1180(void)
 {
     /* battle rows: 0xE4 window + 0x1100/0x1180/0x10C0 gates, 0xAD6/
        0x1000 texts; loops L117CF8/L117D30 (5958 pacing) and L117D70
@@ -45,7 +45,7 @@ L117d70:
         cell_draw(0x1000);
         if (io_press(cell_state(0xE4)) == 0)
             goto L117DC0;
-        func_80117E64();
+        fn_1x17e64();
     L117DC0:
         rows_swap44_54();
         step2();

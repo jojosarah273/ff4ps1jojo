@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8014D5A0.
- * Ground truth: src/func_8014D5A0.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_confirm_x31_x33_x80_gates_p.
+ * Ground truth: src/battle_confirm_x31_x33_x80_gates_p.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8014D5A0(void)
+void battle_confirm_x31_x33_x80_gates_p(void)
 {
     /* battle confirm: 5574(0x31/0x33)/6434(0x80) gates pick the
        0x80/0xC0/0x40 colors, 80177DAC commit. */

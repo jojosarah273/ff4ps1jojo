@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8014C4BC.
- * Ground truth: src/func_8014C4BC.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_x1_x40_windows_d14_row.
+ * Ground truth: src/battle_rows_x1_x40_windows_d14_row.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8014C4BC(void)
+void battle_rows_x1_x40_windows_d14_row(void)
 {
     /* battle rows: 0x1/0x40 windows, 80094D14 row; loop L14C4EC on
        5958(0xC0). */

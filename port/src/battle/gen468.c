@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801004D4.
- * Ground truth: src/func_801004D4.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_stats_x16a0_x16a2_texts_x30.
+ * Ground truth: src/battle_stats_x16a0_x16a2_texts_x30.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801004D4(void)
+void battle_stats_x16a0_x16a2_texts_x30(void)
 {
     /* battle stats: 0x16A0-0x16A2 texts, 0x30-0x32 windows rows via
        3F38(3C3C); 5574 cursor ladder. */

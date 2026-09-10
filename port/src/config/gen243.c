@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8015C220.
- * Ground truth: src/func_8015C220.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x5c220.
+ * Ground truth: src/fn_1x5c220.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8015C220(void)
+void fn_1x5c220(void)
 {
 Lc228:
     for (;;) {
@@ -71,7 +71,7 @@ Lc390:
     goto Lc48c;
 Lc408:
     for (;;) {
-        func_8015316C();
+        fn_1x5316c();
         cell_put(0xA9);
         sep_a();
         row_open_w(5);

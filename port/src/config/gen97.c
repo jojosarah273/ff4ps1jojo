@@ -1,11 +1,11 @@
-/* FF4 source-port — interpreted module for func_8013DE38.
- * Ground truth: src/func_8013DE38.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x3de38.
+ * Ground truth: src/fn_1x3de38.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 extern u8 *D_8019ED50;
 extern u8 *D_8019ED68;
-void func_8013DE38(void)
+void fn_1x3de38(void)
 {
     row_open();
     txt_set(0x6CC0);

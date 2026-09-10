@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80175494.
- * Ground truth: src/func_80175494.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_rows_x1700_text_x7a_window_xc.
+ * Ground truth: src/shop_rows_x1700_text_x7a_window_xc.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80175494(void)
+void shop_rows_x1700_text_x7a_window_xc(void)
 {
     /* shop rows: 0x1700 text, 0x7A window, 0xCFE cell; 5574(1) gate;
        loop L175534 on 5A90(0x10). */

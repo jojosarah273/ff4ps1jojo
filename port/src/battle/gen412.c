@@ -1,14 +1,14 @@
-/* FF4 source-port — interpreted module for func_8010E98C.
- * Ground truth: src/func_8010E98C.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_row_xad_x20_windows_x420c_t.
+ * Ground truth: src/battle_row_xad_x20_windows_x420c_t.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8010E98C(void)
+void battle_row_xad_x20_windows_x420c_t(void)
 {
     /* battle row: 0xAD/0x20 windows, 0x420C text, 8010E0D0/8017559C/
        8010E128/8011EA5C rows; 3 loops (L10E9B4 menu, L10EA2C confirm,
        L10EA7C second menu). */
-    func_8010E0D0();
+    fn_1x0e0d0();
     latch(0x20);
     cell_put(0xAD);
     cell_clear_pad();
@@ -41,7 +41,7 @@ L10EA2C:
             continue;
     }
 L10EA74:
-    func_8010E128();
+    fn_1x0e128();
     goto L10EA7C;
 L10EA7C:
     for (;;) {

@@ -1,17 +1,15 @@
-/* FF4 source-port — interpreted module for func_8012C4F8.
- * Ground truth: src/func_8012C4F8.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x2c4f8.
+ * Ground truth: src/fn_1x2c4f8.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-extern int func_8012C0A8();
-
-void func_8012C4F8(void)
+void fn_1x2c4f8(void)
 
 {
   int iVar1;
   
-  iVar1 = func_8012C0A8();
+  iVar1 = config_save_flow_x60_x45_windows_x();
   if (iVar1 != 2) {
     row_prep(0x20);
     draw_pad(9);

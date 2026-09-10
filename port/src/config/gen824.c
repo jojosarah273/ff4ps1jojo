@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8015F5A0.
- * Ground truth: src/func_8015F5A0.c (byte-verified).
+/* FF4 source-port — interpreted module for options_x3_x5_x28a4_texts_xa9_wind.
+ * Ground truth: src/options_x3_x5_x28a4_texts_xa9_wind.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8015F5A0(void)
+void options_x3_x5_x28a4_texts_xa9_wind(void)
 {
     /* options: 0x3/0x5/0x28A4 texts, 0xA9 window, 80152224 row;
        loop L15F5E8 on 7CC8(3B04(0x28A4))/5C64(0x202); 80065774/

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80152E54.
- * Ground truth: src/func_80152E54.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x52e54.
+ * Ground truth: src/fn_1x52e54.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80152E54(void)
+void fn_1x52e54(void)
 {
     row_prep(32);
     sep_b();

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80190098.
- * Ground truth: src/func_80190098.c (byte-verified).
+/* FF4 source-port — interpreted module for event_dispatcher_gate_tree_with_jr.
+ * Ground truth: src/event_dispatcher_gate_tree_with_jr.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80190098(void)
+void event_dispatcher_gate_tree_with_jr(void)
 {
     /* event dispatcher: gate tree with jr-$v0 sub-dispatch at
        L1902CC; 2x 8018F0C8 poll rows; a0/a2 + v1/a2 spin latches;

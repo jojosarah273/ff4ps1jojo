@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80180BB4.
- * Ground truth: src/func_80180BB4.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_anim_d8_spin_row.
+ * Ground truth: src/battle_anim_d8_spin_row.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80180BB4(void)
+void battle_anim_d8_spin_row(void)
 {
     /* battle anim: 801824D8 spin; 80194640 row. */
     do {

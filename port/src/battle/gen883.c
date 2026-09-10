@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80148FC0.
- * Ground truth: src/func_80148FC0.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_x26_x2b_windows_row_ga.
+ * Ground truth: src/battle_rows_x26_x2b_windows_row_ga.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80148FC0(void)
+void battle_rows_x26_x2b_windows_row_ga(void)
 {
     /* battle rows: 0x26/0x2B windows, 80072720 row; gates 6434/
        60A8/6434(0x80) route the 5480/5410 tails. */

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8015C604.
- * Ground truth: src/func_8015C604.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x5c604.
+ * Ground truth: src/fn_1x5c604.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8015C604(void)
+void fn_1x5c604(void)
 {
     row_page(0xD0);
     txt_draw(0x3975);
@@ -11,8 +11,8 @@ void func_8015C604(void)
     txt_set(0x352B);
     if (gate(2) == 0) {
         func_8015A284();
-        func_80155778();
-        func_801583FC();
+        fn_1x55778();
+        fn_1x583fc();
         cell_clear_bank(0x352B);
     }
     txt_set(0x393A);
@@ -33,7 +33,7 @@ void func_8015C604(void)
     tail(0xAB);
     wnd_open(0x3302);
     tail(0xAD);
-    func_8015CD98();
+    options_seeds_xd0_x393d_x393f_x393();
     txt_set(0x388B);
     if (gate(2) != 0)
         goto L738;
@@ -58,7 +58,7 @@ L748:
 L7c0:
     io_poll(0xA);
     if (io_just() != 0)
-        func_8015CF18();
+        options_screen_x321b_x321c_texts_c();
 L7e0:
     latch(0xC);
     cell_put(0xD6);
@@ -72,7 +72,7 @@ L800:
     tail(0xAB);
     wnd_open(0x321A);
     tail(0xAD);
-    func_8015CD98();
+    options_seeds_xd0_x393d_x393f_x393();
     page(0xA6);
     txt_cell(0x2050);
     row_read(8);
@@ -88,7 +88,7 @@ L800:
     poll_spin();
     cell_pull_c8_bank(0x80);
     func_800F5B4C();
-    func_8015CEA0();
+    fn_1x5cea0();
     latch(0x16);
     goto Lb08;
 L8e8:
@@ -125,7 +125,7 @@ L958:
     poll_spin();
     cell_pull_c8_bank(0x80);
     func_800F5B4C();
-    func_8015CEA0();
+    fn_1x5cea0();
 L9e0:
     latch(1);
     goto Lb08;
@@ -140,7 +140,7 @@ L9f0:
     tail(0xAB);
     wnd_open(0x2C7A);
     tail(0xAD);
-    func_8015CD98();
+    options_seeds_xd0_x393d_x393f_x393();
     page(0xA6);
     txt_set(0x388B);
     if (gate(2) != 0)
@@ -162,7 +162,7 @@ Laa8:
     tail(0xAB);
     wnd_open(0x32DA);
     tail(0xAD);
-    func_8015CD98();
+    options_seeds_xd0_x393d_x393f_x393();
     page(0xA6);
     draw_pad(1);
     cell_push_c8_sel(0x80);
@@ -171,7 +171,7 @@ Laa8:
 Lb08:
     page(0xA6);
     cell_draw(0x2051);
-    func_8015CB80();
+    options_seed_row_x393b_x393a_texts();
     txt_set(0x393A);
     cell_draw(0x2053);
     txt_set(0x393B);

@@ -1,15 +1,15 @@
-/* FF4 source-port — interpreted module for func_80108458.
- * Ground truth: src/func_80108458.c (byte-verified).
+/* FF4 source-port — interpreted module for status_table_modulo_state_machine.
+ * Ground truth: src/status_table_modulo_state_machine.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80108458(void)
+void status_table_modulo_state_machine(void)
 {
     /* status table + modulo state machine (0xF20): register
        gate ladder; linear call chain with constants, in order. */
     draw_pad_cur();
     row_info(0x3D);
-    func_801094D8();
+    shop_rows_x776_xdd_windows_gates_x();
     cell_state(0xDD);
     page_open(0x772);
     label_cur();
@@ -47,12 +47,12 @@ void func_80108458(void)
     stat_sync();
     cell_fmt2(0x3D);
     row_info();
-    func_801094A0();
+    fn_1x094a0();
     txt_draw(0x1E01);
     latch(0x1);
     txt_draw(0x1E00);
     battle_cb_86120();
-    func_801094A0();
+    fn_1x094a0();
     row_sel_cell_cur();
     cell_put(0x18);
     row_sel_cell_cur();
@@ -67,7 +67,7 @@ void func_80108458(void)
     txt_cell(0x1500);
     io_poll(0xFF);
     io_just();
-    func_80109378(0x774);
+    battle_key_x42_on_c0_latch_x42_int(0x774);
     cell_pull_c8();
     latch_cur();
     stat_sync();
@@ -106,7 +106,7 @@ void func_80108458(void)
     cell_push_c8();
     io_poll(0xFF);
     io_just();
-    func_80109378(0x774);
+    battle_key_x42_on_c0_latch_x42_int(0x774);
     cell_pull_c8();
     latch_cur();
     stat_sync();
@@ -121,7 +121,7 @@ void func_80108458(void)
     cell_put(0x31);
     txt_set(0x8FA);
     cell_put(0x32);
-    func_80174CE4();
+    shop_stats_x30_x32_windows_x33_x34();
     wnd_open_cur();
     cell_push_c8_c2(0x36);
     io_poll(0x80);
@@ -135,9 +135,9 @@ void func_80108458(void)
     cell_step();
     poll_t(0x6);
     io_just();
-    func_801094A0();
-    func_801094A0();
-    func_801094A0();
+    fn_1x094a0();
+    fn_1x094a0();
+    fn_1x094a0();
     open_row(0x19);
     row_sel_cell_cur();
     row_sel_cell2_cur();
@@ -156,7 +156,7 @@ void func_80108458(void)
     label(0x8F4);
     wnd_open_cur();
     label(0x8F6);
-    func_801094A0();
+    fn_1x094a0();
     cell_put(0x7);
     cell_fmt2(0x3D);
     latch(0xFF);
@@ -190,7 +190,7 @@ void func_80108458(void)
     io_just();
     latch_cur();
     cell_put(0xDE);
-    func_80109378();
+    battle_key_x42_on_c0_latch_x42_int();
     cell_fmt2(0x3D);
     cell_pull_c8();
     row_info(0x3D);
@@ -204,7 +204,7 @@ void func_80108458(void)
     cell_fmt2(0x3D);
     poll_t(0xC0);
     io_just();
-    func_801094D8();
+    shop_rows_x776_xdd_windows_gates_x();
     io_poll_cur();
     io_just();
     latch(0x1);

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8015A89C.
- * Ground truth: src/func_8015A89C.c (byte-verified).
+/* FF4 source-port — interpreted module for options_x3558_x2016_texts_x202f_ce.
+ * Ground truth: src/options_x3558_x2016_texts_x202f_ce.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8015A89C(void)
+void options_x3558_x2016_texts_x202f_ce(void)
 {
     /* options: 0x3558/0x2016 texts, 0x202F cell, 8015ABEC/8015A56C
        rows; gate 6434(2). */

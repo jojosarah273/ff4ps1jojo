@@ -3,5 +3,5 @@
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-extern void func_8014D568(void);
-void battle_row_d568(void) { func_8014D568(); }
+
+void battle_row_d568(void) { fn_1x4d568(); }

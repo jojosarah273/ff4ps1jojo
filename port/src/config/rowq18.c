@@ -3,4 +3,4 @@
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void config_row_q18(void) { func_80126418(); func_80126480(); config_row_7800(); func_80126550(); }
+void config_row_q18(void) { fn_1x26418(); fn_1x26480(); config_row_7800(); fn_1x26550(); }

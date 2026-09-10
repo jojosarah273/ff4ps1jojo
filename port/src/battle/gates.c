@@ -1,7 +1,7 @@
 /* FF4 source-port — battle/gates.c
  *
  * Battle row gates (exact Phase A decodes).
- * Ground truth: src/func_8010B5DC, 8011DFE4.
+ * Ground truth: src/battle_c3c_b04_gates_v0_run_to_l10, 8011DFE4.
  */
 #include <stdint.h>
 

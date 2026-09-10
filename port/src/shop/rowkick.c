@@ -3,5 +3,5 @@
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-extern void func_8016FCF0(void);
-void shop_row_kick_f0(void) { func_8016FCF0(); }
+
+void shop_row_kick_f0(void) { shop_map_the_fixed_sprite_row_x8a(); }

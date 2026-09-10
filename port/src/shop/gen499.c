@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8016D600.
- * Ground truth: src/func_8016D600.c (byte-verified).
+/* FF4 source-port — interpreted module for config_map_x7d1d_text_x39_x3c_wind.
+ * Ground truth: src/config_map_x7d1d_text_x39_x3c_wind.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8016D600(void)
+void config_map_x7d1d_text_x39_x3c_wind(void)
 {
     /* config map: 0x7D1D text, 0x39/0x3C windows, 8016D730/8016D768
        rows; 5574 ladder (1/0xA codes) with loop L16D660 on
@@ -14,16 +14,16 @@ void func_8016D600(void)
     io_poll(0xA);
     if (io_just() == 0)
         goto L16D648;
-    func_8016D730();
+    fn_1x6d730();
     return;
 L16D648:
-    func_8016D768();
+    fn_1x6d768();
     cell_push_c8_b4(0x36);
     cell_put_cur();
 L16d660:
     for (;;) {
         latch(0xFF);
-        func_8016D730();
+        fn_1x6d730();
         poll_pair_cur();
         if (poll_go(0x202) != 0)
             continue;

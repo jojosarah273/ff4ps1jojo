@@ -1,17 +1,15 @@
-/* FF4 source-port — interpreted module for func_801316AC.
- * Ground truth: src/func_801316AC.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x316ac.
+ * Ground truth: src/fn_1x316ac.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-extern int func_801317F0();
-
-void func_801316AC(void)
+void fn_1x316ac(void)
 
 {
   cell_push_c8_cur(0xf9801);
   txt_draw(0x1b91);
-  func_801317F0();
+  ability_select_screen_x1b91_text_x();
   return;
 }
 

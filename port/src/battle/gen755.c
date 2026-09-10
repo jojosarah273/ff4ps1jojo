@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8014C81C.
- * Ground truth: src/func_8014C81C.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_twin_with_x2_window_lo.
+ * Ground truth: src/battle_rows_twin_with_x2_window_lo.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8014C81C(void)
+void battle_rows_twin_with_x2_window_lo(void)
 {
     /* battle rows (twin with 0x2 window): loop L14C834 on 5958(0x40). */
     row_open();

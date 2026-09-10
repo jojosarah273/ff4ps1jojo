@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80126D48.
- * Ground truth: src/func_80126D48.c (byte-verified).
+/* FF4 source-port — interpreted module for rows_x48_window_row_loop_l126d58_x.
+ * Ground truth: src/rows_x48_window_row_loop_l126d58_x.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80126D48(void)
+void rows_x48_window_row_loop_l126d58_x(void)
 {
     /* rows: 0x48 window, 80132178 row; loop L126D58 (4120(0x202)
        gate), closes on 0xE7/0x1B3E/0x1B2A texts. */

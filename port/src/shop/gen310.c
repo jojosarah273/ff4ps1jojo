@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8016D9B0.
- * Ground truth: src/func_8016D9B0.c (byte-verified).
+/* FF4 source-port — interpreted module for global_stats_screen_x7d1f_gate_x4a.
+ * Ground truth: src/global_stats_screen_x7d1f_gate_x4a.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8016D9B0(void)
+void global_stats_screen_x7d1f_gate_x4a(void)
 {
     /* global-stats screen: 0x7D1F gate, 0x4A window, 0x92/0x90 rows
        with 0x2116/0x4352/0x4354/0x4350/0x4351/0x4355 texts; renders
@@ -53,6 +53,6 @@ void func_8016D9B0(void)
     row_prep_close();
     return;
 L16DB20:
-    func_8016D850();
+    fn_1x6d850();
     return;
 }

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80147AA8.
- * Ground truth: src/func_80147AA8.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_c3c_b04_x2000_x2_b9c_x.
+ * Ground truth: src/battle_rows_c3c_b04_x2000_x2_b9c_x.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80147AA8(void)
+void battle_rows_c3c_b04_x2000_x2_b9c_x(void)
 {
     /* battle rows: 3C3C/3B04(0x2000)x2/3B9C(0xF0) gates; spins
        L147B14/L147B38; 9330 + 80146A44 row; 3B9C/95A0 then the
@@ -24,7 +24,7 @@ void func_80147AA8(void)
     }
     /* v0 gate -> L147F78 */
     row_open();
-    if (func_80146A44() == 0)
+    if (battle_magic_cast_flow_v0_cascades() == 0)
         goto L147BD4;
 L147BD4:
     /* gate tree L147BE8..L147E94 -> 3B9C */
@@ -32,12 +32,12 @@ L147BD4:
 L147EA8:
     row_close();
     /* gates -> L147F54/L147F68 */
-    if (func_80147FA0() == 0)
+    if (battle_c3c_b04_b9c_x2000_gates_x_a() == 0)
         goto L147F68;
     if (io_just() == 0)
         goto L147F68;
 L147F54:
-    func_801466E0();
+    battle_c3c_b04_x2000_x3_b9c_gates();
     return;
 L147F68:
     return;

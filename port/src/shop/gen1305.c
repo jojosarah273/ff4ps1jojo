@@ -1,10 +1,10 @@
-/* FF4 source-port — interpreted module for func_80160A4C.
- * Ground truth: src/func_80160A4C.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x60a4c.
+ * Ground truth: src/fn_1x60a4c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-void func_80160A4C(void)
+void fn_1x60a4c(void)
 {
         if (io_just()) {
         if (io_just()) {

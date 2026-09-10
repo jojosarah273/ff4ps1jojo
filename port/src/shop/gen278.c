@@ -1,13 +1,13 @@
-/* FF4 source-port — interpreted module for func_80169614.
- * Ground truth: src/func_80169614.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x69614.
+ * Ground truth: src/fn_1x69614.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80169614(void)
+void fn_1x69614(void)
 {
     wnd_open_cur();
     draw_pad_cur();
-    func_8016BAAC();
+    fn_1x6baac();
     row_open2();
     sep();
     cell_cursor_dec();

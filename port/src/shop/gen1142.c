@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80167074.
- * Ground truth: src/func_80167074.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_b04_gate_loop_on_s0_v1_latch.
+ * Ground truth: src/shop_b04_gate_loop_on_s0_v1_latch.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80167074(void)
+void shop_b04_gate_loop_on_s0_v1_latch(void)
 {
     /* shop: 3B04 gate; 5410 loop on s0/v1 latch. */
     cell_state_of();

@@ -1,7 +1,7 @@
 /* FF4 source-port — event/listinit.c
  *
  * Skill/event list-initialization rows (Phase A decodes).
- * Ground truth: src/func_8013EFD8, 8013F124.
+ * Ground truth: src/event_b04_c3c_rows_with_a70_loops, 8013F124.
  */
 #include <stdint.h>
 

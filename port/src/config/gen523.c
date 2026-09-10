@@ -1,12 +1,10 @@
-/* FF4 source-port — interpreted module for func_80139C0C.
- * Ground truth: src/func_80139C0C.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x39c0c.
+ * Ground truth: src/fn_1x39c0c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-extern int func_80134AF8();
-
-void func_80139C0C(void)
+void fn_1x39c0c(void)
 
 {
   int iVar1;
@@ -17,7 +15,7 @@ void func_80139C0C(void)
   iVar1 = io_just();
   if (iVar1 == 0) {
     tail(0xe5);
-    func_80134AF8();
+    weapon_sub_menu_x1b39_text_x45_x48();
     iVar1 = io_go();
     if (iVar1 != 0) {
       row_page(0x57);

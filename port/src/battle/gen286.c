@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801462DC.
- * Ground truth: src/func_801462DC.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_item_cast_x47_window_gates.
+ * Ground truth: src/battle_item_cast_x47_window_gates.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801462DC(void)
+void battle_item_cast_x47_window_gates(void)
 {
     /* battle item cast: 0x47 window; 6434 gates (0x202/2) route the
        5574(0xB0/0xC0) key ladder and 4248(0x30/0x20) row gates, with

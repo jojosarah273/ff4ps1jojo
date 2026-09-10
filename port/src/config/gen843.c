@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80127668.
- * Ground truth: src/func_80127668.c (byte-verified).
+/* FF4 source-port — interpreted module for rows_x46_x45_windows_x1000_x7ff_x7.
+ * Ground truth: src/rows_x46_x45_windows_x1000_x7ff_x7.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80127668(void)
+void rows_x46_x45_windows_x1000_x7ff_x7(void)
 {
     /* rows: 0x46/0x45 windows, 0x1000/0x7FF/0x7000 values, 80135B54
        close; gate 5B8C(0x80). */
@@ -23,6 +23,6 @@ void func_80127668(void)
     row_pad();
     return;
 L127700:
-    func_80127718();
+    fn_1x27718();
     return;
 }

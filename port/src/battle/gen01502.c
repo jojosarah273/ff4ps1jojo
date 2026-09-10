@@ -1,16 +1,14 @@
-/* FF4 source-port — interpreted module for func_8011E9EC.
- * Ground truth: src/func_8011E9EC.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x1e9ec.
+ * Ground truth: src/fn_1x1e9ec.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-extern int func_8011E534();
-
-void func_8011E9EC(void)
+void fn_1x1e9ec(void)
 
 {
   txt_set(0x6f9);
-  func_8011E534();
+  fn_1x1e534();
   return;
 }
 

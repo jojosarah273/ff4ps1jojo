@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80132010.
- * Ground truth: src/func_80132010.c (byte-verified).
+/* FF4 source-port — interpreted module for ability_header_x1b8b_text_x4e_x50.
+ * Ground truth: src/ability_header_x1b8b_text_x4e_x50.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80132010(void)
+void ability_header_x1b8b_text_x4e_x50(void)
 {
     /* ability header: 0x1B8B text, 0x4E/0x50/0x49/0x48/0x4E windows,
        801224D0/801321B4 rows; 6434(2) gate. */
@@ -12,7 +12,7 @@ void func_80132010(void)
     txt_cell(0x1B8B);
     if (gate(2) != 0)
         return;
-    func_801321B4();
+    fn_1x321b4();
     tail(0x4E);
     open_row(0x50);
     cell_push_c8_sel(0x4E);

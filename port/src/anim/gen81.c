@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80171F90.
- * Ground truth: src/func_80171F90.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_sell_row_screen_twin_of_e8_wi.
+ * Ground truth: src/shop_sell_row_screen_twin_of_e8_wi.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80171F90(void)
+void shop_sell_row_screen_twin_of_e8_wi(void)
 {
     /* shop sell-row screen (twin of 801721E8 without the bottom commit):
        0x1701 header, 0xB/0xC/0xE/0xD windows, 80173ED8 stat block,
@@ -24,7 +24,7 @@ L171fe0:
         cell_put(0xC);
         txt_cell_cur();
         cell_put(0xE);
-        func_80173ED8();
+        shop_stat_block_called_by_the_e8_f();
         row_page(0xD7);
         if (gate(2) != 0)
             goto L1721A8;

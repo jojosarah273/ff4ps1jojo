@@ -1,6 +1,6 @@
-/* FF4 source-port — interpreted module for func_80114788.
- * Ground truth: src/func_80114788.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x14788.
+ * Ground truth: src/fn_1x14788.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80114788(void) { latch(0x10); cell_put(0xA2); func_80104354(); battle_wndfx_run(); }
+void fn_1x14788(void) { latch(0x10); cell_put(0xA2); fn_1x04354(); battle_wndfx_run(); }

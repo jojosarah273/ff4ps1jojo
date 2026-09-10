@@ -1,10 +1,10 @@
-/* FF4 source-port — interpreted module for func_801527AC.
- * Ground truth: src/func_801527AC.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x527ac.
+ * Ground truth: src/fn_1x527ac.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 extern u8 *D_8019ED68;
-void func_801527AC(void)
+void fn_1x527ac(void)
 {
     if (*D_8019ED68 & 0x20) {
         row_sel_cell_cur();

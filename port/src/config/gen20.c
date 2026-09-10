@@ -1,13 +1,13 @@
-/* FF4 source-port — interpreted module for func_8012A190.
- * Ground truth: src/func_8012A190.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x2a190.
+ * Ground truth: src/fn_1x2a190.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8012A190(void)
+void fn_1x2a190(void)
 {
 La198:
     for (;;) {
-        func_8012C980();
+        config_save_screen_x1b23_x1b1a_tex();
         wnd_open(0x6800);
         tail(0x1D);
         wnd_open(0xA600);
@@ -19,7 +19,7 @@ La198:
         midrow_pad88();
         battle_rows_2115();
         anim_noop();
-        func_80126480();
+        fn_1x26480();
         midrow_degen();
     La208:
         row_page(1);
@@ -72,9 +72,9 @@ La198:
             page_paint2(0x311);
         La368:
             row_sync();
-            func_8012C980();
+            config_save_screen_x1b23_x1b1a_tex();
             midrow_pad88_run();
-            func_80126418();
+            fn_1x26418();
             shop_row_kick_f0();
             row_done();
             row_prep(0x20);
@@ -84,8 +84,8 @@ La198:
             break;
         }
         row_prep_close();
-        func_8012A678();
-        func_8011F7D4();
+        config_block_x1b23_x1b22_x1b19_x1b();
+        fn_1x1f7d4();
         if (io_go() != 0)
             goto La3f8;
         goto La208;
@@ -123,9 +123,9 @@ La198:
             cell_dec_bank(0x311);
         La4c8:
             row_sync();
-            func_8012C980();
+            config_save_screen_x1b23_x1b1a_tex();
             midrow_pad88_run();
-            func_80126418();
+            fn_1x26418();
             shop_row_kick_f0();
             row_done();
             row_prep(0x20);
@@ -135,8 +135,8 @@ La198:
             break;
         }
         row_prep_close();
-        func_8012A678();
-        func_8011F7D4();
+        config_block_x1b23_x1b22_x1b19_x1b();
+        fn_1x1f7d4();
         if (io_go() != 0)
             goto La558;
         goto La208;
@@ -151,14 +151,14 @@ La198:
         txt_set(0x1B19);
         if (gate(0x202) != 0)
             goto La5a0;
-        func_8012B050();
+        fn_1x2b050();
         goto La658;
     La5a0:
-        func_8012B190();
+        fn_1x2b190();
         config_row_b600();
         func_8012AAC0();
         cell_clear_bank(0x1B19);
-        func_8012B0B0();
+        fn_1x2b0b0();
         func_80126458();
         anim_noop();
         goto La658;
@@ -170,15 +170,15 @@ La198:
         txt_set(0x1B19);
         if (gate(2) == 0)
             goto La648;
-        func_8012B0B0();
-        func_80125A64();
+        fn_1x2b0b0();
+        fn_1x25a64();
         open_row(0x86);
         return;
     La648:
         cell_clear_bank(0x1B19);
-        func_8012B0B0();
+        fn_1x2b0b0();
     La658:
-        func_8012A678();
+        config_block_x1b23_x1b22_x1b19_x1b();
         continue;
     }
 }

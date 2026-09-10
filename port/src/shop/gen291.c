@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801613D0.
- * Ground truth: src/func_801613D0.c (byte-verified).
+/* FF4 source-port — interpreted module for options_screen_xc1_window_x33c4_ti.
+ * Ground truth: src/options_screen_xc1_window_x33c4_ti.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801613D0(void)
+void options_screen_xc1_window_x33c4_ti(void)
 {
     /* options screen: 0xC1 window + 0x33C4 title, 0x321B/0x321A stat
        rows, 8015329C alt + 80150C38 + 80062B08 commits; loop L161428

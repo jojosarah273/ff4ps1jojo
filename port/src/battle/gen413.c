@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8010D0D8.
- * Ground truth: src/func_8010D0D8.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_stat_row_x3e_x3d_windows_with.
+ * Ground truth: src/shop_stat_row_x3e_x3d_windows_with.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8010D0D8(void)
+void shop_stat_row_x3e_x3d_windows_with(void)
 {
     /* shop stat row: 0x3E/0x3D windows with 76BC/7CC8 pairs, 0xE5B
        cells; loops L10D170/L10D1C4 poll 5C64(0x202)/4248(0xF)

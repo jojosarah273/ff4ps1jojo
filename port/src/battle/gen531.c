@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80113CCC.
- * Ground truth: src/func_80113CCC.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_xad_x6fb_texts_x24_x8f.
+ * Ground truth: src/battle_rows_xad_x6fb_texts_x24_x8f.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80113CCC(void)
+void battle_rows_xad_x6fb_texts_x24_x8f(void)
 {
     /* battle rows: 0xAD/0x6FB texts, 0x24/0x8F/0x90/0x91 windows,
        80113F3C/8011EA5C rows; loop L113D24 on 5574(0x5F). */
@@ -20,7 +20,7 @@ void func_80113CCC(void)
 L113d24:
     for (;;) {
         wnd_fx_7d_b();
-        func_80113F3C();
+        battle_rows_x20_x21_x31_x24_x26_x8();
         row_prep(0x20);
         cell_push9(0x6FB);
         row_done2();

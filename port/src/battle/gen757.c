@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8014C57C.
- * Ground truth: src/func_8014C57C.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_x1802_text_c_c664_rows.
+ * Ground truth: src/battle_rows_x1802_text_c_c664_rows.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8014C57C(void)
+void battle_rows_x1802_text_c_c664_rows(void)
 {
     /* battle rows: 0x1802 text, 8007259C/8014C664 rows; loops
        L14C5AC (5958(0x40)) and L14C62C (5C64(0x202)). */
@@ -28,7 +28,7 @@ L14c5ac:
 L14c62c:
     for (;;) {
         func_8007259C();
-        func_8014C664();
+        battle_rows_loop_l14c67c_on_x40_wi();
         cell_set50_from54();
         if (poll_go(0x202) != 0)
             continue;

@@ -1,13 +1,13 @@
-/* FF4 source-port — interpreted module for func_80130C74.
- * Ground truth: src/func_80130C74.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x30c74.
+ * Ground truth: src/fn_1x30c74.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80130C74(void)
+void fn_1x30c74(void)
 {
     latch(0xF);
     cell_pull_c8_lo(0x212C);
-    func_80125A64();
+    fn_1x25a64();
     latch(0x20);
     cell_put(0xC1);
     config_row_b600();
@@ -18,7 +18,7 @@ void func_80130C74(void)
     row_sel_cell2_cur();
     cell_poke0(cell_state(0x1B83));
     cell_poke0(cell_state(0x1B84));
-    func_801308B4();
+    ability_rows_x1d_x1e_windows_x45_x();
     cell_push_c8_d58(0x1560);
     txt_draw(0x1B89);
     sep_b();
@@ -35,7 +35,7 @@ void func_80130C74(void)
     config_row_b600();
     txt_set(0x1B89);
     wnd_open(0x44);
-    func_8012FBB0();
+    fn_1x2fbb0();
     draw_pad_cur();
     row_open();
     page(0x29);
@@ -48,10 +48,10 @@ void func_80130C74(void)
     row_close();
     draw_pad_cur();
     battle_rows_29();
-    func_80130AA4();
+    ability_detail_x1b87_x1b83_x1b84_t();
     txt_draw(0x1B93);
     draw_pad(0x1C8);
-    func_801206DC();
+    rows_f360_prep_x29_x1d_x1e_window();
     wnd_open(0x2E0);
     draw_pad(0x1000);
     equip_cells_render();

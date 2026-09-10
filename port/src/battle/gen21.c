@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8011777C.
- * Ground truth: src/func_8011777C.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x1777c.
+ * Ground truth: src/fn_1x1777c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8011777C(void)
+void fn_1x1777c(void)
 {
     battle_tick_text();
     txt_draw(0x1800);
@@ -36,11 +36,11 @@ L87c:
         return;
     row_page(0xE4);
     if (gate(2) == 0)
-        func_80117CB8();
+        battle_rows_xe4_window_x1100_x1180();
     battle_godtext_a();
     func_800FAD48();
     func_800FED3C();
-    func_80170C14();
+    fn_1x70c14();
     state_ok();
     latch(0x81);
     txt_draw(0x4200);
@@ -93,7 +93,7 @@ L9e8:
         cell_draw(0x1000);
         goto Lb4c;
     Lacc:
-        func_80117E64();
+        fn_1x17e64();
         txt_cell(0x1009);
         cell_draw(0x1007);
         txt_cell(0x100A);
@@ -137,13 +137,13 @@ Lb74:
     wnd_open(0xC0);
     tail(0x3D);
     latch(0xD);
-    func_80118244();
+    battle_rows_x40_x7_x3d_windows_wit();
     wnd_open(0x100);
     tail(0x3D);
     latch(1);
-    func_8011818C();
+    battle_rows_x40_x7_x3d_windows_x11();
     wnd_open(0x100);
-    func_80117E64();
+    fn_1x17e64();
     txt_cell(0x1009);
     cell_draw(0x1007);
     txt_cell(0x100A);

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80100B30.
- * Ground truth: src/func_80100B30.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_rows_x1702_x3d_x3e_windows_x1.
+ * Ground truth: src/shop_rows_x1702_x3d_x3e_windows_x1.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80100B30(void)
+void shop_rows_x1702_x3d_x3e_windows_x1(void)
 {
     /* shop rows: 0x1702/0x3D/0x3E windows, 0x1701 text; 4F28/7A40
        label pairs, then 62BC gates. */

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801257BC.
- * Ground truth: src/func_801257BC.c (byte-verified).
+/* FF4 source-port — interpreted module for status_row_x16a8_x1a71_x1a73_texts.
+ * Ground truth: src/status_row_x16a8_x1a71_x1a73_texts.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801257BC(void)
+void status_row_x16a8_x1a71_x1a73_texts(void)
 {
     /* status row: 0x16A8/0x1A71/0x1A73 texts, 0x45/0x41 windows,
        801224D0 cursor; loop L125810 on 5DD4(0x45)/5C64(0x202). */

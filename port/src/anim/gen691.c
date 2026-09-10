@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80175004.
- * Ground truth: src/func_80175004.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_rows_x1700_x1288_texts_x7a_xc.
+ * Ground truth: src/shop_rows_x1700_x1288_texts_x7a_xc.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80175004(void)
+void shop_rows_x1700_x1288_texts_x7a_xc(void)
 {
     /* shop rows: 0x1700/0x1288 texts, 0x7A/0xCDB/0xCDC windows; 5574
        gates pick the 0x1E/0x7E rows and 0xCDB/0xCDC fills. */

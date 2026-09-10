@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80167914.
- * Ground truth: src/func_80167914.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_c3c_b04_x3_gates_t0_t1_regcmp.
+ * Ground truth: src/shop_c3c_b04_x3_gates_t0_t1_regcmp.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80167914(void)
+void shop_c3c_b04_x3_gates_t0_t1_regcmp(void)
 {
     /* shop: 3C3C/3B04 x3 gates; t0/t1 regcmp latch loop; returns
        at L167A14. */

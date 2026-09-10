@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80120BDC.
- * Ground truth: src/func_80120BDC.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_f320_ee34_b764_b7b8_ro.
+ * Ground truth: src/battle_rows_f320_ee34_b764_b7b8_ro.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80120BDC(void)
+void battle_rows_f320_ee34_b764_b7b8_ro(void)
 {
     /* battle rows: 8011F320/8011EE34/8013B764/8013B7B8 rows, 0x45
        window; loop L120BE4 on 5DA0(0x45)/5B8C(0x202). */

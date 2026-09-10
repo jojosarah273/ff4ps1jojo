@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80114880.
- * Ground truth: src/func_80114880.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_x70_x2c_x2e_x89_window.
+ * Ground truth: src/battle_rows_x70_x2c_x2e_x89_window.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80114880(void)
+void battle_rows_x70_x2c_x2e_x89_window(void)
 {
     /* battle rows: 0x70/0x2C/0x2E/0x89 windows, 80114D18/8011EA5C
        rows; loop L1148B8 on 5958(0x80/0x100). */
@@ -15,7 +15,7 @@ void func_80114880(void)
     tail(0x89);
 L1148b8:
     for (;;) {
-        func_80114D18();
+        fn_1x14d18();
         page(0x89);
         cell_set50_from54();
         tail(0x89);

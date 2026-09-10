@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80189BCC.
- * Ground truth: src/func_80189BCC.c (byte-verified).
+/* FF4 source-port — interpreted module for event_cb88_row_v0_gates_returns_at.
+ * Ground truth: src/event_cb88_row_v0_gates_returns_at.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80189BCC(void)
+void event_cb88_row_v0_gates_returns_at(void)
 {
     /* event: 8018CB88 row; v0 gates; returns at L189C24. */
     func_8018CB88();

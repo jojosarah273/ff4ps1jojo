@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80168F1C.
- * Ground truth: src/func_80168F1C.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x68f1c.
+ * Ground truth: src/fn_1x68f1c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80168F1C(void)
+void fn_1x68f1c(void)
 {
     latch(100);
     txt_draw(62524);

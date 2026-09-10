@@ -1,5 +1,5 @@
-/* FF4 source-port — interpreted module for func_801743E0.
- * Ground truth: src/func_801743E0.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x743e0.
+ * Ground truth: src/fn_1x743e0.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
@@ -19,7 +19,7 @@
 
 
 
-void func_801743E0(void)
+void fn_1x743e0(void)
 
 {
   int iVar1;

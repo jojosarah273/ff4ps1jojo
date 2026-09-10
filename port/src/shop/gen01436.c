@@ -1,17 +1,17 @@
-/* FF4 source-port — interpreted module for func_801675A4.
- * Ground truth: src/func_801675A4.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x675a4.
+ * Ground truth: src/fn_1x675a4.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801675A4(void)
+void fn_1x675a4(void)
 {
     latch(36);
     battle_row_d568();
-    func_8014096C();
+    fn_1x4096c();
     battle_row_8();
-    func_80140944();
+    fn_1x40944();
     battle_row_8();
-    func_801409E4();
+    fn_1x409e4();
     battle_row_8();
     cell_clear_bank(61319);
 }

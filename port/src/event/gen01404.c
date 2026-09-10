@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801919B4.
- * Ground truth: src/func_801919B4.c (byte-verified).
+/* FF4 source-port — interpreted module for event_twin_b44_rows_on_s2_fp_s0.
+ * Ground truth: src/event_twin_b44_rows_on_s2_fp_s0.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801919B4(void)
+void event_twin_b44_rows_on_s2_fp_s0(void)
 {
     /* event (twin): 80190B44(1/2/0) rows on s2/fp + s0/s7 latch. */
     func_80190B44(1);

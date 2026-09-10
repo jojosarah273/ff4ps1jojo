@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80118D20.
- * Ground truth: src/func_80118D20.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_stat_row_twin_x100b_gate_x1.
+ * Ground truth: src/battle_stat_row_twin_x100b_gate_x1.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80118D20(void)
+void battle_stat_row_twin_x100b_gate_x1(void)
 {
     /* battle stat row (twin): 0x100B gate, 0x100F/0x1011 cells,
        80174F0C/80117DF8/8011EA5C; loops L118D80/L118E48. */
@@ -16,7 +16,7 @@ void func_80118D20(void)
     latch(0xA);
     cell_put(0x1A);
     open_row(0x1B);
-    func_80174F0C();
+    fn_1x74f0c();
     wnd_open_cur();
 L118d80:
     for (;;) {

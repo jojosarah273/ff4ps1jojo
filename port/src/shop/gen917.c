@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8016EEDC.
- * Ground truth: src/func_8016EEDC.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_rows_variant_x64_x6a_x6b_text.
+ * Ground truth: src/shop_rows_variant_x64_x6a_x6b_text.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8016EEDC(void)
+void shop_rows_variant_x64_x6a_x6b_text(void)
 {
     /* shop rows (variant): 0x64/0x6A/0x6B texts, 8016EF88 row. */
     row_prep(0x10);
@@ -16,6 +16,6 @@ void func_8016EEDC(void)
     cell_pull_c8_lo(0x6A);
     latch(0x13);
     cell_pull_c8_lo(0x6B);
-    func_8016EF88();
+    fn_1x6ef88();
     return;
 }

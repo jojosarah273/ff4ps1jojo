@@ -1,5 +1,5 @@
-/* FF4 source-port — interpreted module for func_8014D31C.
- * Ground truth: src/func_8014D31C.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x4d31c.
+ * Ground truth: src/fn_1x4d31c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
@@ -10,7 +10,7 @@ extern int func_800999C8();
 
 
 
-void func_8014D31C(void)
+void fn_1x4d31c(void)
 
 {
   int iVar1;

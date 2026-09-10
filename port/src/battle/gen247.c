@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801490CC.
- * Ground truth: src/func_801490CC.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_info_dialog_two_identical_c.
+ * Ground truth: src/battle_info_dialog_two_identical_c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801490CC(void)
+void battle_info_dialog_two_identical_c(void)
 {
     /* battle info-dialog: two identical confirm blocks (54D4/53C0 ->
        option select vs 6240 tail), then 0x26/0x28/0x2A detail rows and

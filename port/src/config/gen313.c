@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8013E73C.
- * Ground truth: src/func_8013E73C.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_magic_rows_x4_x2_windows_e5.
+ * Ground truth: src/battle_magic_rows_x4_x2_windows_e5.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8013E73C(void)
+void battle_magic_rows_x4_x2_windows_e5(void)
 {
     /* battle magic rows: 0x4/0x2 windows, 8013E5D0 row, 0x6CD8 gate
        loop L13E7D8, then the L13E864 pair loop on 3F38(3B04) cells. */
@@ -11,7 +11,7 @@ void func_8013E73C(void)
     row_open();
     cell_push_c8();
     cell_put(4);
-    func_8013E5D0();
+    battle_rows_x4_x1_windows_e588_row();
     row_close();
     row_open();
     cell_push_c8();

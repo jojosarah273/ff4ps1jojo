@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80147FA0.
- * Ground truth: src/func_80147FA0.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_c3c_b04_b9c_x2000_gates_x_a.
+ * Ground truth: src/battle_c3c_b04_b9c_x2000_gates_x_a.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80147FA0(void)
+void battle_c3c_b04_b9c_x2000_gates_x_a(void)
 {
     /* battle: 3C3C/3B04/3B9C(0x2000) gates; 2x 800728AC rows and the
        s0/v1 regcmp loops with 9330/95A0 closes. */

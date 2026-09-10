@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8010B5DC.
- * Ground truth: src/func_8010B5DC.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_c3c_b04_gates_v0_run_to_l10.
+ * Ground truth: src/battle_c3c_b04_gates_v0_run_to_l10.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8010B5DC(void)
+void battle_c3c_b04_gates_v0_run_to_l10(void)
 {
     /* battle: 3C3C/3B04 gates; v0 run to L10B6D0. */
     cell_state_of();

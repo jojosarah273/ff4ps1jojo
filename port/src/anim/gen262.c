@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80170458.
- * Ground truth: src/func_80170458.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_row_render_x2115_x4300_x4301.
+ * Ground truth: src/shop_row_render_x2115_x4300_x4301.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80170458(void)
+void shop_row_render_x2115_x4300_x4301(void)
 {
     int i;
     /* shop row render: 0x2115/0x4300/0x4301 title, 0x421F/0x2116/
@@ -64,6 +64,6 @@ L170608:
         break;
     }
     cb_slot15();
-    func_80181300();
+    battle_anim_v1_v0_gates_c0_row_at();
     return;
 }

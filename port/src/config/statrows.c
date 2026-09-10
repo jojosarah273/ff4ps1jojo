@@ -1,7 +1,7 @@
 /* FF4 source-port — config/statrows.c
  *
  * Stat/options rows (exact Phase A decodes).
- * Ground truth: src/func_80161C48, 80162DF8, 8015E464.
+ * Ground truth: src/fn_1x61c48, 80162DF8, 8015E464.
  */
 #include <stdint.h>
 

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80163D68.
- * Ground truth: src/func_80163D68.c (byte-verified).
+/* FF4 source-port — interpreted module for options_dialog_xe5_x33c4_x38ed_x35.
+ * Ground truth: src/options_dialog_xe5_x33c4_x38ed_x35.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80163D68(void)
+void options_dialog_xe5_x33c4_x38ed_x35(void)
 {
     /* options dialog: 0xE5/0x33C4/0x38ED/0x3584 texts, 80152224/
        8015240C/80153098; loop L163E1C polls 6434(0x514)/4120(0x202)

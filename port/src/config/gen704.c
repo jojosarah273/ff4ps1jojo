@@ -9,7 +9,7 @@ void config_rows_163(void)
        L124D70 on 6B68(0x163)/5958(7). */
     row_sync();
     row_sync();
-    func_80124B74();
+    shop_rows_x73_x75_windows_x163_tex();
     row_prep(0x20);
     cell_cursor_adv2();
     sep_a();

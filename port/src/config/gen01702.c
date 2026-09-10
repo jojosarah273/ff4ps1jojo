@@ -6,5 +6,5 @@
 void config_row_a600(void)
 {
     wnd_open(42496);
-    func_80124180();
+    fn_1x24180();
 }

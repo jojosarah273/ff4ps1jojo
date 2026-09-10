@@ -1,26 +1,26 @@
-/* FF4 source-port — interpreted module for func_801038D4.
- * Ground truth: src/func_801038D4.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_buy_rows_x1706_x170c_texts_x5.
+ * Ground truth: src/shop_buy_rows_x1706_x170c_texts_x5.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801038D4(void)
+void shop_buy_rows_x1706_x170c_texts_x5(void)
 {
     /* shop buy rows: 0x1706/0x170C texts, 0x5A window, 80103A28/
        8017F8F8/80103F94/80103B98/80103DD8/80103AC8/800FB09C/
        8017559C rows; 0x2100/0x4200/0x1700/0xAD windows end. */
     page_open(0x1706);
     label(0x170C);
-    func_80103A28();
+    fn_1x03a28();
     wnd_open(0x198);
     tail(0x5A);
     battle_mode_dispatch();
     battle_mode_dispatch();
-    func_80103F94();
-    func_80103B98();
+    fn_1x03f94();
+    shop_list_x5c_x70_x73_window_rows();
     wnd_open_cur();
     tail(0x5A);
-    func_80103F94();
-    func_80103DD8();
+    fn_1x03f94();
+    shop_rows_x5c_xdf_x79_windows_x420();
     latch(0x80);
     txt_draw(0x2100);
     cell_clear_bank(0x4200);
@@ -37,7 +37,7 @@ void func_801038D4(void)
     txt_draw(0x4200);
     latch(0x30);
     cell_put(0xAD);
-    func_80103AC8();
+    fn_1x03ac8();
     wnd_open_cur();
     label(0x172C);
     return;

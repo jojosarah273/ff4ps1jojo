@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80155658.
- * Ground truth: src/func_80155658.c (byte-verified).
+/* FF4 source-port — interpreted module for options_row_x8a_window_x29b5_x29cd.
+ * Ground truth: src/options_row_x8a_window_x29b5_x29cd.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80155658(void)
+void options_row_x8a_window_x29b5_x29cd(void)
 {
     /* options row: 0x8A window, 0x29B5/0x29CD/0xDF/0xE1/0xE3/0x2003/
        0x29EB texts, 8015240C row; 5B2C(3B04(0xA9))+5D24(0x29CD)

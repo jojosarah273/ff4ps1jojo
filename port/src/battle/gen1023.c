@@ -1,22 +1,17 @@
-/* FF4 source-port — interpreted module for func_8011FF40.
- * Ground truth: src/func_8011FF40.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x1ff40.
+ * Ground truth: src/fn_1x1ff40.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-
-
-
-extern int func_8011FF80();
-
-void func_8011FF40(void)
+void fn_1x1ff40(void)
 
 {
   cell_cursor_dec();
   row_open();
   row_sync();
   row_open2();
-  func_8011FF80();
+  ability_gates_v1_v0_branches_route();
   return;
 }
 

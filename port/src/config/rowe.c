@@ -1,5 +1,5 @@
-/* FF4 source-port — interpreted module for func_801583FC.
- * Ground truth: src/func_801583FC.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x583fc.
+ * Ground truth: src/fn_1x583fc.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
@@ -7,7 +7,7 @@ extern u32 D_8019ED40[8];
 extern u32 D_8019ED44[8];
 extern u32 D_8019ED58[8];
 extern u32 D_8019ED60[8];
-void func_801583FC(void)
+void fn_1x583fc(void)
 {
     txt_set(0x3975);
     options_rows_run();
@@ -169,7 +169,7 @@ void func_801583FC(void)
     cell_push_c8_sel(0x82);
     if (gate(0x8080) == 0) {
         draw_pad(0x21);
-        func_8015A0F4();
+        fn_1x5a0f4();
         txt_set(0x396D);
         txt_draw(0x396E);
     }
@@ -177,7 +177,7 @@ void func_801583FC(void)
     cell_push_c8_sel(0x82);
     if (gate(0x8080) == 0) {
         draw_pad(0x2C);
-        func_8015A0F4();
+        fn_1x5a0f4();
     }
     sep();
     tail(0xA9);
@@ -269,7 +269,7 @@ void func_801583FC(void)
     sep_a();
     row_page(0xAA);
     cell_poke0(cell_state(0x396C));
-    func_8015A30C();
+    fn_1x5a30c();
     cell_pull_c8_bank(0x80);
     txt_set(0x3968);
     cell_tick_half();
@@ -295,7 +295,7 @@ void func_801583FC(void)
     sep_a();
     row_page(0xA9);
     cell_poke0(cell_state(0x396F));
-    func_8015A344();
+    fn_1x5a344();
     cell_pull_c8_bank(0x80);
     sep();
     tail(0xA9);
@@ -327,13 +327,13 @@ void func_801583FC(void)
     draw_pad(0x25);
     cell_push_c8_sel(0x80);
     cell_put(0xA9);
-    func_8015A094();
+    fn_1x5a094();
     draw_pad(0x20);
     cell_pull_c8_bank(0x80);
     draw_pad(0x26);
     cell_push_c8_sel(0x80);
     cell_put(0xA9);
-    func_8015A094();
+    fn_1x5a094();
     if (io_just() != 0)
         goto done;
     draw_pad(0x21);

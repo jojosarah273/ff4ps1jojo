@@ -1,5 +1,5 @@
-/* FF4 source-port — interpreted module for func_8011356C.
- * Ground truth: src/func_8011356C.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x1356c.
+ * Ground truth: src/fn_1x1356c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
@@ -7,9 +7,7 @@
 
 extern int func_800FE8B4();
 
-extern int func_80119AC8();
-
-void func_8011356C(void)
+void fn_1x1356c(void)
 
 {
   int iVar1;
@@ -27,7 +25,7 @@ void func_8011356C(void)
   battle_row_e5();
   do {
     shop_view_run();
-    func_80119AC8();
+    battle_rows_d9d4_prep_gates_x80_x5();
     battle_window_24();
     row_page(0x7a);
     row_read(0x3f);

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80119C7C.
- * Ground truth: src/func_80119C7C.c (byte-verified).
+/* FF4 source-port — interpreted module for event_v0_spin_loop_l119cec_f5c0_ta.
+ * Ground truth: src/event_v0_spin_loop_l119cec_f5c0_ta.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80119C7C(void)
+void event_v0_spin_loop_l119cec_f5c0_ta(void)
 {
     /* event: v0 spin loop L119CEC; 8017F5C0 tail. */
     for (;;) {
@@ -11,6 +11,6 @@ void func_80119C7C(void)
             continue;
         break;
     }
-    func_8017F5C0();
+    battle_v0_gate_picks_eac8_vs_f148();
     return;
 }

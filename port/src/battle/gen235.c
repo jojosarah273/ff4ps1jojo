@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8014F2CC.
- * Ground truth: src/func_8014F2CC.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x4f2cc.
+ * Ground truth: src/fn_1x4f2cc.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8014F2CC(void)
+void fn_1x4f2cc(void)
 {
     row_page(0x18);
     row_sel_cell_cur();

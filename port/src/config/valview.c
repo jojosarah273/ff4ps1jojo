@@ -33,7 +33,7 @@ L15da08:
     return;
 L15DB4C:
     func_8005A234();
-    func_8016E870();
+    options_x2000_x2003_x2004_gates_x3();
     /* v1/v0 + v0/v1 gates -> L15DC6C */
     func_8005A234();
 L15dba0:

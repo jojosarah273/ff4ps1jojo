@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8012EAC0.
- * Ground truth: src/func_8012EAC0.c (byte-verified).
+/* FF4 source-port — interpreted module for formation_row_x1d_x23_x25_x21_wind.
+ * Ground truth: src/formation_row_x1d_x23_x25_x21_wind.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8012EAC0(void)
+void formation_row_x1d_x23_x25_x21_wind(void)
 {
     /* formation row: 0x1D/0x23/0x25/0x21 windows; loops L12EAC8
        (6434(0x514)/5A90 gates) and L12EB10 (8A18 cell reads). */

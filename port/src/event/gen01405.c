@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80191878.
- * Ground truth: src/func_80191878.c (byte-verified).
+/* FF4 source-port — interpreted module for event_b44_rows_on_s3_t0_s0_fp.
+ * Ground truth: src/event_b44_rows_on_s3_t0_s0_fp.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80191878(void)
+void event_b44_rows_on_s3_t0_s0_fp(void)
 {
     /* event: 80190B44(1/2/0) rows on s3/t0 + s0/fp latch loop
        L1918D8. */

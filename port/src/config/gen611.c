@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8015CC80.
- * Ground truth: src/func_8015CC80.c (byte-verified).
+/* FF4 source-port — interpreted module for options_save_row_xaa_window_xa9_x2.
+ * Ground truth: src/options_save_row_xaa_window_xa9_x2.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8015CC80(void)
+void options_save_row_xaa_window_xa9_x2(void)
 {
     /* options save-row: 0xAA window, 0xA9/0x2003 rows, 80153074;
        loop L15CC90 on 54D4(3C3C(0xAB)). */
@@ -20,7 +20,7 @@ L15cc90:
             goto L15CD08;
         row_page(0xAA);
         row_page(0xAD);
-        func_80153074();
+        fn_1x53074();
         cell_put(0xAD);
     L15CD08:
         row_prep(0x20);

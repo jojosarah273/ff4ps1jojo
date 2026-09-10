@@ -1,16 +1,16 @@
-/* FF4 source-port — interpreted module for func_80144050.
- * Ground truth: src/func_80144050.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_magic_cast_x1900_text_spell.
+ * Ground truth: src/battle_magic_cast_x1900_text_spell.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80144050(void)
+void battle_magic_cast_x1900_text_spell(void)
 {
     /* battle magic-cast: 0x1900 text + spell rows (8768 draws), loops
        L144084 (row refresh), L14411C, L144180 (43E44 wait), L1441D8
        (4x 6B68/8768 spell-cell reads), L14425C; 80145278 intro,
        8013D12C/80140894/8013EF78 and 80140558/80143ED4 prep, 801452C8
        commit. */
-    func_80145278();
+    fn_1x45278();
     sep();
 L144084:
     for (;;) {
@@ -33,12 +33,12 @@ L144084:
         break;
     }
     battle_row_wrap();
-    func_80140894();
+    fn_1x40894();
     battle_row_d548();
 L14411C:
     for (;;) {
         gpu_driver_run();
-        func_80143ED4();
+        battle_rows_d64_d14_d4c8_rows_loop();
         txt_set_cur();
         sep_b();
         cell_pos_back(6);
@@ -89,6 +89,6 @@ L14411C:
         break;
     }
     cell_clear_bank();
-    func_801452C8();
+    fn_1x452c8();
     return;
 }

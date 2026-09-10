@@ -25,7 +25,7 @@ L107cb8:
     latch(0xEC);
     cell_put(0xBB);
     open_row(0xBA);
-    func_80108458();
+    status_table_modulo_state_machine();
     latch(1);
     cell_put(0xDF);
     cell_put(0xEB);
@@ -72,7 +72,7 @@ L107E3C:
     row_page(0xDE);
     if (gate(0x202) != 0)
         return;
-    func_80108458();
+    status_table_modulo_state_machine();
     latch(0x10);
     cell_put(7);
 L107E6C:

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80141E80.
- * Ground truth: src/func_80141E80.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_cast_x6cc0_test_d4_gates_re.
+ * Ground truth: src/battle_cast_x6cc0_test_d4_gates_re.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80141E80(void)
+void battle_cast_x6cc0_test_d4_gates_re(void)
 {
     /* battle cast: 0x6CC0 test, 53D4/6434(2) gates; 8058(8) reads. */
     row_open();

@@ -1,15 +1,15 @@
-/* FF4 source-port — interpreted module for func_80142CB4.
- * Ground truth: src/func_80142CB4.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_e34_prep_loops_l142ce8.
+ * Ground truth: src/battle_rows_e34_prep_loops_l142ce8.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80142CB4(void)
+void battle_rows_e34_prep_loops_l142ce8(void)
 {
     /* battle rows: 80142E34 prep; loops L142CE8 (43E44 + 7F48
        cells) and L142CBC (54D4 gate). */
 L142cbc:
     for (;;) {
-        func_80142E34();
+        battle_rows_xf42c_xf42d_texts_d54();
         sep();
     L142ce8:
         for (;;) {

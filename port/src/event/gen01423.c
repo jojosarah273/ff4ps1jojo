@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80187504.
- * Ground truth: src/func_80187504.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_v0_gates_c_row_at_l187590.
+ * Ground truth: src/battle_v0_gates_c_row_at_l187590.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80187504(void)
+void battle_v0_gates_c_row_at_l187590(void)
 {
     /* battle: v0 gates; 8018767C row at L187590. */
     if (io_just() != 0)

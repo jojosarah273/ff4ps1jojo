@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8011E318.
- * Ground truth: src/func_8011E318.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_verdict_driver_d_e_rows_wit.
+ * Ground truth: src/battle_verdict_driver_d_e_rows_wit.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8011E318(void)
+void battle_verdict_driver_d_e_rows_wit(void)
 {
     /* battle verdict driver: 3D/3E/40 rows with 885C color fills,
        6434(0x202) gate; loops L11E35C (885C/5C64), L11E3C0 (key

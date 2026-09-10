@@ -1,6 +1,6 @@
-/* FF4 source-port — interpreted module for func_801407EC.
- * Ground truth: src/func_801407EC.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x407ec.
+ * Ground truth: src/fn_1x407ec.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801407EC(void) { latch(0x20); func_80140814(); }
+void fn_1x407ec(void) { latch(0x20); fn_1x40814(); }

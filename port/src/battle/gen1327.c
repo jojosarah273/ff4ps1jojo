@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80140598.
- * Ground truth: src/func_80140598.c (byte-verified).
+/* FF4 source-port — interpreted module for jr_a0_the_entry_battle_magic_judge.
+ * Ground truth: src/jr_a0_the_entry_battle_magic_judge.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80140598(void)
+void jr_a0_the_entry_battle_magic_judge(void)
 {
     sep_b();
     cell_pos_back(0xA9);

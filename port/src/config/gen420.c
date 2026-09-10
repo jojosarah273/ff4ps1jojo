@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80127538.
- * Ground truth: src/func_80127538.c (byte-verified).
+/* FF4 source-port — interpreted module for status_rows_x73_x74_windows_xa_xc.
+ * Ground truth: src/status_rows_x73_x74_windows_xa_xc.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80127538(void)
+void status_rows_x73_x74_windows_xa_xc(void)
 {
     /* status rows: 0x73/0x74 windows, 0xA/0xC/0x5A/0x5B/0x5D/0x5E
        cells, 80123958/8011F360/8011F3F8 rows. */
@@ -14,11 +14,11 @@ void func_80127538(void)
     latch(0x7E);
     cell_cursor_dec();
     row_pad();
-    func_80123958();
-    func_80123958();
+    rows_x1d_window_x73_x75_windows_wi();
+    rows_x1d_window_x73_x75_windows_wi();
     page(0x73);
     row_page(0x1D);
-    func_8011F360();
+    rows_x45_window_loop_l11f370_on_c0();
     io_poll(0xFF);
     if (io_just() == 0)
         goto L1275C0;
@@ -30,7 +30,7 @@ L1275C0:
     row_prep(0x20);
     row_read2(0x73);
     row_prep_close();
-    func_8011F3F8();
+    shared_scroll_column_x5a_window_x3();
     row_page(0x5A);
     cell_pull_c8();
     row_page(0x5B);

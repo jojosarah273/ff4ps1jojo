@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80111C2C.
- * Ground truth: src/func_80111C2C.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_xc_xe_windows_x2c_x2e.
+ * Ground truth: src/battle_rows_xc_xe_windows_x2c_x2e.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80111C2C(void)
+void battle_rows_xc_xe_windows_x2c_x2e(void)
 {
     /* battle rows: 0xC/0xE windows, 0x2C/0x2E cells, 0x300-0x303 scroll
        gates; loop L11C54 (3F38(3C3C) + 4008(0x10) row reads), closes

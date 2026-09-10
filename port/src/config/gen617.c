@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80124DC8.
- * Ground truth: src/func_80124DC8.c (byte-verified).
+/* FF4 source-port — interpreted module for rows_x29_x45_x46_windows_c_row_f94.
+ * Ground truth: src/rows_x29_x45_x46_windows_c_row_f94.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80124DC8(void)
+void rows_x29_x45_x46_windows_c_row_f94(void)
 {
     /* rows: 0x29/0x45/0x46 windows, 8012371C row; 3F94(3C3C(0x29))
        + 3F38(3C3C(0x45)) reads. */
@@ -24,6 +24,6 @@ void func_80124DC8(void)
     page(0x45);
     latch(6);
     cell_put(0x45);
-    func_8012371C();
+    fn_1x2371c();
     return;
 }

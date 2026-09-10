@@ -1,16 +1,14 @@
-/* FF4 source-port — interpreted module for func_80140EE0.
- * Ground truth: src/func_80140EE0.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x40ee0.
+ * Ground truth: src/fn_1x40ee0.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-extern int func_80140E78();
-
-void func_80140EE0(void)
+void fn_1x40ee0(void)
 
 {
   page_paint2(0xf473);
-  func_80140E78();
+  fn_1x40e78();
   return;
 }
 

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80155778.
- * Ground truth: src/func_80155778.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x55778.
+ * Ground truth: src/fn_1x55778.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80155778(void)
+void fn_1x55778(void)
 {
     draw_pad(0x2030);
     row_info(0x86);
@@ -35,7 +35,7 @@ L7ec:
             break;
     }
     row_page(0xA9);
-    func_80152908();
+    options_row_v0_gate_picks_f4c_vs_c();
     row_page(0xB0);
     cell_draw(0x32DB);
     row_page(0xB1);
@@ -103,7 +103,7 @@ La6c:
     latch(0xF);
     cell_put(0x82);
     latch(8);
-    func_801526F8();
+    shop_rows_xe1_xe5_xdf_windows_c_ro();
     sep();
     for (;;) {
         txt_cell(0x289C);

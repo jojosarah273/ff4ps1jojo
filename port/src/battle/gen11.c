@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8014CA24.
- * Ground truth: src/func_8014CA24.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x4ca24.
+ * Ground truth: src/fn_1x4ca24.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8014CA24(void)
+void fn_1x4ca24(void)
 {
     sep();
     for (;;) {
@@ -124,7 +124,7 @@ L4d6c:
     cell_put(0x2D);
     latch(0x17);
     cell_put(0x2C);
-    func_8014C9CC();
+    fn_1x4c9cc();
     latch(1);
     txt_draw(0xF261);
     wnd_open(0xF039);
@@ -134,7 +134,7 @@ L4db4:
     latch(0xF0);
     cell_put(0x2D);
 L4dcc:
-    func_8014C9CC();
+    fn_1x4c9cc();
     sep();
     txt_draw(0xF261);
     wnd_open(0xF029);
@@ -146,7 +146,7 @@ L4df4:
     open_row(0x2C);
     latch(0xF8);
     cell_put(0x2D);
-    func_8014BAA4();
+    fn_1x4baa4();
     latch(1);
     txt_draw(0xF261);
     wnd_open(0xF06D);
@@ -154,7 +154,7 @@ L4df4:
 L4e4c:
     wnd_open_cur();
     tail(0x2C);
-    func_8014BAA4();
+    fn_1x4baa4();
     latch_cur();
     txt_draw(0xF261);
     wnd_open(0xF05D);

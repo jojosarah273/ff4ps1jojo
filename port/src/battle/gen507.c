@@ -1,18 +1,10 @@
-/* FF4 source-port — interpreted module for func_801147C0.
- * Ground truth: src/func_801147C0.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x147c0.
+ * Ground truth: src/fn_1x147c0.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-
-
-
-
-
-
-extern int func_80114D18();
-
-void func_801147C0(void)
+void fn_1x147c0(void)
 
 {
   int iVar1;
@@ -24,7 +16,7 @@ void func_801147C0(void)
   wnd_open(0xd0);
   tail(0x89);
   do {
-    func_80114D18();
+    fn_1x14d18();
     page(0x2c);
     cell_set50_from54();
     tail(0x2c);

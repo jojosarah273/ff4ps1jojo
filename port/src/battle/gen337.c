@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80117FA8.
- * Ground truth: src/func_80117FA8.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_stat_rows_xb3_x3d_windows_x.
+ * Ground truth: src/battle_stat_rows_xb3_x3d_windows_x.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80117FA8(void)
+void battle_stat_rows_xb3_x3d_windows_x(void)
 {
     /* battle stat rows: 0xB3/0x3D windows, 0x1000/0x9D5 gates, 0x1001-
        0x1008 cells, 8011818C/801183D8/80118244 rows; loop L117FD0
@@ -32,7 +32,7 @@ L118030:
     poll_spin();
     if (gate_cur() != 0)
         goto L11816C;
-    func_8011818C();
+    battle_rows_x40_x7_x3d_windows_x11();
     cell_fmt2(0x3D);
     cell_push_c8_d58(0x1000);
     row_read(0xE0);
@@ -54,10 +54,10 @@ L11811C:
     cell_pull_c8(0x100B);
     cell_push_c8_d58(0x100E);
     cell_pull_c8(0x100C);
-    func_801183D8();
+    fn_1x183d8();
     return;
 L11816C:
-    func_80118244();
+    battle_rows_x40_x7_x3d_windows_wit();
     wnd_fx_7d();
     return;
 }

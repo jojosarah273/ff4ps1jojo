@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80163774.
- * Ground truth: src/func_80163774.c (byte-verified).
+/* FF4 source-port — interpreted module for options_x11_x34c8_x34c7_xa6_x2017.
+ * Ground truth: src/options_x11_x34c8_x34c7_xa6_x2017.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80163774(void)
+void options_x11_x34c8_x34c7_xa6_x2017(void)
 {
     /* options: 0x11/0x34C8/0x34C7/0xA6/0x2017 texts, 8015329C row;
        gate 5574(0x63). */

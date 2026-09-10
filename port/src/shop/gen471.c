@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8016C4A0.
- * Ground truth: src/func_8016C4A0.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_memory_x48_x50_windows_x7d27.
+ * Ground truth: src/shop_memory_x48_x50_windows_x7d27.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8016C4A0(void)
+void shop_memory_x48_x50_windows_x7d27(void)
 {
     /* shop memory: 0x48/0x50 windows, 0x7D27 text, 0x4B/0x4D cells,
        80176F60 row; loop L16C4DC on 5574(0x38). */

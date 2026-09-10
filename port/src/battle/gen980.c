@@ -1,11 +1,11 @@
-/* FF4 source-port — interpreted module for func_8011B51C.
- * Ground truth: src/func_8011B51C.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x1b51c.
+ * Ground truth: src/fn_1x1b51c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8011B51C(void)
+void fn_1x1b51c(void)
 {
-    func_8011B7B4();
+    battle_rows_x3d_x3e_windows_xfe5_x();
     latch(0xFE);
     do {
         poll_t(0);

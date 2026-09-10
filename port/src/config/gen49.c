@@ -1,15 +1,15 @@
-/* FF4 source-port — interpreted module for func_80122FF4.
- * Ground truth: src/func_80122FF4.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x22ff4.
+ * Ground truth: src/fn_1x22ff4.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80122FF4(void)
+void fn_1x22ff4(void)
 {
 L2FFC:
     for (;;) {
         row_page(0xE7);
         battle_put43();
-        func_8012D1D0();
+        fn_1x2d1d0();
         if (io_just() == 0)
             goto L3064;
         row_page(0xE7);

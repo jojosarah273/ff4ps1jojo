@@ -1,5 +1,5 @@
-/* FF4 source-port — interpreted module for func_8014B36C.
- * Ground truth: src/func_8014B36C.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x4b36c.
+ * Ground truth: src/fn_1x4b36c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
@@ -12,9 +12,7 @@ extern int func_800953F4();
 
 extern int func_80141FC4();
 
-extern int func_8014DA2C();
-
-void func_8014B36C(void)
+void fn_1x4b36c(void)
 
 {
   func_80141FC4();
@@ -26,7 +24,7 @@ void func_8014B36C(void)
   cell_put(1);
   open_row(2);
   txt_set(0xf397);
-  func_8014DA2C();
+  fn_1x4da2c();
   latch(0xff);
   txt_draw(0xf320);
   cell_clear_bank(0xf2d0);

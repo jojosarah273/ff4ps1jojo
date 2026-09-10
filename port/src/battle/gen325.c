@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80106B1C.
- * Ground truth: src/func_80106B1C.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_detail_xda_xe7_x8d_xba_window.
+ * Ground truth: src/shop_detail_xda_xe7_x8d_xba_window.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80106B1C(void)
+void shop_detail_xda_xe7_x8d_xba_window(void)
 {
     /* shop detail: 0xDA/0xE7/0x8D/0xBA windows, 0x2115 title; 5574(8)
        gate; 3F38(3C3C)/76BC/7CC8 cell pairs on 0x8C/0x8B, 0x4B/0x4A;

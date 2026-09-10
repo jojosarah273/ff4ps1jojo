@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8014E424.
- * Ground truth: src/func_8014E424.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x4e424.
+ * Ground truth: src/fn_1x4e424.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8014E424(void)
+void fn_1x4e424(void)
 {
     io_poll(3);
     if (io_just() != 0)

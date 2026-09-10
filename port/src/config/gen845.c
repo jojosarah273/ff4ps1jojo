@@ -1,10 +1,10 @@
-/* FF4 source-port — interpreted module for func_801267A0.
- * Ground truth: src/func_801267A0.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x267a0.
+ * Ground truth: src/fn_1x267a0.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-void func_801267A0(void)
+void fn_1x267a0(void)
 
 {
   row_prep(0x20);

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8012DB9C.
- * Ground truth: src/func_8012DB9C.c (byte-verified).
+/* FF4 source-port — interpreted module for config_saves_ef30_fba4_rows_xc3_xc.
+ * Ground truth: src/config_saves_ef30_fba4_rows_xc3_xc.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8012DB9C(void)
+void config_saves_ef30_fba4_rows_xc3_xc(void)
 {
     /* config saves: 8011EF30/8011FBA4 rows, 0xC3/0xC6 windows with
        12/11 8188 row writes. */

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801198F0.
- * Ground truth: src/func_801198F0.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_buy_detail_xb3_window_x8fb.
+ * Ground truth: src/battle_buy_detail_xb3_window_x8fb.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801198F0(void)
+void battle_buy_detail_xb3_window_x8fb(void)
 {
     /* battle buy detail: 0xB3 window, 0x8FB/0x9D5 texts; 80106370 +
        80109A28 preps, 801082C8/80107C98/80107F3C item rows; loops
@@ -11,9 +11,9 @@ void func_801198F0(void)
        0xED). */
     cell_step();
     tail(0xB3);
-    func_80106370();
+    fn_1x06370();
     wnd_fx_7d_b();
-    func_80109A28();
+    fn_1x09a28();
     txt_set(0x8FB);
     io_poll(0xFF);
     if (io_just() != 0)
@@ -24,11 +24,11 @@ void func_801198F0(void)
         goto L1199B0;
     latch(0x14);
     cell_put(0xB2);
-    func_801082C8();
+    fn_1x082c8();
     config_sub_screen();
     config_confirm_loop_a();
 L119998:
-    func_801175C4();
+    fn_1x175c4();
     battle_wndfx_run();
     return;
 L1199B0:

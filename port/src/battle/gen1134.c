@@ -11,7 +11,7 @@ void battle_rows_sync(void)
     row_open2();
     row_pad();
     row_pad();
-    func_8011F030();
+    column_rows_x29_x2b_x31_x33_window();
     row_done();
     return;
 }

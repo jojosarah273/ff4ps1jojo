@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80131C50.
- * Ground truth: src/func_80131C50.c (byte-verified).
+/* FF4 source-port — interpreted module for ability_rows_x1bc9_x1b93_texts_xe8.
+ * Ground truth: src/ability_rows_x1bc9_x1b93_texts_xe8.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80131C50(void)
+void ability_rows_x1bc9_x1b93_texts_xe8(void)
 {
     /* ability rows: 0x1BC9/0x1B93 texts, 0xE8/0x43 windows,
        80124EAC row; 6BE0(0xB)/87DC(0xB) cells; gate 6434(0x202). */

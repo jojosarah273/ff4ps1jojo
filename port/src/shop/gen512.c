@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8016FCF0.
- * Ground truth: src/func_8016FCF0.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_map_the_fixed_sprite_row_x8a.
+ * Ground truth: src/shop_map_the_fixed_sprite_row_x8a.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8016FCF0(void)
+void shop_map_the_fixed_sprite_row_x8a(void)
 {
     /* shop map: the fixed 15-sprite row (0x8A-0xA0 windows) then
        9448/93DC close. */

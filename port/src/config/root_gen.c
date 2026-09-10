@@ -15,9 +15,9 @@ void final_row(void)
     txt_set(0x1801);
     gate(0x2);
     page_paint2(0x3881);
-    func_801571DC();
+    fn_1x571dc();
     func_80157948();
-    func_801577D0();
+    options_grid_x16a8_gate_picks_the();
     txt_set(0x29A2);
     txt_draw(0x38E5);
     row_read(0x20);
@@ -65,12 +65,12 @@ void final_row(void)
     latch(0x63);
     txt_draw(0x2190);
     txt_draw(0x2210);
-    func_80155778();
+    fn_1x55778();
     cell_clear_bank(0x3975);
     txt_set(0x3975);
     txt_cell_cur();
     gate(0x202);
-    func_801583FC();
+    fn_1x583fc();
     page_paint2(0x3975);
     txt_set(0x3975);
     io_poll(0x5);
@@ -141,7 +141,7 @@ void final_row(void)
     latch(0xF);
     cell_put(0x82);
     latch(0x6);
-    func_801526F8();
+    shop_rows_xe1_xe5_xdf_windows_c_ro();
     page(0xA9);
     txt_set(0x289C);
     row_read(0xE0);
@@ -192,7 +192,7 @@ void final_row(void)
     latch(0xF);
     cell_put(0x82);
     latch(0x8);
-    func_801526F8();
+    shop_rows_xe1_xe5_xdf_windows_c_ro();
     txt_set(0x289C);
     func_80152BC4();
     row_read(0x8);
@@ -205,7 +205,7 @@ void final_row(void)
     latch(0xF);
     cell_put(0x82);
     latch(0x6);
-    func_801526F8();
+    shop_rows_xe1_xe5_xdf_windows_c_ro();
     page(0xA9);
     row_close2();
     cell_draw(0x321D);
@@ -217,7 +217,7 @@ void final_row(void)
     latch(0xF);
     cell_put(0x82);
     latch(0x6);
-    func_801526F8();
+    shop_rows_xe1_xe5_xdf_windows_c_ro();
     page(0xA9);
     txt_set(0x289F);
     cell_draw(0x321D);
@@ -246,7 +246,7 @@ void final_row(void)
     latch(0xF);
     cell_put(0x82);
     latch(0x8);
-    func_801526F8();
+    shop_rows_xe1_xe5_xdf_windows_c_ro();
     txt_set(0x289C);
     func_80152BC4();
     row_read(0x8);
@@ -260,7 +260,7 @@ void final_row(void)
     latch(0xF);
     cell_put(0x82);
     latch(0x6);
-    func_801526F8();
+    shop_rows_xe1_xe5_xdf_windows_c_ro();
     page(0xA9);
     txt_set(0x289C);
     row_read(0xE0);
@@ -339,7 +339,7 @@ void final_row(void)
     cell_state_of();
     cell_dispatch_cur();
     txt_set_cur();
-    func_801530E0();
+    fn_1x530e0();
     io_just();
     key_page(0xBD);
     txt_cell(0x29AD);

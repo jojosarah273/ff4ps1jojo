@@ -231,7 +231,7 @@ d8:
     open_row(0xAF);
     goto q730;
 q728:
-    func_8016E668();
+    battle_stat_overlay_xa9_xab_xb5_xb();
 q730:
     row_page(0xAD);
     cell_tick_or(cell_state(0xAE));
@@ -244,7 +244,7 @@ q730:
     txt_draw(0x3593);
 q790:
     func_8005A234();
-    func_80153264();
+    fn_1x53264();
     txt_set(0x3594);
     txt_draw(0x359A);
     txt_set(0x3595);
@@ -428,7 +428,7 @@ q8D8:
         if (io_go() != 0)
             goto f2C;
         cell_dispatch(cell_state_of());
-        func_8016501C();
+        fn_1x6501c();
         row_page(0x98);
         io_poll(5);
         if (io_go() != 0)
@@ -468,15 +468,15 @@ q8D8:
             continue;
         break;
     }
-    func_801571DC();
-    func_80155778();
+    fn_1x571dc();
+    fn_1x55778();
     cell_clear_bank(0x3975);
     for (;;) {
         txt_set(0x3975);
         txt_cell(0x3540);
         if (gate(0x202) != 0)
             goto fa4;
-        func_801583FC();
+        fn_1x583fc();
     fa4:
         page_paint2(0x3975);
         txt_set(0x3975);

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8018226C.
- * Ground truth: src/func_8018226C.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_anim_v0_gate_tree_with_spin.
+ * Ground truth: src/battle_anim_v0_gate_tree_with_spin.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8018226C(void)
+void battle_anim_v0_gate_tree_with_spin(void)
 {
     /* battle anim: v0 gate tree with spin loops L1822D4/L1822EC
        around the single 80194640 row (L182388); returns L1823D0. */

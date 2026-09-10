@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80160DF8.
- * Ground truth: src/func_80160DF8.c (byte-verified).
+/* FF4 source-port — interpreted module for options_x38e6_x2003_x34ca_x390a_x3.
+ * Ground truth: src/options_x38e6_x2003_x34ca_x390a_x3.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80160DF8(void)
+void options_x38e6_x2003_x34ca_x390a_x3(void)
 {
     /* options: 0x38E6/0x2003/0x34CA/0x390A/0x33C2 texts. */
     latch(4);

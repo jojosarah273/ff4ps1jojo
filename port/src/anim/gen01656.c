@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801780B4.
- * Ground truth: src/func_801780B4.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_anim_d8_preps_loop_l17815c.
+ * Ground truth: src/battle_anim_d8_preps_loop_l17815c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801780B4(void)
+void battle_anim_d8_preps_loop_l17815c(void)
 {
     /* battle anim: 80197378/801972D8/80197308 preps; loop L17815C
        with 80197338 + s2/s7 regcmp branch to 801972D8; 80197398

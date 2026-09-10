@@ -1,10 +1,10 @@
-/* FF4 source-port — interpreted module for func_80176748.
- * Ground truth: src/func_80176748.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x76748.
+ * Ground truth: src/fn_1x76748.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-void func_80176748(void) {
+void fn_1x76748(void) {
     latch(0x80);
     txt_draw(0x2115);
     cell_clear_bank(0x420B);

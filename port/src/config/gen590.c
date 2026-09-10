@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8013F49C.
- * Ground truth: src/func_8013F49C.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_x47_x1c_x1e_x22_x20_wi.
+ * Ground truth: src/battle_rows_x47_x1c_x1e_x22_x20_wi.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8013F49C(void)
+void battle_rows_x47_x1c_x1e_x22_x20_wi(void)
 {
     /* battle rows: 0x47/0x1C/0x1E/0x22/0x20 windows, 8013F354 row,
        0x2A16/0x2A1E texts. */
@@ -14,7 +14,7 @@ void func_8013F49C(void)
     tail(0x1C);
     wnd_open(0xA);
     tail(0x1E);
-    func_8013F354();
+    battle_class_rows_x1c_x22_x1e_wind();
     row_page(0x22);
     sep_a();
     row_open_w(0x70);

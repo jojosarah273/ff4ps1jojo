@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80107B74.
- * Ground truth: src/func_80107B74.c (byte-verified).
+/* FF4 source-port — interpreted module for config_rows_x712_x1440_x1441_texts.
+ * Ground truth: src/config_rows_x712_x1440_x1441_texts.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80107B74(void)
+void config_rows_x712_x1440_x1441_texts(void)
 {
     /* config rows: 0x712/0x1440/0x1441 texts, 0x1441 window; loops
        L107B84 (5958(0x60)) and L107BBC (73E0 gates). */

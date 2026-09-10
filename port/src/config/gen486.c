@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8012CB34.
- * Ground truth: src/func_8012CB34.c (byte-verified).
+/* FF4 source-port — interpreted module for config_dead_key_row_x5d_window_x45.
+ * Ground truth: src/config_dead_key_row_x5d_window_x45.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8012CB34(void)
+void config_dead_key_row_x5d_window_x45(void)
 {
     /* config dead-key row: 0x5D window, 0x45/0x29/0x41 cells,
        4264(1)/41E8(2) gates; 4 cell writes on 0x4/0x2/0x40/0x42. */

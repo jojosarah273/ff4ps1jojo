@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8015F6F0.
- * Ground truth: src/func_8015F6F0.c (byte-verified).
+/* FF4 source-port — interpreted module for options_x2_x28a4_x28a3_texts_f70bc.
+ * Ground truth: src/options_x2_x28a4_x28a3_texts_f70bc.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8015F6F0(void)
+void options_x2_x28a4_x28a3_texts_f70bc(void)
 {
     /* options: 0x2/0x28A4/0x28A3 texts, 80152224/800F70BC/
        80065774/80065534 rows; 5C64(0x202) gate. */

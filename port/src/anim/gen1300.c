@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8017CE9C.
- * Ground truth: src/func_8017CE9C.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_anim_v0_gates_spin_loop_clo.
+ * Ground truth: src/battle_anim_v0_gates_spin_loop_clo.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8017CE9C(void)
+void battle_anim_v0_gates_spin_loop_clo(void)
 {
     /* battle anim: v0 gates; 80195120 + 80197208 spin loop; closes
        with 801971A8/801973B8/80197208. */

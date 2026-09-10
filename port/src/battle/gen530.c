@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80113E3C.
- * Ground truth: src/func_80113E3C.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_twin_of_ccc_x8f_x5f_xa.
+ * Ground truth: src/battle_rows_twin_of_ccc_x8f_x5f_xa.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80113E3C(void)
+void battle_rows_twin_of_ccc_x8f_x5f_xa(void)
 {
     /* battle rows (twin of 80113CCC): 0x8F/0x5F/0xAD/0x17C/0x6FB/0x24
        windows, 80113F3C/8011EA5C rows; loop L113E84 on 41E8(2). */
@@ -18,7 +18,7 @@ void func_80113E3C(void)
 L113e84:
     for (;;) {
         shop_view_run();
-        func_80113F3C();
+        battle_rows_x20_x21_x31_x24_x26_x8();
         row_prep(0x20);
         cell_push9(0x6FB);
         row_scan_cur();

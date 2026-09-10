@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80113F3C.
- * Ground truth: src/func_80113F3C.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_x20_x21_x31_x24_x26_x8.
+ * Ground truth: src/battle_rows_x20_x21_x31_x24_x26_x8.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80113F3C(void)
+void battle_rows_x20_x21_x31_x24_x26_x8(void)
 {
     /* battle rows: 0x20/0x21/0x31/0x24/0x26/0x8F/0x91 windows, 0x6FB/
        0x302/0x303/0x90 cells, 8011416C/80174F0C/801140A4/80113C04/
@@ -22,15 +22,15 @@ L113f5c:
         cell_put_hi9(0x1A);
         row_sync2_cur();
         row_prep_close();
-        func_80174F0C();
+        fn_1x74f0c();
         row_page(0x31);
-        func_801140A4();
-        func_80113C04();
+        battle_rows_fe634_prep_x70_x22_x21();
+        fn_1x13c04();
         row_page(0x31);
         sep_a();
         row_open_w(0x40);
-        func_801140A4();
-        func_80113C54();
+        battle_rows_fe634_prep_x70_x22_x21();
+        fn_1x13c54();
         row_page(0x8F);
         io_poll(0xC0);
         if (io_just() == 0)

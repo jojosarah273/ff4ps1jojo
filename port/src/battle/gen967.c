@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80140AC0.
- * Ground truth: src/func_80140AC0.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_row_loop_l140aec_on_a9.
+ * Ground truth: src/battle_rows_row_loop_l140aec_on_a9.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80140AC0(void)
+void battle_rows_row_loop_l140aec_on_a9(void)
 {
     /* battle rows: 80147414 row; loop L140AEC on 5A90(5) with
        0x2001/0xF cells; closes via 0x971C. */

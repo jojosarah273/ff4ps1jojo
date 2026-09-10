@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801486D8.
- * Ground truth: src/func_801486D8.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_item_detail_xe_x10_x11_wind.
+ * Ground truth: src/battle_item_detail_xe_x10_x11_wind.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801486D8(void)
+void battle_item_detail_xe_x10_x11_wind(void)
 {
     /* battle item detail: 0xE/0x10/0x11 windows, 0x500/0x301-0x303
        cells, 78C4(3C3C(0x10)) rows, 6434(2)/6CC0 gates. */

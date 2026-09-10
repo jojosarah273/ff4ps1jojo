@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801977B8.
- * Ground truth: src/func_801977B8.c (byte-verified).
+/* FF4 source-port — interpreted module for event_jr_t2_dispatch_f078_spin_loo.
+ * Ground truth: src/event_jr_t2_dispatch_f078_spin_loo.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801977B8(void)
+void event_jr_t2_dispatch_f078_spin_loo(void)
 {
     /* event: jr-$t2 dispatch; 8018F078 spin loops (L197860/L197908);
        80197A68 tail; returns at L197948. */

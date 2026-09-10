@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8011DA88.
- * Ground truth: src/func_8011DA88.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_sale_rows_xab_x99_x95_x9b_x9d.
+ * Ground truth: src/shop_sale_rows_xab_x99_x95_x9b_x9d.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8011DA88(void)
+void shop_sale_rows_xab_x99_x95_x9b_x9d(void)
 {
     /* shop sale rows: 0xAB/0x99/0x95/0x9B/0x9D/0x9F windows, 0x2115/
        0x4300/0x2116/0x4302/0x4305/0xADB/0xB1B texts; 4120(0x202)/

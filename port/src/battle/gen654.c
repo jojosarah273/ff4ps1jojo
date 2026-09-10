@@ -1,20 +1,11 @@
-/* FF4 source-port — interpreted module for func_8010F1D4.
- * Ground truth: src/func_8010F1D4.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x0f1d4.
+ * Ground truth: src/fn_1x0f1d4.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
 
-
-
-
-
-
-
-extern int func_801035B0();
-extern int func_8011AB18();
-
-void func_8010F1D4(void)
+void fn_1x0f1d4(void)
 
 {
   wnd_open(0);
@@ -27,8 +18,8 @@ void func_8010F1D4(void)
   page_open(0x1725);
   label(0x1706);
   txt_set(0x1727);
-  func_8011AB18();
-  func_801035B0();
+  shop_main_xca_window_x1700_gate_pi();
+  fn_1x035b0();
   battle_wndfx_run();
   return;
 }

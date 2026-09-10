@@ -13,7 +13,7 @@ void ability_rows_29(void)
     cell_push9_bank(0x20);
     row_prep_close();
     row_close2();
-    func_80124704();
+    fn_1x24704();
     row_close();
     row_close2();
     cell_set50_from40();

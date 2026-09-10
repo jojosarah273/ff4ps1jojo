@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8014A154.
- * Ground truth: src/func_8014A154.c (byte-verified).
+/* FF4 source-port — interpreted module for jr_a0_the_entry_battle_item_action.
+ * Ground truth: src/jr_a0_the_entry_battle_item_action.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8014A154(void)
+void jr_a0_the_entry_battle_item_action(void)
 {
     cell_clear_bank();
     /* jr $a0 : the ~46-entry battle item/action master table (invoked

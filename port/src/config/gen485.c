@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80130AA4.
- * Ground truth: src/func_80130AA4.c (byte-verified).
+/* FF4 source-port — interpreted module for ability_detail_x1b87_x1b83_x1b84_t.
+ * Ground truth: src/ability_detail_x1b87_x1b83_x1b84_t.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80130AA4(void)
+void ability_detail_x1b87_x1b83_x1b84_t(void)
 {
     /* ability detail: 0x1B87/0x1B83/0x1B84 texts, 0x45/0x1B93
        windows, 801308B4 row; gates 6434(2). */
@@ -15,7 +15,7 @@ void func_80130AA4(void)
     row_sel_cell2_cur();
     cell_poke0(cell_state(0x1B83));
     cell_poke0(cell_state(0x1B84));
-    func_801308B4();
+    ability_rows_x1d_x1e_windows_x45_x();
     cell_push_c8_d58(0x1560);
     stat_sync();
     latch_cur();

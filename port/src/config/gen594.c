@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80124B74.
- * Ground truth: src/func_80124B74.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_rows_x73_x75_windows_x163_tex.
+ * Ground truth: src/shop_rows_x73_x75_windows_x163_tex.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80124B74(void)
+void shop_rows_x73_x75_windows_x163_tex(void)
 {
     /* shop rows: 0x73/0x75 windows, 0x163 text, 0x1D window, 80124C64
        row; loops L124B9C (5958(7)) and L124BCC (78C4 cells). */
@@ -23,7 +23,7 @@ L124b9c:
     cell_fmt2(0x41);
 L124bcc:
     for (;;) {
-        func_80124C64();
+        rows_c3c_with_v0_gates_returns_at();
         row_page(0x1D);
         cell_pull_c8(0x163);
         step2();

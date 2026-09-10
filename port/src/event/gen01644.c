@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80180E28.
- * Ground truth: src/func_80180E28.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_anim_twin_v0_spin_l180e74_t.
+ * Ground truth: src/battle_anim_twin_v0_spin_l180e74_t.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80180E28(void)
+void battle_anim_twin_v0_spin_l180e74_t(void)
 {
     /* battle anim (twin): v0 spin (L180E74) then 80194640. */
 L180E5C:

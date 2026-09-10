@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801769B4.
- * Ground truth: src/func_801769B4.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_sell_flow_x1700_header_x7a_x1.
+ * Ground truth: src/shop_sell_flow_x1700_header_x7a_x1.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801769B4(void)
+void shop_sell_flow_x1700_header_x7a_x1(void)
 {
     /* shop sell-flow: 0x1700 header, 0x7A/0x12/0x13 rows, 0x2115/0x420B/
        0x4300/0x4301/0x4304 titles with 800F9868 catalog + 80181DA4
@@ -59,6 +59,6 @@ L176af4:
             continue;
         break;
     }
-    func_80181DA4();
+    battle_anim_d8_spin_loops_l181e04();
     return;
 }

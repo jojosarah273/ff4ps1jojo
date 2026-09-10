@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80141A80.
- * Ground truth: src/func_80141A80.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_loop_l141ab8_on_x14_wi.
+ * Ground truth: src/battle_rows_loop_l141ab8_on_x14_wi.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80141A80(void)
+void battle_rows_loop_l141ab8_on_x14_wi(void)
 {
     /* battle rows: 80140558/80140310 loop L141AB8 on 5958(0x14),
        with 80D0(8)/81B0 cells. */

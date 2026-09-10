@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801652FC.
- * Ground truth: src/func_801652FC.c (byte-verified).
+/* FF4 source-port — interpreted module for options_status_xb5_xb6_windows_xa6.
+ * Ground truth: src/options_status_xb5_xb6_windows_xa6.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801652FC(void)
+void options_status_xb5_xb6_windows_xa6(void)
 {
     /* options status: 0xB5/0xB6 windows, 0xA6 row, 0xB1/0xAF/0xB0/0xB3
        cells, 80152BC4/80152224 rows; 53C0 gate (0x1000 text). */

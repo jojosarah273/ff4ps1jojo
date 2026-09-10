@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8012C980.
- * Ground truth: src/func_8012C980.c (byte-verified).
+/* FF4 source-port — interpreted module for config_save_screen_x1b23_x1b1a_tex.
+ * Ground truth: src/config_save_screen_x1b23_x1b1a_tex.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8012C980(void)
+void config_save_screen_x1b23_x1b1a_tex(void)
 {
     /* config save-screen: 0x1B23/0x1B1A texts, 0x1440/0x45/0x54 windows,
        801210AC/801224D0/8011EF30 preps; L12CA7C confirm loop on

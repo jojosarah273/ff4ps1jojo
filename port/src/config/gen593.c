@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8012833C.
- * Ground truth: src/func_8012833C.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_rows_x51_x46_x45_windows_d8_r.
+ * Ground truth: src/shop_rows_x51_x46_x45_windows_d8_r.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8012833C(void)
+void shop_rows_x51_x46_x45_windows_d8_r(void)
 {
     /* shop rows: 0x51/0x46/0x45 windows, 801387D8 row; gates
        5A90(0x1BE4)/5520(3B9C). */
@@ -24,7 +24,7 @@ L1283C8:
 L1283E0:
     row_page(0x51);
     cell_set50_from40();
-    func_801387D8();
+    rows_x4e_x41_windows_x7fa_text_d0();
     row_prep(0x20);
     page(0x45);
     cell_flags_cmp_pos(cell_peek_cur());

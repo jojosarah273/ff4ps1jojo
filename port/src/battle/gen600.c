@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80111DC8.
- * Ground truth: src/func_80111DC8.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_x7a_x79_windows_xaaf_x.
+ * Ground truth: src/battle_rows_x7a_x79_windows_xaaf_x.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80111DC8(void)
+void battle_rows_x7a_x79_windows_xaaf_x(void)
 {
     /* battle rows: 0x7A/0x79 windows, 0xAAF/0xE1D texts; loop L111E54
        on 6D70(0xAAF)+5A90 gates. */

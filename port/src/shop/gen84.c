@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8016F97C.
- * Ground truth: src/func_8016F97C.c (byte-verified).
+/* FF4 source-port — interpreted module for config_help_status_x43_window_x16a.
+ * Ground truth: src/config_help_status_x43_window_x16a.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8016F97C(void)
+void config_help_status_x43_window_x16a(void)
 {
     /* config help/status: 0x43 window, 0x16A9/0x1A05/0x1A3E-0x1A45
        texts, 801702DC sub-rows, 0x1A0D key icons; fully linear render. */
@@ -47,13 +47,13 @@ void func_8016F97C(void)
     row_prep_close();
     txt_set(0x1A3B);
     wnd_open(0x80);
-    func_801702DC();
+    fn_1x702dc();
     txt_set(0x1A3C);
     wnd_open_cur();
-    func_801702DC();
+    fn_1x702dc();
     txt_set(0x1A3D);
     wnd_open(0x40);
-    func_801702DC();
+    fn_1x702dc();
     latch(0xFF);
     cell_put(4);
     cell_put(5);

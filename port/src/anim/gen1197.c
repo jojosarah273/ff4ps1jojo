@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801779E4.
- * Ground truth: src/func_801779E4.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_substate_router_early_v1_v0.
+ * Ground truth: src/battle_substate_router_early_v1_v0.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801779E4(void)
+void battle_substate_router_early_v1_v0(void)
 {
     /* battle substate router. Early v1/v0 gates select 80184AF8 variants;
        the main chunk then dispatches to 80183A80 / 80185380 / (80183244 |
@@ -19,22 +19,22 @@ L77acc:
     func_80194988();
     func_8017841C();
     status_table_init();
-    func_80106CD4();
+    battle_dispatch_v0_v1_v0_gates_pic();
     func_800FEF7C();
     /* L77B2C/L77B88 gates converge into the main chunk */
-    func_80185AC8();
+    battle_cutscene_b9c_gate_rows_with();
     func_801949F8();
     func_8017794C();
     func_80177790();
-    func_801947B8();
+    battle_anim_v0_gates_returns_at_l1();
     func_8017D078();
     func_8017E220();
-    func_80182CB4();
+    battle_anim_v1_v0_v0_gates_rows();
     func_8017E740();
     func_80178D00();
     /* L77BC8 (v1==v0) runs 80183A80; L77CB0 (v1!=v0) picks 80183244 or
        80183F40 (L77D0C/D20/D44 gates) or 80185380 (L77D6C). The register
        gates are not yet reconstructed: all routes merge at L77D54. */
-    func_8017E794();
+    battle_anim_spin_loop_l17e8cc_gate();
     return;
 }

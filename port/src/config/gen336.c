@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80124358.
- * Ground truth: src/func_80124358.c (byte-verified).
+/* FF4 source-port — interpreted module for equip_status_row_x5a_x5c_x5b_windo.
+ * Ground truth: src/equip_status_row_x5a_x5c_x5b_windo.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80124358(void)
+void equip_status_row_x5a_x5c_x5b_windo(void)
 {
     /* equip/status row: 0x5A/0x5C/0x5B window + 0x22/0x42/0x45 cells,
        801224D0/8011F320/8011EE34/801813C0 rows; loop L124530
@@ -56,7 +56,7 @@ L124530:
             continue;
         break;
     }
-    func_801813C0();
+    battle_anim_v0_gates_d8_row_loop_l();
     return;
 L1245A0:
     return;

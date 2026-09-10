@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801750DC.
- * Ground truth: src/func_801750DC.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x750dc.
+ * Ground truth: src/fn_1x750dc.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801750DC(void)
+void fn_1x750dc(void)
 {
     txt_set(0xFDD);
     io_poll(9);

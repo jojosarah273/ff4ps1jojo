@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80122A9C.
- * Ground truth: src/func_80122A9C.c (byte-verified).
+/* FF4 source-port — interpreted module for config_rows_c_e2c_ef30_f1c_fb74_ro.
+ * Ground truth: src/config_rows_c_e2c_ef30_f1c_fb74_ro.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80122A9C(void)
+void config_rows_c_e2c_ef30_f1c_fb74_ro(void)
 {
     /* config rows: 8012281C/80120E2C/8011EF30/80120F1C/8011FB74
        rows, 0x1A02 text, 0x24 window; gate 6434(0x202). */

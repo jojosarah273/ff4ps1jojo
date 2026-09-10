@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80167844.
- * Ground truth: src/func_80167844.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_twin_with_x70174_fb8_d.
+ * Ground truth: src/battle_rows_twin_with_x70174_fb8_d.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80167844(void)
+void battle_rows_twin_with_x70174_fb8_d(void)
 {
     /* battle rows (twin with 6048): 0x70174/8FB8/71DC preps; loops
        L167868 and L167850 on 5958(0x12)/6434(0x202). */

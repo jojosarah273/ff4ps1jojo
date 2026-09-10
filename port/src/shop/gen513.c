@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8016E870.
- * Ground truth: src/func_8016E870.c (byte-verified).
+/* FF4 source-port — interpreted module for options_x2000_x2003_x2004_gates_x3.
+ * Ground truth: src/options_x2000_x2003_x2004_gates_x3.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8016E870(void)
+void options_x2000_x2003_x2004_gates_x3(void)
 {
     /* options: 0x2000/0x2003/0x2004 gates, 0x357C text, 0xA6 window;
        gates 53D4/4120 pick the 0x2000 cell writes. */

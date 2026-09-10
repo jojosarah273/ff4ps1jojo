@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8010D6A0.
- * Ground truth: src/func_8010D6A0.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_item_confirm_key_ladders_x1.
+ * Ground truth: src/battle_item_confirm_key_ladders_x1.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8010D6A0(void)
+void battle_item_confirm_key_ladders_x1(void)
 {
     /* battle item confirm: 5574 key ladders (0x11/0x30/0x46 codes) pick
        the 0x4A window header color rows, 80170458 shop row render. */
@@ -59,6 +59,6 @@ L10D780:
     tail(0x4E);
     latch(0x1B);
     cell_put(0x49);
-    func_80170458();
+    shop_row_render_x2115_x4300_x4301();
     return;
 }

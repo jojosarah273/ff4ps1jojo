@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80150458.
- * Ground truth: src/func_80150458.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_cast_flow_c_gates_l1504a8_s.
+ * Ground truth: src/battle_cast_flow_c_gates_l1504a8_s.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80150458(void)
+void battle_cast_flow_c_gates_l1504a8_s(void)
 {
     /* battle cast flow: 8007259C gates, L1504A8 spin loop, then the
        stat block (8E50/4264/81B0 cells) and the L150578 scan loop

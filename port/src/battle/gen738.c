@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80110B08.
- * Ground truth: src/func_80110B08.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_x68_x78_windows_x300_x.
+ * Ground truth: src/battle_rows_x68_x78_windows_x300_x.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80110B08(void)
+void battle_rows_x68_x78_windows_x300_x(void)
 {
     /* battle rows: 0x68/0x78 windows, 0x300-0x307 text cells with
        0x7A window reads. */

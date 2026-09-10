@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8016E358.
- * Ground truth: src/func_8016E358.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_memory_x7d21_gate_x2121_x2123.
+ * Ground truth: src/shop_memory_x7d21_gate_x2121_x2123.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8016E358(void)
+void shop_memory_x7d21_gate_x2121_x2123(void)
 {
     /* shop memory: 0x7D21 gate, 0x2121/0x2123/0x2127/0x7D24/0x7D1A
        texts, 0x1C window; loop L16E398 (5958(4)) with the 5D24/5B8C

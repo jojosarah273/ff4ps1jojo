@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80100A98.
- * Ground truth: src/func_80100A98.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_rows_x8fc_x1701_texts_gate_pi.
+ * Ground truth: src/shop_rows_x8fc_x1701_texts_gate_pi.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80100A98(void)
+void shop_rows_x8fc_x1701_texts_gate_pi(void)
 {
     /* shop rows: 0x8FC/0x1701 texts; gate 6434(2) picks the 0x8FC
        reads. */

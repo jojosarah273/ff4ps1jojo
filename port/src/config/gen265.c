@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80151F28.
- * Ground truth: src/func_80151F28.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x51f28.
+ * Ground truth: src/fn_1x51f28.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80151F28(void)
+void fn_1x51f28(void)
 {
     latch_cur();
     cell_cursor_dec();

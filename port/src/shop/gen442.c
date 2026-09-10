@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80162A70.
- * Ground truth: src/func_80162A70.c (byte-verified).
+/* FF4 source-port — interpreted module for options_music_xcd_xce_windows_x33c.
+ * Ground truth: src/options_music_xcd_xce_windows_x33c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80162A70(void)
+void options_music_xcd_xce_windows_x33c(void)
 {
     /* options music: 0xCD/0xCE windows, 0x33C4/0x34CA/0x352E/0x2005/
        0x2051/0x2A2A texts, 8015329C/80153374 rows; 6434(0x80) gate. */

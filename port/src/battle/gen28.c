@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80102770.
- * Ground truth: src/func_80102770.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x02770.
+ * Ground truth: src/fn_1x02770.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80102770(void)
+void fn_1x02770(void)
 {
     cell_state(0xAB);
     row_page_cur();
@@ -118,6 +118,6 @@ L2b08:
     poll_spin();
     txt_draw(0x1706);
 L2c18:
-    func_801026EC();
+    battle_c3c_gate_v0_v1_run_l102760();
     return;
 }

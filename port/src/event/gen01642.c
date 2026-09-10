@@ -9,9 +9,9 @@ void battle_anim_rows_b(void)
        row loop L1816CC; closes 801971A8/8017F9FC. */
     /* s4/v0 latch -> L1816AC */
     func_801808D8();
-    func_80180504();
+    battle_anim_twin_spin_loops_then();
     func_80180414();
-    func_80180314();
+    battle_anim_v0_spin_loops_l180338();
     for (;;) {
         if (io_just() != 0)
             continue;

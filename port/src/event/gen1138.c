@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8018D1AC.
- * Ground truth: src/func_8018D1AC.c (byte-verified).
+/* FF4 source-port — interpreted module for event_a75c_v1_v0_gate_spin_loops_l.
+ * Ground truth: src/event_a75c_v1_v0_gate_spin_loops_l.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8018D1AC(void)
+void event_a75c_v1_v0_gate_spin_loops_l(void)
 {
     /* event: 8018A75C(2) + v1/v0 gate; spin loops L18D300/L18D340;
        8018A75C(1) closes. */

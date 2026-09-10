@@ -1,13 +1,13 @@
-/* FF4 source-port — interpreted module for func_801776E8.
- * Ground truth: src/func_801776E8.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_anim_b8_x2_f9bd0_c8_bec_row.
+ * Ground truth: src/battle_anim_b8_x2_f9bd0_c8_bec_row.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801776E8(void)
+void battle_anim_b8_x2_f9bd0_c8_bec_row(void)
 {
     /* battle anim: 801947B8 x2/800F9BD0/801928C8/80192BEC rows. */
-    func_801947B8();
-    func_801947B8();
+    battle_anim_v0_gates_returns_at_l1();
+    battle_anim_v0_gates_returns_at_l1();
     func_800F9BD0();
     func_801928C8();
     func_80192BEC();

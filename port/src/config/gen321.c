@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80124F60.
- * Ground truth: src/func_80124F60.c (byte-verified).
+/* FF4 source-port — interpreted module for equip_cell_x43_x29_x41_rows_xdb_x3.
+ * Ground truth: src/equip_cell_x43_x29_x41_rows_xdb_x3.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80124F60(void)
+void equip_cell_x43_x29_x41_rows_xdb_x3(void)
 {
     /* equip cell: 0x43/0x29/0x41 rows, 0xDB/0x34/0x45 windows, 801245B4
        in the L125068 loop; 78C4(3C3C(0x34)) cells, 5DA0(0x45)/5B8C

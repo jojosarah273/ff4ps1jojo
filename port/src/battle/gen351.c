@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801187C0.
- * Ground truth: src/func_801187C0.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_x6_x83_x82_x79_x81_win.
+ * Ground truth: src/battle_rows_x6_x83_x82_x79_x81_win.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801187C0(void)
+void battle_rows_x6_x83_x82_x79_x81_win(void)
 {
     /* battle rows: 0x6/0x83/0x82/0x79/0x81 windows, 0x2130/0x212D
        texts, 8017EA90 icon; loop L118860 polls 4120(0x202) and

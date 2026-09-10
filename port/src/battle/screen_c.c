@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80101788.
- * Ground truth: src/func_80101788.c (byte-verified).
+/* FF4 source-port — interpreted module for settings_menu_items.
+ * Ground truth: src/settings_menu_items.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80101788(void)
+void settings_menu_items(void)
 {
     row_page(2);
     row_read(0x80);
@@ -14,11 +14,11 @@ void func_80101788(void)
         return;
     key_page(0x54);
     latch(0x3D);
-    func_8011B6B4();
+    battle_rows_b744_prep_x3d_x1280_ce();
     io_poll(0);
     if (io_just() != 0) {
         latch(0x30);
-        func_8011B6B4();
+        battle_rows_b744_prep_x3d_x1280_ce();
         io_poll(0);
         if (io_just() != 0)
             goto menu2;
@@ -93,7 +93,7 @@ menu2:
         return;
     open_row(0x79);
     for (;;) {                              /* save prompt loop */
-        func_80102ED8();
+        fn_1x02ed8();
         poll_pair(0xB6);
         key_page(0x79);
         row_page(0x79);
@@ -114,7 +114,7 @@ menu2:
 item3:
     io_poll(4);
     if (io_just() != 0) {
-        func_80104354();
+        fn_1x04354();
         return;
     }
     io_poll(5);
@@ -124,14 +124,14 @@ item3:
     io_poll(6);
     if (io_just() == 0)
         return;
-    func_80102494();
+    fn_1x02494();
     return;
 submenu1:                                   /* "cast/settings" 0x21 menu */
     latch(0x30);
     cell_put(0x79);
     open_row(0x7A);
     for (;;) {
-        func_80102E78();
+        fn_1x02e78();
         row_page(0x79);
         io_poll(0x21);
         if (io_go() != 0) {
@@ -189,12 +189,12 @@ submenu1:                                   /* "cast/settings" 0x21 menu */
         txt_draw(0x1723);
         goto memscreen;
     }
-    func_801034E0();
+    shop_rows_b8_twin_of_x7a_xb8_windo();
     return;
 submenu2:                                   /* save screen */
     open_row(0x79);
     for (;;) {
-        func_80102E78();
+        fn_1x02e78();
         poll_pair(0xB5);
         key_page(0x79);
         row_page(0x79);
@@ -206,7 +206,7 @@ submenu2:                                   /* save screen */
     row_read(8);
     if (sel(0x202) == 0)
         goto flow_screen;
-    func_80102414();
+    fn_1x02414();
     cell_clear_bank(0x1704);
     open_row(0xAC);
     open_row(0x7B);
@@ -238,7 +238,7 @@ flow_screen:
     cell_flags_cmp(cell_state(0x1710));
     if (io_just() == 0)
         return;
-    func_80102F38();
+    fn_1x02f38();
     return;
     /* 1701/1712 gate */
     txt_set(0x1701);
@@ -252,7 +252,7 @@ flow_screen:
     cell_flags_cmp(cell_state(0x1713));
     if (io_just() == 0)
         return;
-    func_80102F70();
+    shop_buy_rows_x1715_x1706_x1716_x1();
     return;
     /* 1701/171B/1718/1719 gate */
     txt_set(0x1701);
@@ -266,7 +266,7 @@ flow_screen:
     cell_flags_cmp(cell_state(0x1719));
     if (io_just() == 0)
         return;
-    func_80103030();
+    shop_rows_x1704_xac_x1701_x171b_x1();
     return;
     /* 171F/171C/171D gate */
     txt_set(0x1701);
@@ -294,7 +294,7 @@ flow_screen:
     cell_flags_cmp(cell_state(0x1721));
     if (io_just() == 0)
         return;
-    func_801033E0();
+    fn_1x033e0();
     return;
     /* 1727/1724/1725 gate + sound */
     txt_set(0x1701);
@@ -314,7 +314,7 @@ flow_screen:
     txt_draw(0x1E00);
     battle_cb_86120();
     latch(0x54);
-    func_8011AEAC();
+    battle_item_select_right_side_vari();
     return;
     /* memory screens */
 memscreen:
@@ -385,9 +385,9 @@ mem_loop:
         return;
     latch(1);
     txt_draw(0x1704);
-    func_80171608();
+    fn_1x71608();
     cell_clear_bank(0x1704);
-    func_80171194();
+    fn_1x71194();
     wnd_fx_7d();
     cell_clear_pad();
     cell_clear_bank(0x1704);

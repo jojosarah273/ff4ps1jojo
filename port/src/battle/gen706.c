@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8011818C.
- * Ground truth: src/func_8011818C.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_x40_x7_x3d_windows_x11.
+ * Ground truth: src/battle_rows_x40_x7_x3d_windows_x11.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8011818C(void)
+void battle_rows_x40_x7_x3d_windows_x11(void)
 {
     /* battle rows: 0x40/0x7/0x3D windows, 0x1140/0x1000 cells; loop
        L1181F4 on 5DA0(7)/5B8C(0x202). */

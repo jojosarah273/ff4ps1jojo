@@ -1,12 +1,12 @@
-/* FF4 source-port — interpreted module for func_8016C624.
- * Ground truth: src/func_8016C624.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x6c624.
+ * Ground truth: src/fn_1x6c624.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8016C624(void)
+void fn_1x6c624(void)
 {
     wnd_open(2);
-    func_8016C734();
+    fn_1x6c734();
     row_prep(32);
     row_read2(120);
     sep_a();

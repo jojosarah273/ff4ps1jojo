@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8016EABC.
- * Ground truth: src/func_8016EABC.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_flow_x4200_x1000_x4218_texts.
+ * Ground truth: src/shop_flow_x4200_x1000_x4218_texts.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8016EABC(void)
+void shop_flow_x4200_x1000_x4218_texts(void)
 {
     /* shop flow: 0x4200/0x1000/0x4218 texts, 0x32 window, 80170198
        row; loop L16EB5C polls 9644/9330 pairs; tail 94B8/9448 close. */
@@ -25,7 +25,7 @@ void func_8016EABC(void)
 L16eb5c:
     for (;;) {
         row_sync();
-        func_80170198();
+        shop_c3c_b04_x1000_x2_b9c_gates_a0();
         row_done();
         cell_step();
         step2();

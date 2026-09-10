@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8015F7E8.
- * Ground truth: src/func_8015F7E8.c (byte-verified).
+/* FF4 source-port — interpreted module for options_cast_x2706_text_xd6_xcf_wi.
+ * Ground truth: src/options_cast_x2706_text_xd6_xcf_wi.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8015F7E8(void)
+void options_cast_x2706_text_xd6_xcf_wi(void)
 {
     /* options cast: 0x2706 text, 0xD6/0xCF windows, 8015A374 +
        80153374 rows. */

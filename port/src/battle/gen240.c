@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801425FC.
- * Ground truth: src/func_801425FC.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x425fc.
+ * Ground truth: src/fn_1x425fc.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801425FC(void)
+void fn_1x425fc(void)
 {
     battle_row_wrap();
     battle_row_d548();
@@ -12,11 +12,11 @@ void func_801425FC(void)
     latch(0x70);
     cell_put(4);
     cell_put(6);
-    func_80142BCC();
+    battle_rows_x1_x2_x4_x6_windows_wi();
     latch(4);
     txt_draw(0xF3AC);
     txt_draw(0xF3AD);
-    func_80142CB4();
+    battle_rows_e34_prep_loops_l142ce8();
     txt_set(0x6CC0);
     if (gate(2) != 0)
         goto L268c;
@@ -94,7 +94,7 @@ L28b4:
             return;
         page_open(0xF118);
         label(0xF429);
-        func_80142DC0();
+        battle_rows_e34_d54_d44_loop_on_c();
     }
     return;
 }

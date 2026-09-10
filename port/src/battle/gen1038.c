@@ -1,10 +1,10 @@
-/* FF4 source-port — interpreted module for func_80102F38.
- * Ground truth: src/func_80102F38.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x02f38.
+ * Ground truth: src/fn_1x02f38.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-void func_80102F38(void)
+void fn_1x02f38(void)
 
 {
   latch(1);

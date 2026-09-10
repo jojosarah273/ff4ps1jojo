@@ -1,10 +1,10 @@
-/* FF4 source-port — interpreted module for func_80124158.
- * Ground truth: src/func_80124158.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x24158.
+ * Ground truth: src/fn_1x24158.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80124158(void)
+void fn_1x24158(void)
 {
     wnd_open(54784);
-    func_801240F8();
+    fn_1x240f8();
 }

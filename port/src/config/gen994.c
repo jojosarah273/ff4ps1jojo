@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8015FB70.
- * Ground truth: src/func_8015FB70.c (byte-verified).
+/* FF4 source-port — interpreted module for options_x38e6_x29b5_texts_x8a_wind.
+ * Ground truth: src/options_x38e6_x29b5_texts_x8a_wind.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8015FB70(void)
+void options_x38e6_x29b5_texts_x8a_wind(void)
 {
     /* options: 0x38E6/0x29B5 texts, 0x8A window, 8016046C row;
        loop L15FBA4 on 5574(0xFF). */
@@ -20,6 +20,6 @@ L15fba4:
 L15FBD4:
     tail(0x8A);
     latch(1);
-    func_8016046C();
+    options_ports_x8a_window_x29b5_x29();
     return;
 }

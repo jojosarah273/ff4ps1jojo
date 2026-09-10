@@ -1,12 +1,10 @@
-/* FF4 source-port — interpreted module for func_8015A614.
- * Ground truth: src/func_8015A614.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x5a614.
+ * Ground truth: src/fn_1x5a614.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-extern int func_8015A6CC();
-
-void func_8015A614(void)
+void fn_1x5a614(void)
 
 {
   txt_set(0x397b);
@@ -16,7 +14,7 @@ void func_8015A614(void)
   options_row_run();
   page(0xe3);
   cell_push_c8(0xf9680);
-  func_8015A6CC();
+  options_rows_x1f_xa9_xaa_windows_x();
   return;
 }
 

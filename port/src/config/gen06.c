@@ -1,11 +1,11 @@
-/* FF4 source-port — interpreted module for func_801324F8.
- * Ground truth: src/func_801324F8.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x324f8.
+ * Ground truth: src/fn_1x324f8.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801324F8(void)
+void fn_1x324f8(void)
 {
-    func_80123D3C();
+    fn_1x23d3c();
     battle_mode_dispatch();
     battle_mode_dispatch();
     battle_mode_dispatch();
@@ -27,18 +27,18 @@ void func_801324F8(void)
     func_8011FB74();
     wnd_open(0x188);
     draw_pad_cur();
-    func_801223A4();
+    rows_x29_window_c_bc_fills_loop_l1();
     config_rows_e4();
-    func_801280D4();
-    func_80132C0C();
+    status_row_x30_xc1_x1d_x1e_x1a3c_x();
+    ability_rows_ca4_prep_x1b4a_x1b4b();
     latch(0xFF);
     txt_draw(0x1B4A);
     config_row_7800();
-    func_80132CA4();
+    fn_1x32ca4();
     battle_mode_dispatch();
     anim_noop();
     battle_state_dc400();
-    func_80126590();
+    fn_1x26590();
     cell_clear_bank(0x1B48);
 L6d8:
     for (;;) {
@@ -53,7 +53,7 @@ L6d8:
         sep();
         draw_pad(0x300);
         row_latch_7e();
-        func_80132C0C();
+        ability_rows_ca4_prep_x1b4a_x1b4b();
         midrow_pad88_run();
         config_row_7800();
         midrow_degen();
@@ -88,7 +88,7 @@ L6d8:
         battle_rows_29();
         midrow_pad88();
         config_row_7800();
-        func_8011FF40();
+        fn_1x1ff40();
         battle_row_88();
         return;
     L848:
@@ -122,13 +122,13 @@ L6d8:
         config_row_7800();
     L918:
         for (;;) {
-            func_80132C0C();
+            ability_rows_ca4_prep_x1b4a_x1b4b();
             txt_set(0x1B4A);
             cell_cur_save54_b();
             tail(0x60);
             cell_push_c8_lo(0x60);
             draw_pad(0x152);
-            func_80120A0C();
+            shop_row_x29_x45_windows_x41_x1500();
             config_row_264e8();
             anim_noop();
             midrow_degen();
@@ -209,7 +209,7 @@ L6d8:
             row_open();
             battle_wait_just(0x7E7E);
             row_prep_close();
-            func_80128D4C();
+            fn_1x28d4c();
             row_done();
             row_close();
             row_prep(0x20);

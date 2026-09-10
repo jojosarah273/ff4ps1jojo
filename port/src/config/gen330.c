@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8015E464.
- * Ground truth: src/func_8015E464.c (byte-verified).
+/* FF4 source-port — interpreted module for options_stat_row_xa6_xa9_xab_xe3_x.
+ * Ground truth: src/options_stat_row_xa6_xa9_xab_xe3_x.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8015E464(void)
+void options_stat_row_xa6_xa9_xab_xe3_x(void)
 {
     /* options stat row: 0xA6/0xA9/0xAB/0xE3/0xA6 windows, 0x2050-0x2053
        cells, 80152224 + 8015240C + 80153098/8015316C rows; loop
@@ -52,7 +52,7 @@ L15e4bc:
     }
     return;
 L15E5D0:
-    func_8015316C();
+    fn_1x5316c();
     cell_put(0xA9);
     sep_a();
     row_open_w(5);

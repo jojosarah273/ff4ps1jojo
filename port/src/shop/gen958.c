@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80169290.
- * Ground truth: src/func_80169290.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_loop_f098_intro_x9a_window.
+ * Ground truth: src/battle_loop_f098_intro_x9a_window.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80169290(void)
+void battle_loop_f098_intro_x9a_window(void)
 {
     /* battle loop: 8018F098 intro + 0x9A window; loops L169408
        (80194640/94394) and L16942C (62BC(0x9A)/6630(0x9A) gates);

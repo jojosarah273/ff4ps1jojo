@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8018A438.
- * Ground truth: src/func_8018A438.c (byte-verified).
+/* FF4 source-port — interpreted module for event_ac90_intro_branches_with_f0c.
+ * Ground truth: src/event_ac90_intro_branches_with_f0c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8018A438(void)
+void event_ac90_intro_branches_with_f0c(void)
 {
     /* event: 8018AC90 intro/branches with 8018F0C8 spins; loops
        L18A49C/L18A500/L18A594 on regcmp latches. */

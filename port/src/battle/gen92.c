@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80105AF0.
- * Ground truth: src/func_80105AF0.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_list_render_header_item_rows.
+ * Ground truth: src/shop_list_render_header_item_rows.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80105AF0(void)
+void shop_list_render_header_item_rows(void)
 {
     /* shop list render: 2115/4300/4304 header + 4 item rows (2882/28B2/
        28E2/2912 desc, 4302/4305 cells, 420B cursor); loop L105C48 polls

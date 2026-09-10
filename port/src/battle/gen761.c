@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80145EA4.
- * Ground truth: src/func_80145EA4.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_c3c_b04_b9c_x1000_gate.
+ * Ground truth: src/battle_rows_c3c_b04_b9c_x1000_gate.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80145EA4(void)
+void battle_rows_c3c_b04_b9c_x1000_gate(void)
 {
     /* battle rows: 3C3C/3B04/3B9C + 0x1000 gates with spin loops
        (L145F60); closes via 960C/95A0 on the a1/v0 latch. */

@@ -13,7 +13,7 @@ void config_row_1d(void)
     row_read(0x3F);
     if (sel(0x202) != 0)
         goto L5190;
-    func_80125528();
+    rows_x1d_x29_windows_e8_close_x340();
     return;
 L5190:
     cell_fmt2(0x41);
@@ -103,7 +103,7 @@ L5384:
             continue;
         break;
     }
-    func_801255E8();
+    fn_1x255e8();
     row_close();
     return;
 }

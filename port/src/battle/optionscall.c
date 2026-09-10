@@ -159,7 +159,7 @@ L29c:
     cell_put(0xC);
     txt_cell(0x906);
     cell_put(0xE);
-    func_8010D2A0();
+    battle_rows_c3c_b9c_d54c_a0_linear();
 L2c4:
     page_paint(0x8FF);
     return;

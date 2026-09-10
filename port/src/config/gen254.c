@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8013C094.
- * Ground truth: src/func_8013C094.c (byte-verified).
+/* FF4 source-port — interpreted module for ability_skill_screen_bb3_bb4_heade.
+ * Ground truth: src/ability_skill_screen_bb3_bb4_heade.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8013C094(void)
+void ability_skill_screen_bb3_bb4_heade(void)
 {
     /* ability/skill screen: 1BB3/1BB4 headers, 5B/5A/60 windows;
        8011F724/8011F684/8011F884 + 8012B100 renders; loops to L13C09C
@@ -36,14 +36,14 @@ L13c09c:
             goto L13C184;
         open_row(0x60);
         draw_pad(0x304);
-        func_8012B100();
+        fn_1x2b100();
         return;
     L13C184:
         row_page_cur();
         row_read(0x80);
         if (sel(2) != 0)
             goto L13C1AC;
-        func_8013C554();
+        ability_skill_detail_twin_of_c094();
     L13C1AC:
         row_page(1);
         row_read(1);

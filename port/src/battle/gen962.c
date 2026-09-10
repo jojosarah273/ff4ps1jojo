@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8014CE94.
- * Ground truth: src/func_8014CE94.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_x_cells_x7612_x77b6_lo.
+ * Ground truth: src/battle_rows_x_cells_x7612_x77b6_lo.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8014CE94(void)
+void battle_rows_x_cells_x7612_x77b6_lo(void)
 {
     /* battle rows: 4x 8768 cells (0x7612-0x77B6); loop L14CEAC on
        5958(0x8C). */

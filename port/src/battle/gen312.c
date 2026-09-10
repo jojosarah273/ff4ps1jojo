@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80144C78.
- * Ground truth: src/func_80144C78.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_cast_flow_windows_e44_d14_r.
+ * Ground truth: src/battle_cast_flow_windows_e44_d14_r.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80144C78(void)
+void battle_cast_flow_windows_e44_d14_r(void)
 {
     /* battle cast flow: 2/3/4 windows, 80143E44/80143D14 rows;
        nested scroll loops L144D38/L144D48 (5DD4(4)/5C64(0x202)) and
@@ -45,7 +45,7 @@ L144ca4:
         battle_rows_twin();
         txt_cell_cur();
         cell_draw_cur();
-        func_80143D14();
+        fn_1x43d14();
         cell_cursor_dec();
         cell_push_c8(0xC);
         latch_cur();

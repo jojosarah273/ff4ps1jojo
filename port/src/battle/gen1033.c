@@ -1,13 +1,10 @@
-/* FF4 source-port — interpreted module for func_8010E050.
- * Ground truth: src/func_8010E050.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x0e050.
+ * Ground truth: src/fn_1x0e050.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-
-extern int func_8010E0D0();
-
-void func_8010E050(void)
+void fn_1x0e050(void)
 
 {
   latch(0x80);
@@ -16,7 +13,7 @@ void func_8010E050(void)
   txt_draw(0x4200);
   latch(0xff);
   txt_draw(0x2140);
-  func_8010E0D0();
+  fn_1x0e0d0();
   battle_wndfx_run();
   return;
 }

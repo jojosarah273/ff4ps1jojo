@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801673CC.
- * Ground truth: src/func_801673CC.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_row_xe_x1c_x10_windows_gate.
+ * Ground truth: src/battle_row_xe_x1c_x10_windows_gate.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801673CC(void)
+void battle_row_xe_x1c_x10_windows_gate(void)
 {
     /* battle row: 0xE/0x1C/0x10 windows, 6434(2) gate routes the
        0x1C cursor read; 63F8/6130 cells, 5574/53D4 ladders. */

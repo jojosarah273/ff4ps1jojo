@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80118534.
- * Ground truth: src/func_80118534.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_row_pick_xb3_x3d_x3e_x40_x7.
+ * Ground truth: src/battle_row_pick_xb3_x3d_x3e_x40_x7.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80118534(void)
+void battle_row_pick_xb3_x3d_x3e_x40_x7(void)
 {
     /* battle row pick: 0xB3/0x3D/0x3E/0x40/0x7 windows, 0x1000/
        0x1140/0x1143-0x1146/0x9D5 gates, 8011EA5C closes; loops

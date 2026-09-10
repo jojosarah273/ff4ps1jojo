@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80106370.
- * Ground truth: src/func_80106370.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x06370.
+ * Ground truth: src/fn_1x06370.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80106370(void)
+void fn_1x06370(void)
 {
 L378:
     for (;;) {
@@ -20,9 +20,9 @@ L378:
     open_row(0x8C);
     latch(0x70);
     cell_put(0xBB);
-    func_80107B74();
+    config_rows_x712_x1440_x1441_texts();
     wnd_fx_7d();
-    func_80107830();
+    fn_1x07830();
 L3e8:
     wnd_fx_7d();
     for (;;) {
@@ -46,7 +46,7 @@ L440:
         row_read(0x80);
         if (sel(2) != 0)
             goto L488;
-        func_80106830();
+        fn_1x06830();
         latch(0xFF);
         goto L508;
     L488:
@@ -54,7 +54,7 @@ L440:
         row_read(0x80);
         if (sel(2) != 0)
             goto L518;
-        func_80106830();
+        fn_1x06830();
         row_page(0xBA);
         sep_a();
         cell_poke0(cell_state(0x8C));
@@ -72,7 +72,7 @@ L440:
         row_read(1);
         if (sel(2) != 0)
             goto L5a8;
-        func_80106860();
+        fn_1x06860();
         key_page(0xE7);
         row_page(0x8B);
         cell_set50_from40();
@@ -91,7 +91,7 @@ L440:
         row_read(2);
         if (sel(2) != 0)
             goto L638;
-        func_80106860();
+        fn_1x06860();
         key_page(0xE7);
         row_page(0x8B);
         poll_spin();
@@ -129,9 +129,9 @@ L440:
             goto L438;
         key_page(0xE7);
         key_page(0xBA);
-        func_80106830();
-        func_80107830();
-        func_80106908();
+        fn_1x06830();
+        fn_1x07830();
+        fn_1x06908();
         goto L440;
     L6f8:
         row_page(0x8C);
@@ -144,7 +144,7 @@ L440:
         poll_pair(0x8C);
     L738:
         key_page(0xE7);
-        func_80106860();
+        fn_1x06860();
         goto L438;
     L750:
         row_page(3);
@@ -157,9 +157,9 @@ L440:
             goto L438;
         key_page(0xE7);
         poll_pair(0xBA);
-        func_80106830();
-        func_80107830();
-        func_801068B0();
+        fn_1x06830();
+        fn_1x07830();
+        fn_1x068b0();
         goto L440;
     }
 L7b8:

@@ -9,5 +9,5 @@ void config_row_8468(void)
     row_prep(32);
     cell_push9(62472);
     cell_put_hi9(2);
-    func_80140224();
+    battle_rows_x4_dc_cell_sets_x7612();
 }

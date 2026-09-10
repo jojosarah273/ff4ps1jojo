@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801526F8.
- * Ground truth: src/func_801526F8.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_rows_xe1_xe5_xdf_windows_c_ro.
+ * Ground truth: src/shop_rows_xe1_xe5_xdf_windows_c_ro.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801526F8(void)
+void shop_rows_xe1_xe5_xdf_windows_c_ro(void)
 {
     /* shop rows: 0xE1/0xE5/0xDF windows, 8015240C row + 0xE3; loop
        L15275C on 56AC(3C3C(0xE5)). */

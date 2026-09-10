@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801577D0.
- * Ground truth: src/func_801577D0.c (byte-verified).
+/* FF4 source-port — interpreted module for options_grid_x16a8_gate_picks_the.
+ * Ground truth: src/options_grid_x16a8_gate_picks_the.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801577D0(void)
+void options_grid_x16a8_gate_picks_the(void)
 {
     /* options grid: 0x16A8 gate picks the 0x2001-0x2201 row fill
        vs reversed order; fully parallel to 8016571C's tail. */

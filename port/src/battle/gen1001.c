@@ -1,5 +1,5 @@
-/* FF4 source-port — interpreted module for func_8014AF3C.
- * Ground truth: src/func_8014AF3C.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x4af3c.
+ * Ground truth: src/fn_1x4af3c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
@@ -7,7 +7,7 @@
 
 
 
-void func_8014AF3C(void)
+void fn_1x4af3c(void)
 
 {
   txt_set(0xf431);

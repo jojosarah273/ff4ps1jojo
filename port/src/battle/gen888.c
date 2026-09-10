@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80141B30.
- * Ground truth: src/func_80141B30.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_loop_l141b5c_on_x15.
+ * Ground truth: src/battle_rows_loop_l141b5c_on_x15.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80141B30(void)
+void battle_rows_loop_l141b5c_on_x15(void)
 {
     /* battle rows: 80140558/80140310 loop L141B5C on 5958(0x15). */
     sep();

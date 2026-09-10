@@ -1,10 +1,10 @@
-/* FF4 source-port — interpreted module for func_8016B470.
- * Ground truth: src/func_8016B470.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x6b470.
+ * Ground truth: src/fn_1x6b470.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-void func_8016B470(void)
+void fn_1x6b470(void)
 
 {
   int iVar1;

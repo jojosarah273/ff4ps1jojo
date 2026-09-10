@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8015E84C.
- * Ground truth: src/func_8015E84C.c (byte-verified).
+/* FF4 source-port — interpreted module for options_x14_x280_x2001_cells_c38_c.
+ * Ground truth: src/options_x14_x280_x2001_cells_c38_c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8015E84C(void)
+void options_x14_x280_x2001_cells_c38_c(void)
 {
     /* options: 0x14/0x280/0x2001 cells, 80150C38/8015330C/80058554
        rows; loop L15E890 on 5A90(8). */
@@ -17,7 +17,7 @@ L15e890:
         row_read(0x7F);
         cell_tick_or(cell_state_of());
         cell_draw(0x2001);
-        func_8015330C();
+        rows_u16_d44_d54_swap_chain_with_c();
         step2();
         poll_t(8);
         if (io_just() == 0)

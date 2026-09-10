@@ -1,10 +1,10 @@
-/* FF4 source-port — interpreted module for func_8014DA2C.
- * Ground truth: src/func_8014DA2C.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x4da2c.
+ * Ground truth: src/fn_1x4da2c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 extern u32 D_801CFD68[8];
-void func_8014DA2C(void)
+void fn_1x4da2c(void)
 {
     u32 s0 = 1;
     if (*(u16 *)(D_801CFD68[0] + 0x8000 + 0x726A) == 0x2040)
@@ -27,12 +27,12 @@ void func_8014DA2C(void)
     cell_tick_or(cell_state(0xF24C));
     if (ticker_reblend2(0x202) != 0)
         goto Ldb30;
-    func_8014E38C();
+    fn_1x4e38c();
     return;
 Ldb30:
     row_page_cur();
     txt_draw(0xF485);
-    func_8014D680();
+    battle_rows_d5a0_row_gate_xff_pick();
     page_cur();
     label(0xF279);
     row_page(1);
@@ -61,7 +61,7 @@ Ldbb8:
     row_read(0xF);
     cell_set50_from40();
     txt_draw(0xF27B);
-    func_8014CA24();
+    fn_1x4ca24();
     draw_pad_cur();
     for (;;) {
         cell_push_c8_sel(8);
@@ -86,7 +86,7 @@ Ldbb8:
         if (io_just() != 0)
             break;
     }
-    func_8014CFC4();
+    battle_rows_gates_route_the_xff_wi();
     draw_pad(1);
     cell_push_c8_b4o(2);
     row_read(0x18);
@@ -104,12 +104,12 @@ Lddac:
     latch(0x10);
     txt_draw(0xF24F);
     txt_draw(0xF250);
-    func_80148CAC();
+    battle_rows_xf42b_text_x_xaa_bytes();
     cell_clear_bank(0xF27E);
     cell_clear_bank(0xF27F);
     cell_clear_bank(0xF24A);
     cell_clear_bank(0xF24B);
-    func_8014D080();
+    battle_cast_rows_d4_b98_preps_fac();
     wnd_open_cur();
     label(0xF281);
     if (s0 == 0) {
@@ -118,20 +118,20 @@ Lddac:
     } else if (s0 == 2) {
         func_8007259C();
     }
-    func_8014D98C();
+    battle_rows_gates_x202_route_the_d();
     txt_set(0xF27E);
     cell_tick_and2(0xF29F);
     if (sel(0x202) == 0) {
         txt_set(0xF2A0);
         io_poll(3);
         if (io_just() != 0)
-            func_8013E73C();
+            battle_magic_rows_x4_x2_windows_e5();
     }
 Ldeb8:
     txt_set(0xF2A0);
     io_poll(4);
     if (io_just() != 0)
-        func_8014588C();
+        battle_name_rows_d64_d14_e44_db4_r();
 Ldee0:
     txt_set(0xF281);
     if (gate(2) != 0)
@@ -152,10 +152,10 @@ Ldf40:
     cell_tick_and();
     if (sel(2) != 0)
         goto Ldf78;
-    func_8014D394();
+    fn_1x4d394();
     goto Ldf80;
 Ldf78:
-    func_8014D31C();
+    fn_1x4d31c();
 Ldf80:
     txt_set(0xF2D0);
     if (gate(2) != 0)
@@ -170,11 +170,11 @@ Ldf80:
         goto Le01c;
     cell_push_c8();
     txt_draw(0xF268);
-    func_8014CF14();
-    func_8014EA0C();
+    battle_rows_x1802_x7992_x7b36_cell();
+    battle_rows_x2_window_loop_l14ea34();
     goto Le04c;
 Le01c:
-    func_8014D4D4();
+    fn_1x4d4d4();
     goto Le04c;
 Le02c:
     io_poll(5);
@@ -205,7 +205,7 @@ Le054:
         step2();
         cell_push_c8_b4o(2);
         page_paint2(0xF44E);
-        func_8014D780();
+        battle_item_flow_gate_routes_to_d7();
         goto Le27c;
     Le11c:
         row_read(8);
@@ -214,17 +214,17 @@ Le054:
         row_read(4);
         if (sel(2) != 0)
             goto Le15c;
-        func_8014D31C();
+        fn_1x4d31c();
         goto Le27c;
     Le15c:
         row_page(6);
         cell_cursor_dec();
         row_read(7);
-        func_8014D14C();
+        battle_item_count_x26_x28_x2a_wind();
         row_close2();
         row_read(3);
         txt_draw(0xF281);
-        func_8014D394();
+        fn_1x4d394();
         goto Le27c;
     Le1bc:
         row_page(6);
@@ -234,7 +234,7 @@ Le054:
         row_read(7);
         cell_set50_from40();
         cell_put(8);
-        func_8014EAE4();
+        jr_a0_the_entry_battle_item_cast_t();
         txt_set(0xF24A);
         sep_a();
         cell_poke0(cell_state(6));
@@ -263,16 +263,16 @@ Le054:
         cell_clear_bank(0xF27F);
         txt_set(0xF2A0);
         if (gate(2) == 0)
-            func_8014E424();
+            fn_1x4e424();
         cell_dec_bank(0xF27B);
         if (poll_go(2) == 0)
             goto Lde20;
         txt_set(0xF285);
         if (gate(0x202) != 0)
             goto Le34c;
-        func_8014D31C();
+        fn_1x4d31c();
     Le34c:
-        func_8014E38C();
+        fn_1x4e38c();
         txt_set(0xF284);
         txt_draw(0xF467);
         func_8009B8E4();

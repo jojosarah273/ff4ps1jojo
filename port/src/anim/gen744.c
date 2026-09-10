@@ -1,17 +1,10 @@
-/* FF4 source-port — interpreted module for func_80175D90.
- * Ground truth: src/func_80175D90.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x75d90.
+ * Ground truth: src/fn_1x75d90.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-
-
-
-
-
-extern int func_80175E08();
-
-void func_80175D90(void)
+void fn_1x75d90(void)
 
 {
   int iVar1;
@@ -27,7 +20,7 @@ void func_80175D90(void)
       iVar1 = gate(2);
       if (iVar1 != 0) {
         key_page(0x53);
-        func_80175E08();
+        fn_1x75e08();
       }
     }
   }

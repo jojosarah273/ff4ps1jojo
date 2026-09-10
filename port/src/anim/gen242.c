@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801721E8.
- * Ground truth: src/func_801721E8.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_sell_detail_screen_headers_bu.
+ * Ground truth: src/shop_sell_detail_screen_headers_bu.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801721E8(void)
+void shop_sell_detail_screen_headers_bu(void)
 {
     /* shop sell/detail screen: 1730/1731 headers, buy rows 12/14 with
        per-row gate reads; 80173ED8 draws the stat block, 801714C4 the
@@ -26,7 +26,7 @@ void func_801721E8(void)
     cell_put(0xC);
     txt_set(0x1732);
     cell_put(0xE);
-    func_80173ED8();
+    shop_stat_block_called_by_the_e8_f();
     row_page(0xD7);
     if (gate(0x202) == 0)
         goto L1724B8;

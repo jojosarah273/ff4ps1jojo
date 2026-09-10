@@ -1,5 +1,5 @@
-/* FF4 source-port — interpreted module for func_801702DC.
- * Ground truth: src/func_801702DC.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x702dc.
+ * Ground truth: src/fn_1x702dc.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
@@ -11,7 +11,7 @@
 
 
 
-void func_801702DC(void)
+void fn_1x702dc(void)
 
 {
   row_open();

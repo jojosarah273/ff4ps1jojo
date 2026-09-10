@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80147020.
- * Ground truth: src/func_80147020.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_c3c_b9c_gates_ac_rows_tails.
+ * Ground truth: src/battle_c3c_b9c_gates_ac_rows_tails.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80147020(void)
+void battle_c3c_b9c_gates_ac_rows_tails(void)
 {
     /* battle: 3C3C/3B9C gates; 800728AC rows + 5480/5410 tails. */
     cell_state_of();

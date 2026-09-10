@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80100D50.
- * Ground truth: src/func_80100D50.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x00d50.
+ * Ground truth: src/fn_1x00d50.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80100D50(void)
+void fn_1x00d50(void)
 {
     open_row(0xCD);
     row_page(0xAB);
@@ -21,7 +21,7 @@ Ld80:
 Lde0:
     latch(1);
     cell_put(0xD5);
-    func_80102C30();
+    fn_1x02c30();
     row_page(0xA1);
     row_read(8);
     txt_draw(0x1A02);
@@ -63,7 +63,7 @@ Lee0:
     latch(1);
     cell_put(0xB1);
     latch_cur();
-    func_801163E8();
+    fn_1x163e8();
     open_row(0xB1);
     return;
 Lf6c:
@@ -105,10 +105,10 @@ L1098:
     if (io_just() == 0)
         goto L10d8;
     cell_push_c8();
-    func_8011AEAC();
+    battle_item_select_right_side_vari();
     return;
 L10d8:
-    func_80101230();
+    shop_own_row_x172c_text_x1700_x170();
     cell_push_c8();
     io_poll(0xFB);
     if (io_go() == 0)

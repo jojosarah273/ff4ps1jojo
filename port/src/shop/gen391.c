@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80166218.
- * Ground truth: src/func_80166218.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_cast_flow_d528_c_preps_loop.
+ * Ground truth: src/battle_cast_flow_d528_c_preps_loop.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80166218(void)
+void battle_cast_flow_d528_c_preps_loop(void)
 {
     /* battle cast flow: 8014D528/8016762C preps, loops L1662EC
        (5A90(0x40)) and L16638C (70174/4120(0x202) rows), 80166458
@@ -15,7 +15,7 @@ void func_80166218(void)
     label_cur();
     label_cur();
     wnd_open(0x10);
-    func_8016762C();
+    fn_1x6762c();
     sep();
     /* v1/v0 gate -> L1662E0 */
     cell_state_of();
@@ -44,7 +44,7 @@ L16638c:
         row_read(7);
         cell_push_c8();
         cell_pull60();
-        func_80166458();
+        battle_cast_rows_x2_x4_windows_x76();
         txt_set_cur();
         row_read(3);
         if (sel(0x202) != 0)

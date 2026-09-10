@@ -1,7 +1,7 @@
 /* FF4 source-port — battle/rows_more.c
  *
  * Battle row fragments (exact Phase A decodes).
- * Ground truth: src/func_8010C1AC, 8011EF30.
+ * Ground truth: src/battle_rows_b9c_xedb_b04_c3c_gates, 8011EF30.
  */
 #include <stdint.h>
 

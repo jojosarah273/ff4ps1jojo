@@ -1,5 +1,5 @@
-/* FF4 source-port — interpreted module for func_80143D64.
- * Ground truth: src/func_80143D64.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x43d64.
+ * Ground truth: src/fn_1x43d64.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
@@ -10,7 +10,7 @@
 
 extern int func_80148FA0();
 
-void func_80143D64(void)
+void fn_1x43d64(void)
 
 {
   row_open();

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8011F3F8.
- * Ground truth: src/func_8011F3F8.c (byte-verified).
+/* FF4 source-port — interpreted module for shared_scroll_column_x5a_window_x3.
+ * Ground truth: src/shared_scroll_column_x5a_window_x3.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8011F3F8(void)
+void shared_scroll_column_x5a_window_x3(void)
 {
     /* shared scroll-column: 0x5A window, 0x3E8/0x4200 gates, 0x15B/0x15D
        texts, 0x5E window cells; L11F430 wait loop, then the 8011F67C

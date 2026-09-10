@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8013F5A8.
- * Ground truth: src/func_8013F5A8.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x3f5a8.
+ * Ground truth: src/fn_1x3f5a8.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8013F5A8(void)
+void fn_1x3f5a8(void)
 {
     txt_set(0x3581);
     txt_draw(0x6CC0);
@@ -114,7 +114,7 @@ L77c:
         if (io_just() != 0)
             break;
     }
-    func_80168750();
+    fn_1x68750();
     latch(0x18);
     txt_draw(0x1DD);
     latch(3);

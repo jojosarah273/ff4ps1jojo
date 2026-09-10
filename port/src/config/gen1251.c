@@ -1,10 +1,10 @@
-/* FF4 source-port — interpreted module for func_8012D194.
- * Ground truth: src/func_8012D194.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x2d194.
+ * Ground truth: src/fn_1x2d194.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-void func_8012D194(void)
+void fn_1x2d194(void)
 
 {
   txt_set(0x1b3e);

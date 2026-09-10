@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80134AF8.
- * Ground truth: src/func_80134AF8.c (byte-verified).
+/* FF4 source-port — interpreted module for weapon_sub_menu_x1b39_text_x45_x48.
+ * Ground truth: src/weapon_sub_menu_x1b39_text_x45_x48.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80134AF8(void)
+void weapon_sub_menu_x1b39_text_x45_x48(void)
 {
     /* weapon sub-menu: 0x1B39 text, 0x45/0x48/0x49/0xE5 windows,
        801224D0 row; loop L134BFC (5DD4(0x48)/5C64(2)), gate

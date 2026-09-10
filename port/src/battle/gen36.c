@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8014FA4C.
- * Ground truth: src/func_8014FA4C.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x4fa4c.
+ * Ground truth: src/fn_1x4fa4c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8014FA4C(void)
+void fn_1x4fa4c(void)
 {
     txt_set(0xF2D0);
     io_poll(7);
@@ -61,7 +61,7 @@ Lfc58:
         page(0x1C);
         cell_step();
         tail(0x1C);
-        func_801665C0();
+        options_status_band_x12_x13_x10_x1();
         if (io_go() == 0)
             goto Lfd48;
         continue;
@@ -82,7 +82,7 @@ Lfca8:
 Lfd08:
     for (;;) {
         row_page(0x16);
-        func_801665C0();
+        options_status_band_x12_x13_x10_x1();
         if (io_go() == 0)
             goto Lfd48;
         poll_pair(0x17);

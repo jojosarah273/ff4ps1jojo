@@ -1,14 +1,14 @@
-/* FF4 source-port — interpreted module for func_801482E8.
- * Ground truth: src/func_801482E8.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x482e8.
+ * Ground truth: src/fn_1x482e8.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801482E8(void)
+void fn_1x482e8(void)
 {
     txt_set(0xF107);
     if (gate(2) != 0)
         goto L86c8;
-    func_80148D04();
+    battle_rows_clear_variant_zero_byt();
     page_paint2(0xF108);
     txt_set(0xF108);
     io_poll(0x2A);

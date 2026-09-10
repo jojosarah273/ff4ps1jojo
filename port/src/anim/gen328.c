@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801767D8.
- * Ground truth: src/func_801767D8.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_row_xfd8_title_x3e_x3d_window.
+ * Ground truth: src/shop_row_xfd8_title_x3e_x3d_window.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801767D8(void)
+void shop_row_xfd8_title_x3e_x3d_window(void)
 {
     /* shop row: 0xFD8 title + 0x3E/0x3D windows (76BC/7CC8 pair cells),
        0x5000 gate, 8011F724-style sprint; loops L1768B4/L1768B8

@@ -1,11 +1,11 @@
-/* FF4 source-port — interpreted module for func_801009E8.
- * Ground truth: src/func_801009E8.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x009e8.
+ * Ground truth: src/fn_1x009e8.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801009E8(void)
+void fn_1x009e8(void)
 {
-    func_80100A98();
+    shop_rows_x8fc_x1701_texts_gate_pi();
     latch(1);
     do {
         poll_pair_cur();

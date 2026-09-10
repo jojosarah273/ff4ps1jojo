@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80185AC8.
- * Ground truth: src/func_80185AC8.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_cutscene_b9c_gate_rows_with.
+ * Ground truth: src/battle_cutscene_b9c_gate_rows_with.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80185AC8(void)
+void battle_cutscene_b9c_gate_rows_with(void)
 {
     /* battle cutscene: 3B9C gate rows with spins; 80185764 called
        3x (L185C70/L185D8C/L185EF4); returns at L185F04. */

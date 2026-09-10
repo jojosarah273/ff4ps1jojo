@@ -1,18 +1,10 @@
-/* FF4 source-port — interpreted module for func_80176BFC.
- * Ground truth: src/func_80176BFC.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x76bfc.
+ * Ground truth: src/fn_1x76bfc.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-
-
-
-
-
-
-extern int func_80176C6C();
-
-void func_80176BFC(void)
+void fn_1x76bfc(void)
 
 {
   int iVar1;
@@ -23,11 +15,11 @@ void func_80176BFC(void)
   if (iVar1 == 0) {
     txt_set(0x1bb2);
     poll_spin();
-    func_80176C6C();
+    shop_row_x43_window_x1fff_xfff_x7f();
     txt_set(0x1bb2);
     sep_a();
     row_open_w(8);
-    func_80176C6C();
+    shop_row_x43_window_x1fff_xfff_x7f();
   }
   return;
 }

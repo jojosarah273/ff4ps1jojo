@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8010A2AC.
- * Ground truth: src/func_8010A2AC.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_battle_dialog_xc5_xe9_xd1_win.
+ * Ground truth: src/shop_battle_dialog_xc5_xe9_xd1_win.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8010A2AC(void)
+void shop_battle_dialog_xc5_xe9_xd1_win(void)
 {
     /* shop/battle dialog: 0xC5/0xE9/0xD1 windows, 0xFE6 name text,
        0x774/0x834 stat rows, 80109378 cursor math; four loops
@@ -79,7 +79,7 @@ L10a4a4:
     for (;;) {
         cell_push_c8();
         cell_step();
-        if (func_80109378() != 0)
+        if (battle_key_x42_on_c0_latch_x42_int() != 0)
             cell_pull_c8(0x774);
         else
             cell_pull_c8(0x834);

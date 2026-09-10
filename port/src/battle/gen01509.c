@@ -1,10 +1,10 @@
-/* FF4 source-port — interpreted module for func_8010F11C.
- * Ground truth: src/func_8010F11C.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x0f11c.
+ * Ground truth: src/fn_1x0f11c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-void func_8010F11C(void)
+void fn_1x0f11c(void)
 
 {
   cell_clear_bank(0x171c);

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8012AE00.
- * Ground truth: src/func_8012AE00.c (byte-verified).
+/* FF4 source-port — interpreted module for save_load_status_screen_x1b1f_canc.
+ * Ground truth: src/save_load_status_screen_x1b1f_canc.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8012AE00(void)
+void save_load_status_screen_x1b1f_canc(void)
 {
     /* save/load status screen: 0x1B1F cancel gate, 0x1BC9 open dialog
        (8013441C), 0x1BC8 arrows; 0x1B12 row reads; 0x34 window with
@@ -14,7 +14,7 @@ void func_8012AE00(void)
     if (gate(2) != 0)
         goto L12AE58;
     row_close2();
-    func_8013441C();
+    config_weapon_sub_menu_x1eb_x1b37();
     if (io_go() == 0)
         goto L12AF70;
     goto L12AF60;

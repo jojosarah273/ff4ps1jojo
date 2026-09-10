@@ -1,10 +1,10 @@
-/* FF4 source-port — interpreted module for func_8012E7CC.
- * Ground truth: src/func_8012E7CC.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x2e7cc.
+ * Ground truth: src/fn_1x2e7cc.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-void func_8012E7CC(void) {
+void fn_1x2e7cc(void) {
     row_page(0xD9);
     cell_put(0x1D);
     cell_fmt2(0xD5);

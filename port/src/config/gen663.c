@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8015E758.
- * Ground truth: src/func_8015E758.c (byte-verified).
+/* FF4 source-port — interpreted module for options_row_x3540_x2003_texts_xa9.
+ * Ground truth: src/options_row_x3540_x2003_texts_xa9.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8015E758(void)
+void options_row_x3540_x2003_texts_xa9(void)
 {
     /* options row: 0x3540/0x2003 texts, 0xA9 window, 8015330C row;
        loop L15E7B4 on 6434(0x202)/4120(0x202) gates. */
@@ -22,7 +22,7 @@ L15e7b4:
             goto L15E7F4;
         key_page(0xA9);
     L15E7F4:
-        func_8015330C();
+        rows_u16_d44_d54_swap_chain_with_c();
         step2();
         poll_t(5);
         if (io_just() == 0)

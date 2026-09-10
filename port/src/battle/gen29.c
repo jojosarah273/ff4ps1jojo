@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80101350.
- * Ground truth: src/func_80101350.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x01350.
+ * Ground truth: src/fn_1x01350.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80101350(void)
+void fn_1x01350(void)
 {
     open_row(0xCD);
     row_page(0xAB);
@@ -21,7 +21,7 @@ L1380:
 L13e0:
     latch(1);
     cell_put(0xD5);
-    func_80102C30();
+    fn_1x02c30();
     cell_clear_bank(0x1A02);
     txt_set(0x1704);
     if (gate(0x202) != 0)
@@ -90,7 +90,7 @@ L15e4:
         goto L1620;
     cell_push_c8();
 L1610:
-    func_8011AEAC();
+    battle_item_select_right_side_vari();
     return;
 L1620:
     row_open();

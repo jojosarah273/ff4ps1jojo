@@ -1,5 +1,5 @@
-/* FF4 source-port — interpreted module for func_8014B0D8.
- * Ground truth: src/func_8014B0D8.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x4b0d8.
+ * Ground truth: src/fn_1x4b0d8.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
@@ -7,16 +7,15 @@
 
 
 extern int func_8014B248();
-extern int func_8014B9FC();
 
-void func_8014B0D8(void)
+void fn_1x4b0d8(void)
 
 {
   txt_set(0x34c2);
   row_read(0x80);
   cell_put(0);
   func_8014B248();
-  func_8014B9FC();
+  fn_1x4b9fc();
   return;
 }
 

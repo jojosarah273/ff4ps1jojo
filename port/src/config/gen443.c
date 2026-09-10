@@ -1,11 +1,11 @@
-/* FF4 source-port — interpreted module for func_80152F0C.
- * Ground truth: src/func_80152F0C.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x52f0c.
+ * Ground truth: src/fn_1x52f0c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 extern u16 *D_8019ED44;
 extern u16 *D_8019ED58;
-void func_80152F0C(void)
+void fn_1x52f0c(void)
 {
     txt_set(0x3553);
     if (gate(0x202) == 0) {

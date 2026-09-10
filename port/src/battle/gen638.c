@@ -1,15 +1,15 @@
-/* FF4 source-port — interpreted module for func_8014B6E8.
- * Ground truth: src/func_8014B6E8.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_item_bc_b98c_cac_f4_preps_l.
+ * Ground truth: src/battle_item_bc_b98c_cac_f4_preps_l.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8014B6E8(void)
+void battle_item_bc_b98c_cac_f4_preps_l(void)
 {
     /* battle item: 801442BC/8014B98C/80148CAC/800953F4 preps; loop
        L14B738 (6D70(0x29C5)/5A90(5) gates), closes 8014DA2C/8014D568. */
-    func_801442BC();
+    battle_rows_ef78_prep_loop_l1442e4();
     battle_row_f2a0();
-    func_80148CAC();
+    battle_rows_xf42b_text_x_xaa_bytes();
     func_800953F4();
     txt_set(0x34C2);
     row_read(0x80);
@@ -34,8 +34,8 @@ L14b738:
     }
     open_row(2);
     latch(0x3D);
-    func_8014DA2C();
+    fn_1x4da2c();
     latch_cur();
-    func_8014D568();
+    fn_1x4d568();
     return;
 }

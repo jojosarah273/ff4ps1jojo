@@ -1,17 +1,15 @@
-/* FF4 source-port — interpreted module for func_80141FEC.
- * Ground truth: src/func_80141FEC.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x41fec.
+ * Ground truth: src/fn_1x41fec.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-extern int func_80141F54();
-
-void func_80141FEC(void)
+void fn_1x41fec(void)
 
 {
   page_paint2(0xf327);
   battle_row_d548();
-  func_80141F54();
+  fn_1x41f54();
   cell_clear_bank(0xf326);
   cell_clear_bank(0xf327);
   return;

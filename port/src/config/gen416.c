@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8015FD14.
- * Ground truth: src/func_8015FD14.c (byte-verified).
+/* FF4 source-port — interpreted module for options_cast_x38e6_x2703_texts_x2a.
+ * Ground truth: src/options_cast_x38e6_x2703_texts_x2a.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8015FD14(void)
+void options_cast_x38e6_x2703_texts_x2a(void)
 {
     /* options cast: 0x38E6/0x2703 texts, 0x2A06/0x353F/0x29EB cells,
        0xD6/0xCF windows, 8015A374/80153374 rows; 6434/53C0 gates. */

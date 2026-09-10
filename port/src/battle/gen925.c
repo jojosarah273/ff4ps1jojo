@@ -1,5 +1,5 @@
-/* FF4 source-port — interpreted module for func_80148BE0.
- * Ground truth: src/func_80148BE0.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x48be0.
+ * Ground truth: src/fn_1x48be0.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
@@ -8,7 +8,7 @@
 
 
 
-void func_80148BE0(void) {
+void fn_1x48be0(void) {
     wnd_open(0x20);
     do {
         txt_cell(0x33F);

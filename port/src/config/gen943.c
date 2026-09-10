@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80121C4C.
- * Ground truth: src/func_80121C4C.c (byte-verified).
+/* FF4 source-port — interpreted module for rows_x43_x29_windows_with_f94_c3c.
+ * Ground truth: src/rows_x43_x29_windows_with_f94_c3c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80121C4C(void)
+void rows_x43_x29_windows_with_f94_c3c(void)
 {
     /* rows: 0x43/0x29 windows with 3F94(3C3C) reads; linear. */
     stat_sync();

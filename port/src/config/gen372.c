@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8013F354.
- * Ground truth: src/func_8013F354.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_class_rows_x1c_x22_x1e_wind.
+ * Ground truth: src/battle_class_rows_x1c_x22_x1e_wind.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8013F354(void)
+void battle_class_rows_x1c_x22_x1e_wind(void)
 {
     /* battle class rows: 0x1C/0x22/0x1E windows, 3F94(3C3C) + 7FCC
        cells, 64EC(2) gates; loop L13F3BC (7B40/5C64). */

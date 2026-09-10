@@ -1,22 +1,22 @@
-/* FF4 source-port — interpreted module for func_801121C4.
- * Ground truth: src/func_801121C4.c (byte-verified).
+/* FF4 source-port — interpreted module for s2_branch_register.
+ * Ground truth: src/s2_branch_register.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801121C4(void)
+void s2_branch_register(void)
 {
     wnd_fx_2100();
     latch(0x17);
     txt_draw(0x212C);
     cell_clear_bank(0x2130);
     cell_clear_bank(0x2131);
-    func_80170884();
+    fn_1x70884();
     cell_clear_bank(0x420B);
     wnd_open(0xEC80);
     label(0x4302);
     latch(8);
     txt_draw(0x4304);
-    func_8017091C();
+    fn_1x7091c();
     wnd_open_cur();
     for (;;) {
         cell_push_c8();
@@ -46,14 +46,14 @@ void func_801121C4(void)
     tail(0x3D);
     latch(8);
     cell_put(0x3C);
-    func_801766B0();
+    fn_1x766b0();
     wnd_open(0x31C0);
     tail(0x47);
     wnd_open(0x380);
     tail(0x45);
     wnd_open(0xFB80);
     tail(0x3D);
-    func_801766B0();
+    fn_1x766b0();
     wnd_open(0x4000);
     tail(0x47);
     wnd_open(0x80);
@@ -62,7 +62,7 @@ void func_801121C4(void)
     tail(0x3D);
     latch(0x1A);
     cell_put(0x3C);
-    func_801766B0();
+    fn_1x766b0();
     /* s2 branch (register) */
     battle_mode_dispatch();
     battle_mode_dispatch();
@@ -114,7 +114,7 @@ L24d0:
     cell_put(0xCB);
     latch(0xD0);
     cell_put(0xB2);
-    func_80108330();
+    fn_1x08330();
     config_sub_screen();
     config_confirm_loop_a();
     open_row(0xCB);

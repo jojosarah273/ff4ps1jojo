@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8014A4DC.
- * Ground truth: src/func_8014A4DC.c (byte-verified).
+/* FF4 source-port — interpreted module for jr_a0_twin_of_a154_same_entry_batt.
+ * Ground truth: src/jr_a0_twin_of_a154_same_entry_batt.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8014A4DC(void)
+void jr_a0_twin_of_a154_same_entry_batt(void)
 {
     cell_clear_bank();
     /* jr $a0 : twin of 8014A154 (same 46-entry battle item/action

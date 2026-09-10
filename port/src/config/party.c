@@ -2,7 +2,7 @@
  *
  * Formation summary + formation-row + ability-page drivers (exact
  * Phase A decodes).
- * Ground truth: src/func_8012E33C, 8012EAC0, 80137938.
+ * Ground truth: src/formation_summary_xd9_xda_windows, 8012EAC0, 80137938.
  */
 #include <stdint.h>
 

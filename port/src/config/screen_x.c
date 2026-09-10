@@ -40,7 +40,7 @@ Ld90:
     latch(0x21);
     cell_draw(0x2051);
     row_prep(0x20);
-    func_80152A20();
+    options_row_v0_gate_picks_e8_vs_cc();
     row_sel2_cur();
     cell_put_hi9(0xA9);
     row_prep_close();
@@ -53,7 +53,7 @@ Ld90:
     }
 Le38:
     cell_draw_cur();
-    func_80161C48();
+    fn_1x61c48();
     return;
 Le68:
     latch(3);
@@ -110,7 +110,7 @@ Lfb8:
     latch(0xF);
     cell_put(0x82);
     latch(6);
-    func_801526F8();
+    shop_rows_xe1_xe5_xdf_windows_c_ro();
     txt_set(0x28A0);
     row_read(0x7F);
     cell_put(0xDF);

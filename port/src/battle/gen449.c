@@ -7,18 +7,18 @@ void func_8010FEEC(void)
 {
     /* battle row: 0x89/0x7A windows, 80110024/8011050C/801100BC/
        8011EA5C; loops L10FF14 and L10FF8C on 5958(0x20). */
-    func_80110024();
+    fn_1x10024();
     wnd_open_cur();
     tail(0x89);
     open_row(0x7A);
 L10ff14:
     for (;;) {
-        func_8011050C();
+        fn_1x1050c();
         open_row(0x28);
         row_page(0x89);
         cell_put(0x29);
         cell_put(0x2B);
-        func_801100BC();
+        battle_rows_x3b0_x3b1_x410_x411_ce();
         page(0x89);
         cell_step();
         tail(0x89);
@@ -32,7 +32,7 @@ L10ff14:
     open_row(0x7A);
 L10ff8c:
     for (;;) {
-        func_8011050C();
+        fn_1x1050c();
         open_row(0x28);
         row_page(0x89);
         cell_tick_half();
@@ -41,7 +41,7 @@ L10ff8c:
         cell_put(0x29);
         latch(0x20);
         cell_put(0x2B);
-        func_801100BC();
+        battle_rows_x3b0_x3b1_x410_x411_ce();
         page(0x89);
         cell_step();
         tail(0x89);

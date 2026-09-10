@@ -1,12 +1,10 @@
-/* FF4 source-port — interpreted module for func_8012E700.
- * Ground truth: src/func_8012E700.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x2e700.
+ * Ground truth: src/fn_1x2e700.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-extern int func_8012E7CC();
-
-void func_8012E700(void)
+void fn_1x2e700(void)
 
 {
   int iVar1;
@@ -15,7 +13,7 @@ void func_8012E700(void)
   do {
     poll_pair(0xd7);
     key_page(0xd5);
-    func_8012E7CC();
+    fn_1x2e7cc();
     midrow_pad88_run();
     cell_set50_from54();
     iVar1 = poll_go(0x202);

@@ -1,13 +1,13 @@
-/* FF4 source-port — interpreted module for func_8012C42C.
- * Ground truth: src/func_8012C42C.c (byte-verified).
+/* FF4 source-port — interpreted module for config_rows_twin_of_c360_with_xb_c.
+ * Ground truth: src/config_rows_twin_of_c360_with_xb_c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8012C42C(void)
+void config_rows_twin_of_c360_with_xb_c(void)
 {
     /* config rows (twin of 8012C360 with 0xB const): 8012C0A8 prep,
        0x60/0x45 windows. */
-    func_8012C0A8();
+    config_save_flow_x60_x45_windows_x();
     /* regcmp v0/v1 -> L12C4E8 */
     draw_pad(0xB);
     row_prep(0x20);

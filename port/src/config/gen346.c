@@ -1,14 +1,14 @@
-/* FF4 source-port — interpreted module for func_80138D24.
- * Ground truth: src/func_80138D24.c (byte-verified).
+/* FF4 source-port — interpreted module for ability_party_screen_x1a88_x1bb4_x.
+ * Ground truth: src/ability_party_screen_x1a88_x1bb4_x.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80138D24(void)
+void ability_party_screen_x1a88_x1bb4_x(void)
 {
     /* ability/party screen: 0x1A88/0x1BB4/0x1BB0-0x1BB5 texts,
        sub-dispatchers 8012E844/80120070 and stat rows 80126070/
        80126528/8012B168/8012B0D8; loops at L138D38. */
-    func_80139AFC();
+    fn_1x39afc();
 L138d38:
     for (;;) {
         midrow_paint_b();
@@ -39,9 +39,9 @@ L138d38:
     L138E08:
         draw_pad(0x310);
         row_latch_7e();
-        func_80139CA4();
+        fn_1x39ca4();
         wnd_open(0x3188);
-        func_80126070();
+        fn_1x26070();
         midrow_pad88_run();
         midrow_degen();
         row_page(1);
@@ -65,15 +65,15 @@ L138d38:
         cell_clear_bank(0x1BB0);
         cell_clear_bank(0x1BB1);
         wnd_open(0x1340);
-        func_8012E844();
+        party_form_formation_screen_x1d_x1();
         wnd_open_cur();
         label(0x1B1D);
         wnd_open_cur();
         txt_set(0x1BAF);
-        func_80120070();
-        func_80124130();
-        func_80124158();
-        func_80138CB0();
+        open_depth_guard_in_the_menu_regio();
+        fn_1x24130();
+        fn_1x24158();
+        rows_x48c0_x1a71_texts_xe0_window();
         animation_row_300b();
         animation_row_310();
         config_row_264e8();

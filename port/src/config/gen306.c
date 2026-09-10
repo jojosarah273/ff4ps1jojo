@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8012CF18.
- * Ground truth: src/func_8012CF18.c (byte-verified).
+/* FF4 source-port — interpreted module for config_sub_menu_file_save_x45_wind.
+ * Ground truth: src/config_sub_menu_file_save_x45_wind.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8012CF18(void)
+void config_sub_menu_file_save_x45_wind(void)
 {
     /* config sub-menu (file save): 0x45 window, 0x1B3B text, 0x15C0
        wait gate; 8012D204 cursor, 8012C250/80120A0C/801210AC/8011FB74/
@@ -67,21 +67,21 @@ L12cf28:
         func_8011FB74();
         draw_pad(0x29A);
         row_page(0xED);
-        func_80120A0C();
+        shop_row_x29_x45_windows_x41_x1500();
         page_paint2(0x1BC8);
         row_close2();
         wnd_open(0x39A);
-        func_8012FBB0();
+        fn_1x2fbb0();
         cell_clear_bank(0x1BC8);
         battle_row_45b();
-        func_80169170();
+        rows_x1e05_text_x29_x14a_windows_f();
         config_row_a600();
         config_row_f320();
         row_prep(0x10);
         return;
     L12CF90:
         row_prep(0x10);
-        func_8012C250();
+        config_rows_x1b3c_x1b3b_x1440_text();
         return;
     }
 }

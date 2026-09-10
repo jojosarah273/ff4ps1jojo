@@ -1,10 +1,10 @@
-/* FF4 source-port — interpreted module for func_8015D3E8.
- * Ground truth: src/func_8015D3E8.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x5d3e8.
+ * Ground truth: src/fn_1x5d3e8.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-void func_8015D3E8(void) {
+void fn_1x5d3e8(void) {
     page(0xA6);
     txt_cell(0x2004);
     row_read(0xCF);

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8016501C.
- * Ground truth: src/func_8016501C.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x6501c.
+ * Ground truth: src/fn_1x6501c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8016501C(void)
+void fn_1x6501c(void)
 {
     txt_set(0x289C);
     row_read(7);
@@ -53,14 +53,14 @@ L5080:
     wnd_open(0x270F);
     tail(0xB3);
     latch(9);
-    func_801652FC();
+    options_status_xb5_xb6_windows_xa6();
     txt_set(0x289E);
     row_read(0x1F);
     cell_put(0xB1);
     wnd_open(0x3E7);
     tail(0xB3);
     latch(0xD);
-    func_801652FC();
+    options_status_xb5_xb6_windows_xa6();
     wnd_open(0x7F);
     latch(0xFF);
     for (;;) {
@@ -90,7 +90,7 @@ L5288:
         io_poll(0xFF);
         if (io_just() != 0)
             goto L52bc;
-        func_8016543C();
+        options_sub_screen_x289c_x289d_x29();
     L52bc:
         key_page(0xB1);
         key_page(0xB3);

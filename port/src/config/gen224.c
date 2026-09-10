@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8013B270.
- * Ground truth: src/func_8013B270.c (byte-verified).
+/* FF4 source-port — interpreted module for ability_spell_screen_x48_x49_windo.
+ * Ground truth: src/ability_spell_screen_x48_x49_windo.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8013B270(void)
+void ability_spell_screen_x48_x49_windo(void)
 {
     /* ability/spell screen: 0x48/0x49 windows, 0x1BC7 text, 801210AC/
        80124EAC/80120A0C/801224F8/80122518/80122334/801241B8/8011F684/
@@ -24,7 +24,7 @@ L13b2cc:
         row_sync();
         cell_cur_save54_b();
         txt_cell_cur();
-        func_80120A0C();
+        shop_row_x29_x45_windows_x41_x1500();
         row_done();
         row_sync();
         func_801224F8();
@@ -32,8 +32,8 @@ L13b2cc:
         draw_pad_cur();
         battle_rows_100();
         row_done();
-        func_80122334();
-        func_80122334();
+        rows_u16_d44_d58_swap_with_c_prep();
+        rows_u16_d44_d58_swap_with_c_prep();
         key_page(0x48);
         row_page(0x48);
         io_poll(5);
@@ -46,7 +46,7 @@ L13b2cc:
 L13b3bc:
     for (;;) {
         row_page(0x45);
-        func_8012D1D0();
+        fn_1x2d1d0();
         if (io_just() == 0)
             goto L13B414;
         key_page(0x45);
@@ -84,7 +84,7 @@ L13b458:
             row_prep(0x20);
             row_prep_close();
             row_page(0x45);
-            func_8013B804();
+            fn_1x3b804();
             cell_tick_half();
             sep_a();
             row_open_w(0x81);
@@ -122,7 +122,7 @@ L13b458:
             latch(4);
         L13B660:
             txt_draw(0x1BC7);
-            func_8013B840();
+            fn_1x3b840();
             if (io_just() != 0)
                 continue;
             goto L13B680;
@@ -142,7 +142,7 @@ L13b458:
             latch_cur();
         L13B6D0:
             txt_draw(0x1BC7);
-            func_8013B840();
+            fn_1x3b840();
             if (io_just() != 0)
                 continue;
             break;
@@ -152,7 +152,7 @@ L13b458:
         row_read(3);
         if (sel(2) != 0)
             continue;
-        func_8013B7C0();
+        fn_1x3b7c0();
         poll_spin();
         poll_spin();
         if (poll_go_cur() != 0)

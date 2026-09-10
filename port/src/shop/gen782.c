@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80167774.
- * Ground truth: src/func_80167774.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_x70174_fb8_dc_preps_b2.
+ * Ground truth: src/battle_rows_x70174_fb8_dc_preps_b2.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80167774(void)
+void battle_rows_x70174_fb8_dc_preps_b2(void)
 {
     /* battle rows: 0x70174/8FB8/71DC preps, 5B2C(3B04) check; loops
        L167798 and L167780 on 5958(0x12)/6434(0x202). */

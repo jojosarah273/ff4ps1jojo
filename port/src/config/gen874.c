@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8015D1C8.
- * Ground truth: src/func_8015D1C8.c (byte-verified).
+/* FF4 source-port — interpreted module for options_dispatch_a234_prep_xd2_xd3.
+ * Ground truth: src/options_dispatch_a234_prep_xd2_xd3.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8015D1C8(void)
+void options_dispatch_a234_prep_xd2_xd3(void)
 {
     /* options dispatch: 8005A234 prep, 0xD2/0xD3 windows, 0xAB/0x3598/
        0x3535 texts; the 6-entry jr-a0 table selects the value-row:

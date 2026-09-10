@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8010D894.
- * Ground truth: src/func_8010D894.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_row_x7_x3d_x3e_windows_xfe5.
+ * Ground truth: src/battle_row_x7_x3d_x3e_windows_xfe5.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8010D894(void)
+void battle_row_x7_x3d_x3e_windows_xfe5(void)
 {
     /* battle row: 0x7/0x3D/0x3E windows, 0xFE5/0x1701 texts, 0x12E0
        gate; loop L10D96C (5A90/53D4). */

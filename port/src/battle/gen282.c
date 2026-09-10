@@ -1,15 +1,15 @@
-/* FF4 source-port — interpreted module for func_80141530.
- * Ground truth: src/func_80141530.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_spell_tab_flow_x38e8_x38e9.
+ * Ground truth: src/battle_spell_tab_flow_x38e8_x38e9.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80141530(void)
+void battle_spell_tab_flow_x38e8_x38e9(void)
 {
     /* battle spell-tab flow: 0x38E8/0x38E9 rows, 0x388E/0x388F texts,
        0x1E00/0x1E02 level gate, 0x352D/0x388B/0x4218/0x1811/0x1812
        detail rows; 80145408/80167914/80169128 preps. */
-    func_80145408();
-    func_80167914();
+    fn_1x45408();
+    shop_c3c_b04_x3_gates_t0_t1_regcmp();
     txt_set(0x38E8);
     if (gate(2) != 0)
         goto L1415C4;

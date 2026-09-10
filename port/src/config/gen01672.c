@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8015236C.
- * Ground truth: src/func_8015236C.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x5236c.
+ * Ground truth: src/fn_1x5236c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8015236C(void)
+void fn_1x5236c(void)
 {
     u8 *p = (u8 *)cell_state(0x2000);
     u32 a = p[0x193D] | (p[0x193E] << 8);

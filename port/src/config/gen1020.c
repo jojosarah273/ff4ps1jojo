@@ -1,5 +1,5 @@
-/* FF4 source-port — interpreted module for func_80121FDC.
- * Ground truth: src/func_80121FDC.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x21fdc.
+ * Ground truth: src/fn_1x21fdc.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
@@ -7,7 +7,7 @@
 
 extern int func_80121BE4();
 
-void func_80121FDC(void)
+void fn_1x21fdc(void)
 
 {
   latch(0xf8);

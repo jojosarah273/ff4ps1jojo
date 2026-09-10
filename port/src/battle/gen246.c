@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8011CE18.
- * Ground truth: src/func_8011CE18.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x1ce18.
+ * Ground truth: src/fn_1x1ce18.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8011CE18(void)
+void fn_1x1ce18(void)
 {
     open_row(0x99);
     row_page(0x44);

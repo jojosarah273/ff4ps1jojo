@@ -14,5 +14,5 @@ void func_801431E8(void)
     gpu_driver_run();
     sep();
     D_8019ED54[0] = D_8019ED44[0];
-    func_80142E90();
+    fn_1x42e90();
 }

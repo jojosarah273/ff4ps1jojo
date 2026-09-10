@@ -1,7 +1,7 @@
 /* FF4 source-port — config/banner.c
  *
  * Options banner rows (byte-verified on gcc-2.95.2; exact decodes).
- * Ground truth: src/func_80160AAC, 80160B8C, 80162628.
+ * Ground truth: src/options_banner_x2726_x2725_x28a2_x, 80160B8C, 80162628.
  */
 #include <stdint.h>
 

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801793F8.
- * Ground truth: src/func_801793F8.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_anim_e8_fc_preps_v1_v0_gate.
+ * Ground truth: src/battle_anim_e8_fc_preps_v1_v0_gate.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801793F8(void)
+void battle_anim_e8_fc_preps_v1_v0_gate(void)
 {
     /* battle anim: 80194394/801928E8/801942FC preps; v1/v0 gate picks
        8008CB5C/800888C0 rows; 801792D0 closes. */

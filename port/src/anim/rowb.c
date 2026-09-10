@@ -31,7 +31,7 @@ L0c8:
     cell_put(0xC);
     txt_set(0x1722);
     cell_put(0xE);
-    func_80173ED8();
+    shop_stat_block_called_by_the_e8_f();
     row_page(0xD7);
     if (gate(0x202) == 0)
         goto L63c;
@@ -40,14 +40,14 @@ L0c8:
     if (io_just() != 0)
         goto L140;
     latch(5);
-    func_80171E18();
+    shop_rows_xc_xe_xad_windows_x4f1_x();
     return;
 L140:
     latch(3);
     goto L1b0;
 L150:
     row_page(0xB8);
-    func_801729E0();
+    shop_detail_wanted_x4c0_x4c7_texts();
     latch(0x70);
     cell_put(0xC);
     latch(0x70);

@@ -1,5 +1,5 @@
-/* FF4 source-port — interpreted module for func_80134A50.
- * Ground truth: src/func_80134A50.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x34a50.
+ * Ground truth: src/fn_1x34a50.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
@@ -7,7 +7,7 @@
 
 
 
-void func_80134A50(void)
+void fn_1x34a50(void)
 
 {
   int iVar1;

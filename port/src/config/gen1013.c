@@ -1,10 +1,10 @@
-/* FF4 source-port — interpreted module for func_8012E758.
- * Ground truth: src/func_8012E758.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x2e758.
+ * Ground truth: src/fn_1x2e758.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 extern u8 *D_8019ED40;
-void func_8012E758(void)
+void fn_1x2e758(void)
 {
     u8 *p = D_8019ED40;
     *p = (u8)(*p << 5);

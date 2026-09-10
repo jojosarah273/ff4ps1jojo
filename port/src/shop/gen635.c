@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801617D8.
- * Ground truth: src/func_801617D8.c (byte-verified).
+/* FF4 source-port — interpreted module for options_bars_x2001_xa9_xaa_cells_l.
+ * Ground truth: src/options_bars_x2001_xa9_xaa_cells_l.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801617D8(void)
+void options_bars_x2001_xa9_xaa_cells_l(void)
 {
     /* options bars: 0x2001/0xA9/0xAA cells; loop L161820 on 5A90(5). */
     sep();

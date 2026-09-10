@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80145C74.
- * Ground truth: src/func_80145C74.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_status_detail_gate_spin_c_t.
+ * Ground truth: src/battle_status_detail_gate_spin_c_t.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80145C74(void)
+void battle_status_detail_gate_spin_c_t(void)
 {
     /* battle status detail: 6434(2) gate spin (8007259C), then the stat
        block (8007411C + 76BC pairs) and the L145D4C refresh loop with

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80125DF8.
- * Ground truth: src/func_80125DF8.c (byte-verified).
+/* FF4 source-port — interpreted module for rows_x145_text_loops_l125e28_d70_c.
+ * Ground truth: src/rows_x145_text_loops_l125e28_d70_c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80125DF8(void)
+void rows_x145_text_loops_l125e28_d70_c(void)
 {
     /* rows: 0x145 text; loops L125E28 (6D70/5C64) and L125EAC
        (63BC/5C64) with the 5D24(0x145)/5B8C latch. */

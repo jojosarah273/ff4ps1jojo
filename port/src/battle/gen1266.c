@@ -1,19 +1,16 @@
-/* FF4 source-port — interpreted module for func_80111ADC.
- * Ground truth: src/func_80111ADC.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x11adc.
+ * Ground truth: src/fn_1x11adc.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-
-extern int func_80111DC8();
-
-void func_80111ADC(void)
+void fn_1x11adc(void)
 
 {
   shop_view_run();
   shop_buy_run();
   cell_fill_aa();
-  func_80111DC8();
+  battle_rows_x7a_x79_windows_xaaf_x();
   return;
 }
 

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8013DC04.
- * Ground truth: src/func_8013DC04.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_magic_name_flow_x38e2_x4e_g.
+ * Ground truth: src/battle_magic_name_flow_x38e2_x4e_g.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8013DC04(void)
+void battle_magic_name_flow_x38e2_x4e_g(void)
 {
     /* battle magic-name flow: 0x38E2/0x4E gates, 8013D12C prep, 0x4E
        window rows; loops L13DC70 (5A90(5)), L13DCA0/L13DCDC (4FAC

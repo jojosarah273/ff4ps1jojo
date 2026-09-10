@@ -12,7 +12,7 @@
  *   poll_t     = 800F5958 / 800F5A90       io_just   = 800F53D4
  *   sep        = 800F5410 / 800F971C       latch     = 800F654C
  *   row_close  = 800F9330 / 800F9660 / 800F95A0
- * Ground truth: src/func_8016BD78, 8016BE1C, 8016BED4, 8016D160,
+ * Ground truth: src/shop_rows_x18_x1a_x1c_windows_x421, 8016BE1C, 8016BED4, 8016D160,
  * 8016D2B0, 8016D348, 8016D3E0, 8016DCE0, 8016ED64, 8016EEDC,
  * 8016FFC0, 80167074, 8016B530, 80168E30.
  */

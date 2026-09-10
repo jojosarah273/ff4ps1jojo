@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801700BC.
- * Ground truth: src/func_801700BC.c (byte-verified).
+/* FF4 source-port — interpreted module for rows_x_dc_cell_pairs_x3319_x371b_x.
+ * Ground truth: src/rows_x_dc_cell_pairs_x3319_x371b_x.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801700BC(void)
+void rows_x_dc_cell_pairs_x3319_x371b_x(void)
 {
     /* rows: 4x 6658/87DC cell pairs (0x3319/0x371B/0x331B/0x3719);
        loop L1700F8 on 5958(0x400). */

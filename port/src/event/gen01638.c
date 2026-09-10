@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80183048.
- * Ground truth: src/func_80183048.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_anim_fb8_preps_then_x_ddc_e.
+ * Ground truth: src/battle_anim_fb8_preps_then_x_ddc_e.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80183048(void)
+void battle_anim_fb8_preps_then_x_ddc_e(void)
 {
     /* battle anim: 80198058/80197FB8 preps then 4x
        80182DDC/80182E18 pairs. */

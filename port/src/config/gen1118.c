@@ -1,10 +1,10 @@
-/* FF4 source-port — interpreted module for func_8013B7C0.
- * Ground truth: src/func_8013B7C0.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x3b7c0.
+ * Ground truth: src/fn_1x3b7c0.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-void func_8013B7C0(void)
+void fn_1x3b7c0(void)
 
 {
   txt_set(0x1bc7);

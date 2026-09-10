@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80195B5C.
- * Ground truth: src/func_80195B5C.c (byte-verified).
+/* FF4 source-port — interpreted module for event_gates_cc_spin_rows_l195c68_s.
+ * Ground truth: src/event_gates_cc_spin_rows_l195c68_s.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80195B5C(void)
+void event_gates_cc_spin_rows_l195c68_s(void)
 {
     /* event: 80196898 gates; 801968CC spin rows (L195C68) + s0
        latches; returns L195D74. */

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8015F660.
- * Ground truth: src/func_8015F660.c (byte-verified).
+/* FF4 source-port — interpreted module for options_x28a3_x28a4_texts_bc_x202.
+ * Ground truth: src/options_x28a3_x28a4_texts_bc_x202.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8015F660(void)
+void options_x28a3_x28a4_texts_bc_x202(void)
 {
     /* options: 0x28A3/0x28A4 texts; 70BC(0x202) gate picks
        80065534/80065774. */

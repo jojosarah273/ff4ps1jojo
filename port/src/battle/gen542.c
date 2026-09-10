@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80140224.
- * Ground truth: src/func_80140224.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_x4_dc_cell_sets_x7612.
+ * Ground truth: src/battle_rows_x4_dc_cell_sets_x7612.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80140224(void)
+void battle_rows_x4_dc_cell_sets_x7612(void)
 {
     /* battle rows: 2x4 87DC cell sets (0x7612-0x77B6 and +2); loop
        L140260 on 5958(0x8C). */

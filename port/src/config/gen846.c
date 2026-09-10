@@ -1,11 +1,11 @@
-/* FF4 source-port — interpreted module for func_80120E9C.
- * Ground truth: src/func_80120E9C.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x20e9c.
+ * Ground truth: src/fn_1x20e9c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80120E9C(void)
+void fn_1x20e9c(void)
 {
-    func_80124130();
+    fn_1x24130();
     cell_cursor_dec();
     row_open();
     wnd_open(50688);

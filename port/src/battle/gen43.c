@@ -1,12 +1,12 @@
-/* FF4 source-port — interpreted module for func_8010E58C.
- * Ground truth: src/func_8010E58C.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x0e58c.
+ * Ground truth: src/fn_1x0e58c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8010E58C(void)
+void fn_1x0e58c(void)
 {
     wnd_fx_2100();
-    func_80103FE8();
+    fn_1x03fe8();
     func_80194518();
     cb_slot15();
     battle_mode_dispatch();
@@ -52,7 +52,7 @@ LE738:
         txt_draw(0x420C);
         row_page(0x24);
         txt_draw(0x2100);
-        func_8010E878();
+        battle_rows_x300_x303_x200_cells_x();
         key_page(0x24);
         row_page(0x24);
         io_poll(0x10);
@@ -65,7 +65,7 @@ LE790:
         wnd_fx_7d_b();
         latch(0x40);
         txt_draw(0x420C);
-        func_8010E878();
+        battle_rows_x300_x303_x200_cells_x();
         row_page(2);
         if (gate(0x202) != 0)
             goto LE7e0;
@@ -84,7 +84,7 @@ LE7f0:
         txt_draw(0x420C);
         row_page(0x24);
         txt_draw(0x2100);
-        func_8010E878();
+        battle_rows_x300_x303_x200_cells_x();
         poll_pair(0x24);
         row_page(0x24);
         if (gate(0x202) != 0)

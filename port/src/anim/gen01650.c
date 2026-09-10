@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8017EAC8.
- * Ground truth: src/func_8017EAC8.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_anim_wide_v0_gate_ladder_l1.
+ * Ground truth: src/battle_anim_wide_v0_gate_ladder_l1.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8017EAC8(void)
+void battle_anim_wide_v0_gate_ladder_l1(void)
 {
     /* battle anim: wide v0 gate ladder (L17EB3C..L17EF48) then
        the 2x 80194640 + spin + 80194640 close (L17F01C). */

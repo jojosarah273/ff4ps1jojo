@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8016FFC0.
- * Ground truth: src/func_8016FFC0.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_rows_x88_window_x2100_x2115_t.
+ * Ground truth: src/shop_rows_x88_window_x2100_x2115_t.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8016FFC0(void)
+void shop_rows_x88_window_x2100_x2115_t(void)
 {
     /* shop rows: 0x88 window + 0x2100/0x2115 titles; linear. */
     row_open2();

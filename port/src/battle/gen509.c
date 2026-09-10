@@ -1,20 +1,10 @@
-/* FF4 source-port — interpreted module for func_80103FE8.
- * Ground truth: src/func_80103FE8.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x03fe8.
+ * Ground truth: src/fn_1x03fe8.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-
-
-
-
-
-
-
-
-extern int func_801766B0();
-
-void func_80103FE8(void)
+void fn_1x03fe8(void)
 
 {
   int iVar1;
@@ -27,7 +17,7 @@ void func_80103FE8(void)
   cell_put(0x3c);
   wnd_open(0xfee0);
   tail(0x3d);
-  func_801766B0();
+  fn_1x766b0();
   wnd_open(0);
   do {
     cell_push_c8(0x1effe0);

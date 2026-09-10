@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80119128.
- * Ground truth: src/func_80119128.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_twin_with_c4_x6_x1003.
+ * Ground truth: src/battle_rows_twin_with_c4_x6_x1003.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80119128(void)
+void battle_rows_twin_with_c4_x6_x1003(void)
 {
     /* battle rows (twin with 78C4): 0x6/0x1003 cells, 80117DF8
        row; loop L119148 on 5958(0x140). */

@@ -1,11 +1,11 @@
-/* FF4 source-port — interpreted module for func_80143908.
- * Ground truth: src/func_80143908.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x43908.
+ * Ground truth: src/fn_1x43908.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80143908(void)
+void fn_1x43908(void)
 {
-    func_80145278();
+    fn_1x45278();
     battle_row_d548();
     latch(8);
     txt_draw(0xF326);
@@ -38,13 +38,13 @@ L3968:
             continue;
         break;
     }
-    func_8014086C();
+    fn_1x4086c();
     wnd_open(0x80);
 L3a18:
     for (;;) {
         row_open();
         gpu_driver_run();
-        func_80143738();
+        battle_magic_status_x300_x303_cell();
         sep();
     L3a54:
         for (;;) {
@@ -112,6 +112,6 @@ L3a18:
     }
     cell_clear_bank(0xEF87);
     func_80148C6C();
-    func_801452C8();
+    fn_1x452c8();
     return;
 }

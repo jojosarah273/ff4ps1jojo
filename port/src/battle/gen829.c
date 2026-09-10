@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8014D080.
- * Ground truth: src/func_8014D080.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_cast_rows_d4_b98_preps_fac.
+ * Ground truth: src/battle_cast_rows_d4_b98_preps_fac.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8014D080(void)
+void battle_cast_rows_d4_b98_preps_fac(void)
 {
     /* battle cast rows: 801495D4/80074B98 preps, 4FAC(0x101) gate
        loop L14D0A0, 80073EB0/800744A0/800999A0/801495F4 close. */

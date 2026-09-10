@@ -1,12 +1,10 @@
-/* FF4 source-port — interpreted module for func_801051A8.
- * Ground truth: src/func_801051A8.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x051a8.
+ * Ground truth: src/fn_1x051a8.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-extern int func_8010D2A0();
-
-void func_801051A8(void)
+void fn_1x051a8(void)
 
 {
   int iVar1;
@@ -27,7 +25,7 @@ void func_801051A8(void)
   cell_put(0xc);
   txt_set(0x1707);
   cell_put(0xe);
-  func_8010D2A0();
+  battle_rows_c3c_b9c_d54c_a0_linear();
   return;
 }
 

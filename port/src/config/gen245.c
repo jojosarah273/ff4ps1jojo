@@ -1,16 +1,16 @@
-/* FF4 source-port — interpreted module for func_8012DD58.
- * Ground truth: src/func_8012DD58.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x2dd58.
+ * Ground truth: src/fn_1x2dd58.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8012DD58(void)
+void fn_1x2dd58(void)
 {
     page_paint2(0x1B27);
     page_paint2(0x1BB8);
     key_page(0x84);
 Ld78:
     for (;;) {
-        func_80122FF4();
+        fn_1x22ff4();
         row_page(0xE8);
         io_poll(0x7F);
         if (io_just() == 0)
@@ -18,7 +18,7 @@ Ld78:
         latch(1);
         cell_tick_xor(cell_state(0x16A8));
         txt_draw(0x16A8);
-        func_80122A9C();
+        config_rows_c_e2c_ef30_f1c_fb74_ro();
         func_80122538();
         config_row_26528();
         battle_state_dc400();
@@ -39,11 +39,11 @@ Lde10:
     cell_put(0x46);
     latch(4);
     cell_put(0x45);
-    func_8011F6AC();
+    fn_1x1f6ac();
     row_page(0xE8);
     cell_put(0xD9);
     cell_clear_bank(0x1B27);
-    func_80122FF4();
+    fn_1x22ff4();
     row_page(0xE8);
     if (gate(0x8080) == 0) {
         open_row(0xE8);
@@ -66,7 +66,7 @@ Lde10:
     return;
 Ldf70:
     config_rows_e4();
-    func_8012E5A8();
+    party_formation_screen_xd5_xd7_row();
     row_prep(0x20);
     row_read2(0xDA);
     cell_pos_mask(0xFF);
@@ -101,10 +101,10 @@ Ldf70:
     cell_pull_c8(0x16B9);
     row_close2();
     cell_draw(0x16B9);
-    func_801772E4();
-    func_80125A64();
+    shop_item_cells_xd9_xda_windows_x1();
+    fn_1x25a64();
     animation_row_310();
-    func_80122A9C();
+    config_rows_c_e2c_ef30_f1c_fb74_ro();
     func_80122538();
     config_row_26528();
     battle_state_dc400();

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8016688C.
- * Ground truth: src/func_8016688C.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x6688c.
+ * Ground truth: src/fn_1x6688c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8016688C(void)
+void fn_1x6688c(void)
 {
     u8 *b = (u8 *)cell_state(0x8000);
     u16 i;

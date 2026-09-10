@@ -1,12 +1,10 @@
-/* FF4 source-port — interpreted module for func_80139AA4.
- * Ground truth: src/func_80139AA4.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x39aa4.
+ * Ground truth: src/fn_1x39aa4.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-extern int func_801330F8();
-
-void func_80139AA4(void)
+void fn_1x39aa4(void)
 
 {
   row_prep(0x20);
@@ -16,7 +14,7 @@ void func_80139AA4(void)
   battle_wait_just(0xd7e);
   row_prep_close();
   draw_pad(0xf200);
-  func_801330F8();
+  ability_banner_x1b_window_x2100_x1();
   return;
 }
 

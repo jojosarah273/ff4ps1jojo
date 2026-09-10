@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80135574.
- * Ground truth: src/func_80135574.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x35574.
+ * Ground truth: src/fn_1x35574.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80135574(void)
+void fn_1x35574(void)
 {
     page(0x41);
     label(0x1A78);
@@ -34,7 +34,7 @@ L5634:
             return;
         cell_put(0x5D);
         cell_pull_c8_sel2(0x51);
-        func_80136174();
+        fn_1x36174();
         row_sync();
         battle_put43();
         cell_push_c8();
@@ -70,7 +70,7 @@ L5634:
         row_prep_close();
         row_page(0x47);
         cell_pull_c8_sel2(0x51);
-        func_80136174();
+        fn_1x36174();
         goto L59d8;
     L58b0:
         row_prep(0x20);
@@ -82,9 +82,9 @@ L5634:
         row_prep_close();
         latch_cur();
         cell_pull_c8_sel2(0x51);
-        func_80136174();
+        fn_1x36174();
     L59d8:
-        func_801376F0();
+        ability_page_x1b7a_x1b7c_gates_x76();
         row_prep(0x20);
         sep_b();
         cell_pos_back2(0x30);
@@ -98,7 +98,7 @@ L5634:
         row_arm_s_cur();
         row_prep_close();
         row_page(0x5D);
-        func_80125100();
+        fn_1x25100();
         row_done();
         step2();
         poll_t(8);

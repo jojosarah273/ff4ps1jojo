@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80111FCC.
- * Ground truth: src/func_80111FCC.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_detail_xca_window_x172c_x172e.
+ * Ground truth: src/shop_detail_xca_window_x172c_x172e.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80111FCC(void)
+void shop_detail_xca_window_x172c_x172e(void)
 {
     /* shop detail: 0xCA window, 0x172C/0x172E-0x172F/0x1726/0x1706-
        0x1707 texts, 8011AB18/80169128/800FD718 rows; 5574(0xFB)
@@ -36,7 +36,7 @@ L11207C:
     txt_draw(0x1707);
 L1120B4:
     row_close2();
-    func_8011AB18();
+    shop_main_xca_window_x1700_gate_pi();
     cell_clear_bank(0x1E05);
     battle_cb_86120();
     battle_rows_run();

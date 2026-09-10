@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8010F4DC.
- * Ground truth: src/func_8010F4DC.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_spell_cast_helper_xc7_x48_x.
+ * Ground truth: src/battle_spell_cast_helper_xc7_x48_x.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8010F4DC(void)
+void battle_spell_cast_helper_xc7_x48_x(void)
 {
     /* battle spell-cast helper: 0xC7/0x48/0xC/0xE/0xCF windows, 0xACF-
        0xAD8 texts, 801105A4/801187C0/8010F484/80116398/8011053C/80115BCC
@@ -15,13 +15,13 @@ void func_8010F4DC(void)
     cell_put(0xC);
     latch(0x50);
     cell_put(0xE);
-    func_801105A4();
+    battle_rows_xc_xe_windows_x340_x34();
     latch(0xCF);
-    func_801187C0();
-    func_8010F484();
+    battle_rows_x6_x83_x82_x79_x81_win();
+    fn_1x0f484();
     wnd_open(0x20);
-    func_80116398();
-    func_8011053C();
+    fn_1x16398();
+    fn_1x1053c();
     latch(0x10);
     txt_draw(0xACF);
     wnd_open(0x24);
@@ -47,8 +47,8 @@ L10f5c4:
         cell_put(0xC);
         latch(0x50);
         cell_put(0xE);
-        func_801105A4();
-        func_80173780();
+        battle_rows_xc_xe_windows_x340_x34();
+        fn_1x73780();
         page_open(0xAD2);
         poll_t(4);
         if (io_just() != 0)
@@ -62,7 +62,7 @@ L10f5c4:
         break;
     }
     open_row(0xE3);
-    func_8011053C();
+    fn_1x1053c();
     open_row(0xC7);
     return;
 }

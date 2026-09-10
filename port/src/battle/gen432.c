@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80144F24.
- * Ground truth: src/func_80144F24.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_magic_cast_d528_prep_loops.
+ * Ground truth: src/battle_magic_cast_d528_prep_loops.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80144F24(void)
+void battle_magic_cast_d528_prep_loops(void)
 {
     /* battle magic-cast: 8014D528 prep, 80140558/80140310 loops
        (L144F6C wait, L145038 scroll), 8009A0A0/8014202C/8013DC04
@@ -33,12 +33,12 @@ L144f6c:
     latch(0x2C);
     func_8009A0A0();
     wnd_open(0x10);
-    func_8014202C();
+    fn_1x4202c();
     latch(0x2A);
     func_8009A0A0();
     page_open(0x34C4);
     label_cur();
-    func_8013DC04();
+    battle_magic_name_flow_x38e2_x4e_g();
     cell_clear_bank(0x38E2);
 L145038:
     for (;;) {

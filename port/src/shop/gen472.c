@@ -1,10 +1,10 @@
-/* FF4 source-port — interpreted module for func_8016BAAC.
- * Ground truth: src/func_8016BAAC.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x6baac.
+ * Ground truth: src/fn_1x6baac.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-void func_8016BAAC(void)
+void fn_1x6baac(void)
 
 {
   row_open2();

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8012A678.
- * Ground truth: src/func_8012A678.c (byte-verified).
+/* FF4 source-port — interpreted module for config_block_x1b23_x1b22_x1b19_x1b.
+ * Ground truth: src/config_block_x1b23_x1b22_x1b19_x1b.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8012A678(void)
+void config_block_x1b23_x1b22_x1b19_x1b(void)
 {
     /* config block: 0x1B23/0x1B22/0x1B19/0x1B25 texts, 0x3F window,
        8011F724 rows, 8012B0D8 alt; gates on 6434(2). */

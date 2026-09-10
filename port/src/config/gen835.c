@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801395E4.
- * Ground truth: src/func_801395E4.c (byte-verified).
+/* FF4 source-port — interpreted module for ability_rows_x1bb0_x1bb1_texts_x5b.
+ * Ground truth: src/ability_rows_x1bb0_x1bb1_texts_x5b.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801395E4(void)
+void ability_rows_x1bb0_x1bb1_texts_x5b(void)
 {
     /* ability rows: 0x1BB0/0x1BB1 texts, 0x5B/0x5A windows,
        8011F724/80176BFC rows; gates 6434(2). */
@@ -24,6 +24,6 @@ L139654:
     draw_pad(0x300);
     sep();
     row_latch_7e();
-    func_80176BFC();
+    fn_1x76bfc();
     return;
 }

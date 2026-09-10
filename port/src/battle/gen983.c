@@ -1,16 +1,12 @@
-/* FF4 source-port — interpreted module for func_80102444.
- * Ground truth: src/func_80102444.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x02444.
+ * Ground truth: src/fn_1x02444.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-
-
-
-extern void func_80102E78(void);
-void func_80102444(void) {
+void fn_1x02444(void) {
     do {
-        func_80102E78();
+        fn_1x02e78();
         key_page(0xB5);
         key_page(0x79);
         row_page(0x79);

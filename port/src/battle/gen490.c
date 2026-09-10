@@ -37,6 +37,6 @@ L11f270:
     row_page(0x2F);
     cell_pull_c8();
     row_done();
-    func_80122334();
+    rows_u16_d44_d58_swap_with_c_prep();
     return;
 }

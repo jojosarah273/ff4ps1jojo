@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8015B6FC.
- * Ground truth: src/func_8015B6FC.c (byte-verified).
+/* FF4 source-port — interpreted module for config_status_row_xb5_window_x3303.
+ * Ground truth: src/config_status_row_xb5_window_x3303.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8015B6FC(void)
+void config_status_row_xb5_window_x3303(void)
 {
     /* config status row: 0xB5 window + 0x3303 text; 5574 key ladder
        (5/8/C/10 codes) routes to 8015B8E4 (detail row), then the
@@ -24,7 +24,7 @@ void func_8015B6FC(void)
     if (io_just() == 0)
         goto L15B79C;
 L15B77C:
-    func_8015B8E4();
+    config_status_row_screen_key_codes();
     row_page(0xB3);
     if (gate(0x202) != 0)
         goto L15B844;

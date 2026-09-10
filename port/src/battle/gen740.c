@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801035B0.
- * Ground truth: src/func_801035B0.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x035b0.
+ * Ground truth: src/fn_1x035b0.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801035B0(void)
+void fn_1x035b0(void)
 {
     latch(6);
     txt_draw(0x1704);
@@ -22,6 +22,6 @@ void func_801035B0(void)
     } else {
         battle_rows_run();
         open_row(0x79);
-        func_80103660();
+        shop_rows_x7a_xb9_windows_e78_rows();
     }
 }

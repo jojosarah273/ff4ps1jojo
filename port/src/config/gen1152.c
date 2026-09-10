@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80152908.
- * Ground truth: src/func_80152908.c (byte-verified).
+/* FF4 source-port — interpreted module for options_row_v0_gate_picks_f4c_vs_c.
+ * Ground truth: src/options_row_v0_gate_picks_f4c_vs_c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80152908(void)
+void options_row_v0_gate_picks_f4c_vs_c(void)
 {
     /* options row: v0 gate picks 5140/4F4C vs 516C/5050. */
     if (io_just() != 0)

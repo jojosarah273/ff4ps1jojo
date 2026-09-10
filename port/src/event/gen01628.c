@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8018AE28.
- * Ground truth: src/func_8018AE28.c (byte-verified).
+/* FF4 source-port — interpreted module for event_v0_gate_tree_b1c8_spins_l18a.
+ * Ground truth: src/event_v0_gate_tree_b1c8_spins_l18a.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8018AE28(void)
+void event_v0_gate_tree_b1c8_spins_l18a(void)
 {
     /* event: v0 gate tree; 8018B1C8 spins L18AF44; 8018B16C + s6
        latches; returns at L18B138 via L18B13C. */

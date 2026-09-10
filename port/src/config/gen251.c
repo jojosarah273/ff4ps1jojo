@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80121124.
- * Ground truth: src/func_80121124.c (byte-verified).
+/* FF4 source-port — interpreted module for v0_s0_branch.
+ * Ground truth: src/v0_s0_branch.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80121124(void)
+void v0_s0_branch(void)
 {
     row_open2();
     row_pad();
@@ -40,23 +40,23 @@ L1450:
     for (;;) {
         row_page(0x64);
         if (io_press(cell_state(0x68)) == 0)
-            func_801217EC();
+            battle_rows_x64_x65_x63_x1d_window();
         row_page(0x66);
         if (io_press(cell_state(0x6A)) == 0)
-            func_801218EC();
+            battle_rows_twin_variant_x66_x65_x();
         row_page(0x63);
         if (io_press(cell_state(0x67)) == 0)
-            func_801219EC();
+            fn_1x219ec();
         row_page(0x65);
         if (io_press(cell_state(0x69)) == 0)
-            func_80121B5C();
+            fn_1x21b5c();
         row_page(0xC2);
         if (gate(2) == 0) {
             poll_pair(0xC2);
             draw_pad(8);
             page(0x41);
             for (;;) {
-                func_80121678();
+                battle_row_a78_xa2_gate_routes_the();
                 poll_pair_cur();
                 if (poll_go(0x202) != 0)
                     continue;
@@ -65,15 +65,15 @@ L1450:
         }
         /* v0/s0 branch */
         if (1) {
-            func_80126990();
+            equip_window_cells_xd2_xbe_gates_w();
         }
         midrow_pad88();
         row_page(0xC3);
         wnd_open(0x85B8);
-        func_80120070();
+        open_depth_guard_in_the_menu_regio();
         /* v1/s0 branch */
         if (1) {
-            func_80126990();
+            equip_window_cells_xd2_xbe_gates_w();
         }
         shop_row_kick_f0();
         page(0x63);

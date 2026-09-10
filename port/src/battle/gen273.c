@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8014EE20.
- * Ground truth: src/func_8014EE20.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_status_cast_xe_x10_xd_windo.
+ * Ground truth: src/battle_status_cast_xe_x10_xd_windo.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8014EE20(void)
+void battle_status_cast_xe_x10_xd_windo(void)
 {
     /* battle status-cast: 0xE/0x10/0xD windows, 4FAC(0x101) gate loops
        (L14EE88 stat rows, L14EF60 scroll, L14F030 alt), 6DE8/922C/89D4

@@ -4,13 +4,11 @@
  */
 #include "ff4_window.h"
 
-extern int func_80176F88();
-
 void shop_row_52(void)
 
 {
   open_row(0x52);
-  func_80176F88();
+  battle_anim_c3c_x300_b04_b9cx2_gat();
   return;
 }
 

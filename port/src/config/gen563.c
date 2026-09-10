@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80134948.
- * Ground truth: src/func_80134948.c (byte-verified).
+/* FF4 source-port — interpreted module for ability_rows_x41_window_d4_b04_gat.
+ * Ground truth: src/ability_rows_x41_window_d4_b04_gat.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80134948(void)
+void ability_rows_x41_window_d4_b04_gat(void)
 {
     /* ability rows: 0x41 window, 54D4(3B04) gate routes the 0x1441/
        0xE3 check; loops L134968 (5EA0/5C64(0x202)) and L134998. */

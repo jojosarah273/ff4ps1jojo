@@ -1,11 +1,11 @@
-/* FF4 source-port — interpreted module for func_80120070.
- * Ground truth: src/func_80120070.c (byte-verified).
+/* FF4 source-port — interpreted module for open_depth_guard_in_the_menu_regio.
+ * Ground truth: src/open_depth_guard_in_the_menu_regio.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 extern u8 *D_8019ED40;
 extern u16 *D_8019ED4C;
-void func_80120070(void)
+void open_depth_guard_in_the_menu_regio(void)
 {
     u8 s0;
     cell_put(0x1D);
@@ -36,14 +36,14 @@ void func_80120070(void)
        Each table entry: call handler; addu v0,s1 (propagate return); jump
        L206C4 (tail: sh 0x2FC->D_8019ED4C, return) or L206C8 (return). */
     switch (s0) {
-    case 0: func_80129F54();  break; /* main option 0 */
-    case 1: func_8012EC48();  break; /* main option 1 (tail-special) */
-    case 2: func_80132CFC();  break; /* config */
-    case 3: func_8012DB6C();  break;
-    case 4: func_8012DD30();  break;
-    case 5: func_8012E160();  break;
-    case 6: func_80139CF4();  break;
-    case 7: func_80137BB8();  break; /* ability */
+    case 0: main_menu_option_config_tab_x210c();  break; /* main option 0 */
+    case 1: fn_1x2ec48();  break; /* main option 1 (tail-special) */
+    case 2: fn_1x32cfc();  break; /* config */
+    case 3: fn_1x2db6c();  break;
+    case 4: fn_1x2dd30();  break;
+    case 5: fn_1x2e160();  break;
+    case 6: config_row_x30_x31_windows_x8d_x8a();  break;
+    case 7: v1_v0_branch();  break; /* ability */
     }
     return;
 }

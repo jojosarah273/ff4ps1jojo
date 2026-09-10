@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801626B8.
- * Ground truth: src/func_801626B8.c (byte-verified).
+/* FF4 source-port — interpreted module for options_counter_xa6_x2006_x3534_xa.
+ * Ground truth: src/options_counter_xa6_x2006_x3534_xa.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801626B8(void)
+void options_counter_xa6_x2006_x3534_xa(void)
 {
     /* options counter: 0xA6/0x2006/0x3534/0xA9/0xCD windows, 0x3303/
        0x3302 texts, 80150C38 row; loop L162700 on 5574(9/5). */

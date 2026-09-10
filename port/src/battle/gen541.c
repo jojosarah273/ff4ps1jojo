@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80142BCC.
- * Ground truth: src/func_80142BCC.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_x1_x2_x4_x6_windows_wi.
+ * Ground truth: src/battle_rows_x1_x2_x4_x6_windows_wi.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80142BCC(void)
+void battle_rows_x1_x2_x4_x6_windows_wi(void)
 {
     /* battle rows: 0x1/0x2/0x4/0x6 windows with 4008(0x20) reads;
        loop L142C14 on 5958(0x40). */

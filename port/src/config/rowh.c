@@ -1,5 +1,5 @@
-/* FF4 source-port — interpreted module for func_8012B190.
- * Ground truth: src/func_8012B190.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x2b190.
+ * Ground truth: src/fn_1x2b190.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
@@ -7,7 +7,7 @@ extern u32 D_8019ED54[8];
 extern u32 D_8019ED58[8];
 extern u32 D_8019EF0C[8];
 extern u32 D_800D1E05[8];
-void func_8012B190(void)
+void fn_1x2b190(void)
 {
     txt_set(0x1B23);
     sep_a();
@@ -35,11 +35,11 @@ void func_8012B190(void)
     latch(0x63);
     cell_put(0xE3);
     wnd_open(0x1440);
-    func_8012E844();
+    party_form_formation_screen_x1d_x1();
     config_row_221ec();
     return;
 L2B8:
-    func_8012AE00();
+    save_load_status_screen_x1b1f_canc();
     row_page(0x60);
     row_read(8);
     if (sel(0x202) != 0)
@@ -71,8 +71,8 @@ L38C:
     battle_rows_29();
 L3C0:
     config_row_f320();
-    func_8011FF40();
-    func_8012B0B0();
+    fn_1x1ff40();
+    fn_1x2b0b0();
     midrow_paint_a();
     draw_pad_cur();
     battle_rows_sync();
@@ -80,7 +80,7 @@ L3C0:
     battle_rows_29();
     return;
 L410:
-    func_8012B0B0();
+    fn_1x2b0b0();
     txt_set(0x1B23);
     sep_a();
     cell_poke0(cell_state(0x1B1A));
@@ -118,7 +118,7 @@ L410:
     if (io_go() == 0)
         goto L670;
 L550:
-    func_8012219C();
+    fn_1x2219c();
     goto L5F8;
 L560:
     txt_cell(0x1440);
@@ -140,7 +140,7 @@ L598:
 L5F8:
     config_row_b600();
     func_8012AAC0();
-    func_8012B0B0();
+    fn_1x2b0b0();
     midrow_paint_a();
     return;
 L620:
@@ -163,7 +163,7 @@ L690:
     io_poll(0xE2);
     if (io_go() != 0)
         goto L6F0;
-    func_8012BAF8();
+    fn_1x2baf8();
     row_page(0xE8);
     if (gate(0x80) != 0)
         goto L7DC;
@@ -180,7 +180,7 @@ L730:
     sep_b();
     cell_pos_back(0xCE);
     wnd_open(0xA67C);
-    func_80120070();
+    open_depth_guard_in_the_menu_regio();
     txt_set(0x1B3B);
     io_poll(0xDE);
     if (io_just() != 0)
@@ -191,12 +191,12 @@ L730:
     txt_set(0x1A82);
     if (gate(0x202) != 0)
         goto L7DC;
-    func_8012BA14();
+    config_row_x30_x3f_windows_x1b22_t();
     config_row_f320();
-    func_8011FF40();
+    fn_1x1ff40();
 L7DC:
     cell_clear_bank(0x1A82);
-    func_8012102C();
+    fn_1x2102c();
     draw_pad_cur();
     func_8011FB74();
     config_row_f320();
@@ -221,7 +221,7 @@ L850:
     battle_cb_86120();
     battle_row_88();
     latch(0x4C);
-    func_8012224C();
+    fn_1x2224c();
     latch(0xF0);
     for (;;) {
         midrow_pad88();
@@ -231,10 +231,10 @@ L850:
         break;
     }
     latch(0x30);
-    func_80138A34();
-    func_80138A6C();
+    fn_1x38a34();
+    ability_status_wrapper_d3c_render();
     row_close2();
-    func_80138A34();
+    fn_1x38a34();
     latch_cur();
     stat_sync();
     page_open(0x1A65);

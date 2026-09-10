@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80107830.
- * Ground truth: src/func_80107830.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x07830.
+ * Ground truth: src/fn_1x07830.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80107830(void)
+void fn_1x07830(void)
 {
     wnd_open_cur();
     latch(0xFF);
@@ -49,7 +49,7 @@ L78e0:
         cell_put(8);
         for (;;) {
             cell_push_c8();
-            func_801093B8();
+            shop_rows_x42_key_gate_routes_the();
             cell_pull_c8(0x774);
             stat_sync();
             cell_pull_c8(0x834);
@@ -70,7 +70,7 @@ L78e0:
         cell_put(0x30);
         open_row(0x31);
         open_row(0x32);
-        func_80174CE4();
+        shop_stats_x30_x32_windows_x33_x34();
         cell_fmt2(0x40);
         row_page(0x3A);
         cell_pull_c8(0x77D);

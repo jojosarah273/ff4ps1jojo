@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801922D8.
- * Ground truth: src/func_801922D8.c (byte-verified).
+/* FF4 source-port — interpreted module for event_flow_e8_spins_b4_rows_gates.
+ * Ground truth: src/event_flow_e8_spins_b4_rows_gates.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801922D8(void)
+void event_flow_e8_spins_b4_rows_gates(void)
 {
     /* event flow: 80192888/801928E8 spins, 80191838/80191858/
        80192858/801919B4 rows; gates at L192300/L192380. */
@@ -32,7 +32,7 @@ L1923AC:
     func_80192858();
 L1923EC:
     func_80191838(9);
-    func_801919B4();
+    event_twin_b44_rows_on_s2_fp_s0();
     if (io_just() == 0)
         goto L192464;
     event_spin_wait();

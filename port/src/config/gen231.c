@@ -1,13 +1,13 @@
-/* FF4 source-port — interpreted module for func_80132CFC.
- * Ground truth: src/func_80132CFC.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x32cfc.
+ * Ground truth: src/fn_1x32cfc.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80132CFC(void)
+void fn_1x32cfc(void)
 {
     page_paint2(0x1B1F);
     cell_clear_bank(0x1B27);
-    func_80122FF4();
+    fn_1x22ff4();
     row_page(0xE8);
     if (gate(0x8080) == 0) {
         cell_clear_bank(0x1B1F);
@@ -15,16 +15,16 @@ void func_80132CFC(void)
     }
     cell_clear_bank(0x1BAD);
     midrow_paint_c();
-    func_801266F0();
+    rows_x100_x1c_x41_windows_f0_x89_c();
     latch(0x30);
     cell_put(0xC1);
     cell_put(0x3F);
     row_page(0xE8);
     cell_put(0xD3);
-    func_80122CF0();
+    fn_1x22cf0();
     midrow_pad88_run();
     row_page(0xE8);
-    func_80122B54();
+    row_picker_x60_x61_windows_x45_x43();
     row_prep(0x20);
     row_prep_close();
     cell_put(0xBA);
@@ -46,7 +46,7 @@ void func_80132CFC(void)
     tail(0xD0);
     wnd_open(0x824F);
     tail(0xCD);
-    func_80120DB4();
+    fn_1x20db4();
     func_801228B4();
     config_row_26528();
     row_page(0xE7);
@@ -58,12 +58,12 @@ void func_80132CFC(void)
     draw_pad_cur();
     row_open();
     row_sync();
-    func_80121124();
-    func_8013327C();
+    v0_s0_branch();
+    fn_1x3327c();
     row_page(0xE8);
-    func_80150A30();
+    battle_splash_x30_window_x7e_windo();
     animation_row_310();
-    func_80124130();
+    fn_1x24130();
     config_row_264e8();
     row_prep(0x20);
     wnd_open(0xF600);
@@ -75,7 +75,7 @@ void func_80132CFC(void)
     cell_pull_c8_lo(0x210A);
     midrow_paint_b();
     config_row_a600();
-    func_801240D0();
+    fn_1x240d0();
     wnd_open(0xFFB0);
     tail(0x96);
     page(0x41);
@@ -85,7 +85,7 @@ void func_80132CFC(void)
     wnd_open(0x800);
     tail(0xDE);
     config_row_f320();
-    func_80126480();
+    fn_1x26480();
     wnd_open(0x1000);
     tail(0xDE);
     latch(2);
@@ -103,10 +103,10 @@ void func_80132CFC(void)
     animation_row_300b();
     row_close();
     row_done();
-    func_80121124();
+    v0_s0_branch();
     latch(0x7A);
     cell_pull_c8_lo(0x210A);
-    func_80122A9C();
+    config_rows_c_e2c_ef30_f1c_fb74_ro();
     config_row_26528();
     cell_clear_bank(0x1B1F);
     return;

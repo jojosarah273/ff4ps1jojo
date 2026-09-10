@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8011E16C.
- * Ground truth: src/func_8011E16C.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_verdict_twin_of_e318_d_e_ro.
+ * Ground truth: src/battle_verdict_twin_of_e318_d_e_ro.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8011E16C(void)
+void battle_verdict_twin_of_e318_d_e_ro(void)
 {
     /* battle verdict (twin of 8011E318): 3D/3E/40 rows with 885C
        fills, 6434(2) exit gate; loops L11E1B0 and L11E214. */

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8016AC7C.
- * Ground truth: src/func_8016AC7C.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_status_x4a_window_x2203_x22c1.
+ * Ground truth: src/shop_status_x4a_window_x2203_x22c1.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8016AC7C(void)
+void shop_status_x4a_window_x2203_x22c1(void)
 {
     /* shop status: 0x4A window, 0x2203/0x22C1/0x22A3/0x22B3 texts,
        gates 4120(0x202); loops L16ACFC (5A90(0x20)) and L16AD74

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801120F4.
- * Ground truth: src/func_801120F4.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_x1700_x7070_x300_x1a03.
+ * Ground truth: src/battle_rows_x1700_x7070_x300_x1a03.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801120F4(void)
+void battle_rows_x1700_x7070_x300_x1a03(void)
 {
     /* battle rows: 0x1700/0x7070/0x300/0x1A03 texts, 800FF024/
        8011EA5C rows; 5574(3) gate. */

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801621D0.
- * Ground truth: src/func_801621D0.c (byte-verified).
+/* FF4 source-port — interpreted module for options_timer_xce_x357a_x2006_x353.
+ * Ground truth: src/options_timer_xce_x357a_x2006_x353.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801621D0(void)
+void options_timer_xce_x357a_x2006_x353(void)
 {
     /* options timer: 0xCE/0x357A/0x2006/0x3534/0x3303 windows/texts,
        80152CDC + 80150C38 rows; loop L162238 on 5574(0x13). */

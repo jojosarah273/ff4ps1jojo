@@ -1,20 +1,16 @@
-/* FF4 source-port — interpreted module for func_8016C6FC.
- * Ground truth: src/func_8016C6FC.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x6c6fc.
+ * Ground truth: src/fn_1x6c6fc.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-
-
-extern int func_8016C78C();
-
-void func_8016C6FC(void)
+void fn_1x6c6fc(void)
 
 {
   latch(0x20);
   cell_put(0x28);
   row_prep(0x20);
-  func_8016C78C();
+  shop_rows_x2000_x2a_x28_cells_x4f();
   return;
 }
 

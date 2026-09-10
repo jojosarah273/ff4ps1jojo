@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801470F8.
- * Ground truth: src/func_801470F8.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_c3c_b04_gates_row.
+ * Ground truth: src/battle_c3c_b04_gates_row.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801470F8(void)
+void battle_c3c_b04_gates_row(void)
 {
     /* battle: 3C3C/3B04 gates; 80146954 row. */
     cell_state_of();
@@ -12,10 +12,10 @@ void func_801470F8(void)
         goto L147158;
     goto L147158;
 L147158:
-    func_80146954();
+    fn_1x46954();
     goto L1471A0;
 L147168:
-    func_80146954();
+    fn_1x46954();
     return;
 L1471A0:
     return;

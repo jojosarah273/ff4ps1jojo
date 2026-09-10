@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801130C0.
- * Ground truth: src/func_801130C0.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_x2c_window_x60_key_x21.
+ * Ground truth: src/battle_rows_x2c_window_x60_key_x21.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801130C0(void)
+void battle_rows_x2c_window_x60_key_x21(void)
 {
     /* battle rows: 0x2C window, 0x60 key + 0x2115 gate; loop
        L113140 on 5958(0x10) with 4x 6C68. */

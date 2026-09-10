@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8010DA88.
- * Ground truth: src/func_8010DA88.c (byte-verified).
+/* FF4 source-port — interpreted module for jr_a0_the_entry_master_battle_comm.
+ * Ground truth: src/jr_a0_the_entry_master_battle_comm.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8010DA88(void)
+void jr_a0_the_entry_master_battle_comm(void)
 {
     battle_tick_text();
     open_row(0x3E);

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80149A98.
- * Ground truth: src/func_80149A98.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_x28_x4_x2b_x5_x2_windo.
+ * Ground truth: src/battle_rows_x28_x4_x2b_x5_x2_windo.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80149A98(void)
+void battle_rows_x28_x4_x2b_x5_x2_windo(void)
 {
     /* battle rows: 0x28/0x4/0x2B/0x5/0x2 windows, 80148FC0 row,
        7600 cells; loop L149B6C on 5DD4/5C64(0x202). */
@@ -11,7 +11,7 @@ void func_80149A98(void)
     latch(0x20);
     cell_put(0x28);
     row_close2();
-    func_80148FC0();
+    battle_rows_x26_x2b_windows_row_ga();
     cell_put(4);
     row_arm2(cell_state(0x2B));
     row_sel_cell2_cur();

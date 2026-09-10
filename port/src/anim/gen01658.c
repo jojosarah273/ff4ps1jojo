@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80174F0C.
- * Ground truth: src/func_80174F0C.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x74f0c.
+ * Ground truth: src/fn_1x74f0c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80174F0C(void)
+void fn_1x74f0c(void)
 {
     u8 *p = (u8 *)cell_state(0);
     u32 a = ((u32)p[0x19] << 8) | p[0x18];

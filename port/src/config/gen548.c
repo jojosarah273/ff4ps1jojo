@@ -1,22 +1,10 @@
-/* FF4 source-port — interpreted module for func_80123CB4.
- * Ground truth: src/func_80123CB4.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x23cb4.
+ * Ground truth: src/fn_1x23cb4.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-
-
-
-
-
-
-
-
-
-
-extern int func_80126D48();
-
-void func_80123CB4(void)
+void fn_1x23cb4(void)
 
 {
   int iVar1;
@@ -34,7 +22,7 @@ void func_80123CB4(void)
       cell_set50_from54();
       iVar1 = poll_go(0x202);
     } while (iVar1 != 0);
-    func_80126D48();
+    rows_x48_window_row_loop_l126d58_x();
   }
   row_close2();
   return;

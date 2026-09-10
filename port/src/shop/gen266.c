@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80163950.
- * Ground truth: src/func_80163950.c (byte-verified).
+/* FF4 source-port — interpreted module for options_row_screen_key_ladder_xde.
+ * Ground truth: src/options_row_screen_key_ladder_xde.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80163950(void)
+void options_row_screen_key_ladder_xde(void)
 {
     /* options row screen: 5574 key ladder (0xDE/0xB0/0x6D/0x61 codes)
        routes to the 0x289C/0x289F stat rows (801526F8 header, 80152BC4
@@ -32,7 +32,7 @@ L1639E0:
     latch(0xF);
     cell_put(0x82);
     latch(8);
-    func_801526F8();
+    shop_rows_xe1_xe5_xdf_windows_c_ro();
     cell_cursor_dec();
     txt_set(0x289C);
     func_80152BC4();
@@ -45,7 +45,7 @@ L1639E0:
     latch(0xF);
     cell_put(0x82);
     latch(6);
-    func_801526F8();
+    shop_rows_xe1_xe5_xdf_windows_c_ro();
     page(0xAB);
     txt_set(0x289F);
     cell_draw(0x321D);
@@ -59,7 +59,7 @@ L163AD0:
     latch(0xF);
     cell_put(0x82);
     latch(6);
-    func_801526F8();
+    shop_rows_xe1_xe5_xdf_windows_c_ro();
     page(0xAB);
     txt_set(0x289F);
     cell_draw(0x321D);

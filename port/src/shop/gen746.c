@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8016D798.
- * Ground truth: src/func_8016D798.c (byte-verified).
+/* FF4 source-port — interpreted module for config_rows_x3c_x39_x60_x57_window.
+ * Ground truth: src/config_rows_x3c_x39_x60_x57_window.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8016D798(void)
+void config_rows_x3c_x39_x60_x57_window(void)
 {
     /* config rows: 0x3C/0x39/0x60/0x57 windows; gate 5574(0x42)
        routes the 82EC cell fills. */

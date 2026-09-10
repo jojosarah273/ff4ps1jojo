@@ -1,7 +1,7 @@
 /* FF4 source-port — config/miscrows.c
  *
  * Battle/shop row fragments (exact Phase A decodes).
- * Ground truth: src/func_80141100, 801460A4, 8016CA94, 80165B94.
+ * Ground truth: src/battle_c3c_b04_gates_bc_pair_rows, 801460A4, 8016CA94, 80165B94.
  */
 #include <stdint.h>
 

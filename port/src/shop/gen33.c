@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8016571C.
- * Ground truth: src/func_8016571C.c (byte-verified).
+/* FF4 source-port — interpreted module for options_stat_screen_x2041_x203d_x3.
+ * Ground truth: src/options_stat_screen_x2041_x203d_x3.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8016571C(void)
+void options_stat_screen_x2041_x203d_x3(void)
 {
     /* options stat screen: 0x2041/0x203D/0x38BF/0x2003/0x2004/0x2006
        texts, 8015330C row; loops L165764 (5A90(0xF)), L165838
@@ -22,7 +22,7 @@ L165764:
         cell_draw(0x2004);
         cell_push_c8_d58(0x38C1);
         cell_draw(0x2006);
-        func_8015330C();
+        rows_u16_d44_d54_swap_chain_with_c();
         step2();
         step2();
         step2();

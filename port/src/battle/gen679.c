@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8011F030.
- * Ground truth: src/func_8011F030.c (byte-verified).
+/* FF4 source-port — interpreted module for column_rows_x29_x2b_x31_x33_window.
+ * Ground truth: src/column_rows_x29_x2b_x31_x33_window.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8011F030(void)
+void column_rows_x29_x2b_x31_x33_window(void)
 {
     /* column rows: 0x29/0x2B/0x31/0x33 windows, 0xF7/0xFC codes,
        8011F118/8011F210 rows; loop L11F0D8 on 5DA0(0x32). */
@@ -15,7 +15,7 @@ void func_8011F030(void)
     cell_put_hi9(0x31);
     row_prep_close();
     latch(0xF7);
-    func_8011F118();
+    column_cells_x30_x2f_x2d_x31_windo();
     cell_cursor_dec();
     row_page(0x33);
     if (gate(2) != 0)
@@ -33,6 +33,6 @@ L11f0d8:
         break;
     }
     latch(0xFC);
-    func_8011F118();
+    column_cells_x30_x2f_x2d_x31_windo();
     return;
 }

@@ -6,7 +6,7 @@
  *   anim_flags_row  = 80194394 (row pair dispatch)
  *   anim_channel    = 801947B8
  *   g_io_just       = 800F53D4 (poll gate)
- * Ground truth: src/func_8017F644, 80178730, 801782C0, 80176F88,
+ * Ground truth: src/battle_anim_x_b8_rows_v0_gate_x, 80178730, 801782C0, 80176F88,
  * 801795BC, 80178A58, 8017890C, 801776E8.
  */
 #include <stdint.h>

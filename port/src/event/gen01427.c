@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801820F4.
- * Ground truth: src/func_801820F4.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_anim_row_v0_spin_loops_l182.
+ * Ground truth: src/battle_anim_row_v0_spin_loops_l182.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801820F4(void)
+void battle_anim_row_v0_spin_loops_l182(void)
 {
     /* battle anim: 80194640 row + v0 spin loops L18220C/L182200. */
     cb_slot2();

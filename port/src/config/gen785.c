@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80157148.
- * Ground truth: src/func_80157148.c (byte-verified).
+/* FF4 source-port — interpreted module for options_rows_xdf_xe1_xe3_windows_x.
+ * Ground truth: src/options_rows_xdf_xe1_xe3_windows_x.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80157148(void)
+void options_rows_xdf_xe1_xe3_windows_x(void)
 {
     /* options rows: 0xDF/0xE1/0xE3 windows, 0x289C cell,
        8015240C row; loop L15718C on 5A90(0x83). */

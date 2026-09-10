@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8015E158.
- * Ground truth: src/func_8015E158.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x5e158.
+ * Ground truth: src/fn_1x5e158.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8015E158(void)
+void fn_1x5e158(void)
 {
     page_open(0x3536);
     tail(0xA9);
@@ -31,7 +31,7 @@ LE1D8:
     label(0x393D);
     wnd_open(4);
     label(0x393F);
-    func_8015236C();
+    fn_1x5236c();
     sep_a();
     row_page(0xA9);
     cell_poke0(cell_state(0x3941));
@@ -61,7 +61,7 @@ LE1D8:
         goto LE3AC;
 LE328:
     for (;;) {
-        func_8015316C();
+        fn_1x5316c();
         cell_put(0xAB);
         sep_a();
         row_open_w(5);
@@ -87,7 +87,7 @@ LE3CC:
         goto LE43C;
 LE3EC:
     for (;;) {
-        func_8015319C();
+        fn_1x5319c();
         txt_cell(0x3540);
         if (gate(0x202) != 0)
             continue;

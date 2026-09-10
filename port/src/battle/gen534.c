@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80101230.
- * Ground truth: src/func_80101230.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_own_row_x172c_text_x1700_x170.
+ * Ground truth: src/shop_own_row_x172c_text_x1700_x170.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80101230(void)
+void shop_own_row_x172c_text_x1700_x170(void)
 {
     /* shop own-row: 0x172C text, 0x1700-0x1705 texts with 0x172E/
        0x172F cells; branch on 5574(3), closes with 0xC0 reads. */

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80197964.
- * Ground truth: src/func_80197964.c (byte-verified).
+/* FF4 source-port — interpreted module for event_v0_gates_f078_spin_loop_l197.
+ * Ground truth: src/event_v0_gates_f078_spin_loop_l197.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80197964(void)
+void event_v0_gates_f078_spin_loop_l197(void)
 {
     /* event: v0 gates; 8018F078 spin loop L1979E8. */
     if (io_just() != 0)

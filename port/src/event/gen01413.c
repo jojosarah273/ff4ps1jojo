@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8018CAD8.
- * Ground truth: src/func_8018CAD8.c (byte-verified).
+/* FF4 source-port — interpreted module for event_v0_s0_s1_s0_latches_spin_row.
+ * Ground truth: src/event_v0_s0_s1_s0_latches_spin_row.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8018CAD8(void)
+void event_v0_s0_s1_s0_latches_spin_row(void)
 {
     /* event: v0/s0 + s1/s0 latches; 80197688 spin rows. */
     if (func_80197688() != 0)

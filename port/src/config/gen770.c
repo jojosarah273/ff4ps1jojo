@@ -1,22 +1,20 @@
-/* FF4 source-port — interpreted module for func_80121B5C.
- * Ground truth: src/func_80121B5C.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x21b5c.
+ * Ground truth: src/fn_1x21b5c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-
-extern void func_80121FDC(void);
 
 extern void func_8012202C(void);
 
 
 
 extern void func_80121BE4(void);
-void func_80121B5C(void) {
+void fn_1x21b5c(void) {
     if (io_go() == 0) {
         func_8012202C();
         poll_pair(0x65);
     } else {
-        func_80121FDC();
+        fn_1x21fdc();
         key_page(0x65);
     }
     latch(0xF9);

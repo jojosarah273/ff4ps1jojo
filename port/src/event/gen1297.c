@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80180504.
- * Ground truth: src/func_80180504.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_anim_twin_spin_loops_then.
+ * Ground truth: src/battle_anim_twin_spin_loops_then.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80180504(void)
+void battle_anim_twin_spin_loops_then(void)
 {
     /* battle anim (twin): spin loops then 80194640. */
 L180524:

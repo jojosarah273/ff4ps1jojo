@@ -32,7 +32,7 @@ L1522D4:
     func_800F6B38(0x1900);
     func_800F8CD4(0x3945);
     row_prep(0x10);
-    func_8015254C();
+    options_b04_x2000_gates_v0_run_l15();
     row_prep_close();
     sep_a();
     txt_set(0x394B);

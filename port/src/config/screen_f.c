@@ -38,12 +38,12 @@ void func_800FB430(void)
     tail(0x45);
     wnd_open_cur();
     tail(0x3D);
-    func_801766B0();
+    fn_1x766b0();
     wnd_open(0x3080);
     tail(0x47);
     wnd_open_cur();
     tail(0x3D);
-    func_801766B0();
+    fn_1x766b0();
     battle_anim_gate_a();
     cb_slot15();
     battle_anim_gate_a();

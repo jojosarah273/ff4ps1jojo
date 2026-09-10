@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801100BC.
- * Ground truth: src/func_801100BC.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_x3b0_x3b1_x410_x411_ce.
+ * Ground truth: src/battle_rows_x3b0_x3b1_x410_x411_ce.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801100BC(void)
+void battle_rows_x3b0_x3b1_x410_x411_ce(void)
 {
     /* battle rows: 0x3B0/0x3B1/0x410/0x411 cells with 3F38(3C3C)
        pairs, 0x4C/0x4D/0x7A windows; loop L1100CC on 5A90(0x10). */

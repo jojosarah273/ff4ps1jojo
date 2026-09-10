@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80162918.
- * Ground truth: src/func_80162918.c (byte-verified).
+/* FF4 source-port — interpreted module for options_banner_x2683_gate_ladder_x.
+ * Ground truth: src/options_banner_x2683_gate_ladder_x.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80162918(void)
+void options_banner_x2683_gate_ladder_x(void)
 {
     /* options banner: 0x2683 gate; 5574 ladder (0xC0/0x80/0x40 codes)
        with 80153218 one-shot, ending 0x26D2/0x34C8/0x34C7 + 0x34CA
@@ -52,6 +52,6 @@ L162A28:
     txt_draw(0x34C8);
     latch(0x10);
     txt_draw(0x34C7);
-    func_801532D4();
+    fn_1x532d4();
     return;
 }

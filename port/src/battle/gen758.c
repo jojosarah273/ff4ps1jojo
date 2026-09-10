@@ -1,10 +1,10 @@
-/* FF4 source-port — interpreted module for func_8014B8AC.
- * Ground truth: src/func_8014B8AC.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x4b8ac.
+ * Ground truth: src/fn_1x4b8ac.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-void func_8014B8AC(void)
+void fn_1x4b8ac(void)
 
 {
   int iVar1;

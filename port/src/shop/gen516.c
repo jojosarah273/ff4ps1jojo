@@ -1,13 +1,13 @@
-/* FF4 source-port — interpreted module for func_80169F58.
- * Ground truth: src/func_80169F58.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_rows_c4a0_prep_xa_x8_windows.
+ * Ground truth: src/shop_rows_c4a0_prep_xa_x8_windows.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80169F58(void)
+void shop_rows_c4a0_prep_xa_x8_windows(void)
 {
     /* shop rows: 8016C4A0 prep, 0xA/0x8 windows, 0x2703 text; loops
        L169FB0 (7594/8 cells) and L169FC8 (67FC/5B8C(0x202)). */
-    func_8016C4A0();
+    shop_memory_x48_x50_windows_x7d27();
     wnd_open_cur();
     tail_cur();
     latch(0x15);

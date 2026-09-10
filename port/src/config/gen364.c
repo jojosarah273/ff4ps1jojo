@@ -1,14 +1,14 @@
-/* FF4 source-port — interpreted module for func_8015F3E0.
- * Ground truth: src/func_8015F3E0.c (byte-verified).
+/* FF4 source-port — interpreted module for options_music_screen_x38fe_gate_x2.
+ * Ground truth: src/options_music_screen_x38fe_gate_x2.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8015F3E0(void)
+void options_music_screen_x38fe_gate_x2(void)
 {
     /* options/music screen: 0x38FE gate, 0x2724/0x2704 texts, 0xAA/0xD6/
        0xCF windows, 80160AAC prep, 8006508C/801608C4/800654CC/
        8015A374/80153374 rows. */
-    func_80160AAC();
+    options_banner_x2726_x2725_x28a2_x();
     txt_set(0x38FE);
     if (gate_cur() != 0)
         goto L15F428;
@@ -21,7 +21,7 @@ L15F428:
     cell_tick_and2(0x28A4);
     if (sel(2) != 0)
         goto L15F458;
-    func_801608C4();
+    options_x3554_text_xce_window_row();
     return;
 L15F458:
     txt_set(0x2704);

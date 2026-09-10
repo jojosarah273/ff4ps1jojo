@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801376F0.
- * Ground truth: src/func_801376F0.c (byte-verified).
+/* FF4 source-port — interpreted module for ability_page_x1b7a_x1b7c_gates_x76.
+ * Ground truth: src/ability_page_x1b7a_x1b7c_gates_x76.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801376F0(void)
+void ability_page_x1b7a_x1b7c_gates_x76(void)
 {
     /* ability page: 0x1B7A/0x1B7C gates, 0x76/0x75/0x7A/0x79/0x73/0x77
        windows, 80124D08/801223A4 rows; loop L137790 with
@@ -58,7 +58,7 @@ L137830:
     config_rows_163();
 L137858:
     draw_pad_cur();
-    func_801223A4();
+    rows_x29_window_c_bc_fills_loop_l1();
     page_open(0x1A80);
     latch(1);
     cell_draw(0x1A78);

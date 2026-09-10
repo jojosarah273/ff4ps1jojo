@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8013D720.
- * Ground truth: src/func_8013D720.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x3d720.
+ * Ground truth: src/fn_1x3d720.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8013D720(void)
+void fn_1x3d720(void)
 {
     battle_row_wrap();
     func_80148DE8();
@@ -15,13 +15,13 @@ void func_8013D720(void)
     latch(0x30);
     txt_draw(0xF399);
     battle_row_d548();
-    func_8014086C();
+    fn_1x4086c();
 L780:
     for (;;) {
         gpu_driver_run();
-        func_8013D5C8();
+        battle_rows_d690_prep_x340_x342_x3();
         sep();
-        func_80143D14();
+        fn_1x43d14();
         sep_a();
         cell_poke0(cell_state(0xF399));
         cell_put(2);
@@ -32,7 +32,7 @@ L780:
         battle_rows_twin();
         draw_pad_cur();
         sep();
-        func_8013D598();
+        fn_1x3d598();
         cell_dec_bank(0xF399);
         cell_dec_bank(0xF399);
         txt_set(0xF398);
@@ -59,18 +59,18 @@ L780:
 L8d4:
     for (;;) {
         gpu_driver_run();
-        func_8013D5C8();
+        battle_rows_d690_prep_x340_x342_x3();
         sep();
-        func_80143D64();
+        fn_1x43d64();
         sep_a();
         cell_poke0(cell_state(0xF398));
         cell_put_cur();
-        func_80143D14();
+        fn_1x43d14();
         sep_a();
         cell_poke0(cell_state(0xF399));
         cell_put(2);
         sep();
-        func_8013D598();
+        fn_1x3d598();
         sep();
         latch(0x20);
         battle_rows_twin();
@@ -80,7 +80,7 @@ L8d4:
             goto L9f8;
         sep();
         poll_spin();
-        func_80143DB4();
+        battle_rows_two_f38_b04_pair_reads();
     }
 L9f8:
     sep();
@@ -134,7 +134,7 @@ Lb18:
 Lb48:
     for (;;) {
         gpu_driver_run();
-        func_8013D690();
+        fn_1x3d690();
         func_80149374();
         if (io_go() != 0)
             break;
@@ -149,7 +149,7 @@ Lb48:
         cell_pos_back(8);
         cell_put(2);
         sep();
-        func_8013D598();
+        fn_1x3d598();
     }
     cell_clear_bank(0xEF87);
     return;

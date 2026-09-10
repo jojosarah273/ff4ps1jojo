@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80119210.
- * Ground truth: src/func_80119210.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_x18_x1b_windows_x16a0.
+ * Ground truth: src/battle_rows_x18_x1b_windows_x16a0.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80119210(void)
+void battle_rows_x18_x1b_windows_x16a0(void)
 {
     /* battle rows: 0x18-0x1B windows, 0x16A0-0x16A2 texts,
        80174F0C row; 53C0 gate closes 0x16A0-0x16A2 fills. */
@@ -13,7 +13,7 @@ void func_80119210(void)
     latch(0x64);
     cell_put(0x1A);
     open_row(0x1B);
-    func_80174F0C();
+    fn_1x74f0c();
     txt_set(0x16A0);
     sep_b();
     cell_tick_sub(cell_state(0x30));

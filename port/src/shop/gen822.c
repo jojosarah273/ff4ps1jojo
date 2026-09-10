@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801605D0.
- * Ground truth: src/func_801605D0.c (byte-verified).
+/* FF4 source-port — interpreted module for options_x280_x29b5_cells_xb1_xb2_w.
+ * Ground truth: src/options_x280_x29b5_cells_xb1_xb2_w.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801605D0(void)
+void options_x280_x29b5_cells_xb1_xb2_w(void)
 {
     /* options: 0x280/0x29B5 cells, 0xB1/0xB2 windows, 54D4(3C3C)
        gates, 8015330C row; loop L160604 on 5A90(8). */
@@ -20,7 +20,7 @@ L160604:
         txt_cell(0x2003);
         cell_draw_cur();
     L160674:
-        func_8015330C();
+        rows_u16_d44_d54_swap_chain_with_c();
         step2();
         poll_t(8);
         if (io_just() == 0)

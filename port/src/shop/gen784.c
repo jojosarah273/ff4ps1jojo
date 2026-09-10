@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80160B8C.
- * Ground truth: src/func_80160B8C.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x60b8c.
+ * Ground truth: src/fn_1x60b8c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80160B8C(void)
+void fn_1x60b8c(void)
 {
     txt_set(0x38FE);
     io_poll(2);

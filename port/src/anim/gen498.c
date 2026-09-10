@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80171E18.
- * Ground truth: src/func_80171E18.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_rows_xc_xe_xad_windows_x4f1_x.
+ * Ground truth: src/shop_rows_xc_xe_xad_windows_x4f1_x.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80171E18(void)
+void shop_rows_xc_xe_xad_windows_x4f1_x(void)
 {
     /* shop rows: 0xC/0xE/0xAD windows, 0x4F1/0x4F0/0x4F2/0x4F3 texts,
        gates 5480/8058(2/4/5)/53C0. */

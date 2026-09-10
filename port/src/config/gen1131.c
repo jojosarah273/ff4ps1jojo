@@ -1,11 +1,11 @@
-/* FF4 source-port — interpreted module for func_80122334.
- * Ground truth: src/func_80122334.c (byte-verified).
+/* FF4 source-port — interpreted module for rows_u16_d44_d58_swap_with_c_prep.
+ * Ground truth: src/rows_u16_d44_d58_swap_with_c_prep.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 extern u16 *D_8019ED44;
 extern u16 *D_8019ED58;
-void func_80122334(void)
+void rows_u16_d44_d58_swap_with_c_prep(void)
 {
     /* rows: u16 D44<->D58 swap with 922C prep + 9410 close. */
     row_prep(0x20);

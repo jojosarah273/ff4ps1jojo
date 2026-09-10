@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8014F7A8.
- * Ground truth: src/func_8014F7A8.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_item_count_screen_x18_windo.
+ * Ground truth: src/battle_item_count_screen_x18_windo.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8014F7A8(void)
+void battle_item_count_screen_x18_windo(void)
 {
     /* battle item-count screen: 0x18 window, 0x18/0x19 rows, 0x6CC0
        gate picks the 300/301 vs 769/770/771 count cells; loop L14F850

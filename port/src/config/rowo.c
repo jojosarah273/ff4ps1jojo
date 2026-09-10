@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80139E34.
- * Ground truth: src/func_80139E34.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x39e34.
+ * Ground truth: src/fn_1x39e34.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80139E34(void)
+void fn_1x39e34(void)
 {
     config_row_b600();
     draw_pad_cur();
@@ -20,35 +20,35 @@ void func_80139E34(void)
     txt_draw(0xBC1E);
     wnd_open(0x29E);
     draw_pad_cur();
-    func_801223A4();
+    rows_x29_window_c_bc_fills_loop_l1();
     wnd_open(0x21E);
     draw_pad_cur();
-    func_801223A4();
-    func_8013B88C();
+    rows_x29_window_c_bc_fills_loop_l1();
+    fn_1x3b88c();
     draw_pad(0xBB22);
-    func_8013A8CC();
+    battle_rows_x41_then_bcx2_loop_on();
     draw_pad(0xBBA2);
-    func_8013A8CC();
+    battle_rows_x41_then_bcx2_loop_on();
     draw_pad(0xBC22);
-    func_8013A8CC();
-    func_80126480();
+    battle_rows_x41_then_bcx2_loop_on();
+    fn_1x26480();
     func_8013A8C4();
     page_open(0x16AA);
-    func_8013AA08();
-    func_80126590();
+    fn_1x3aa08();
+    fn_1x26590();
 Lf50:
     txt_set(0x16B8);
-    func_8013B118();
+    fn_1x3b118();
     txt_draw(0x304);
     latch(0x80);
     txt_draw(0x305);
     txt_set(0x16BE);
-    func_8013B118();
+    fn_1x3b118();
     cell_put(0x45);
     latch(0x30);
     cell_put(0x46);
     config_pad_300();
-    func_8013B88C();
+    fn_1x3b88c();
     txt_set(0x16AC);
     battle_put43();
     latch_cur();
@@ -73,7 +73,7 @@ L098:
     latch(0x18);
 L0A0:
     cell_put(0x45);
-    func_8011F6AC();
+    fn_1x1f6ac();
     txt_set(0x1BA8);
     row_sel_cell_cur();
     row_sel_cell2_cur();
@@ -95,7 +95,7 @@ L0A0:
     txt_draw(0x328);
     latch(0xC0);
     txt_draw(0x329);
-    func_8013A950();
+    ability_rows_x1ba9_x1ba8_x1baa_tex();
     page(0x45);
     label(0x16AA);
     func_8012214C();
@@ -108,17 +108,17 @@ L0A0:
     txt_draw(0x327);
     txt_draw(0x32B);
     txt_set(0x16B6);
-    func_8013B118();
+    fn_1x3b118();
     txt_draw(0x30C);
     latch(0x60);
     txt_draw(0x30D);
     txt_set(0x16A9);
-    func_8013B118();
+    fn_1x3b118();
     txt_draw(0x308);
     latch(0x70);
     txt_draw(0x309);
     txt_set(0x16B7);
-    func_8013B118();
+    fn_1x3b118();
     txt_draw(0x314);
     latch(0x90);
     txt_draw(0x315);
@@ -129,7 +129,7 @@ L0A0:
     label(0x316);
     label(0x31A);
     midrow_pad88_run();
-    func_80126480();
+    fn_1x26480();
     func_8013A8C4();
     func_8013B7B8(0xFF);
     func_8013B764();
@@ -158,7 +158,7 @@ L32C:
     txt_set(0x16B8);
     if (gate(2) != 0)
         goto L36C;
-    func_8013B270();
+    ability_spell_screen_x48_x49_windo();
     midrow_paint_c();
 L36C:
     row_page(1);
@@ -193,7 +193,7 @@ L414:
     txt_set(0x1BA7);
     if (gate(0x202) != 0)
         goto L45C;
-    func_8013B1E8();
+    fn_1x3b1e8();
     goto L654;
 L45C:
     poll_spin();
@@ -219,19 +219,19 @@ L4EC:
     poll_spin();
     if (poll_go(0x202) != 0)
         goto L514;
-    func_8013B160();
+    fn_1x3b160();
     goto L654;
 L514:
     poll_spin();
     if (poll_go(0x202) != 0)
         goto L53C;
-    func_8013B228();
+    fn_1x3b228();
     goto L654;
 L53C:
     poll_spin();
     if (poll_go(0x202) != 0)
         goto L564;
-    func_8013B1A8();
+    fn_1x3b1a8();
     goto L654;
 L564:
     poll_spin();
@@ -260,7 +260,7 @@ L654:
     txt_set(0x1BA7);
     if (gate(0x202) != 0)
         goto L69C;
-    func_8013B1E8();
+    fn_1x3b1e8();
     goto Lf50;
 L69C:
     poll_spin();
@@ -288,19 +288,19 @@ L73C:
     poll_spin();
     if (poll_go(0x202) != 0)
         goto L764;
-    func_8013B160();
+    fn_1x3b160();
     goto Lf50;
 L764:
     poll_spin();
     if (poll_go(0x202) != 0)
         goto L78C;
-    func_8013B228();
+    fn_1x3b228();
     goto Lf50;
 L78C:
     poll_spin();
     if (poll_go(0x202) != 0)
         goto L7B4;
-    func_8013B1A8();
+    fn_1x3b1a8();
     goto Lf50;
 L7B4:
     poll_spin();

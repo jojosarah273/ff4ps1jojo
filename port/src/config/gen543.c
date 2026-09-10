@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8013ED14.
- * Ground truth: src/func_8013ED14.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_x2_x3_x4_windows_x6cfd.
+ * Ground truth: src/battle_rows_x2_x3_x4_windows_x6cfd.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8013ED14(void)
+void battle_rows_x2_x3_x4_windows_x6cfd(void)
 {
     /* battle rows: 0x2/0x3/0x4 windows, 0x6CFD cells; loop L13ED2C
        on 5DA0(0x4)/5B8C(0x202). */

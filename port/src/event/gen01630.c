@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8018A9DC.
- * Ground truth: src/func_8018A9DC.c (byte-verified).
+/* FF4 source-port — interpreted module for event_v0_gate_picks_a75c_vs_a438_r.
+ * Ground truth: src/event_v0_gate_picks_a75c_vs_a438_r.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8018A9DC(void)
+void event_v0_gate_picks_a75c_vs_a438_r(void)
 {
     /* event: v0 gate picks 8018A75C(2/1/3) vs 8018A438 row. */
     if (io_just() != 0)
@@ -14,7 +14,7 @@ void func_8018A9DC(void)
     event_drive(3);
     return;
 L18AA3C:
-    func_8018A438();
+    event_ac90_intro_branches_with_f0c();
     return;
 L18AA4C:
     return;

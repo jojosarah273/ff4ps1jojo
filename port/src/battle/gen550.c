@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8011CC98.
- * Ground truth: src/func_8011CC98.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_rows_x3d_x18_x19_windows_cell.
+ * Ground truth: src/shop_rows_x3d_x18_x19_windows_cell.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8011CC98(void)
+void shop_rows_x3d_x18_x19_windows_cell(void)
 {
     /* shop rows: 0x3D/0x18/0x19 windows, 5024 cells + ADB/B1B texts;
        loop L11CCAC on 5A90(0x40). */

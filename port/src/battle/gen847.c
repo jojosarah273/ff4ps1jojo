@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8011FF80.
- * Ground truth: src/func_8011FF80.c (byte-verified).
+/* FF4 source-port — interpreted module for ability_gates_v1_v0_branches_route.
+ * Ground truth: src/ability_gates_v1_v0_branches_route.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8011FF80(void)
+void ability_gates_v1_v0_branches_route(void)
 {
     /* ability gates: v1/v0 branches route 801360AC / 801360EC+
        80136148 / 8011F320+8011F884+78C4 rows; the 7918(2) read

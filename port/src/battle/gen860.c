@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8010408C.
- * Ground truth: src/func_8010408C.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_x300_x301_x2f_x303_x20.
+ * Ground truth: src/battle_rows_x300_x301_x2f_x303_x20.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8010408C(void)
+void battle_rows_x300_x301_x2f_x303_x20(void)
 {
     /* battle rows: 0x300/0x301/0x2F/0x303/0x200 cells via 8010D9D4;
        loop L1040A4 on 5A90(). */

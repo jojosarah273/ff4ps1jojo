@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8011E534.
- * Ground truth: src/func_8011E534.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x1e534.
+ * Ground truth: src/fn_1x1e534.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8011E534(void)
+void fn_1x1e534(void)
 {
     cell_put(0x3D);
     open_row(0x3E);

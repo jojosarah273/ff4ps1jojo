@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80175F00.
- * Ground truth: src/func_80175F00.c (byte-verified).
+/* FF4 source-port — interpreted module for row_picker_xcc_window_x1003_gate_e.
+ * Ground truth: src/row_picker_xcc_window_x1003_gate_e.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80175F00(void)
+void row_picker_xcc_window_x1003_gate_e(void)
 {
     /* row picker: 0xCC window + 0x1003 gate; 80175E88 header; then the
        4248(0x20)/0x10/0x8 row-gate ladder and 80170458 row render. */
@@ -11,7 +11,7 @@ void func_80175F00(void)
     if (gate(0x202) == 0)
         return;
     open_row(0xCC);
-    func_80175E88();
+    fn_1x75e88();
     txt_cell(0x1003);
     row_read(0x20);
     if (sel(2) != 0)
@@ -50,6 +50,6 @@ L175FD0:
     tail(0x4E);
     latch(0x1B);
     cell_put(0x49);
-    func_80170458();
+    shop_row_render_x2115_x4300_x4301();
     return;
 }

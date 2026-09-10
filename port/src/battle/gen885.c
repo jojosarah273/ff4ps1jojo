@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801442BC.
- * Ground truth: src/func_801442BC.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_ef78_prep_loop_l1442e4.
+ * Ground truth: src/battle_rows_ef78_prep_loop_l1442e4.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801442BC(void)
+void battle_rows_ef78_prep_loop_l1442e4(void)
 {
     /* battle rows: 8013EF78 prep; loop L1442E4 on 5C64(0x202) with
        80140558 + cell writes; closes via 0x10 window. */

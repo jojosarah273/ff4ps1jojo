@@ -1,10 +1,10 @@
-/* FF4 source-port — interpreted module for func_8014202C.
- * Ground truth: src/func_8014202C.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x4202c.
+ * Ground truth: src/fn_1x4202c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-void func_8014202C(void) {
+void fn_1x4202c(void) {
     ;
     do {
         gpu_driver_run();

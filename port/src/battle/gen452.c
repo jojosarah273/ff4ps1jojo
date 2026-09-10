@@ -1,13 +1,11 @@
-/* FF4 source-port — interpreted module for func_801033E0.
- * Ground truth: src/func_801033E0.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x033e0.
+ * Ground truth: src/fn_1x033e0.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-extern int func_801030F8();
-extern int func_801034E0();
 
-void func_801033E0(void)
+void fn_1x033e0(void)
 
 {
   int iVar1;
@@ -32,18 +30,18 @@ void func_801033E0(void)
       txt_draw(0x6fd);
     }
     else {
-      func_801030F8();
+      fn_1x030f8();
       latch(0x20);
       cell_put(0x79);
       latch(0xf);
       txt_draw(0x6fd);
-      func_801034E0();
+      shop_rows_b8_twin_of_x7a_xb8_windo();
     }
   }
   else {
     battle_rows_run();
     open_row(0x79);
-    func_801034E0();
+    shop_rows_b8_twin_of_x7a_xb8_windo();
   }
   return;
 }

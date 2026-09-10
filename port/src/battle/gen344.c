@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8014D14C.
- * Ground truth: src/func_8014D14C.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_item_count_x26_x28_x2a_wind.
+ * Ground truth: src/battle_item_count_x26_x28_x2a_wind.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8014D14C(void)
+void battle_item_count_x26_x28_x2a_wind(void)
 {
     /* battle item-count: 0x26/0x28/0x2A windows, 4FAC(0x101) gate rows,
        80072720 prep; loops L14D1B4 (5DA0(0x28)/5B8C(0x202)), L14D248

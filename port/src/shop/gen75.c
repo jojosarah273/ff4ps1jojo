@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8016E668.
- * Ground truth: src/func_8016E668.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_stat_overlay_xa9_xab_xb5_xb.
+ * Ground truth: src/battle_stat_overlay_xa9_xab_xb5_xb.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8016E668(void)
+void battle_stat_overlay_xa9_xab_xb5_xb(void)
 {
     /* battle stat overlay: 0xA9/0xAB/0xB5/0xB7/0xB1/0xB3 windows,
        0x3591/0x3593 titles; 7B40/7B7C row pair draws + 7FCC/3F94(3C3C)

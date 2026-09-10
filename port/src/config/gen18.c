@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80153608.
- * Ground truth: src/func_80153608.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x53608.
+ * Ground truth: src/fn_1x53608.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80153608(void)
+void fn_1x53608(void)
 {
     func_801531CC();
     io_poll(0x32);
@@ -28,7 +28,7 @@ L65c:
         txt_draw(0x393E);
         cell_push_c8_d58(0x38F0);
         label(0x393F);
-        func_8015236C();
+        fn_1x5236c();
         sep_a();
         txt_set(0x3941);
         cell_poke0(cell_state(0x289C));
@@ -96,7 +96,7 @@ L954:
     cell_clear_bank(0x359C);
     latch(0x37);
     txt_draw(0x34CA);
-    func_80153264();
+    fn_1x53264();
     latch(0xFF);
     txt_draw(0x34CC);
 L9a4:

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80138F68.
- * Ground truth: src/func_80138F68.c (byte-verified).
+/* FF4 source-port — interpreted module for config_rows_x1e0_x1e0_x19a_texts_x.
+ * Ground truth: src/config_rows_x1e0_x1e0_x19a_texts_x.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80138F68(void)
+void config_rows_x1e0_x1e0_x19a_texts_x(void)
 {
     /* config rows: 0x1E0/0x1E0/0x19A texts, 0x212C window, 0x1E0
        gate picks the 0x1F/0x1E2 route. */

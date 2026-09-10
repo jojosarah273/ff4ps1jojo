@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80123320.
- * Ground truth: src/func_80123320.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x23320.
+ * Ground truth: src/fn_1x23320.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80123320(void)
+void fn_1x23320(void)
 {
     row_info(0x4B);
     tail(0x48);
@@ -26,7 +26,7 @@ void func_80123320(void)
         goto L3440;
     cell_cursor_dec();
     func_80123AA8();
-    func_80122334();
+    rows_u16_d44_d58_swap_with_c_prep();
     row_close2();
     poll_pair_cur();
     poll_pair_cur();
@@ -104,6 +104,6 @@ L3640:
     page(0x45);
     latch(6);
     cell_put(0x45);
-    func_8012371C();
+    fn_1x2371c();
     return;
 }

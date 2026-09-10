@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801671E4.
- * Ground truth: src/func_801671E4.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_stat_row_x1802_text_x2a_win.
+ * Ground truth: src/battle_stat_row_x1802_text_x2a_win.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801671E4(void)
+void battle_stat_row_x1802_text_x2a_win(void)
 {
     /* battle stat row: 0x1802 text, 0x2A window with 5024 cells
        (5 copies), 6434(0x202)/4120(2) gates; loop L167364 (5DA0/

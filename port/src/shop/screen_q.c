@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8016AE94.
- * Ground truth: src/func_8016AE94.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x6ae94.
+ * Ground truth: src/fn_1x6ae94.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8016AE94(void)
+void fn_1x6ae94(void)
 {
     cell_clear_bank(0x7D25);
     wnd_open(0x80);
@@ -13,7 +13,7 @@ void func_8016AE94(void)
     tail_cur();
     tail(6);
     wnd_open(0x100);
-    func_8016ADDC();
+    shop_rows_x3319_x371b_x331b_x3719();
     row_prep(0x20);
     sep();
     draw_pad(0x280);
@@ -113,7 +113,7 @@ L168:
     wnd_open(0xCC00);
     draw_pad(0x4000);
     latch(0x15);
-    func_8016B5B0();
+    fn_1x6b5b0();
     wnd_open(0x70);
     tail(0x6C);
     wnd_open(0x50);
@@ -122,8 +122,8 @@ L168:
     tail(0x70);
     wnd_open(0x50);
     tail(0x72);
-    func_8016AACC();
-    func_8016BED4();
+    fn_1x6aacc();
+    shop_rows_x2000_x2040_cells_via_dc();
     wnd_open(0x40);
     label(0x2084);
     wnd_open(0x180);
@@ -146,20 +146,20 @@ L168:
     label(0x20C8);
     wnd_open_cur();
     draw_pad(0x100);
-    func_8016BE1C();
+    shop_rows_f94_b04_reads_x2000_x204();
     wnd_open(2);
     draw_pad_cur();
-    func_8016BE1C();
+    shop_rows_f94_b04_reads_x2000_x204();
     wnd_open(4);
     draw_pad(0x100);
-    func_8016BE1C();
+    shop_rows_f94_b04_reads_x2000_x204();
     wnd_open(6);
     draw_pad(0x154);
-    func_8016BE1C();
+    shop_rows_f94_b04_reads_x2000_x204();
     wnd_open(8);
     draw_pad(0x2F4);
-    func_8016BE1C();
-    func_8016B470();
+    shop_rows_f94_b04_reads_x2000_x204();
+    fn_1x6b470();
     sep();
     for (;;) {
         cell_draw(0x3D19);

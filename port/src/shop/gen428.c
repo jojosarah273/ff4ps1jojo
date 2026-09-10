@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8016380C.
- * Ground truth: src/func_8016380C.c (byte-verified).
+/* FF4 source-port — interpreted module for options_value_x34c8_x34c7_titles_x.
+ * Ground truth: src/options_value_x34c8_x34c7_titles_x.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8016380C(void)
+void options_value_x34c8_x34c7_titles_x(void)
 {
     /* options value: 0x34C8/0x34C7 titles, 0xA6/0x202F/0xA9/0xAB
        windows, 80152CDC + 8015329C rows; loop L16386C on 5574(0xD). */

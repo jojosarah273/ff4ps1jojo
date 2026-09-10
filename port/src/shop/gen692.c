@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8016BC6C.
- * Ground truth: src/func_8016BC6C.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_row_x4a_x57_windows_x400_x28.
+ * Ground truth: src/shop_row_x4a_x57_windows_x400_x28.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8016BC6C(void)
+void shop_row_x4a_x57_windows_x400_x28(void)
 {
     /* shop row: 0x4A/0x57 windows, 0x400/0x28/0x57 consts, 8016BBCC
        row; gate 4120(0x202). */
@@ -16,7 +16,7 @@ void func_8016BC6C(void)
     page(0x57);
     draw_pad(0x4000);
     latch(0x7E);
-    func_8016BBCC();
+    fn_1x6bbcc();
     row_prep(0x20);
     row_read2(0x57);
     sep_a();

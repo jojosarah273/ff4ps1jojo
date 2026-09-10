@@ -1,10 +1,10 @@
-/* FF4 source-port — interpreted module for func_8012C82C.
- * Ground truth: src/func_8012C82C.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x2c82c.
+ * Ground truth: src/fn_1x2c82c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-void func_8012C82C(void)
+void fn_1x2c82c(void)
 
 {
   int iVar1;

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801706C0.
- * Ground truth: src/func_801706C0.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_buy_flow_xfd8_gate_detail_alt.
+ * Ground truth: src/shop_buy_flow_xfd8_gate_detail_alt.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801706C0(void)
+void shop_buy_flow_xfd8_gate_detail_alt(void)
 {
     /* shop buy-flow: 0xFD8 gate, 80170884 detail; alt renders the 0x47/
        0x45/0x1800 rows (3C/3D/3E/0x20/0x21 windows) and commits through
@@ -14,7 +14,7 @@ void func_801706C0(void)
     io_poll(0xF);
     if (io_just() != 0)
         goto L17079C;
-    func_80170884();
+    fn_1x70884();
     cell_clear_bank(0x420B);
     txt_set(0xFD8);
     row_sel_cell_cur();
@@ -25,7 +25,7 @@ void func_801706C0(void)
     txt_set(0xFD8);
     cell_push_c8();
     txt_draw(0x4304);
-    func_8017091C();
+    fn_1x7091c();
     return;
 L17079C:
     wnd_open_cur();

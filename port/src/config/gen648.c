@@ -13,7 +13,7 @@ void config_rows_5a(void)
     sep_a();
     cell_peek0(cell_state(0x45));
     cell_push89_sel(0x48);
-    func_8011F3F8();
+    shared_scroll_column_x5a_window_x3();
     row_prep_close();
     row_page(0x5A);
     cell_draw_cur();

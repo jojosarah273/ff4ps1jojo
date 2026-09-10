@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80170C14.
- * Ground truth: src/func_80170C14.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x70c14.
+ * Ground truth: src/fn_1x70c14.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80170C14(void)
+void fn_1x70c14(void)
 {
     row_page(0xD3);
     if (gate(2) == 0)

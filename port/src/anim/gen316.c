@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801764DC.
- * Ground truth: src/func_801764DC.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_option_icon_row_windows_wit.
+ * Ground truth: src/battle_option_icon_row_windows_wit.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801764DC(void)
+void battle_option_icon_row_windows_wit(void)
 {
     /* battle option-icon row: 2/3 windows with 4248(0xBF) fills, then
        per-index 4120(0x202) gates showing the 0x54/0x50/0x52/0x53/0x55/

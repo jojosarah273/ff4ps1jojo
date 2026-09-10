@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80188448.
- * Ground truth: src/func_80188448.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_v0_gate_tree_on_the_e4_pair.
+ * Ground truth: src/battle_v0_gate_tree_on_the_e4_pair.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80188448(void)
+void battle_v0_gate_tree_on_the_e4_pair(void)
 {
     /* battle: v0 gate tree on the 80191638/801890E4 pair rows. */
     if (io_just() != 0)

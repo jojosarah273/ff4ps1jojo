@@ -38,7 +38,7 @@ void func_8015902C(void)
     sep_a();
     row_page(0xA9);
     cell_poke0(cell_state(0x3972));
-    func_8015A30C();
+    fn_1x5a30c();
     cell_pull_c8_bank(0x80);
     draw_pad(3);
     sep();
@@ -59,7 +59,7 @@ void func_8015902C(void)
     sep_a();
     row_page(0xA9);
     cell_poke0(cell_state(0x3973));
-    func_8015A344();
+    fn_1x5a344();
     cell_pull_c8_bank(0x80);
     wnd_open(0x15);
     for (;;) {
@@ -284,7 +284,7 @@ l9A58:
     row_read(0x7F);
     cell_poke0(cell_state(0xA9));
 l9A80:
-    func_8015A30C();
+    fn_1x5a30c();
 l9A88:
     draw_pad(0x1C);
     cell_pull_c8_bank(0x80);
@@ -341,7 +341,7 @@ l9BD8:
     label(0x3945);
     wnd_open(5);
     label(0x3947);
-    func_8015254C();
+    options_b04_x2000_gates_v0_run_l15();
     sep_b();
     row_page(0xBF);
     cell_tick_sub(cell_state(0x3949));
@@ -356,7 +356,7 @@ l9CE8:
     cell_poke0(cell_state(0xA9));
     cell_poke0(cell_state(0xAA));
 l9D5C:
-    func_8015A344();
+    fn_1x5a344();
 l9D64:
     draw_pad(0x1D);
     cell_pull_c8_bank(0x80);
@@ -398,7 +398,7 @@ l9E84:
     sep_a();
     row_page(0xAA);
     cell_poke0(cell_state(0x28A8));
-    func_8015A344();
+    fn_1x5a344();
     cell_put(0xAA);
     goto l9FE4;
 l9F2C:
@@ -416,7 +416,7 @@ l9F64:
     cell_tick_half();
     sep_a();
     cell_poke0(cell_state(0xAA));
-    func_8015A344();
+    fn_1x5a344();
     cell_put(0xAA);
 l9FE4:
     draw_pad(0x2D);

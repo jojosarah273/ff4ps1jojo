@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80141334.
- * Ground truth: src/func_80141334.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_cast_x4800_x4880_text_gates.
+ * Ground truth: src/battle_cast_x4800_x4880_text_gates.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80141334(void)
+void battle_cast_x4800_x4880_text_gates(void)
 {
     /* battle cast: 0x4800/0x4880 text gates, 0x1A window, 800723D0 +
        800761C8 rows; loop L141390 on 5A90(8). */

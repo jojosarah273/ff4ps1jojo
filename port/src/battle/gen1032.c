@@ -1,10 +1,10 @@
-/* FF4 source-port — interpreted module for func_80110FE4.
- * Ground truth: src/func_80110FE4.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x10fe4.
+ * Ground truth: src/fn_1x10fe4.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-void func_80110FE4(void)
+void fn_1x10fe4(void)
 
 {
   page_open(0x172c);

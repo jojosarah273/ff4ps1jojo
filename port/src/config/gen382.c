@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80157F30.
- * Ground truth: src/func_80157F30.c (byte-verified).
+/* FF4 source-port — interpreted module for options_screen_xd1_x38f6_x35eb_tex.
+ * Ground truth: src/options_screen_xd1_x38f6_x35eb_tex.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80157F30(void)
+void options_screen_xd1_x38f6_x35eb_tex(void)
 {
     /* options screen: 0xD1/0x38F6/0x35EB texts, 0xA9/0xAB/0xAE
        windows, 801580B0 row; loops L157F58 (5574(0xFF)) and
@@ -32,7 +32,7 @@ L157f58:
             row_arm2(cell_state(0xAB));
             if (cell_flags_zero50(0x101) != 0)
                 goto L158020;
-            func_801580B0();
+            options_xa9_xd2_xad_xaf_windows_x2();
             row_page(0xD1);
             if (gate(0x202) != 0)
                 goto L1580A0;

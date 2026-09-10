@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8016543C.
- * Ground truth: src/func_8016543C.c (byte-verified).
+/* FF4 source-port — interpreted module for options_sub_screen_x289c_x289d_x29.
+ * Ground truth: src/options_sub_screen_x289c_x289d_x29.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8016543C(void)
+void options_sub_screen_x289c_x289d_x29(void)
 {
     /* options sub-screen: 0x289C/0x289D/0x291C stat rows, 0xB5/0x9A/0xB9/
        0xB3/0xB7 windows; 80152640 intro, 8015240C detail; three loops. */
@@ -11,7 +11,7 @@ void func_8016543C(void)
     cell_put(0xE5);
     draw_pad_cur();
     latch(0xF);
-    func_80152640();
+    shop_rows_x82_x80_xe5_windows_loop();
     sep();
 L1654a4:
     for (;;) {

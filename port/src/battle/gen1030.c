@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801140A4.
- * Ground truth: src/func_801140A4.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_fe634_prep_x70_x22_x21.
+ * Ground truth: src/battle_rows_fe634_prep_x70_x22_x21.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801140A4(void)
+void battle_rows_fe634_prep_x70_x22_x21(void)
 {
     /* battle rows: 800FE634 prep + 0x70/0x22/0x21 window cells. */
     func_800FE634();

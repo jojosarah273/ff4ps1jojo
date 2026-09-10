@@ -1,16 +1,14 @@
-/* FF4 source-port — interpreted module for func_8011F6AC.
- * Ground truth: src/func_8011F6AC.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x1f6ac.
+ * Ground truth: src/fn_1x1f6ac.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-extern int func_8011F6FC();
-
-void func_8011F6AC(void)
+void fn_1x1f6ac(void)
 
 {
   draw_pad(0x310);
-  func_8011F6FC();
+  fn_1x1f6fc();
   return;
 }
 

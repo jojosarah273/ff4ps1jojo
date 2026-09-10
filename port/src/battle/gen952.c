@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8010CA74.
- * Ground truth: src/func_8010CA74.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_xae_x9d1_x9cf_texts_d6.
+ * Ground truth: src/battle_rows_xae_x9d1_x9cf_texts_d6.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8010CA74(void)
+void battle_rows_xae_x9d1_x9cf_texts_d6(void)
 {
     /* battle rows: 0xAE/0x9D1/0x9CF texts, 8010D61C row; loop
        L10CA98 on 5574(0xC). */
@@ -13,7 +13,7 @@ void func_8010CA74(void)
 L10ca98:
     for (;;) {
         cell_push_c8();
-        func_8010D61C();
+        fn_1x0d61c();
         page_open(0x9CF);
         label_cur();
         key_page(0xAE);

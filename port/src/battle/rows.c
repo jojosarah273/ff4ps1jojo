@@ -2,7 +2,7 @@
  *
  * Battle row drivers: the cell/text rows are painted as (label, cells,
  * poll) chains. Primitives map to the window layer (port/src/panel.c).
- * Ground truth: src/func_80140CFC, 8013F96C, 801667F0, 8013A8CC,
+ * Ground truth: src/battle_rows_loop_l140d28_on_b68_x3, 8013F96C, 801667F0, 8013A8CC,
  * 80143DB4, 80143E44, 80148D58, 80148ED0.
  */
 #include <stdint.h>

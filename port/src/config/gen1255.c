@@ -9,5 +9,5 @@ void config_row_7800(void)
     row_sync();
     wnd_open(30720);
     draw_pad(50688);
-    func_80126368();
+    fn_1x26368();
 }

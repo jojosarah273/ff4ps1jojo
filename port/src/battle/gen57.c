@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801420D4.
- * Ground truth: src/func_801420D4.c (byte-verified).
+/* FF4 source-port — interpreted module for chara_status_sub_screen_d12c_ef78.
+ * Ground truth: src/chara_status_sub_screen_d12c_ef78.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801420D4(void)
+void chara_status_sub_screen_d12c_ef78(void)
 {
     /* chara/status sub-screen: 8013D12C/8013EF78 prep, poll loop L142128
        (4008 0x10/0x70 reads + 8768 row draws), then detail rows and the
@@ -75,13 +75,13 @@ L142298:
 L1422D8:
     for (;;) {
         wnd_open(4);
-        func_8014202C();
+        fn_1x4202c();
         sep();
     L14230C:
         for (;;) {
-            func_80143D64();
+            fn_1x43d64();
             cell_draw_cur();
-            func_80143D14();
+            fn_1x43d14();
             cell_draw_cur();
             latch(0xF0);
             battle_rows_twin();
@@ -90,8 +90,8 @@ L1422D8:
             if (io_just() != 0)
                 break;
         }
-        func_80142450();
-        func_80142394();
+        battle_magic_status_x340_x343_cell();
+        battle_rows_x_b68_cell_pairs_loop();
         txt_set_cur();
         if (gate(0x202) != 0)
             continue;

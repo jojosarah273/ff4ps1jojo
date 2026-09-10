@@ -1,5 +1,5 @@
-/* FF4 source-port — interpreted module for func_8014AE1C.
- * Ground truth: src/func_8014AE1C.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x4ae1c.
+ * Ground truth: src/fn_1x4ae1c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
@@ -7,15 +7,8 @@
 
 
 
-extern int func_8014ADD4();
-extern int func_8014AEC4();
-extern int func_8014AF3C();
 
-extern int func_8014BA34();
-extern int func_8014C96C();
-extern int func_8014C994();
-
-void func_8014AE1C(void)
+void fn_1x4ae1c(void)
 
 {
   int iVar1;
@@ -23,8 +16,8 @@ void func_8014AE1C(void)
   txt_set(0x34c5);
   iVar1 = gate(2);
   if (iVar1 == 0) {
-    func_8014ADD4();
-    func_8014C994();
+    fn_1x4add4();
+    fn_1x4c994();
     cell_clear_bank(0xf42e);
   }
   else {
@@ -32,12 +25,12 @@ void func_8014AE1C(void)
     iVar1 = gate(2);
     if (iVar1 == 0) {
       battle_row_34c4();
-      func_8014AEC4();
-      func_8014ADD4();
-      func_8014C96C();
+      fn_1x4aec4();
+      fn_1x4add4();
+      fn_1x4c96c();
       page_paint2(0xf2a0);
-      func_8014AF3C();
-      func_8014BA34();
+      fn_1x4af3c();
+      fn_1x4ba34();
       cell_clear_bank(0xf42e);
     }
   }

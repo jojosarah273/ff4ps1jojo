@@ -13,6 +13,6 @@ void options_rows_run(void)
     options_row_run();
     options_row_run();
     options_row_run();
-    func_8015236C();
+    fn_1x5236c();
     return;
 }

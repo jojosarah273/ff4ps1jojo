@@ -1,16 +1,16 @@
-/* FF4 source-port — interpreted module for func_8010F2F4.
- * Ground truth: src/func_8010F2F4.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x0f2f4.
+ * Ground truth: src/fn_1x0f2f4.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 extern u8 *D_8019ED68;
 extern u8 *D_8019ED50;
-void func_8010F2F4(void)
+void fn_1x0f2f4(void)
 {
     cell_clear_bank(0x1704);
     open_row(0x20);
     open_row(0x24);
-    func_8010F484();
+    fn_1x0f484();
     do {
         wnd_fx_7d();
         cell_clear_pad();
@@ -29,21 +29,21 @@ void func_8010F2F4(void)
             cell_put(0xC);
             latch(0x50);
             cell_put(0xE);
-            func_801105A4();
+            battle_rows_xc_xe_windows_x340_x34();
         }
         row_page(0x20);
         io_poll(0xFF);
     } while (io_just() == 0);
-    func_8011053C();
+    fn_1x1053c();
     txt_set(0x1288);
     row_read(0xFB);
     txt_draw(0x1288);
     wnd_open(3);
     do {
         row_open();
-        func_8010F68C();
-        func_8010F4DC();
-        func_80118938();
+        battle_command_row_screen_x20_x24();
+        battle_spell_cast_helper_xc7_x48_x();
+        battle_rows_x79_x83_x82_x81_window();
         row_close();
         cell_set50_from54();
     } while (poll_go(0x202) != 0);

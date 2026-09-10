@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8013E2F8.
- * Ground truth: src/func_8013E2F8.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_magic_cast_flow_d12c_de8_pr.
+ * Ground truth: src/battle_magic_cast_flow_d12c_de8_pr.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8013E2F8(void)
+void battle_magic_cast_flow_d12c_de8_pr(void)
 {
     /* battle magic-cast flow: 8013D12C/80148DE8 prep, wait loop L13E340
        (43E44/5958), row read L13E3EC (4FAC(0x101)/6434(0x80) gates),
@@ -59,7 +59,7 @@ L13e398:
             wnd_open_cur();
         L13e494:
             for (;;) {
-                func_8013E200();
+                battle_item_rows_x1_x2_x3_x4_x5();
                 cell_step();
                 poll_t(4);
                 if (io_just() == 0)

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8018A5F8.
- * Ground truth: src/func_8018A5F8.c (byte-verified).
+/* FF4 source-port — interpreted module for event_ac90_v0_spins_tail_row.
+ * Ground truth: src/event_ac90_v0_spins_tail_row.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8018A5F8(void)
+void event_ac90_v0_spins_tail_row(void)
 {
     /* event: 8018AC90 + v0 spins; 80197648 tail row. */
     if (io_just() != 0)

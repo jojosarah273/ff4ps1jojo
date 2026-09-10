@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8011F360.
- * Ground truth: src/func_8011F360.c (byte-verified).
+/* FF4 source-port — interpreted module for rows_x45_window_loop_l11f370_on_c0.
+ * Ground truth: src/rows_x45_window_loop_l11f370_on_c0.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8011F360(void)
+void rows_x45_window_loop_l11f370_on_c0(void)
 {
     /* rows: 0x45 window; loop L11F370 on 5480/53C0; closes via
        6434(0x202)/4008(0x80) gates. */

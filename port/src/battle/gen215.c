@@ -1,14 +1,14 @@
-/* FF4 source-port — interpreted module for func_8010543C.
- * Ground truth: src/func_8010543C.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x0543c.
+ * Ground truth: src/fn_1x0543c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8010543C(void)
+void fn_1x0543c(void)
 {
     row_page(0xD5);
     if (gate(0x202) == 0)
         return;
-    func_80102C30();
+    fn_1x02c30();
     row_page(0xB1);
     if (gate(2) == 0) {
         row_page(4);
@@ -49,7 +49,7 @@ L580:
     cell_put(2);
     open_row(0x54);
 L598:
-    func_80101788();
+    settings_menu_items();
     row_page(3);
     row_read(0xF);
     if (sel(2) != 0)
@@ -120,7 +120,7 @@ L784:
 L7a0:
     if (sel(2) != 0)
         goto L7d0;
-    func_80105828();
+    shop_purchase_verify_screen_reads();
     row_page(0xA);
     if (gate(2) != 0)
         goto L7e0;
@@ -134,7 +134,7 @@ L7e8:
     func_800FFB5C();
     txt_set(0x1707);
     txt_draw(0x70A);
-    func_8011DE40();
-    func_8011C2C8();
+    shop_sale_confirm_xab_x6fa_x70a_te();
+    fn_1x1c2c8();
     return;
 }

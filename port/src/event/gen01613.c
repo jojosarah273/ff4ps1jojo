@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8019822C.
- * Ground truth: src/func_8019822C.c (byte-verified).
+/* FF4 source-port — interpreted module for event_v0_gates_e8_v0_s4_latch_rows.
+ * Ground truth: src/event_v0_gates_e8_v0_s4_latch_rows.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8019822C(void)
+void event_v0_gates_e8_v0_s4_latch_rows(void)
 {
     /* event: v0 gates; 801982E8 + v0/s4 latch rows. */
     if (io_just() == 0)

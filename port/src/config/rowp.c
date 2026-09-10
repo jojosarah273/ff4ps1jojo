@@ -15,7 +15,7 @@ Lab24:
         latch(0xA);
         cell_put(0x45);
         draw_pad(0x314);
-        func_8011F6FC();
+        fn_1x1f6fc();
         txt_set(0x16AE);
         func_8013B0C4();
         latch(0x4A);
@@ -25,27 +25,27 @@ Lab24:
         func_8013B0C4();
         latch(0x5A);
         cell_put(0x46);
-        func_8011F6AC();
+        fn_1x1f6ac();
         txt_set(0x16B0);
         func_8013B0C4();
         latch(0x6A);
         cell_put(0x46);
         draw_pad(0x30C);
-        func_8011F6FC();
+        fn_1x1f6fc();
         txt_set(0x16B1);
         battle_put43();
         cell_put(0x45);
         latch(0x7A);
         cell_put(0x46);
         draw_pad(0x308);
-        func_8011F6FC();
+        fn_1x1f6fc();
         txt_set(0x16B2);
         battle_put43();
         cell_put(0x45);
         latch(0x8A);
         cell_put(0x46);
         draw_pad(0x318);
-        func_8011F6FC();
+        fn_1x1f6fc();
         midrow_pad88_run();
         midrow_degen();
         row_page(1);
@@ -122,7 +122,7 @@ Lab24:
         txt_set(0x1BB9);
         io_poll(5);
         if (io_just() != 0)
-            func_8013AFA4();
+            ability_rows_x16ae_x16b0_texts_wit();
     Laf54:
         row_page(1);
         row_read(0xC0);
@@ -133,7 +133,7 @@ Lab24:
         if (sel(0x202) == 0)
             goto Lab24;
     Laf94:
-        func_8013AFA4();
+        ability_rows_x16ae_x16b0_texts_wit();
         goto Lab24;
     }
 }

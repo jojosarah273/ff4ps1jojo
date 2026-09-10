@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8010DF98.
- * Ground truth: src/func_8010DF98.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_x1000_x1004_x1008_cell.
+ * Ground truth: src/battle_rows_x1000_x1004_x1008_cell.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8010DF98(void)
+void battle_rows_x1000_x1004_x1008_cell(void)
 {
     /* battle rows: 0x1000-0x1004/0x1008 cells, 5574(0xB) gate, 80117DF8
        row; loop L10DFA8 on 5958(0x140). */

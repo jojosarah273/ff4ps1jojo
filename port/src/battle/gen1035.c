@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801094D8.
- * Ground truth: src/func_801094D8.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_rows_x776_xdd_windows_gates_x.
+ * Ground truth: src/shop_rows_x776_xdd_windows_gates_x.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801094D8(void)
+void shop_rows_x776_xdd_windows_gates_x(void)
 {
     /* shop rows: 0x776/0xDD windows, gates 6434(0x202) route the
        0x6C68 read chains; register latches pick the tails. */

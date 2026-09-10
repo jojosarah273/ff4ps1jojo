@@ -1,8 +1,8 @@
-/* FF4 source-port — interpreted module for func_801606AC.
- * Ground truth: src/func_801606AC.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x606ac.
+ * Ground truth: src/fn_1x606ac.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
 
-void func_801606AC(void) { latch(0x4); txt_draw(0xA8); }
+void fn_1x606ac(void) { latch(0x4); txt_draw(0xA8); }

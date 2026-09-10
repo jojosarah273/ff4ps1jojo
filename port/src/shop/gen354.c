@@ -1,12 +1,12 @@
-/* FF4 source-port — interpreted module for func_8016C128.
- * Ground truth: src/func_8016C128.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x6c128.
+ * Ground truth: src/fn_1x6c128.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8016C128(void)
+void fn_1x6c128(void)
 {
     wnd_open(6);
-    func_8016C6FC();
+    fn_1x6c6fc();
     row_prep(32);
     row_read2(128);
     sep_a();
@@ -22,9 +22,9 @@ void func_8016C128(void)
     latch(4);
     cell_put(81);
     latch(2);
-    func_8016AA54();
+    fn_1x6aa54();
     wnd_open(8);
-    func_8016C6FC();
+    fn_1x6c6fc();
     row_prep(32);
     row_read2(132);
     sep_a();
@@ -40,5 +40,5 @@ void func_8016C128(void)
     latch(4);
     cell_put(81);
     latch(3);
-    func_8016AA54();
+    fn_1x6aa54();
 }

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80102D68.
- * Ground truth: src/func_80102D68.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_menu_c3c_b04_gates_v0_gate.
+ * Ground truth: src/battle_menu_c3c_b04_gates_v0_gate.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80102D68(void)
+void battle_menu_c3c_b04_gates_v0_gate(void)
 {
     /* battle/menu: 3C3C/3B04 gates; v0 gate tree; returns L102E68. */
     cell_state_of();

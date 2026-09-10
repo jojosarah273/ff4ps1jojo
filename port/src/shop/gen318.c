@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80163B88.
- * Ground truth: src/func_80163B88.c (byte-verified).
+/* FF4 source-port — interpreted module for options_confirm_x2683_x2684_x2685.
+ * Ground truth: src/options_confirm_x2683_x2684_x2685.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80163B88(void)
+void options_confirm_x2683_x2684_x2685(void)
 {
     /* options confirm: 0x2683/0x2684/0x2685/0x26D2/0x26D0/0x26D5
        texts, 80163D68 alt, 80062B08 commit; key ladders 0xCA/0xB0/
@@ -26,7 +26,7 @@ void func_80163B88(void)
     io_poll(0xCA);
     if (io_just() == 0)
         goto L163C30;
-    func_80163D68();
+    options_dialog_xe5_x33c4_x38ed_x35();
     goto L163D00;
 L163C30:
     io_poll(0xB0);

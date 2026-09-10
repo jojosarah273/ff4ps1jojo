@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801192F8.
- * Ground truth: src/func_801192F8.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_x6_x1000_gate_d4_c3c_l.
+ * Ground truth: src/battle_rows_x6_x1000_gate_d4_c3c_l.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801192F8(void)
+void battle_rows_x6_x1000_gate_d4_c3c_l(void)
 {
     /* battle rows: 0x6/0x1000 gate, 54D4(3C3C(6)) latch; loop
        L119320 ends with 0xCC window + 0x1703 text. */

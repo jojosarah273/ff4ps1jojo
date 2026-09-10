@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8016A208.
- * Ground truth: src/func_8016A208.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_rows_x66_x53_x55_xa_windows_x.
+ * Ground truth: src/shop_rows_x66_x53_x55_xa_windows_x.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8016A208(void)
+void shop_rows_x66_x53_x55_xa_windows_x(void)
 {
     /* shop rows: 0x66/0x53/0x55/0xA windows, 0x2F03 text, 8016A4E4
        header; loops L16A248 (5A90(0x20)), L16A290, L16A2A8
@@ -18,7 +18,7 @@ void func_8016A208(void)
 L16a248:
     for (;;) {
         row_open();
-        func_8016A4E4();
+        fn_1x6a4e4();
         wnd_open(0x2F03);
         tail_cur();
         sep();

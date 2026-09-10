@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80175CB4.
- * Ground truth: src/func_80175CB4.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_rows_xddb_cells_loops_l175ccc.
+ * Ground truth: src/shop_rows_xddb_cells_loops_l175ccc.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80175CB4(void)
+void shop_rows_xddb_cells_loops_l175ccc(void)
 {
     /* shop rows: 0xDDB cells; loops L175CCC/L175CD0/L175D20 on
        4120(0x202)/5A90(0x80). */

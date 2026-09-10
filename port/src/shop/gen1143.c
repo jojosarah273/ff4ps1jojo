@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80166E58.
- * Ground truth: src/func_80166E58.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_c3c_b04_x2000_x2_gates_s0_v0.
+ * Ground truth: src/shop_c3c_b04_x2000_x2_gates_s0_v0.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80166E58(void)
+void shop_c3c_b04_x2000_x2_gates_s0_v0(void)
 {
     /* shop: 3C3C/3B04(0x2000)x2 gates; s0/v0 + a1/v0 latch loops
        with 9330/95A0 rows. */

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801223A4.
- * Ground truth: src/func_801223A4.c (byte-verified).
+/* FF4 source-port — interpreted module for rows_x29_window_c_bc_fills_loop_l1.
+ * Ground truth: src/rows_x29_window_c_bc_fills_loop_l1.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801223A4(void)
+void rows_x29_window_c_bc_fills_loop_l1(void)
 {
     /* rows: 0x29 window, 885C/63BC fills; loop L12244C on
        6434(2). */

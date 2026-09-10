@@ -1,11 +1,11 @@
-/* FF4 source-port — interpreted module for func_801115F0.
- * Ground truth: src/func_801115F0.c (byte-verified).
+/* FF4 source-port — interpreted module for s0_branch.
+ * Ground truth: src/s0_branch.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801115F0(void)
+void s0_branch(void)
 {
-    func_80111B14();
+    fn_1x11b14();
     latch(0x81);
     txt_draw(0x4200);
     open_row(0x79);
@@ -15,7 +15,7 @@ L1628:
         /* s0 branch */
         latch(3);
         txt_draw(0x1705);
-        func_80111ADC();
+        fn_1x11adc();
         latch(0x10);
         txt_draw(0x340);
         txt_draw(0x300);

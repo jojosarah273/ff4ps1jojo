@@ -1,11 +1,11 @@
-/* FF4 source-port — interpreted module for func_8015EC70.
- * Ground truth: src/func_8015EC70.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x5ec70.
+ * Ground truth: src/fn_1x5ec70.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8015EC70(void)
+void fn_1x5ec70(void)
 {
-    func_80160AAC();
+    options_banner_x2726_x2725_x28a2_x();
     txt_set(0x38FE);
     if (gate(0x8080) != 0)
         goto LECB8;
@@ -14,7 +14,7 @@ void func_8015EC70(void)
     func_8006508C();
     return;
 LECB8:
-    func_80160B8C();
+    fn_1x60b8c();
     func_80061860();
     txt_set(0x3906);
     if (io_press(cell_state(0x354D)) == 0)
@@ -66,7 +66,7 @@ LED50:
     label(0x3945);
     page(0xAB);
     label(0x3947);
-    func_8015254C();
+    options_b04_x2000_gates_v0_run_l15();
     page_open(0x3949);
     tail(0xA4);
     sep();
@@ -95,7 +95,7 @@ LEEB0:
         cell_stamp8_9(0x2007);
         sep();
         row_prep_close();
-        func_80160A4C();
+        fn_1x60a4c();
         row_page(0xA9);
         row_sel_cell(0xA4);
         row_page_cur();

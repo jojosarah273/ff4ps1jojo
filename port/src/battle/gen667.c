@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80140350.
- * Ground truth: src/func_80140350.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_x2a_window_f94_c3c_rea.
+ * Ground truth: src/battle_rows_x2a_window_f94_c3c_rea.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80140350(void)
+void battle_rows_x2a_window_f94_c3c_rea(void)
 {
     /* battle rows: 0x2A window, 3F94(3C3C) reads; linear cell fill. */
     row_sync();

@@ -1,7 +1,7 @@
 /* FF4 source-port — config/formation.c
  *
  * Formation/party rows (exact Phase A decodes).
- * Ground truth: src/func_8012E5A8, 8012E844.
+ * Ground truth: src/party_formation_screen_xd5_xd7_row, 8012E844.
  */
 #include <stdint.h>
 

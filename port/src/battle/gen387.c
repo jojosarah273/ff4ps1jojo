@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8010E388.
- * Ground truth: src/func_8010E388.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_spell_screen_xacf_xad8_text.
+ * Ground truth: src/battle_spell_screen_xacf_xad8_text.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8010E388(void)
+void battle_spell_screen_xacf_xad8_text(void)
 {
     /* battle spell screen: 0xACF-0xAD8 texts, 0xE3/0x89 windows,
        80115BCC/80115D2C sub-renders; loop L10E428 (5C64(0x202))

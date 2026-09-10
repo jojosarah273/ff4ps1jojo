@@ -6,7 +6,7 @@
 void battle_window_24(void)
 {
     func_800FE8B4();
-    func_801162F8();
+    fn_1x162f8();
     wnd_open_cur();
     tail(0x24);
 L15d54:
@@ -65,7 +65,7 @@ L15d54:
         cell_draw(0xA6F);
         key_page(0xC7);
     L15FF0:
-        func_80116098();
+        battle_party_status_rows_xa6d_xa6f();
         goto L16010;
     L16000:
         latch(0xFF);

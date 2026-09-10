@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80103DD8.
- * Ground truth: src/func_80103DD8.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_rows_x5c_xdf_x79_windows_x420.
+ * Ground truth: src/shop_rows_x5c_xdf_x79_windows_x420.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80103DD8(void)
+void shop_rows_x5c_xdf_x79_windows_x420(void)
 {
     /* shop rows: 0x5C/0xDF/0x79 windows, 0x420C/0x6E/0x6F texts,
        80103F00/8010408C rows; loop L103E0C on 5574(0xFF). */
@@ -22,8 +22,8 @@ L103e0c:
         row_sel_cell2_cur();
         row_sel2(cell_state(0x6F));
         battle_gate_early();
-        func_80103F00();
-        func_8010408C();
+        fn_1x03f00();
+        battle_rows_x300_x301_x2f_x303_x20();
         poll_pair(0x79);
         row_page(0x79);
         io_poll(0xFF);

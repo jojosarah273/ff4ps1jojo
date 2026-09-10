@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8016A4E4.
- * Ground truth: src/func_8016A4E4.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x6a4e4.
+ * Ground truth: src/fn_1x6a4e4.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8016A4E4(void)
+void fn_1x6a4e4(void)
 {
     sep();
     tail_cur();
@@ -13,8 +13,8 @@ La51c:
         txt_cell(0x2703);
         row_sel_cell_cur();
         row_sel_cell2_cur();
-        func_8016A390();
-        func_8016A390();
+        shop_icon_row_x_b04_a40_a68_icon();
+        shop_icon_row_x_b04_a40_a68_icon();
         row_prep(0x20);
         cell_sink8_9(0x2703);
         cell_stamp8_9(0x2B03);
@@ -48,7 +48,7 @@ La51c:
         latch(0x30);
         cell_put(4);
         for (;;) {
-            func_80169C7C();
+            fn_1x69c7c();
             row_arm2(cell_state(0x47));
             row_sel_cell2_cur();
             row_sel2(cell_state(0x46));
@@ -63,7 +63,7 @@ La51c:
             cell_flags_repack2();
             if (func_800F7AC8(0x101) != 0)
                 goto La718;
-            func_80169DE8();
+            fn_1x69de8();
         La718:
             poll_pair(4);
             if (poll_go(0x202) != 0)

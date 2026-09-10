@@ -1,10 +1,10 @@
-/* FF4 source-port — interpreted module for func_80176E98.
- * Ground truth: src/func_80176E98.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x76e98.
+ * Ground truth: src/fn_1x76e98.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-void func_80176E98(void)
+void fn_1x76e98(void)
 
 {
   row_prep(0x20);

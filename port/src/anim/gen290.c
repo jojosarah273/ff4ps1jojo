@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80174880.
- * Ground truth: src/func_80174880.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_action_confirm_overlay_memb.
+ * Ground truth: src/battle_action_confirm_overlay_memb.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80174880(void)
+void battle_action_confirm_overlay_memb(void)
 {
     /* battle action-confirm overlay: 4 members; each gets a highlight pass
        (6630/5574(0xA) + 4008(0x38) select-read) and a detail pass

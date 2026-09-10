@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8013D14C.
- * Ground truth: src/func_8013D14C.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_magic_list_x34c4_intro_x65.
+ * Ground truth: src/battle_magic_list_x34c4_intro_x65.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8013D14C(void)
+void battle_magic_list_x34c4_intro_x65(void)
 {
     /* battle magic list: 0x34C4 intro, 0x65/0x2 windows, 8014D528 +
        801409BC sub-renders, then the L13D2CC loop pulling 80140558/
@@ -13,7 +13,7 @@ void func_8013D14C(void)
     txt_draw_cur();
     latch(0x65);
     battle_row_d568();
-    func_801409BC();
+    fn_1x409bc();
     latch(2);
     txt_draw_cur();
     battle_row_wrap();
@@ -58,7 +58,7 @@ L13D2B4:
 L13d2cc:
     for (;;) {
         gpu_driver_run();
-        func_8013D428();
+        fn_1x3d428();
         func_80149374();
         if (io_go() != 0)
             goto L13D390;
@@ -69,15 +69,15 @@ L13d2cc:
         sep();
         row_sync();
         latch(0x84);
-        func_8013D4C8();
+        battle_rows_twin_of_d040_x342_x341();
         draw_pad(0xC);
         row_close();
         latch(0x84);
-        func_8013D3B0();
+        fn_1x3d3b0();
         draw_pad(0x18);
         wnd_open(1);
         latch(0x84);
-        func_8013D3B0();
+        fn_1x3d3b0();
     }
 L13D390:
     func_8014D728();

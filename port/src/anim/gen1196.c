@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8017CCB0.
- * Ground truth: src/func_8017CCB0.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_anim_x_rows_with_v0_gates_t.
+ * Ground truth: src/battle_anim_x_rows_with_v0_gates_t.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8017CCB0(void)
+void battle_anim_x_rows_with_v0_gates_t(void)
 {
     /* battle anim: 4x 80197208 rows with v0 gates + tail gates. */
     if (io_just() == 0)

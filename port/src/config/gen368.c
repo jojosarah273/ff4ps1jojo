@@ -1,15 +1,15 @@
-/* FF4 source-port — interpreted module for func_80139704.
- * Ground truth: src/func_80139704.c (byte-verified).
+/* FF4 source-port — interpreted module for ability_stat_cast_x1440_x1340_x144.
+ * Ground truth: src/ability_stat_cast_x1440_x1340_x144.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80139704(void)
+void ability_stat_cast_x1440_x1340_x144(void)
 {
     /* ability stat-cast: 0x1440/0x1340/0x1441/0x1442 gates, 0x45/0x41
        windows, 80139694 intro; loop L13978C (3F38(3B04) rows), then
        the L139874 stat block with 80120E2C/80120E9C/8012AAC0/
        801264C0. */
-    func_80139694();
+    fn_1x39694();
     txt_cell(0x1440);
     if (gate(2) != 0)
         return;
@@ -60,7 +60,7 @@ L139874:
     cell_pull_c8(0x1341);
     page_paint(0x1440);
     page_paint(0x1441);
-    func_80120E9C();
+    fn_1x20e9c();
     func_8012AAC0();
     config_row_264e8();
     return;

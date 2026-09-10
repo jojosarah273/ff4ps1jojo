@@ -4,13 +4,11 @@
  */
 #include "ff4_window.h"
 
-extern int func_8011F6FC();
-
 void config_pad_300(void)
 
 {
   draw_pad(0x300);
-  func_8011F6FC();
+  fn_1x1f6fc();
   return;
 }
 

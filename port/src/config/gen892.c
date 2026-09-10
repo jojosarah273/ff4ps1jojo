@@ -1,11 +1,11 @@
-/* FF4 source-port — interpreted module for func_8013AA08.
- * Ground truth: src/func_8013AA08.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x3aa08.
+ * Ground truth: src/fn_1x3aa08.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 extern u16 *D_8019ED44;
 extern u8 *D_8019ED40;
-void func_8013AA08(void)
+void fn_1x3aa08(void)
 {
     tail(0x45);
     row_page(0x45);

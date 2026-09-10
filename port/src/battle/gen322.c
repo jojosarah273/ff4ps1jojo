@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8011A334.
- * Ground truth: src/func_8011A334.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_buy_list_xe2_window_gate_x211.
+ * Ground truth: src/shop_buy_list_xe2_window_gate_x211.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8011A334(void)
+void shop_buy_list_xe2_window_gate_x211(void)
 {
     /* shop buy-list: 0xE2 window gate, 0x2115 title, then 8 name/price
        rows (7210 A17/A27 + 7210() pairs with A19/A29 texts). */

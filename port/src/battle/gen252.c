@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8011B158.
- * Ground truth: src/func_8011B158.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_item_selection_flow_label_w.
+ * Ground truth: src/battle_item_selection_flow_label_w.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8011B158(void)
+void battle_item_selection_flow_label_w(void)
 {
     /* battle item-selection flow: 62/61 label window, 64/65 + BC/BD item
        slot rows, AB result rows. 8011B6B4/8011B448 draw the row halves;
@@ -75,18 +75,18 @@ L1b2e0:
         cell_step();
         tail(0xBC);
         cell_push_c8();
-        func_8011B6B4();
+        battle_rows_b744_prep_x3d_x1280_ce();
         io_poll_cur();
         if (io_just() != 0)
             goto L1B390;
         goto L1B3C0;
     L1B370:
-        func_8011B6B4();
+        battle_rows_b744_prep_x3d_x1280_ce();
         io_poll_cur();
         if (io_just() != 0)
             goto L1B3C0;
     L1B390:
-        func_8011B448();
+        fn_1x1b448();
         page(0xBC);
         if (cell_flags_cmp(cell_state(0xA69)) != 0)
             goto L1B3E0;
@@ -104,7 +104,7 @@ L1B3E0:
     cell_push_c8();
     if (gate(2) != 0)
         goto L1B42C;
-    func_801163E8();
+    fn_1x163e8();
     if (io_go() != 0)
         goto L1B438;
 L1B42C:

@@ -1,11 +1,11 @@
-/* FF4 source-port — interpreted module for func_8011511C.
- * Ground truth: src/func_8011511C.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x1511c.
+ * Ground truth: src/fn_1x1511c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
 
-void func_8011511C(void)
+void fn_1x1511c(void)
 
 {
   cell_cursor_dec();

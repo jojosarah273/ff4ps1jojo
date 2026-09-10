@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80166458.
- * Ground truth: src/func_80166458.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_cast_rows_x2_x4_windows_x76.
+ * Ground truth: src/battle_cast_rows_x2_x4_windows_x76.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80166458(void)
+void battle_cast_rows_x2_x4_windows_x76(void)
 {
     /* battle cast rows: 0x2/0x4 windows, 0x7600 cells, 6658/89D4/
        5DD4(2) reads; loop L1664D0 on 5A90(0x230). */

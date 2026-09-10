@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8016046C.
- * Ground truth: src/func_8016046C.c (byte-verified).
+/* FF4 source-port — interpreted module for options_ports_x8a_window_x29b5_x29.
+ * Ground truth: src/options_ports_x8a_window_x29b5_x29.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8016046C(void)
+void options_ports_x8a_window_x29b5_x29(void)
 {
     /* options ports: 0x8A window, 0x29B5/0x29CD texts, 0x88/0xDF/0xE1/
        0xE3 windows, 0x2003-0x200A cells, 0xD6/0x88 windows,

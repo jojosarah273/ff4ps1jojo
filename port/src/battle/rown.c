@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80173780.
- * Ground truth: src/func_80173780.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x73780.
+ * Ground truth: src/fn_1x73780.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80173780(void)
+void fn_1x73780(void)
 {
     row_open2();
     latch(0x15);
@@ -88,7 +88,7 @@ L9f8:
     poll_pair(0xC);
     poll_pair(0xE);
 La08:
-    func_80173ED8();
+    shop_stat_block_called_by_the_e8_f();
     row_page(0xD7);
     if (gate(0x202) == 0)
         goto Lec0;
@@ -137,7 +137,7 @@ Lb88:
     io_poll(0x10);
     if (io_go() != 0)
         goto Lbb8;
-    func_80173654();
+    shop_banner_x15_window_xc8_x7a_xb9();
     goto Lbf0;
 Lbb8:
     sep_b();
@@ -145,7 +145,7 @@ Lbb8:
     io_poll(0x10);
     if (io_go() != 0)
         latch(0x10);
-    func_801729E0();
+    shop_detail_wanted_x4c0_x4c7_texts();
 Lbf0:
     latch(0x60);
     cell_put(0xC);

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801665C0.
- * Ground truth: src/func_801665C0.c (byte-verified).
+/* FF4 source-port — interpreted module for options_status_band_x12_x13_x10_x1.
+ * Ground truth: src/options_status_band_x12_x13_x10_x1.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801665C0(void)
+void options_status_band_x12_x13_x10_x1(void)
 {
     /* options/status band: 0x12/0x13/0x10/0x14/0x11 windows, 78C4
        (3C3C(0x1A)) heading, 6434(2)/5B8C(0x202) gates. */

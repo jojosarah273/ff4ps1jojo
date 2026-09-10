@@ -1,10 +1,10 @@
-/* FF4 source-port — interpreted module for func_80114C98.
- * Ground truth: src/func_80114C98.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x14c98.
+ * Ground truth: src/fn_1x14c98.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-void func_80114C98(void)
+void fn_1x14c98(void)
 
 {
   cell_clear_pad();

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80131358.
- * Ground truth: src/func_80131358.c (byte-verified).
+/* FF4 source-port — interpreted module for ability_spell_screen_x1b9b_x1b8b_t.
+ * Ground truth: src/ability_spell_screen_x1b9b_x1b8b_t.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80131358(void)
+void ability_spell_screen_x1b9b_x1b8b_t(void)
 {
     /* ability/spell screen: 0x1B9B/0x1B8B texts, 0x45/0x46/0x43 windows,
        801224D0 cursor, 8011F724 commit; L1313A8 row loop on

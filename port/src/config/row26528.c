@@ -3,4 +3,4 @@
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void config_row_26528(void) { midrow_pad88(); func_80126550(); }
+void config_row_26528(void) { midrow_pad88(); fn_1x26550(); }

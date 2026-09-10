@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80158190.
- * Ground truth: src/func_80158190.c (byte-verified).
+/* FF4 source-port — interpreted module for options_screen_xd2_window_x38f6_x3.
+ * Ground truth: src/options_screen_xd2_window_x38f6_x3.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80158190(void)
+void options_screen_xd2_window_x38f6_x3(void)
 {
     /* options screen: 0xD2 window + 0x38F6/0x35D8 texts, 80152CDC +
        8015310C rows; 5574(0xD) ladder picks 0x352E codes via

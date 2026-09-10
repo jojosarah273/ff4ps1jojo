@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80141760.
- * Ground truth: src/func_80141760.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x41760.
+ * Ground truth: src/fn_1x41760.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80141760(void)
+void fn_1x41760(void)
 {
     txt_set(0x49);
     row_sel_cell_cur();
@@ -90,7 +90,7 @@ L1968:
         txt_set(0xF406);
         if (gate(2) != 0)
             goto L1a50;
-        func_801401CC();
+        fn_1x401cc();
     }
 L1a50:
     wnd_open_cur();

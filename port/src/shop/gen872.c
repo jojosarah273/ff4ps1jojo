@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80166FB8.
- * Ground truth: src/func_80166FB8.c (byte-verified).
+/* FF4 source-port — interpreted module for options_rows_x2001_x41_cell_xf_gat.
+ * Ground truth: src/options_rows_x2001_x41_cell_xf_gat.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80166FB8(void)
+void options_rows_x2001_x41_cell_xf_gat(void)
 {
     /* options rows: 0x2001/0x41 cell; 5574(0xF) gate picks the
        5CCC vs 8768 paths. */

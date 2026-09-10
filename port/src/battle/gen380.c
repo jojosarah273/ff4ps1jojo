@@ -1,10 +1,10 @@
-/* FF4 source-port — interpreted module for func_80109A28.
- * Ground truth: src/func_80109A28.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x09a28.
+ * Ground truth: src/fn_1x09a28.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-void func_80109A28(void)
+void fn_1x09a28(void)
 
 {
   int iVar1;

@@ -1,17 +1,10 @@
-/* FF4 source-port — interpreted module for func_8016C734.
- * Ground truth: src/func_8016C734.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x6c734.
+ * Ground truth: src/fn_1x6c734.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-
-
-
-
-
-extern int func_8016C78C();
-
-void func_8016C734(void)
+void fn_1x6c734(void)
 
 {
   int iVar1;
@@ -24,7 +17,7 @@ void func_8016C734(void)
     cell_put(0x28);
   }
   row_prep(0x20);
-  func_8016C78C();
+  shop_rows_x2000_x2a_x28_cells_x4f();
   return;
 }
 

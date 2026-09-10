@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8015EA00.
- * Ground truth: src/func_8015EA00.c (byte-verified).
+/* FF4 source-port — interpreted module for options_prep_xa4_window_x270b_x270.
+ * Ground truth: src/options_prep_xa4_window_x270b_x270.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8015EA00(void)
+void options_prep_xa4_window_x270b_x270(void)
 {
     /* options: 80061860 prep, 0xA4 window, 0x270B/0x270D cells;
        gate 53C0 picks 658C(0x270D). */

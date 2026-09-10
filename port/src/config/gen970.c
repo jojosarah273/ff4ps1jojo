@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8013AFA4.
- * Ground truth: src/func_8013AFA4.c (byte-verified).
+/* FF4 source-port — interpreted module for ability_rows_x16ae_x16b0_texts_wit.
+ * Ground truth: src/ability_rows_x16ae_x16b0_texts_wit.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8013AFA4(void)
+void ability_rows_x16ae_x16b0_texts_wit(void)
 {
     /* ability rows: 0x16AE-0x16B0 texts with 54D4(3B04) gates;
        8013B04C/8012219C tails. */
@@ -19,6 +19,6 @@ void func_8013AFA4(void)
     func_8013B04C();
     return;
 L13B034:
-    func_8012219C();
+    fn_1x2219c();
     return;
 }

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80134E74.
- * Ground truth: src/func_80134E74.c (byte-verified).
+/* FF4 source-port — interpreted module for ability_summary_x48c0_x1a71_x1a01.
+ * Ground truth: src/ability_summary_x48c0_x1a71_x1a01.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80134E74(void)
+void ability_summary_x48c0_x1a71_x1a01(void)
 {
     /* ability summary: 0x48C0/0x1A71/0x1A01/0x1A02 texts,
        80120F1C/8012807C/801257BC/8011EF30/80135298/8011F8D4/
@@ -11,8 +11,8 @@ void func_80134E74(void)
     config_row_d600b();
     wnd_open(0x48C0);
     label(0x1A71);
-    func_8012807C();
-    func_801257BC();
+    fn_1x2807c();
+    status_row_x16a8_x1a71_x1a73_texts();
     draw_pad_cur();
     battle_rows_sync();
     func_80135298();

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8012C584.
- * Ground truth: src/func_8012C584.c (byte-verified).
+/* FF4 source-port — interpreted module for config_row_x60_window_x43_x3f_wind.
+ * Ground truth: src/config_row_x60_window_x43_x3f_wind.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8012C584(void)
+void config_row_x60_window_x43_x3f_wind(void)
 {
     /* config row: 0x60 window, 0x43/0x3F windows, 8012C2F8 alt +
        801221EC close; 4120(0x202)/53C0 gates. */

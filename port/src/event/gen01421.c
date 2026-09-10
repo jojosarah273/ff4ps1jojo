@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80187D1C.
- * Ground truth: src/func_80187D1C.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_v0_gates_cd0_row_when_nonze.
+ * Ground truth: src/battle_v0_gates_cd0_row_when_nonze.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80187D1C(void)
+void battle_v0_gates_cd0_row_when_nonze(void)
 {
     /* battle: v0 gates; 80187CD0 row when nonzero. */
     if (io_just() != 0)

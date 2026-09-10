@@ -1,13 +1,13 @@
-/* FF4 source-port — interpreted module for func_8011B594.
- * Ground truth: src/func_8011B594.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_b744_prep_loop_l11b5ac.
+ * Ground truth: src/battle_rows_b744_prep_loop_l11b5ac.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8011B594(void)
+void battle_rows_b744_prep_loop_l11b5ac(void)
 {
     /* battle rows: 8011B744 prep; loop L11B5AC on 5A90/53D4;
        closes with 0x3D/0x1280 reads. */
-    func_8011B744();
+    fn_1x1b744();
     latch(1);
 L11b5ac:
     for (;;) {

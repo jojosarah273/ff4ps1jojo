@@ -1,15 +1,10 @@
-/* FF4 source-port — interpreted module for func_80110F2C.
- * Ground truth: src/func_80110F2C.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x10f2c.
+ * Ground truth: src/fn_1x10f2c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-
-
-
-extern int func_80111BBC();
-
-void func_80110F2C(void)
+void fn_1x10f2c(void)
 
 {
   latch(6);
@@ -20,7 +15,7 @@ void func_80110F2C(void)
   cell_put(0x2c);
   latch(0x60);
   cell_put(0x2e);
-  func_80111BBC();
+  fn_1x11bbc();
   open_row(0x79);
   open_row(0x7a);
   open_row(0x24);

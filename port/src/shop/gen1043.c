@@ -1,12 +1,12 @@
-/* FF4 source-port — interpreted module for func_8016D730.
- * Ground truth: src/func_8016D730.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x6d730.
+ * Ground truth: src/fn_1x6d730.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
 
 
-void func_8016D730(void)
+void fn_1x6d730(void)
 
 {
   cell_pull_c8_bank(0x3c);

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80121EBC.
- * Ground truth: src/func_80121EBC.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x21ebc.
+ * Ground truth: src/fn_1x21ebc.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80121EBC(void)
+void fn_1x21ebc(void)
 {
     row_page(101);
     sep_b();
@@ -11,5 +11,5 @@ void func_80121EBC(void)
     cell_set50_from40();
     cell_put(29);
     sep();
-    func_80121F14();
+    fn_1x21f14();
 }

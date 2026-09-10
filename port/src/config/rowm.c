@@ -5,11 +5,11 @@
 #include "ff4_window.h"
 void func_80136A58(void)
 {
-    func_801378B0();
+    fn_1x378b0();
     wnd_open(0xFFB8);
     tail(0x9F);
-    func_80124130();
-    func_80134E74();
+    fn_1x24130();
+    ability_summary_x48c0_x1a71_x1a01();
     midrow_paint_c();
     config_row_264e8();
     anim_noop();
@@ -26,7 +26,7 @@ void func_80136A58(void)
     config_row_26528();
     config_row_b600();
     midrow_pad88_run();
-    func_80126480();
+    fn_1x26480();
     battle_row_45b();
 Lb24:
     for (;;) {
@@ -45,11 +45,11 @@ Lb24:
         row_latch_7e();
         txt_set(0x1B7C);
         draw_pad(0x19A);
-        func_801206DC();
+        rows_f360_prep_x29_x1d_x1e_window();
         midrow_pad88_run();
-        func_80126480();
+        fn_1x26480();
         midrow_degen();
-        func_80137938();
+        ability_page_four_gated_blocks_eac();
         row_page_cur();
         row_read(0x80);
         if (sel(2) == 0)
@@ -61,7 +61,7 @@ Lb24:
     }
 Lbfc:
     draw_pad(0x310);
-    func_801376B0();
+    fn_1x376b0();
 Lc0c:
     for (;;) {
         latch(0x20);
@@ -99,10 +99,10 @@ Lc0c:
         if (io_go() == 0)
             goto Ld4c;
         midrow_paint_c();
-        func_80120DB4();
+        fn_1x20db4();
         func_8012AAC0();
         config_row_26528();
-        func_801352F0();
+        fn_1x352f0();
         config_row_264e8();
         func_801263C8();
     Ld4c:
@@ -110,7 +110,7 @@ Lc0c:
         cell_put(0x3F);
         config_row_d600b();
         draw_pad(0x31C);
-        func_8012B100();
+        fn_1x2b100();
     Ld74:
         row_page(1);
         row_read(1);
@@ -164,7 +164,7 @@ Lc0c:
                 continue;
             break;
         }
-        func_8011F7D4();
+        fn_1x1f7d4();
         if (io_go() == 0)
             goto Lcac;
     Lef4:
@@ -200,7 +200,7 @@ Lc0c:
                 continue;
             break;
         }
-        func_8011F7D4();
+        fn_1x1f7d4();
         if (io_go() == 0)
             goto Lcac;
         goto Lc0c;

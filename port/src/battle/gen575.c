@@ -1,10 +1,10 @@
-/* FF4 source-port — interpreted module for func_8011D9F0.
- * Ground truth: src/func_8011D9F0.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x1d9f0.
+ * Ground truth: src/fn_1x1d9f0.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-void func_8011D9F0(void)
+void fn_1x1d9f0(void)
 
 {
   page(0x99);

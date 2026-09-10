@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80145AF8.
- * Ground truth: src/func_80145AF8.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_a0_v0_latch_picks_the.
+ * Ground truth: src/battle_rows_a0_v0_latch_picks_the.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80145AF8(void)
+void battle_rows_a0_v0_latch_picks_the(void)
 {
     /* battle rows: a0/v0 latch picks the 0x40/0x50 vs 0x80/0x50
        window sets. */

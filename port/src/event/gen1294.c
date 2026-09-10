@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801813C0.
- * Ground truth: src/func_801813C0.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_anim_v0_gates_d8_row_loop_l.
+ * Ground truth: src/battle_anim_v0_gates_d8_row_loop_l.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801813C0(void)
+void battle_anim_v0_gates_d8_row_loop_l(void)
 {
     /* battle anim: v0 gates; 801808D8 row loop L181450. */
     if (io_just() != 0)

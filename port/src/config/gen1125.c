@@ -1,24 +1,21 @@
-/* FF4 source-port — interpreted module for func_8012BAF8.
- * Ground truth: src/func_8012BAF8.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x2baf8.
+ * Ground truth: src/fn_1x2baf8.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-extern void func_8012BA14(void);
 
-extern void func_8012BE34(void);
-extern void func_8012B0B0(void);
-extern void func_80126878(void);
 
-void func_8012BAF8(void) {
-    func_8012BA14();
+
+void fn_1x2baf8(void) {
+    config_row_x30_x3f_windows_x1b22_t();
     battle_row_45b();
     latch(0x30);
     cell_put(0x3F);
-    func_8012BE34();
+    item_equip_sub_screen_x1b3e_x1b22();
     latch(0x20);
     cell_put(0x3F);
-    func_8012B0B0();
-    func_80126878();
+    fn_1x2b0b0();
+    fn_1x26878();
     config_row_f320();
     battle_state_dc400();;
 }

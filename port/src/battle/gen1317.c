@@ -1,14 +1,14 @@
-/* FF4 source-port — interpreted module for func_80143CCC.
- * Ground truth: src/func_80143CCC.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x43ccc.
+ * Ground truth: src/fn_1x43ccc.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80143CCC(void)
+void fn_1x43ccc(void)
 {
-    func_80145278();
+    fn_1x45278();
     latch(8);
     txt_draw(62246);
     latch(7);
-    func_8014A488();
-    func_801452C8();
+    fn_1x4a488();
+    fn_1x452c8();
 }

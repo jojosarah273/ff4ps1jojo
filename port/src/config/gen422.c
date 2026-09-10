@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80122B54.
- * Ground truth: src/func_80122B54.c (byte-verified).
+/* FF4 source-port — interpreted module for row_picker_x60_x61_windows_x45_x43.
+ * Ground truth: src/row_picker_x60_x61_windows_x45_x43.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80122B54(void)
+void row_picker_x60_x61_windows_x45_x43(void)
 {
     /* row picker: 0x60/0x61 windows, 0x45/0x43 windows, 0x16A8 text,
        6434(2)/4120 gates; 6D70/4248(0x3F) detail. */

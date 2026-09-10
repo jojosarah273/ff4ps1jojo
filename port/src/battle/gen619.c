@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80118428.
- * Ground truth: src/func_80118428.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_x7_x3d_windows_x1030_x.
+ * Ground truth: src/battle_rows_x7_x3d_windows_x1030_x.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80118428(void)
+void battle_rows_x7_x3d_windows_x1030_x(void)
 {
     /* battle rows: 0x7/0x3D windows, 0x1030/0x1032 texts, 80150A30
        row; loop L11849C on 5DA0(7)/5B8C(0x202). */
@@ -28,6 +28,6 @@ L11849c:
     cell_flags_repack();
     cell_word_half_s(cell_state(0x3D));
     row_page(0x3D);
-    func_80150A30();
+    battle_splash_x30_window_x7e_windo();
     return;
 }

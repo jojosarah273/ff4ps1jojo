@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801571DC.
- * Ground truth: src/func_801571DC.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x571dc.
+ * Ground truth: src/fn_1x571dc.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801571DC(void)
+void fn_1x571dc(void)
 {
     wnd_open(0x2000);
     tail(0x80);

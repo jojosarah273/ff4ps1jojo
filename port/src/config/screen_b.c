@@ -1,13 +1,13 @@
-/* FF4 source-port — interpreted module for func_80150C58.
- * Ground truth: src/func_80150C58.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x50c58.
+ * Ground truth: src/fn_1x50c58.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 extern u32 D_8019ED54[8];
 extern u32 D_8019ED58[8];
-void func_80150C58(void)
+void fn_1x50c58(void)
 {
-    func_80151F28();
+    fn_1x51f28();
     wnd_open(0xFF);
     for (;;) {
         cell_push_c8();
@@ -16,7 +16,7 @@ void func_80150C58(void)
         if (poll_go(0x8080) == 0)
             break;
     }
-    func_80151CD8();
+    fn_1x51cd8();
     wnd_open(0x7F);
     sep();
     sep_a();
@@ -63,7 +63,7 @@ df4:
     cell_pull9_hi(0x393D);
     row_sync2(8);
     cell_pull9_hi(0x393F);
-    func_8015236C();
+    fn_1x5236c();
     sep();
     row_prep_close();
     page_open(0x3941);
@@ -280,7 +280,7 @@ l15A0:
     latch(0xFF);
     txt_draw(0x34CB);
     txt_draw(0x33C4);
-    func_80153264();
+    fn_1x53264();
     latch(5);
     gpu_driver_run_b();
     cell_clear_bank(0x38D7);
@@ -296,15 +296,15 @@ l15E8:
     latch(0xF);
     txt_draw(0x38D6);
 l1630:
-    func_80157AD0();
+    status_panel_loop_renders_stat_pan();
     txt_set(0x3601);
     io_poll(0xFF);
     if (io_just() == 0)
         goto l1668;
-    func_80150B88();
+    options_rows_x353e_x353f_texts_c38();
     func_8015D9A8();
 l1668:
-    func_8015AC7C();
+    fn_1x5ac7c();
     row_page(0xA8);
     if (gate(0x202) != 0)
         goto l1718;
@@ -312,15 +312,15 @@ l1668:
     io_poll(0xFF);
     if (io_just() == 0)
         goto l16B8;
-    func_8015DCA4();
-    func_8015BD34();
+    fn_1x5dca4();
+    fn_1x5bd34();
 l16B8:
-    func_80157F30();
+    options_screen_xd1_x38f6_x35eb_tex();
     row_page(0xD1);
     if (gate(2) != 0)
         goto l146C;
-    func_80158190();
-    func_80151C0C();
+    options_screen_xd2_window_x38f6_x3();
+    options_row_x39f0_text_read_v1_v0();
     txt_set(0x352E);
     io_poll(2);
     if (io_just() == 0)
@@ -328,7 +328,7 @@ l16B8:
     func_8005F188();
     goto l146C;
 l1718:
-    func_8016E560();
+    options_x3540_x2003_cells_ec_x2007();
     latch(0x85);
     txt_draw(0x35F3);
     row_page(0xD7);
@@ -348,8 +348,8 @@ l1758:
         goto l17C8;
     latch(0x15);
     gpu_driver_run_b();
-    func_80153518();
-    func_8016571C();
+    options_x2003_x2006_cells_with_x38();
+    options_stat_screen_x2041_x203d_x3();
     goto l19F0;
 l17C8:
     txt_set(0x38E5);
@@ -366,7 +366,7 @@ l1800:
     gpu_driver_run_b();
     latch(0x15);
     gpu_driver_run_b();
-    func_80153264();
+    fn_1x53264();
     latch(0x24);
     txt_draw(0x34CA);
     latch(0xFF);
@@ -387,15 +387,15 @@ l18A8:
         goto l1908;
     latch(0x13);
     gpu_driver_run_b();
-    func_80153518();
-    func_8016571C();
+    options_x2003_x2006_cells_with_x38();
+    options_stat_screen_x2041_x203d_x3();
     txt_set(0x38F3);
     if (gate(0x202) != 0)
         goto l19F0;
-    func_80153608();
+    fn_1x53608();
     goto l19F0;
 l1908:
-    func_801533BC();
+    fn_1x533bc();
     row_page(0xA9);
     if (gate(0x202) != 0)
         goto l1950;
@@ -409,24 +409,24 @@ l1950:
     txt_draw(0x38BE);
     page_paint2(0x38BD);
 l1968:
-    func_80153518();
+    options_x2003_x2006_cells_with_x38();
     latch(2);
     gpu_driver_run_b();
-    func_801534D8();
+    fn_1x534d8();
     row_page(0xA9);
     if (gate(0x202) != 0)
         goto l19B0;
     latch(0x12);
     gpu_driver_run_b();
 l19B0:
-    func_8016571C();
+    options_stat_screen_x2041_x203d_x3();
     row_page(0xA8);
     row_read(0x10);
     if (sel(2) != 0)
         goto l19F0;
     func_80163F68();
-    func_80153518();
-    func_8016571C();
+    options_x2003_x2006_cells_with_x38();
+    options_stat_screen_x2041_x203d_x3();
 l19F0:
     sep();
     for (;;) {
@@ -487,7 +487,7 @@ l1B4C:
         if (gate(2) != 0)
             goto l1BEC;
         row_page(0xA9);
-        func_80152908();
+        options_row_v0_gate_picks_f4c_vs_c();
         txt_draw(0x6CC2);
         row_page(0xAA);
         txt_draw(0x6CC1);

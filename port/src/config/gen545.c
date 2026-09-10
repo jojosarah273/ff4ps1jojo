@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8013C2FC.
- * Ground truth: src/func_8013C2FC.c (byte-verified).
+/* FF4 source-port — interpreted module for ability_menu_x60_window_x1a83_text.
+ * Ground truth: src/ability_menu_x60_window_x1a83_text.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8013C2FC(void)
+void ability_menu_x60_window_x1a83_text(void)
 {
     /* ability menu: 0x60 window, 0x1A83 text, 801210AC/8011FBA4/
        8013C44C/8011F684/80126418/8011F884/8013BFFC rows; loop
@@ -13,9 +13,9 @@ L13c304:
         midrow_paint_a();
         draw_pad_cur();
         battle_rows_29();
-        func_8013C44C();
+        fn_1x3c44c();
         midrow_pad88_run();
-        func_80126418();
+        fn_1x26418();
         midrow_degen();
         row_page(1);
         row_read(3);
@@ -44,9 +44,9 @@ L13c304:
         if (sel(2) != 0)
             continue;
         open_row(0x60);
-        func_8013C44C();
+        fn_1x3c44c();
         page_paint2(0x1A83);
-        func_8013BFFC();
+        ability_rows_x1a83_text_loop_l13c0();
     L13C43C:
         return;
     }

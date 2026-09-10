@@ -1,13 +1,13 @@
-/* FF4 source-port — interpreted module for func_80114DC8.
- * Ground truth: src/func_80114DC8.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_xc0_x89_windows_fd0_ba.
+ * Ground truth: src/battle_rows_xc0_x89_windows_fd0_ba.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80114DC8(void)
+void battle_rows_xc0_x89_windows_fd0_ba(void)
 {
     /* battle rows: 0xC0/0x89 windows, 80114FD0/80172BA8/80115080/
        8011511C/80115038/8011EA5C rows; loop L114DE8 on row reads. */
-    func_80114FD0();
+    fn_1x14fd0();
     wnd_open(0xC0);
     tail(0x89);
 L114de8:
@@ -20,14 +20,14 @@ L114de8:
         txt_draw(0x2100);
     L114E2C:
         cell_clear_pad();
-        func_80172BA8();
-        func_80115080();
+        fn_1x72ba8();
+        battle_rows_x7a_window_x1f_x70_rea();
         latch(0x40);
-        func_8011511C();
+        fn_1x1511c();
         latch(4);
         cell_put(5);
         open_row(4);
-        func_80115038();
+        fn_1x15038();
         page(0x89);
         cell_set50_from54();
         tail(0x89);

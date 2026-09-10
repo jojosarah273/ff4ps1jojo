@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801317F0.
- * Ground truth: src/func_801317F0.c (byte-verified).
+/* FF4 source-port — interpreted module for ability_select_screen_x1b91_text_x.
+ * Ground truth: src/ability_select_screen_x1b91_text_x.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801317F0(void)
+void ability_select_screen_x1b91_text_x(void)
 {
     /* ability/select screen: 0x1B91 text, 0xE8/0x54/0x55/0x57/0x41
        windows, 80124EAC cursor; loops L1318D0 (5DD4/5C64 scroll),
@@ -70,7 +70,7 @@ L1319DC:
     latch_cur();
 L1319f4:
     for (;;) {
-        func_80131A2C();
+        ability_pick_x1bc6_x1b8b_texts_x43();
         cell_set50_from40();
         io_poll(5);
         if (io_just() == 0)

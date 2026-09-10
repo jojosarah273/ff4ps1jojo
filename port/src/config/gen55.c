@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8015B8E4.
- * Ground truth: src/func_8015B8E4.c (byte-verified).
+/* FF4 source-port — interpreted module for config_status_row_screen_key_codes.
+ * Ground truth: src/config_status_row_screen_key_codes.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8015B8E4(void)
+void config_status_row_screen_key_codes(void)
 {
     /* config status-row screen. 5574 key-codes 8/C/10 pick the row variant;
        tails L5BB84 (close B3) and L5BB8C (return) are shared. */

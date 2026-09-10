@@ -1,20 +1,20 @@
-/* FF4 source-port — interpreted module for func_80137B18.
- * Ground truth: src/func_80137B18.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x37b18.
+ * Ground truth: src/fn_1x37b18.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 extern u16 *D_80199230;
-void func_80137B18(void)
+void fn_1x37b18(void)
 {
     func_80123FB4();
     midrow_paint_c();
-    func_801266F0();
+    rows_x100_x1c_x41_windows_f0_x89_c();
     anim_noop();
     sep();
-    func_801387D8();
+    rows_x4e_x41_windows_x7fa_text_d0();
     label(0x17FC);
-    func_80138730();
-    func_80127408();
+    fn_1x38730();
+    status_c_header_f0_b0_cells_x_b8();
     midrow_paint_a();
     draw_pad(*D_80199230);
     battle_rows_29();

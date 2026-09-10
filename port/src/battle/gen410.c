@@ -1,14 +1,14 @@
-/* FF4 source-port — interpreted module for func_80110334.
- * Ground truth: src/func_80110334.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_single_row_x89_x7a_windows.
+ * Ground truth: src/battle_single_row_x89_x7a_windows.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80110334(void)
+void battle_single_row_x89_x7a_windows(void)
 {
     /* battle single-row: 0x89/0x7A windows, 0x2100 text, 0xC/0xE/0x91/
        0x8F/0x92 windows, 0x411/0x415 texts, 8011581C/80110474/
        80110024/8011EA5C; loop L11035C. */
-    func_80110024();
+    fn_1x10024();
     wnd_open(0x30);
     tail(0x89);
     open_row(0x7A);
@@ -22,7 +22,7 @@ L11035c:
         txt_draw(0x2100);
     L11038C:
         cell_clear_pad();
-        func_80110474();
+        fn_1x10474();
         latch(0x68);
         cell_put(0xC);
         row_page(0x89);

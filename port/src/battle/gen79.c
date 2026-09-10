@@ -1,15 +1,15 @@
-/* FF4 source-port — interpreted module for func_80102494.
- * Ground truth: src/func_80102494.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x02494.
+ * Ground truth: src/fn_1x02494.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80102494(void)
+void fn_1x02494(void)
 {
     latch(0x2F);
     cell_put(0x79);
     open_row(0x7A);
     for (;;) {
-        func_80102E78();
+        fn_1x02e78();
         row_page(0x79);
         io_poll(0x20);
         if (io_go() != 0) {
@@ -67,10 +67,10 @@ void func_80102494(void)
         row_page(0xB1);
         if (gate(0x202) == 0) {
             latch(0x52);
-            func_8011AEAC();
+            battle_item_select_right_side_vari();
         }
         page_paint2(0x1A02);
         break;
     }
-    func_80103660();
+    shop_rows_x7a_xb9_windows_e78_rows();
 }

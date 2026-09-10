@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801694A4.
- * Ground truth: src/func_801694A4.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_seed_x64_window_x1b_x2107_tex.
+ * Ground truth: src/shop_seed_x64_window_x1b_x2107_tex.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801694A4(void)
+void shop_seed_x64_window_x1b_x2107_tex(void)
 {
     /* shop seed: 0x64 window, 0x1B/0x2107 texts; loop L169548 on
        5958(0x320). */

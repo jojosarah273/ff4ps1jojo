@@ -1,15 +1,15 @@
-/* FF4 source-port — interpreted module for func_80104934.
- * Ground truth: src/func_80104934.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x04934.
+ * Ground truth: src/fn_1x04934.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80104934(void)
+void fn_1x04934(void)
 {
     row_page(0xD5);
     if (gate(0x202) == 0)
         return;
     open_row(0xC4);
-    func_80102C30();
+    fn_1x02c30();
     row_page(0xB1);
     if (gate(2) == 0) {
         row_page(4);
@@ -24,7 +24,7 @@ void func_80104934(void)
         row_read(3);
         cell_put(0xD2);
     }
-    func_801051A8();
+    fn_1x051a8();
     row_page(0xA1);
     row_read(3);
     sep_a();
@@ -42,8 +42,8 @@ void func_80104934(void)
 La4c:
     latch(2);
     txt_draw(0x709);
-    func_801048EC();
-    func_80104E14();
+    fn_1x048ec();
+    shop_sell_rows_xb1_xa1_xd2_windows();
     io_poll_cur();
     if (io_just() != 0)
         goto Lc34;
@@ -60,8 +60,8 @@ La84:
 Lacc:
     latch(4);
     txt_draw(0x709);
-    func_801048EC();
-    func_80104E14();
+    fn_1x048ec();
+    shop_sell_rows_xb1_xa1_xd2_windows();
     io_poll_cur();
     if (io_just() != 0)
         goto Lc34;
@@ -78,8 +78,8 @@ Lb04:
 Lb4c:
     latch(3);
     txt_draw(0x709);
-    func_801048EC();
-    func_80104E14();
+    fn_1x048ec();
+    shop_sell_rows_xb1_xa1_xd2_windows();
     io_poll_cur();
     if (io_just() != 0)
         goto Lc34;
@@ -96,14 +96,14 @@ Lb84:
 Lbcc:
     latch(1);
     txt_draw(0x709);
-    func_801048EC();
-    func_80104E14();
+    fn_1x048ec();
+    shop_sell_rows_xb1_xa1_xd2_windows();
     io_poll_cur();
     if (io_just() != 0)
         goto Lc34;
 Lc04:
     open_row(0xAB);
-    func_80105098();
+    shop_sell_rows_xab_xd2_windows_x6a();
     row_page(0xB1);
     if (gate(0x202) != 0)
         goto Ld8c;
@@ -114,7 +114,7 @@ Lc34:
         goto Lc9c;
     txt_set(0x709);
     cell_put(0xAB);
-    func_80105098();
+    shop_sell_rows_xab_xd2_windows_x6a();
     row_page(0xEA);
     if (gate(0x202) != 0)
         goto Lc84;
@@ -142,7 +142,7 @@ Ld0c:
     txt_set(0x1707);
     poll_spin();
     cell_put(0xE);
-    func_80104DB4();
+    fn_1x04db4();
     goto Ld8c;
 Ld34:
     txt_set(0x70E);
@@ -156,10 +156,10 @@ Ld6c:
     txt_set(0x1707);
     cell_set50_from40();
     cell_put(0xE);
-    func_80104DB4();
+    fn_1x04db4();
 Ld8c:
     func_800FFB5C();
     func_800FFCAC();
-    func_8011C768();
+    fn_1x1c768();
     return;
 }

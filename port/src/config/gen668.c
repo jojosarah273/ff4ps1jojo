@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8013CA70.
- * Ground truth: src/func_8013CA70.c (byte-verified).
+/* FF4 source-port — interpreted module for ability_menu_x41_window_ladder_x19.
+ * Ground truth: src/ability_menu_x41_window_ladder_x19.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8013CA70(void)
+void ability_menu_x41_window_ladder_x19(void)
 {
     /* ability menu: 0x41 window; 5574 ladder (0x19/0xC8/0xEE codes)
        routes to the 801210AC/8011FB74/801263F0/8012219C/8011FF40/
@@ -35,8 +35,8 @@ L13CB0C:
     draw_pad_cur();
     func_8011FB74();
     config_row_f320();
-    func_8012219C();
-    func_8011FF40();
+    fn_1x2219c();
+    fn_1x1ff40();
     config_row_a600();
     draw_pad_cur();
     battle_rows_sync();

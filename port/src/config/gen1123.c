@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80132130.
- * Ground truth: src/func_80132130.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x32130.
+ * Ground truth: src/fn_1x32130.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80132130(void)
+void fn_1x32130(void)
 {
     row_prep(32);
     row_sync2(599);

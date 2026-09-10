@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8016A0C8.
- * Ground truth: src/func_8016A0C8.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_cells_x2_window_x8_gate_loops.
+ * Ground truth: src/shop_cells_x2_window_x8_gate_loops.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8016A0C8(void)
+void shop_cells_x2_window_x8_gate_loops(void)
 {
     /* shop cells: 0x2 window, 0x8 gate; loops L16A124 (6764 cells)
        and L16A18C (66D8 cells) on 5C64/5B8C(0x202). */

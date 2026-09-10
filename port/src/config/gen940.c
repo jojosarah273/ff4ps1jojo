@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8012C6B8.
- * Ground truth: src/func_8012C6B8.c (byte-verified).
+/* FF4 source-port — interpreted module for config_rows_x60_window_gates_c2f8.
+ * Ground truth: src/config_rows_x60_window_gates_c2f8.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8012C6B8(void)
+void config_rows_x60_window_gates_c2f8(void)
 {
     /* config rows: 0x60 window, gates 6434()/8012C2F8; closes via
        8218? cells + 801221EC. */

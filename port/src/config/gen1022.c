@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80121A9C.
- * Ground truth: src/func_80121A9C.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x21a9c.
+ * Ground truth: src/fn_1x21a9c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80121A9C(void)
+void fn_1x21a9c(void)
 {
     row_page(102);
     sep_b();
@@ -12,6 +12,6 @@ void func_80121A9C(void)
     cell_put(29);
     row_page(30);
     cell_draw(0);
-    func_801222C4();
-    func_80121B04();
+    rows_u16_d44_d54_swap_with_c_prep();
+    fn_1x21b04();
 }

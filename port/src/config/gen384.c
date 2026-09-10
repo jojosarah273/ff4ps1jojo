@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8012C0A8.
- * Ground truth: src/func_8012C0A8.c (byte-verified).
+/* FF4 source-port — interpreted module for config_save_flow_x60_x45_windows_x.
+ * Ground truth: src/config_save_flow_x60_x45_windows_x.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8012C0A8(void)
+void config_save_flow_x60_x45_windows_x(void)
 {
     /* config save-flow: 0x60/0x45 windows, 0x1B3B/0x1B84/0x1B86 texts,
        801221EC/801210AC/8011EF30/8011FBA4/801263F0/8012C250 rows;
@@ -47,6 +47,6 @@ L12C1E0:
     row_done();
     battle_rows_29();
     config_row_f320();
-    func_8012C250();
+    config_rows_x1b3c_x1b3b_x1440_text();
     return;
 }

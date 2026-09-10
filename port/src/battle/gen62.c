@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8011383C.
- * Ground truth: src/func_8011383C.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x1383c.
+ * Ground truth: src/fn_1x1383c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8011383C(void)
+void fn_1x1383c(void)
 {
     latch(0x51);
     wnd_fx_pads();
@@ -36,16 +36,16 @@ L1388c:
             row_sel_cell_cur();
             sep_a();
             cell_poke0(cell_state(0x22));
-            func_801140A4();
-            func_80113C04();
+            battle_rows_fe634_prep_x70_x22_x21();
+            fn_1x13c04();
             row_page(0x20);
             sep_a();
             row_open_w(0x40);
             sep_a();
             cell_poke0(cell_state(0x6FB));
             row_sel_cell_cur();
-            func_801140A4();
-            func_80113C54();
+            battle_rows_fe634_prep_x70_x22_x21();
+            fn_1x13c54();
             row_page(0x20);
             row_read(3);
             cell_pull_c8(0x302);

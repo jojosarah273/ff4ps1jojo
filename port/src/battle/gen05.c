@@ -1,11 +1,11 @@
-/* FF4 source-port — interpreted module for func_80106D6C.
- * Ground truth: src/func_80106D6C.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x06d6c.
+ * Ground truth: src/fn_1x06d6c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 extern u32 D_8019ED40[8];
 extern u32 D_8019EE60[8];
-void func_80106D6C(void)
+void fn_1x06d6c(void)
 {
     func_800F92D8();
     row_prep(0x20);
@@ -26,13 +26,13 @@ void func_80106D6C(void)
     row_page(0xC4);
     if (gate(2) != 0)
         goto Le24;
-    func_80119C7C();
+    event_v0_spin_loop_l119cec_f5c0_ta();
     open_row(0xC4);
     goto Le2c;
 Le24:
     func_8017668C();
 Le2c:
-    func_801743E0();
+    fn_1x743e0();
     row_page(0x7E);
     if (gate(2) != 0)
         goto Le5c;
@@ -58,56 +58,56 @@ Le84:
     if (gate(2) != 0)
         goto Lef4;
     open_row(0x94);
-    func_8011DBF0();
+    fn_1x1dbf0();
 Lef4:
-    func_80174F64();
-    func_80175004();
-    func_80175494();
+    fn_1x74f64();
+    shop_rows_x1700_x1288_texts_x7a_xc();
+    shop_rows_x1700_text_x7a_window_xc();
     goto L03c;
 Lf14:
     row_page(0x94);
     if (gate(2) != 0)
         goto Lf3c;
     open_row(0x94);
-    func_8011DBF0();
+    fn_1x1dbf0();
 Lf3c:
-    func_80175F00();
+    row_picker_xcc_window_x1003_gate_e();
     goto L03c;
 Lf4c:
     row_page(0x94);
     if (gate(2) != 0)
         goto Lf74;
     open_row(0x94);
-    func_8011DA88();
+    shop_sale_rows_xab_x99_x95_x9b_x9d();
 Lf74:
-    func_80175B60();
-    func_8011A334();
-    func_8010A5A0();
-    func_8010A204();
-    func_80109A28();
-    func_801098C8();
+    shop_rows_xd4_window_x2115_x6fe_x7();
+    shop_buy_list_xe2_window_gate_x211();
+    shop_banner_xe9_window_x2115_gate();
+    fn_1x0a204();
+    fn_1x09a28();
+    fn_1x098c8();
     row_page(0xDF);
     if (gate(2) != 0)
         goto Lfc4;
-    func_801096F0();
+    fn_1x096f0();
 Lfc4:
     row_page(0xDA);
     if (gate(2) != 0)
         goto Lfe4;
-    func_80106960();
+    fn_1x06960();
 Lfe4:
     row_page(0x7A);
     cell_tick_half();
     if (cell_flags_nz50(0x101) != 0)
         goto L024;
-    func_80109B08();
-    func_80107530();
-    func_801750DC();
+    fn_1x09b08();
+    fn_1x07530();
+    fn_1x750dc();
     goto L03c;
 L024:
-    func_80175F00();
+    row_picker_xcc_window_x1003_gate_e();
     func_800FCA08();
-    func_801769B4();
+    shop_sell_flow_x1700_header_x7a_x1();
 L03c:
     row_page(0xCA);
     io_poll(2);
@@ -121,7 +121,7 @@ L03c:
         goto L094;
     open_row(0xCA);
 L094:
-    func_8011BD88();
+    fn_1x1bd88();
     row_page(0xC2);
     if (gate(2) != 0)
         goto L140;

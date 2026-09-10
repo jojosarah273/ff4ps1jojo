@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80174348.
- * Ground truth: src/func_80174348.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_rows_x128a_text_x4c_x4e_x4a_x.
+ * Ground truth: src/shop_rows_x128a_text_x4c_x4e_x4a_x.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80174348(void)
+void shop_rows_x128a_text_x4c_x4e_x4a_x(void)
 {
     /* shop rows: 0x128A text + 0x4C/0x4E/0x4A/0x49/0x73 windows,
        80170458 + 8017F8F8 rows; gate 4120(0x202). */
@@ -19,7 +19,7 @@ void func_80174348(void)
     tail(0x4A);
     latch(0x1C);
     cell_put(0x49);
-    func_80170458();
+    shop_row_render_x2115_x4300_x4301();
     battle_mode_dispatch();
     return;
 }

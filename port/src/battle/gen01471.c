@@ -1,10 +1,10 @@
-/* FF4 source-port — interpreted module for func_8014096C.
- * Ground truth: src/func_8014096C.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x4096c.
+ * Ground truth: src/fn_1x4096c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-void func_8014096C(void)
+void fn_1x4096c(void)
 
 {
   latch(0x20);

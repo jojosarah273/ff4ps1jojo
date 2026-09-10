@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8014CFC4.
- * Ground truth: src/func_8014CFC4.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_gates_route_the_xff_wi.
+ * Ground truth: src/battle_rows_gates_route_the_xff_wi.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8014CFC4(void)
+void battle_rows_gates_route_the_xff_wi(void)
 {
     /* battle rows: 5574(2/3) gates route the 0xFF window fill; loop
        L14D038 on 5A90(0x10); 8014E424 detail. */
@@ -28,6 +28,6 @@ L14d038:
         break;
     }
     txt_set_cur();
-    func_8014E424();
+    fn_1x4e424();
     return;
 }

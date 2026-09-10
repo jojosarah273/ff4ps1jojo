@@ -1,26 +1,19 @@
-/* FF4 source-port — interpreted module for func_801107A0.
- * Ground truth: src/func_801107A0.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x107a0.
+ * Ground truth: src/fn_1x107a0.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
 
-
-
-
-
-extern int func_80110F2C();
-extern int func_80110FA4();
-
-void func_801107A0(void)
+void fn_1x107a0(void)
 
 {
   int iVar1;
   
-  func_80110F2C();
+  fn_1x10f2c();
   do {
     do {
-      func_80110FA4();
+      fn_1x10fa4();
       row_page(0x7a);
       row_read(7);
       iVar1 = sel(0x202);

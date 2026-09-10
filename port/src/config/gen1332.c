@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8012CE00.
- * Ground truth: src/func_8012CE00.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x2ce00.
+ * Ground truth: src/fn_1x2ce00.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-u32 func_8012CE00(void)
+u32 fn_1x2ce00(void)
 {
     txt_set(0x1A04);
     row_read(0x20);
@@ -11,6 +11,6 @@ u32 func_8012CE00(void)
         func_8012CEA8();
         return 1;
     }
-    func_8012CC4C();
+    fn_1x2cc4c();
     return 2;
 }

@@ -1,12 +1,12 @@
-/* FF4 source-port — interpreted module for func_8012EC48.
- * Ground truth: src/func_8012EC48.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x2ec48.
+ * Ground truth: src/fn_1x2ec48.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8012EC48(void)
+void fn_1x2ec48(void)
 {
     cell_clear_bank(0x1B27);
-    func_80122FF4();
+    fn_1x22ff4();
     row_page(0xE8);
     if (gate(0x8080) == 0)
         return;
@@ -15,7 +15,7 @@ void func_8012EC48(void)
     if (io_just() != 0)
         return;
     row_open();
-    func_80177224();
+    fn_1x77224();
     row_close();
     txt_cell(3);
     txt_draw(0x1A86);
@@ -38,9 +38,9 @@ void func_8012EC48(void)
     row_open();
     midrow_paint_c();
     row_page(0xE8);
-    func_80122CF0();
+    fn_1x22cf0();
     midrow_pad88_run();
-    func_80124158();
+    fn_1x24158();
     func_80122844();
     config_row_26528();
     latch(0x20);
@@ -51,13 +51,13 @@ void func_8012EC48(void)
     draw_pad(0xDBAB);
     draw_pad_cur();
     wnd_open_cur();
-    func_80121124();
+    v0_s0_branch();
     wnd_open(0x952E);
     tail(0xD0);
     wnd_open(0x824F);
     tail(0xCD);
     row_page(0xE8);
-    func_80122B54();
+    row_picker_x60_x61_windows_x45_x43();
     row_prep(0x20);
     row_prep_close();
     cell_put(0xBA);
@@ -162,7 +162,7 @@ L03c:
     row_prep(0x20);
     row_prep_close();
     draw_pad_cur();
-    func_80121124();
+    v0_s0_branch();
     func_8012F3F0();
     latch(0x30);
     cell_put(0x3F);
@@ -196,20 +196,20 @@ L03c:
     row_prep(0x20);
     row_prep_close();
     wnd_open_cur();
-    func_80121124();
-    func_801240D0();
-    func_801266F0();
+    v0_s0_branch();
+    fn_1x240d0();
+    rows_x100_x1c_x41_windows_f0_x89_c();
     func_80126458();
     shop_row_kick_f0();
     config_row_d600b();
     draw_pad_cur();
     wnd_open_cur();
-    func_80121124();
-    func_80122A9C();
+    v0_s0_branch();
+    config_rows_c_e2c_ef30_f1c_fb74_ro();
     config_row_26528();
     config_row_d600b();
     battle_row_45b();
-    func_80177284();
+    fn_1x77284();
     return;
 L3d0:
     func_8012EBF8();

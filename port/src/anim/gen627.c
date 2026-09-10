@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80175B60.
- * Ground truth: src/func_80175B60.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_rows_xd4_window_x2115_x6fe_x7.
+ * Ground truth: src/shop_rows_xd4_window_x2115_x6fe_x7.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80175B60(void)
+void shop_rows_xd4_window_x2115_x6fe_x7(void)
 {
     /* shop rows: 0xD4 window, 0x2115/0x6FE/0x700 texts + 0x6FE/0x6FF
        window rows; gate 6434(0x202). */

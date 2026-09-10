@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8011D068.
- * Ground truth: src/func_8011D068.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_item_cell_pair_x99_x44_x9a_wi.
+ * Ground truth: src/shop_item_cell_pair_x99_x44_x9a_wi.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8011D068(void)
+void shop_item_cell_pair_x99_x44_x9a_wi(void)
 {
     /* shop item-cell pair: 0x99/0x44/0x9A windows with 76BC/7CC8 pair
        draws; then the 0x43/0x9A detail gate (4278/4120) with the 76BC

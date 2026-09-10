@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8011D218.
- * Ground truth: src/func_8011D218.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x1d218.
+ * Ground truth: src/fn_1x1d218.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8011D218(void)
+void fn_1x1d218(void)
 {
     row_prep(0x20);
     cell_push9(0x1707);
@@ -25,7 +25,7 @@ void func_8011D218(void)
     txt_set(0x1707);
     txt_draw(0x70A);
     for (;;) {
-        func_8011DE40();
+        shop_sale_confirm_xab_x6fa_x70a_te();
         page_paint2(0x70A);
         poll_pair(7);
         if (poll_go(0x202) != 0)

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801615D0.
- * Ground truth: src/func_801615D0.c (byte-verified).
+/* FF4 source-port — interpreted module for options_screen_x16_x34c8_headers_x.
+ * Ground truth: src/options_screen_x16_x34c8_headers_x.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801615D0(void)
+void options_screen_x16_x34c8_headers_x(void)
 {
     /* options screen: 0x16/0x34C8 headers, 0x33C6/0x33C7/0x33C4 row
        texts, 0xCE/0xD3 windows; 8015329C alternative, 801526F8/8015240C
@@ -38,7 +38,7 @@ L161660:
     latch(0xF);
     cell_put(0x82);
     latch(8);
-    func_801526F8();
+    shop_rows_xe1_xe5_xdf_windows_c_ro();
     txt_set(0x289D);
     cell_put(0xDF);
     txt_set(0x2682);

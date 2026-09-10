@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8015B284.
- * Ground truth: src/func_8015B284.c (byte-verified).
+/* FF4 source-port — interpreted module for config_row_x353d_text_xe5_x82_xab.
+ * Ground truth: src/config_row_x353d_text_xe5_x82_xab.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8015B284(void)
+void config_row_x353d_text_xe5_x82_xab(void)
 {
     /* config row: 0x353D text, 0xE5/0x82/0xAB/0xAC windows,
        801526F8 header; 5574 ladders (0x6D/0xDE/0xB0) route the
@@ -27,7 +27,7 @@ L15B2EC:
     latch(0xF);
     cell_put(0x82);
     latch(8);
-    func_801526F8();
+    shop_rows_xe1_xe5_xdf_windows_c_ro();
     txt_set(0x28A2);
     row_read(0x1F);
     row_sel_cell_cur();

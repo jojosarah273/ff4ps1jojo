@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80116098.
- * Ground truth: src/func_80116098.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_party_status_rows_xa6d_xa6f.
+ * Ground truth: src/battle_party_status_rows_xa6d_xa6f.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80116098(void)
+void battle_party_status_rows_xa6d_xa6f(void)
 {
     /* battle party-status rows: 0xA6D-0xA6F texts, 0x20/0x21/0x24
        windows, 0x300-0x303 cells, 0xACD/0xACE texts, 800FC0DC commit;

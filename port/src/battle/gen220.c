@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801163E8.
- * Ground truth: src/func_801163E8.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x163e8.
+ * Ground truth: src/fn_1x163e8.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801163E8(void)
+void fn_1x163e8(void)
 {
     open_row(0x3E);
     row_sel_cell_cur();
@@ -40,7 +40,7 @@ L6460:
         txt_cell(0x1000);
         if (gate(0x202) != 0)
             goto L6524;
-        func_80175E08();
+        fn_1x75e08();
     L6524:
         latch(1);
         cell_put(0xE0);

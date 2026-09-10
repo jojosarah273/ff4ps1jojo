@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8018A1B8.
- * Ground truth: src/func_8018A1B8.c (byte-verified).
+/* FF4 source-port — interpreted module for event_ac90_gate_spins_l18a240_l18a.
+ * Ground truth: src/event_ac90_gate_spins_l18a240_l18a.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8018A1B8(void)
+void event_ac90_gate_spins_l18a240_l18a(void)
 {
     /* event: 8018AC90 gate; spins L18A240/L18A2F0 with 8018F0C8;
        8018A438 row; 8x 8018AC90 tail. */
@@ -16,7 +16,7 @@ void func_8018A1B8(void)
         break;
     }
 L18A288:
-    func_8018A438();
+    event_ac90_intro_branches_with_f0c();
     self_test_loop();
     self_test_loop();
     self_test_loop();

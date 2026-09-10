@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8011FD34.
- * Ground truth: src/func_8011FD34.c (byte-verified).
+/* FF4 source-port — interpreted module for config_dialog_gates_b4_c_d48_cell.
+ * Ground truth: src/config_dialog_gates_b4_c_d48_cell.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8011FD34(void)
+void config_dialog_gates_b4_c_d48_cell(void)
 {
     /* config dialog: 6434(2)/5574(1) gates; 801245B4 + 885C/3D48
        cell rows; loops L11FD3C (regcmp latch) and L11FE24

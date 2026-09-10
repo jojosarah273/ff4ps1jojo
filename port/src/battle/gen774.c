@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80118AA8.
- * Ground truth: src/func_80118AA8.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_x9d5_text_x18_x1560_wi.
+ * Ground truth: src/battle_rows_x9d5_text_x18_x1560_wi.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80118AA8(void)
+void battle_rows_x9d5_text_x18_x1560_wi(void)
 {
     /* battle rows: 0x9D5 text, 0x18/0x1560 window/cell, 80117594 +
        8011EA5C rows; loop L118B30 on 6D70(0x1560)/6434(2). */

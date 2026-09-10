@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801266F0.
- * Ground truth: src/func_801266F0.c (byte-verified).
+/* FF4 source-port — interpreted module for rows_x100_x1c_x41_windows_f0_x89_c.
+ * Ground truth: src/rows_x100_x1c_x41_windows_f0_x89_c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801266F0(void)
+void rows_x100_x1c_x41_windows_f0_x89_c(void)
 {
     /* rows: 0x100/0x1C/0x41 windows, 86F0(0x89) cell; loop L126740
        on 5C64(0x202). */

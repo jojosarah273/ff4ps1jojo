@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801488D4.
- * Ground truth: src/func_801488D4.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_item_sublist_x14_x15_x16_xe.
+ * Ground truth: src/battle_item_sublist_x14_x15_x16_xe.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801488D4(void)
+void battle_item_sublist_x14_x15_x16_xe(void)
 {
     /* battle item-sublist: 0x14/0x15/0x16/0xE/0x10/0x12 windows,
        0x6CC0/0x300 gates; 80148D04/80148CAC/80148BE0 row handlers and
@@ -15,7 +15,7 @@ void func_801488D4(void)
     txt_set_cur();
     if (gate(0x202) != 0)
         goto L148924;
-    func_80148D04();
+    battle_rows_clear_variant_zero_byt();
     goto L14896C;
 L148924:
     io_poll(0xFF);
@@ -24,10 +24,10 @@ L148924:
     io_poll(0xFE);
     if (io_just() != 0)
         goto L148964;
-    func_80148CAC();
+    battle_rows_xf42b_text_x_xaa_bytes();
     goto L14896C;
 L148964:
-    func_80148BE0();
+    fn_1x48be0();
 L14896C:
     txt_set_cur();
     row_sel_cell_cur();

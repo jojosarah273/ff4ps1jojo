@@ -24,7 +24,7 @@ L123c54:
         break;
     }
     row_close();
-    func_801222C4();
+    rows_u16_d44_d54_swap_with_c_prep();
     row_close2();
     return;
 }

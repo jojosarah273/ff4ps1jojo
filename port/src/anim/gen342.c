@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80176D40.
- * Ground truth: src/func_80176D40.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_stat_icons_the_fixed_icon_cel.
+ * Ground truth: src/shop_stat_icons_the_fixed_icon_cel.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80176D40(void)
+void shop_stat_icons_the_fixed_icon_cel(void)
 {
     /* shop stat icons: the fixed 1-3/5-12 icon-cell row (654C/824C
        pairs), 0x420B/0x420C icons, 0x15/0x16/0x17/0x22-0x2F windows,

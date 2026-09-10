@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8016BE1C.
- * Ground truth: src/func_8016BE1C.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_rows_f94_b04_reads_x2000_x204.
+ * Ground truth: src/shop_rows_f94_b04_reads_x2000_x204.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8016BE1C(void)
+void shop_rows_f94_b04_reads_x2000_x204(void)
 {
     /* shop rows: 3F94(3B04) reads + 0x2000/0x2040 cells; linear. */
     row_prep(0x20);

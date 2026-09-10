@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80149924.
- * Ground truth: src/func_80149924.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_x38e6_text_x4e_x1_x4e.
+ * Ground truth: src/battle_rows_x38e6_text_x4e_x1_x4e.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80149924(void)
+void battle_rows_x38e6_text_x4e_x1_x4e(void)
 {
     /* battle rows: 0x38E6 text, 0x4E/0x1/0x4E windows, 8014D568/
        8007259C/80094D14/80168148 rows; loops L1499A4 and L1499D8
@@ -14,7 +14,7 @@ void func_80149924(void)
     latch(0x80);
     txt_draw_cur();
     txt_set(0x38E6);
-    func_8014D568();
+    fn_1x4d568();
 L1499A4:
     cell_clear_bank();
     func_8007259C();
@@ -36,7 +36,7 @@ L1499d8:
             continue;
         break;
     }
-    func_80168148();
+    fn_1x68148();
     key_page(0x4E);
     row_page(0x4E);
     io_poll(0x30);

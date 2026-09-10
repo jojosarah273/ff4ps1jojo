@@ -10,7 +10,7 @@
  *   latch     = 800F654C    tail      = 800F8D6C
  *   opt_row_a = 8015A5B8    opt_flat  = 8015236C / 8015254C
  *   opt_end   = 8015A56C    opt_next  = 8016046C
- * Ground truth: src/func_8015A89C, 8015AACC, 8015ABEC, 8015FB70,
+ * Ground truth: src/options_x3558_x2016_texts_x202f_ce, 8015AACC, 8015ABEC, 8015FB70,
  * 8015FA70.
  */
 #include <stdint.h>

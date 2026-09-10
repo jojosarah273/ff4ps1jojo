@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80125ACC.
- * Ground truth: src/func_80125ACC.c (byte-verified).
+/* FF4 source-port — interpreted module for config_equip_form_confirm_x45_x46.
+ * Ground truth: src/config_equip_form_confirm_x45_x46.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80125ACC(void)
+void config_equip_form_confirm_x45_x46(void)
 {
     /* config/equip-form confirm: 0x45/0x46/0x43/0x15 windows, 0x1BC0/
        0x1BBF texts; 8012D204 gate; L125B14 renders the 1/3 option rows
@@ -71,7 +71,7 @@ L125DA0:
     cell_cursor_dec();
     row_pad();
     latch(0x10);
-    func_80125DF8();
+    rows_x145_text_loops_l125e28_d70_c();
     row_pad();
     cell_cursor_read();
     row_close2();

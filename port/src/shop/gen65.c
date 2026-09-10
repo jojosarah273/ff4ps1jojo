@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801684AC.
- * Ground truth: src/func_801684AC.c (byte-verified).
+/* FF4 source-port — interpreted module for config_status_text_screen_x4219_x4.
+ * Ground truth: src/config_status_text_screen_x4219_x4.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801684AC(void)
+void config_status_text_screen_x4219_x4(void)
 {
     /* config status text screen: 0x4219/0x421B choose header, 0x38D9 the
        detail row; 80168400/80168474/8016838C draw the option rows. */
@@ -65,8 +65,8 @@ L168650:
     row_read(0x10);
     if (sel(2) != 0)
         goto L168728;
-    func_80168400();
-    func_8016838C();
+    fn_1x68400();
+    shop_b04_x7000_x2_v1_t0_latch_loop();
 L168680:
     latch(1);
     txt_draw_cur();
@@ -86,8 +86,8 @@ L1686D8:
     if (sel(2) != 0)
         goto L168738;
 L1686F8:
-    func_80168474();
-    func_8016838C();
+    fn_1x68474();
+    shop_b04_x7000_x2_v1_t0_latch_loop();
     latch(2);
     txt_draw_cur();
     latch(4);

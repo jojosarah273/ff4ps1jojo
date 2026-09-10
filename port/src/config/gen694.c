@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8015E910.
- * Ground truth: src/func_8015E910.c (byte-verified).
+/* FF4 source-port — interpreted module for options_cast_x2703_text_xd6_xcf_wi.
+ * Ground truth: src/options_cast_x2703_text_xd6_xcf_wi.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8015E910(void)
+void options_cast_x2703_text_xd6_xcf_wi(void)
 {
     /* options cast: 0x2703 text, 0xD6/0xCF windows, 8015A374 +
        80153374 rows with 0x2A06/0x29EB/0x2B2A/0x2B2B cells. */

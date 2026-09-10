@@ -1,15 +1,15 @@
-/* FF4 source-port — interpreted module for func_80142E90.
- * Ground truth: src/func_80142E90.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x42e90.
+ * Ground truth: src/fn_1x42e90.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80142E90(void)
+void fn_1x42e90(void)
 {
 L42e98:
     for (;;) {
-        func_80143D64();
+        fn_1x43d64();
         cell_draw_cur();
-        func_80143D14();
+        fn_1x43d14();
         cell_draw_cur();
         cell_step();
         if (cell_flags_cmp(cell_state_of()) == 0)
@@ -34,7 +34,7 @@ L42F48:
         goto L42F88;
     page_open_cur();
     tail_cur();
-    func_8014323C();
+    fn_1x4323c();
     return;
 L42F88:
     txt_set(0x34C4);
@@ -63,7 +63,7 @@ L42fd0:
         sep_b();
         cell_pos_back(8);
         cell_put(1);
-        func_8014323C();
+        fn_1x4323c();
     L4309C:
         cell_step();
         poll_t(5);
@@ -95,7 +95,7 @@ L430f4:
         sep_b();
         cell_pos_back(8);
         cell_put(1);
-        func_8014323C();
+        fn_1x4323c();
     L431B8:
         cell_step();
         poll_t(8);

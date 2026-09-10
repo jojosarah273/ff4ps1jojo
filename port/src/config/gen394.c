@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80127C70.
- * Ground truth: src/func_80127C70.c (byte-verified).
+/* FF4 source-port — interpreted module for ability_status_details_screen_head.
+ * Ground truth: src/ability_status_details_screen_head.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80127C70(void)
+void ability_status_details_screen_head(void)
 {
     /* ability/status details screen: 80126610..80136014 header chain,
        0x1BE4/0x17FE stat block, 0x1B47/0x1B46 detail rows with the
@@ -14,7 +14,7 @@ void func_80127C70(void)
     config_row_q18();
     midrow_paint_c();
     midrow_paint_b();
-    func_80125A64();
+    fn_1x25a64();
     func_80136014();
     wnd_open(0x1BE4);
     if (cell_flags_cmp(cell_state(0x17FE)) == 0)
@@ -43,7 +43,7 @@ L127D38:
     txt_set(0x16A4);
     page_open(0x16A5);
     draw_pad_cur();
-    func_80127538();
+    status_rows_x73_x74_windows_xa_xc();
     draw_pad_cur();
     battle_rows_29();
     config_row_b600();
@@ -66,7 +66,7 @@ L127D38:
     status_panel_install_labels();
 L127E80:
     func_80138664();
-    func_80126590();
+    fn_1x26590();
     cell_clear_bank(0x1B46);
     txt_set(0x1B46);
     if (gate(2) != 0)

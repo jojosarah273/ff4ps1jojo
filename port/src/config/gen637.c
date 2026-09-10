@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80153518.
- * Ground truth: src/func_80153518.c (byte-verified).
+/* FF4 source-port — interpreted module for options_x2003_x2006_cells_with_x38.
+ * Ground truth: src/options_x2003_x2006_cells_with_x38.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80153518(void)
+void options_x2003_x2006_cells_with_x38(void)
 {
     /* options: 0x2003-0x2006 cells with 0x38BF-0x38C1 stats,
        8015330C row; loop L153560 on 5A90(0xF). */
@@ -22,7 +22,7 @@ L153560:
         txt_cell(0x2006);
         cell_pull_c8(0x38C1);
         page_paint(0x2006);
-        func_8015330C();
+        rows_u16_d44_d54_swap_chain_with_c();
         step2();
         step2();
         step2();

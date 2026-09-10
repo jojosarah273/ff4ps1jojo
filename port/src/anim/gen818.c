@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801757A4.
- * Ground truth: src/func_801757A4.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_rows_xcdb_xbd5_cells_values_l.
+ * Ground truth: src/shop_rows_xcdb_xbd5_cells_values_l.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801757A4(void)
+void shop_rows_xcdb_xbd5_cells_values_l(void)
 {
     /* shop rows: 0xCDB/0xBD5 cells, 4264/7894 values; loop L1757BC
        on 5958(0x100). */

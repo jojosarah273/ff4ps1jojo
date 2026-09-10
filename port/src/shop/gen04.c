@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80162DF8.
- * Ground truth: src/func_80162DF8.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x62df8.
+ * Ground truth: src/fn_1x62df8.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80162DF8(void)
+void fn_1x62df8(void)
 {
     row_page(0xCD);
     if (gate(0x8080) != 0)

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8013E5D0.
- * Ground truth: src/func_8013E5D0.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_x4_x1_windows_e588_row.
+ * Ground truth: src/battle_rows_x4_x1_windows_e588_row.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8013E5D0(void)
+void battle_rows_x4_x1_windows_e588_row(void)
 {
     /* battle rows: 0x4/0x1 windows, 8013E588 rows; 76BC(3C3C(4))/
        7728(0x101) gate with the 3F38(3B9C) cell writes; loop

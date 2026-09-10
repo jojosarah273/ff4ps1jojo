@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8015254C.
- * Ground truth: src/func_8015254C.c (byte-verified).
+/* FF4 source-port — interpreted module for options_b04_x2000_gates_v0_run_l15.
+ * Ground truth: src/options_b04_x2000_gates_v0_run_l15.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8015254C(void)
+void options_b04_x2000_gates_v0_run_l15(void)
 {
     /* options: 3B04(0x2000) gates; v0 run -> L152614 / L152630. */
     cell_state(0x2000);

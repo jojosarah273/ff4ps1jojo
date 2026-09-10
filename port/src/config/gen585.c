@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80157AD0.
- * Ground truth: src/func_80157AD0.c (byte-verified).
+/* FF4 source-port — interpreted module for status_panel_loop_renders_stat_pan.
+ * Ground truth: src/status_panel_loop_renders_stat_pan.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80157AD0(void)
+void status_panel_loop_renders_stat_pan(void)
 {
     /* status/panel loop: renders stat panels (971C/9660(0x20)/9644
        window-op triples) each iteration; a0/v1 regcmp gates pick the

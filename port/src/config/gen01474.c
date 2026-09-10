@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80135BE4.
- * Ground truth: src/func_80135BE4.c (byte-verified).
+/* FF4 source-port — interpreted module for ability_v1_v0_gates_pick_ee4_f0e8.
+ * Ground truth: src/ability_v1_v0_gates_pick_ee4_f0e8.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80135BE4(void)
+void ability_v1_v0_gates_pick_ee4_f0e8(void)
 {
     /* ability: v1/v0 gates pick 80135EE4/8018F0E8 or 80135DE4 rows;
        v0 latch closes; returns L135DD4. */

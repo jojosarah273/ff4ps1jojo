@@ -1,6 +1,6 @@
-/* FF4 source-port — interpreted module for func_8011050C.
- * Ground truth: src/func_8011050C.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x1050c.
+ * Ground truth: src/fn_1x1050c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8011050C(void) { wnd_fx_7d(); cell_clear_pad(); func_80110474(); }
+void fn_1x1050c(void) { wnd_fx_7d(); cell_clear_pad(); fn_1x10474(); }

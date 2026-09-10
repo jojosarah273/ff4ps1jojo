@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8018AD48.
- * Ground truth: src/func_8018AD48.c (byte-verified).
+/* FF4 source-port — interpreted module for event_v1_v0_gate_e8_acf8_a8_f8.
+ * Ground truth: src/event_v1_v0_gate_e8_acf8_a8_f8.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8018AD48(void)
+void event_v1_v0_gate_e8_acf8_a8_f8(void)
 {
     /* event: v1/v0 gate; 801976E8/8018ACF8/80197668/801976A8/
        801976F8 rows. */

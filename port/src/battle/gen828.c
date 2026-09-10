@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8014EA0C.
- * Ground truth: src/func_8014EA0C.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_x2_window_loop_l14ea34.
+ * Ground truth: src/battle_rows_x2_window_loop_l14ea34.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8014EA0C(void)
+void battle_rows_x2_window_loop_l14ea34(void)
 {
     /* battle rows: 0x2 window; loop L14EA34 on 4FAC(0x101)/5958(5). */
     wnd_open_cur();

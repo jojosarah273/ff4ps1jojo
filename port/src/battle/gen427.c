@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80104F1C.
- * Ground truth: src/func_80104F1C.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_buy_row_x709_x1706_x1707_text.
+ * Ground truth: src/shop_buy_row_x709_x1706_x1707_text.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80104F1C(void)
+void shop_buy_row_x709_x1706_x1707_text(void)
 {
     /* shop buy-row: 0x709/0x1706/0x1707 texts, 0xD2/0xC/0xE/0x3D/0xEE
        windows, 8010D54C; 6A78(0xA1) gate. */
@@ -37,7 +37,7 @@ L104F94:
     io_poll(0x20);
     if (io_go() != 0)
         goto L105078;
-    func_8010D54C();
+    fn_1x0d54c();
     page(0x3D);
     cell_push_c8();
     if (gate_cur() != 0)

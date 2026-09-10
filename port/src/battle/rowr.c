@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80145408.
- * Ground truth: src/func_80145408.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x45408.
+ * Ground truth: src/fn_1x45408.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80145408(void)
+void fn_1x45408(void)
 {
     txt_set(0xF320);
     if (gate(2) != 0)
@@ -83,7 +83,7 @@ L6b4:
         txt_draw(0xF32A);
     L6fc:
         for (;;) {
-            func_801673CC();
+            battle_row_xe_x1c_x10_windows_gate();
             if (io_go() == 0)
                 goto L80c;
             cell_pull_c8(0x302);

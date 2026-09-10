@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801428FC.
- * Ground truth: src/func_801428FC.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_item_cast_d12c_prep_x1900_g.
+ * Ground truth: src/battle_item_cast_d12c_prep_x1900_g.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801428FC(void)
+void battle_item_cast_d12c_prep_x1900_g(void)
 {
     /* battle item-cast: 8013D12C prep, 0x1900 gate + 80142B4C intro,
        wait loop L142938, L142988/L1429BC/L142A6C cast loops
@@ -25,7 +25,7 @@ L142938:
             continue;
         break;
     }
-    func_801407EC();
+    fn_1x407ec();
     wnd_open(0x18);
 L142988:
     for (;;) {
@@ -73,7 +73,7 @@ L142988:
         poll_t(9);
         if (io_just() == 0)
             goto L142B1C;
-        func_8014096C();
+        fn_1x4096c();
     L142B1C:
         cell_set50_from54();
         if (poll_go(0x202) != 0)

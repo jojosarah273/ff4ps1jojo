@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8016D4D8.
- * Ground truth: src/func_8016D4D8.c (byte-verified).
+/* FF4 source-port — interpreted module for config_map_x7d19_x36_x7d1e_x38_x7d.
+ * Ground truth: src/config_map_x7d19_x36_x7d1e_x38_x7d.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8016D4D8(void)
+void config_map_x7d19_x36_x7d1e_x38_x7d(void)
 {
     /* config map: 0x7D19/0x36/0x7D1E/0x38/0x7D1B/0x39/0x3A/0x3B texts
        + windows, 8016D798/8016D768/8016D600 rows; loop L16D574 on
@@ -31,12 +31,12 @@ L16D574:
         io_poll(0xF);
         if (io_go() == 0)
             goto L16D5D8;
-        func_8016D798();
-        func_8016D768();
+        config_rows_x3c_x39_x60_x57_window();
+        fn_1x6d768();
     }
     return;
 L16D5D8:
-    func_8016D600();
-    func_8016D768();
+    config_map_x7d1d_text_x39_x3c_wind();
+    fn_1x6d768();
     goto L16D574;
 }

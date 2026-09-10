@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8013CBF0.
- * Ground truth: src/func_8013CBF0.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x3cbf0.
+ * Ground truth: src/fn_1x3cbf0.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8013CBF0(void)
+void fn_1x3cbf0(void)
 {
     io_poll(1);
     if (io_just() != 0)
@@ -67,7 +67,7 @@ LCCFC:
 LCDD4:
     for (;;) {
         gpu_driver_run();
-        func_8013CF08();
+        battle_rows_d64_d14_d040_rows_loop();
         func_8014D96C();
         txt_set(0xF117);
         if (io_press(cell_state(0xF118)) != 0)

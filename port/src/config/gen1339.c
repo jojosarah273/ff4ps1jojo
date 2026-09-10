@@ -1,10 +1,10 @@
-/* FF4 source-port — interpreted module for func_80121F14.
- * Ground truth: src/func_80121F14.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x21f14.
+ * Ground truth: src/fn_1x21f14.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 extern u16 *D_8019ED54;
-void func_80121F14(void)
+void fn_1x21f14(void)
 {
     do {
         cell_draw(0);

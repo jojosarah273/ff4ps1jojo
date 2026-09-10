@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8010FB58.
- * Ground truth: src/func_8010FB58.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_twin_of_f944_xef_xf1_x.
+ * Ground truth: src/battle_rows_twin_of_f944_xef_xf1_x.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8010FB58(void)
+void battle_rows_twin_of_f944_xef_xf1_x(void)
 {
     /* battle rows (twin of 8010F944): 0xEF/0xF1/0xF3/0xF5/0x89
        windows, 8010FCA8/80115D2C/80110474/8011EA5C; loop L10FBB8
@@ -16,7 +16,7 @@ void func_8010FB58(void)
     tail(0xF3);
     wnd_open_cur();
     tail(0xF5);
-    func_8010FCA8();
+    fn_1x0fca8();
     wnd_open(0x1C0);
     tail(0x89);
 L10fbb8:
@@ -44,7 +44,7 @@ L10fbb8:
         latch(0x23);
         wnd_fx_pads();
     L10FC60:
-        func_80110474();
+        fn_1x10474();
         page(0x89);
         cell_set50_from54();
         tail(0x89);

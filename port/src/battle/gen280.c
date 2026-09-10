@@ -1,14 +1,14 @@
-/* FF4 source-port — interpreted module for func_80110CFC.
- * Ground truth: src/func_80110CFC.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_spell_cast_row_x1fc1_x6c8_t.
+ * Ground truth: src/battle_spell_cast_row_x1fc1_x6c8_t.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80110CFC(void)
+void battle_spell_cast_row_x1fc1_x6c8_t(void)
 {
     /* battle spell-cast row: 0x1FC1/0x6C8 texts, 0x26/0xB9/0x7A/0x22/
        0x24 windows, 80110F2C/80110FA4 sub-renders, 80173780 cast body,
        80110BC8 target pick; loops L110D24/L110D5C/L110E8C. */
-    func_80110F2C();
+    fn_1x10f2c();
     latch(1);
     cell_pull_c8_lo(0x6C8);
     wnd_open_cur();
@@ -24,10 +24,10 @@ L110d24:
     open_row(0x26);
 L110d5c:
     for (;;) {
-        func_80110FA4();
+        fn_1x10fa4();
         latch(0x20);
         cell_put(0xB9);
-        func_80173780();
+        fn_1x73780();
         row_page(0x7A);
         cell_tick_half();
         if (cell_flags_nz50(0x101) != 0)
@@ -47,7 +47,7 @@ L110d5c:
     L110E34:
         if (io_go() != 0)
             goto L110E54;
-        func_80110BC8();
+        battle_rows_x7a_x21_windows_xebb_c();
         goto L110EBC;
     L110E54:
         row_read(0xF1);

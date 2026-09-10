@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801069E0.
- * Ground truth: src/func_801069E0.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_choose_x7f_xda_xbb_windows_x4.
+ * Ground truth: src/shop_choose_x7f_xda_xbb_windows_x4.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801069E0(void)
+void shop_choose_x7f_xda_xbb_windows_x4(void)
 {
     /* shop choose: 0x7F/0xDA/0xBB windows, 0x4209/0x420A texts;
        gate 6434(0x202) picks the 0xDA vs 0x4200 paths. */

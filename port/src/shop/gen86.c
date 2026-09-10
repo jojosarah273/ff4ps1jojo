@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80161A00.
- * Ground truth: src/func_80161A00.c (byte-verified).
+/* FF4 source-port — interpreted module for options_config_screen_xcd_window_t.
+ * Ground truth: src/options_config_screen_xcd_window_t.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80161A00(void)
+void options_config_screen_xcd_window_t(void)
 {
     /* options/config screen: 0xCD window + 3539 text gate (80152CDC),
        0xA6/0x2003 cursor row; branch L161AC8 runs the 26D0-26D3/
@@ -31,7 +31,7 @@ L161A40:
     if (sel(2) != 0)
         goto L161AC8;
 L161AB8:
-    func_80161C48();
+    fn_1x61c48();
     return;
 L161AC8:
     txt_cell(0x2005);

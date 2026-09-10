@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8018FCC4.
- * Ground truth: src/func_8018FCC4.c (byte-verified).
+/* FF4 source-port — interpreted module for event_v0_v0_s3_gates_f078_spin_loo.
+ * Ground truth: src/event_v0_v0_s3_gates_f078_spin_loo.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8018FCC4(void)
+void event_v0_v0_s3_gates_f078_spin_loo(void)
 {
     /* event: v0 + v0/s3 gates; 8018F078 spin loop L18FCF8. */
     do {

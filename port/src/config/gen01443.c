@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8015A9BC.
- * Ground truth: src/func_8015A9BC.c (byte-verified).
+/* FF4 source-port — interpreted module for options_c3c_b04_x2000_gates_c_abec.
+ * Ground truth: src/options_c3c_b04_x2000_gates_c_abec.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8015A9BC(void)
+void options_c3c_b04_x2000_gates_c_abec(void)
 {
     /* options: 3C3C/3B04(0x2000) gates; 8015240C/8015ABEC/
        8015A56C rows. */

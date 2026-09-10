@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80121678.
- * Ground truth: src/func_80121678.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_row_a78_xa2_gate_routes_the.
+ * Ground truth: src/battle_row_a78_xa2_gate_routes_the.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80121678(void)
+void battle_row_a78_xa2_gate_routes_the(void)
 {
     /* battle row: 6A78(0xA2)/6434 gate routes the 6AF4(0xA1) stat
        cells (0x1D/0x89/0x8B windows); 53C0 check. */

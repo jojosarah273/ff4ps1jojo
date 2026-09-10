@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80105098.
- * Ground truth: src/func_80105098.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_sell_rows_xab_xd2_windows_x6a.
+ * Ground truth: src/shop_sell_rows_xab_xd2_windows_x6a.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80105098(void)
+void shop_sell_rows_xab_xd2_windows_x6a(void)
 {
     /* shop sell rows: 0xAB/0xD2 windows, 0x6A1/0x6A1 texts + 0x1706/
        0x1707 texts with 0xC/0xE/0xAE windows, 8010D4EC row;
@@ -33,6 +33,6 @@ L105100:
     cell_put(0xE);
     latch(0xFF);
     cell_put(0xAE);
-    func_8010D4EC();
+    fn_1x0d4ec();
     return;
 }

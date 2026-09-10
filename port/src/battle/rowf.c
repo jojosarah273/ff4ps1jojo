@@ -35,14 +35,14 @@ Laa1c:
     sep_a();
     row_open_w0();
     cell_put(0xE);
-    func_8010D458();
+    fn_1x0d458();
     io_poll_cur();
     if (io_just() != 0)
         goto Laafc;
     io_poll(0xFF);
     if (io_just() != 0)
         goto Laafc;
-    func_8010AF2C();
+    battle_rows_x903_text_loop_l10af5c();
     goto Lae68;
 Laafc:
     row_page(8);
@@ -54,14 +54,14 @@ Laafc:
     sep_a();
     row_open_w0();
     cell_put(0xE);
-    func_8010D458();
+    fn_1x0d458();
     io_poll_cur();
     if (io_just() != 0)
         goto Lac20;
     io_poll(0xFF);
     if (io_just() != 0)
         goto Lac20;
-    func_8010AF2C();
+    battle_rows_x903_text_loop_l10af5c();
     io_poll(0xFF);
     if (io_just() != 0)
         goto Lac20;
@@ -78,14 +78,14 @@ Lac20:
     sep_a();
     row_open_w0();
     cell_put(0xE);
-    func_8010D458();
+    fn_1x0d458();
     io_poll_cur();
     if (io_just() != 0)
         goto Lad44;
     io_poll(0xFF);
     if (io_just() != 0)
         goto Lad44;
-    func_8010AF2C();
+    battle_rows_x903_text_loop_l10af5c();
     io_poll(0xFF);
     if (io_just() != 0)
         goto Lad44;
@@ -102,14 +102,14 @@ Lad44:
     sep_a();
     row_open_w0();
     cell_put(0xE);
-    func_8010D458();
+    fn_1x0d458();
     io_poll_cur();
     if (io_just() != 0)
         return;
     io_poll(0xFF);
     if (io_just() != 0)
         return;
-    func_8010AF2C();
+    battle_rows_x903_text_loop_l10af5c();
     io_poll(0xFF);
     if (io_just() != 0)
         return;
@@ -134,7 +134,7 @@ Laec0:
     row_close();
     txt_cell(0x907);
     row_open();
-    if (func_8011B158() != 0)
+    if (battle_item_selection_flow_label_w() != 0)
         return;
     row_close();
     row_close2();

@@ -31,8 +31,8 @@ uint32_t anim_pack_word(a0, a1, a2, a3)
 void anim_cmd_tail(void)
 {
     extern uint32_t D_801B57A0;
-    extern void func_8017F644();
-    func_8017F644(D_801B57A0);
+
+    battle_anim_x_b8_rows_v0_gate_x(D_801B57A0);
 }
 
 /* 8017FA2C: anim rows A (two cb-slot2 dispatches + close). */

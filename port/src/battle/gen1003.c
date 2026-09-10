@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80146A44.
- * Ground truth: src/func_80146A44.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_magic_cast_flow_v0_cascades.
+ * Ground truth: src/battle_magic_cast_flow_v0_cascades.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80146A44(void)
+void battle_magic_cast_flow_v0_cascades(void)
 {
     /* battle magic-cast flow. v0 cascades select the spell-target category;
        a0=1/2/8/3 delay-consts are the target-type ids for each route. */
@@ -13,26 +13,26 @@ void func_80146A44(void)
     cell_state_of();
     if (cell_peek_cur() == 0)
         goto L46B28;
-    func_80146954();
+    fn_1x46954();
     goto L46B58;
 L46B28:
-    func_80146954();
+    fn_1x46954();
 L46B58:
     /* v1/v0 gates -> L46BF8 / L46FD4 */
-    func_80146980();
+    battle_c3c_b04_gates_pick_vs_rows();
     if (io_go() == 0)
         goto L46FD4;
     goto L46FD4;
 L46C34:
-    if (func_80145EA4() != 0)
+    if (battle_rows_c3c_b04_b9c_x1000_gate() != 0)
         goto L46C70;
 L46C70:
     /* v0 gates -> L46CC4 / L46F30 */
 L46CC4:
     /* v0 gate -> L46CF0 / L46F30 */
-    func_80146028();
+    fn_1x46028();
 L46D1C:
-    func_8013F49C();
+    battle_rows_x47_x1c_x1e_x22_x20_wi();
     goto L46ED4;
 L46D60:
     /* target-category cascade:
@@ -41,7 +41,7 @@ L46DEC:
     /* v0 gates -> L46E14 / L46ED4 */
 L46E14:
     /* v0 gate -> L46E38 / L46ED4 */
-    func_80147020();
+    battle_c3c_b9c_gates_ac_rows_tails();
     goto L46ED4;
 L46EB0:
     /* v0 gate -> L46ED4 */
@@ -49,14 +49,14 @@ L46ECC:
 L46ED4:
     if (io_go() == 0)
         goto L46F10;
-    func_801462DC();
+    battle_item_cast_x47_window_gates();
     goto L46F30;
 L46F10:
-    func_8014654C();
+    battle_c3c_b04_b9c_gate_tree_with();
 L46F30:
-    func_801470F8();
-    func_801460A4();
-    func_80146980();
+    battle_c3c_b04_gates_row();
+    battle_c3c_b04_b9c_gates_s0_v0_v1();
+    battle_c3c_b04_gates_pick_vs_rows();
     if (io_go() == 0)
         goto L46F90;
 L46F90:

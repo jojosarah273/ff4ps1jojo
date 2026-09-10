@@ -1,15 +1,15 @@
-/* FF4 source-port — interpreted module for func_8012E160.
- * Ground truth: src/func_8012E160.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x2e160.
+ * Ground truth: src/fn_1x2e160.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8012E160(void)
+void fn_1x2e160(void)
 {
     latch(1);
     cell_tick_xor(cell_state(5800));
     txt_draw(5800);
     key_page(132);
-    func_80122A9C();
+    config_rows_c_e2c_ef30_f1c_fb74_ro();
     func_80122538();
     config_row_26528();
     battle_state_dc400();

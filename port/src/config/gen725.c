@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80130BC8.
- * Ground truth: src/func_80130BC8.c (byte-verified).
+/* FF4 source-port — interpreted module for ability_rows_x45_x1b93_cells_windo.
+ * Ground truth: src/ability_rows_x45_x1b93_cells_windo.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80130BC8(void)
+void ability_rows_x45_x1b93_cells_windo(void)
 {
     /* ability rows: 0x45/0x1B93 cells/windows; linear render. */
     stat_sync();

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80150B88.
- * Ground truth: src/func_80150B88.c (byte-verified).
+/* FF4 source-port — interpreted module for options_rows_x353e_x353f_texts_c38.
+ * Ground truth: src/options_rows_x353e_x353f_texts_c38.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80150B88(void)
+void options_rows_x353e_x353f_texts_c38(void)
 {
     /* options rows: 0x353E/0x353F texts, 80150C38 row; gates
        5F20(0x202)/5574(2)/6434(0x202). */

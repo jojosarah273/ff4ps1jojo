@@ -1,19 +1,19 @@
-/* FF4 source-port — interpreted module for func_80119DE4.
- * Ground truth: src/func_80119DE4.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_buy_x1700_gate_picks_d4_then.
+ * Ground truth: src/shop_buy_x1700_gate_picks_d4_then.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80119DE4(void)
+void shop_buy_x1700_gate_picks_d4_then(void)
 {
     /* shop buy: 0x1700 gate picks 80103790/801038D4; then 79/7A/7B
        windows + 0x81/0x4200 titles via 8011EA5C. */
     txt_set(0x1700);
     if (gate(2) == 0)
         goto L119E14;
-    func_80103790();
+    shop_rows_alt_of_d4_x1706_x1708_x5();
     goto L119E1C;
 L119E14:
-    func_801038D4();
+    shop_buy_rows_x1706_x170c_texts_x5();
 L119E1C:
     open_row(0x79);
     open_row(0x7A);

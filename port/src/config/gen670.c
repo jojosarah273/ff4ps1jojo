@@ -1,14 +1,14 @@
-/* FF4 source-port — interpreted module for func_801398F4.
- * Ground truth: src/func_801398F4.c (byte-verified).
+/* FF4 source-port — interpreted module for ability_detail_x1340_x1440_texts_x.
+ * Ground truth: src/ability_detail_x1340_x1440_texts_x.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801398F4(void)
+void ability_detail_x1340_x1440_texts_x(void)
 {
     /* ability detail: 0x1340/0x1440 texts, 0x45/0x41 windows,
        80139694 prep, 80120E2C/8011FBA4/80126528/801399EC/
        801264C0 rows; loops L139934 (5DA0(0x45)/5B8C(0x202)). */
-    func_80139694();
+    fn_1x39694();
     txt_cell(0x1340);
     if (gate(2) != 0)
         goto L1399DC;

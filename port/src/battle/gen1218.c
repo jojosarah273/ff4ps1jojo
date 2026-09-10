@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8014EAE4.
- * Ground truth: src/func_8014EAE4.c (byte-verified).
+/* FF4 source-port — interpreted module for jr_a0_the_entry_battle_item_cast_t.
+ * Ground truth: src/jr_a0_the_entry_battle_item_cast_t.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8014EAE4(void)
+void jr_a0_the_entry_battle_item_cast_t(void)
 {
     txt_set_cur();
     if (gate(2) == 0) {

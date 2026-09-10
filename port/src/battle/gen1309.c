@@ -1,13 +1,13 @@
-/* FF4 source-port — interpreted module for func_8014B5A8.
- * Ground truth: src/func_8014B5A8.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x4b5a8.
+ * Ground truth: src/fn_1x4b5a8.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8014B5A8(void)
+void fn_1x4b5a8(void)
 {
     for (;;) {
         func_8007259C();
-        func_80149394();
+        battle_spell_detail_f38_b04_row_pa();
         if (io_go() != 0)
             break;
         page_open(0xF118);

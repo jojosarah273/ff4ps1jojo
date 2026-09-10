@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80143738.
- * Ground truth: src/func_80143738.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_magic_status_x300_x303_cell.
+ * Ground truth: src/battle_magic_status_x300_x303_cell.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80143738(void)
+void battle_magic_status_x300_x303_cell(void)
 {
     /* battle magic-status: 0x300/0x303 cells, 0x6CC0/0x1813 texts, and
        the 6434(0x202) row gates; loop L143768 polls 5958(0x48). */

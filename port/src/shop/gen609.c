@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8016097C.
- * Ground truth: src/func_8016097C.c (byte-verified).
+/* FF4 source-port — interpreted module for options_banner_x3e_x3f_ladders_rou.
+ * Ground truth: src/options_banner_x3e_x3f_ladders_rou.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8016097C(void)
+void options_banner_x3e_x3f_ladders_rou(void)
 {
     /* options banner: 5574(0x3E/0x3F) ladders route the 0x5D/0x2/
        0xF8/0x26D4/0x26D2/0x3584 codes; 80152224 row. */

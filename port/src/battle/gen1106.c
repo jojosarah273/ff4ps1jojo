@@ -1,5 +1,5 @@
-/* FF4 source-port — interpreted module for func_8014B648.
- * Ground truth: src/func_8014B648.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x4b648.
+ * Ground truth: src/fn_1x4b648.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
@@ -8,7 +8,7 @@ extern int func_800953F4();
 
 extern int func_801442B4();
 
-void func_8014B648(void)
+void fn_1x4b648(void)
 
 {
   latch(5);

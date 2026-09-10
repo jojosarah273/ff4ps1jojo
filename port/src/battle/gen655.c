@@ -1,13 +1,13 @@
-/* FF4 source-port — interpreted module for func_8010E878.
- * Ground truth: src/func_8010E878.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_x300_x303_x200_cells_x.
+ * Ground truth: src/battle_rows_x300_x303_x200_cells_x.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8010E878(void)
+void battle_rows_x300_x303_x200_cells_x(void)
 {
     /* battle rows: 0x300-0x303/0x200 cells, 0xFF window, 8010D9D4
        rows; loop L10E898 on 5A90(0x200). */
-    func_80103F40();
+    fn_1x03f40();
     draw_pad(0x10);
     wnd_open_cur();
 L10e898:

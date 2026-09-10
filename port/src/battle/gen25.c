@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8011B874.
- * Ground truth: src/func_8011B874.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x1b874.
+ * Ground truth: src/fn_1x1b874.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8011B874(void)
+void fn_1x1b874(void)
 {
     latch_cur();
     txt_draw(0x2105);
@@ -31,7 +31,7 @@ L8b0:
         if (io_just() != 0)
             break;
     }
-    func_8011BCD8();
+    fn_1x1bcd8();
     row_page(0x40);
     io_poll(0x80);
     if (io_just() == 0)
@@ -84,7 +84,7 @@ Lac8:
         if (io_just() != 0)
             break;
     }
-    func_8011BCD8();
+    fn_1x1bcd8();
     row_page(0x40);
     io_poll(0x80);
     if (io_just() == 0)

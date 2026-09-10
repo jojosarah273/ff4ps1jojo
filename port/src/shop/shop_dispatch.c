@@ -35,9 +35,8 @@ extern void func_800FB2E8(void);
 extern void func_800FE028(void);
 extern void func_800FE978(void);
 extern void func_800FFADC(void);
-extern void func_8011C1F8(void);
-extern void func_8011D218(void);
-extern void func_801743E0(void);
+
+
 
 /* 800FD85C: shop rows — 0x82/0x79/0x80 windows, 0x2100 text; the
  * loop polls the pad-82 gate and the 0x202 confirm. */
@@ -109,7 +108,7 @@ void shop_view2_run(void)
     func_800FE978();
     latch(0x14);
     draw_pad(0x8000);
-    func_8011C1F8();
+    fn_1x1c1f8();
     wnd_open(0);
     do {
         cell_push_c8(0x148A80);
@@ -118,6 +117,6 @@ void shop_view2_run(void)
         poll_t(0x100);
     } while (io_just() == 0);
     func_800FFADC();
-    func_8011D218();
-    func_801743E0();
+    fn_1x1d218();
+    fn_1x743e0();
 }

@@ -1,20 +1,20 @@
-/* FF4 source-port — interpreted module for func_801582D8.
- * Ground truth: src/func_801582D8.c (byte-verified).
+/* FF4 source-port — interpreted module for ability_plot_x3975_text_xa7_xa6_wi.
+ * Ground truth: src/ability_plot_x3975_text_xa7_xa6_wi.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801582D8(void)
+void ability_plot_x3975_text_xa7_xa6_wi(void)
 {
     /* ability plot: 0x3975 text, 0xA7/0xA6 windows, 80151CD8/
        801571DC/80155778/801583FC rows; loop L158374 on 5A90(0x40). */
     txt_set(0x3975);
     cell_cursor_dec();
-    func_80151CD8();
+    fn_1x51cd8();
     row_close2();
     txt_draw(0x3975);
-    func_801571DC();
-    func_80155778();
-    func_801583FC();
+    fn_1x571dc();
+    fn_1x55778();
+    fn_1x583fc();
     cell_word_half(cell_state(0xA7));
     cell_flags_repack();
     cell_word_half_s(cell_state(0xA6));

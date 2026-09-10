@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801287B8.
- * Ground truth: src/func_801287B8.c (byte-verified).
+/* FF4 source-port — interpreted module for config_save_screen_x4b_x48_x49_win.
+ * Ground truth: src/config_save_screen_x4b_x48_x49_win.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801287B8(void)
+void config_save_screen_x4b_x48_x49_win(void)
 {
     /* config/save screen: 0x4B/0x48/0x49 windows, 80120070 config
        dispatcher, 8012833C save-check; L128954 gate loop (6BE0/4264/
@@ -15,7 +15,7 @@ void func_801287B8(void)
     open_row(0x49);
     wnd_open_cur();
     row_page(0x4B);
-    func_80120070();
+    open_depth_guard_in_the_menu_regio();
     row_page(0x4B);
     if (gate(0x202) != 0)
         goto L12882C;
@@ -44,7 +44,7 @@ L12882C:
     cell_cursor_dec();
     row_pad();
     row_page(0x4B);
-    func_8012833C();
+    shop_rows_x51_x46_x45_windows_d8_r();
     if (io_go() == 0)
         goto L128A98;
     row_prep(0x20);
@@ -68,10 +68,10 @@ L128954:
 L1289D4:
     cell_sink8_9(7);
     draw_pad(0x14A);
-    func_80128AD4();
+    fn_1x28ad4();
     cell_sink8_9(9);
     draw_pad(0x154);
-    func_80128AD4();
+    fn_1x28ad4();
     row_close();
     row_read2(0x29);
     sep_a();
@@ -82,7 +82,7 @@ L1289D4:
     row_prep_close();
     txt_cell(0x6A4);
     row_close();
-    func_80127538();
+    status_rows_x73_x74_windows_xa_xc();
     row_pad();
     cell_fmt2(0x29);
     latch(0xC7);

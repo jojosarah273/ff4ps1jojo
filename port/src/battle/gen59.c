@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801005DC.
- * Ground truth: src/func_801005DC.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_help_dialog_x8fb_header_x18.
+ * Ground truth: src/battle_help_dialog_x8fb_header_x18.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801005DC(void)
+void battle_help_dialog_x8fb_header_x18(void)
 {
     /* battle help-dialog: 0x8FB header, 0x1804-0x180B ruler rows,
        0x1440/0x1441 progress counters, sub-screen calls 800FAD48 /
@@ -73,11 +73,11 @@ L100774:
     latch(1);
     cell_put(0xC5);
     func_800FAD48();
-    func_8010CA74();
+    battle_rows_xae_x9d1_x9cf_texts_d6();
     cell_flags_clr4();
     latch(0x81);
     txt_draw(0x4200);
-    func_80170C14();
+    fn_1x70c14();
     state_ok();
     latch_cur();
     shop_rows_run();

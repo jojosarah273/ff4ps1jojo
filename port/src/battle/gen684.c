@@ -1,18 +1,10 @@
-/* FF4 source-port — interpreted module for func_8010D61C.
- * Ground truth: src/func_8010D61C.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x0d61c.
+ * Ground truth: src/fn_1x0d61c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-
-
-
-
-
-
-extern int func_8010D6A0();
-
-void func_8010D61C(void)
+void fn_1x0d61c(void)
 
 {
   int iVar1;
@@ -31,7 +23,7 @@ LAB_8010d66c:
   page(0x3d);
   cell_push_c8(0x12f000);
   cell_put(6);
-  func_8010D6A0();
+  battle_item_confirm_key_ladders_x1();
   return;
 }
 

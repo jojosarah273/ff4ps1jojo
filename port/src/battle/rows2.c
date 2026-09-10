@@ -1,7 +1,7 @@
 /* FF4 source-port — battle/rows2.c
  *
  * Battle row loops with the D44/D54 cell copy (exact Phase A decodes).
- * Ground truth: src/func_80140D94, 80142DC0, 80135BE4.
+ * Ground truth: src/battle_rows_d54_d44_loop_on_b68_xf, 80142DC0, 80135BE4.
  */
 #include <stdint.h>
 

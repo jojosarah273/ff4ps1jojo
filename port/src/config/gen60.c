@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8013BD04.
- * Ground truth: src/func_8013BD04.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_summon_party_cast_screen_x4.
+ * Ground truth: src/battle_summon_party_cast_screen_x4.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8013BD04(void)
+void battle_summon_party_cast_screen_x4(void)
 {
     /* battle summon/party-cast screen: 0x41 window + 0x48/0x45 rows;
        outer/ inner loops (L3BD24/L3BD54) with 6D70/54D4 confirm gates;
@@ -62,7 +62,7 @@ L3be64:
             goto L3BEE4;
         latch_cur();
         row_sync();
-        func_80134948();
+        ability_rows_x41_window_d4_b04_gat();
         row_done();
         io_poll_cur();
         if (io_just() == 0)
@@ -94,18 +94,18 @@ L3bf38:
             continue;
         break;
     }
-    func_8013C4B4();
+    fn_1x3c4b4();
     io_poll_cur();
     if (io_just() == 0)
         goto L3BFE4;
     key_page(0x60);
-    func_8013C44C();
+    fn_1x3c44c();
     midrow_pad88_run();
     midrow_paint_a();
     config_row_f320();
-    func_8011FF40();
+    fn_1x1ff40();
     return;
 L3BFE4:
-    func_8013BFFC();
+    ability_rows_x1a83_text_loop_l13c0();
     return;
 }

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801762D0.
- * Ground truth: src/func_801762D0.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_timer_screen_staged_poll_lo.
+ * Ground truth: src/battle_timer_screen_staged_poll_lo.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801762D0(void)
+void battle_timer_screen_staged_poll_lo(void)
 {
     /* battle timer screen: staged poll loops reading 0x1900/0x1A00 (and
        0x2000/0x1FFF/0x1A05/0x1E00/0x2000 gate texts) with 90EC/6364/

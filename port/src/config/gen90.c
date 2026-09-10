@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8013463C.
- * Ground truth: src/func_8013463C.c (byte-verified).
+/* FF4 source-port — interpreted module for config_weapon_switch_screen_b37_b3.
+ * Ground truth: src/config_weapon_switch_screen_b37_b3.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8013463C(void)
+void config_weapon_switch_screen_b37_b3(void)
 {
     /* config/weapon-switch screen: 1B37-1B3A texts; 801224D0/801345B4
        renders; 4C44/4300/6C61/5354/5F54 option texts; exit 5480. */

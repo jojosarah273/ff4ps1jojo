@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80107FC4.
- * Ground truth: src/func_80107FC4.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_rows_x1702_x3e_x3d_xb2_window.
+ * Ground truth: src/shop_rows_x1702_x3e_x3d_xb2_window.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80107FC4(void)
+void shop_rows_x1702_x3e_x3d_xb2_window(void)
 {
     /* shop rows: 0x1702/0x3E/0x3D/0xB2 windows, 0x1762 row texts,
        8017F9A8/800FED3C/800FAA04 sub-rows; loops L108098 on

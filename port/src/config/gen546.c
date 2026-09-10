@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80131A2C.
- * Ground truth: src/func_80131A2C.c (byte-verified).
+/* FF4 source-port — interpreted module for ability_pick_x1bc6_x1b8b_texts_x43.
+ * Ground truth: src/ability_pick_x1bc6_x1b8b_texts_x43.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80131A2C(void)
+void ability_pick_x1bc6_x1b8b_texts_x43(void)
 {
     /* ability pick: 0x1BC6/0x1B8B texts, 0x43/0x45 windows,
        801224D0/80124EAC/80132178 rows; 6434(2)/4120(0x202) gates. */

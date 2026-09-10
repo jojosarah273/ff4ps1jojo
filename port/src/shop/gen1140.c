@@ -1,20 +1,20 @@
-/* FF4 source-port — interpreted module for func_80168148.
- * Ground truth: src/func_80168148.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x68148.
+ * Ground truth: src/fn_1x68148.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80168148(void)
+void fn_1x68148(void)
 {
     txt_set(0x38E6);
     if (gate(0x202) == 0)
-        func_801681C0();
+        shop_c3c_b04_x2000_b9c_gates_c_loo();
     else {
         io_poll(1);
         if (io_just() != 0)
-            func_801681C0();
+            shop_c3c_b04_x2000_b9c_gates_c_loo();
         else {
             io_poll(2);
-            func_801681C0();
+            shop_c3c_b04_x2000_b9c_gates_c_loo();
         }
     }
 }

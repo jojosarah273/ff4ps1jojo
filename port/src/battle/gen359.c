@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80147888.
- * Ground truth: src/func_80147888.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_item_detail_twin_of_dc_x47.
+ * Ground truth: src/battle_item_detail_twin_of_dc_x47.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80147888(void)
+void battle_item_detail_twin_of_dc_x47(void)
 {
     /* battle item detail (twin of 801462DC): 0x47 window; 6434(0x202)
        gate routes the 4248(0x30/0x20) row picks; 801470F8 +
@@ -54,7 +54,7 @@ L147A58:
     cell_draw_cur();
     return;
 L147A80:
-    func_801470F8();
+    battle_c3c_b04_gates_row();
     row_done();
     row_close();
     return;

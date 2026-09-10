@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80119D48.
- * Ground truth: src/func_80119D48.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_x2106_text_loop_l119d5.
+ * Ground truth: src/battle_rows_x2106_text_loop_l119d5.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80119D48(void)
+void battle_rows_x2106_text_loop_l119d5(void)
 {
     /* battle rows: 0x2106 text; loop L119D58 on 5574(0x40). */
     open_row(0x79);

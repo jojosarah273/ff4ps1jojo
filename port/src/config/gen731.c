@@ -4,12 +4,6 @@
  */
 #include "ff4_window.h"
 
-
-
-
-
-extern int func_80120BDC();
-
 void battle_row_45b(void)
 
 {
@@ -23,7 +17,7 @@ void battle_row_45b(void)
   cell_put(0x21);
   wnd_open(0x80);
   tail(0x22);
-  func_80120BDC();
+  battle_rows_f320_ee34_b764_b7b8_ro();
   return;
 }
 

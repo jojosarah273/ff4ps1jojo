@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8011285C.
- * Ground truth: src/func_8011285C.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_item_status_detail_xec_wind.
+ * Ground truth: src/battle_item_status_detail_xec_wind.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8011285C(void)
+void battle_item_status_detail_xec_wind(void)
 {
     /* battle item/status detail: 0xEC window + 0x1800-0x1802 title,
        0xFD6/0xAD-series texts, 800FC1CC/800FD6E8/80176060/800FB09C/
@@ -30,7 +30,7 @@ void func_8011285C(void)
     latch(3);
     shop_rows_run();
     wnd_open(0x40);
-    func_80116398();
+    fn_1x16398();
     latch(1);
     cell_put(0xE3);
     latch(0x20);

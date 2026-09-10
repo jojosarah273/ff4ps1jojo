@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801745F4.
- * Ground truth: src/func_801745F4.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_title_xfe0_x19_x18_windows_xc.
+ * Ground truth: src/shop_title_xfe0_x19_x18_windows_xc.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801745F4(void)
+void shop_title_xfe0_x19_x18_windows_xc(void)
 {
     /* shop title: 0xFE0/0x19/0x18 windows, 0xCDB/0xCEB texts,
        73E0(0x202) gates; loops L17464C and L174650. */

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80160AAC.
- * Ground truth: src/func_80160AAC.c (byte-verified).
+/* FF4 source-port — interpreted module for options_banner_x2726_x2725_x28a2_x.
+ * Ground truth: src/options_banner_x2726_x2725_x28a2_x.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80160AAC(void)
+void options_banner_x2726_x2725_x28a2_x(void)
 {
     /* options banner: 0x2726/0x2725/0x28A2/0x38FE texts; 4120 gates
        pick the 0xFE values. */

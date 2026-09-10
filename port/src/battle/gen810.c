@@ -1,5 +1,5 @@
-/* FF4 source-port — interpreted module for func_80106908.
- * Ground truth: src/func_80106908.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x06908.
+ * Ground truth: src/fn_1x06908.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
@@ -9,7 +9,7 @@
 
 
 
-void func_80106908(void) {
+void fn_1x06908(void) {
     latch(0x8);
     cell_put(0x7);
     do {

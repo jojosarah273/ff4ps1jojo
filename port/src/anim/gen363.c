@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801709E4.
- * Ground truth: src/func_801709E4.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_confirm_rows_x3e_x3d_windows.
+ * Ground truth: src/shop_confirm_rows_x3e_x3d_windows.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801709E4(void)
+void shop_confirm_rows_x3e_x3d_windows(void)
 {
     /* shop confirm rows: 0x3E/0x3D windows, 0x1700/0xBD cells and
        0x8 window; loops L170A4C (5A90(0x100)) and L170ACC (3F38

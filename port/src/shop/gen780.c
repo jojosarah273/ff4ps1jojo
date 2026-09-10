@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8016C78C.
- * Ground truth: src/func_8016C78C.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_rows_x2000_x2a_x28_cells_x4f.
+ * Ground truth: src/shop_rows_x2000_x2a_x28_cells_x4f.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8016C78C(void)
+void shop_rows_x2000_x2a_x28_cells_x4f(void)
 {
     /* shop rows: 0x2000/0x2A/0x28 cells, 0x4F window; 4264(0x1FF)
        + 3F38(3C3C(0x28)) reads. */

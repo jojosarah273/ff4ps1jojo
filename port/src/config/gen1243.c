@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801321E8.
- * Ground truth: src/func_801321E8.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x321e8.
+ * Ground truth: src/fn_1x321e8.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801321E8(void)
+void fn_1x321e8(void)
 {
     txt_set(0x1A04);
     row_read(0x10);
@@ -12,6 +12,6 @@ void func_801321E8(void)
         func_80132310();
     } else {
         func_80131294();
-        func_8012219C();
+        fn_1x2219c();
     }
 }

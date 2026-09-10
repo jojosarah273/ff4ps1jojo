@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80171608.
- * Ground truth: src/func_80171608.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x71608.
+ * Ground truth: src/fn_1x71608.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80171608(void)
+void fn_1x71608(void)
 {
     row_open2();
     latch(0x15);
@@ -30,7 +30,7 @@ void func_80171608(void)
     cell_put(0xC);
     txt_set(0x1711);
     cell_put(0xE);
-    func_80173ED8();
+    shop_stat_block_called_by_the_e8_f();
     row_page(0xD7);
     if (gate(0x202) == 0)
         goto L9b0;

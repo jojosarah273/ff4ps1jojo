@@ -1,10 +1,10 @@
-/* FF4 source-port — interpreted module for func_8014C8CC.
- * Ground truth: src/func_8014C8CC.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x4c8cc.
+ * Ground truth: src/fn_1x4c8cc.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 extern u16 *D_8019ED54;
-void func_8014C8CC(void)
+void fn_1x4c8cc(void)
 {
     wnd_open(0);
     do {

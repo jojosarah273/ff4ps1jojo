@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80103310.
- * Ground truth: src/func_80103310.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_rows_x7a_xb7_windows_e78_c_ro.
+ * Ground truth: src/shop_rows_x7a_xb7_windows_e78_c_ro.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80103310(void)
+void shop_rows_x7a_xb7_windows_e78_c_ro(void)
 {
     /* shop rows: 0x7A/0xB7 windows, 80102E78/8017559C rows; loops
        L103328 and L103370 (4008(0x10) reads). */
@@ -11,7 +11,7 @@ void func_80103310(void)
     open_row(0xB7);
 L103328:
     for (;;) {
-        func_80102E78();
+        fn_1x02e78();
         row_page(0x79);
         io_poll(0x20);
         if (io_go() != 0)

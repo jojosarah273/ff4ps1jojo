@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80126990.
- * Ground truth: src/func_80126990.c (byte-verified).
+/* FF4 source-port — interpreted module for equip_window_cells_xd2_xbe_gates_w.
+ * Ground truth: src/equip_window_cells_xd2_xbe_gates_w.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80126990(void)
+void equip_window_cells_xd2_xbe_gates_w(void)
 {
     /* equip window cells: 0xD2/0xBE gates with the 0x59/0xB9/0xBA rows
        (3F38(3C3C) / 7F48(3C3C) value cells), 0xC0/0xBF/0xBB/0xBC bottom
@@ -59,7 +59,7 @@ L126B30:
     stat_sync();
     row_page(0xBA);
     row_page(0xD3);
-    func_80124704();
+    fn_1x24704();
     poll_pair(0xD2);
     return;
 }

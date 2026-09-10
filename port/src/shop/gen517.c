@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80162BD0.
- * Ground truth: src/func_80162BD0.c (byte-verified).
+/* FF4 source-port — interpreted module for options_row_ffec_prep_xcd_x2005_x3.
+ * Ground truth: src/options_row_ffec_prep_xcd_x2005_x3.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80162BD0(void)
+void options_row_ffec_prep_xcd_x2005_x3(void)
 {
     /* options row: 8005FFEC prep, 0xCD/0x2005/0x357F windows/texts,
        80152CDC row; 6434 gate closes with 0x33A2-0x33A5 codes. */

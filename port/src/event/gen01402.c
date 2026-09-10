@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80192614.
- * Ground truth: src/func_80192614.c (byte-verified).
+/* FF4 source-port — interpreted module for event_e8_x2_f0_rows_gate_tail_retu.
+ * Ground truth: src/event_e8_x2_f0_rows_gate_tail_retu.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80192614(void)
+void event_e8_x2_f0_rows_gate_tail_retu(void)
 {
     /* event: 801928E8 x2 + 801920F0(1) rows; 80191818 gate tail;
        returns at L1926F8. */

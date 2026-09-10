@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80105828.
- * Ground truth: src/func_80105828.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_purchase_verify_screen_reads.
+ * Ground truth: src/shop_purchase_verify_screen_reads.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80105828(void)
+void shop_purchase_verify_screen_reads(void)
 {
     /* shop purchase-verify screen: reads 1704; confirm/cancel gates route
        through the buy amounts (1719-1726 detail rows); L15A78 closes the

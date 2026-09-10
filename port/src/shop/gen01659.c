@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8016D028.
- * Ground truth: src/func_8016D028.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_c3c_gates_returns_at_l16d0f4.
+ * Ground truth: src/shop_c3c_gates_returns_at_l16d0f4.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8016D028(void)
+void shop_c3c_gates_returns_at_l16d0f4(void)
 {
     /* shop: 3C3C gates; returns at L16D0F4. */
     cell_state_of();

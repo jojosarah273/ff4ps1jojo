@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8016B68C.
- * Ground truth: src/func_8016B68C.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_prep_x118_x_xf0_bytes_at_bu.
+ * Ground truth: src/battle_prep_x118_x_xf0_bytes_at_bu.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8016B68C(void)
+void battle_prep_x118_x_xf0_bytes_at_bu(void)
 {
     /* battle prep: 0x118 x 0xF0 bytes at buffer(0x300). */
     u8 *buf = (u8 *)cell_state(0x300);

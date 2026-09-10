@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8014FEC8.
- * Ground truth: src/func_8014FEC8.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x4fec8.
+ * Ground truth: src/fn_1x4fec8.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8014FEC8(void)
+void fn_1x4fec8(void)
 {
     draw_pad(0x80);
     cell_pull60(0xF469);
@@ -54,7 +54,7 @@ L004c:
         draw_pad_cur();
         for (;;) {
             func_800F6EDC();
-            func_80150364();
+            rows_c3c_v0_spin_loop_l1503c0();
             cell_pull89_bank(8);
             cell_inc_cell();
             cell_inc_cell(0x10);
@@ -64,7 +64,7 @@ L004c:
         }
         for (;;) {
             func_800F6EDC();
-            func_80150364();
+            rows_c3c_v0_spin_loop_l1503c0();
             cell_pos_mask(0xFF);
             cell_pull89_bank(8);
             cell_inc_cell(0x20);
@@ -77,7 +77,7 @@ L004c:
         draw_pad(0xE);
         for (;;) {
             func_800F6EDC();
-            func_80150364();
+            rows_c3c_v0_spin_loop_l1503c0();
             cell_pull89_bank(8);
             cell_inc_cell();
             cell_inc_cell(0xFFFE);
@@ -88,7 +88,7 @@ L004c:
         draw_pad(0x1E);
         for (;;) {
             func_800F6EDC();
-            func_80150364();
+            rows_c3c_v0_spin_loop_l1503c0();
             cell_pos_mask(0xFF);
             cell_pull89_bank(8);
             cell_inc_cell(0xE);
@@ -124,6 +124,6 @@ L004c:
     latch(0x7E);
     wnd_open(0xDBE6);
     func_800723F0();
-    func_80150400();
+    fn_1x50400();
     return;
 }

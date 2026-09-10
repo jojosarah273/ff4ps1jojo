@@ -1,14 +1,14 @@
-/* FF4 source-port — interpreted module for func_801118CC.
- * Ground truth: src/func_801118CC.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_x81_x89_x79_windows_x1.
+ * Ground truth: src/battle_rows_x81_x89_x79_windows_x1.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801118CC(void)
+void battle_rows_x81_x89_x79_windows_x1(void)
 {
     /* battle rows: 0x81/0x89/0x79 windows, 0x1705/0x340-0x343 texts,
        0x300-0x303 cells, 80111B14/80111ADC/8011EA5C rows; loop
        L111914 on 5C64(0x202). */
-    func_80111B14();
+    fn_1x11b14();
     latch(0x81);
     txt_draw(0x4200);
     wnd_open(0x200);
@@ -19,7 +19,7 @@ L111914:
         /* s0/v0 gate -> L11192C */
         latch(3);
         txt_draw(0x1705);
-        func_80111ADC();
+        fn_1x11adc();
         latch(0x28);
         txt_draw(0x340);
         txt_draw(0x300);

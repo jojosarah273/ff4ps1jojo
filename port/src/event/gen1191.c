@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80192478.
- * Ground truth: src/func_80192478.c (byte-verified).
+/* FF4 source-port — interpreted module for event_e8_spins_rows_then_e8_ae8_f0.
+ * Ground truth: src/event_e8_spins_rows_then_e8_ae8_f0.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80192478(void)
+void event_e8_spins_rows_then_e8_ae8_f0(void)
 {
     /* event: 801928E8 spins, 80191838/80191858/80192858 rows, then
        801928E8/80192718/80191AE8(9)/801920F0 tail. */
@@ -33,7 +33,7 @@ L1925bc:
         func_80192718();
         if (io_just() == 0)
             goto L1925E8;
-        func_80191AE8(9);
+        event_s3_fp_s0_s7_latch_loops_on(9);
         break;
     }
 L1925E8:

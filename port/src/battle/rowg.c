@@ -6,7 +6,7 @@
 void func_8010CB08(void)
 {
     cell_clear_bank(0x8FD);
-    func_8010D24C();
+    fn_1x0d24c();
     txt_set(0xFDE);
     open_row(0x3E);
     row_sel_cell_cur();
@@ -49,7 +49,7 @@ Lc64:
     for (;;) {
         page_open(0x9CF);
         cell_push_c8();
-        func_8010D61C();
+        fn_1x0d61c();
         row_page(6);
         io_poll(0x2E);
         if (io_go() != 0)
@@ -114,11 +114,11 @@ Lc64:
         cell_pull_c8(0x906);
         cell_put(0xE);
         cell_push_c8_d58(0x907);
-        func_8010D894();
+        battle_row_x7_x3d_x3e_windows_xfe5();
         cell_pull_c8(0x90B);
         io_poll_cur();
         if (io_just() == 0)
-            func_8010D4EC();
+            fn_1x0d4ec();
         latch_cur();
         cell_pull_c8(0x8FF);
         cell_pull_c8(0x903);
@@ -155,20 +155,20 @@ Lc64:
         latch(0xC);
         cell_put(0xAE);
         latch(0x18);
-        func_8010D6A0();
+        battle_item_confirm_key_ladders_x1();
         latch(0x1B);
         key_page(0xAE);
-        func_8010D6A0();
+        battle_item_confirm_key_ladders_x1();
         latch(0x1C);
         key_page(0xAE);
-        func_8010D6A0();
+        battle_item_confirm_key_ladders_x1();
         txt_set(0xFE1);
         row_read(0xF);
         draw_pad_cur();
-        func_8010D0D8();
+        shop_stat_row_x3e_x3d_windows_with();
         txt_set(0xFE1);
         draw_pad(0x40);
-        func_8010D0D8();
+        shop_stat_row_x3e_x3d_windows_with();
         battle_mode_dispatch();
         return;
     }

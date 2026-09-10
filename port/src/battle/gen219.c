@@ -1,24 +1,24 @@
-/* FF4 source-port — interpreted module for func_8014C13C.
- * Ground truth: src/func_8014C13C.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x4c13c.
+ * Ground truth: src/fn_1x4c13c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8014C13C(void)
+void fn_1x4c13c(void)
 {
     txt_set(0x34C5);
     if (gate(0x202) == 0)
         return;
-    func_8014D680();
-    func_80148CAC();
-    func_8014046C();
+    battle_rows_d5a0_row_gate_xff_pick();
+    battle_rows_xf42b_text_x_xaa_bytes();
+    battle_rows_x_dc_c_x26_x27_row();
     wnd_open(5);
     latch(0x27);
     func_800760D0();
-    func_80148E08();
+    fn_1x48e08();
     sep();
     label(0xF111);
     label(0xF113);
-    func_80148E80();
+    fn_1x48e80();
     latch(0x60);
     cell_pull_c8_lo(0x2107);
     latch(0x58);
@@ -36,7 +36,7 @@ void func_8014C13C(void)
 L23c:
     for (;;) {
         func_8007259C();
-        func_8014C4BC();
+        battle_rows_x1_x40_windows_d14_row();
         txt_set(0xF111);
         sep_a();
         row_open_w(4);
@@ -51,14 +51,14 @@ L23c:
     L2a4:
         for (;;) {
             wnd_open_cur();
-            func_80148F60();
+            fn_1x48f60();
             cell_pull_c8(0x7614);
             cell_pull_c8(0x7694);
             cell_pull_c8(0x7714);
             cell_pull_c8(0x7794);
             cell_pull_c8(0x7814);
             wnd_open(1);
-            func_80148F60();
+            fn_1x48f60();
             cell_cursor_dec();
             cell_cursor_dec();
             cell_pull_c8(0x7612);

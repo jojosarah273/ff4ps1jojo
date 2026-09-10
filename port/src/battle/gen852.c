@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80119AC8.
- * Ground truth: src/func_80119AC8.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_d9d4_prep_gates_x80_x5.
+ * Ground truth: src/battle_rows_d9d4_prep_gates_x80_x5.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80119AC8(void)
+void battle_rows_d9d4_prep_gates_x80_x5(void)
 {
     /* battle rows: 8010D9D4 prep; gates 5574(0x80); 0x5C/0x5D/0x60/
        0x61 window rows. */

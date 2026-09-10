@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8015084C.
- * Ground truth: src/func_8015084C.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_splash_e8_fc_bc_preps_loop.
+ * Ground truth: src/battle_splash_e8_fc_bc_preps_loop.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8015084C(void)
+void battle_splash_e8_fc_bc_preps_loop(void)
 {
     /* battle splash: 80194394/801928E8/801942FC/801506BC preps; loop
        L15089C renders 0x2100/0x420C/0x420B icons and closes via
@@ -23,7 +23,7 @@ L15089c:
         row_sync2_cur();
         row_prep_close();
         row_prep(0x10);
-        func_80150C58();
+        fn_1x50c58();
         latch_cur();
         cell_pull_c8_lo(0x2100);
         cell_pull_c8_lo(0x420C);

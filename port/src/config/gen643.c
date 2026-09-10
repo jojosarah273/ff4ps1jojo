@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8012C8A4.
- * Ground truth: src/func_8012C8A4.c (byte-verified).
+/* FF4 source-port — interpreted module for config_rows_x1b3b_xd5_x60_texts_wi.
+ * Ground truth: src/config_rows_x1b3b_xd5_x60_texts_wi.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8012C8A4(void)
+void config_rows_x1b3b_xd5_x60_texts_wi(void)
 {
     /* config rows: 0x1B3B/0xD5/0x60 texts/windows, 801221EC/8012C2F8/
        8012C980 rows; gate 53D4. */
@@ -29,6 +29,6 @@ L12C948:
     row_prep_close();
     draw_pad_cur();
     func_8012C2F8();
-    func_8012C980();
+    config_save_screen_x1b23_x1b1a_tex();
     return;
 }

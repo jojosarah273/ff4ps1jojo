@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8018CFF8.
- * Ground truth: src/func_8018CFF8.c (byte-verified).
+/* FF4 source-port — interpreted module for event_spin_l18d01c_v1_a2_v1_v0_gat.
+ * Ground truth: src/event_spin_l18d01c_v1_a2_v1_v0_gat.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8018CFF8(void)
+void event_spin_l18d01c_v1_a2_v1_v0_gat(void)
 {
     /* event: spin L18D01C; v1/a2 + v1/v0 gate tree; 8018E4B8/
        8018ABE8 rows then 8018A75C(2/1/3); returns at L18D194. */

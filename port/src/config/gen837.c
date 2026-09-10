@@ -1,10 +1,10 @@
-/* FF4 source-port — interpreted module for func_801320E8.
- * Ground truth: src/func_801320E8.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x320e8.
+ * Ground truth: src/fn_1x320e8.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-void func_801320E8(void)
+void fn_1x320e8(void)
 
 {
   row_prep(0x20);

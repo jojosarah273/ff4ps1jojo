@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80120774.
- * Ground truth: src/func_80120774.c (byte-verified).
+/* FF4 source-port — interpreted module for rows_x29_window_cells_x5a_x5b_x5d.
+ * Ground truth: src/rows_x29_window_cells_x5a_x5b_x5d.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80120774(void)
+void rows_x29_window_cells_x5a_x5b_x5d(void)
 {
     /* rows: 0x29 window cells, 0x5A/0x5B/0x5D/0x5E windows,
        8011F3F8 row; ends on 0x95A0+8960 writes. */
@@ -13,7 +13,7 @@ void func_80120774(void)
     row_open();
     row_prep_close();
     row_sync();
-    func_8011F3F8();
+    shared_scroll_column_x5a_window_x3();
     row_prep(0x20);
     cell_cursor_adv2();
     sep_a();

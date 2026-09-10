@@ -27,7 +27,7 @@ void func_80136FFC(void)
     if (io_go() != 0)
         goto L538;
     row_open();
-    func_8012102C();
+    fn_1x2102c();
     draw_pad_cur();
     func_8011FB74();
     row_close();
@@ -90,7 +90,7 @@ L2e0:
     open_row(0x39);
     open_row(0x3A);
     draw_pad(0x396);
-    func_801206DC();
+    rows_f360_prep_x29_x1d_x1e_window();
     row_prep(0x20);
     row_sync2_cur();
     for (;;) {
@@ -114,12 +114,12 @@ L2e0:
     open_row(0xDB);
     row_page(0x5D);
     draw_pad(0x2D4);
-    func_80125100();
+    fn_1x25100();
     txt_set(0x1B95);
     if (gate(0x202) != 0)
         goto L438;
     draw_pad(0x31C);
-    func_801376B0();
+    fn_1x376b0();
 L438:
     open_row(0x48);
     row_page(0x48);

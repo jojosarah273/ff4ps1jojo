@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8015A5B8.
- * Ground truth: src/func_8015A5B8.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x5a5b8.
+ * Ground truth: src/fn_1x5a5b8.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8015A5B8(void)
+void fn_1x5a5b8(void)
 {
     u8 *s = (u8 *)cell_state(0);
     s[0xA9] = 0;

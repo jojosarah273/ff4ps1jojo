@@ -15,11 +15,11 @@ void equip_cells_render(void)
         return;
     row_info(0x48);
     tail(0x4B);
-    func_80123B00();
-    func_80120A0C();
+    fn_1x23b00();
+    shop_row_x29_x45_windows_x41_x1500();
     cell_fmt2(0x4B);
     page(0x48);
-    func_80123320();
+    fn_1x23320();
     row_prep(0x20);
     row_read2(0x4B);
     sep_a();
@@ -47,7 +47,7 @@ void equip_cells_render(void)
     cell_draw(0x8E);
     draw_pad(2);
     cell_push_c8_sel(0x48);
-    func_8011F360();
+    rows_x45_window_loop_l11f370_on_c0();
     cell_draw(0x14);
     stat_sync();
     cell_draw(0x16);

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801887A8.
- * Ground truth: src/func_801887A8.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_a0_v1_latch_v0_gate_c58_row.
+ * Ground truth: src/battle_a0_v1_latch_v0_gate_c58_row.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801887A8(void)
+void battle_a0_v1_latch_v0_gate_c58_row(void)
 {
     /* battle: a0/v1 latch + v0 gate; 80191C58 rows. */
     /* a0/v1 latch -> L1888A4 */

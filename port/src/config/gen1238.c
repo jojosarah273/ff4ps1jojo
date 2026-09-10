@@ -1,18 +1,15 @@
-/* FF4 source-port — interpreted module for func_8013B92C.
- * Ground truth: src/func_8013B92C.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x3b92c.
+ * Ground truth: src/fn_1x3b92c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-
-extern int func_8013B8D4();
-
-void func_8013B92C(void)
+void fn_1x3b92c(void)
 
 {
   latch(4);
   wnd_open(6);
-  func_8013B8D4();
+  fn_1x3b8d4();
   return;
 }
 

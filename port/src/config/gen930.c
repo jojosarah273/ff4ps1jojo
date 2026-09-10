@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8013954C.
- * Ground truth: src/func_8013954C.c (byte-verified).
+/* FF4 source-port — interpreted module for ability_rows_x99_cells_e4_f684_e8.
+ * Ground truth: src/ability_rows_x99_cells_e4_f684_e8.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8013954C(void)
+void ability_rows_x99_cells_e4_f684_e8(void)
 {
     /* ability rows: 0x99 cells, 801395E4/8011F684/801264E8/
        8011F884/801391D4 rows; loop L139554 on 5DA0/5B8C(0x202). */
@@ -14,7 +14,7 @@ L139554:
         cell_dec_cell(0x99);
         row_prep_close();
         cell_cursor_dec();
-        func_801395E4();
+        ability_rows_x1bb0_x1bb1_texts_x5b();
         midrow_pad88_run();
         config_row_7800();
         row_close2();
@@ -26,6 +26,6 @@ L139554:
     midrow_degen();
     page(2);
     tail_cur();
-    func_801391D4();
+    fn_1x391d4();
     return;
 }

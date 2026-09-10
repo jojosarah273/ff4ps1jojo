@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801330F8.
- * Ground truth: src/func_801330F8.c (byte-verified).
+/* FF4 source-port — interpreted module for ability_banner_x1b_window_x2100_x1.
+ * Ground truth: src/ability_banner_x1b_window_x2100_x1.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801330F8(void)
+void ability_banner_x1b_window_x2100_x1(void)
 {
     /* ability banner: 0x1B window, 0x2100/0x15/0x145 texts, 80139AFC
        tail; loops L133170 (6D70/5C64 pairs) and L1331EC. */
@@ -46,7 +46,7 @@ L133168:
             continue;
         break;
     }
-    func_80139AFC();
+    fn_1x39afc();
     cell_cursor_read();
     row_pad();
     return;

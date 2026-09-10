@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80127168.
- * Ground truth: src/func_80127168.c (byte-verified).
+/* FF4 source-port — interpreted module for ability_move_sub_screen_a3c_b47_te.
+ * Ground truth: src/ability_move_sub_screen_a3c_b47_te.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80127168(void)
+void ability_move_sub_screen_a3c_b47_te(void)
 {
     /* ability-move sub-screen: 1A3C/1B47 texts, two browse loops
        (L127294 equip, L127354 detail) with 801282D4 row-commit; exits via
@@ -32,7 +32,7 @@ L127178:
         return;
     L127210:
         /* v1/v0 gate */
-        func_80135BE4();
+        ability_v1_v0_gates_pick_ee4_f0e8();
         sep_a();
         func_80136014();
         return;
@@ -62,7 +62,7 @@ L127178:
             latch(4);
         L1272FC:
             txt_draw(0x1A3C);
-            func_801282D4();
+            fn_1x282d4();
             if (io_go() == 0)
                 continue;
             break;
@@ -85,16 +85,16 @@ L127178:
             txt_set(0x1B47);
         L127384:
             txt_draw(0x1A3C);
-            func_801282D4();
+            fn_1x282d4();
             if (io_go() == 0)
                 continue;
             break;
         }
     L1273A4:
         txt_set(0x1A3C);
-        func_80127668();
+        rows_x46_x45_windows_x1000_x7ff_x7();
         config_rows_e4();
-        func_801280D4();
+        status_row_x30_xc1_x1d_x1e_x1a3c_x();
     L1273C4:
         row_page(1);
         row_read(0x80);

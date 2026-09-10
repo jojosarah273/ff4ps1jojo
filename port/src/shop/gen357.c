@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80160C2C.
- * Ground truth: src/func_80160C2C.c (byte-verified).
+/* FF4 source-port — interpreted module for options_help_x2770_gate_x2707_x270.
+ * Ground truth: src/options_help_x2770_gate_x2707_x270.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80160C2C(void)
+void options_help_x2770_gate_x2707_x270(void)
 {
     /* options help: 0x2770 gate, 0x2707/0x2709/0x359A/0x359D texts,
        0x2710/0x2715 gates, 0xA9 window; 8015329C row; loop L160D3C

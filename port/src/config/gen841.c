@@ -1,11 +1,11 @@
-/* FF4 source-port — interpreted module for func_80128750.
- * Ground truth: src/func_80128750.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x28750.
+ * Ground truth: src/fn_1x28750.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
 
-void func_80128750(void) {
+void fn_1x28750(void) {
     latch(0xB8);
     cell_put(0x93);
     latch(0x88);

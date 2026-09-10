@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8015D4C8.
- * Ground truth: src/func_8015D4C8.c (byte-verified).
+/* FF4 source-port — interpreted module for options_volume_screen_xa6_xa9_xaa.
+ * Ground truth: src/options_volume_screen_xa6_xa9_xaa.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8015D4C8(void)
+void options_volume_screen_xa6_xa9_xaa(void)
 {
     /* options/volume screen: 0xA6/0xA9/0xAA/0xD2 windows, 0x2005/0x2006
        gates, 0x2B2A/0x2B2B/0x3535 texts, 0x2A04-0x2A06 cells, 80152BC4

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80160E88.
- * Ground truth: src/func_80160E88.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x60e88.
+ * Ground truth: src/fn_1x60e88.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80160E88(void)
+void fn_1x60e88(void)
 {
     latch(0x17);
     txt_draw(0x34C8);
@@ -13,7 +13,7 @@ void func_80160E88(void)
     txt_draw(0x33C6);
     latch(4);
     txt_draw(0x33C7);
-    func_801532D4();
+    fn_1x532d4();
     row_page(0xCE);
     if (gate(0x80) == 0)
         goto L103c;
@@ -113,7 +113,7 @@ L1168:
         cell_draw(0x321B);
         tail(0xAB);
         row_sync();
-        func_80163950();
+        options_row_screen_key_ladder_xde();
         row_done();
         goto L1330;
     L1298:

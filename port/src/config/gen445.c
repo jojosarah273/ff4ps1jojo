@@ -1,14 +1,14 @@
-/* FF4 source-port — interpreted module for func_80138A6C.
- * Ground truth: src/func_80138A6C.c (byte-verified).
+/* FF4 source-port — interpreted module for ability_status_wrapper_d3c_render.
+ * Ground truth: src/ability_status_wrapper_d3c_render.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80138A6C(void)
+void ability_status_wrapper_d3c_render(void)
 {
     /* ability/status wrapper: 80123D3C render + 0x1A73 title + 0x204/
        0x206 stat cells, then the L138BDC loop calling 80138D24 (the
        sub-dispatcher) and re-rendering 0x1B49. */
-    func_80123D3C();
+    fn_1x23d3c();
     config_rows_e4();
     latch(1);
     txt_draw(0x1A73);
@@ -33,8 +33,8 @@ void func_80138A6C(void)
     func_80123FB4();
     midrow_paint_c();
     config_row_q18();
-    func_80138CB0();
-    func_80139AA4();
+    rows_x48c0_x1a71_texts_xe0_window();
+    fn_1x39aa4();
     anim_noop();
     battle_state_dc400();
     battle_mode_dispatch();
@@ -45,8 +45,8 @@ L138bdc:
     for (;;) {
         battle_anim_gate_a();
         cb_slot15();
-        func_80126590();
-        func_80138D24();
+        fn_1x26590();
+        ability_party_screen_x1a88_x1bb4_x();
         cell_clear_bank(0x1B49);
         battle_row_88();
         cell_flags_set4();

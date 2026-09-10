@@ -1,14 +1,14 @@
-/* FF4 source-port — interpreted module for func_80104354.
- * Ground truth: src/func_80104354.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x04354.
+ * Ground truth: src/fn_1x04354.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80104354(void)
+void fn_1x04354(void)
 {
     txt_set(0x6D0);
     if (gate(0x202) == 0) {
         latch(0x36);
-        func_8011B6B4();
+        battle_rows_b744_prep_x3d_x1280_ce();
         io_poll(0);
         if (io_just() == 0) {
             txt_set(0x171F);
@@ -17,7 +17,7 @@ void func_80104354(void)
                 page_open(0x1719);
                 cell_flags_cmp(cell_state(0x1706));
                 if (io_just() != 0) {
-                    func_80104804();
+                    shop_rows_x1705_x7a_x79_windows_x6();
                     return;
                 }
             }
@@ -43,14 +43,14 @@ void func_80104354(void)
         row_read(0x10);
         if (sel(2) != 0)
             return;
-        func_801046F4();
+        shop_buy_rows_x1705_x7a_x79_window();
         return;
     }
     latch(0x30);
     cell_put(0x79);
     open_row(0x7A);
     for (;;) {
-        func_80102E78();
+        fn_1x02e78();
         row_page(0x79);
         io_poll(0x21);
         if (io_go() != 0) {
@@ -107,5 +107,5 @@ void func_80104354(void)
             return;
         }
     }
-    func_80103310();
+    shop_rows_x7a_xb7_windows_e78_c_ro();
 }

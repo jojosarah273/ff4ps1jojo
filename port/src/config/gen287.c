@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80137938.
- * Ground truth: src/func_80137938.c (byte-verified).
+/* FF4 source-port — interpreted module for ability_page_four_gated_blocks_eac.
+ * Ground truth: src/ability_page_four_gated_blocks_eac.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80137938(void)
+void ability_page_four_gated_blocks_eac(void)
 {
     /* ability page: four 4120(2)-gated blocks; each reads 0x1B7A/0x1B7C
        and writes 0x1BCB through 6240 after the 537D/53C0 key checks. */

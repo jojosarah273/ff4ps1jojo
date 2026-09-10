@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8016EE10.
- * Ground truth: src/func_8016EE10.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_rows_xa1_xa3_windows_x64_x6a.
+ * Ground truth: src/shop_rows_xa1_xa3_windows_x64_x6a.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8016EE10(void)
+void shop_rows_xa1_xa3_windows_x64_x6a(void)
 {
     /* shop rows: 0xA1/0xA3 windows, 0x64/0x6A/0x6B texts, 8016EF88
        row; linear. */
@@ -21,6 +21,6 @@ void func_8016EE10(void)
     cell_pull_c8_lo(0x6A);
     latch(0xA);
     cell_pull_c8_lo(0x6B);
-    func_8016EF88();
+    fn_1x6ef88();
     return;
 }

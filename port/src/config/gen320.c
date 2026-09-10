@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80128598.
- * Ground truth: src/func_80128598.c (byte-verified).
+/* FF4 source-port — interpreted module for party_stat_block_x1b9a_gate_main_p.
+ * Ground truth: src/party_stat_block_x1b9a_gate_main_p.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80128598(void)
+void party_stat_block_x1b9a_gate_main_p(void)
 {
     /* party-stat block: 0x1B9A gate; main path renders the 0x88/0x4E
        windows and the L128628 row loop (801266C8 + 5DD4 cells) with the
@@ -11,9 +11,9 @@ void func_80128598(void)
     txt_set(0x1B9A);
     if (gate(2) != 0)
         goto L1285D8;
-    func_80128750();
+    fn_1x28750();
     shop_row_kick_f0();
-    func_80126590();
+    fn_1x26590();
     return;
 L1285D8:
     page_paint2(0x1B9A);
@@ -54,7 +54,7 @@ L128628:
         if (sel(2) != 0)
             goto L128718;
     L1286E8:
-        func_80128750();
+        fn_1x28750();
         latch(3);
         cell_put(0x4E);
         latch(0xF);

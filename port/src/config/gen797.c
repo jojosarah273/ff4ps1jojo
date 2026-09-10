@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80138920.
- * Ground truth: src/func_80138920.c (byte-verified).
+/* FF4 source-port — interpreted module for ability_wrapper_x1a88_text_ea9c_a6.
+ * Ground truth: src/ability_wrapper_x1a88_text_ea9c_a6.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80138920(void)
+void ability_wrapper_x1a88_text_ea9c_a6(void)
 {
     /* ability wrapper: 0x1A88 text, 8016EA9C/80138A6C/80122114 rows
        + the 0x100 prelude; linear. */
@@ -17,10 +17,10 @@ void func_80138920(void)
     row_pad();
     func_8016EA9C();
     cell_clear_bank(0x1A88);
-    func_80138A6C();
+    ability_status_wrapper_d3c_render();
     sep();
     stat_sync();
-    func_80122114();
+    fn_1x22114();
     cell_cursor_read();
     row_pad();
     return;

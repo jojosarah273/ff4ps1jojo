@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8015BD34.
- * Ground truth: src/func_8015BD34.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x5bd34.
+ * Ground truth: src/fn_1x5bd34.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8015BD34(void)
+void fn_1x5bd34(void)
 {
     row_page(0xD7);
     if (gate(2) != 0)
@@ -12,7 +12,7 @@ void func_8015BD34(void)
     io_poll(0xFF);
     if (io_just() != 0)
         return;
-    func_8015C54C();
+    fn_1x5c54c();
     row_page(0xD0);
     io_poll(0xFF);
     if (io_just() != 0)
@@ -37,9 +37,9 @@ void func_8015BD34(void)
     if (sel(0x202) != 0)
         goto Lbeac;
 Lbe34:
-    func_8015B3F4();
+    options_c3c_b04_x2000_b04_gates_b6();
     row_page(0xD0);
-    func_80152908();
+    options_row_v0_gate_picks_f4c_vs_c();
     txt_cell(0x32DB);
     io_poll(0x4C);
     if (io_just() != 0)
@@ -49,7 +49,7 @@ Lbe34:
     if (io_just() == 0)
         return;
 Lbea4:
-    func_8015C1B0();
+    fn_1x5c1b0();
 Lbeac:
     latch(0xFF);
     cell_put(0xD0);
@@ -61,7 +61,7 @@ Lbed4:
     io_poll(0xFF);
     if (io_just() != 0)
         goto Lbf8c;
-    func_8015C54C();
+    fn_1x5c54c();
     row_page(0xD0);
     io_poll(0xFF);
     if (io_just() != 0)
@@ -69,7 +69,7 @@ Lbed4:
     txt_set(0x388B);
     if (gate(2) != 0)
         goto Lbf3c;
-    func_8015C220();
+    fn_1x5c220();
 Lbf3c:
     wnd_open(5);
     for (;;) {
@@ -80,7 +80,7 @@ Lbf3c:
             continue;
         break;
     }
-    func_8015C604();
+    fn_1x5c604();
     latch(0xFF);
     cell_put(0xD0);
     return;
@@ -106,14 +106,14 @@ Lbf8c:
     row_close2();
     txt_draw(0x1822);
     cell_put(0xD0);
-    func_8015D0B8();
-    func_8015C54C();
+    options_seeds_x1822_x38fc_x3975_te();
+    fn_1x5c54c();
     row_page(0xD0);
     io_poll(0xFF);
     if (io_just() != 0)
         return;
-    func_8015B078();
-    func_8015B3F4();
+    config_status_row_xa9_xaa_xaf_wind();
+    options_c3c_b04_x2000_b04_gates_b6();
     page(0xA6);
     txt_cell(0x2005);
     row_read(0xEF);

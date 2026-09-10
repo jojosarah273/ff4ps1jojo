@@ -11,10 +11,9 @@
 #include <stdint.h>
 #include "ff4_window.h"
 
-extern void func_8017F5C0(uint32_t);
 extern void func_80070174(void);
 extern void func_80070154(void);
-extern void func_80186120(void);
+
 extern uint16_t D_8019ED54;
 extern uint16_t D_8019ED44;
 
@@ -27,7 +26,7 @@ void midrow_pad88_run(void)
 /* 8011EF0C: set the battle-state mode word 0x800DC400. */
 void battle_state_dc400(void)
 {
-    func_8017F5C0(0x800DC400);
+    battle_v0_gate_picks_eac8_vs_f148(0x800DC400);
 }
 
 /* 80140558: gpu driver kick wrapper. */
@@ -45,7 +44,7 @@ void gpu_driver_run_b(void)
 /* 80169128: battle screen callback wrapper. */
 void battle_cb_86120(void)
 {
-    func_80186120();
+    battle_fsm_v0_t0_v0_a3_v0_a2();
 }
 
 /* 80124EAC: delta register = pos counter (u16 twin of 800F9690). */

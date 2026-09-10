@@ -13,8 +13,8 @@ void event_spin_wait(void)
         break;
     }
     /* a0/v0 latch -> L192A48 / L19298C */
-    func_80192A60();
-    func_80192A60();
+    event_v0_v1_latch_loop_l192a88_on();
+    event_v0_v1_latch_loop_l192a88_on();
     if (io_just() != 0)
         goto L1929F4;
     return;

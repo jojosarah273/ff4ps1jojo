@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8016ADDC.
- * Ground truth: src/func_8016ADDC.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_rows_x3319_x371b_x331b_x3719.
+ * Ground truth: src/shop_rows_x3319_x371b_x331b_x3719.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8016ADDC(void)
+void shop_rows_x3319_x371b_x331b_x3719(void)
 {
     /* shop rows: 0x3319/0x371B/0x331B/0x3719 cells; loop L16AE14
        on 5958(0x400). */

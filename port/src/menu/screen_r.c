@@ -57,7 +57,7 @@ L064:
     txt_set(0x711);
     if (gate(0x202) == 0)
         return;
-    func_80100B30();
+    shop_rows_x1702_x3d_x3e_windows_x1();
     draw_pad_cur();
     page(0x3D);
     for (;;) {
@@ -78,7 +78,7 @@ L140:
     sep_a();
     cell_poke0(cell_state(0xFE7));
     txt_draw(0x8FC);
-    func_801009E8();
+    fn_1x009e8();
     io_poll_cur();
     if (io_just() == 0)
         goto L46c;
@@ -97,7 +97,7 @@ L140:
     cell_pull_c8_off();
     func_80105230();
     label(0x6FE);
-    func_80100894();
+    rows_x_f0_cells_x700_x706_texts_vi();
     latch(0x30);
     wnd_fx_pads();
     latch(1);
@@ -146,10 +146,10 @@ L374:
         goto L3cc;
     row_page(8);
     txt_draw(0x8FB);
-    func_801082C8();
+    fn_1x082c8();
     config_sub_screen();
     config_confirm_loop_a();
-    func_801005DC();
+    battle_help_dialog_x8fb_header_x18();
     return;
 L3cc:
     key_page(0xB2);
@@ -167,11 +167,11 @@ L424:
     wnd_open(0x3E8);
 L42c:
     tail(0x1A);
-    func_80174F0C();
-    func_801196B0();
-    func_801004D4();
+    fn_1x74f0c();
+    fn_1x196b0();
+    battle_stats_x16a0_x16a2_texts_x30();
 L44c:
-    func_801082C8();
+    fn_1x082c8();
     config_sub_screen();
     config_confirm_loop_a();
     return;
@@ -184,7 +184,7 @@ L46c:
         return;
     latch(4);
     cell_put(0xB2);
-    func_801082C8();
+    fn_1x082c8();
     config_sub_screen();
     config_confirm_loop_a();
     return;

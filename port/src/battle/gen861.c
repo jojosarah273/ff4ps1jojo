@@ -1,5 +1,5 @@
-/* FF4 source-port — interpreted module for func_80103F94.
- * Ground truth: src/func_80103F94.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x03f94.
+ * Ground truth: src/fn_1x03f94.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
@@ -9,7 +9,7 @@
 
 
 
-void func_80103F94(void)
+void fn_1x03f94(void)
 
 {
   int iVar1;

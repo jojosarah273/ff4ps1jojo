@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80123958.
- * Ground truth: src/func_80123958.c (byte-verified).
+/* FF4 source-port — interpreted module for rows_x1d_window_x73_x75_windows_wi.
+ * Ground truth: src/rows_x1d_window_x73_x75_windows_wi.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80123958(void)
+void rows_x1d_window_x73_x75_windows_wi(void)
 {
     /* rows: 0x1D window, 0x73-0x75 windows with 7A40/7A68 triples;
        loop L1239B8 (5E48/5C64) with 5574(0x3C) gate. */

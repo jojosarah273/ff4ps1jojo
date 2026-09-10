@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80145B90.
- * Ground truth: src/func_80145B90.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_x26_x28_x2a_windows_x1.
+ * Ground truth: src/battle_rows_x26_x28_x2a_windows_x1.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80145B90(void)
+void battle_rows_x26_x28_x2a_windows_x1(void)
 {
     /* battle rows: 0x26/0x28/0x2A windows, 0x1800 text, 80072720 +
        80145C74 rows. */
@@ -27,7 +27,7 @@ void func_80145B90(void)
     cell_pull9_hi();
     sep();
     row_prep_close();
-    func_80145C74();
+    battle_status_detail_gate_spin_c_t();
     row_close();
     return;
 }

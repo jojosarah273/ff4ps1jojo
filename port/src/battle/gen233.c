@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8010EB14.
- * Ground truth: src/func_8010EB14.c (byte-verified).
+/* FF4 source-port — interpreted module for spin_on_s1_register.
+ * Ground truth: src/spin_on_s1_register.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8010EB14(void)
+void spin_on_s1_register(void)
 {
     battle_godtext_a();
     latch(9);
@@ -16,7 +16,7 @@ void func_8010EB14(void)
     cell_put(0x3C);
     wnd_open(0xF000);
     tail(0x3D);
-    func_801766B0();
+    fn_1x766b0();
     latch(0x80);
     txt_draw(0x2115);
     for (;;) {
@@ -25,14 +25,14 @@ void func_8010EB14(void)
 Leba4:
     latch(0x6A);
     cell_put(0xB2);
-    func_80108330();
+    fn_1x08330();
     open_row(0xBA);
-    func_80108458();
+    status_table_modulo_state_machine();
     key_page(0xED);
-    func_80109B08();
-    func_80108458();
+    fn_1x09b08();
+    status_table_modulo_state_machine();
     key_page(0xED);
-    func_80109B08();
+    fn_1x09b08();
     open_row(0xDD);
     open_row(0xED);
     latch(0x80);
@@ -111,8 +111,8 @@ Lee34:
     }
     latch(3);
     shop_rows2_run();
-    func_80174710();
-    func_801745F4();
+    fn_1x74710();
+    shop_title_xfe0_x19_x18_windows_xc();
     latch(0x81);
     txt_draw(0x4200);
     battle_wndfx_run();

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801627F8.
- * Ground truth: src/func_801627F8.c (byte-verified).
+/* FF4 source-port — interpreted module for options_stat_row_xa6_x2006_x3534_x.
+ * Ground truth: src/options_stat_row_xa6_x2006_x3534_x.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801627F8(void)
+void options_stat_row_xa6_x2006_x3534_x(void)
 {
     /* options stat row: 0xA6/0x2006/0x3534/0xA9 windows, 0x3303/
        0x3302 texts, 80150C38 row; loop L162830 on 5574(5). */

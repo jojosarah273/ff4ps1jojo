@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801093B8.
- * Ground truth: src/func_801093B8.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_rows_x42_key_gate_routes_the.
+ * Ground truth: src/shop_rows_x42_key_gate_routes_the.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801093B8(void)
+void shop_rows_x42_key_gate_routes_the(void)
 {
     /* shop rows: 0x42 key gate routes the 3D48/95A0 fills. */
     io_poll(0x42);

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8015B078.
- * Ground truth: src/func_8015B078.c (byte-verified).
+/* FF4 source-port — interpreted module for config_status_row_xa9_xaa_xaf_wind.
+ * Ground truth: src/config_status_row_xa9_xaa_xaf_wind.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8015B078(void)
+void config_status_row_xa9_xaa_xaf_wind(void)
 {
     /* config status row: 0xA9/0xAA/0xAF windows, 0x1822 text, 0x2001
        gate; 80152CDC/8015B284 renders; loops L15B0DC (7A40/5C64) and
@@ -48,7 +48,7 @@ L15b14c:
         if (io_just() != 0)
             goto L15B21C;
     L15B1C4:
-        func_8015B284();
+        config_row_x353d_text_xe5_x82_xab();
         txt_set(0x353D);
         if (gate(2) != 0)
             goto L15B21C;

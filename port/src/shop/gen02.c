@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8016EF88.
- * Ground truth: src/func_8016EF88.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x6ef88.
+ * Ground truth: src/fn_1x6ef88.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8016EF88(u32 a0)
+void fn_1x6ef88(u32 a0)
 {
     if (a0 != 0) {
         for (;;) {
@@ -11,13 +11,13 @@ void func_8016EF88(u32 a0)
                 break;
         }
     }
-    func_8016B6D0();
-    func_8016B650();
-    func_8016AE94();
-    func_80169F58();
-    func_80169614();
-    func_801694A4();
-    func_80169A18();
+    fn_1x6b6d0();
+    fn_1x6b650();
+    fn_1x6ae94();
+    shop_rows_c4a0_prep_xa_x8_windows();
+    fn_1x69614();
+    shop_seed_x64_window_x1b_x2107_tex();
+    config_map_name_screen_x64_x2_x4_x();
     open_row(0x95);
     wnd_open(0x8000);
     tail(0x57);
@@ -30,14 +30,14 @@ void func_8016EF88(u32 a0)
     io_poll(2);
     if (io_just() != 0)
         goto f0b4;
-    func_8016A208();
+    shop_rows_x66_x53_x55_xa_windows_x();
     shop_store_run();
     goto f0dc;
 f0b4:
     wnd_open(0x50);
     tail(0x96);
-    func_8016A080();
-    func_8016DCE0();
+    fn_1x6a080();
+    shop_rows_x2303_x2883_cells_via_lo();
     shop_store_run();
 f0dc:
     cell_clear_bank(0x7D1F);
@@ -49,7 +49,7 @@ f0dc:
     cell_pull_c8_lo(0x212C);
     latch(0x81);
     cell_pull_c8_lo(0x4200);
-    func_80169290();
+    battle_loop_f098_intro_x9a_window();
     sep();
     label(0x68);
     for (;;) {
@@ -70,7 +70,7 @@ f0dc:
     wnd_open(0x100);
     for (;;) {
         shop_row_41();
-        func_8016ADDC();
+        shop_rows_x3319_x371b_x331b_x3719();
         sep_b();
         cell_pos_back(8);
         poll_t(0x78);
@@ -80,7 +80,7 @@ f0dc:
     sep();
     tail(0x9C);
     wnd_open(1);
-    func_80170084();
+    fn_1x70084();
     wnd_open(0x100);
     tail(0x9E);
     sep();
@@ -99,7 +99,7 @@ f0dc:
         row_read2(0x9C);
         sep_a();
         cell_pos_fwd(0x80);
-        func_8016DB94();
+        config_x1ff_ec_gates_x14_x20_windo();
         row_prep(0x20);
         row_read2(0x14);
         cell_put_hi9();
@@ -107,7 +107,7 @@ f0dc:
         row_read2(0x9E);
         cell_put_hi9(0xE);
         row_read2(0x9C);
-        func_8016DB94();
+        config_x1ff_ec_gates_x14_x20_windo();
         row_prep(0x20);
         cell_inc_cell(0x9A);
         row_read2(0x9A);
@@ -125,7 +125,7 @@ f0dc:
         row_read2(0x14);
         cell_put_hi9(2);
         cell_put_hi9(4);
-        func_801700BC();
+        rows_x_dc_cell_pairs_x3319_x371b_x();
         row_prep_close();
         txt_set(0x2105);
         if (gate(0x202) != 0)
@@ -215,7 +215,7 @@ f0dc:
     wnd_open(0x4000);
     tail_cur();
     tail(6);
-    func_801700BC();
+    rows_x_dc_cell_pairs_x3319_x371b_x();
     shop_row_41();
     latch(0x80);
     cell_put(0xA0);
@@ -237,7 +237,7 @@ f0dc:
         row_read2(0x9C);
         sep_a();
         cell_pos_fwd(0x80);
-        func_8016DB94();
+        config_x1ff_ec_gates_x14_x20_windo();
         row_prep(0x20);
         row_read2(0x14);
         cell_put_hi9();
@@ -245,12 +245,12 @@ f0dc:
         row_read2(0x9E);
         cell_put_hi9(0xE);
         row_read2(0x9C);
-        func_8016DB94();
+        config_x1ff_ec_gates_x14_x20_windo();
         row_prep(0x20);
         row_read2(0x14);
         cell_put_hi9(2);
         cell_put_hi9(4);
-        func_801700BC();
+        rows_x_dc_cell_pairs_x3319_x371b_x();
         row_prep_close();
         page(0x9E);
         poll_t(0x200);
@@ -259,7 +259,7 @@ f0dc:
         break;
     }
     wnd_open(0xB4);
-    func_80170084();
+    fn_1x70084();
     latch(1);
     cell_pull_c8_lo(0x1E00);
     latch(0x15);
@@ -271,7 +271,7 @@ f0dc:
         shop_row_41();
     }
 f8dc:
-    func_80169228();
+    fn_1x69228();
     sep();
     cell_pull_c8_lo(0x4200);
     cell_pull_c8_lo(0x420B);

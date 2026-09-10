@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8015FE98.
- * Ground truth: src/func_8015FE98.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x5fe98.
+ * Ground truth: src/fn_1x5fe98.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8015FE98(void)
+void fn_1x5fe98(void)
 {
     latch(3);
     txt_draw(0x38E6);
@@ -39,11 +39,11 @@ void func_8015FE98(void)
         goto L118;
     row_page(0xA9);
     row_read(0xC0);
-    func_80152A20();
+    options_row_v0_gate_picks_e8_vs_cc();
     tail(0x8A);
     open_row(0xB1);
     open_row(0xB2);
-    func_801605D0();
+    options_x280_x29b5_cells_xb1_xb2_w();
     row_page(0xA9);
     row_read(0x30);
     func_80152B38();
@@ -52,7 +52,7 @@ void func_8015FE98(void)
         goto L098;
     for (;;) {
         latch(1);
-        func_8016046C();
+        options_ports_x8a_window_x29b5_x29();
         poll_pair(0x8C);
         row_page(0x8C);
         if (gate(0x202) != 0)
@@ -68,7 +68,7 @@ L098:
         return;
     for (;;) {
         latch(2);
-        func_8016046C();
+        options_ports_x8a_window_x29b5_x29();
         poll_pair(0x8C);
         row_page(0x8C);
         if (gate(0x202) != 0)
@@ -81,16 +81,16 @@ L118:
     cell_put(0xB1);
     cell_set50_from40();
     cell_put(0xB2);
-    func_801605D0();
+    options_x280_x29b5_cells_xb1_xb2_w();
     sep();
     tail(0x8A);
     row_page(0xA9);
     row_read(0xC0);
-    func_80152A20();
+    options_row_v0_gate_picks_e8_vs_cc();
     tail(0x8C);
     for (;;) {
         latch_cur();
-        func_8016046C();
+        options_ports_x8a_window_x29b5_x29();
         poll_pair(0x8C);
         row_page(0x8C);
         if (gate(0x202) != 0)
@@ -118,14 +118,14 @@ L344:
     latch(2);
     cell_put(0xB1);
     cell_put(0xB2);
-    func_801605D0();
+    options_x280_x29b5_cells_xb1_xb2_w();
     row_page(0xA9);
     row_read(0xC0);
-    func_80152A20();
+    options_row_v0_gate_picks_e8_vs_cc();
     tail(0x8C);
     for (;;) {
         latch_cur();
-        func_8016046C();
+        options_ports_x8a_window_x29b5_x29();
         poll_pair(0x8C);
         row_page(0x8C);
         if (gate(0x202) != 0)
@@ -138,7 +138,7 @@ L344:
     tail(0x8C);
     for (;;) {
         latch(1);
-        func_8016046C();
+        options_ports_x8a_window_x29b5_x29();
         poll_pair(0x8C);
         row_page(0x8C);
         if (gate(0x202) != 0)

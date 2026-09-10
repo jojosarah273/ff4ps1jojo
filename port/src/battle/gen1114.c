@@ -1,11 +1,11 @@
-/* FF4 source-port — interpreted module for func_80140A5C.
- * Ground truth: src/func_80140A5C.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x40a5c.
+ * Ground truth: src/fn_1x40a5c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 extern u16 *D_8019ED44;
 extern u16 *D_8019ED54;
-void func_80140A5C(void)
+void fn_1x40a5c(void)
 {
     sep();
     *D_8019ED54 = *D_8019ED44;

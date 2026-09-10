@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80186120.
- * Ground truth: src/func_80186120.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_fsm_v0_t0_v0_a3_v0_a2.
+ * Ground truth: src/battle_fsm_v0_t0_v0_a3_v0_a2.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80186120(void)
+void battle_fsm_v0_t0_v0_a3_v0_a2(void)
 {
     /* battle FSM: v0/t0+v0/a3+v0/a2+v0/a1 regcmp ladder (L186148);
        v1/v0 gate routes 801875AC row (L1861A8) or the 80188240/

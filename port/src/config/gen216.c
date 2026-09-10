@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8015AC7C.
- * Ground truth: src/func_8015AC7C.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x5ac7c.
+ * Ground truth: src/fn_1x5ac7c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8015AC7C(void)
+void fn_1x5ac7c(void)
 {
     txt_set(0xA8);
     if (gate(0x202) != 0)
@@ -129,7 +129,7 @@ Lacac:
     }
 Lb020:
     cell_clear_bank(0x352D);
-    func_80153264();
+    fn_1x53264();
     latch(0xFF);
     txt_draw(0x33C4);
     latch(0x22);

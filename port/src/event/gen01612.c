@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80198630.
- * Ground truth: src/func_80198630.c (byte-verified).
+/* FF4 source-port — interpreted module for event_v0_gates_x22_row_returns_l19.
+ * Ground truth: src/event_v0_gates_x22_row_returns_l19.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80198630(void)
+void event_v0_gates_x22_row_returns_l19(void)
 {
     /* event: v0 gates; 80198990(0x22) row; returns L1986C4. */
     if (io_just() != 0)

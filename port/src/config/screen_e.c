@@ -36,7 +36,7 @@ main_loop:
         latch(0x68);
     row_open_w(8);
     cell_put(0x45);
-    func_8011F6AC();
+    fn_1x1f6ac();
     midrow_pad88_run();
     midrow_degen();
 loop_bottom:
@@ -88,7 +88,7 @@ a98:
             continue;
         break;
     }
-    func_8011F7D4();
+    fn_1x1f7d4();
     if (io_go() == 0)
         goto loop_bottom;
     goto b50;
@@ -123,7 +123,7 @@ b70:
             continue;
         break;
     }
-    func_8011F7D4();
+    fn_1x1f7d4();
     if (io_go() == 0)
         goto loop_bottom;
     goto c38;
@@ -150,7 +150,7 @@ c38:
         goto d10;
     page(0x5D);
     tail(0xE5);
-    func_8013441C();
+    config_weapon_sub_menu_x1eb_x1b37();
     if (io_go() == 0)
         goto L36C;
 d10:
@@ -194,11 +194,11 @@ e08:
 e90:
     cell_push_c8_sel(0x60);
     row_open();
-    func_80134948();
+    ability_rows_x41_window_d4_b04_gat();
     if (io_just() != 0)
         goto ed8;
     sep();
-    func_80134948();
+    ability_rows_x41_window_d4_b04_gat();
     if (io_just() == 0)
         goto f60;
 ed8:
@@ -216,7 +216,7 @@ ed8:
 f60:
     row_close();
 f68:
-    func_8012219C();
+    fn_1x2219c();
     return;
 f78:
     cell_push_c8_sel(0x60);
@@ -226,7 +226,7 @@ f78:
     if (gate(0x202) == 0)
         return;
     cell_pull_c8_bank(0x60);
-    func_80134A50();
+    fn_1x34a50();
     if (io_go() == 0)
         goto fe8;
     step2();
@@ -254,7 +254,7 @@ L008:
 L068:
     if (io_press(cell_state(cell_bank_sel(0x60))) == 0)
         goto L144;
-    func_80134A50();
+    fn_1x34a50();
     if (io_go() == 0)
         return;
     txt_cell(0x1441);
@@ -274,7 +274,7 @@ L134:
     return;
 L144:
     txt_cell(0x1440);
-    func_80134A50();
+    fn_1x34a50();
     if (io_go() != 0)
         goto L184;
     txt_cell(0x1441);
@@ -282,10 +282,10 @@ L144:
     if (io_just() == 0)
         goto L1AC;
 L184:
-    func_80134AB0();
+    fn_1x34ab0();
     step2();
     cell_step();
-    func_80134AB0();
+    fn_1x34ab0();
     return;
 L1AC:
     step2();
@@ -295,11 +295,11 @@ L1AC:
     cell_put(0xE3);
     poll_pair_cur();
     cell_push_c8_sel(0x60);
-    func_80134948();
+    ability_rows_x41_window_d4_b04_gat();
     if (io_just() != 0)
         goto L23C;
     latch_cur();
-    func_80134948();
+    ability_rows_x41_window_d4_b04_gat();
     if (io_just() == 0)
         goto f68;
 L23C:
@@ -312,7 +312,7 @@ L23C:
     cell_draw(0x1441);
     page(0x4B);
     txt_cell(0x1440);
-    func_80134A50();
+    fn_1x34a50();
     if (io_go() != 0)
         goto L324;
     latch(1);
@@ -341,7 +341,7 @@ L34C:
     cell_draw(0x1441);
     return;
 L36C:
-    func_8012219C();
+    fn_1x2219c();
     row_page(0xEB);
     if (gate(2) != 0)
         goto ec;
@@ -351,8 +351,8 @@ L36C:
     func_8011FB74();
     func_80126458();
     anim_noop();
-    func_8011FF40();
-    func_801240D0();
+    fn_1x1ff40();
+    fn_1x240d0();
     draw_pad_cur();
     battle_rows_sync();
     func_80126458();

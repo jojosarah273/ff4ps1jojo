@@ -104,7 +104,7 @@ Lfec:
     row_close();
     cell_draw(0x2073);
     txt_set(0x289F);
-    func_80157148();
+    options_rows_xdf_xe1_xe3_windows_x();
     txt_set(0x291C);
     cell_draw(0x201B);
     txt_set(0x291D);
@@ -112,7 +112,7 @@ Lfec:
     txt_set(0x291E);
     cell_draw(0x201D);
     txt_set(0x28A0);
-    func_80157148();
+    options_rows_xdf_xe1_xe3_windows_x();
     txt_set(0x291C);
     cell_draw(0x2028);
     txt_set(0x291D);
@@ -120,7 +120,7 @@ Lfec:
     txt_set(0x291E);
     cell_draw(0x202A);
     txt_set(0x28A1);
-    func_80157148();
+    options_rows_xdf_xe1_xe3_windows_x();
     txt_set(0x291C);
     cell_draw(0x2022);
     txt_set(0x291D);
@@ -222,7 +222,7 @@ L394:
     cell_put(0xE5);
     draw_pad(0xE030);
     latch(0xE);
-    func_80152640();
+    shop_rows_x82_x80_xe5_windows_loop();
     cell_fmt2(0xE3);
     row_info(0x98);
     row_info(0x9C);

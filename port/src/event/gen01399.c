@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80192D64.
- * Ground truth: src/func_80192D64.c (byte-verified).
+/* FF4 source-port — interpreted module for event_f0c8_b8_rows_spin_loops_l192.
+ * Ground truth: src/event_f0c8_b8_rows_spin_loops_l192.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80192D64(void)
+void event_f0c8_b8_rows_spin_loops_l192(void)
 {
     /* event: 8018F0C8/801976B8 rows; spin loops L192E04/L192DF8 on
        v0 gates; closes 8018F0C8/801976B8. */

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80139694.
- * Ground truth: src/func_80139694.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x39694.
+ * Ground truth: src/fn_1x39694.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80139694(void)
+void fn_1x39694(void)
 {
     txt_set(0x1BB2);
     sep_a();

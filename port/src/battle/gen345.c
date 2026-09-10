@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80142450.
- * Ground truth: src/func_80142450.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_magic_status_x340_x343_cell.
+ * Ground truth: src/battle_magic_status_x340_x343_cell.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80142450(void)
+void battle_magic_status_x340_x343_cell(void)
 {
     /* battle magic-status: 0x340-0x343 cells, 0x6CC0 gate with
        8058(0x10) alt row; loop L142498 on 5958(8). */

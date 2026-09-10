@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80181C20.
- * Ground truth: src/func_80181C20.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_anim_s5_v0_s5_s6_latches_d8.
+ * Ground truth: src/battle_anim_s5_v0_s5_s6_latches_d8.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80181C20(void)
+void battle_anim_s5_v0_s5_s6_latches_d8(void)
 {
     /* battle anim: s5/v0 + s5/s6 latches; 801808D8 row loop;
        801817EC then 801971A8/8017F9FC closes. */

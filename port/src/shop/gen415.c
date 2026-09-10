@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8016FB78.
- * Ground truth: src/func_8016FB78.c (byte-verified).
+/* FF4 source-port — interpreted module for config_bars_x1f_x1d_x1e_windows_x2.
+ * Ground truth: src/config_bars_x1f_x1d_x1e_windows_x2.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8016FB78(void)
+void config_bars_x1f_x1d_x1e_windows_x2(void)
 {
     /* config bars: 0x1F/0x1D/0x1E windows, 0x29 window cells; loops
        L16FC1C (5DA0(0x1D)) and L16FCA8 (5DA0(0x1E)). */

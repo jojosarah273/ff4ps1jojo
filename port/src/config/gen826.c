@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8015D8F0.
- * Ground truth: src/func_8015D8F0.c (byte-verified).
+/* FF4 source-port — interpreted module for options_rows_xa6_x2005_x29eb_cells.
+ * Ground truth: src/options_rows_xa6_x2005_x29eb_cells.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8015D8F0(void)
+void options_rows_xa6_x2005_x29eb_cells(void)
 {
     /* options rows: 0xA6/0x2005/0x29EB cells, 0xD2 window;
        gates 4120(0x202)/6434(0x80). */

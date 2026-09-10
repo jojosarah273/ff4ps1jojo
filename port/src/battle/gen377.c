@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80118244.
- * Ground truth: src/func_80118244.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_x40_x7_x3d_windows_wit.
+ * Ground truth: src/battle_rows_x40_x7_x3d_windows_wit.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80118244(void)
+void battle_rows_x40_x7_x3d_windows_wit(void)
 {
     /* battle rows: 0x40/0x7/0x3D windows with three 1000/102D/1037/
        103F stat-cell loops (5DA0(7)/5B8C(0x202) latch each), closing
@@ -57,6 +57,6 @@ L118360:
             continue;
         break;
     }
-    func_801183D8();
+    fn_1x183d8();
     return;
 }

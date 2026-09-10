@@ -1,16 +1,14 @@
-/* FF4 source-port — interpreted module for func_8014BB6C.
- * Ground truth: src/func_8014BB6C.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x4bb6c.
+ * Ground truth: src/fn_1x4bb6c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-extern int func_8014BB94();
-
-void func_8014BB6C(void)
+void fn_1x4bb6c(void)
 
 {
   latch(0x8c);
-  func_8014BB94();
+  fn_1x4bb94();
   return;
 }
 

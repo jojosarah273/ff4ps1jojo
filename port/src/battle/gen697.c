@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80142394.
- * Ground truth: src/func_80142394.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_x_b68_cell_pairs_loop.
+ * Ground truth: src/battle_rows_x_b68_cell_pairs_loop.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80142394(void)
+void battle_rows_x_b68_cell_pairs_loop(void)
 {
     /* battle rows: 4x 6B68/8768 cell pairs; loop L1423C0 on
        5958(3), then 4x 5D24 close. */

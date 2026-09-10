@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8014EDD0.
- * Ground truth: src/func_8014EDD0.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x4edd0.
+ * Ground truth: src/fn_1x4edd0.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8014EDD0(void)
+void fn_1x4edd0(void)
 {
     row_page(8);
     cell_put(6);

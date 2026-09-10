@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80119E7C.
- * Ground truth: src/func_80119E7C.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x19e7c.
+ * Ground truth: src/fn_1x19e7c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80119E7C(void)
+void fn_1x19e7c(void)
 {
     txt_set(0x1706);
     sep_b();
@@ -56,7 +56,7 @@ L19f2c:
         cell_pull_c8_off();
         cell_set50_from40();
         cell_pull_c8_off();
-        func_8011A204();
+        fn_1x1a204();
         wnd_open_cur();
         draw_pad_cur();
     L1a024:

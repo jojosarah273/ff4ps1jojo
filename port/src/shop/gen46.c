@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8016343C.
- * Ground truth: src/func_8016343C.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x6343c.
+ * Ground truth: src/fn_1x6343c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8016343C(void)
+void fn_1x6343c(void)
 {
     sep();
     latch(0xA0);
@@ -55,7 +55,7 @@ L6358C:
         goto L635C4;
     latch(9);
     txt_draw(0x34CA);
-    func_801532D4();
+    fn_1x532d4();
     return;
 L635C4:
     latch(0x19);
@@ -67,7 +67,7 @@ L635CC:
     latch(0xF);
     cell_put(0x82);
     latch(6);
-    func_801526F8();
+    shop_rows_xe1_xe5_xdf_windows_c_ro();
     txt_set(0x28A0);
     row_read(0x7F);
     cell_put(0xDF);

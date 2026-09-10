@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80162628.
- * Ground truth: src/func_80162628.c (byte-verified).
+/* FF4 source-port — interpreted module for options_c_rows_gate_x80_picks_the.
+ * Ground truth: src/options_c_rows_gate_x80_picks_the.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80162628(void)
+void options_c_rows_gate_x80_picks_the(void)
 {
     /* options: 80153218/8015329C rows; gate 5574(0x80) picks the
        0x34CA/0x26D2 variants. */

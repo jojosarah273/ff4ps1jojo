@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8011DE40.
- * Ground truth: src/func_8011DE40.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_sale_confirm_xab_x6fa_x70a_te.
+ * Ground truth: src/shop_sale_confirm_xab_x6fa_x70a_te.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8011DE40(void)
+void shop_sale_confirm_xab_x6fa_x70a_te(void)
 {
     /* shop sale confirm: 0xAB/0x6FA/0x70A texts, 0x3D/0x93/0x3E/0x44
        windows, 8011DFE4/8017583C/8011E16C/8011E318 rows; 4120(0x202)/
@@ -39,16 +39,16 @@ L11DEDC:
     txt_set(0x1700);
     if (gate(0x202) != 0)
         goto L11DFA4;
-    func_8011DFE4();
-    func_8017583C();
+    battle_c3c_b9c_gates_a1_v0_latch_l();
+    shop_dungeon_item_menu_x93_window();
     return;
 L11DFA4:
     io_poll(1);
     if (io_just() == 0)
         goto L11DFCC;
-    func_8011E16C();
+    battle_verdict_twin_of_e318_d_e_ro();
     return;
 L11DFCC:
-    func_8011E318();
+    battle_verdict_driver_d_e_rows_wit();
     return;
 }

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80141DC0.
- * Ground truth: src/func_80141DC0.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_x4e_window_row_loop_l1.
+ * Ground truth: src/battle_rows_x4e_window_row_loop_l1.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80141DC0(void)
+void battle_rows_x4e_window_row_loop_l1(void)
 {
     /* battle rows: 0x4E window, 80140558 row; loop L141DD0 on
        5574(0x10); closes via 0x38/0x34 codes. */

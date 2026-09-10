@@ -4,13 +4,11 @@
  */
 #include "ff4_window.h"
 
-extern int func_8012B100();
-
 void animation_row_300b(void)
 
 {
   draw_pad(0x300);
-  func_8012B100();
+  fn_1x2b100();
   return;
 }
 

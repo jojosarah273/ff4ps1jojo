@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8011BD88.
- * Ground truth: src/func_8011BD88.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x1bd88.
+ * Ground truth: src/fn_1x1bd88.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8011BD88(void)
+void fn_1x1bd88(void)
 {
     row_page(0xC9);
     if (gate(0x202) != 0)

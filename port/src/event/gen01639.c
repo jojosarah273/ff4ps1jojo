@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80182E54.
- * Ground truth: src/func_80182E54.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_anim_v0_t0_v0_gates_a8_tail.
+ * Ground truth: src/battle_anim_v0_t0_v0_gates_a8_tail.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80182E54(void)
+void battle_anim_v0_t0_v0_gates_a8_tail(void)
 {
     /* battle anim: v0 + t0/v0 gates; 801971A8(1)/80197208 tail. */
     if (io_just() == 0)

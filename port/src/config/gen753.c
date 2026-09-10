@@ -1,10 +1,10 @@
-/* FF4 source-port — interpreted module for func_80152EAC.
- * Ground truth: src/func_80152EAC.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x52eac.
+ * Ground truth: src/fn_1x52eac.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-void func_80152EAC(void)
+void fn_1x52eac(void)
 
 {
   int iVar1;

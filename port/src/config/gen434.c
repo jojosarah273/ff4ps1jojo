@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80125934.
- * Ground truth: src/func_80125934.c (byte-verified).
+/* FF4 source-port — interpreted module for sub_menu_x1a73_x1a75_texts_row_loo.
+ * Ground truth: src/sub_menu_x1a73_x1a75_texts_row_loo.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80125934(void)
+void sub_menu_x1a73_x1a75_texts_row_loo(void)
 {
     /* sub-menu: 0x1A73/0x1A75 texts, 80125130 row; loop L1259C4
        (6DE8/8274(0x1D)/8274(2) cells) on 5C64(0x202). */

@@ -24,7 +24,7 @@ L1242a8:
         cell_pull_c8(0x1A68);
         txt_cell(1);
         cell_put(0x5C);
-        func_80124358();
+        equip_status_row_x5a_x5c_x5b_windo();
         key_page(0xE4);
         row_page(0xE4);
         io_poll(5);

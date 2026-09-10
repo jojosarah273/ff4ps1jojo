@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8010E158.
- * Ground truth: src/func_8010E158.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_x7b_x7a_windows_x64_x8.
+ * Ground truth: src/battle_rows_x7b_x7a_windows_x64_x8.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8010E158(void)
+void battle_rows_x7b_x7a_windows_x64_x8(void)
 {
     /* battle rows: 0x7B/0x7A windows, 0x64/0x89 windows,
        8010543C/80102770/80172BA8/8011EA5C rows; loop L10E180 on
@@ -32,9 +32,9 @@ L10e180:
         open_row(4);
         latch(1);
         cell_put(0xD5);
-        func_8010543C();
-        func_80102770();
-        func_80172BA8();
+        fn_1x0543c();
+        fn_1x02770();
+        fn_1x72ba8();
         page(0x89);
         cell_set50_from54();
         tail(0x89);

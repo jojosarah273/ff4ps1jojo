@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801172DC.
- * Ground truth: src/func_801172DC.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_item_pick_key_ladders_on_c0.
+ * Ground truth: src/battle_item_pick_key_ladders_on_c0.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801172DC(void)
+void battle_item_pick_key_ladders_on_c0(void)
 {
     /* battle item pick: 5574 key ladders on 53C0/53D4 route the item
        rows (0x4/0x5/0x6/0x7 windows), 0x1705/0x1709 texts, 0x1804 save
@@ -84,9 +84,9 @@ L117544:
     io_poll(3);
     if (io_just() != 0)
         goto L11757C;
-    func_8010543C();
+    fn_1x0543c();
     return;
 L11757C:
-    func_80104934();
+    fn_1x04934();
     return;
 }

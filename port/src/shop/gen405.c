@@ -1,10 +1,10 @@
-/* FF4 source-port — interpreted module for func_80161900.
- * Ground truth: src/func_80161900.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x61900.
+ * Ground truth: src/fn_1x61900.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-void func_80161900(void) {
+void fn_1x61900(void) {
     cell_clear_bank(0x357C);
     wnd_open(0xA);
     label(0x357D);

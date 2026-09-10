@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80167BA0.
- * Ground truth: src/func_80167BA0.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_cast_driver_dd4_anim_rows_c.
+ * Ground truth: src/battle_cast_driver_dd4_anim_rows_c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80167BA0(void)
+void battle_cast_driver_dd4_anim_rows_c(void)
 {
     /* battle cast driver: 80167DD4 anim rows, 8014096C cast, 80167E44
        status block; loops L167BDC/L167C20/L167C70/L167CB0/L167D24. */
@@ -12,7 +12,7 @@ void func_80167BA0(void)
     sep();
 L167bdc:
     for (;;) {
-        func_80167DD4();
+        fn_1x67dd4();
         poll_t(0x10);
         if (io_just() != 0)
             break;
@@ -28,7 +28,7 @@ L167c20:
             break;
     }
     cell_clear_bank();
-    func_8014096C();
+    fn_1x4096c();
     latch(2);
     txt_draw_cur();
     wnd_open(4);
@@ -41,7 +41,7 @@ L167c70:
         break;
     }
     page_paint2_cur();
-    func_80167E44();
+    battle_class_status_screen_windows();
     cell_clear_bank();
     wnd_open(0x16);
 L167cb0:
@@ -65,7 +65,7 @@ L167d24:
             goto L167D84;
         row_open();
         row_sel_cell_cur();
-        func_80167DD4();
+        fn_1x67dd4();
         row_close();
     L167D84:
         cell_step();

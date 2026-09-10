@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8019592C.
- * Ground truth: src/func_8019592C.c (byte-verified).
+/* FF4 source-port — interpreted module for event_v0_gates_bc_rows_tail.
+ * Ground truth: src/event_v0_gates_bc_rows_tail.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8019592C(void)
+void event_v0_gates_bc_rows_tail(void)
 {
     /* event: v0 gates; 801960BC rows (3/4/5); 80196074 tail. */
     if (io_just() != 0)

@@ -9,7 +9,7 @@ void func_8011A690(void)
     io_poll(0xFB);
     if (io_go() != 0)
         goto La7a8;
-    func_80101230();
+    shop_own_row_x172c_text_x1700_x170();
     cell_clear_bank(0x1704);
     txt_cell(0x9D6);
     txt_draw(0x1702);
@@ -68,7 +68,7 @@ La7a8:
     label(0x172C);
     row_close2();
 La888:
-    func_8011AB18();
+    shop_main_xca_window_x1700_gate_pi();
     txt_set(0x1700);
     io_poll(3);
     if (io_just() != 0)
@@ -88,7 +88,7 @@ La8f8:
         goto La930;
     latch(1);
     txt_draw(0x170F);
-    func_80102F38();
+    fn_1x02f38();
     goto Laaa0;
 La930:
     poll_spin();
@@ -97,7 +97,7 @@ La930:
     latch(1);
     txt_draw(0x1712);
     cell_clear_bank(0x1715);
-    func_80102F70();
+    shop_buy_rows_x1715_x1706_x1716_x1();
     goto Laaa0;
 La970:
     poll_spin();
@@ -105,7 +105,7 @@ La970:
         goto La9a8;
     latch(1);
     txt_draw(0x1718);
-    func_80103030();
+    shop_rows_x1704_xac_x1701_x171b_x1();
     goto Laaa0;
 La9a8:
     poll_spin();
@@ -121,7 +121,7 @@ La9e0:
         goto Laa18;
     latch(1);
     txt_draw(0x1720);
-    func_801033E0();
+    fn_1x033e0();
     goto Laaa0;
 Laa18:
     poll_spin();
@@ -129,7 +129,7 @@ Laa18:
         goto Laa50;
     latch(1);
     txt_draw(0x1724);
-    func_801035B0();
+    fn_1x035b0();
     goto Laaa0;
 Laa50:
     latch(1);
@@ -138,7 +138,7 @@ Laa50:
     txt_cell(0x9D9);
     row_read(0x18);
     txt_draw(0x1705);
-    func_80102FF8();
+    fn_1x02ff8();
 Laaa0:
     open_row(0x79);
     open_row(0x7A);

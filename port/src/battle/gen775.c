@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801133B0.
- * Ground truth: src/func_801133B0.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_x60_xad4_xad5_texts_c.
+ * Ground truth: src/battle_rows_x60_xad4_xad5_texts_c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801133B0(void)
+void battle_rows_x60_xad4_xad5_texts_c(void)
 {
     /* battle rows: 0x60/0xAD4/0xAD5 texts, 8011356C row; loop
        L11340C on 5574(0x10). */
@@ -11,7 +11,7 @@ void func_801133B0(void)
     cell_pull_c8_lo(0xAD4);
     latch(0x48);
     txt_draw(0xAD5);
-    func_8011356C();
+    fn_1x1356c();
     wnd_fx_7d_b();
     latch(0x80);
     txt_draw(0x2115);

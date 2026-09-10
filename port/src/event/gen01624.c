@@ -1,18 +1,18 @@
-/* FF4 source-port — interpreted module for func_8018CA48.
- * Ground truth: src/func_8018CA48.c (byte-verified).
+/* FF4 source-port — interpreted module for event_v0_gate_a9dc_ab08_rows.
+ * Ground truth: src/event_v0_gate_a9dc_ab08_rows.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8018CA48(void)
+void event_v0_gate_a9dc_ab08_rows(void)
 {
     /* event: v0 gate; 8018A9DC/8018AB08 rows. */
     if (io_just() == 0)
         goto L18CA74;
-    func_8018A9DC();
+    event_v0_gate_picks_a75c_vs_a438_r();
     func_8018AB08();
     return;
 L18CA74:
-    func_8018A9DC();
+    event_v0_gate_picks_a75c_vs_a438_r();
     func_8018AB08();
     return;
 }

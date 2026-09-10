@@ -1,10 +1,10 @@
-/* FF4 source-port — interpreted module for func_8014B964.
- * Ground truth: src/func_8014B964.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x4b964.
+ * Ground truth: src/fn_1x4b964.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-void func_8014B964(void)
+void fn_1x4b964(void)
 
 {
   page_paint2(0xf285);

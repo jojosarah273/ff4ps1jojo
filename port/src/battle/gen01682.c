@@ -1,10 +1,10 @@
-/* FF4 source-port — interpreted module for func_80146028.
- * Ground truth: src/func_80146028.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x46028.
+ * Ground truth: src/fn_1x46028.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 extern u16 *D_8019ED48;
-void func_80146028(void)
+void fn_1x46028(void)
 {
     u8 *s = (u8 *)cell_state(0x8000);
     u8 *p = s + ((((u8)(s[0x47] + 9)) << 5) + 0xF6);

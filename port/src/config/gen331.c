@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8015D6C0.
- * Ground truth: src/func_8015D6C0.c (byte-verified).
+/* FF4 source-port — interpreted module for options_detail_xa6_xa9_xaa_xd2_win.
+ * Ground truth: src/options_detail_xa6_xa9_xaa_xd2_win.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8015D6C0(void)
+void options_detail_xa6_xa9_xaa_xd2_win(void)
 {
     /* options detail: 0xA6/0xA9/0xAA/0xD2 windows, 0x2005/0x2006/0x2004
        gates, 0x29EB/0x29E4 texts, 0x29C4/0x29F4 cells + 0x3535 title;

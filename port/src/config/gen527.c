@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80120A0C.
- * Ground truth: src/func_80120A0C.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_row_x29_x45_windows_x41_x1500.
+ * Ground truth: src/shop_row_x29_x45_windows_x41_x1500.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80120A0C(void)
+void shop_row_x29_x45_windows_x41_x1500(void)
 {
     /* shop row: 0x29/0x45 windows, 0x41/0x1500 texts, 801245B4 row;
        loop L120AFC on 5DA0(0x45)/5B8C(0x202). */

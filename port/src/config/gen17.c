@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80124704.
- * Ground truth: src/func_80124704.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x24704.
+ * Ground truth: src/fn_1x24704.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80124704(void)
+void fn_1x24704(void)
 {
     cell_cursor_dec();
     row_sync();

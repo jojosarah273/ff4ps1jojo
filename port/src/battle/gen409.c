@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801136D4.
- * Ground truth: src/func_801136D4.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_status_row_x79_x23_x20_wind.
+ * Ground truth: src/battle_status_row_x79_x23_x20_wind.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801136D4(void)
+void battle_status_row_x79_x23_x20_wind(void)
 {
     /* battle status row: 0x79/0x23/0x20 windows, 0xACF-0xAD8 texts,
        80119AC8/80115D2C/80115BCC/8011EA5C rows; loops L1136E4 and
@@ -33,7 +33,7 @@ L1136e4:
     L11379c:
         for (;;) {
             shop_view_run();
-            func_80119AC8();
+            battle_rows_d9d4_prep_gates_x80_x5();
             battle_window_24();
             page_open(0xAD2);
             poll_t(4);

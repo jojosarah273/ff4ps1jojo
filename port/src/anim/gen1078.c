@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8017E930.
- * Ground truth: src/func_8017E930.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_anim_twin_spin_loop_l17ea2c.
+ * Ground truth: src/battle_anim_twin_spin_loop_l17ea2c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8017E930(void)
+void battle_anim_twin_spin_loop_l17ea2c(void)
 {
     /* battle anim (twin): 80195120 + 80197208 spin loop (L17EA2C). */
     if (io_just() != 0)

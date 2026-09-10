@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8012E844.
- * Ground truth: src/func_8012E844.c (byte-verified).
+/* FF4 source-port — interpreted module for party_form_formation_screen_x1d_x1.
+ * Ground truth: src/party_form_formation_screen_x1d_x1.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8012E844(void)
+void party_form_formation_screen_x1d_x1(void)
 {
     /* party-form/formation screen: 0x1D/0x1F/0x23/0x25/0x21 stat cells
        (3A70/54D4/3F38(3A70(...)) row reads), 8012EAC0 commit; three
@@ -77,9 +77,9 @@ L2e8ec:
     }
     page(0x1D);
     row_open();
-    func_8012EAC0();
+    formation_row_x1d_x23_x25_x21_wind();
     row_close();
     tail(0x1D);
-    func_8012EAC0();
+    formation_row_x1d_x23_x25_x21_wind();
     return;
 }

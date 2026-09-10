@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801046F4.
- * Ground truth: src/func_801046F4.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_buy_rows_x1705_x7a_x79_window.
+ * Ground truth: src/shop_buy_rows_x1705_x7a_x79_window.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801046F4(void)
+void shop_buy_rows_x1705_x7a_x79_window(void)
 {
     /* shop buy rows: 0x1705/0x7A/0x79 windows, 0x6F8/0x1701/0x171B/
        0x1706/0x1719 texts, 800FF024 row; loop L104724 on 5574

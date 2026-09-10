@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80100BE0.
- * Ground truth: src/func_80100BE0.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_buy_row_x711_gate_x3d_x18_x19.
+ * Ground truth: src/shop_buy_row_x711_gate_x3d_x18_x19.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80100BE0(void)
+void shop_buy_row_x711_gate_x3d_x18_x19(void)
 {
     /* shop buy row: 0x711 gate, 0x3D/0x18/0x19/0x77 windows, 0xFE7/
        0x8FC texts, 80100B30/80100978 rows; loop L100C10 on
@@ -11,7 +11,7 @@ void func_80100BE0(void)
     txt_set(0x711);
     if (gate(0x202) == 0)
         return;
-    func_80100B30();
+    shop_rows_x1702_x3d_x3e_windows_x1();
     draw_pad_cur();
 L100c10:
     for (;;) {
@@ -20,7 +20,7 @@ L100c10:
         cell_poke0(cell_state(0xFE7));
         txt_draw(0x8FC);
         row_sync();
-        func_80100978();
+        fn_1x00978();
         row_done();
         io_poll_cur();
         if (io_just() != 0)

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8012BB68.
- * Ground truth: src/func_8012BB68.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x2bb68.
+ * Ground truth: src/fn_1x2bb68.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8012BB68(void)
+void fn_1x2bb68(void)
 {
     cell_push_c8_d58();
     row_read(0x3F);
@@ -13,7 +13,7 @@ void func_8012BB68(void)
     tail(0x4B);
     row_sync();
     row_open();
-    func_80120A0C();
+    shop_row_x29_x45_windows_x41_x1500();
     row_close();
     row_done();
     cell_cursor_dec();
@@ -47,7 +47,7 @@ void func_8012BB68(void)
     cell_fmt2(0x4B);
     row_open();
     row_sync();
-    func_80123320();
+    fn_1x23320();
     row_done();
     row_close();
     tail(0x48);

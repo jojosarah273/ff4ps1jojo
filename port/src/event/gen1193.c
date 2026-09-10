@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80187EC4.
- * Ground truth: src/func_80187EC4.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_ae8_gate_ca18_ae28_rows_dcd.
+ * Ground truth: src/battle_ae8_gate_ca18_ae28_rows_dcd.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80187EC4(void)
+void battle_ae8_gate_ca18_ae28_rows_dcd(void)
 {
     /* battle: 80188AE8(8) gate; 8018CA18/8018AE28 rows; 8018DCD8
        (0x4000) + 8018DFA0/8018DFC4/8018DFE8/80191858 block;
@@ -17,7 +17,7 @@ void func_80187EC4(void)
     if (io_just() != 0)
         return;
     func_8018CA18();
-    func_8018AE28();
+    event_v0_gate_tree_b1c8_spins_l18a();
     /* v0/v1 latch -> L187F58 */
     func_8018DCD8(0x4000);
     if (io_just() == 0)

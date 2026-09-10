@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80114680.
- * Ground truth: src/func_80114680.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x14680.
+ * Ground truth: src/fn_1x14680.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80114680(void)
+void fn_1x14680(void)
 {
     row_page(0x7A);
     row_read(7);

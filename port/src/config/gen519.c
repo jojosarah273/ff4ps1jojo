@@ -1,15 +1,15 @@
-/* FF4 source-port — interpreted module for func_8015F2B0.
- * Ground truth: src/func_8015F2B0.c (byte-verified).
+/* FF4 source-port — interpreted module for options_x289d_x38fe_x2709_x270a_te.
+ * Ground truth: src/options_x289d_x38fe_x2709_x270a_te.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8015F2B0(void)
+void options_x289d_x38fe_x2709_x270a_te(void)
 {
     /* options: 0x289D/0x38FE/0x2709/0x270A texts, 0xA9 window,
        80160AAC/80160B8C/8006508C/8015254C rows; 6434/53C0 gates. */
     txt_set(0x289D);
     cell_put(0xA9);
-    func_80160AAC();
+    options_banner_x2726_x2725_x28a2_x();
     txt_set(0x38FE);
     if (gate_cur() != 0)
         goto L15F308;
@@ -18,7 +18,7 @@ void func_8015F2B0(void)
     func_8006508C();
     return;
 L15F308:
-    func_80160B8C();
+    fn_1x60b8c();
     txt_set(0x38FE);
     io_poll(2);
     if (io_go() != 0)
@@ -38,7 +38,7 @@ L15F370:
     txt_draw(0x3945);
     txt_set(0x270A);
     txt_draw(0x3946);
-    func_8015254C();
+    options_b04_x2000_gates_v0_run_l15();
     page_open(0x3949);
     tail(0xA4);
     return;

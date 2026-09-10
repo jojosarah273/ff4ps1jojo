@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8014B044.
- * Ground truth: src/func_8014B044.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_x3523_text_loop_l14b05.
+ * Ground truth: src/battle_rows_x3523_text_loop_l14b05.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8014B044(void)
+void battle_rows_x3523_text_loop_l14b05(void)
 {
     /* battle rows: 0x3523 text; loop L14B058 on 54D4(3B04(0x3523))/
        5958(8). */

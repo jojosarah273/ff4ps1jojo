@@ -1,17 +1,15 @@
-/* FF4 source-port — interpreted module for func_80141240.
- * Ground truth: src/func_80141240.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x41240.
+ * Ground truth: src/fn_1x41240.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-
-extern void func_80141290(void);
-void func_80141240(void) {
+void fn_1x41240(void) {
     tail(0);
     draw_pad(0);
-    func_80141290();
+    battle_c3c_a70_b04_rows();
     draw_pad(0x40);
-    func_80141290();
+    battle_c3c_a70_b04_rows();
     draw_pad(0x80);
-    func_80141290();;
+    battle_c3c_a70_b04_rows();;
 }

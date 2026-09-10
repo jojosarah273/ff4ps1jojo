@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8018FA00.
- * Ground truth: src/func_8018FA00.c (byte-verified).
+/* FF4 source-port — interpreted module for event_s1_v0_v0_s1_latches_rows_wit.
+ * Ground truth: src/event_s1_v0_v0_s1_latches_rows_wit.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8018FA00(void)
+void event_s1_v0_v0_s1_latches_rows_wit(void)
 {
     /* event: s1/v0 + v0/s1 latches; 80190004(1)/80190078/80190088
        rows with 8018F0C8 polls; returns at L18FC9C. */

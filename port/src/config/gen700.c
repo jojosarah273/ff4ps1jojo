@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8013D428.
- * Ground truth: src/func_8013D428.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x3d428.
+ * Ground truth: src/fn_1x3d428.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8013D428(void)
+void fn_1x3d428(void)
 {
     draw_pad(0x1C);
     row_prep(0x20);

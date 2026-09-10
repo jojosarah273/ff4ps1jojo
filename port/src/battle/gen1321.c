@@ -1,21 +1,21 @@
-/* FF4 source-port — interpreted module for func_80141100.
- * Ground truth: src/func_80141100.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_c3c_b04_gates_bc_pair_rows.
+ * Ground truth: src/battle_c3c_b04_gates_bc_pair_rows.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80141100(void)
+void battle_c3c_b04_gates_bc_pair_rows(void)
 {
     /* battle: 3C3C/3B04 gates; 801411BC/80141240 pair rows. */
     cell_state_of();
     cell_state_of();
     if (io_just() == 0)
         goto L1411A8;
-    func_801411BC();
-    func_80141240();
+    battle_c3c_rows();
+    fn_1x41240();
     goto L1411A8;
 L141178:
-    func_801411BC();
-    func_80141240();
+    battle_c3c_rows();
+    fn_1x41240();
     return;
 L1411A8:
     return;

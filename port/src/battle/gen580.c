@@ -1,16 +1,16 @@
-/* FF4 source-port — interpreted module for func_80104E14.
- * Ground truth: src/func_80104E14.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_sell_rows_xb1_xa1_xd2_windows.
+ * Ground truth: src/shop_sell_rows_xb1_xa1_xd2_windows.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80104E14(void)
+void shop_sell_rows_xb1_xa1_xd2_windows(void)
 {
     /* shop sell rows: 0xB1/0xA1/0xD2 windows, 0x6A1/0x709 texts,
        80104F1C; 6434(2)/4120(2) gates. */
     row_page(0xB1);
     if (gate(2) == 0)
         goto L104EF4;
-    func_80104F1C();
+    shop_buy_row_x709_x1706_x1707_text();
     io_poll_cur();
     if (io_just() == 0)
         goto L104F04;

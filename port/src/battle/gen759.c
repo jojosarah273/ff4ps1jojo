@@ -1,5 +1,5 @@
-/* FF4 source-port — interpreted module for func_8014A9B0.
- * Ground truth: src/func_8014A9B0.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x4a9b0.
+ * Ground truth: src/fn_1x4a9b0.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
@@ -7,30 +7,23 @@
 
 
 
-
-
-extern int func_80148D58();
-extern int func_80148E08();
-extern int func_80148E80();
-extern int func_8014C96C();
-
-void func_8014A9B0(void)
+void fn_1x4a9b0(void)
 
 {
   int iVar1;
   
-  func_80148E08();
+  fn_1x48e08();
   latch(0x18);
-  func_80148E80();
+  fn_1x48e80();
   wnd_open(4);
   do {
     latch(0x80);
-    func_80148D58();
+    battle_rows_twin_two_f38_b04_pair();
     cell_step();
     poll_t(8);
     iVar1 = io_just();
   } while (iVar1 == 0);
-  func_8014C96C();
+  fn_1x4c96c();
   latch(4);
   txt_draw(0xf2a0);
   return;

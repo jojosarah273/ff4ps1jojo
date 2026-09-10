@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80169A18.
- * Ground truth: src/func_80169A18.c (byte-verified).
+/* FF4 source-port — interpreted module for config_map_name_screen_x64_x2_x4_x.
+ * Ground truth: src/config_map_name_screen_x64_x2_x4_x.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80169A18(void)
+void config_map_name_screen_x64_x2_x4_x(void)
 {
     /* config map-name screen: 0x64/0x2/0x4/0x6 windows, 0x3D1E/0x7D1B/
        0x7D19/0x7D1E/0x7D1D texts, 80169958/8016D4D8 rows; loops
@@ -15,7 +15,7 @@ void func_80169A18(void)
     io_poll(2);
     if (io_just() == 0)
         goto L169A70;
-    func_80169958();
+    shop_rows_xa0_x211a_texts_x7d1b_x7();
     return;
 L169A70:
     wnd_open(0x3D1E);
@@ -26,7 +26,7 @@ L169A70:
     txt_draw(0x7D1E);
     latch(0x80);
     txt_draw(0x7D1D);
-    func_8016D4D8();
+    config_map_x7d19_x36_x7d1e_x38_x7d();
     return;
 L169AC0:
     sep();

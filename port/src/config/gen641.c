@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801387D8.
- * Ground truth: src/func_801387D8.c (byte-verified).
+/* FF4 source-port — interpreted module for rows_x4e_x41_windows_x7fa_text_d0.
+ * Ground truth: src/rows_x4e_x41_windows_x7fa_text_d0.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801387D8(void)
+void rows_x4e_x41_windows_x7fa_text_d0(void)
 {
     /* rows: 0x4E/0x41 windows, 0x7FA text, 801224D0 row; loop
        L1388B4 on 3F94(3AB4(0x4E))/5C64(0x202) gates. */

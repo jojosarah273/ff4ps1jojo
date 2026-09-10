@@ -1,14 +1,14 @@
-/* FF4 source-port — interpreted module for func_80143668.
- * Ground truth: src/func_80143668.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_x1f_x34c3_x48_windows.
+ * Ground truth: src/battle_rows_x1f_x34c3_x48_windows.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80143668(void)
+void battle_rows_x1f_x34c3_x48_windows(void)
 {
     /* battle rows: 0x1F/0x34C3/0x48 windows, 8014A488 row; loop
        L1436A4 on 5574(0xFF)/5958(8). */
     latch(0x1F);
-    func_8014A488();
+    fn_1x4a488();
     sep();
 L1436a4:
     for (;;) {
@@ -20,7 +20,7 @@ L1436a4:
         txt_draw(0x48);
         row_open();
         latch(0x1F);
-        func_8014A488();
+        fn_1x4a488();
         row_close();
     L143708:
         cell_step();

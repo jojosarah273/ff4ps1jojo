@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8010C368.
- * Ground truth: src/func_8010C368.c (byte-verified).
+/* FF4 source-port — interpreted module for key_dialog_flow_for_a_status_subme.
+ * Ground truth: src/key_dialog_flow_for_a_status_subme.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8010C368(void)
+void key_dialog_flow_for_a_status_subme(void)
 {
     /* key-dialog flow for a status submenu. 9200/93DC pairs are the
        wait/read-input helpers; the v0 gates route confirm vs cancel tails;

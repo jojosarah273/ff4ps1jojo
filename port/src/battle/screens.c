@@ -2,7 +2,7 @@
  *
  * Battle menu screens (bytes-verified on the ladder lanes; exact
  * decodes). Primitive names follow the window layer.
- * Ground truth: src/func_80119DE4, 80119740, 8011DA88.
+ * Ground truth: src/shop_buy_x1700_gate_picks_d4_then, 80119740, 8011DA88.
  */
 #include <stdint.h>
 

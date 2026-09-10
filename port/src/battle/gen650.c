@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80118EF8.
- * Ground truth: src/func_80118EF8.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_x6_x1440_x1441_x1033_x.
+ * Ground truth: src/battle_rows_x6_x1440_x1441_x1033_x.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80118EF8(void)
+void battle_rows_x6_x1440_x1441_x1033_x(void)
 {
     /* battle rows: 0x6/0x1440/0x1441/0x1033/0x1034 texts/windows;
        loops L118F18 (5A90/53D4) and L118F78 (54D4(3C3C(6)) gates). */

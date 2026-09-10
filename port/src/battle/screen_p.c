@@ -33,7 +33,7 @@ L504:
         cell_put(0xE5);
         draw_pad(0xE600);
         latch(0xE);
-        func_80152640();
+        shop_rows_x82_x80_xe5_windows_loop();
         cell_fmt2(0x9A);
         latch(4);
         cell_put(0xA9);
@@ -129,7 +129,7 @@ L678:
     label(0x393D);
     wnd_open(0x258);
     label(0x393F);
-    func_8015236C();
+    fn_1x5236c();
     cell_push60(0x3941);
     row_info(0x9A);
 L824:
@@ -149,7 +149,7 @@ L824:
         draw_pad(0xB6C0);
     L88c:
         latch(0xE);
-        func_80152640();
+        shop_rows_x82_x80_xe5_windows_loop();
         txt_set(0x38EF);
         if (gate(0x202) != 0)
             goto L918;

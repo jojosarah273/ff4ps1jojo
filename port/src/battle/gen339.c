@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8014D780.
- * Ground truth: src/func_8014D780.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_item_flow_gate_routes_to_d7.
+ * Ground truth: src/battle_item_flow_gate_routes_to_d7.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8014D780(void)
+void battle_item_flow_gate_routes_to_d7(void)
 {
     /* battle item flow: 4248(8)/4120(2) gate routes to 8014D748 rows
        vs the 0x20/0x4200 alt rows; L14D7F8 renders 6CF4/81B0 cells and
@@ -18,7 +18,7 @@ void func_8014D780(void)
     row_read(0xF0);
     if (sel(0x202) != 0)
         goto L14D7F8;
-    func_8014D748();
+    fn_1x4d748();
     row_close2();
     row_close();
     return;

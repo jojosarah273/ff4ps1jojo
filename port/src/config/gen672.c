@@ -1,13 +1,13 @@
-/* FF4 source-port — interpreted module for func_8012C360.
- * Ground truth: src/func_8012C360.c (byte-verified).
+/* FF4 source-port — interpreted module for config_rows_c0a8_prep_x60_x45_wind.
+ * Ground truth: src/config_rows_c0a8_prep_x60_x45_wind.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8012C360(void)
+void config_rows_c0a8_prep_x60_x45_wind(void)
 {
     /* config rows: 8012C0A8 prep, 0x60/0x45 windows; 53C0 gate picks
        6764(0x60) fills. */
-    func_8012C0A8();
+    config_save_flow_x60_x45_windows_x();
     /* regcmp v0/v1 -> L12C41C */
     draw_pad(7);
     row_prep(0x20);

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80130F90.
- * Ground truth: src/func_80130F90.c (byte-verified).
+/* FF4 source-port — interpreted module for ability_equip_screen_twin_of_c74_b.
+ * Ground truth: src/ability_equip_screen_twin_of_c74_b.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80130F90(void)
+void ability_equip_screen_twin_of_c74_b(void)
 {
     /* ability/equip screen (twin of 80130C74): 1B83-1B93 texts, 0x28
        cursor window, 0x29 cells; 801308B4/8012FBB0/801206DC/80122D20
@@ -18,7 +18,7 @@ void func_80130F90(void)
     row_sel_cell2_cur();
     cell_poke0(cell_state(0x1B83));
     cell_poke0(cell_state(0x1B84));
-    func_801308B4();
+    ability_rows_x1d_x1e_windows_x45_x();
     cell_push_c8_d58(0x1560);
     txt_draw(0x1B89);
     sep_b();
@@ -35,7 +35,7 @@ void func_80130F90(void)
     config_row_b600();
     txt_set(0x1B89);
     wnd_open(0x44);
-    func_8012FBB0();
+    fn_1x2fbb0();
     draw_pad_cur();
     row_open();
     page(0x29);
@@ -48,10 +48,10 @@ void func_80130F90(void)
     row_close();
     draw_pad_cur();
     battle_rows_29();
-    func_80130AA4();
+    ability_detail_x1b87_x1b83_x1b84_t();
     txt_draw(0x1B93);
     draw_pad(0x1C8);
-    func_801206DC();
+    rows_f360_prep_x29_x1d_x1e_window();
     wnd_open(0x2E0);
     draw_pad(0x1000);
     equip_cells_render();

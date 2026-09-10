@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80105358.
- * Ground truth: src/func_80105358.c (byte-verified).
+/* FF4 source-port — interpreted module for rows_twin_of_x_f0_b0_texts_linear.
+ * Ground truth: src/rows_twin_of_x_f0_b0_texts_linear.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80105358(void)
+void rows_twin_of_x_f0_b0_texts_linear(void)
 {
     /* rows (twin of 80100894): 4x 65F0 + 85B0 texts; linear. */
     row_prep(0x20);

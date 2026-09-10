@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8012E33C.
- * Ground truth: src/func_8012E33C.c (byte-verified).
+/* FF4 source-port — interpreted module for formation_summary_xd9_xda_windows.
+ * Ground truth: src/formation_summary_xd9_xda_windows.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8012E33C(void)
+void formation_summary_xd9_xda_windows(void)
 {
     /* formation summary: 0xD9/0xDA windows, 0x43 window cells, 0x1B9C/
        0x1B9F/0x1B9D row texts, 80D0/53C0 gate; 81B0 cell pairs. */

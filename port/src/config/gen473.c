@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8015A784.
- * Ground truth: src/func_8015A784.c (byte-verified).
+/* FF4 source-port — interpreted module for options_value_row_x3558_x202f_x201.
+ * Ground truth: src/options_value_row_x3558_x202f_x201.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8015A784(void)
+void options_value_row_x3558_x202f_x201(void)
 {
     /* options value row: 0x3558/0x202F/0x2018 texts, 0xAD/0xA9/0xAA/
        0xAB windows, 8015ABEC/8015254C/8015A56C rows; 6434(2) gate
@@ -36,7 +36,7 @@ L15A844:
     label(0x3945);
     wnd_open(6);
     label(0x3947);
-    func_8015254C();
+    options_b04_x2000_gates_v0_run_l15();
     page_open(0x3949);
     tail(0xAB);
     options_cursor_cells();

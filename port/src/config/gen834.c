@@ -1,10 +1,10 @@
-/* FF4 source-port — interpreted module for func_80139AFC.
- * Ground truth: src/func_80139AFC.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x39afc.
+ * Ground truth: src/fn_1x39afc.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-void func_80139AFC(void)
+void fn_1x39afc(void)
 
 {
   row_prep(0x20);

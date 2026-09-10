@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80134FF4.
- * Ground truth: src/func_80134FF4.c (byte-verified).
+/* FF4 source-port — interpreted module for ability_config_screen_bb1_text_win.
+ * Ground truth: src/ability_config_screen_bb1_text_win.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80134FF4(void)
+void ability_config_screen_bb1_text_win(void)
 {
     /* ability/config screen: 1BB1 text, 45/46 windows; header renders
        (L135054 vs L13507C variants) with 80124298/80134FBC/801264C0/
@@ -13,7 +13,7 @@ void func_80134FF4(void)
     func_80134FBC();
     config_row_264e8();
     battle_mode_dispatch();
-    func_80126590();
+    fn_1x26590();
     goto L13507C;
 L135054:
     for (;;) {
@@ -34,7 +34,7 @@ L135054:
         latch(0x30);
         cell_put(0x46);
         config_pad_300();
-        func_80125934();
+        sub_menu_x1a73_x1a75_texts_row_loo();
         midrow_pad88_run();
         config_row_7800();
         battle_state_dc400();
@@ -75,7 +75,7 @@ L135054:
         cell_cursor_dec();
         row_close2();
         wnd_open_cur();
-        func_80120070();
+        open_depth_guard_in_the_menu_regio();
         animation_row_310();
         continue;
     L135268:

@@ -1,12 +1,12 @@
-/* FF4 source-port — interpreted module for func_8012D23C.
- * Ground truth: src/func_8012D23C.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x2d23c.
+ * Ground truth: src/fn_1x2d23c.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8012D23C(void)
+void fn_1x2d23c(void)
 {
     cell_clear_bank(0x1B27);
-    func_80122FF4();
+    fn_1x22ff4();
     row_page(0xE8);
     if (gate(0x8080) == 0)
         return;
@@ -17,11 +17,11 @@ void func_8012D23C(void)
     row_read(0x3F);
     if (sel(0x202) == 0)
         return;
-    func_801266F0();
-    func_801267A0();
+    rows_x100_x1c_x41_windows_f0_x89_c();
+    fn_1x267a0();
     midrow_paint_c();
     config_row_a600();
-    func_801240D0();
+    fn_1x240d0();
     midrow_pad88_run();
     battle_state_dc400();
     latch(0xC);
@@ -37,13 +37,13 @@ void func_8012D23C(void)
     func_801222A4();
     draw_pad_cur();
     wnd_open_cur();
-    func_80121124();
+    v0_s0_branch();
     func_80126458();
     latch(0x30);
     cell_put(0xC1);
     row_page(0xE8);
     draw_pad(0x898);
-    func_80124704();
+    fn_1x24704();
     midrow_paint_a();
     draw_pad_cur();
     battle_rows_sync();
@@ -53,62 +53,62 @@ void func_8012D23C(void)
     battle_state_dc400();
     anim_noop();
     config_row_b600();
-    func_8012DB9C();
+    config_saves_ef30_fba4_rows_xc3_xc();
     cell_push_c8_lo(0x60);
     row_read(0x3F);
     draw_pad(0x84);
-    func_80120A0C();
+    shop_row_x29_x45_windows_x41_x1500();
     draw_pad(0x88);
     page(0x60);
-    func_80123320();
+    fn_1x23320();
     draw_pad(2);
     cell_push_c8_sel(0x60);
     draw_pad(0x15C);
-    func_801206DC();
+    rows_f360_prep_x29_x1d_x1e_window();
     draw_pad(0x14);
     cell_push_c8_sel(0x60);
     draw_pad(0x412);
-    func_801206DC();
+    rows_f360_prep_x29_x1d_x1e_window();
     draw_pad(0x15);
     cell_push_c8_sel(0x60);
     draw_pad(0x492);
-    func_801206DC();
+    rows_f360_prep_x29_x1d_x1e_window();
     draw_pad(0x16);
     cell_push_c8_sel(0x60);
     draw_pad(0x512);
-    func_801206DC();
+    rows_f360_prep_x29_x1d_x1e_window();
     draw_pad(0x17);
     cell_push_c8_sel(0x60);
     draw_pad(0x592);
-    func_801206DC();
+    rows_f360_prep_x29_x1d_x1e_window();
     draw_pad(0x18);
     cell_push_c8_sel(0x60);
     draw_pad(0x612);
-    func_801206DC();
+    rows_f360_prep_x29_x1d_x1e_window();
     draw_pad(0x1B);
     cell_push_c8_sel(0x60);
     draw_pad(0x3AA);
-    func_801206DC();
+    rows_f360_prep_x29_x1d_x1e_window();
     draw_pad(0x28);
     cell_push_c8_sel(0x60);
     draw_pad(0x4AA);
-    func_801206DC();
+    rows_f360_prep_x29_x1d_x1e_window();
     draw_pad(0x22);
     cell_push_c8_sel(0x60);
     draw_pad(0x5AA);
-    func_801206DC();
+    rows_f360_prep_x29_x1d_x1e_window();
     draw_pad(0x1C);
     cell_push_c8_sel(0x60);
     draw_pad(0x434);
-    func_801206DC();
+    rows_f360_prep_x29_x1d_x1e_window();
     draw_pad(0x29);
     cell_push_c8_sel(0x60);
     draw_pad(0x534);
-    func_801206DC();
+    rows_f360_prep_x29_x1d_x1e_window();
     draw_pad(0x23);
     cell_push_c8_sel(0x60);
     draw_pad(0x634);
-    func_801206DC();
+    rows_f360_prep_x29_x1d_x1e_window();
     draw_pad(0x37);
     cell_push_c8_sel(0x60);
     cell_put(0x45);
@@ -124,34 +124,34 @@ void func_8012D23C(void)
     draw_pad(7);
     cell_push89_sel(0x60);
     draw_pad(0x288);
-    func_801208C8();
+    rows_x29_window_cells_x5a_x5e_wind();
     draw_pad(9);
     cell_push89_sel(0x60);
     draw_pad(0x292);
-    func_801208C8();
+    rows_x29_window_cells_x5a_x5e_wind();
     draw_pad(0xB);
     cell_push89_sel(0x60);
     draw_pad(0x308);
-    func_801208C8();
+    rows_x29_window_cells_x5a_x5e_wind();
     draw_pad(0xD);
     cell_push89_sel(0x60);
     draw_pad(0x312);
-    func_801208C8();
+    rows_x29_window_cells_x5a_x5e_wind();
     row_prep_close();
     sep();
     stat_sync();
     draw_pad(0x1D);
     cell_push_c8_sel(0x60);
     draw_pad(0x3B2);
-    func_80120774();
+    rows_x29_window_cells_x5a_x5b_x5d();
     draw_pad(0x2A);
     cell_push_c8_sel(0x60);
     draw_pad(0x4B2);
-    func_80120774();
+    rows_x29_window_cells_x5a_x5b_x5d();
     draw_pad(0x24);
     cell_push_c8_sel(0x60);
     draw_pad(0x5B2);
-    func_80120774();
+    rows_x29_window_cells_x5a_x5b_x5d();
     cell_push_c8_lo(0x60);
     row_read(0xC0);
     cell_put(0x45);
@@ -166,8 +166,8 @@ void func_8012D23C(void)
     draw_pad(1);
     cell_push_c8_sel(0x60);
     draw_pad(0x106);
-    func_80124DC8();
-    func_8012DC80();
+    rows_x29_x45_x46_windows_c_row_f94();
+    fn_1x2dc80();
     draw_pad(2);
     cell_push_c8_sel(0x60);
     io_poll(0x63);
@@ -240,11 +240,11 @@ L8b0:
     config_rows_163();
 La88:
     battle_row_45b();
-    func_80126830();
-    func_801240D0();
+    fn_1x26830();
+    fn_1x240d0();
     config_row_a600();
-    func_8011FF40();
-    func_80120CA4();
+    fn_1x1ff40();
+    fn_1x20ca4();
     config_row_f320();
     battle_state_dc400();
     midrow_paint_c();
@@ -257,12 +257,12 @@ La88:
     config_row_d600b();
     draw_pad_cur();
     wnd_open_cur();
-    func_80121124();
+    v0_s0_branch();
     cell_clear_bank(0x1BC2);
-    func_80122A9C();
-    func_80122A24();
+    config_rows_c_e2c_ef30_f1c_fb74_ro();
+    fn_1x22a24();
     midrow_pad88_run();
-    func_80120CA4();
-    func_801266F0();
+    fn_1x20ca4();
+    rows_x100_x1c_x41_windows_f0_x89_c();
     return;
 }

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8013C554.
- * Ground truth: src/func_8013C554.c (byte-verified).
+/* FF4 source-port — interpreted module for ability_skill_detail_twin_of_c094.
+ * Ground truth: src/ability_skill_detail_twin_of_c094.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8013C554(void)
+void ability_skill_detail_twin_of_c094(void)
 {
     /* ability/skill detail (twin of 8013C094): 1BB5/1BB6/1BB7 texts,
        0x46/0x45/0x60 windows, 8012B168/801266C8/8011F884/8013C4B4
@@ -182,7 +182,7 @@ L13c55c:
         row_prep_close();
         return;
     L13CA58:
-        func_8013C4B4();
+        fn_1x3c4b4();
         return;
     }
 }

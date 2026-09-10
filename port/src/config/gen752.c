@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801533FC.
- * Ground truth: src/func_801533FC.c (byte-verified).
+/* FF4 source-port — interpreted module for options_xa9_xab_windows_x1800_x180.
+ * Ground truth: src/options_xa9_xab_windows_x1800_x180.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801533FC(void)
+void options_xa9_xab_windows_x1800_x180(void)
 {
     /* options: 0xA9/0xAB windows, 0x1800/0x1801 texts; loop L153430
        on 67FC(0xAB)/54D4(3B04) gates. */

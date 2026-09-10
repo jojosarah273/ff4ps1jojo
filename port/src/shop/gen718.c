@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80166CA8.
- * Ground truth: src/func_80166CA8.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_rows_x1d_window_x30_x20_gates.
+ * Ground truth: src/shop_rows_x1d_window_x30_x20_gates.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80166CA8(void)
+void shop_rows_x1d_window_x30_x20_gates(void)
 {
     /* shop rows: 0x1D window + 4248(0x30/0x20) gates route the
        0xB8 window fills. */

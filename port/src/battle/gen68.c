@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8010F68C.
- * Ground truth: src/func_8010F68C.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_command_row_screen_x20_x24.
+ * Ground truth: src/battle_command_row_screen_x20_x24.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8010F68C(void)
+void battle_command_row_screen_x20_x24(void)
 {
     /* battle command-row screen: 0x20/0x24/0x7A/0x22 row windows,
        8010543C/80102770 sub-renders, 801105A4 + 80173780 commits;
@@ -56,8 +56,8 @@ L10f6ac:
         cell_fill_aa();
         latch(1);
         cell_put(0xD5);
-        func_8010543C();
-        func_80102770();
+        fn_1x0543c();
+        fn_1x02770();
         row_page(0x5C);
         sep_a();
         row_open_w(0xF);
@@ -73,7 +73,7 @@ L10f6ac:
         cell_put(0xC);
         latch(0x50);
         cell_put(0xE);
-        func_801105A4();
+        battle_rows_xc_xe_windows_x340_x34();
         row_page(0x5C);
         row_read(0xF);
         io_poll(0xF);
@@ -82,7 +82,7 @@ L10f6ac:
         latch(0x48);
         wnd_fx_pads();
     L10F8F4:
-        func_80173780();
+        fn_1x73780();
         row_page(0x7A);
         row_read(0x7F);
         if (sel(0x202) != 0)

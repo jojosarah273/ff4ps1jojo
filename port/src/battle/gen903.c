@@ -1,5 +1,5 @@
-/* FF4 source-port — interpreted module for func_8011EDA4.
- * Ground truth: src/func_8011EDA4.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x1eda4.
+ * Ground truth: src/fn_1x1eda4.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
@@ -10,7 +10,7 @@
 
 extern int func_8016EA1C();
 
-void func_8011EDA4(void)
+void fn_1x1eda4(void)
 
 {
   cell_cursor_dec();

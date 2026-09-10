@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80162490.
- * Ground truth: src/func_80162490.c (byte-verified).
+/* FF4 source-port — interpreted module for options_x390a_x397b_texts_xd6_xcd.
+ * Ground truth: src/options_x390a_x397b_texts_xd6_xcd.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80162490(void)
+void options_x390a_x397b_texts_xd6_xcd(void)
 {
     /* options: 0x390A/0x397B texts, 0xD6/0xCD windows, 8015A374 +
        80153374 rows. */

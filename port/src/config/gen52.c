@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8015DCA4.
- * Ground truth: src/func_8015DCA4.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x5dca4.
+ * Ground truth: src/fn_1x5dca4.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8015DCA4(void)
+void fn_1x5dca4(void)
 {
     sep();
     tail(0x8E);
@@ -43,14 +43,14 @@ LDCD4:
         row_read(4);
         if (sel(2) != 0)
             goto LDE00;
-        func_8015E464();
+        options_stat_row_xa6_xa9_xab_xe3_x();
         goto LDF48;
     LDE00:
         txt_cell(0x2004);
         row_read(8);
         if (sel(2) != 0)
             goto LDE30;
-        func_8015DFE0();
+        options_row_xa6_x90_windows_x2053();
         goto LDF48;
     LDE30:
         txt_cell(0x2006);
@@ -76,18 +76,18 @@ LDCD4:
         txt_cell(0x2006);
         if (gate(0x8080) != 0)
             goto LDF18;
-        func_8015E758();
+        options_row_x3540_x2003_texts_xa9();
         poll_spin();
         if (poll_go(0x202) != 0)
             goto LDFA8;
-        func_8015E6A4();
+        fn_1x5e6a4();
         goto LDF60;
     LDF18:
-        func_8015E758();
+        options_row_x3540_x2003_texts_xa9();
         poll_spin();
         if (poll_go(2) != 0)
             goto LDFA8;
-        func_8015E66C();
+        fn_1x5e66c();
         goto LDF60;
     LDF48:
         open_row(0xD6);

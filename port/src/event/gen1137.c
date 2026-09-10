@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801984B0.
- * Ground truth: src/func_801984B0.c (byte-verified).
+/* FF4 source-port — interpreted module for event_v0_gate_tree_x22_row_returns.
+ * Ground truth: src/event_v0_gate_tree_x22_row_returns.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801984B0(void)
+void event_v0_gate_tree_x22_row_returns(void)
 {
     /* event: v0 gate tree; 80198990(0x22) row; returns L1985E4. */
     if (io_just() != 0)

@@ -1,11 +1,11 @@
-/* FF4 source-port — interpreted module for func_80120DB4.
- * Ground truth: src/func_80120DB4.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x20db4.
+ * Ground truth: src/fn_1x20db4.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80120DB4(void)
+void fn_1x20db4(void)
 {
-    func_80124158();
+    fn_1x24158();
     cell_cursor_dec();
     row_open();
     wnd_open(54784);

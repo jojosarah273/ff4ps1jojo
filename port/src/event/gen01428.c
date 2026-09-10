@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80181DA4.
- * Ground truth: src/func_80181DA4.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_anim_d8_spin_loops_l181e04.
+ * Ground truth: src/battle_anim_d8_spin_loops_l181e04.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80181DA4(void)
+void battle_anim_d8_spin_loops_l181e04(void)
 {
     /* battle anim: 801824D8 spin loops L181E04/L181FF4 with
        80194640 rows; returns at L1820CC. */

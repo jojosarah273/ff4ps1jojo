@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801151BC.
- * Ground truth: src/func_801151BC.c (byte-verified).
+/* FF4 source-port — interpreted module for fn_1x151bc.
+ * Ground truth: src/fn_1x151bc.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801151BC(void)
+void fn_1x151bc(void)
 {
     latch(0x20);
     txt_draw(0xACF);
@@ -66,7 +66,7 @@ L5254:
         cell_put(0x8F);
         latch(0x60);
         cell_put(0x92);
-        func_80115488();
+        battle_rows_x79_xf3_xf5_xc_xe_wind();
         latch_cur();
         sep_b();
         cell_tick_sub(cell_state(0xF3));
@@ -78,7 +78,7 @@ L5254:
         for (;;) {
             row_page(0x79);
             row_sel_cell_cur();
-            func_80115684();
+            battle_rows_xef_xf1_xc_xe_x91_x8f();
             latch(0x20);
             cell_put(0x92);
             battle_rows_300();

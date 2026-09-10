@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80169958.
- * Ground truth: src/func_80169958.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_rows_xa0_x211a_texts_x7d1b_x7.
+ * Ground truth: src/shop_rows_xa0_x211a_texts_x7d1b_x7.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80169958(void)
+void shop_rows_xa0_x211a_texts_x7d1b_x7(void)
 {
     /* shop rows: 0xA0/0x211A texts + 0x7D1B/0x7D19/0x7D1E/0x7D1D
        texts, 8016D4D8 close; loop L169998 on 5958. */
@@ -27,6 +27,6 @@ L169998:
     txt_draw(0x7D1E);
     latch(0x20);
     txt_draw(0x7D1D);
-    func_8016D4D8();
+    config_map_x7d19_x36_x7d1e_x38_x7d();
     return;
 }

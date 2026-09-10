@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80178730.
- * Ground truth: src/func_80178730.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_anim_a8_x3_x2_rows_e8_spin.
+ * Ground truth: src/battle_anim_a8_x3_x2_rows_e8_spin.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80178730(void)
+void battle_anim_a8_x3_x2_rows_e8_spin(void)
 {
     /* battle anim: 801970A8 x3 / 80197168 x2 rows; 801971E8 spin
        loop on 0xE0/1/0x200. */

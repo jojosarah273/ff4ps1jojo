@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_8011F118.
- * Ground truth: src/func_8011F118.c (byte-verified).
+/* FF4 source-port — interpreted module for column_cells_x30_x2f_x2d_x31_windo.
+ * Ground truth: src/column_cells_x30_x2f_x2d_x31_windo.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_8011F118(void)
+void column_cells_x30_x2f_x2d_x31_windo(void)
 {
     /* column cells: 0x30/0x2F/0x2D/0x31 windows, 80122334 row;
        loop L11F178 on 5DA0(0x31)/5B8C(0x202). */
@@ -38,6 +38,6 @@ L11f178:
     row_page(0x2F);
     cell_pull_c8();
     row_done();
-    func_80122334();
+    rows_u16_d44_d58_swap_with_c_prep();
     return;
 }
