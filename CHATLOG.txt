@@ -405,3 +405,23 @@ All pushed.
   anim_cmd_tail); NM +4.
 - EXECUTE.md gains AVENUE 5 (resource ripping) with the ISO worklist.
 - Build: clean 1523 modules; config+battle boot exit 0; byte-match 827.
+
+=== 2026-09-10 02:53 ===
+**Font track closed (TTF default + swap), audio surveyed, Avenue-2 waves 6-7.**
+- SNES lineage confirmed: vanilla ROM font @0x05741d (55 tiles, A-Z a-z+3,
+  [row][0xff]); SquishBGone/ultima IPS deltas understood (ips.py).
+- Font DECISION: default = TTF bank (final-fantasy-iv.ttf rasterized by
+  tools/rip/ttf2bank.c into the 79-slot 8x8 1bpp layout + widths);
+  swap chain FF4_FONT -> ttf bank -> ps1 rip -> embedded; all
+  format-identical (fixed 8px cells + measured widths). Loader is
+  cwd-safe; config+battle exit 0 from root and port/.
+- Audio: XA-family only (stm music chunks, str/mv streams), no VAGp;
+  audio.py XA decoder = deferred track.
+- AVENUE 2: wave 6 (+13 bindings), wave 7 (+16 bindings, 6 new mirror
+  files, 10 gen-owned dups dropped) -> stubs 386. Corrected wave flow
+  recorded: NM-binding first (gen raw defs rename in place), new files
+  only when no func_<id>( def; nm dup-drop verifies.
+- STRUCTURE.md added (port domains vs classic FF4 layout); README
+  counts refreshed (1522 modules / 1415 interpreted).
+- Message-string decode remains OPEN (charset @0x23800 mapped; strings
+  likely compressed/elsewhere).
