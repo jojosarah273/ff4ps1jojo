@@ -222,6 +222,40 @@ def battle_sprites(data, rom, outdir):
         png_write(img, Path(outdir) / f"battle_tiles_pal{p}.png")
     return NPAL
 
+
+def decode4bpp(datab):
+    """SNES 4bpp: planes 0-1 rows 0-7, then planes 2-3 rows 0-7 (32B)."""
+    tiles = []
+    for off in range(0, len(datab) - 31, 32):
+        g = [[0] * 8 for _ in range(8)]
+        for r in range(8):
+            b0 = datab[off + r*2]; b1 = datab[off + r*2 + 1]
+            b2 = datab[off + 16 + r*2]; b3 = datab[off + 16 + r*2 + 1]
+            for x in range(8):
+                g[r][x] = ((b0 >> (7-x)) & 1) | ((b1 >> (7-x)) & 1) << 1 | \
+                          ((b2 >> (7-x)) & 1) << 2 | ((b3 >> (7-x)) & 1) << 3
+        tiles.append(g)
+    return tiles
+
+def characters(data, outdir):
+    obj = data["obj"]
+    names = ["Cecil","Kain","Rydia","Tellah","Edward","Rosa","Yang","Palom",
+             "Porom","Edge","Cid","Anna","Golbez","FuSoYa","?14","?15"]
+    for i in range(min(16, len(obj["characterGraphics"]), len(obj["characterPalette"]))):
+        td = b64(obj["characterGraphics"][i])
+        pal = palette_rgba(b64(obj["characterPalette"][i]))
+        tiles = decode4bpp(td)
+        cols = 12
+        img = [[(0, 0, 0, 255)] * (cols * 8) for _ in range(((len(tiles) + cols - 1) // cols) * 8)]
+        for t, g in enumerate(tiles):
+            tx, ty = t % cols, min(t // cols, len(img) - 1)
+            for r in range(8):
+                for c in range(8):
+                    ix = g[r][c]
+                    img[ty*8 + r][tx*8 + c] = pal[ix] if ix < len(pal) and pal[ix][:3] != (0, 0, 0) else (8, 10, 14, 255)
+        png_write(img, Path(outdir) / f"char_{i:02d}_{names[i]}.png", scale=3)
+    return len(obj["characterGraphics"])
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--json", default=str(DATA))
