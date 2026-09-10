@@ -20,6 +20,13 @@ MATCHED = ROOT / "expected" / "matched"
 sys.path.insert(0, str(ROOT / "tools"))
 from port_names import NM  # noqa: E402
 
+# reverse: semantic name -> id (unique names; keeps the catalog's id
+# links intact even when the rename touched the ground-truth comments)
+_REV = {}
+for _k, _v in NM.items():
+    _REV.setdefault(_v, []).append(_k)
+REV_UNIQ = {_v: _k[0] for _v, _k in _REV.items() if len(_k) == 1}
+
 
 def role_of(fid: str) -> str:
     p = SRC / (fid + ".c")
@@ -56,6 +63,24 @@ def main():
     ids = sorted(p.stem for p in SRC.glob("func_*.c"))
     for fid in ids:
         mod, fname = find_module(fid)
+        if not mod:
+            # recover via reverse manifest: build name -> module once
+            if "_FMOD" not in globals():
+                _fm = {}
+                for _p in PORT.joinpath("src").rglob("*.c"):
+                    if "device" in _p.parts:
+                        continue
+                    _t = _p.read_text()
+                    for _m in re.finditer(
+                            r"^(?:void|u8|u16|u32|s8|s16|s32|int|int32_t|uint32_t)"
+                            r"\s+(\w+)\s*\(", _t, re.M):
+                        _fm.setdefault(_m.group(1), str(_p.relative_to(PORT)))
+                globals()["_FMOD"] = _fm
+            _wanted = NM.get(fid[5:])
+            if _wanted and _wanted in globals()["_FMOD"]:
+                mod = globals()["_FMOD"][_wanted]
+                fname = _wanted
+                globals().setdefault("_RSOL", []).append(fid)
         bv = (MATCHED / (fid + ".o")).exists()
         role = role_of(fid)
         rows.append({
@@ -96,6 +121,7 @@ def main():
             r["role"] or ""))
     out = ROOT / "port" / "docs" / "functions.md"
     out.write_text("\n".join(lines) + "\n")
+    print("resolved via manifest:", len(globals().get("_RSOL", [])))
     print(f"wrote {out} ({len(rows)} rows)")
 
 
