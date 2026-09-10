@@ -3,22 +3,20 @@ _Read this first if the previous context was compacted. Everything here is
 also in git (this file)._
 
 ## STATE SNAPSHOT (latest verified numbers)
-- Phase A: **2516/2516 C-written (100.0%)**; whole src/ gcc-clean.
-- Byte-verified: **827 (32.9%)** — see port/docs/BYTE_MATCH_POLICY.md
-  (policy: oracle guard only, not a completion target).
-- Port: **1395+ modules (0 syntax failures)**; coverage 1473 funcs
-  (`port/docs/coverage.md`, `port/docs/functions.md` catalog).
-- Readability pass done: raw func_800F refs in gen modules cut
-  **3947 -> ~277 (93%)** via the `tools/port_names.py` manifest (151
-  semantic names, declared in ff4_window.h); db/ layer live in the
-  binary; typed state layer (ff4_state.h).
-- Native: `make -C port native` -> `port/build/ff4-native` runs BOTH
-  the config-menu state (`./build/ff4-native`) and the battle-menu
-  driver (`./build/ff4-native battle`), exit 0 under
-  SDL_VIDEODRIVER=dummy, consistent across repeated runs. Catalog +
-  register-machine mirrors now return host pointers into the g_vram_
-  sim (catalog_addr wrapper), so interpreted code derefs safely; the
-  fn-address-as-bank quirks map to the sim base.
+- Phase A: 2516/2516 C-written; byte-verified 827 (oracle guard).
+- Port: **1836 modules**; deck builds clean; stubs **155** (was 885 at
+  session start; the tail-binding + rows-domain waves collapsed it).
+- Manifest: **NM 1815 entries** (semantic names for the 800F family +
+  the 801x row machines); raw func_ refs in the gen deck fell from
+  ~6,600 to **748**.
+- Native: `make -C port native` -> build/ff4-native; config + battle
+  exit 0 from both CWDs after the runtime-collision fix (libc/SDL
+  exports excluded from stubs - memset interposition was the session's
+  flaky-segfault source).
+- Fonts: TTF default bank (swappable, format-safe); assets + tools
+  under port/assets + tools/rip.
+- Text: SNES DTE scheme ruled out for the PS1 banks; the 2-byte code +
+  index-table model stands; loader trace = the remaining decode key.
 ## KEY TOOLS (stable, don't rewrite from scratch)
 - `tools/port_rowmap.py` — maps a Phase A window-driven screen into an
   interpreted module (semantic names, ground truth, primitive table).

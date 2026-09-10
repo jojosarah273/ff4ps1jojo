@@ -425,3 +425,22 @@ All pushed.
   counts refreshed (1522 modules / 1415 interpreted).
 - Message-string decode remains OPEN (charset @0x23800 mapped; strings
   likely compressed/elsewhere).
+
+=== 2026-09-10 03:12 ===
+**Night session: tail-binding wave + rows domain + root-cause fix.**
+- TAIL BINDING: tools/tail_namer.py + NM registry -> 1,343 raw row-
+  machine defs renamed semantically (NM 1815); raw refs 6,600 -> 748.
+- ROWS DOMAIN: 307 no-def register machines mapped verbatim into
+  port/src/rows/ (role-comment names + dup suffix); stubs 386 -> 155.
+- ROOT-CAUSE FIX (the flaky segfaults all session): the stub generator
+  interposed libc (uint32_t memset() stub) -> SDL_Init crashed. The
+  generator now excludes libc/libm/SDL/pthread exports (with the deck's
+  `step` keep-listed). Config + battle exit 0 cleanly from any CWD.
+- Text: built the SNES DTE decoder from the SNES decomp's charTable;
+  ruled out the PS1 reusing it (only \pad false positives). PS1 model:
+  2-byte codes (charset @0x23800) + u16 index tables; strings likely
+  compressed/loader-loaded - recorded as the open decode key. The SNES
+  decoded corpus = the translation content reference.
+- Clean package: 1,836 modules, 155 stubs, config+battle 0/0; docs
+  (EXECUTE) refreshed; functions.md gt-id links take a cosmetic hit
+  from the rename (symbols/build unaffected).
