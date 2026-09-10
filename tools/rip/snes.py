@@ -179,6 +179,49 @@ def battle_scenes(data, outdir):
         made += 1
     return made
 
+
+def battle_sprites(data, rom, outdir):
+    """Extract the never-decoded battle-sprite region with its palettes
+    (tiles 0x0D0000-0x0D7FFF basis + palette table 0x0E7D00, 13 x 16
+    colors, bgr555 -> RGBA asset)."""
+    def bgr(v):
+        return ((v & 0x1F) * 255 // 31, ((v >> 5) & 0x1F) * 255 // 31,
+                ((v >> 10) & 0x1F) * 255 // 31, 255)
+    PT, NPAL = 0x0E7D00, 13
+    pal = []
+    for p in range(NPAL):
+        cur = []
+        for i in range(16):
+            v = rom[PT + p*32 + i*2] | (rom[PT + p*32 + i*2 + 1] << 8)
+            cur.append(bgr(v))
+        pal.append(cur)
+    raw = bytearray()
+    for p in pal:
+        for c in p:
+            raw += bytes(c)
+    Path(outdir / "battle_palette_table_13x16.rgba").write_bytes(bytes(raw))
+    def tile(idx):
+        g = [[0] * 8 for _ in range(8)]
+        base = 0x0D0000 + idx * 24
+        for r in range(8):
+            b0 = rom[base + r*2]; b1 = rom[base + r*2 + 1]; b2 = rom[base + 16 + r]
+            for x in range(8):
+                g[r][x] = ((b0 >> (7-x)) & 1) | ((b1 >> (7-x)) & 1) << 1 | \
+                          ((b2 >> (7-x)) & 1) << 2
+        return g
+    tiles = [tile(i) for i in range(512)]
+    for p in (0, 1, 3, 5):
+        cols = 48
+        img = [[(0, 0, 0, 255)] * (cols * 8) for _ in range(((len(tiles) + cols - 1) // cols) * 8)]
+        for i, g in enumerate(tiles):
+            tx, ty = i % cols, min(i // cols, len(img) - 1)
+            for r in range(8):
+                for c in range(8):
+                    ix = g[r][c]
+                    img[ty*8 + r][tx*8 + c] = pal[p][ix] if ix < 16 and pal[p][ix][:3] != (0, 0, 0) else (12, 14, 20, 255)
+        png_write(img, Path(outdir) / f"battle_tiles_pal{p}.png")
+    return NPAL
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--json", default=str(DATA))
