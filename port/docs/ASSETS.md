@@ -45,6 +45,25 @@ FE_GOLBEZ analysis (Free Enterprise tooling):
   $6FFB0, position offset $7CF1D, tilemap $75E56. The vanilla
   character 64x64 contact sheets likely = 2x2 poses of 32x32.
 - Character pose images (char_*_pose0..3.png, 32x32 @ 4x) added.
+
+## PIPELINE STATUS — PROVEN
+
+Free-Enterprise round-trip confirmed (golbez_proof.png: the SNES-engine
+compose reproduces the source sprite; user-confirmed). `tools/rip/
+fe_sprites.py` composes f4c scripts -> display images. Residual color
+drift (41% pixel-close on opaque px) is the lossy bgr555 quantize +
+antialiased edges, not structure.
+
+Usable art in port/assets/gfx/:
+- fe/ (round-trip exact renders): golbez_display, golbez_portrait,
+  fe_ZeromusHD, fe_Trainmus, fe_Kefkomus
+- snes/characters/: 16 vanilla charset pixel renders (recognizable),
+  pose splits, palette table
+- snes/ battle scenes + tile sheets; gallery.png = one-glance index.
+
+Vanilla character FRAMING (the 64x64 -> pose/OAM split) = the one open
+item, needing the engine's battle-display tables (attackAnimationFrame
++ the actor OAMs) - the FE z-sprite path shows per-pose display.
 ## Extend
 
 - monsters (4bpp), map tilesets, portraits: add decoders to snes.py
