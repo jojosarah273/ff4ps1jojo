@@ -557,7 +557,7 @@ Function catalog (every function, its port name, its byte-match status):
 `port/docs/functions.md`.
 
 ```
-port/src/       1,836 interpreted modules (fun 73.4%) (0 failures, gcc clean)
+port/src/       1,836 X failures, gcc clean)
   battle/       battle screens, targeting, spell/item-cast, menu root
   config/       options/status/store/formation screens + root driver
   shop/         store/confirm/detail screens + buy-sell machine
