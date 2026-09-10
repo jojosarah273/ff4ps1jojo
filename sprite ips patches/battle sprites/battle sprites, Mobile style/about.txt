@@ -1,0 +1,19 @@
+FFIV Ultima Mobile Game Style Battle Sprites
+--------------------------------------------
+by AerospaceCoot35, StrikerTheHedgefox, xJ4cks, gvdn, and Nicoc1991
+
+These character sprites are based on a discontinued Mobile app version of Final Fantasy IV.
+
+They were ripped by AerospaceCoot35 & StrikerTheHedgefox, set into spritesheets and modified by xJ4cks with help and advice from Nicoc1991, and hacked into the rom by xJ4cks.
+
+This is a work-in-progress set of character battle sprites. 
+These will be separated into per-character patches eventually!
+
+>> Please add the Golbez patch in this folder to a copy of FFIV Ultima only-- it will not work with other FFIV mods. This patch is also under development: it will be included in the main 
+
+>> gvdn's alternate DKC and Kydia art patches need to be applied after the main, all hero patch, or they will be written over by the main patch.
+
+
+Share thoughts at the FF4 Ultima Discord! Links are on the patcher website where you probably found these files. If not, it's at:
+
+https://ff4ultima.vercel.app/

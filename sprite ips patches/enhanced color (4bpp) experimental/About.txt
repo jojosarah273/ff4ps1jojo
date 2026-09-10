@@ -1,0 +1,18 @@
+Experimental Graphics Patches
+-----------------------------
+These hacks to provide 16 color palettes in the game
+are still under development.
+
+The Ultima Plus Team is not yet able to guarantee their fitness.
+When fully tested these patches will be move to the main archive-- 
+they are experimental right now.
+
+Please visit us in the "New Ultima RK sprites" thread under #game-art 
+in Ultima Discord if you are interested in reporting issues while 
+testing these enhanced graphics patches.
+
+https://discord.gg/4MqjwJt
+
+Thank you for your curiosity and understanding.
+
+- FF4 Ultima Plus graphics hacking community, 2025

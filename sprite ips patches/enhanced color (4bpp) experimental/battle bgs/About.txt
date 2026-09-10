@@ -1,0 +1,35 @@
+FINAL FANTASY 4 ULTIMA BATTLE BACKGROUNDS
+by Gedankenschild
+
+with help from
+StrikerTheHedgefox
+
+CHANGES: 
+- Imports much more detailed battle backgrounds from the "FF4 Mobile" game!
+The amount of colors used is doubled to 16, and the graphics are more complex.
+(The final battle is not changed.)
+
+FF4U 4bpp Battle Bgs - by Gedankenschild & StrikerTheHedgefox.ips
+
+EFFECT:  Dramatically improves battlefield images.
+
+CAVEATS: The final battle is not changed.
+Use the "FF4UP 4bpp Monsters and Battle BGs by Gedankenschild (Addendums)"
+if you want to also upgrade the final battle background.
+
+\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+>>>> You MUST use one of the 4bpp Monster patches,
+>>>> BEFORE using this... 
+Please see the "monsters" folder in the 
+"alternate graphics patches" folder.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Learn more here on our Discord:
+[ https://discord.com/channels/600408664381063191/841274385238851614/1461629565452681246 ]
+
+------------------------------------------------
+Please use this knowing it's a BETA version 
+and report any bugs to us in the Sprite Hacking 
+thread in the FF4 Ultima Discord!!
+
+Battlefields ported over in 2025 by Gedankenschild with help finding resources from StrikerTheHedgefox.

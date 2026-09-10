@@ -1,0 +1,22 @@
+FF4UP Canon Remaster Map Sprites
+
+Sprite work & hacking by epigonone, original hacking by Gedankenschild
+
+Using the 4bpp color expansion hack by Gedankenschild, epigonone added 
+NPC sprites from both the Pixel Remaster and WonderSwan Color editions 
+of FF4, creating this Canon Remaster set. The images and their coloring 
+is intended to match the most recent depictions of the heroes and the 
+world of FF4.
+
+
+2026
+FF4UP Canon Remaster Map Sprites v1.2
+
+
+2025
+FF4UP Canon Remaster Map Sprites v1.1
+
+
+If you enjoy this work, also check out epigonone's "FF4UP Modern Names", 
+which makes as much of the game's spells, enemies, and others terms align 
+with the current conventions (Scarmgilione vs Milon, etc, etc).

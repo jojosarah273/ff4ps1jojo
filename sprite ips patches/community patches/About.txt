@@ -1,0 +1,67 @@
+Experimental Graphics Patches
+-----------------------------
+
+File: portrait Pig Mini Toad (PSP Palettes).ips
+Author: epigonone
+
+Improves the portraits in the menu when characters have Pig, Mini, or Toad status.
+
+Community patch, not created by the Ultima Plus Team, nor tested by them.
+
+~~~~~~~
+
+
+File: FF4UP - GBA Battle BG Reimagined (by epigonone)
+
+"A downscaled port of FF4 GBA battle backgrounds.
+Made this one because some feedbacks said that the battle sprites looks off with gba battle background's higher density than the snes ones.
+
+To compensate with the downscaled loss, I tried to collect as much details as possible from FF4 T Edition's gba/snes/custom hybrid,
+Gedankenschild's gba and mobile hybrid,
+as well as some missing details taken directly from the og ff4 gba battle bg, and some gba field map tiles for consistency between battle and field.
+Adding manual tweaks on top to tie everything together.
+
+2 battle backgrounds, the underground cave and tower of babil arent changed because the gba only adds minor upgrades, and a downscaled version of those are worse than the original.
+Plus the original version of those 2 are already consistent with the ff4up gba simplified field maps patch."
+
+Community patch, not created by the Ultima Plus Team, nor tested by them.
+
+~~~~~~~
+File: FF4UP - GBA Field Maps v1.1 (by epigonone)
+
+"Collected assets are from ff4 advance, ff4 t edition, and some manual redraw to optimize ultima's limited space, and to bridge some gaps with ultima's custom layouts."
+
+Recent update adds more details and tile/color fixes.
+
+Community patch, not created by the Ultima Plus Team, nor tested by them.
+
+~~~~~~~
+
+File: FF4UP - GBA World Maps v2.1.ips
+Author: epigonone
+
+Many of the world map tiles are changed to resemble the  "Final Fantasy IV Advance" edition of FF4. Colors were kept as the SNES palettes, versus the brighter GBA presentation, and some ocean tiles are adapted to prevent visual glitches.
+
+No changes are made to the Lunar map tiles at this time.
+
+Recent update adds more details and tile/color fixes.
+
+Community patch, not created by the Ultima Plus Team, nor tested by them.
+
+~~~~~~~
+
+Please visit us in the "New Ultima RK sprites" thread under #game-art in Ultima Discord if you are have questions about these patches.
+
+https://discord.gg/4MqjwJt
+
+"
+These patches were created by the broader community and have not been tested by the FFIV Ultima Plus Developer/Moderation team so potential bugs may present themselves. 
+
+Prior to using a community-generated patch, please ensure you've made a backup of your ROM so you're able to revert back to an earlier version.
+
+These patches are provided as is and the Dev team makes no warranty or representation of any kind whatsoever. Any bugs or glitches that are encountered should be addressed with the creator of the patches and not the Ultima Plus team, as we have zero insight to where the code could be conflicting and are unable to accurately troubleshoot.
+"
+
+Thank you for your curiosity and understanding.
+
+- FF4 Ultima Plus graphics hacking community, 2025

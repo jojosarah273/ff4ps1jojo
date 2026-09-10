@@ -1,0 +1,45 @@
+NPC Change Patches
+by the FF4 Ultima hacking community
+~~~~~~~
+
+File: One Spoiler Boss Unique Sprite (by epigonone).ips
+Author: epigonone
+
+1) Gives a special cameo character their own map sprite. 
+2) The Calca Brina dolls are replaced by regular NPC kids to allow for this change.
+
+Community patch, not created by the Ultima Plus Team, nor tested by them.
+
+~~~~~~~
+
+File: FF4 Ultima Plus - Scholars be Bountiful (by red man).ips
+Author: red man
+
+1) Adds Scholar NPCs throughout the game.
+
+2) Nine existing NPCs were changed to the Scholar sprite; no dialog changes were made. A total of 12 Scholars now exist!
+
+
+Community patch, not created by the Ultima Plus Team, nor tested by them.
+
+~~~~~~~
+
+"
+These patches were created by the broader community and have not been tested by the FFIV Ultima Plus Developer/Moderation team so potential bugs may present themselves. 
+
+Prior to using a community-generated patch, please ensure you've made a backup of your ROM so you're able to revert back to an earlier version.
+
+This patch is provided as is and the Dev team makes no warranty or representation of any kind whatsoever. Any bugs or glitches that are encountered should be addressed with the creator of the patch and not the Ultima Plus team, as we have zero insight to where the code could be conflicting and are unable to accurately troubleshoot.
+"
+
+---------------------------------------------------------
+
+Please join us in the FF4 Ultima Discord at: https://discord.gg/4MqjwJt
+
+---------------------------------------------------------
+
+More info on FF4 Ultima:
+
+http://www.ff4ultima.com/
+http://romhackwiki.8bitfan.info
+https://www.romhacking.net/hacks/4134/

@@ -1,0 +1,30 @@
+Alternate Boss Graphics
+by epigonone
+
+Changes the image of enemy Golbez to have black armor instead of dark purple.
+Requires the 4bpp Monsters patch by Gedankenschild to be applied first!
+
+Black Zemus does a similar thing to the graphic for that boss. Same deal, it requires the 4bpp Monsters patch!
+
+-----------------------------------------------------------------
+
+"
+These patches were created by the broader community and have not been tested by the FFIV Ultima Plus Developer/Moderation team so potential bugs may present themselves. 
+
+Prior to using a community-generated patch, please ensure you've made a backup of your ROM so you're able to revert back to an earlier version.
+
+These patches are provided as is and the Dev team makes no warranty or representation of any kind whatsoever. Any bugs or glitches that are encountered should be addressed with the creator of the patches and not the Ultima Plus team, as we have zero insight to where the code could be conflicting and are unable to accurately troubleshoot.
+"
+
+
+---------------------------------------------------------
+
+Please join us in the FF4 Ultima Discord at: https://discord.gg/4MqjwJt
+
+---------------------------------------------------------
+
+More info on FF4 Ultima:
+
+http://www.ff4ultima.com/
+http://romhackwiki.8bitfan.info
+https://www.romhacking.net/hacks/4134/

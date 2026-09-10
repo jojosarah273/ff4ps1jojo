@@ -1,0 +1,39 @@
+FF4 Ultima 4bpp (16 color) portraits
+------------------------------------
+hacked in by Gedankenschild
+new image assets by epigonone, tsushiy, Nicoc1991, uraba, xJ4cks 
+
+In 2025 Gedankenschild pioneered a way to use 16 colors in the 
+portraits in FF4 Ultima. This hack requires extra space in the rom, 
+so the images were moved and new palettes were carved out.
+Because of this, all the heroes' faces get upgraded to 4bpp graphics.
+ALSO, these changes are completely incompatible with classic, 8 color 
+(3bpp) portraits, because the location in the game's rom is new.
+
+The original set was the Mobile portraits, sourced from the Android 
+& iOS release of FF4. Sprite hackers and artists in the the FF4 Ultima 
+Discord added more options, and created 2 more sets, based on the Pixel 
+Remaster version and on the Brave Exvius game's sprites.
+
+If you want to use the custom portraits, please use one of the main sets 
+first, then patch on any single portraits after that.
+-----------------------------
+16 COLOR (4bpp) PORTRAIT SETS
+
+FF4UP - 4bpp Portraits (Mobile Style) - by Gedankenschild
+
+FF4UP 4bpp Portraits (Brave Exvius Style) v3.2 - by Gedankenschild & epigonone
+FF4UP - 4bpp Portraits (Brave Exvius Style, no outline) - by Gedankenschild & epigonone
+
+FF4UP - 4bpp Portraits (PR Style) - by Gedankenschild, tsushiy, xJ4cks
+
+
+SINGLE PORTRAITS
+
+4bpp portrait Decil (URK, by Nicoc1991) - hacked in by xJ4cks
+4bpp portrait Pecil (OG, by uraba) - hacked in by xJ4cks
+
+
+Huge thanks to Gedankenschild for creating this hack! If you're interested in making
+custom 4bpp portraits for FF4 Ultima, join our Discord (link on the patcher site) and 
+you can find the offsets for the images in the rom in our Guides page, also on the patcher.
