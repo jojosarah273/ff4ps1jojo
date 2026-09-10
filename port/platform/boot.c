@@ -16,8 +16,28 @@ void config_menu_run(void);
 void battle_menu_run(void);
 
 #include <stdio.h>
+
+/* diagnose faults instead of dying silently */
+#include <stdio.h>
+#include <signal.h>
+#include <stdlib.h>
+#include <ucontext.h>
+static void segv_rip(int sig, siginfo_t *si, void *ctx)
+{
+    ucontext_t *uc = (ucontext_t *)ctx;
+    uintptr_t rip = uc->uc_mcontext.gregs[REG_RIP];
+    uintptr_t r2 = 0;
+    for (int i = 0; i < 15; i++)
+        if (uc->uc_mcontext.gregs[i] && r2 == 0) r2 = uc->uc_mcontext.gregs[i];
+    fprintf(stderr, "[port] SIGSEGV rip=%p addr=%p\n", (void *)rip, si->si_addr);
+    fflush(stderr);
+    exit(1);
+}
 int ff4_native_main(int argc, char **argv)
 {
+    struct sigaction sa;
+    sa.sa_sigaction = segv_rip; sa.sa_flags = SA_SIGINFO;
+    sigemptyset(&sa.sa_mask); sigaction(SIGSEGV, &sa, NULL);
     int frames = 0;
     int max = (argc > 1) ? 60 : 600;
 

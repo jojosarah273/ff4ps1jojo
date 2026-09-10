@@ -59,24 +59,24 @@ static void font_load_asset(void)
     for (i = 0; i < 3; i++) {
         if (!chain[i])
             break;
-        for (k = 0; k < 2; k++) {
-            if (k == 0) {
-                snprintf(paths[i], sizeof(paths[i]), "port/%s", chain[i]);
-            } else {
-                snprintf(paths[i], sizeof(paths[i]), "%s", chain[i]);
-            }
-            f = fopen(paths[i], "rb");
+        snprintf(paths[i], sizeof(paths[i]), "%s", chain[i]);
+        {
+            const char *trydirs[] = { "", "port/", "../", NULL };
+            for (k = 0; trydirs[k]; k++) {
+                snprintf(paths[i], sizeof(paths[i]), "%s%s", trydirs[k], chain[i]);
+                f = fopen(paths[i], "rb");
             if (!f)
                 continue;
-            got = fread(g_font_bank, 1, sizeof(g_font_bank), f);
-            fclose(f);
-            if (got == sizeof(g_font_bank)) {
-                g_font_loaded = 1;
-                break;
+                got = fread(g_font_bank, 1, sizeof(g_font_bank), f);
+                fclose(f);
+                if (got == sizeof(g_font_bank)) {
+                    g_font_loaded = 1;
+                    break;
+                }
             }
+            if (g_font_loaded)
+                break;
         }
-        if (g_font_loaded)
-            break;
         got = fread(g_font_bank, 1, sizeof(g_font_bank), f);
         fclose(f);
         if (got == sizeof(g_font_bank)) {

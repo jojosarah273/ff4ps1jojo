@@ -29,7 +29,7 @@ native: all boot
 boot: all
 	mkdir -p build/platform
 	$(CC) -O2 -Iinclude -I../include -I/usr/include/SDL2 -D_REENTRANT -c src/device/sdl_device.c -o build/device.o
-	$(CC) -O0 -Iinclude -I../include -c platform/boot.c -o build/platform/boot2.o
+	$(CC) -O0 -D_GNU_SOURCE -Iinclude -I../include -c platform/boot.c -o build/platform/boot2.o
 	$(CC) -O0 -Iinclude -I../include -c platform/main.c -o build/main.o
 
 clean:
