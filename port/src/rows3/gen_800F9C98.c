@@ -1,0 +1,14 @@
+/* FF4 source-port — interpreted module for func_800F9C98.
+ * Ground truth: src/func_800F9C98.c (byte-verified).
+ * Primitives: port/include/ff4_window.h.
+ */
+#include "ff4_window.h"
+uint32_t cell_clear_icon(void)
+{
+    u16 i;
+    for (i = 0x2100; i < 0x2200; i++)
+        *(u8 *)(0x800D0000u + i) = 0;
+    for (i = 0x4200; i < 0x4400; i++)
+        *(u8 *)(0x800D0000u + i) = 0;
+    return 0;
+}

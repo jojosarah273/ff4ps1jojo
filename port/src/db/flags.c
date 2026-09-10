@@ -221,3 +221,40 @@ void cell_flags_clr4(void)
 {
     D_8019ED68 &= 0xFB;
 }
+
+/* 800F5B4C: flags: cell!=0 -> keep else |2 (alias of 7728 shape). */
+void cell_flags_nz50_2(void)
+{
+    uint8_t x = D_8019ED68;
+    uint8_t r = (uint8_t)((x & 0x7D) | (D_8019ED50 & 0x80));
+    if (D_8019ED50 != 0)
+        r &= 0xFF;
+    else
+        r = (uint8_t)((x & 0x7D) | 0x2);
+    D_8019ED68 = r;
+}
+
+/* 800F5C14: flags from cell bit15 (hi). */
+void cell_flags_hi15(void)
+{
+    uint8_t x = D_8019ED68;
+    uint8_t r = (D_8019ED50 & 0x8000) ? (uint8_t)((x & 0x7D) | 0x80)
+                                      : (uint8_t)(x & 0x7D);
+    if ((uint16_t)D_8019ED50 != 0)
+        r &= 0xFF;
+    else
+        r |= 0x2;
+    D_8019ED68 = r;
+}
+
+/* 800F7AC8: flags: cell==0 -> |1 else keep (alias of 4FAC shape). */
+void cell_flags_zero50_2(void)
+{
+    uint8_t x = D_8019ED68;
+    uint8_t r = (uint8_t)((x & 0x7C) | (D_8019ED50 & 0xFF));
+    if (D_8019ED50 == 0)
+        r = (uint8_t)((x & 0x7C) | 0x1);
+    else
+        r &= 0xFF;
+    D_8019ED68 = r;
+}

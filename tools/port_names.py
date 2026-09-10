@@ -1834,6 +1834,19 @@ NM = {
     "801984B0": "event_v0_gate_tree_x22_row_returns",
     "80198630": "event_v0_gates_x22_row_returns_l19",
     "80198990": "fn_1x98990",
+    "battle_confirm_dialog": "800FC2AC",
+    "battle_title_rows_1004": "800FB3A0",
+    "cell_clear_icon": "800F9C98",
+    "cell_pair_inc": "800F6104",
+    "cell_push5c": "800F8CD4",
+    "cell_put5c": "800F8D40",
+    "cell_rows_420d": "800F9CE8",
+    "shop_banner_7f": "800FC8E8",
+    "shop_dispatch_c3c0": "800FC3C0",
+    "shop_pass_a460": "800FA460",
+    "shop_pass_b2e8": "800FB2E8",
+    "shop_rows_47": "800FBE44",
+    "shop_rows_dbbc": "800FDBBC",
 }
 
 # ids whose extern declarations should be dropped (declared by the header)
