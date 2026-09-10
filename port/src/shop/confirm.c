@@ -1,7 +1,7 @@
 /* FF4 source-port — shop/confirm.c
  *
- * Shop confirm screen (func_801031F0) and item-detail cells
- * (shop_detail_cells_xe_x19_x18_xc_wi). Exact decodes; ground truth src/func_801031F0.c,
+ * Shop confirm screen (detail_close) and item-detail cells
+ * (shop_detail_cells_xe_x19_x18_xc_wi). Exact decodes; ground truth src/detail_close.c,
  * src/shop_detail_cells_xe_x19_x18_xc_wi.c (byte-verified).
  */
 #include <stdint.h>

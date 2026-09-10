@@ -12,8 +12,8 @@ void shop_battle_v0_v1_v0_gates_pick_fe(void)
     /* v1/v0 gate -> L800FEFF4 / L800FEFC8 */
     if (io_just() == 0)
         return;
-    func_800FEE34();
-    func_800FEE34();
+    row_a();
+    row_a();
     goto L800FF014;
 L800FEFF4:
     config_rows_x1e0_x1e0_x19a_texts_x();

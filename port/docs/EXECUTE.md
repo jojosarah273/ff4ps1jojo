@@ -66,6 +66,11 @@ register machines (gate ladders, convolution loops, dispatch trees):
   names, no fabricated flow (see port/FORMAT.md + hand-written modules
   like port/src/gpu/bitgather.c as templates).
 
+WATCH: the 25-id "ambiguous-hint" sweep (rows2/) made the BATTLE path
+segfault (a raw-cell/shape issue in one of the mirrored rows) - rolled
+back; stubs 153, config+battle 0/0. If battle is re-derived later,
+verify with the segv diagnostic (module+offset on SIGSEGV).
+
 ## AVENUE 3 — BYTE-MATCH RESTRUCTURE (per-function, opportunistic)
 - Plateau at 827. Only lever: near-miss C re-shapes toward era-lane idioms.
 - Proven idioms: countdown `do{}while(--v != -1)` (got 3), pointer-return

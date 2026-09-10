@@ -7,7 +7,7 @@ column is the semantic 0x800F primitive name (tool:
 `bv` marks byte-verified. Unassigned rows are stubbed until the
 register machines are interpreted (Avenue 2).
 
-- functions: 2516   interpreted: 1848   stub-only: 668
+- functions: 2516   interpreted: 1847   stub-only: 669
 - byte-verified: 827   named primitives: 1812
 
 | id | name | module fn | module | bv | role |
@@ -491,7 +491,7 @@ register machines are interpreted (Avenue 2).
 | 80102FF8 | fn_1x02ff8 | fn_1x02ff8 | src/battle/gen1069.c | Y |  |
 | 80103030 | shop_rows_x1704_xac_x1701_x171b_x1 | shop_rows_x1704_xac_x1701_x171b_x1 | src/battle/gen658.c | Y | shop rows: 0x1704/0xAC/0x1701/0x171B/0x1705 texts/windows, 801030F8/800FD718/80102ED8 rows; loop L1030B0 on 5574(4). |
 | 801030F8 | fn_1x030f8 | fn_1x030f8 | src/battle/gen369.c | Y |  |
-| 801031F0 | - | txt_set | src/shop/confirm.c | Y | shop confirm: 0x1286 gate, 0x1704/0x1705/0xAC/0xE1/0xB1/0xAD/ 0xB7/0x79 windows, 8017559C/801030F8/80103310/800FD718 rows. |
+| 801031F0 | - | - | - | Y | shop confirm: 0x1286 gate, 0x1704/0x1705/0xAC/0xE1/0xB1/0xAD/ 0xB7/0x79 windows, 8017559C/801030F8/80103310/800FD718 rows. |
 | 80103310 | shop_rows_x7a_xb7_windows_e78_c_ro | shop_rows_x7a_xb7_windows_e78_c_ro | src/battle/gen657.c | Y | shop rows: 0x7A/0xB7 windows, 80102E78/8017559C rows; loops L103328 and L103370 (4008(0x10) reads). |
 | 801033E0 | fn_1x033e0 | fn_1x033e0 | src/battle/gen452.c | Y |  |
 | 801034E0 | shop_rows_b8_twin_of_x7a_xb8_windo | shop_rows_b8_twin_of_x7a_xb8_windo | src/battle/gen656.c | Y | shop rows (B8 twin of 80103310): 0x7A/0xB8 windows, 80102E78/8017559C rows. |

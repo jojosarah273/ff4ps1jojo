@@ -4,8 +4,6 @@
  */
 #include "ff4_window.h"
 
-extern int func_800F6630();
-
 void cell_0xfda4c(void)
 
 {

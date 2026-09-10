@@ -276,10 +276,8 @@ uint32_t func_800FDF34() { return 0; }
 uint32_t func_800FE028() { return 0; }
 uint32_t func_800FE110() { return 0; }
 uint32_t func_800FE978() { return 0; }
-uint32_t func_800FEE34() { return 0; }
 uint32_t func_800FFADC() { return 0; }
 uint32_t func_800FFB1C() { return 0; }
-uint32_t func_801031F0() { return 0; }
 uint32_t func_8011EB9C() { return 0; }
 uint32_t func_8011F300() { return 0; }
 uint32_t func_801222A4() { return 0; }

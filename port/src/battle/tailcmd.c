@@ -113,7 +113,7 @@ La9a8:
         goto La9e0;
     latch(1);
     txt_draw(0x171C);
-    func_801031F0();
+    detail_close();
     goto Laaa0;
 La9e0:
     poll_spin();

@@ -280,7 +280,7 @@ flow_screen:
     cell_flags_cmp(cell_state(0x171D));
     if (io_just() == 0)
         return;
-    func_801031F0();
+    detail_close();
     return;
     /* 1723/1720/1721 gate */
     txt_set(0x1701);

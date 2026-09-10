@@ -6,11 +6,6 @@
 extern int func_800F53D4();
 extern int func_800F5A90();
 
-extern int func_800F63BC();
-extern int func_800F654C();
-
-
-
 
 extern int func_800F8EBC();
 

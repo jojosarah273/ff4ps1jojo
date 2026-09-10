@@ -7,11 +7,7 @@ extern int func_800F53D4();
 
 
 extern int func_800F62BC();
-extern int func_800F654C();
-extern int func_800F6630();
 
-
-extern int func_800F8FB8();
 
 void cell_0xfec74(void)
 
