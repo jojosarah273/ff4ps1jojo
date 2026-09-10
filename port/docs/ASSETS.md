@@ -27,6 +27,15 @@ PS1 disc - exactly how SoH/SM64 pull graphics from the original ROM.
   SDL renderer for real backgrounds).
 - PS1 disc banks (ff4.bin etc.) stay the *code* reference (RESOURCES.md).
 
+
+## Characters (battle sprites) — status
+
+`characterGraphics` (0x1A8000, 4bpp) decodes to 64x64 pixel arrays per
+character (the decomp obj); rendered with per-char palettes ->
+`port/assets/gfx/snes/characters/char_*_pix.png` (verified: each reads
+as the character; the exact frame layout inside the 64x64 needs the
+OAM/animation tables - attackAnimationScript + battle display metadata
+- next step, not blocking).
 ## Extend
 
 - monsters (4bpp), map tilesets, portraits: add decoders to snes.py
