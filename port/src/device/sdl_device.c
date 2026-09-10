@@ -28,6 +28,7 @@ static SDL_Renderer *g_ren;
 static uint8_t g_cell[CELL_H][CELL_W][3]; /* RGB per cell */
 static uint32_t g_bank[0x4000];           /* catalog bank sim */
 static int g_cursor;
+static int g_battle;
 
 
 /* runtime font bank: swap-able asset (mod feature + the hook for the
@@ -35,6 +36,28 @@ static int g_cursor;
  * built-in typeset when the file is absent. */
 static unsigned char g_font_bank[79][8];
 static int g_font_loaded;
+static unsigned int g_bg[192 * 256];     /* 256x192 RGBA backdrop */
+static int g_bg_loaded;
+
+static void bg_load_asset(void)
+{
+    static const char *names[] = {
+        "port/assets/gfx/snes/battle_scene_00.rgba",
+        "assets/gfx/snes/battle_scene_00.rgba",
+        NULL,
+    };
+    FILE *f = NULL;
+    int i;
+    for (i = 0; names[i] && !f; i++)
+        f = fopen(names[i], "rb");
+    if (f) {
+        size_t got = fread(g_bg, 1, sizeof(g_bg), f);
+        fclose(f);
+        g_bg_loaded = (got == sizeof(g_bg));
+        if (g_bg_loaded)
+            SDL_SetRenderDrawBlendMode(g_ren, SDL_BLENDMODE_BLEND);
+    }
+}
 
 static void font_load_asset(void)
 {
@@ -379,6 +402,17 @@ void device_render(void)
     if (!g_ren) return;
     SDL_SetRenderDrawColor(g_ren, 0, 10, 20, 255);
     SDL_RenderClear(g_ren);
+    /* backdrop: the real SNES battle art, 2x into the 640x480 window */
+    if (g_bg_loaded && g_battle) {
+        SDL_Texture *tex = SDL_CreateTexture(g_ren, SDL_PIXELFORMAT_ABGR8888,
+                                             SDL_TEXTUREACCESS_STATIC, 256, 192);
+        if (tex) {
+            SDL_UpdateTexture(tex, NULL, g_bg, 256 * 4);
+            SDL_Rect dst = { 64, 48, 512, 384 };
+            SDL_RenderCopy(g_ren, tex, NULL, &dst);
+            SDL_DestroyTexture(tex);
+        }
+    }
     /* blit the cell screen (the hex-glyph ids written by cell_put) */
     for (y = 0; y < CELL_H; y++) {
         for (x = 0; x < CELL_W; x++) {
@@ -414,6 +448,7 @@ int device_open_window(const char *title, int w, int h)
         return -1;
     g_autopress = is_headless();
     font_load_asset();
+    bg_load_asset();
     /* accelerated first, software fallback (remote-desktop friendly) */
     g_ren = SDL_CreateRenderer(g_win, -1, 0);
     if (!g_ren)
@@ -445,3 +480,6 @@ void device_close(void)
 }
 
 void dbg_note(const char *m) { (void)m; }
+
+/* boot tells the device which menu mode is active (for the backdrop) */
+void device_set_mode(int battle) { g_battle = battle; }
