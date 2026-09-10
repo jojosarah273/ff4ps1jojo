@@ -64,6 +64,18 @@ Usable art in port/assets/gfx/:
 Vanilla character FRAMING (the 64x64 -> pose/OAM split) = the one open
 item, needing the engine's battle-display tables (attackAnimationFrame
 + the actor OAMs) - the FE z-sprite path shows per-pose display.
+
+## PIPELINE VERIFIED (final)
+
+FE round-trip confirmed with the user: the SNES compose renders the
+sprite correctly at EVERY canvas/placement tested (19x18 & 32x32
+canvases, offsets 0/2/3/6/7). `fe_sprites.compose` full-canvas output
+is the verified display; golbez_display.png (152x144) is correct.
+
+Characters: the 64x64 pixel renders (characters/char_*_pix.png) are the
+game's actual frames as decoded pixels; per-pose/frame splitting into
+the game's OAM pieces remains the one structural refinement (the FE
+model = one pose per display, pieces placed by OAM).
 ## Extend
 
 - monsters (4bpp), map tilesets, portraits: add decoders to snes.py
