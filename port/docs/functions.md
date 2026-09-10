@@ -7,8 +7,8 @@ column is the semantic 0x800F primitive name (tool:
 `bv` marks byte-verified. Unassigned rows are stubbed until the
 register machines are interpreted (Avenue 2).
 
-- functions: 2516   interpreted: 1416   stub-only: 1100
-- byte-verified: 827   named primitives: 237
+- functions: 2516   interpreted: 1415   stub-only: 1101
+- byte-verified: 827   named primitives: 241
 
 | id | name | module fn | module | bv | role |
 |----|------|-----------|--------|----|------|
@@ -2076,8 +2076,8 @@ register machines are interpreted (Avenue 2).
 | 8017F8F8 | battle_mode_dispatch | - | - |  |  |
 | 8017F954 | - | - | - |  |  |
 | 8017F9A8 | - | - | - |  | stack-swap trick: SP swapped through a scratch frame at 0x1F80037C before calling 8017F954 (params masked). |
-| 8017F9FC | - | - | - |  |  |
-| 8017FA2C | - | - | - |  | battle anim: v0 spin loops with 2x 80194640; closes 801971A8(1)/8017F9FC. |
+| 8017F9FC | anim_cmd_tail | - | - |  |  |
+| 8017FA2C | battle_anim_rows_a | - | - |  | battle anim: v0 spin loops with 2x 80194640; closes 801971A8(1)/8017F9FC. |
 | 8017FC50 | - | - | - |  | battle anim phase machine (0x398): t0/v0 regcmp spin ladder (L8017FC28..L8017FF94) — the four move segments each poll a t0 register until it |
 | 8017FFE8 | - | - | - |  | battle anim: v0 spin loops with 2x 80194640; 8017FC50(0xE0/ 0x80) row via v1/v0 gate; 801971A8(1)/8017F9FC tail. |
 | 80180314 | - | func_80180314 | src/event/gen1299.c |  | battle anim: v0 spin loops (L180338/L180350) then 80194640. |
@@ -2096,7 +2096,7 @@ register machines are interpreted (Avenue 2).
 | 80181300 | - | func_80181300 | src/event/gen01643.c |  | battle anim: v1/v0 gates; 801813C0 row at L18138C. |
 | 801813C0 | - | func_801813C0 | src/event/gen1294.c |  | battle anim: v0 gates; 801808D8 row loop L181450. |
 | 80181498 | - | func_80181498 | src/event/gen1293.c |  | battle anim: 801824D8 spin loops (L181500/L181578), 80194640 closes. |
-| 80181604 | - | func_80181604 | src/event/gen01642.c |  | battle anim: s4 gates; 801808D8/80180504/80180414/80180314 row loop L1816CC; closes 801971A8/8017F9FC. |
+| 80181604 | battle_anim_rows_b | - | - |  | battle anim: s4 gates; 801808D8/80180504/80180414/80180314 row loop L1816CC; closes 801971A8/8017F9FC. |
 | 801817EC | - | - | - |  | battle anim: t2/v0 regcmp spin loops (L1818E8/L1819BC/ L181A94/L181B6C); pure registers. |
 | 80181C20 | - | func_80181C20 | src/event/gen01641.c |  | battle anim: s5/v0 + s5/s6 latches; 801808D8 row loop; 801817EC then 801971A8/8017F9FC closes. |
 | 80181DA4 | - | func_80181DA4 | src/event/gen01428.c |  | battle anim: 801824D8 spin loops L181E04/L181FF4 with 80194640 rows; returns at L1820CC. |
@@ -2448,7 +2448,7 @@ register machines are interpreted (Avenue 2).
 | 80197038 | - | - | - |  |  |
 | 801970A8 | - | - | - |  | battle anim: 80196F2C + v0 gates -> L19711C / L197120. |
 | 80197168 | - | - | - |  | anim struct init: 8 u16s + 4 u8s zero run. |
-| 801971A8 | - | - | - |  |  |
+| 801971A8 | anim_pack_word | - | - |  |  |
 | 801971E8 | - | - | - | Y |  |
 | 80197208 | tex_link_packets | - | - | Y |  |
 | 80197248 | - | - | - | Y |  |
