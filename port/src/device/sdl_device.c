@@ -29,6 +29,28 @@ static uint8_t g_cell[CELL_H][CELL_W][3]; /* RGB per cell */
 static uint32_t g_bank[0x4000];           /* catalog bank sim */
 static int g_cursor;
 
+/* runtime font bank: swap-able asset (mod feature + the hook for the
+ * real data-table once the loader is traced). Falls back to the
+ * built-in typeset when the file is absent. */
+static unsigned char g_font_bank[79][8];
+static int g_font_loaded;
+
+static void font_load_asset(void)
+{
+    const char *path = getenv("FF4_FONT");
+    FILE *f;
+    size_t got;
+    if (!path)
+        path = "port/assets/font_ps1_letters_8x8.bin";
+    f = fopen(path, "rb");
+    if (!f)
+        return;
+    got = fread(g_font_bank, 1, sizeof(g_font_bank), f);
+    fclose(f);
+    if (got == sizeof(g_font_bank))
+        g_font_loaded = 1;
+}
+
 static input_state_t g_in;   /* host input latch (PS1 pad bits) */
 
 uint32_t io_just(void);
@@ -154,17 +176,13 @@ static void put_text(int x, int y, char c)
     const unsigned char *g;
     if (!g_ren) return;
     if (x < 0 || x >= CELL_W || y < 0 || y >= CELL_H) return;
-    /* prefer the confirmed PS1 typeset (A-Z a-z) over the generic */
+    /* prefer the runtime/static PS1 typeset (A-Z a-z 0-9 + symbols) */
     {
-        static int used_game;
         int li = ff4_glyph_index(c);
-        if (li >= 0) {
-            g = ff4_glyphs_8x8[li];
-            used_game = 1;
-        } else {
+        if (li >= 0)
+            g = g_font_loaded ? g_font_bank[li] : ff4_glyphs_8x8[li];
+        else
             g = font8x8[(unsigned char)c - 0x20];
-            (void)used_game;
-        }
     }
     for (j = 0; j < 8; j++) {
         for (i = 0; i < 8; i++) {
@@ -243,6 +261,7 @@ void     poll_go_cur(void)        { }
 void     io_poll(uint32_t k)      { (void)k; }
 void     io_poll_cur(void)        { }
 static int g_autopress;      /* headless smoke: self-press        */
+
 
 uint32_t io_just(void)
 {
@@ -358,6 +377,7 @@ int device_open_window(const char *title, int w, int h)
     if (!g_win)
         return -1;
     g_autopress = is_headless();
+    font_load_asset();
     /* accelerated first, software fallback (remote-desktop friendly) */
     g_ren = SDL_CreateRenderer(g_win, -1, 0);
     if (!g_ren)
