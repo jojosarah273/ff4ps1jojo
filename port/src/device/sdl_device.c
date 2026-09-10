@@ -41,6 +41,13 @@ static int g_bg_loaded;
 static unsigned int g_chars[72 * 240];   /* 5 party idle poses, 3x (240x72) */
 static int g_chars_loaded;
 
+/* sandbox (playable dev battler) surface: text overlay + sprite slots */
+static uint32_t g_ov[640 * 480];          /* ARGB text overlay */
+typedef struct { const unsigned int *px; int w, h, x, y; } bslot_t;
+static bslot_t g_slots[8];
+static int g_nslot;
+static int g_sandbox;
+
 static void ch_load_asset(void)
 {
     static const char *names[] = {
@@ -450,15 +457,44 @@ void device_render(void)
             SDL_DestroyTexture(tex);
         }
     }
-    /* blit the cell screen (the hex-glyph ids written by cell_put) */
-    for (y = 0; y < CELL_H; y++) {
-        for (x = 0; x < CELL_W; x++) {
-            SDL_Rect rr = { x * 8, y * 16, 7, 15 };
-            SDL_SetRenderDrawColor(g_ren,
-                g_cell[y][x][0] ? g_cell[y][x][0] : 8,
-                g_cell[y][x][1] ? g_cell[y][x][1] : 60,
-                g_cell[y][x][2] ? g_cell[y][x][2] : 90, 255);
-            SDL_RenderFillRect(g_ren, &rr);
+    /* blit the cell screen (the hex-glyph ids written by cell_put);
+       skipped in sandbox mode (the dev battler paints its own UI) */
+    if (!g_sandbox) {
+        for (y = 0; y < CELL_H; y++) {
+            for (x = 0; x < CELL_W; x++) {
+                SDL_Rect rr = { x * 8, y * 16, 7, 15 };
+                SDL_SetRenderDrawColor(g_ren,
+                    g_cell[y][x][0] ? g_cell[y][x][0] : 8,
+                    g_cell[y][x][1] ? g_cell[y][x][1] : 60,
+                    g_cell[y][x][2] ? g_cell[y][x][2] : 90, 255);
+                SDL_RenderFillRect(g_ren, &rr);
+            }
+        }
+    }
+    /* sandbox sprite slots (enemy etc); alpha blit */
+    for (int s = 0; s < g_nslot; s++) {
+        SDL_Texture *tex = SDL_CreateTexture(g_ren, SDL_PIXELFORMAT_ABGR8888,
+                                             SDL_TEXTUREACCESS_STATIC,
+                                             g_slots[s].w, g_slots[s].h);
+        if (tex) {
+            SDL_UpdateTexture(tex, NULL, g_slots[s].px, g_slots[s].w * 4);
+            SDL_SetTextureBlendMode(tex, SDL_BLENDMODE_BLEND);
+            SDL_Rect dst = { g_slots[s].x, g_slots[s].y,
+                             g_slots[s].w, g_slots[s].h };
+            SDL_RenderCopy(g_ren, tex, NULL, &dst);
+            SDL_DestroyTexture(tex);
+        }
+    }
+    /* text overlay (ARGB) */
+    {
+        SDL_Texture *tex = SDL_CreateTexture(g_ren, SDL_PIXELFORMAT_ARGB8888,
+                                             SDL_TEXTUREACCESS_STATIC,
+                                             640, 480);
+        if (tex) {
+            SDL_UpdateTexture(tex, NULL, g_ov, 640 * 4);
+            SDL_SetTextureBlendMode(tex, SDL_BLENDMODE_BLEND);
+            SDL_RenderCopy(g_ren, tex, NULL, NULL);
+            SDL_DestroyTexture(tex);
         }
     }
     SDL_RenderPresent(g_ren);
@@ -512,12 +548,69 @@ void device_close(void)
             fclose(f);
         }
     }
+    if (g_sandbox) {
+        FILE *f = fopen("/tmp/ff4_play.ppm", "wb");
+        if (f) {
+            fprintf(f, "P6\n640 480 255\n");
+            for (int y = 0; y < 480; y++)
+                for (int x = 0; x < 640; x++) {
+                    uint32_t v = g_ov[y * 640 + x];
+                    unsigned char px[3] = { (v >> 16) & 255, (v >> 8) & 255, v & 255 };
+                    fwrite(px, 1, 3, f);
+                }
+            fclose(f);
+        }
+    }
     if (g_ren) SDL_DestroyRenderer(g_ren);
     if (g_win) SDL_DestroyWindow(g_win);
     SDL_Quit();
 }
 
-void dbg_note(const char *m) { (void)m; }
+void device_set_sandbox(int on)   { g_sandbox = on; }
+int  device_autopress(void)       { return g_autopress; }
+uint32_t device_pad(void)         { return (uint32_t)g_in.pad; }
+void device_sprite_reset(void)    { g_nslot = 0; }
+void device_sprite(const unsigned int *px, int w, int h, int x, int y)
+{
+    if (g_nslot < 8) {
+        g_slots[g_nslot].px = px; g_slots[g_nslot].w = w;
+        g_slots[g_nslot].h = h; g_slots[g_nslot].x = x;
+        g_slots[g_nslot].y = y;
+        g_nslot++;
+    }
+}
+void device_overlay_clear(void)   { memset(g_ov, 0, sizeof g_ov); }
+
+void device_puts(int x, int y, uint32_t rgb, const char *s)
+{
+    /* 8x8 glyph at 2x into the ARGB overlay */
+    while (s && *s && x < 640) {
+        unsigned char c = (unsigned char)*s++;
+        const unsigned char *g;
+        if (c >= ' ' && c <= '~') {
+            /* sandbox text = plain ASCII (font8x8); the TTF bank is the
+               game charset and lacks space/punctuation slots */
+            g = font8x8[c - 0x20];
+        } else
+            g = font8x8[0];
+        for (int r = 0; r < 8; r++) {
+            unsigned char row = g[r];
+            for (int k = 0; k < 8; k++) {
+                if (!(row & (0x80 >> k)))
+                    continue;
+                int xx = x + k * 2, yy = y + r * 2;
+                if (xx >= 0 && yy >= 0 && xx + 1 < 640 && yy + 1 < 480) {
+                    g_ov[yy * 640 + xx] = rgb;
+                    g_ov[yy * 640 + xx + 1] = rgb;
+                    g_ov[(yy + 1) * 640 + xx] = rgb;
+                    g_ov[(yy + 1) * 640 + xx + 1] = rgb;
+                }
+            }
+        }
+        x += 16;
+    }
+}
+
 
 /* boot tells the device which menu mode is active (for the backdrop) */
 void device_set_mode(int battle) { g_battle = battle; }
