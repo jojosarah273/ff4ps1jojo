@@ -39,7 +39,7 @@ void func_80123D3C(void)
     open_row(0x42);
     wnd_open(0x1000);
     tail(0xDE);
-    func_8016EA7C();
+    shop_row_kick_f0();
     wnd_open(0x2000);
     tail(0x1D);
     wnd_open(0xF000);
@@ -51,7 +51,7 @@ void func_80123D3C(void)
     battle_rows_2115();
     midrow_paint_c();
     func_80123FB4();
-    func_80126330();
+    config_row_q18();
     func_80176E98();
     row_prep(0x20);
     func_8012214C();
@@ -62,7 +62,7 @@ void func_80123D3C(void)
     row_prep_close();
     battle_state_dc400();
     anim_noop();
-    func_80126330();
+    config_row_q18();
     open_row(0x84);
     open_row(0x85);
     open_row(0x88);

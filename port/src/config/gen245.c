@@ -48,7 +48,7 @@ Lde10:
     if (gate(0x8080) == 0) {
         open_row(0xE8);
         animation_row_310();
-        func_8012B168();
+        animation_row_300b();
         return;
     }
     cell_put(0xDA);
@@ -65,7 +65,7 @@ Lde10:
     animation_row_310();
     return;
 Ldf70:
-    func_80124298();
+    config_rows_e4();
     func_8012E5A8();
     row_prep(0x20);
     row_read2(0xDA);

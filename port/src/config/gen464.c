@@ -30,18 +30,18 @@ void func_80129F54(void)
     func_8011FB74();
     latch(3);
     func_80126920();
-    func_801263F0();
+    config_row_f320();
     battle_state_dc400();
     page_open(0x1BA5);
     tail(0x93);
-    func_8016EA7C();
+    shop_row_kick_f0();
     page_paint2(0x1BC9);
     wnd_open_cur();
     label(0x1B1D);
     func_80120F94();
     func_8012AAC0();
-    func_8016EA7C();
-    func_80120B6C();
+    shop_row_kick_f0();
+    battle_row_45b();
     func_8012A190();
     /* v0/v1 gate -> L12A180 */
     midrow_paint_c();
@@ -52,7 +52,7 @@ void func_80129F54(void)
     func_80120CA4();
     config_row_a600();
     func_80126830();
-    func_801263F0();
+    config_row_f320();
     battle_state_dc400();
     config_row_d600b();
     latch(0x1C);
@@ -69,6 +69,6 @@ void func_80129F54(void)
     cell_pull_c8_lo(0x212C);
     cell_clear_bank(0x1BC9);
     battle_mode_dispatch();
-    func_80120B6C();
+    battle_row_45b();
     return;
 }

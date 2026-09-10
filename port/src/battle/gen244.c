@@ -59,7 +59,7 @@ L1898:
     func_801490AC();
     func_80097438();
     latch(0x28);
-    func_8014D528();
+    battle_row_d568();
 L1968:
     for (;;) {
         gpu_driver_run();

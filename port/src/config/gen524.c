@@ -31,13 +31,13 @@ L134d38:
         cell_put(0xC1);
         cell_clear_bank(0x1BB1);
         cell_clear_bank(0x1BB2);
-        func_8016EA7C();
+        shop_row_kick_f0();
         latch(0x20);
         cell_put(0x3F);
         cell_clear_bank(0x1BB4);
         func_80123FB4();
         midrow_paint_c();
-        func_80126330();
+        config_row_q18();
         anim_noop();
         func_801378B0();
         latch(0xA);

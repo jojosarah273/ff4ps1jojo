@@ -9,9 +9,9 @@ void func_80134FF4(void)
        (L135054 vs L13507C variants) with 80124298/80134FBC/801264C0/
        80126590/80123FB4/80126528/80126458; sub-dispatchers 80120070 +
        8012B0D8; loops to L135054/L13507C. */
-    func_80124298();
+    config_rows_e4();
     func_80134FBC();
-    func_801264C0();
+    config_row_264e8();
     battle_mode_dispatch();
     func_80126590();
     goto L13507C;
@@ -21,7 +21,7 @@ L135054:
         func_80134FBC();
         config_row_26528();
         func_80126458();
-        func_801264C0();
+        config_row_264e8();
     L13507C:
         txt_set(0x1BB1);
         cell_put(0x45);

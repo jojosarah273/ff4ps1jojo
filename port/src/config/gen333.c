@@ -13,7 +13,7 @@ void func_801376F0(void)
     if (gate(0x202) != 0)
         goto L137730;
     row_close2();
-    func_80124D08();
+    config_rows_163();
     return;
 L137730:
     row_close2();
@@ -48,14 +48,14 @@ L137790:
     if (io_go() != 0)
         goto L137830;
     page(0x73);
-    func_80124D08();
+    config_rows_163();
     return;
 L137830:
     page(0x75);
     poll_t_cur();
     if (io_go() != 0)
         goto L137858;
-    func_80124D08();
+    config_rows_163();
 L137858:
     draw_pad_cur();
     func_801223A4();

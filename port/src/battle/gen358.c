@@ -23,7 +23,7 @@ void func_8014E7C4(void)
     txt_cell_cur();
     cell_put_cur();
     row_sel_cell_cur();
-    func_8014E984();
+    battle_row_26();
     sep_b();
     cell_tick_sub(cell_state_of());
     cell_pos_back(8);
@@ -33,7 +33,7 @@ void func_8014E7C4(void)
     txt_cell_cur();
     cell_put_cur();
     row_sel_cell_cur();
-    func_8014E984();
+    battle_row_26();
     sep_b();
     cell_tick_sub(cell_state_of());
     cell_pos_back(8);

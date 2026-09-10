@@ -28,7 +28,7 @@ void func_801324F8(void)
     wnd_open(0x188);
     draw_pad_cur();
     func_801223A4();
-    func_80124298();
+    config_rows_e4();
     func_801280D4();
     func_80132C0C();
     latch(0xFF);
@@ -129,7 +129,7 @@ L6d8:
             cell_push_c8_lo(0x60);
             draw_pad(0x152);
             func_80120A0C();
-            func_801264C0();
+            config_row_264e8();
             anim_noop();
             midrow_degen();
             row_page(1);

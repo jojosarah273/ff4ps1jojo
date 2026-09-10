@@ -93,7 +93,7 @@ L127178:
     L1273A4:
         txt_set(0x1A3C);
         func_80127668();
-        func_80124298();
+        config_rows_e4();
         func_801280D4();
     L1273C4:
         row_page(1);

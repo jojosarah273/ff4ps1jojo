@@ -1,5 +1,5 @@
-/* FF4 source-port — interpreted module for func_80120B6C.
- * Ground truth: src/func_80120B6C.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_row_45b.
+ * Ground truth: src/battle_row_45b.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
@@ -10,7 +10,7 @@
 
 extern int func_80120BDC();
 
-void func_80120B6C(void)
+void battle_row_45b(void)
 
 {
   latch(0x19);

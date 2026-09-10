@@ -27,7 +27,7 @@ L4E484:
 L4e4bc:
     for (;;) {
         latch(0x20);
-        func_8014E984();
+        battle_row_26();
         sep_a();
         row_open_w(0xD0);
         cell_draw_cur();
@@ -51,7 +51,7 @@ L4E544:
 L4e58c:
     for (;;) {
         latch(0x90);
-        func_8014E984();
+        battle_row_26();
         sep_a();
         row_open_w(0x18);
         cell_draw_cur();
@@ -73,12 +73,12 @@ L4E614:
 L4e64c:
     for (;;) {
         latch(8);
-        func_8014E984();
+        battle_row_26();
         sep_b();
         cell_pos_back(4);
         cell_draw_cur();
         latch(0xC);
-        func_8014E984();
+        battle_row_26();
         sep_b();
         cell_pos_back(6);
         cell_draw_cur();
@@ -92,7 +92,7 @@ L4E6D4:
         txt_cell_cur();
         cell_put_cur();
         row_sel_cell_cur();
-        func_8014E984();
+        battle_row_26();
         sep_b();
         cell_tick_sub(cell_state_of());
         cell_draw_cur();

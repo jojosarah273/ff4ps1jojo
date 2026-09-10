@@ -15,7 +15,7 @@ void func_8014AC3C(void)
     func_8013E5D0();
     cell_clear_bank();
     latch(1);
-    func_8014B9B4();
+    battle_row_34c4();
     txt_set(0x34C4);
     txt_draw_cur();
     txt_set(0x34C5);

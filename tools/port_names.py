@@ -182,7 +182,42 @@ NM = {
     "80176060": "battle_godtext_a",
     "80176F60": "shop_row_52",
     "80194700": "battle_anim_gate_a",
+    # ---- Avenue-2 wave 7 ----
+    "80120B6C": "battle_row_45b",
+    "80122F2C": "config_rows_5a",
+    "80124298": "config_rows_e4",
+    "80124D08": "config_rows_163",
+    "80126330": "config_row_q18",
+    "801263F0": "config_row_f320",
+    "801264C0": "config_row_264e8",
+    "8012B168": "animation_row_300b",
+    "8013EF78": "battle_row_d548",
+    "80140EA8": "event_row_38e6",
+    "8014B9B4": "battle_row_34c4",
+    "8014D528": "battle_row_d568",
+    "8014E984": "battle_row_26",
+    "80167604": "battle_row_8",
+    "8016B530": "shop_gate_d348",
+    "8016EA7C": "shop_row_kick_f0",
+    # ---- Avenue-2 wave 7 ----
+    "80120B6C": "battle_row_45b",
+    "80122F2C": "config_rows_5a",
+    "80124298": "config_rows_e4",
+    "80124D08": "config_rows_163",
+    "80126330": "config_row_q18",
+    "801263F0": "config_row_f320",
+    "801264C0": "config_row_264e8",
+    "8012B168": "animation_row_300b",
+    "8013EF78": "battle_row_d548",
+    "80140EA8": "event_row_38e6",
+    "8014B9B4": "battle_row_34c4",
+    "8014D528": "battle_row_d568",
+    "8014E984": "battle_row_26",
+    "80167604": "battle_row_8",
+    "8016B530": "shop_gate_d348",
+    "8016EA7C": "shop_row_kick_f0",
 }
+
 # ids whose extern declarations should be dropped (declared by the header)
 HEADER = Path(__file__).resolve().parent.parent / "port/include/ff4_window.h"
 

@@ -15,7 +15,7 @@ void func_80139CF4(void)
     wnd_open_cur();
     tail(0x8D);
     tail(0x8A);
-    func_8016EA7C();
+    shop_row_kick_f0();
     battle_row_88();
     latch(0x13);
     cell_pull_c8_lo(0x212C);

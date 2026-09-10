@@ -50,7 +50,15 @@ NEXT under Avenue 1:
 3. Drive deeper deck states (battle menus) once more window rows are
    interpreted (Avenue 2 pours into the same harness).
 
-## AVENUE 2 — REGISTER-MACHINE INTERPRETATION (the remaining ~500 funcs)
+## AVENUE 2 — REGISTER-MACHINE INTERPRETATION
+WAVE FLOW (corrected, from waves 6-7): the gen wave defines nearly all
+mid/row machines under RAW id names. The primary action is therefore:
+  1. NM-register id->semantic name,
+  2. run tools/port_names.py rename (the raw gen defs rename with it),
+  3. ONLY map a new file when no `func_<id>(` definition exists
+     (check: grep -rn "^..func_<id>(" port/src).
+No new files needed for the vast majority of the 386 remaining stubs -
+the work is naming + binding, verified by build + the nm dup-drop. (the remaining ~500 funcs)
 Mapped pool is exhausted (funcs with >=6 window calls). The rest are the
 register machines (gate ladders, convolution loops, dispatch trees):
 - Next families to hand-interpret (have partial decodes in src comments):

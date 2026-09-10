@@ -73,10 +73,10 @@ L12cf28:
         wnd_open(0x39A);
         func_8012FBB0();
         cell_clear_bank(0x1BC8);
-        func_80120B6C();
+        battle_row_45b();
         func_80169170();
         config_row_a600();
-        func_801263F0();
+        config_row_f320();
         row_prep(0x10);
         return;
     L12CF90:

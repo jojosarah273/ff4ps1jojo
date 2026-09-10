@@ -15,5 +15,5 @@ void func_8016694C(void)
     row_read(3);
     D_8019ED54[0] = D_8019ED44[0];
     D_8019ED40[0] = D_8019A12C[D_8019ED54[0]];
-    func_8014D528();
+    battle_row_d568();
 }

@@ -20,8 +20,8 @@ void func_8013389C(void)
     cell_cur_save54_b();
     tail(0xE5);
     func_8012AAC0();
-    func_801264C0();
-    func_8016EA7C();
+    config_row_264e8();
+    shop_row_kick_f0();
     row_page(0xE8);
     cell_cur_save54_b();
     tail(0x60);

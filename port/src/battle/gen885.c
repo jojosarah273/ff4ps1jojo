@@ -9,7 +9,7 @@ void func_801442BC(void)
        80140558 + cell writes; closes via 0x10 window. */
     cell_clear_bank();
     cell_clear_bank();
-    func_8013EF78();
+    battle_row_d548();
     wnd_open(0x78);
 L1442e4:
     for (;;) {

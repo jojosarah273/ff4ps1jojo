@@ -12,7 +12,7 @@ void func_80144F24(void)
     label_cur();
     label_cur();
     latch(3);
-    func_8014D528();
+    battle_row_d568();
 L144f6c:
     for (;;) {
         gpu_driver_run();

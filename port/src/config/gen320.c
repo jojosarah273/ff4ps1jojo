@@ -12,7 +12,7 @@ void func_80128598(void)
     if (gate(2) != 0)
         goto L1285D8;
     func_80128750();
-    func_8016EA7C();
+    shop_row_kick_f0();
     func_80126590();
     return;
 L1285D8:

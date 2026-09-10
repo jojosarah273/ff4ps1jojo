@@ -8,8 +8,6 @@ extern int func_80095A4C();
 
 
 
-extern int func_8014D528();
-
 void func_8014071C(void)
 
 {
@@ -21,7 +19,7 @@ void func_8014071C(void)
     cell_dec_bank(0xf411);
     func_80095A4C();
     latch(0x31);
-    func_8014D528();
+    battle_row_d568();
   }
   return;
 }

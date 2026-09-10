@@ -4,11 +4,6 @@
  */
 #include "ff4_window.h"
 
-
-
-
-extern int func_8016B530();
-
 void func_8016B470(void)
 
 {
@@ -16,25 +11,25 @@ void func_8016B470(void)
   
   wnd_open(0);
   draw_pad(8);
-  func_8016B530();
+  shop_gate_d348();
   wnd_open(2);
   draw_pad(0xc);
-  func_8016B530();
+  shop_gate_d348();
   wnd_open(4);
   draw_pad(0x10);
-  func_8016B530();
+  shop_gate_d348();
   wnd_open(6);
   draw_pad(0x14);
-  func_8016B530();
+  shop_gate_d348();
   wnd_open(8);
   draw_pad(0x18);
-  func_8016B530();
+  shop_gate_d348();
   txt_set(0x5b);
   iVar1 = gate(2);
   if (iVar1 == 0) {
     wnd_open(10);
     draw_pad(0x1c);
-    func_8016B530();
+    shop_gate_d348();
   }
   return;
 }

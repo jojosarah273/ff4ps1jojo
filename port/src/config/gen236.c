@@ -77,16 +77,16 @@ void func_8012BB68(void)
     cell_step();
     row_sync2(0x46);
     draw_pad(7);
-    func_80122F2C();
+    config_rows_5a();
     row_sync2(0x50);
     draw_pad(9);
-    func_80122F2C();
+    config_rows_5a();
     row_sync2(0x86);
     draw_pad(0xB);
-    func_80122F2C();
+    config_rows_5a();
     row_sync2(0x90);
     draw_pad(0xD);
-    func_80122F2C();
+    config_rows_5a();
     row_prep_close();
     return;
 }

@@ -64,7 +64,7 @@ void func_80132CFC(void)
     func_80150A30();
     animation_row_310();
     func_80124130();
-    func_801264C0();
+    config_row_264e8();
     row_prep(0x20);
     wnd_open(0xF600);
     draw_pad(0xC600);
@@ -80,11 +80,11 @@ void func_80132CFC(void)
     tail(0x96);
     page(0x41);
     tail(0x99);
-    func_801264C0();
-    func_8016EA7C();
+    config_row_264e8();
+    shop_row_kick_f0();
     wnd_open(0x800);
     tail(0xDE);
-    func_801263F0();
+    config_row_f320();
     func_80126480();
     wnd_open(0x1000);
     tail(0xDE);
@@ -100,7 +100,7 @@ void func_80132CFC(void)
     tail(0xD0);
     wnd_open(0x824F);
     tail(0xCD);
-    func_8012B168();
+    animation_row_300b();
     row_close();
     row_done();
     func_80121124();

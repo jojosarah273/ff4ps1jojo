@@ -10,6 +10,6 @@ void func_801410B0(void)
     latch(4);
     func_80141334();
     page_paint2(62490);
-    func_80140EA8();
+    event_row_38e6();
     page_paint2(62490);
 }

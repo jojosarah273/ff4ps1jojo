@@ -8,7 +8,6 @@
 extern int func_801425FC();
 extern int func_8014AEC4();
 extern int func_8014AF3C();
-extern int func_8014B9B4();
 
 void func_8014B1D0(void)
 
@@ -24,7 +23,7 @@ void func_8014B1D0(void)
     txt_set(0x3522);
     iVar1 = gate(2);
     if (iVar1 == 0) {
-      func_8014B9B4();
+      battle_row_34c4();
       func_8014AEC4();
       func_801425FC();
       func_8014AF3C();

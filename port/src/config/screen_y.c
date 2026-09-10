@@ -32,14 +32,14 @@ L13c55c:
         row_read(0x80);
         if (sel(2) != 0)
             goto L13C61C;
-        func_8012B168();
+        animation_row_300b();
         return;
     L13C61C:
         row_page_cur();
         row_read(0x80);
         if (sel(2) != 0)
             goto L13C64C;
-        func_8012B168();
+        animation_row_300b();
         goto L13C89C;
     L13C64C:
         row_page(1);

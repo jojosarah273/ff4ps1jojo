@@ -148,7 +148,7 @@ L03c:
     cell_clear_bank(0x1B87);
     wnd_open(0xFF18);
     tail(0x93);
-    func_8016EA7C();
+    shop_row_kick_f0();
     latch(5);
     cell_put(0xAB);
     latch(0x9A);
@@ -172,7 +172,7 @@ L03c:
     latch(0xD);
     sep_b();
     func_801222A4();
-    func_801264C0();
+    config_row_264e8();
     anim_noop();
     latch(0x28);
     cell_put(0xC2);
@@ -200,7 +200,7 @@ L03c:
     func_801240D0();
     func_801266F0();
     func_80126458();
-    func_8016EA7C();
+    shop_row_kick_f0();
     config_row_d600b();
     draw_pad_cur();
     wnd_open_cur();
@@ -208,7 +208,7 @@ L03c:
     func_80122A9C();
     config_row_26528();
     config_row_d600b();
-    func_80120B6C();
+    battle_row_45b();
     func_80177284();
     return;
 L3d0:

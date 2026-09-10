@@ -6,7 +6,7 @@
 void func_80143908(void)
 {
     func_80145278();
-    func_8013EF78();
+    battle_row_d548();
     latch(8);
     txt_draw(0xF326);
     func_80148C6C();

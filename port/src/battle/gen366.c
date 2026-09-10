@@ -5,7 +5,7 @@
 #include "ff4_window.h"
 void func_80144344(void)
 {
-    func_8013EF78();
+    battle_row_d548();
     page_paint2(0xF327);
     wnd_open(0x12);
     func_8014202C();

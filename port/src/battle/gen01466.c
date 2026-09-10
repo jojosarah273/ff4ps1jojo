@@ -4,12 +4,10 @@
  */
 #include "ff4_window.h"
 
-extern int func_80140EA8();
-
 void func_80140FB8(void)
 
 {
-  func_80140EA8();
+  event_row_38e6();
   page_paint2(0xf41a);
   return;
 }

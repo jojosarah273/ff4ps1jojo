@@ -46,7 +46,7 @@ L12C1E0:
     battle_rows_sync();
     row_done();
     battle_rows_29();
-    func_801263F0();
+    config_row_f320();
     func_8012C250();
     return;
 }

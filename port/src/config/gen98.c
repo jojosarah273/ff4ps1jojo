@@ -12,7 +12,7 @@ void func_8013D14C(void)
     txt_set(0x34C4);
     txt_draw_cur();
     latch(0x65);
-    func_8014D528();
+    battle_row_d568();
     func_801409BC();
     latch(2);
     txt_draw_cur();

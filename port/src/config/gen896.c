@@ -28,7 +28,7 @@ void func_80131534(void)
     func_80130884();
     func_8012F9D0();
     func_80130C74();
-    func_8012B168();
+    animation_row_300b();
     func_80126458();
     battle_mode_dispatch();
     anim_noop();

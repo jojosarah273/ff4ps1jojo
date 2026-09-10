@@ -10,7 +10,7 @@ void func_801420D4(void)
        L1422D8/L14230C loops with 8014202C / 80143D64 / 80143D14 /
        80142450 / 80142394. */
     battle_row_wrap();
-    func_8013EF78();
+    battle_row_d548();
     open_row_cur();
     latch(0x40);
     cell_put(2);

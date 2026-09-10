@@ -9,7 +9,7 @@ void func_80166218(void)
        (5A90(0x40)) and L16638C (70174/4120(0x202) rows), 80166458
        row; 0x5E window + 0x100 const. */
     latch(0x5E);
-    func_8014D528();
+    battle_row_d568();
     sep();
     label_cur();
     label_cur();

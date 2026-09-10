@@ -10,7 +10,7 @@ void func_80145220(void)
     latch(8);
     txt_draw(62246);
     battle_row_wrap();
-    func_8013EF78();
+    battle_row_d548();
     func_80167BA0();
     battle_row_wrap();
 }

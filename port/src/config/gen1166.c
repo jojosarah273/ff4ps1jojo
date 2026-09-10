@@ -18,7 +18,7 @@ void func_80137B18(void)
     midrow_paint_a();
     draw_pad(*D_80199230);
     battle_rows_29();
-    func_80126330();
+    config_row_q18();
     midrow_paint_c();
     latch(1);
     txt_draw(0x1B9A);

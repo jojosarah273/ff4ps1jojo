@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80124D08.
- * Ground truth: src/func_80124D08.c (byte-verified).
+/* FF4 source-port — interpreted module for config_rows_163.
+ * Ground truth: src/config_rows_163.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80124D08(void)
+void config_rows_163(void)
 {
     /* rows: 0x163 text, 0x41/0x29 windows, 80124B74 row; loop
        L124D70 on 6B68(0x163)/5958(7). */

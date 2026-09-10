@@ -9,7 +9,7 @@ void func_80127808(void)
     battle_row_88();
     func_801266A0();
     func_80123FB4();
-    func_80126330();
+    config_row_q18();
     midrow_paint_c();
     midrow_paint_b();
     func_80125A64();
@@ -62,8 +62,8 @@ L7998:
     draw_pad(0x62C);
     txt_set(0x16A2);
     page_open(0x16A0);
-    func_80124D08();
-    func_80126330();
+    config_rows_163();
+    config_row_q18();
     func_8012214C();
     battle_state_dc400();
     /* s2 branch */

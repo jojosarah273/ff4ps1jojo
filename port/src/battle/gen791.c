@@ -16,7 +16,7 @@ L14AFA4:
     txt_set(0x3522);
     if (gate(2) != 0)
         return;
-    func_8014B9B4();
+    battle_row_34c4();
     txt_set(0x34C4);
     cell_cursor_dec();
     txt_draw(0x34C4);

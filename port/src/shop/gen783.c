@@ -23,15 +23,15 @@ L1676dc:
     for (;;) {
         row_open();
         func_80140994();
-        func_80167604();
+        battle_row_8();
         func_8014096C();
-        func_80167604();
+        battle_row_8();
         func_80140944();
-        func_80167604();
+        battle_row_8();
         func_801409BC();
-        func_80167604();
+        battle_row_8();
         func_801409E4();
-        func_80167604();
+        battle_row_8();
         row_close();
         cell_set50_from54();
         if (poll_go(0x202) != 0)

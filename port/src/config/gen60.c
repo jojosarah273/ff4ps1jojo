@@ -102,7 +102,7 @@ L3bf38:
     func_8013C44C();
     midrow_pad88_run();
     midrow_paint_a();
-    func_801263F0();
+    config_row_f320();
     func_8011FF40();
     return;
 L3BFE4:

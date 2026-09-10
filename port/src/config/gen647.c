@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80124298.
- * Ground truth: src/func_80124298.c (byte-verified).
+/* FF4 source-port — interpreted module for config_rows_e4.
+ * Ground truth: src/config_rows_e4.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80124298(void)
+void config_rows_e4(void)
 {
     /* rows: 0xE4 window, 80124EAC cursor, 0x1A67/0x1A68 texts,
        80124358 row; loop L1242A8 on 5574(5). */

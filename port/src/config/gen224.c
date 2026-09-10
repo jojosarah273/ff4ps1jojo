@@ -61,7 +61,7 @@ L13B414:
     txt_draw(0x1BC7);
     midrow_paint_c();
     midrow_pad88_run();
-    func_80120B6C(1);
+    battle_row_45b(1);
 L13b458:
     for (;;) {
         func_8013B764();
@@ -97,7 +97,7 @@ L13b458:
             break;
         }
         func_8013B764();
-        func_801263F0();
+        config_row_f320();
         anim_noop();
         midrow_degen();
         row_page(1);

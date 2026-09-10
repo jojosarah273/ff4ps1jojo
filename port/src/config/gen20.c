@@ -75,7 +75,7 @@ La198:
             func_8012C980();
             midrow_pad88_run();
             func_80126418();
-            func_8016EA7C();
+            shop_row_kick_f0();
             row_done();
             row_prep(0x20);
             poll_pair_cur();
@@ -126,7 +126,7 @@ La198:
             func_8012C980();
             midrow_pad88_run();
             func_80126418();
-            func_8016EA7C();
+            shop_row_kick_f0();
             row_done();
             row_prep(0x20);
             poll_pair_cur();

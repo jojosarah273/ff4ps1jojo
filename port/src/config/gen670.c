@@ -39,7 +39,7 @@ L1399A4:
     func_800F9140(0x1340);
     row_prep_close();
     func_801399EC();
-    func_801264C0();
+    config_row_264e8();
     return;
 L1399DC:
     return;

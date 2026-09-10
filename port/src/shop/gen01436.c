@@ -6,12 +6,12 @@
 void func_801675A4(void)
 {
     latch(36);
-    func_8014D528();
+    battle_row_d568();
     func_8014096C();
-    func_80167604();
+    battle_row_8();
     func_80140944();
-    func_80167604();
+    battle_row_8();
     func_801409E4();
-    func_80167604();
+    battle_row_8();
     cell_clear_bank(61319);
 }

@@ -80,7 +80,7 @@ L560:
     config_row_b600();
     draw_pad_cur();
     func_8011FB74();
-    func_80120B6C();
+    battle_row_45b();
     func_8012219C();
     func_8011FF40();
     wnd_open(0x48C0);
@@ -129,12 +129,12 @@ L758:
     return;
 L890:
     func_80125934();
-    func_8012B168();
+    animation_row_300b();
     midrow_pad88_run();
     config_row_b600();
     draw_pad_cur();
     func_8011FB74();
-    func_80120B6C();
+    battle_row_45b();
     func_8011FF40();
     return;
 }

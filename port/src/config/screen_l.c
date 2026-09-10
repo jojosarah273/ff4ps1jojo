@@ -116,12 +116,12 @@ L3C4:
     if (io_just() != 0)
         goto L194;
     animation_row_310();
-    func_8012B168();
+    animation_row_300b();
     func_801320E8();
     midrow_paint_c();
     midrow_pad88_run();
     func_80130F90();
-    func_80120B6C();
+    battle_row_45b();
     midrow_pad88_run();
     cell_clear_bank(0x1B8B);
     cell_clear_bank(0x1B8C);
@@ -147,7 +147,7 @@ L4E4:
     txt_set(0x1BBB);
     if (gate(2) != 0)
         goto L50C;
-    func_8012B168();
+    animation_row_300b();
     goto L59C;
 L50C:
     txt_set(0x1B8A);
@@ -180,7 +180,7 @@ L5DC:
     latch_cur();
     cell_put(0xC1);
     animation_row_310();
-    func_8012B168();
+    animation_row_300b();
     config_row_b600();
     midrow_pad88_run();
     func_80126480();

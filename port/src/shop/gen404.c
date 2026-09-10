@@ -61,6 +61,6 @@ L166a44:
         break;
     }
     latch(0x20);
-    func_8014D528();
+    battle_row_d568();
     return;
 }

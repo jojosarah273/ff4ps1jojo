@@ -4,14 +4,12 @@
  */
 #include "ff4_window.h"
 
-extern int func_80140EA8();
-
 void func_80140E78(void)
 
 {
   cell_clear_bank(0xf44c);
   cell_clear_bank(0xf41a);
-  func_80140EA8();
+  event_row_38e6();
   return;
 }
 

@@ -19,7 +19,7 @@ void func_8012C250(void)
     txt_set(0x1B22);
     if (gate(0x202) != 0)
         goto L12C2D8;
-    func_8012B168();
+    animation_row_300b();
     midrow_pad88_run();
 L12C2D8:
     func_8012219C();

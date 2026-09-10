@@ -70,7 +70,7 @@ L38C:
     draw_pad_cur();
     battle_rows_29();
 L3C0:
-    func_801263F0();
+    config_row_f320();
     func_8011FF40();
     func_8012B0B0();
     midrow_paint_a();
@@ -192,14 +192,14 @@ L730:
     if (gate(0x202) != 0)
         goto L7DC;
     func_8012BA14();
-    func_801263F0();
+    config_row_f320();
     func_8011FF40();
 L7DC:
     cell_clear_bank(0x1A82);
     func_8012102C();
     draw_pad_cur();
     func_8011FB74();
-    func_801263F0();
+    config_row_f320();
     return;
 L814:
     midrow_paint_a();

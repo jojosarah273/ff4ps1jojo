@@ -14,7 +14,7 @@ void func_8013D720(void)
     txt_draw(0xF398);
     latch(0x30);
     txt_draw(0xF399);
-    func_8013EF78();
+    battle_row_d548();
     func_8014086C();
 L780:
     for (;;) {

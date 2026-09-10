@@ -9,7 +9,7 @@ void func_80138A6C(void)
        0x206 stat cells, then the L138BDC loop calling 80138D24 (the
        sub-dispatcher) and re-rendering 0x1B49. */
     func_80123D3C();
-    func_80124298();
+    config_rows_e4();
     latch(1);
     txt_draw(0x1A73);
     row_prep(0x20);
@@ -32,7 +32,7 @@ void func_80138A6C(void)
     page_paint2(0x1B49);
     func_80123FB4();
     midrow_paint_c();
-    func_80126330();
+    config_row_q18();
     func_80138CB0();
     func_80139AA4();
     anim_noop();

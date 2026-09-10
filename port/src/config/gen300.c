@@ -63,7 +63,7 @@ L122620:
         row_read(0x80);
         if (sel(2) != 0)
             goto L1227EC;
-        func_8012B168();
+        animation_row_300b();
         midrow_pad88_run();
         txt_set(0x1A76);
         if (io_press(cell_state(0x1A77)) != 0)

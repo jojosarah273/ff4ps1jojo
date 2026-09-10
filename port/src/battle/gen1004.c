@@ -8,7 +8,7 @@ void func_80145168(void)
     /* battle loop: 8013EF78/8013D12C/801449A0/80144C78/8014086C
        preps; L1451A0 loop runs 80140558 + 80144C78 + 801449D0 +
        8014D43C; exits via 8014D414. */
-    func_8013EF78();
+    battle_row_d548();
     battle_row_wrap();
     func_801449A0();
     func_80144C78();

@@ -17,12 +17,12 @@ void func_80135330(void)
     if (io_just() != 0)
         goto L1353C4;
     func_80125934();
-    func_8012B168();
+    animation_row_300b();
     midrow_pad88_run();
     config_row_b600();
     draw_pad_cur();
     func_8011FB74();
-    func_80120B6C();
+    battle_row_45b();
     func_8011FF40();
     return;
 L1353C4:
@@ -40,7 +40,7 @@ L1353C4:
     func_80135574();
     txt_draw(0x1B7D);
     midrow_pad88_run();
-    func_80120B6C();
+    battle_row_45b();
     cell_clear_bank(0x1BCB);
 L13546c:
     for (;;) {

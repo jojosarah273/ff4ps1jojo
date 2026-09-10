@@ -25,8 +25,8 @@ void func_8013BB0C(void)
     battle_rows_sync();
     midrow_paint_b();
     func_8012AAC0();
-    func_80126330();
-    func_8016EA7C();
+    config_row_q18();
+    shop_row_kick_f0();
     open_row(0x60);
     battle_mode_dispatch();
     battle_mode_dispatch();

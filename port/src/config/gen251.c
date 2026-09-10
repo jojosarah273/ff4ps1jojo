@@ -75,7 +75,7 @@ L1450:
         if (1) {
             func_80126990();
         }
-        func_8016EA7C();
+        shop_row_kick_f0();
         page(0x63);
         if (cell_flags_cmp(cell_state(0x67)) == 0)
             continue;

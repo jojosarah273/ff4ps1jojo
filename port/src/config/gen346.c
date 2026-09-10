@@ -74,9 +74,9 @@ L138d38:
         func_80124130();
         func_80124158();
         func_80138CB0();
-        func_8012B168();
+        animation_row_300b();
         animation_row_310();
-        func_801264C0();
+        config_row_264e8();
         config_row_26528();
         anim_noop();
         continue;

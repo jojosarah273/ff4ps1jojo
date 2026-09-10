@@ -77,7 +77,7 @@ E00:
     func_80129C54();
     latch(2);
     txt_draw(0x1B06);
-    func_801264C0();
+    config_row_264e8();
     func_80126458();
     config_row_26528();
     latch(0x19);
@@ -85,7 +85,7 @@ E00:
     wnd_open(0xFFFC);
     tail(0x90);
     tail(0x9C);
-    func_8016EA7C();
+    shop_row_kick_f0();
     anim_noop();
     func_80126590();
     cell_clear_bank(0x1BBA);
@@ -317,7 +317,7 @@ L5C8:
 L69C:
     func_80129838();
     func_80129C54();
-    func_801264C0();
+    config_row_264e8();
     func_8011FF40();
     battle_row_88();
     return;

@@ -1,5 +1,5 @@
-/* FF4 source-port — interpreted module for func_8014B9B4.
- * Ground truth: src/func_8014B9B4.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_row_34c4.
+ * Ground truth: src/battle_row_34c4.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
@@ -8,7 +8,7 @@
 
 extern int func_8014B9FC();
 
-void func_8014B9B4(void)
+void battle_row_34c4(void)
 
 {
   txt_set(0x34c4);

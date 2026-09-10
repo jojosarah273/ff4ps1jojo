@@ -62,6 +62,6 @@ L139874:
     page_paint(0x1441);
     func_80120E9C();
     func_8012AAC0();
-    func_801264C0();
+    config_row_264e8();
     return;
 }

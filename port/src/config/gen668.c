@@ -34,7 +34,7 @@ L13CB0C:
     midrow_paint_a();
     draw_pad_cur();
     func_8011FB74();
-    func_801263F0();
+    config_row_f320();
     func_8012219C();
     func_8011FF40();
     config_row_a600();
@@ -42,7 +42,7 @@ L13CB0C:
     battle_rows_sync();
     draw_pad_cur();
     func_8011FB74();
-    func_801263F0();
+    config_row_f320();
     sep_b();
     return;
 }

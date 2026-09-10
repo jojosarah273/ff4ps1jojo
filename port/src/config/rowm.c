@@ -11,7 +11,7 @@ void func_80136A58(void)
     func_80124130();
     func_80134E74();
     midrow_paint_c();
-    func_801264C0();
+    config_row_264e8();
     anim_noop();
     config_row_b600();
     draw_pad_cur();
@@ -21,13 +21,13 @@ void func_80136A58(void)
     draw_pad_cur();
     battle_rows_29();
     midrow_paint_b();
-    func_8016EA7C();
+    shop_row_kick_f0();
     func_8012AAC0();
     config_row_26528();
     config_row_b600();
     midrow_pad88_run();
     func_80126480();
-    func_80120B6C();
+    battle_row_45b();
 Lb24:
     for (;;) {
         latch(0x20);
@@ -103,7 +103,7 @@ Lc0c:
         func_8012AAC0();
         config_row_26528();
         func_801352F0();
-        func_801264C0();
+        config_row_264e8();
         func_801263C8();
     Ld4c:
         latch(0x20);

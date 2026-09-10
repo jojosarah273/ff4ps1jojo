@@ -34,7 +34,7 @@ L361ac:
         func_801240D0();
         func_80126458();
         func_801352F0();
-        func_801264C0();
+        config_row_264e8();
     L3628C:
         row_page(1);
         row_read(8);

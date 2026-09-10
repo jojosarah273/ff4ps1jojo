@@ -31,7 +31,7 @@ L7c24:
     latch(1);
     txt_draw(0x1A3C);
     func_80127668();
-    func_80124298();
+    config_rows_e4();
     func_801280D4();
     goto L7d40;
 L7cc8:
@@ -45,7 +45,7 @@ L7cc8:
     txt_draw(0x1A3C);
 L7d10:
     func_80127668();
-    func_80124298();
+    config_rows_e4();
     func_801280D4();
     func_80127168();
     if (io_go() == 0)
@@ -109,7 +109,7 @@ L7ed8:
     /* v1/v0 + s2 branches */
     func_8013836C();
 L7fcc:
-    func_801263F0();
+    config_row_f320();
     /* v0/s0, v0/s1 branches */
     func_80145AA0();
     func_80145AA0();

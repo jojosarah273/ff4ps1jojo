@@ -34,7 +34,7 @@ L144084:
     }
     battle_row_wrap();
     func_80140894();
-    func_8013EF78();
+    battle_row_d548();
 L14411C:
     for (;;) {
         gpu_driver_run();

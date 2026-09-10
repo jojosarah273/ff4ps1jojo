@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_80122F2C.
- * Ground truth: src/func_80122F2C.c (byte-verified).
+/* FF4 source-port — interpreted module for config_rows_5a.
+ * Ground truth: src/config_rows_5a.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80122F2C(void)
+void config_rows_5a(void)
 {
     /* rows with 6764/8768 writes on 0x5A-0x5E windows, 8011F3F8
        row; 0x45/0x48 cells. */

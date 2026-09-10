@@ -110,7 +110,7 @@ L2e0:
     page(0x37);
     draw_pad(0x412);
     row_prep_close();
-    func_80124D08();
+    config_rows_163();
     open_row(0xDB);
     row_page(0x5D);
     draw_pad(0x2D4);
@@ -126,7 +126,7 @@ L438:
     cell_set50_from40();
     row_read(1);
     cell_put(0x48);
-    func_80120B6C();
+    battle_row_45b();
     latch(0x30);
     cell_put(0x3F);
 L478:

@@ -20,7 +20,7 @@ void func_801390DC(void)
     midrow_paint_b();
     draw_pad_cur();
     battle_rows_sync();
-    func_801264C0();
+    config_row_264e8();
     config_row_26528();
     func_801391D4();
     return;

@@ -50,16 +50,16 @@ L26F74:
         /* v0/s0 gate -> L26FB4 (or L26F74 tail) */
         func_8013836C(1);
     L26FB4:
-        func_80124298();
+        config_rows_e4();
         func_801280D4();
         func_80127408();
         midrow_paint_a();
         draw_pad_cur();
         battle_rows_29();
-        func_80126330();
+        config_row_q18();
         /* v0/s0 gate -> L27048 / L270E8 */
         func_80128750();
-        func_8016EA7C();
+        shop_row_kick_f0();
         goto L270E8;
     L27048:
         func_80128598();

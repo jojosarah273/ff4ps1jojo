@@ -96,7 +96,7 @@ L288:
         draw_pad_cur();
         battle_rows_sync();
         func_80126458();
-        func_801263F0();
+        config_row_f320();
         page_paint2(0x1BAD);
         row_prep(0x20);
         wnd_open(0xC600);
@@ -105,7 +105,7 @@ L288:
         battle_wait_just(0x7E7E);
         row_prep_close();
         func_80124130();
-        func_801264C0();
+        config_row_264e8();
         latch(0x7A);
         cell_pull_c8_lo(0x210A);
         open_row(0x96);
@@ -113,7 +113,7 @@ L288:
         midrow_paint_a();
         goto L61c;
     L614:
-        func_801263F0();
+        config_row_f320();
     L61c:
         latch_cur();
         stat_sync();
@@ -137,7 +137,7 @@ L288:
         latch(0x60);
         cell_put(0x45);
         config_pad_300();
-        func_801263F0();
+        config_row_f320();
         anim_noop();
         midrow_degen();
         row_page(1);
@@ -177,7 +177,7 @@ L288:
         func_8013389C();
         animation_row_310();
         func_80124130();
-        func_801264C0();
+        config_row_264e8();
         anim_noop();
         continue;
     L86c:
