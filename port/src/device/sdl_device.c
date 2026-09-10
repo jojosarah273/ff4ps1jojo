@@ -37,18 +37,53 @@ static int g_font_loaded;
 
 static void font_load_asset(void)
 {
+    /* default font chain (swappable without a rebuild):
+     *   1. FF4_FONT=<path>         explicit override (the mod hook)
+     *   2. font_ff4ttf_8x8.bin     the TTF recreation (default)
+     *   3. font_ps1_letters_8x8.bin the confirmed PS1 rip (alternate)
+     *   4. embedded static table   last resort
+     * All banks share the 79-slot 8x8 1bpp layout, so swapping never
+     * changes message formatting (fixed cell grid + measured widths). */
+    static const char *chain[] = {
+        "port/assets/font_ff4ttf_8x8.bin",
+        "port/assets/font_ps1_letters_8x8.bin",
+        NULL,
+    };
+    static char paths[3][64];
     const char *path = getenv("FF4_FONT");
     FILE *f;
     size_t got;
-    if (!path)
-        path = "port/assets/font_ps1_letters_8x8.bin";
-    f = fopen(path, "rb");
-    if (!f)
-        return;
-    got = fread(g_font_bank, 1, sizeof(g_font_bank), f);
-    fclose(f);
-    if (got == sizeof(g_font_bank))
-        g_font_loaded = 1;
+    int i, k;
+    if (path)
+        chain[0] = path;
+    for (i = 0; i < 3; i++) {
+        if (!chain[i])
+            break;
+        for (k = 0; k < 2; k++) {
+            if (k == 0) {
+                snprintf(paths[i], sizeof(paths[i]), "port/%s", chain[i]);
+            } else {
+                snprintf(paths[i], sizeof(paths[i]), "%s", chain[i]);
+            }
+            f = fopen(paths[i], "rb");
+            if (!f)
+                continue;
+            got = fread(g_font_bank, 1, sizeof(g_font_bank), f);
+            fclose(f);
+            if (got == sizeof(g_font_bank)) {
+                g_font_loaded = 1;
+                break;
+            }
+        }
+        if (g_font_loaded)
+            break;
+        got = fread(g_font_bank, 1, sizeof(g_font_bank), f);
+        fclose(f);
+        if (got == sizeof(g_font_bank)) {
+            g_font_loaded = 1;
+            break;
+        }
+    }
 }
 
 static input_state_t g_in;   /* host input latch (PS1 pad bits) */
