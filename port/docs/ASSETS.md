@@ -1,82 +1,63 @@
-# Asset pipeline (SoH-style: source the ORIGINAL game)
+# Assets & Resource Pipeline
 
-The PS1 port reused the SNES art (no new sprites - user-confirmed, and
-the FF4 PS1 menu text is the same translation). So the port sources
-graphics from the SNES decomp's *decoded art* instead of re-ripping the
-PS1 disc - exactly how SoH/SM64 pull graphics from the original ROM.
+Everything here is **ripped from a vanilla, distributable-friendly source**:
+the SNES FF4 (FF2us) ROM — user-copyright-safe once only the *font* is
+bundled (the TTF is a reproduced font, not copyrighted game art). The
+port's font system stays on the TTF.
 
-## Source
+## Layout
 
-- `FF4_FROM_SOURCE/ff4/ff4-en-data.json` - the SNES FF4 ROM fully
-  decoded by its decomp tooling (graphics as base64, palettes RGBA,
-  tilemaps). PS1 = same art.
+```
+port/assets/
+  font_*                     final font bank products (TTF -> 8x8 bank parser)
+  font_ff4.ttf               default font (FF4-font recreation, swappable)
+  gfx/
+    fe/                      verified SNES-engine renders (FE pipeline)
+      golbez_display.png     golbez composed from a compiled FE ROM
+      golbez_portrait.png fe_ZeromusHD fe_Trainmus fe_Kefkomus
+    gallery.png              one-glance sheet
+    snes/
+      battle_bg_00..16.png   17 battle backgrounds (decoded, verified)
+      battle_scene_00..06    composed 256x192 scenes
+      scene_v2_00..02        alternate scene compositions
+      characters/
+        <Char>_poses.png     17 chars x 14 battle poses FINAL (signed off)
+  scratch/                   ALL rejected/diagnostic attempts, preserved
+                             for reference only (not for the build)
+```
 
-## Tool
+## The character battle pose pipeline (FINAL, user-verified)
 
-`tools/rip/snes.py`:
-- battle backgrounds: 3bpp SNES tiles -> 8x8 tile sheets (17)
-- composed battle scenes: upper+lower layouts -> 256x192 PNGs (7)
-  -> `port/assets/gfx/snes/`
-- monsters: 4bpp sheets + palettes (in progress)
+Source ROM: FF2us 1MB `ff2.smc` (crc32 0x23084FCD). File offsets:
 
-## The port's resource model
+| Data | File offset | Notes |
+|---|---|---|
+| Character gfx pages | 0xD0000 (+0x800 each) | 15 chars; Golbez 0xD7600, Anna 0xD7960 |
+| Character palettes | 0xE7D00 (+0x20) | 16 x 16 colors BGR555 |
+| Pose tilemap pointers | 0x6FD6D | 14 x 2B -> 0D:FD89+ |
+| Pose tilemaps | 0x6FD89 (+9B each) | verified byte-identical vs btlgfx_data.asm |
 
-- Text/UI font: TTF default (`font_ff4.ttf`) + swap chain (79-slot
-  banks are format-identical - swaps can't break message layout).
-- Battle/menu art: the SNES-derived PNGs above (future: wired into the
-  SDL renderer for real backgrounds).
-- PS1 disc banks (ff4.bin etc.) stay the *code* reference (RESOURCES.md).
+Pose tilemap = 3 rows of 3 columns, $ff = blank, **columns written
+right-to-left**. Standard poses use 2 of 3 columns (16x24). Pose 12
+(DARKNESS, Cecil-DK exclusive) and pose 13 use 3 columns (24x24).
 
+Decode: 4bpp (planes bit-interleaved: bp0/bp1 at +j*2, bp2/bp3 at
++16+j*2), palette = battle char palette, pixel 0 = transparent.
 
-## Characters (battle sprites) — status
+docs/FF4KSTER.md = the FF4KSTER source-verified address map (maps,
+tilesets, monsters) used as the ROM oracle.
 
-`characterGraphics` (0x1A8000, 4bpp) decodes to 64x64 pixel arrays per
-character (the decomp obj); rendered with per-char palettes ->
-`port/assets/gfx/snes/characters/char_*_pix.png` (verified: each reads
-as the character; the exact frame layout inside the 64x64 needs the
-OAM/animation tables - attackAnimationScript + battle display metadata
-- next step, not blocking).
+## The FE (Free Enterprise) tools
 
-FE_GOLBEZ analysis (Free Enterprise tooling):
-- The FE sprite-swap system (fetools/processors/zsprites.py) encodes
-  one POSE PNG per sprite into SNES 4bpp (interleaved planes confirm
-  the snes.py decoder) + 16-color bgr555 palette + tilemap; its insert
-  hooks: CHR $616F8 (or $228000 bus), palette $E7A90, tile size
-  $6FFB0, position offset $7CF1D, tilemap $75E56. The vanilla
-  character 64x64 contact sheets likely = 2x2 poses of 32x32.
-- Character pose images (char_*_pose0..3.png, 32x32 @ 4x) added.
+fetools/processors/zsprites.py = one pose PNG -> SNES 4bpp + bgr555
+palette + packed tilemap; used as the authoritative encoder oracle.
+Our compose = full placement canvas (crop misaligns; verified).
+tools/rip/fe_sprites.py stays available for FE-authored art.
 
-## PIPELINE STATUS — PROVEN
+## Fonts
 
-Free-Enterprise round-trip confirmed (golbez_proof.png: the SNES-engine
-compose reproduces the source sprite; user-confirmed). `tools/rip/
-fe_sprites.py` composes f4c scripts -> display images. Residual color
-drift (41% pixel-close on opaque px) is the lossy bgr555 quantize +
-antialiased edges, not structure.
-
-Usable art in port/assets/gfx/:
-- fe/ (round-trip exact renders): golbez_display, golbez_portrait,
-  fe_ZeromusHD, fe_Trainmus, fe_Kefkomus
-- snes/characters/: 16 vanilla charset pixel renders (recognizable),
-  pose splits, palette table
-- snes/ battle scenes + tile sheets; gallery.png = one-glance index.
-
-Vanilla character FRAMING (the 64x64 -> pose/OAM split) = the one open
-item, needing the engine's battle-display tables (attackAnimationFrame
-+ the actor OAMs) - the FE z-sprite path shows per-pose display.
-
-## PIPELINE VERIFIED (final)
-
-FE round-trip confirmed with the user: the SNES compose renders the
-sprite correctly at EVERY canvas/placement tested (19x18 & 32x32
-canvases, offsets 0/2/3/6/7). `fe_sprites.compose` full-canvas output
-is the verified display; golbez_display.png (152x144) is correct.
-
-Characters: the 64x64 pixel renders (characters/char_*_pix.png) are the
-game's actual frames as decoded pixels; per-pose/frame splitting into
-the game's OAM pieces remains the one structural refinement (the FE
-model = one pose per display, pieces placed by OAM).
-## Extend
-
-- monsters (4bpp), map tilesets, portraits: add decoders to snes.py
-  with the item ranges in the JSON assembly; verify PNGs strict-parse.
+- Default: TTF (`font_ff4.ttf`) -> tools/rip/ttf2bank.c -> 79-slot 8x8
+  1bpp bank + widths, swap chain FF4_FONT -> font_ff4ttf_8x8.bin ->
+  font_ps1_letters_8x8.bin -> embedded. Format-identical swaps.
+- SNES dialogue charset: vanilla ROM 0x05741D ([row][0xff], A-Z a-z +3);
+  font.dat (FF4KSTER) documents the char->code map (A->0x42 etc).
