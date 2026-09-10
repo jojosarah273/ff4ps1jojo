@@ -36,6 +36,15 @@ character (the decomp obj); rendered with per-char palettes ->
 as the character; the exact frame layout inside the 64x64 needs the
 OAM/animation tables - attackAnimationScript + battle display metadata
 - next step, not blocking).
+
+FE_GOLBEZ analysis (Free Enterprise tooling):
+- The FE sprite-swap system (fetools/processors/zsprites.py) encodes
+  one POSE PNG per sprite into SNES 4bpp (interleaved planes confirm
+  the snes.py decoder) + 16-color bgr555 palette + tilemap; its insert
+  hooks: CHR $616F8 (or $228000 bus), palette $E7A90, tile size
+  $6FFB0, position offset $7CF1D, tilemap $75E56. The vanilla
+  character 64x64 contact sheets likely = 2x2 poses of 32x32.
+- Character pose images (char_*_pose0..3.png, 32x32 @ 4x) added.
 ## Extend
 
 - monsters (4bpp), map tilesets, portraits: add decoders to snes.py
