@@ -157,9 +157,9 @@ static void put_text(int x, int y, char c)
     /* prefer the confirmed PS1 typeset (A-Z a-z) over the generic */
     {
         static int used_game;
-        int li = ff4_letter_index(c);
+        int li = ff4_glyph_index(c);
         if (li >= 0) {
-            g = ff4_letters_8x8[li];
+            g = ff4_glyphs_8x8[li];
             used_game = 1;
         } else {
             g = font8x8[(unsigned char)c - 0x20];
