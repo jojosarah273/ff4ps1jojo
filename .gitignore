@@ -38,3 +38,5 @@ build/
 # psxrecomp atexit report (runtime artifact)
 tools/psx_last_run_report.json
 /.debris/
+
+# monster disc media (FMV/XA) not extracted; only small banks committed
