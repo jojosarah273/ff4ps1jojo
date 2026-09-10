@@ -17,21 +17,29 @@ from pathlib import Path
 
 
 def png_write(w, h, rows16, path, scale=2):
-    """1bpp 16-bit rows -> PNG; rows16 are tile-bit rows (w bits)."""
+    """1bpp 16-bit rows -> PNG. One filter byte per scanline (strict)."""
     import zlib
     sw, sh = w * scale, h * scale
     raw = b""
     for yy in range(h):
-        raw += b"\x00"
+        v = rows16[yy]
+        line = bytearray(b"\x00" * (sw * 3))
+        for xx in range(w):
+            if v & (1 << (w - 1 - xx)):
+                for sxx in range(scale):
+                    for c in range(3):
+                        line[(xx * scale + sxx) * 3 + c] = 255
         for _ in range(scale):
-            line = bytearray(b"\x00" * (sw * 3))
-            v = rows16[yy]
-            for xx in range(w):
-                if v & (1 << (w - 1 - xx)):
-                    for s in range(scale):
-                        for c in range(3):
-                            line[(xx * scale + s) * 3 + c] = 255
-            raw += bytes(line)
+            raw += b"\x00" + bytes(line)   # filter byte per scanline
+    def chunk(tag, d):
+        c = struct.pack(">I", len(d)) + tag + d
+        c += struct.pack(">I", zlib.crc32(tag + d) & 0xffffffff)
+        return c
+    png = b"\x89PNG\r\n\x1a\n"
+    png += chunk(b"IHDR", struct.pack(">IIBBBBB", sw, sh, 8, 2, 0, 0, 0))
+    png += chunk(b"IDAT", zlib.compress(raw, 9))
+    png += chunk(b"IEND", b"")
+    Path(path).write_bytes(png)
     def chunk(tag, d):
         c = struct.pack(">I", len(d)) + tag + d
         c += struct.pack(">I", zlib.crc32(tag + d) & 0xffffffff)
