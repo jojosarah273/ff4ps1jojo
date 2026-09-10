@@ -41,6 +41,20 @@ static int g_bg_loaded;
 static unsigned int g_chars[72 * 240];   /* 5 party idle poses, 3x (240x72) */
 static int g_chars_loaded;
 
+/* CWD-independent asset open: try the repo-root relative name from the
+ * common working dirs (/repo, /repo/port, /repo/port/build). */
+static FILE *open_asset(const char *rel)
+{
+    static const char *dirs[] = { "", "../", "../../", NULL };
+    static char path[256];
+    FILE *f = NULL;
+    for (int i = 0; dirs[i] && !f; i++) {
+        snprintf(path, sizeof path, "%s%s", dirs[i], rel);
+        f = fopen(path, "rb");
+    }
+    return f;
+}
+
 /* sandbox (playable dev battler) surface: text overlay + sprite slots */
 static uint32_t g_ov[640 * 480];          /* ARGB text overlay */
 typedef struct { const unsigned int *px; int w, h, x, y; } bslot_t;
@@ -50,15 +64,7 @@ static int g_sandbox;
 
 static void ch_load_asset(void)
 {
-    static const char *names[] = {
-        "port/assets/gfx/snes/battle_chars.rgba",
-        "assets/gfx/snes/battle_chars.rgba",
-        NULL,
-    };
-    FILE *f = NULL;
-    int i;
-    for (i = 0; names[i] && !f; i++)
-        f = fopen(names[i], "rb");
+    FILE *f = open_asset("port/assets/gfx/snes/battle_chars.rgba");
     if (f) {
         size_t got = fread(g_chars, 1, sizeof(g_chars), f);
         fclose(f);
@@ -68,21 +74,11 @@ static void ch_load_asset(void)
 
 static void bg_load_asset(void)
 {
-    static const char *names[] = {
-        "port/assets/gfx/snes/battle_scene_00.rgba",
-        "assets/gfx/snes/battle_scene_00.rgba",
-        NULL,
-    };
-    FILE *f = NULL;
-    int i;
-    for (i = 0; names[i] && !f; i++)
-        f = fopen(names[i], "rb");
+    FILE *f = open_asset("port/assets/gfx/snes/battle_scene_00.rgba");
     if (f) {
         size_t got = fread(g_bg, 1, sizeof(g_bg), f);
         fclose(f);
         g_bg_loaded = (got == sizeof(g_bg));
-        if (g_bg_loaded)
-            SDL_SetRenderDrawBlendMode(g_ren, SDL_BLENDMODE_BLEND);
     }
 }
 
@@ -100,34 +96,18 @@ static void font_load_asset(void)
         "port/assets/font_ps1_letters_8x8.bin",
         NULL,
     };
-    static char paths[3][64];
     const char *path = getenv("FF4_FONT");
     FILE *f;
     size_t got;
-    int i, k;
+    int i;
     if (path)
         chain[0] = path;
-    for (i = 0; i < 3; i++) {
-        if (!chain[i])
-            break;
-        snprintf(paths[i], sizeof(paths[i]), "%s", chain[i]);
-        {
-            const char *trydirs[] = { "", "port/", "../", NULL };
-            for (k = 0; trydirs[k]; k++) {
-                snprintf(paths[i], sizeof(paths[i]), "%s%s", trydirs[k], chain[i]);
-                f = fopen(paths[i], "rb");
-            if (!f)
-                continue;
-                got = fread(g_font_bank, 1, sizeof(g_font_bank), f);
-                fclose(f);
-                if (got == sizeof(g_font_bank)) {
-                    g_font_loaded = 1;
-                    break;
-                }
-            }
-            if (g_font_loaded)
-                break;
-        }
+    for (i = 0; chain[i]; i++) {
+        f = open_asset(chain[i]);
+        if (!f)
+            f = open_asset(chain[i] + strlen("port/")); /* assets/... form */
+        if (!f)
+            continue;
         got = fread(g_font_bank, 1, sizeof(g_font_bank), f);
         fclose(f);
         if (got == sizeof(g_font_bank)) {

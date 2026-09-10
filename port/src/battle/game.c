@@ -81,7 +81,8 @@ static const char *g_artfile[4] = {
 
 static int load_rgba(const char *fn, sprite_t *s)
 {
-    static const char *dirs[] = { "port/assets/gfx/snes/", "assets/gfx/snes/", NULL };
+    static const char *dirs[] = { "port/assets/gfx/snes/", "assets/gfx/snes/",
+                                  "../assets/gfx/snes/", "../../assets/gfx/snes/", NULL };
     char path[200];
     unsigned char hdr[8];
     FILE *f = NULL;
