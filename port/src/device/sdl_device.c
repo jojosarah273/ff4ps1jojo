@@ -17,6 +17,7 @@
 #include <SDL2/SDL.h>
 
 #include "ff4_state.h"
+#include "ff4_font.h"
 
 #define CELL_W 64
 #define CELL_H 32
@@ -153,7 +154,18 @@ static void put_text(int x, int y, char c)
     const unsigned char *g;
     if (!g_ren) return;
     if (x < 0 || x >= CELL_W || y < 0 || y >= CELL_H) return;
-    g = font8x8[(unsigned char)c - 0x20];
+    /* prefer the confirmed PS1 typeset (A-Z a-z) over the generic */
+    {
+        static int used_game;
+        int li = ff4_letter_index(c);
+        if (li >= 0) {
+            g = ff4_letters_8x8[li];
+            used_game = 1;
+        } else {
+            g = font8x8[(unsigned char)c - 0x20];
+            (void)used_game;
+        }
+    }
     for (j = 0; j < 8; j++) {
         for (i = 0; i < 8; i++) {
             SDL_Rect rr = { x * 8 + i, y * 16 + j * 2, 1, 2 };
