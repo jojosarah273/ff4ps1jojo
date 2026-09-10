@@ -54,6 +54,20 @@ palette + packed tilemap; used as the authoritative encoder oracle.
 Our compose = full placement canvas (crop misaligns; verified).
 tools/rip/fe_sprites.py stays available for FE-authored art.
 
+### Known blemishes (deferred bug-squash list)
+
+State = user-verified: top 7 poses + bottom-left 2 correct; DARKNESS
+(pose 12) correct. Deferred:
+
+- Golbez page/palette slightly off (0xD7600/0x360 page + palette idx 15).
+- Anna page (0xD7960/0x2E0) + its palette (shares idx 15) - wrong.
+- Poses 9/10/11 and 13 final arrangement not 100% (16x24 normals fine;
+  the 24x24 pair 12/13 layouts verified for 12 only; 13 needs one more
+  check).
+- Cecil_DK not the only DARKNESS user? (verify per-character).
+
+Re-check with: tools/rip decode at the file offsets above + the pose
+re-assembly rule (3 rows, right-to-left, poses 12-13 = 24x24).
 ## Fonts
 
 - Default: TTF (`font_ff4.ttf`) -> tools/rip/ttf2bank.c -> 79-slot 8x8
