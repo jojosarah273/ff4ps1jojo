@@ -4,27 +4,20 @@ also in git (this file)._
 
 ## STATE SNAPSHOT (latest verified numbers)
 - Phase A: **2516/2516 C-written (100.0%)**; whole src/ gcc-clean.
-- Byte-verified: **827 (32.9%)** (`expected/matched/*.o` count; `decomp/STATUS.md`).
-- Callgraph: `expected/callgraph.json` = 2517 call
-- **READABILITY PASS (this stretch)**: `tools/port_names.py` names the
-  hot 0x800F primitive family (151 entries -> ff4_window.h): raw
-  func_800F refs in gen modules cut 3947 -> ~277 (93%), 1466 externs
-  dropped; `tools/port_catalog.py` -> `port/docs/functions.md` (the
-  2516-function readable catalog); db/ cell layer now bound live in the
-  binary; typed state layer (`include/ff4_state.h` + device input
-  struct). Byte-match policy recorded (oracle guard, not target):
-  `port/docs/BYTE_MATCH_POLICY.md`; reading guide: `port/docs/READING.md`.
-- **AVENUE 1 MILESTONE (SDL device layer)**: `make -C port native` from clean
-  compiles the 1395-module deck, builds the SDL device layer
-  (`port/src/device/sdl_device.c`), auto-stubs deck-only unresolved symbols
-  (nm-driven, D_*/g_*/fn rules in `port/tools/native_link.sh`), and links
-  `port/build/ff4-native` which RUNS the interpreted config-menu state and
-  exits 0 under SDL_VIDEODRIVER=dummy. Boot drives `config_menu_run()` frames
-  0..60; the io_just self-inject keeps menus advancing headless.json` = 2517 callers / 22,544 edges.
-- Port: **port/src has 1137 .c modules (0 syntax failures)**; `make deck` in
-  `port/` compiles all 1139 objects. Coverage: `port/docs/coverage.md` (~1726 funcs).
-- All work pushed to `main`. Latest commit at time of writing: `dfc177ab`.
-
+- Byte-verified: **827 (32.9%)** - oracle guard only (BYTE_MATCH_POLICY).
+- Port: **1836 modules**; functions.md catalog: **1848/2516 interpreted
+  (73.4%)**; **153 link stubs** (was 885); NM manifest **1815 entries**;
+  raw func_ refs in the gen deck **~205** (was ~6,600).
+- Native: `make -C port native` -> build/ff4-native; config + battle
+  exit 0, 5/5, from any CWD (runtime-collision fix: stubs exclude
+  libc/libm/SDL/pthread; `step` keep-listed).
+- Fonts: TTF default (final-fantasy-iv.ttf) with swap chain
+  (FF4_FONT -> ttf -> ps1 rip -> embedded); 79-slot format-identical.
+- Assets/disc: banks extracted in port/assets (ff4.bin, battle.bin,
+  memo.bin, exe, TIMs); rip tooling in tools/rip (ps1font, tim, ips,
+  atlas, fontpg, ttf2bank); RESOURCES.md maps it all.
+- Open lanes: text strings (loader trace), sprites, XA audio, and the
+  battle segv suspect from the hint-wave (rolled back; EXECUTE notes).
 ## KEY TOOLS (stable, don't rewrite from scratch)
 - `tools/port_rowmap.py` — maps a Phase A window-driven screen into an
   interpreted module (semantic names, ground truth, primitive table).

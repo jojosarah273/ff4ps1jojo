@@ -444,3 +444,14 @@ All pushed.
 - Clean package: 1,836 modules, 155 stubs, config+battle 0/0; docs
   (EXECUTE) refreshed; functions.md gt-id links take a cosmetic hit
   from the rename (symbols/build unaffected).
+
+=== 2026-09-10 03:40 ===
+**Night wrap: stubs 153, NM 1815, deck semantic (raw refs ~205).**
+- Rows2 sweep of 25 ambiguous-hint mirrors reverted after the battle
+  path segfaulted (raw-cell shape in one mirror); diagnosis with the
+  segv module/offset diagnostic + rollback -> config+battle 5/5 green.
+- Safe wins kept: tail binding (1343), rows domain (307), catalog
+  reverse-manifest repair (1848/2516 interpreted), collision fix in
+  the stub generator (memset interposition = the flaky-segfault cause).
+- Still open (EXECUTE/RESUME noted): strings (loader trace), sprites,
+  XA audio; battle-crash suspect for re-derivation if attempted.
