@@ -2,21 +2,17 @@
 _Read this first if the previous context was compacted. Everything here is
 also in git (this file)._
 
-## STATE SNAPSHOT (latest verified numbers)
-- Phase A: 2516/2516 C-written; byte-verified 827 (oracle guard).
-- Port: **1836 modules**; deck builds clean; stubs **155** (was 885 at
-  session start; the tail-binding + rows-domain waves collapsed it).
-- Manifest: **NM 1815 entries** (semantic names for the 800F family +
-  the 801x row machines); raw func_ refs in the gen deck fell from
-  ~6,600 to **748**.
-- Native: `make -C port native` -> build/ff4-native; config + battle
-  exit 0 from both CWDs after the runtime-collision fix (libc/SDL
-  exports excluded from stubs - memset interposition was the session's
-  flaky-segfault source).
-- Fonts: TTF default bank (swappable, format-safe); assets + tools
-  under port/assets + tools/rip.
-- Text: SNES DTE scheme ruled out for the PS1 banks; the 2-byte code +
-  index-table model stands; loader trace = the remaining decode key.
+## STATE SNAPSHOT-SESSION (latest)
+- Native: config + battle exit 0, 8/8 repeat runs, from any CWD.
+  `make -C port native` clean; stubs 153->199 raw stubs (semantic
+  wave keeps extending); NM 1828; catalog 1848/2516 (73.4%).
+- RENDERED: the SDL battle mode blits the REAL SNES battle scene
+  (port/assets/gfx/snes/battle_scene_00.rgba, 256x192 2x) with the
+  TTF-font cell text on top - the soh-style visual milestone.
+- ASSETS: tools/rip/snes.py renders 17 battle-bg sheets + 7 scenes
+  from the SNES decomp; port/docs/ASSETS.md describes the pipeline
+  (PS1 reused the SNES art - no re-rip needed).
+- 800F wave: 12 primitives mirrored (rows3/ + db flags); 5/5 stable.
 ## KEY TOOLS (stable, don't rewrite from scratch)
 - `tools/port_rowmap.py` — maps a Phase A window-driven screen into an
   interpreted module (semantic names, ground truth, primitive table).
