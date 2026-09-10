@@ -38,6 +38,26 @@ static unsigned char g_font_bank[79][8];
 static int g_font_loaded;
 static unsigned int g_bg[192 * 256];     /* 256x192 RGBA backdrop */
 static int g_bg_loaded;
+static unsigned int g_chars[72 * 240];   /* 5 party idle poses, 3x (240x72) */
+static int g_chars_loaded;
+
+static void ch_load_asset(void)
+{
+    static const char *names[] = {
+        "port/assets/gfx/snes/battle_chars.rgba",
+        "assets/gfx/snes/battle_chars.rgba",
+        NULL,
+    };
+    FILE *f = NULL;
+    int i;
+    for (i = 0; names[i] && !f; i++)
+        f = fopen(names[i], "rb");
+    if (f) {
+        size_t got = fread(g_chars, 1, sizeof(g_chars), f);
+        fclose(f);
+        g_chars_loaded = (got == sizeof(g_chars));
+    }
+}
 
 static void bg_load_asset(void)
 {
@@ -413,6 +433,23 @@ void device_render(void)
             SDL_DestroyTexture(tex);
         }
     }
+    /* blit the 5 party characters over the backdrop (battle only) */
+    if (g_chars_loaded && g_battle) {
+        static const int px[5] = { 30, 78, 126, 174, 222 };
+        static const int py = 335;
+        SDL_Texture *tex = SDL_CreateTexture(g_ren, SDL_PIXELFORMAT_ABGR8888,
+                                             SDL_TEXTUREACCESS_STATIC,
+                                             240, 72);
+        if (tex) {
+            SDL_UpdateTexture(tex, NULL, g_chars, 240 * 4);
+            for (int c = 0; c < 5; c++) {
+                SDL_Rect src = { c * 48, 0, 48, 72 };
+                SDL_Rect dst = { 64 + px[c], py, 48, 72 };
+                SDL_RenderCopy(g_ren, tex, &src, &dst);
+            }
+            SDL_DestroyTexture(tex);
+        }
+    }
     /* blit the cell screen (the hex-glyph ids written by cell_put) */
     for (y = 0; y < CELL_H; y++) {
         for (x = 0; x < CELL_W; x++) {
@@ -449,6 +486,7 @@ int device_open_window(const char *title, int w, int h)
     g_autopress = is_headless();
     font_load_asset();
     bg_load_asset();
+    ch_load_asset();
     /* accelerated first, software fallback (remote-desktop friendly) */
     g_ren = SDL_CreateRenderer(g_win, -1, 0);
     if (!g_ren)
