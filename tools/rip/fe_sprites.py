@@ -83,9 +83,9 @@ def compose(script):
                     ix = g[r][c]
                     canvas[(oy + ty) * 8 + r][(ox + tx) * 8 + c] = \
                         pal_rgba[ix] if ix < 16 else (0, 0, 0, 0)
-    img = canvas[oy * 8: oy * 8 + h * 8]
-    img = [row[ox * 8: ox * 8 + w * 8] for row in img]
-    return img
+    # display = the FULL placement canvas (crop misaligns; the game
+    # shows the sprite with its blank borders - verified vs golbez art)
+    return canvas
 
 
 def main():
