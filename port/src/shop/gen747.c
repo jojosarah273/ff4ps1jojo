@@ -4,21 +4,15 @@
  */
 #include "ff4_window.h"
 
-
-
-
-
-extern int func_80167B48();
-
 void fn_1x67dd4(void)
 
 {
-  func_80167B48();
+  fn_1x67b48();
   row_read(0x7f);
   sep_a();
   cell_draw(0xf398);
   cell_step();
-  func_80167B48();
+  fn_1x67b48();
   row_read(0x3f);
   sep_a();
   row_open_w(0x20);

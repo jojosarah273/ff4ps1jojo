@@ -12,5 +12,5 @@ void fn_1x5a094(void)
     row_read(9);
     row_sel_cell_cur();
     cell_tick_or(cell_state(170));
-    func_800F78E0();
+    cell_0xf78e0();
 }

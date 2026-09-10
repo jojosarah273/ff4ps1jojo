@@ -13,7 +13,7 @@ void ability_rows_x1b8b_x16_texts_x43_w(void)
     if (gate(2) != 0)
         return;
     row_page(0x43);
-    func_80132178();
+    fn_1x32178();
     txt_cell(3);
     if (gate(0x80) != 0)
         return;

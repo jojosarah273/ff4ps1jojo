@@ -16,6 +16,6 @@ void rows_x48c0_x1a71_texts_xe0_window(void)
     draw_pad_cur();
     battle_rows_sync();
     draw_pad_cur();
-    func_8011FB74();
+    fn_1x1fb74();
     return;
 }

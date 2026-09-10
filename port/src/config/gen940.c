@@ -12,7 +12,7 @@ void config_rows_x60_window_gates_c2f8(void)
     if (gate_cur() != 0)
         goto L12C6FC;
     draw_pad_cur();
-    func_8012C2F8();
+    fn_1x2c2f8();
 L12C6FC:
     latch_cur();
     cell_pull_c8_bank(0x60);

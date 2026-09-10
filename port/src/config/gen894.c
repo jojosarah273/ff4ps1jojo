@@ -17,7 +17,7 @@ L132388:
             goto L1323F0;
         row_close2();
         cell_cursor_dec();
-        func_80132178();
+        fn_1x32178();
         cell_draw(4);
     L1323F0:
         row_close2();

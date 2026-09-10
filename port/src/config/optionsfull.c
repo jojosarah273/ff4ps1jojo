@@ -125,7 +125,7 @@ l94C8:
     row_read(0xC0);
     if (sel(2) != 0)
         goto l9528;
-    if (func_800F5F20(0x202) != 0)
+    if (cell_0xf5f20(0x202) != 0)
         goto l96AC;
     txt_set(0x28A2);
     row_read(0xC0);
@@ -256,7 +256,7 @@ l98B4:
     row_read(0xC0);
     if (sel(2) != 0)
         goto l9A2C;
-    if (func_800F5F20(0x202) != 0)
+    if (cell_0xf5f20(0x202) != 0)
         goto l9A58;
     sep_a();
     txt_set(0x289E);
@@ -306,7 +306,7 @@ l9B08:
     row_read(0xC0);
     if (sel(2) != 0)
         goto l9CE8;
-    if (func_800F5F20(0x202) != 0)
+    if (cell_0xf5f20(0x202) != 0)
         goto l9BD8;
     sep_a();
     txt_set(0x289D);
@@ -378,7 +378,7 @@ l9D64:
     row_read(0xC0);
     if (sel(2) != 0)
         goto lA014;
-    if (func_800F5F20(2) != 0)
+    if (cell_0xf5f20(2) != 0)
         goto lA014;
     txt_set(0x3977);
     row_read(0x20);

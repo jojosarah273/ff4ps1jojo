@@ -86,7 +86,7 @@ Lf38:
     latch(0x5E);
     goto Lfb8;
 Lf48:
-    func_80153218();
+    fn_1x53218();
     io_poll(0xFF);
     if (io_go() == 0)
         goto Lf88;

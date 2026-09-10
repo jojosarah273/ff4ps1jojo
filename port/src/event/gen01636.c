@@ -8,7 +8,7 @@ void battle_v0_gates_c_row_at_l1874e8(void)
     /* battle: v0 gates; 8018767C row at L1874E8. */
     if (io_just() != 0)
         goto L1874F4;
-    func_8018767C();
+    fn_1x8767c();
     return;
 L1874F4:
     return;

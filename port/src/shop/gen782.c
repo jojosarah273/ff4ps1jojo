@@ -18,7 +18,7 @@ L167780:
             io_poll_cur();
             if (io_just() != 0)
                 goto L1677FC;
-            func_800F5B2C(cell_state_of());
+            cell_0xf5b2c(cell_state_of());
             key_page_cur();
         L1677FC:
             cell_step();

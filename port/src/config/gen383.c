@@ -34,7 +34,7 @@ void config_save_screen_x1b23_x1b1a_tex(void)
     cell_push_c8();
     cell_put(0x45);
     wnd_open_cur();
-    func_800F712C();
+    cell_0xf712c();
 L12ca7c:
     for (;;) {
         if (io_just() != 0)
@@ -56,6 +56,6 @@ L12CACC:
 L12CB04:
     config_row_a600();
     draw_pad_cur();
-    func_8011FB74();
+    fn_1x1fb74();
     return;
 }

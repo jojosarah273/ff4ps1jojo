@@ -9,17 +9,17 @@ void battle_anim_fb8_preps_then_x_ddc_e(void)
        80182DDC/80182E18 pairs. */
     if (io_just() != 0)
         goto L183070;
-    func_80198058();
-    func_80197FB8();
+    angle_from_ratio_quadrant_correcte();
+    trig_table_abs_folds();
 L1830E4:
-    func_80182DDC();
-    func_80182E18();
-    func_80182DDC();
-    func_80182E18();
-    func_80182DDC();
-    func_80182E18();
-    func_80182DDC();
-    func_80182E18();
+    fn_1x82ddc();
+    fn_1x82e18();
+    fn_1x82ddc();
+    fn_1x82e18();
+    fn_1x82ddc();
+    fn_1x82e18();
+    fn_1x82ddc();
+    fn_1x82e18();
     return;
 L183070:
     return;

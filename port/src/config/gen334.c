@@ -10,17 +10,17 @@ void ability_config_screen_bb1_text_win(void)
        80126590/80123FB4/80126528/80126458; sub-dispatchers 80120070 +
        8012B0D8; loops to L135054/L13507C. */
     config_rows_e4();
-    func_80134FBC();
+    fn_1x34fbc();
     config_row_264e8();
     battle_mode_dispatch();
     fn_1x26590();
     goto L13507C;
 L135054:
     for (;;) {
-        func_80123FB4();
-        func_80134FBC();
+        fn_1x23fb4();
+        fn_1x34fbc();
         config_row_26528();
-        func_80126458();
+        fn_1x26458();
         config_row_264e8();
     L13507C:
         txt_set(0x1BB1);

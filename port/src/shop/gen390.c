@@ -29,7 +29,7 @@ L1664d0:
         cell_sink8_9();
         cell_put_hi9(4);
         row_read2();
-        func_800F5F70(cell_state(4));
+        cell_0xf5f70(cell_state(4));
         cell_put_hi9();
         cell_step();
         cell_step();

@@ -11,5 +11,5 @@ void fn_1x38788(void)
     draw_pad(4096);
     battle_wait_just(32382);
     row_prep_close();
-    func_80135B54();
+    ability_bank_select_d_8019ee56_d_8();
 }

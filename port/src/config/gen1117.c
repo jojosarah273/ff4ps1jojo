@@ -26,6 +26,6 @@ L13C024:
         return;
     }
 L13C074:
-    func_8013C50C();
+    fn_1x3c50c();
     goto L13C024;
 }

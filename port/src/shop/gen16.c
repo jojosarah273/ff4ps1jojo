@@ -17,7 +17,7 @@ void fn_1x60e88(void)
     row_page(0xCE);
     if (gate(0x80) == 0)
         goto L103c;
-    func_801531CC();
+    fn_1x531cc();
     cell_put(0xA9);
     sep_a();
     latch(0x32);
@@ -36,7 +36,7 @@ Lf58:
 Lf78:
     if (io_press(cell_state(0xA9)) != 0)
         goto L1054;
-    func_801531CC();
+    fn_1x531cc();
     if (io_press(cell_state(0x272F)) == 0)
         goto L1038;
     row_prep(0x20);
@@ -126,7 +126,7 @@ L1168:
         cell_cursor_dec();
         latch(0x63);
         cell_draw(0x321C);
-        func_80161368();
+        fn_1x61368();
         row_close2();
         sep_b();
         cell_pos_back(0x63);
@@ -137,7 +137,7 @@ L1168:
     L1328:
         cell_draw(0x321C);
     L1330:
-        func_80161368();
+        fn_1x61368();
         row_page(0xA9);
         txt_draw(0x359A);
         latch(0x1D);

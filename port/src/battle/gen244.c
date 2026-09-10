@@ -56,14 +56,14 @@ L1898:
     txt_draw(0xF114);
     latch(8);
     txt_draw(0xF115);
-    func_801490AC();
+    fn_1x490ac();
     func_80097438();
     latch(0x28);
     battle_row_d568();
 L1968:
     for (;;) {
         gpu_driver_run();
-        func_80149374();
+        fn_1x49374();
         func_80097500();
         row_page(0x2B);
         cell_put(0x2A);

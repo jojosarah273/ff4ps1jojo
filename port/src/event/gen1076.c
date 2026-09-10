@@ -8,7 +8,7 @@ void event_s6_gate_f0c8_rows_with_s2_v0(void)
     /* event: s6 gate; 80190004(1) + 8018F0C8/80191638/80190088
        rows with s2/v0 + v0 latches. */
     /* s6/v0 latch -> L18FFD8 */
-    if (func_80190004(1) != 0)
+    if (fn_1x90004(1) != 0)
         goto L18FE04;
     anim_reg_stub();
     goto L18FFDC;
@@ -19,9 +19,9 @@ L18FE04:
 L18FE2C:
     if (io_just() == 0)
         goto L18FF88;
-    func_80191638();
+    play_time_splitter_x104_magic_mult();
     /* s2 latch -> L18FEC0/L18FEB0 */
-    func_80190088();
+    register_only_stub_xc_see_asm_for_1900();
     if (io_just() != 0)
         goto L18FF54;
     anim_reg_stub();

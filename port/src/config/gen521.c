@@ -7,7 +7,7 @@ void battle_splash_x30_window_x7e_windo(void)
 {
     /* battle splash: 0x30 window, 0x7E window, 801582D8 row; linear
        render + 0x30 icon set. */
-    func_800F8210(0x30);
+    cell_0xf8210(0x30);
     row_prep_cur();
     row_open2();
     row_open3();

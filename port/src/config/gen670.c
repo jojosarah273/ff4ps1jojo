@@ -36,9 +36,9 @@ L1399A4:
     row_prep(0x20);
     cell_sink8_9(0x1340);
     cell_stamp8_9_b(0x1440);
-    func_800F9140(0x1340);
+    cell_0xf9140(0x1340);
     row_prep_close();
-    func_801399EC();
+    fn_1x399ec();
     config_row_264e8();
     return;
 L1399DC:

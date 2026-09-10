@@ -34,7 +34,7 @@ L1471dc:
         io_poll(0xF);
         if (io_go() == 0)
             goto L14728C;
-        func_801473A4();
+        fn_1x473a4();
         goto L1472C4;
     L14728C:
         tail(0x26);

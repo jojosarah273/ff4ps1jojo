@@ -16,8 +16,8 @@ void event_spin_l18d01c_v1_a2_v1_v0_gat(void)
     }
     /* v1/a2 latch -> L18D0B8; v1/v0 gates -> L18D068/L18D07C/
        L18D088/L18D194 */
-    func_8018E4B8();
-    func_8018ABE8();
+    fn_1x8e4b8();
+    fn_1x8abe8();
 L18D114:
     event_drive(2);
     event_drive();

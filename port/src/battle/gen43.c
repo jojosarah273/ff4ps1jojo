@@ -7,7 +7,7 @@ void fn_1x0e58c(void)
 {
     wnd_fx_2100();
     fn_1x03fe8();
-    func_80194518();
+    fn_1x94518();
     cb_slot15();
     battle_mode_dispatch();
     latch(0x22);

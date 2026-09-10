@@ -31,7 +31,7 @@ L16a248:
         L16a2a8:
             for (;;) {
                 cell_push_c8_sel();
-                func_800F8A8C(0x53);
+                cell_0xf8a8c(0x53);
                 row_prep(0x20);
                 cell_inc_cell(0x53);
                 sep_a();

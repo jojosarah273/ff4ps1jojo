@@ -37,7 +37,7 @@ L15B2EC:
     cell_put(0xAC);
     row_prep(0x20);
     row_read2(0xAB);
-    func_800F43A0(0xA9);
+    cell_0xf43a0(0xA9);
     row_prep_close();
     if (cell_flags_pos0(0x202) != 0)
         goto L15B3CC;

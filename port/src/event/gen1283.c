@@ -7,7 +7,7 @@ void event_gates_cc_spin_rows_l195c68_s(void)
 {
     /* event: 80196898 gates; 801968CC spin rows (L195C68) + s0
        latches; returns L195D74. */
-    func_80196898();
+    fn_1x96898();
     if (io_just() == 0)
         goto L195BC4;
     goto L195BC4;
@@ -16,7 +16,7 @@ L195BC4:
     goto L195D74;
 L195C38:
     do {
-        func_801968CC();
+        event_e8_gate_f0c8_x_c74_rows();
         if (io_just() != 0)
             goto L195D74;
     } while (io_just() != 0);

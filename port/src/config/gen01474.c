@@ -10,17 +10,17 @@ void ability_v1_v0_gates_pick_ee4_f0e8(void)
     /* L135C8C: v1/v0 gates -> L135D4C / L135CC0 / L135DBC */
     if (io_just() == 0)
         goto L135CC0;
-    func_80135EE4();
-    func_8018F0E8();
+    ability_x_cell_rows_linear();
+    event_jr_t2_dispatch_slots_f158_f1();
     /* v0/v1 latch -> L135D18 / L135DB8 */
     goto L135DB8;
 L135CC0:
     /* v1/v0 gates -> L135CD8 / L135D4C / L135DBC */
-    func_80135EE4();
-    func_8018F0E8();
+    ability_x_cell_rows_linear();
+    event_jr_t2_dispatch_slots_f158_f1();
     goto L135DB8;
 L135D4C:
-    func_80135DE4();
+    ability_x_rows_v0_gates_pick_l135e();
     /* a0/v1 latch -> L135DAC */
 L135DB8:
     if (io_just() != 0)

@@ -13,7 +13,7 @@ void ability_spell_screen_x48_x49_windo(void)
     draw_pad_cur();
     battle_rows_sync();
     draw_pad_cur();
-    func_8011FB74();
+    fn_1x1fb74();
     open_row(0x48);
     open_row(0x49);
     draw_pad(0x212);
@@ -27,8 +27,8 @@ L13b2cc:
         shop_row_x29_x45_windows_x41_x1500();
         row_done();
         row_sync();
-        func_801224F8();
-        func_80122518();
+        fn_1x224f8();
+        fn_1x22518();
         draw_pad_cur();
         battle_rows_100();
         row_done();
@@ -64,8 +64,8 @@ L13B414:
     battle_row_45b(1);
 L13b458:
     for (;;) {
-        func_8013B764();
-        func_8013B7B8(0xFF);
+        fn_1x3b764();
+        fn_1x3b7b8(0xFF);
         txt_set(0x1BC7);
         row_sel_cell_cur();
         row_sel_cell2_cur();
@@ -96,7 +96,7 @@ L13b458:
                 continue;
             break;
         }
-        func_8013B764();
+        fn_1x3b764();
         config_row_f320();
         anim_noop();
         midrow_degen();
@@ -104,9 +104,9 @@ L13b458:
         row_read(0x80);
         if (sel(2) != 0)
             goto L13B618;
-        func_8013B764();
-        func_8013B7B8(0xFF);
-        func_801263C8();
+        fn_1x3b764();
+        fn_1x3b7b8(0xFF);
+        fn_1x263c8();
         return;
     L13B618:
         row_page(1);

@@ -51,7 +51,7 @@ L2B8:
     io_poll(0xED);
     if (io_just() == 0)
         goto L35C;
-    func_800F5B2C(cell_state(0x1441 + *(u16 *)D_8019ED54[0]));
+    cell_0xf5b2c(cell_state(0x1441 + *(u16 *)D_8019ED54[0]));
     if (poll_go(0x202) != 0)
         goto L850;
     page_paint(0x1440);
@@ -139,7 +139,7 @@ L598:
     cell_pull_c8(0x1440);
 L5F8:
     config_row_b600();
-    func_8012AAC0();
+    fn_1x2aac0();
     fn_1x2b0b0();
     midrow_paint_a();
     return;
@@ -171,7 +171,7 @@ L690:
     tail(0x60);
 L6F0:
     page_open(0x1B3C);
-    func_800F5B2C(cell_state(0x1441 + *(u16 *)D_8019ED54[0]));
+    cell_0xf5b2c(cell_state(0x1441 + *(u16 *)D_8019ED54[0]));
     if (poll_go(0x202) != 0)
         goto L730;
     page_paint(0x1440);
@@ -198,7 +198,7 @@ L7DC:
     cell_clear_bank(0x1A82);
     fn_1x2102c();
     draw_pad_cur();
-    func_8011FB74();
+    fn_1x1fb74();
     config_row_f320();
     return;
 L814:

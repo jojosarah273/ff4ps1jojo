@@ -95,7 +95,7 @@ L140:
     page(0x3D);
     latch(0x77);
     cell_pull_c8_off();
-    func_80105230();
+    shop_detail_cells_xe_x19_x18_xc_wi();
     label(0x6FE);
     rows_x_f0_cells_x700_x706_texts_vi();
     latch(0x30);

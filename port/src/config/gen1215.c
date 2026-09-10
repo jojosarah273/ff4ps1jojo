@@ -4,12 +4,10 @@
  */
 #include "ff4_window.h"
 
-extern int func_800F4A7C();
-
 void fn_1x530e0(void)
 
 {
-  func_800F4A7C(0x13fefe);
+  cell_0xf4a7c(0x13fefe);
   cell_flags_tick2();
   return;
 }

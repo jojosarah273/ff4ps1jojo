@@ -7,7 +7,7 @@ void config_rows_c_e2c_ef30_f1c_fb74_ro(void)
 {
     /* config rows: 8012281C/80120E2C/8011EF30/80120F1C/8011FB74
        rows, 0x1A02 text, 0x24 window; gate 6434(0x202). */
-    func_8012281C();
+    fn_1x2281c();
     midrow_paint_b();
     draw_pad_cur();
     battle_rows_sync();
@@ -15,7 +15,7 @@ void config_rows_c_e2c_ef30_f1c_fb74_ro(void)
     battle_rows_sync();
     config_row_d600b();
     draw_pad_cur();
-    func_8011FB74();
+    fn_1x1fb74();
     txt_set(0x1A02);
     if (gate(0x202) != 0)
         return;

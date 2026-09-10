@@ -13,6 +13,6 @@ void func_80152C50(void)
     return;
 L152CA4:
     row_sel2_cur();
-    func_800F77CC();
+    cell_0xf77cc();
     return;
 }

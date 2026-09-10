@@ -5,7 +5,7 @@
 #include "ff4_window.h"
 void fn_1x53608(void)
 {
-    func_801531CC();
+    fn_1x531cc();
     io_poll(0x32);
     if (io_go() == 0)
         goto L9a4;

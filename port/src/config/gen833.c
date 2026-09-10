@@ -24,7 +24,7 @@ void ability_menu_x93_x9f_x60_windows_x(void)
     draw_pad_cur();
     battle_rows_sync();
     midrow_paint_b();
-    func_8012AAC0();
+    fn_1x2aac0();
     config_row_q18();
     shop_row_kick_f0();
     open_row(0x60);

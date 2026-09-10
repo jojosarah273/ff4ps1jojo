@@ -114,8 +114,8 @@ L10d8:
     if (io_go() == 0)
         goto L1190;
     row_open();
-    func_800FD6B8();
-    func_800FEC74();
+    cell_0xfd6b8();
+    cell_0xfec74();
     row_close();
     cell_push_c8();
     sep_b();
@@ -139,7 +139,7 @@ L1190:
     txt_draw(0x1705);
     cell_push_c8();
     txt_draw(0x1707);
-    func_800FEC74();
+    cell_0xfec74();
     latch(3);
     txt_draw(0x1700);
 L1214:

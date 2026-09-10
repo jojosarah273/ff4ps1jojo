@@ -46,7 +46,7 @@ L161660:
     options_row_run();
     page(0xE3);
     label(0x289C);
-    func_801531CC();
+    fn_1x531cc();
     sep_a();
     cell_poke0(cell_state(0x289C));
     cell_put(0xE3);

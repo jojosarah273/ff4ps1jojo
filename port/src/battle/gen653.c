@@ -22,7 +22,7 @@ L1105b8:
         cell_pull_c8(0x342);
         cell_push_c8();
         cell_pull_c8(0x343);
-        func_800FC0DC();
+        cell_0xfc0dc();
         poll_t(0x18);
         if (io_just() == 0)
             continue;

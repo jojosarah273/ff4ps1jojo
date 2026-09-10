@@ -15,7 +15,7 @@ L118948:
         row_page(0x83);
         row_read(0xE0);
         cell_tick_or(cell_state(0x81));
-        func_8017EA90();
+        fn_1x7ea90();
         key_page(0x79);
         row_page(0x79);
         cell_tick_and(0x82);

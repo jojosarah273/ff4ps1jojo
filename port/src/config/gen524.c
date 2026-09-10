@@ -16,7 +16,7 @@ void ability_wrapper_ea9c_d3c_preps_x1b(void)
     latch(0x7E);
     cell_cursor_dec();
     row_pad();
-    func_8016EA9C();
+    fn_1x6ea9c();
     fn_1x23d3c();
     battle_mode_dispatch();
     battle_mode_dispatch();
@@ -35,7 +35,7 @@ L134d38:
         latch(0x20);
         cell_put(0x3F);
         cell_clear_bank(0x1BB4);
-        func_80123FB4();
+        fn_1x23fb4();
         midrow_paint_c();
         config_row_q18();
         anim_noop();

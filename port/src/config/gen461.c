@@ -15,12 +15,12 @@ L13e604:
         cell_word_half(cell_state(4));
         if (cell_flags_nz50(0x101) != 0)
             goto L13E6FC;
-        func_8013E588();
+        fn_1x3e588();
         row_read(7);
         sep_a();
         cell_poke0(cell_peek_cur());
         cell_put_cur();
-        func_8013E588();
+        fn_1x3e588();
         row_read(0x1F);
         cell_poke0(cell_peek_cur());
         cell_put(1);

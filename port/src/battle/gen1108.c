@@ -4,17 +4,13 @@
  */
 #include "ff4_window.h"
 
-
-
-extern int func_8014B248();
-
 void fn_1x4b0d8(void)
 
 {
   txt_set(0x34c2);
   row_read(0x80);
   cell_put(0);
-  func_8014B248();
+  fn_1x4b248();
   fn_1x4b9fc();
   return;
 }

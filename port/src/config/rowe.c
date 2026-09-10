@@ -184,7 +184,7 @@ void fn_1x583fc(void)
     draw_pad(8);
     for (;;) {
         cell_push_c8_sel(0x82);
-        func_800F8674(0xAD);
+        cell_0xf8674(0xAD);
         sep_a();
         row_open_w(0xB);
         cell_step();

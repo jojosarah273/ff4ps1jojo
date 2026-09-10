@@ -20,7 +20,7 @@ L18A614:
 L18A668:
     if (io_just() == 0)
         goto L18A6A4;
-    func_80197648();
+    register_only_stub_xc_see_asm_for_1976();
     return;
 L18A6A4:
     return;

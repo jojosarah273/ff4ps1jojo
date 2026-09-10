@@ -19,7 +19,7 @@ void func_8013389C(void)
     row_page(0xE8);
     cell_cur_save54_b();
     tail(0xE5);
-    func_8012AAC0();
+    fn_1x2aac0();
     config_row_264e8();
     shop_row_kick_f0();
     row_page(0xE8);
@@ -82,7 +82,7 @@ a98:
         cell_dec_cell(0x99);
         cell_dec_cell(0x99);
         row_prep_close();
-        func_801266C8();
+        fn_1x266c8();
         poll_spin();
         if (poll_go(0x202) != 0)
             continue;
@@ -117,7 +117,7 @@ b70:
         cell_inc_cell(0x99);
         cell_inc_cell(0x99);
         row_prep_close();
-        func_801266C8();
+        fn_1x266c8();
         poll_spin();
         if (poll_go(0x202) != 0)
             continue;
@@ -208,7 +208,7 @@ ed8:
     row_close();
     txt_cell(0x1440);
     cell_pull_c8_bank(0x60);
-    func_800F5B2C(cell_state(0x1441 + *(u16 *)D_8019ED54[0]));
+    cell_0xf5b2c(cell_state(0x1441 + *(u16 *)D_8019ED54[0]));
     if (poll_go(0x202) != 0)
         return;
     page_paint(0x1440);
@@ -321,7 +321,7 @@ L23C:
     txt_cell(0x1440);
 L2D4:
     cell_pull_c8_bank(0x60);
-    func_800F5B2C(cell_state(0x1441 + *(u16 *)D_8019ED54[0]));
+    cell_0xf5b2c(cell_state(0x1441 + *(u16 *)D_8019ED54[0]));
     if (poll_go(0x202) != 0)
         return;
     latch_cur();
@@ -348,14 +348,14 @@ L36C:
     animation_row_310();
     config_row_b600();
     draw_pad_cur();
-    func_8011FB74();
-    func_80126458();
+    fn_1x1fb74();
+    fn_1x26458();
     anim_noop();
     fn_1x1ff40();
     fn_1x240d0();
     draw_pad_cur();
     battle_rows_sync();
-    func_80126458();
+    fn_1x26458();
 ec:
     row_page(1);
     row_read(0x80);

@@ -12,7 +12,7 @@ void shop_main_xca_window_x1700_gate_pi(void)
     row_page(0xCA);
     if (gate(0x202) != 0)
         goto L11AB50;
-    func_800FEC74();
+    cell_0xfec74();
     goto L11AB78;
 L11AB50:
     row_page(0x80);
@@ -31,22 +31,22 @@ L11ABA8:
     io_poll(1);
     if (io_just() == 0)
         goto L11ABD0;
-    func_800FB160();
+    cell_0xfb160();
     goto L11AC00;
 L11ABD0:
     io_poll(2);
     if (io_just() == 0)
         goto L11ABF8;
-    func_800FB224();
+    cell_0xfb224();
     goto L11AC00;
 L11ABF8:
-    func_800FAA04();
+    cell_0xfaa04();
 L11AC00:
     row_page(0xCA);
     if (gate(0x202) != 0)
         goto L11AC3C;
-    func_8017F9A8();
-    func_800FED3C();
+    stack_swap_trick_sp_swapped_throug();
+    shop_banner_xd9_x7a_x79_xb1_window();
     return;
 L11AC3C:
     key_page(0xCA);

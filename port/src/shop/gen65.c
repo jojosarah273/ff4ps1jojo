@@ -39,7 +39,7 @@ L168590:
     if (io_just() == 0)
         goto L168738;
     page_paint2_cur();
-    func_800F6068();
+    cell_0xf6068();
     goto L168738;
 L1685C8:
     cell_dec_bank();

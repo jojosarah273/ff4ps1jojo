@@ -76,7 +76,7 @@ fe8:
         latch(0x19);
     i1E0:
         cell_put(0xB4);
-        func_801531CC();
+        fn_1x531cc();
         if (io_press(cell_state(0xB4)) != 0)
             goto b8;
     i210:
@@ -99,7 +99,7 @@ fe8:
         txt_set(0x16A3);
         cell_poke0(cell_state(0x97));
         cell_put(0x97);
-        func_80153218();
+        fn_1x53218();
         io_poll(0x80);
         if (io_go() != 0)
             goto i310;

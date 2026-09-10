@@ -48,13 +48,13 @@ Lbcb8:
         txt_set(0x34C4);
         if (gate(0x80) != 0)
             goto Lbd28;
-        func_8014E9C4();
+        fn_1x4e9c4();
         row_read(0x7F);
         sep_a();
         row_open_w(0x60);
         goto Lbd30;
     Lbd28:
-        func_8014E9C4();
+        fn_1x4e9c4();
     Lbd30:
         cell_draw(0xEBE6);
         latch(0xF);
@@ -111,7 +111,7 @@ Lbf20:
         cell_pull_c8(0x3C1);
         goto Lc088;
     Lbf58:
-        func_800F5B2C(cell_state_of());
+        cell_0xf5b2c(cell_state_of());
         txt_cell(0xEBE6);
         cell_pull_c8(0x3C0);
         txt_cell(0xEBE7);

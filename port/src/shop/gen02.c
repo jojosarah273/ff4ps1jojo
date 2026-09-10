@@ -120,7 +120,7 @@ f0dc:
         sep_b();
         cell_pos_back2(0x421);
         cell_pull9_hi(0x2105);
-        func_801773FC();
+        fn_1x773fc();
     f3f4:
         row_read2(0x14);
         cell_put_hi9(2);
@@ -265,7 +265,7 @@ f0dc:
     latch(0x15);
     cell_pull_c8_lo(0x1E01);
     battle_cb_86120();
-    func_8016E490();
+    fn_1x6e490();
     page_paint2(0x7D25);
     for (;;) {
         shop_row_41();

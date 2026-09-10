@@ -22,7 +22,7 @@ void func_80136A58(void)
     battle_rows_29();
     midrow_paint_b();
     shop_row_kick_f0();
-    func_8012AAC0();
+    fn_1x2aac0();
     config_row_26528();
     config_row_b600();
     midrow_pad88_run();
@@ -100,11 +100,11 @@ Lc0c:
             goto Ld4c;
         midrow_paint_c();
         fn_1x20db4();
-        func_8012AAC0();
+        fn_1x2aac0();
         config_row_26528();
         fn_1x352f0();
         config_row_264e8();
-        func_801263C8();
+        fn_1x263c8();
     Ld4c:
         latch(0x20);
         cell_put(0x3F);
@@ -158,7 +158,7 @@ Lc0c:
             cell_dec_cell(0x9F);
             cell_dec_cell(0x9F);
             row_prep_close();
-            func_801266C8();
+            fn_1x266c8();
             poll_pair(0x45);
             if (poll_go(0x202) != 0)
                 continue;
@@ -194,7 +194,7 @@ Lc0c:
             cell_inc_cell(0x9F);
             cell_inc_cell(0x9F);
             row_prep_close();
-            func_801266C8();
+            fn_1x266c8();
             poll_pair(0x45);
             if (poll_go(0x202) != 0)
                 continue;

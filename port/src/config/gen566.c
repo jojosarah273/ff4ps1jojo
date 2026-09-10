@@ -4,16 +4,6 @@
  */
 #include "ff4_window.h"
 
-
-
-
-
-
-
-
-
-extern int func_801266C8();
-
 void fn_1x29dfc(void)
 
 {
@@ -22,7 +12,7 @@ void fn_1x29dfc(void)
   wnd_open(4);
   do {
     key_page(0x90);
-    func_801266C8();
+    fn_1x266c8();
     cell_set50_from54();
     iVar1 = poll_go(0x202);
   } while (iVar1 != 0);
@@ -33,7 +23,7 @@ void fn_1x29dfc(void)
   wnd_open(4);
   do {
     poll_pair(0x9c);
-    func_801266C8();
+    fn_1x266c8();
     cell_set50_from54();
     iVar1 = poll_go(0x202);
   } while (iVar1 != 0);

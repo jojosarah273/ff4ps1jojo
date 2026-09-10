@@ -12,7 +12,7 @@ void event_s5_v0_latch_a75c_rows_return(void)
     event_drive();
     event_drive(1);
     event_drive(3);
-    func_80197678();
+    register_only_stub_xc_see_asm_for_1976();
     if (io_just() == 0)
         goto L18C988;
     return;

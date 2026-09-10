@@ -47,7 +47,7 @@ Lb14:
 Lb9c:
     shop_view_run();
     battle_rows_x2c_window_x60_key_x21();
-    func_800FE8B4();
+    battle_c3c_b04_gates_loop_on_a0_v1();
     fn_1x16348();
     open_row(0x79);
 Lbc4:

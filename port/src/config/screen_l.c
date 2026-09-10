@@ -45,7 +45,7 @@ L1AC:
     open_depth_guard_in_the_menu_regio();
     return;
 L1E4:
-    func_80131294();
+    fn_1x31294();
     fn_1x2219c();
     return;
 L1FC:
@@ -54,7 +54,7 @@ L1FC:
     if (sel(2) != 0)
         goto L1E4;
     latch(3);
-    func_80132310();
+    fn_1x32310();
     return;
 L234:
     cell_clear_bank(0x1B87);
@@ -81,7 +81,7 @@ L234:
     row_read(0x28);
     if (sel(2) != 0)
         goto L394;
-    func_800F52BC(0x20);
+    window_state_byte_variant_d50_a0_x(0x20);
     if (io_just() != 0)
         goto L354;
     txt_set(0x1B89);
@@ -90,7 +90,7 @@ L234:
         goto L394;
 L354:
     fn_1x26b88();
-    func_800F52BC(8);
+    window_state_byte_variant_d50_a0_x(8);
     if (io_just() != 0)
         goto L1E4;
     txt_set(0x1B89);
@@ -171,7 +171,7 @@ L59C:
     if (sel(2) != 0)
         goto L654;
 L5DC:
-    func_80120F94();
+    fn_1x20f94();
     draw_pad_cur();
     battle_rows_sync();
     fn_1x30884();
@@ -243,7 +243,7 @@ L77C:
         goto L4E4;
     draw_pad(4);
     for (;;) {
-        func_80132178();
+        fn_1x32178();
         txt_cell_cur();
         row_read(0x3F);
         if (sel(2) != 0)

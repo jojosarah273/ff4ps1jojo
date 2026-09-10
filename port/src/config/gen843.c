@@ -19,7 +19,7 @@ void rows_x46_x45_windows_x1000_x7ff_x7(void)
     row_sync2(0x7FF);
     battle_wait_just(0x7000);
     row_prep_close();
-    func_80135B54();
+    ability_bank_select_d_8019ee56_d_8();
     row_pad();
     return;
 L127700:

@@ -12,14 +12,14 @@ void battle_anim_gates_v0_spin_l1853ac(void)
             continue;
         break;
     }
-    func_80197248();
+    fn_1x97248();
     /* v1/a0 latch -> L18547C; v1/v0 gate -> L185480 */
-    func_80197248();
+    fn_1x97248();
     return;
 L18547C:
-    func_80197248();
+    fn_1x97248();
     return;
 L185480:
-    func_80197248();
+    fn_1x97248();
     return;
 }

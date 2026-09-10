@@ -17,7 +17,7 @@ L10E9B4:
         wnd_fx_7d_b();
         cell_clear_bank(0x420C);
         key_page(0xAD);
-        func_800FE5D4();
+        cell_0xfe5d4();
         battle_gate_early();
         row_page(0xAD);
         cell_set50_from40();
@@ -48,7 +48,7 @@ L10EA7C:
         wnd_fx_7d_b();
         cell_clear_bank(0x420C);
         poll_pair(0xAD);
-        func_800FE5D4();
+        cell_0xfe5d4();
         battle_gate_early();
         row_page(0xAD);
         shop_buy_list();

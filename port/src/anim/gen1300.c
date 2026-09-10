@@ -11,7 +11,7 @@ void battle_anim_v0_gates_spin_loop_clo(void)
         goto L17CEE0;
 L17CEE0:
     /* v0 gates -> L17D054 / L17CF54 */
-    func_80195120();
+    event_rows();
     if (io_just() != 0)
         goto L17D000;
 L17cfd4:

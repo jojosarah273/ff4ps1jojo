@@ -7,17 +7,17 @@ void event_s1_v0_v0_s1_latches_rows_wit(void)
 {
     /* event: s1/v0 + v0/s1 latches; 80190004(1)/80190078/80190088
        rows with 8018F0C8 polls; returns at L18FC9C. */
-    if (func_80190004(1) != 0)
+    if (fn_1x90004(1) != 0)
         goto L18FA74;
     anim_reg_stub();
     goto L18FC9C;
 L18FA74:
-    if (func_80190078() == 0)
+    if (register_only_stub_xc_see_asm_for_1900() == 0)
         goto L18FAB4;
     anim_reg_stub();
     goto L18FC9C;
 L18FAB4:
-    if (func_80190004(1) != 0)
+    if (fn_1x90004(1) != 0)
         goto L18FB0C;
     anim_reg_stub();
     goto L18FC9C;
@@ -31,7 +31,7 @@ L18FB30:
     for (;;) {
         if (io_just() == 0)
             goto L18FC44;
-        func_80190088();
+        register_only_stub_xc_see_asm_for_1900();
         if (io_just() != 0)
             goto L18FC2C;
         anim_reg_stub();

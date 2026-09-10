@@ -55,7 +55,7 @@ L1143dc:
             continue;
         break;
     }
-    func_800FD6E8();
+    cell_0xfd6e8();
 L114424:
     for (;;) {
         wnd_fx_7d();

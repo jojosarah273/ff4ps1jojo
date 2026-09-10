@@ -10,18 +10,18 @@ void battle_anim_dispatch_a0_v0_v0_gate(void)
     /* a0/v0 latch -> L17DBDC */
     if (io_just() != 0)
         goto L17DBAC;
-    func_8017D7D8();
+    battle_sprite_blit_copies_width_ro();
     return;
 L17DBAC:
-    func_8017D898();
+    battle_sprite_blit_plane_variant_m();
     return;
 L17DBDC:
-    func_8017D898();
+    battle_sprite_blit_plane_variant_m();
     return;
 L17DBF4:
-    func_8017D980();
+    battle_sprite_blit_plane_variant_s();
     return;
 L17DC0C:
-    func_8017DA64();
+    battle_sprite_blit_stagger_variant();
     return;
 }

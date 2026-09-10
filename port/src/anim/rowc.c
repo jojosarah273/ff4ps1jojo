@@ -10,15 +10,15 @@ void battle_anim_chain_e8_c_c14_ef0c_fe(void)
        8017E740/80178D00; linear. */
     cb_slot15();
     event_spin_wait();
-    func_80194988();
-    func_8017841C();
+    fn_1x94988();
+    battle_anim_twin_v0_gate_ladders_l();
     status_table_init();
     battle_state_dc400();
-    func_800FEF7C();
+    shop_battle_v0_v1_v0_gates_pick_fe();
     battle_anim_v0_gates_returns_at_l1();
-    func_8017D078();
-    func_8017E220();
-    func_8017E740();
-    func_80178D00();
+    selection_screen_driver_register_g();
+    battle_anim_chain_x520_a0_v1_latch();
+    fn_1x7e740();
+    battle_row_commit_seven_e794_write();
     return;
 }

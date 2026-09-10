@@ -29,7 +29,7 @@ void func_80136FFC(void)
     row_open();
     fn_1x2102c();
     draw_pad_cur();
-    func_8011FB74();
+    fn_1x1fb74();
     row_close();
     txt_cell(0x1440);
     if (gate(0x202) == 0)
@@ -157,7 +157,7 @@ L478:
         if (gate(2) != 0)
             goto L548;
     L530:
-        func_801263C8();
+        fn_1x263c8();
     L538:
         sep_a();
         goto L6a0;
@@ -190,7 +190,7 @@ L478:
             goto L640;
         cell_draw(0x1440);
     L640:
-        func_801263C8();
+        fn_1x263c8();
         sep_b();
         goto L6a0;
     L658:

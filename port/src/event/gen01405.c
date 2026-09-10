@@ -7,13 +7,13 @@ void event_b44_rows_on_s3_t0_s0_fp(void)
 {
     /* event: 80190B44(1/2/0) rows on s3/t0 + s0/fp latch loop
        L1918D8. */
-    func_80190B44(1);
+    event_cmd_flow_v0_v1_gates_through(1);
     if (io_just() == 0)
         goto L191914;
-    if (func_80190B44(2) != 0)
+    if (event_cmd_flow_v0_v1_gates_through(2) != 0)
         goto L191968;
 L191914:
-    func_80190B44();
+    event_cmd_flow_v0_v1_gates_through();
     if (io_just() == 0)
         goto L191984;
 L191968:

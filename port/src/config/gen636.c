@@ -31,7 +31,7 @@ L15D160:
     cell_draw(0x32DA);
     txt_set(0x3975);
     options_rows_run();
-    func_8015A284();
+    fn_1x5a284();
     fn_1x55778();
     fn_1x583fc();
     return;

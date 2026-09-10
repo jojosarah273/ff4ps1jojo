@@ -16,7 +16,7 @@ void battle_item_cast_d12c_prep_x1900_g(void)
 L142938:
     for (;;) {
         txt_cell(0x1900);
-        func_80142B4C();
+        fn_1x42b4c();
         sep();
         cell_draw_cur();
         cell_step();
@@ -45,7 +45,7 @@ L142988:
         }
         latch(0x40);
         func_801431E8();
-        func_80177DCC();
+        fn_1x77dcc();
         sep();
     L142a6c:
         for (;;) {

@@ -32,7 +32,7 @@ L17464C:
         }
         sep_a();
         row_open_w(0x10);
-        if (func_800F73E0(0x202) != 0)
+        if (cell_0xf73e0(0x202) != 0)
             goto L174650;
         break;
     }

@@ -11,15 +11,15 @@ void battle_v0_gate_tree_on_the_e4_pair(void)
     if (io_just() != 0)
         goto L18857C;
 L1885CC:
-    func_80191638();
-    func_801890E4();
+    play_time_splitter_x104_magic_mult();
+    battle_ae8_gate_d28_a1_a0_latch();
     return;
 L188530:
-    func_80191638();
-    func_801890E4();
+    play_time_splitter_x104_magic_mult();
+    battle_ae8_gate_d28_a1_a0_latch();
     return;
 L18857C:
-    func_80191638();
-    func_801890E4();
+    play_time_splitter_x104_magic_mult();
+    battle_ae8_gate_d28_a1_a0_latch();
     return;
 }

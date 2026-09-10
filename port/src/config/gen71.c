@@ -36,7 +36,7 @@ L125B14:
     latch(0x80);
     cell_pull_c8_lo(0x2115);
     row_prep(0x20);
-    func_800F8210(0x2116);
+    cell_0xf8210(0x2116);
     row_prep_close();
     row_close2();
     row_open3();

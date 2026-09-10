@@ -4,26 +4,6 @@
  */
 #include "ff4_window.h"
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-extern int func_80109D68();
-
 void fn_1x09b08(void)
 
 {
@@ -58,7 +38,7 @@ void fn_1x09b08(void)
       label(0x2116);
       wnd_open(0x18);
       label(0x4305);
-      func_80109D68();
+      battle_fsm_x49c_a2_v1_a2_v0_latch();
       row_page(0x12);
       sep_a();
       row_open_w(0x20);
@@ -73,7 +53,7 @@ void fn_1x09b08(void)
       label(0x2116);
       wnd_open(0x18);
       label(0x4305);
-      func_80109D68();
+      battle_fsm_x49c_a2_v1_a2_v0_latch();
       row_page(0x12);
       sep_a();
       row_open_w(0x20);

@@ -33,7 +33,7 @@ L13ca84:
 L13CB0C:
     midrow_paint_a();
     draw_pad_cur();
-    func_8011FB74();
+    fn_1x1fb74();
     config_row_f320();
     fn_1x2219c();
     fn_1x1ff40();
@@ -41,7 +41,7 @@ L13CB0C:
     draw_pad_cur();
     battle_rows_sync();
     draw_pad_cur();
-    func_8011FB74();
+    fn_1x1fb74();
     config_row_f320();
     sep_b();
     return;

@@ -13,10 +13,10 @@ void battle_anim_v0_gates_route_b8_d8_r(void)
 L1936C0:
     /* gate -> L193704 */
     anim_cmd_header();
-    func_80197398();
-    func_801972D8();
+    fn_1x97398();
+    fn_1x972d8();
     for (;;) {
-        func_80197358();
+        fn_1x97358();
         if (io_just() != 0)
             continue;
         break;

@@ -14,8 +14,8 @@ L16ae14:
     for (;;) {
         cell_stamp8_9(0x3319);
         cell_stamp8_9(0x371B);
-        func_800F9140(0x331B);
-        func_800F9140(0x3719);
+        cell_0xf9140(0x331B);
+        cell_0xf9140(0x3719);
         cell_step();
         cell_step();
         cell_step();

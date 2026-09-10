@@ -18,7 +18,7 @@ L8798:
 L87a0:
     fn_1x68b94();
     latch(0xE0);
-    func_8017EA90();
+    fn_1x7ea90();
     txt_set(0xEF87);
     io_poll(1);
     if (io_just() != 0)
@@ -89,19 +89,19 @@ L8998:
     row_read(0x80);
     if (sel(2) == 0) {
         txt_set(0xF433);
-        func_8017EA90();
+        fn_1x7ea90();
     }
     txt_set(0xEF88);
     row_read(0x40);
     if (sel(2) == 0) {
         txt_set(0xF434);
-        func_8017EA90();
+        fn_1x7ea90();
     }
     txt_set(0xEF88);
     row_read(0x20);
     if (sel(2) == 0) {
         txt_set(0xF435);
-        func_8017EA90();
+        fn_1x7ea90();
     }
     txt_set(0xEF87);
     io_poll(3);

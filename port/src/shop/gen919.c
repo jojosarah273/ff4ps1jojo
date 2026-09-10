@@ -7,7 +7,7 @@ void options_c_rows_gate_x80_picks_the(void)
 {
     /* options: 80153218/8015329C rows; gate 5574(0x80) picks the
        0x34CA/0x26D2 variants. */
-    func_80153218();
+    fn_1x53218();
     io_poll(0x80);
     if (io_go() == 0)
         goto L162670;

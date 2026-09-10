@@ -29,6 +29,7 @@ static uint8_t g_cell[CELL_H][CELL_W][3]; /* RGB per cell */
 static uint32_t g_bank[0x4000];           /* catalog bank sim */
 static int g_cursor;
 
+
 /* runtime font bank: swap-able asset (mod feature + the hook for the
  * real data-table once the loader is traced). Falls back to the
  * built-in typeset when the file is absent. */
@@ -222,7 +223,7 @@ static void put_text(int x, int y, char c)
     for (j = 0; j < 8; j++) {
         for (i = 0; i < 8; i++) {
             SDL_Rect rr = { x * 8 + i, y * 16 + j * 2, 1, 2 };
-            if (g[j] & (0x80 >> i))
+                    if (g[j] & (0x80 >> i))
                 SDL_SetRenderDrawColor(g_ren, g_cell[y][x][0], g_cell[y][x][1], g_cell[y][x][2], 255);
             else
                 SDL_SetRenderDrawColor(g_ren, 30, 60, 90, 255);
@@ -358,7 +359,7 @@ void device_poll_events(void)
             default: break;
             }
         }
-        if (ev.type == SDL_QUIT) { g_in.keypress = 0xFF; }
+        if (ev.type == SDL_QUIT) { SDLTRACE("quit-ev"); g_in.keypress = 0xFF; }
     }
     /* headless smoke (gated on g_autopress): confirm press every 300
        poll cycles so the menu can advance without real input. */

@@ -14,7 +14,7 @@ void battle_anim_loop_a488_c8c_preps_l1(void)
     page_paint2_cur();
     sep();
     fn_1x4a488();
-    func_80148C8C();
+    fn_1x48c8c();
     sep();
     label_cur();
     page_paint2_cur();

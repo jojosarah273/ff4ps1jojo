@@ -23,7 +23,7 @@ L18F8B0:
 L18F8DC:
     if (io_just() == 0)
         goto L18F990;
-    func_8018F9E0();
+    fn_1x8f9e0();
     return;
 L18F990:
     return;

@@ -10,7 +10,7 @@ void fn_1x66db8(void)
     u16 e;
     v = *D_8019ED54;
     cell_poke0(cell_peek_v(0xF1F3F, v) + v);
-    cell_tick_or(cell_peek_v(func_800F3AB4(3), 0));
+    cell_tick_or(cell_peek_v(cell_0xf3ab4(3), 0));
     v = *D_8019ED54;
     e = *(u16 *)(cell_state(0) + v);
     cell_tick_or(cell_state(e));

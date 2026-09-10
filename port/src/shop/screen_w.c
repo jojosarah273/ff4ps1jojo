@@ -24,10 +24,10 @@ La51c:
         cell_stamp8_9(0x2B07);
         cell_sink8_9(0x2709);
         cell_stamp8_9(0x2B09);
-        func_800F9140(0x2F03);
-        func_800F9140(0x2F05);
-        func_800F9140(0x2F07);
-        func_800F9140(0x2F08);
+        cell_0xf9140(0x2F03);
+        cell_0xf9140(0x2F05);
+        cell_0xf9140(0x2F07);
+        cell_0xf9140(0x2F08);
         sep();
         row_prep_close();
         row_open();

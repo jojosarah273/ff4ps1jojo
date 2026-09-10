@@ -13,7 +13,7 @@ void config_row_x60_window_x43_x3f_wind(void)
     if (sel(0x202) != 0)
         goto L12C5D0;
     draw_pad_cur();
-    func_8012C2F8();
+    fn_1x2c2f8();
     return;
 L12C5D0:
     draw_pad(0x16);

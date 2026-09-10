@@ -9,9 +9,9 @@ void fn_1x321e8(void)
     row_read(0x10);
     if (sel(2) == 0) {
         latch(3);
-        func_80132310();
+        fn_1x32310();
     } else {
-        func_80131294();
+        fn_1x31294();
         fn_1x2219c();
     }
 }

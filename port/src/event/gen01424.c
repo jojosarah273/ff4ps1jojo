@@ -12,15 +12,15 @@ void battle_fsm_v0_t0_v0_a3_v0_a2(void)
     /* v1/v0 gate -> L1861A8 / L1861E0 */
     if (io_just() == 0)
         goto L1861E0;
-    func_801875AC();
+    fn_1x875ac();
     goto L186800;
 L1861E0:
     /* s0/v0 latch -> L1862C0; v1/v0 gate -> L18624C */
     if (io_just() == 0)
         goto L18624C;
-    func_80188240();
+    fn_1x88240();
     /* v0/s0 + v1/v0 latches -> L186230 */
-    func_801881AC();
+    placeholder_unused();
 L186230:
     goto L186800;
 L18624C:

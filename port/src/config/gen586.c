@@ -10,8 +10,8 @@ void battle_splash_e8_fc_bc_preps_loop(void)
        80150C58; redraws on return. */
     cb_slot15();
     event_spin_wait();
-    func_801942FC();
-    func_801506BC(8);
+    fn_1x942fc();
+    fn_1x506bc(8);
 L15089c:
     for (;;) {
         row_prep(0x30);
@@ -37,8 +37,8 @@ L15089c:
         row_pad();
         cb_slot15();
         event_spin_wait();
-        func_801942FC();
-        func_801506BC();
+        fn_1x942fc();
+        fn_1x506bc();
         break;
     }
     return;

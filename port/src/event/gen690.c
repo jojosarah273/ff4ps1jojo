@@ -25,7 +25,7 @@ L185C14:
         break;
     }
 L185C70:
-    func_80185764();
+    battle_cutscene_driver_s2_v0_latch();
     return;
 L185C80:
     if (io_just() == 0)
@@ -41,7 +41,7 @@ L185C80:
         break;
     }
 L185D8C:
-    func_80185764();
+    battle_cutscene_driver_s2_v0_latch();
     return;
 L185D9C:
     cell_peek_cur();
@@ -59,6 +59,6 @@ L185D9C:
         break;
     }
 L185EF4:
-    func_80185764();
+    battle_cutscene_driver_s2_v0_latch();
     return;
 }

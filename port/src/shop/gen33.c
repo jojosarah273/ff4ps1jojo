@@ -70,7 +70,7 @@ L16593c:
             goto L165994;
     L165974:
         sep();
-        func_800F64A8();
+        cell_0xf64a8();
         cell_pull_c8(0x1440);
         goto L1659A4;
     L165994:

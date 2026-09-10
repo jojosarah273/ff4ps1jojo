@@ -6,7 +6,7 @@
 void event_cb88_row_v0_gates_returns_at(void)
 {
     /* event: 8018CB88 row; v0 gates; returns at L189C24. */
-    func_8018CB88();
+    gate_monolith_x304_v1_v0_compare_a();
     if (io_just() == 0)
         goto L189C10;
     return;

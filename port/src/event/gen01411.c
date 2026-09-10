@@ -8,12 +8,12 @@ void event_aac4_gate_spins_then_e408_e2(void)
     /* event: 8018AAC4 gate spins; then 8018E408/8018E2C8(1) rows
        with the 8018D1AC/8018A75C(3) tail. */
     /* v1/v0 gate + spin L18D8AC */
-    if (func_8018AAC4() != 0)
+    if (fn_1x8aac4() != 0)
         goto L18D958;
     if (io_just() == 0)
         goto L18D958;
 L18D958:
-    func_8018E408();
+    fn_1x8e408();
     event_a0_v0_latch_chain_l18e2e0_l1(1);
     if (io_just() != 0)
         goto L18DAA4;

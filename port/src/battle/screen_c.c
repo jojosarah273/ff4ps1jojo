@@ -324,7 +324,7 @@ memscreen:
     row_read(1);
     if (sel(0x202) == 0)
         return;
-    func_800FD6B8();
+    cell_0xfd6b8();
     latch(2);
     txt_draw(0x170F);
     latch(0x70);

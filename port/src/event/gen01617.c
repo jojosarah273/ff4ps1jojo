@@ -10,7 +10,7 @@ void event_s2_s4_gate_b8_spin_rows_with(void)
     /* s2/s4 latch -> L19305C */
     if (io_just() != 0)
         goto L192FE4;
-    func_80197798(3);
+    register_only_stub_xc_see_asm_for_1977(3);
     event_jr_t2_dispatch_f078_spin_loo();
     return;
 L192FE4:

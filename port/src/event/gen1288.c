@@ -10,7 +10,7 @@ void event_v0_v0_s3_gates_f078_spin_loo(void)
         if (io_just() == 0)
             goto L18FD44;
         /* v0/s3 latch -> L18FD30 */
-        func_8018F078();
+        register_only_stub_x1c_see_asm_for();
         if (io_just() != 0)
             goto L18FD34;
         goto L18FD48;

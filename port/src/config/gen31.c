@@ -64,7 +64,7 @@ L5634:
         row_sel2(cell_state(0x47));
         page(0x45);
         row_prep(0x20);
-        func_800F8A48(0x51);
+        cell_0xf8a48(0x51);
         cell_inc_cell(0x51);
         cell_inc_cell(0x51);
         row_prep_close();
@@ -76,7 +76,7 @@ L5634:
         row_prep(0x20);
         row_arm_s_cur();
         cell_sink89_c(0x4216);
-        func_800F8A48(0x51);
+        cell_0xf8a48(0x51);
         cell_inc_cell(0x51);
         cell_inc_cell(0x51);
         row_prep_close();

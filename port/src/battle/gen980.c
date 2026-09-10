@@ -16,6 +16,6 @@ void fn_1x1b51c(void)
         poll_pair_cur();
     } while (1);
     page(0x3D);
-    func_800F4A7C(0x12E0);
+    cell_0xf4a7c(0x12E0);
     cell_pull_c8_off(0x12E0);
 }

@@ -11,7 +11,7 @@ void rows_x48_window_row_loop_l126d58_x(void)
 L126d58:
     for (;;) {
         row_page(0x48);
-        func_80132178();
+        fn_1x32178();
         txt_cell_cur();
         row_read(0x3F);
         if (sel(0x202) != 0)

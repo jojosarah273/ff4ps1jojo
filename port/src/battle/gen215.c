@@ -131,7 +131,7 @@ L7e0:
     txt_set(0x709);
 L7e8:
     cell_put(0xAB);
-    func_800FFB5C();
+    cell_0xffb5c();
     txt_set(0x1707);
     txt_draw(0x70A);
     shop_sale_confirm_xab_x6fa_x70a_te();

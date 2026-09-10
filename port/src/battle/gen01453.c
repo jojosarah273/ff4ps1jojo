@@ -4,13 +4,11 @@
  */
 #include "ff4_window.h"
 
-extern int func_8014D500();
-
 void fn_1x4d414(void)
 
 {
   sep();
-  func_8014D500();
+  fn_1x4d500();
   return;
 }
 

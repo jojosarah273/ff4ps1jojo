@@ -22,7 +22,7 @@ L198358:
     return;
 L19836C:
     /* gate tree -> L198488 row */
-    func_80198990(0x22);
+    fn_1x98990(0x22);
     return;
 L198494:
     return;

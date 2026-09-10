@@ -33,38 +33,38 @@ L12cf28:
         cell_pos_back(0xB6);
         cell_put(0x45);
         row_prep_close();
-        func_800F756C(0x41);
+        cell_0xf756c(0x41);
     L12cfe0:
         for (;;) {
-            func_800F6D40(0x15C0);
+            cell_0xf6d40(0x15C0);
             if (io_press(cell_state(0x45)) != 0)
                 goto L12CF90;
-            func_800F6390();
-            func_800F59F4(0x18);
+            cell_0xf6390();
+            cell_0xf59f4(0x18);
             if (io_just() == 0)
                 continue;
             break;
         }
-        func_800F756C(0x41);
+        cell_0xf756c(0x41);
     L12d030:
         for (;;) {
-            func_800F6D40(0x15C0);
+            cell_0xf6d40(0x15C0);
             if (gate(2) != 0)
                 goto L12D068;
-            func_800F6390();
-            func_800F59F4(0x18);
+            cell_0xf6390();
+            cell_0xf59f4(0x18);
             if (io_just() == 0)
                 continue;
             break;
         }
     L12D068:
         row_page(0x45);
-        func_800F8930(0x15C0);
+        cell_0xf8930(0x15C0);
         cell_cursor_dec();
         row_prep(0x10);
         midrow_paint_a();
         draw_pad_cur();
-        func_8011FB74();
+        fn_1x1fb74();
         draw_pad(0x29A);
         row_page(0xED);
         shop_row_x29_x45_windows_x41_x1500();

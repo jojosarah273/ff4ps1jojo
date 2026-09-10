@@ -4,15 +4,12 @@
  */
 #include "ff4_window.h"
 
-
-extern int func_8014B914();
-
 void fn_1x4bb0c(void)
 
 {
   latch(2);
   txt_draw(0xf2d0);
-  func_8014B914();
+  fn_1x4b914();
   return;
 }
 

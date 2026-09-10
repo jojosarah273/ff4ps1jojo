@@ -277,7 +277,7 @@ Le054:
         txt_draw(0xF467);
         func_8009B8E4();
         sep();
-        func_8014D500();
+        fn_1x4d500();
         return;
     }
 Lde20:

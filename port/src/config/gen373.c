@@ -14,17 +14,17 @@ L7c00:
     battle_row_88();
 L7c08:
     fn_1x37b18();
-    func_80178BB4();
+    fn_1x78bb4();
     battle_anim_e8_fc_preps_v1_v0_gate();
 L7c24:
     /* v1/v0 branch */
-    func_80178BB4();
+    fn_1x78bb4();
     return;
     /* v1/v0 branch */
     fn_1x38788();
     fn_1x37b18();
     /* v1/v0 branch */
-    func_80187CD0();
+    fn_1x87cd0();
     fn_1x38730();
     latch(1);
     txt_draw(0x1B47);
@@ -75,9 +75,9 @@ L7d40:
     row_prep_close();
     row_pad();
     fn_1x38788();
-    func_8013813C();
+    stat_table_header_hash_the_byte_co();
     /* v1/v0 branch */
-    func_80187CD0();
+    fn_1x87cd0();
 L7e88:
     config_row_221ec();
     midrow_paint_a();
@@ -107,22 +107,22 @@ L7ed8:
     battle_rows_29();
     fn_1x38788();
     /* v1/v0 + s2 branches */
-    func_8013836C();
+    fn_1x3836c();
 L7fcc:
     config_row_f320();
     /* v0/s0, v0/s1 branches */
-    func_80145AA0();
-    func_80145AA0();
-    func_80138620();
+    fn_1x45aa0();
+    fn_1x45aa0();
+    fn_1x38620();
     /* v1/v0 branch */
-    func_801383B8();
+    fn_1x383b8();
     /* s3/s2 branches */
     fn_1x1ff40();
     /* v0/s1 branch */
-    func_80138408();
+    fn_1x38408();
     battle_row_88();
     /* v1/v0 + s2 branches */
-    func_80178BB4();
+    fn_1x78bb4();
     battle_anim_e8_fc_preps_v1_v0_gate();
     /* v1/v0 + s2 branches */
     fn_1x38730();

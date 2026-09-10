@@ -15,7 +15,7 @@ L126618:
             goto L126690;
         cell_pull_c8_lo(0x2100);
         cell_cursor_dec();
-        func_8011F844();
+        fn_1x1f844();
         row_close2();
         poll_spin();
         cell_put(0x88);

@@ -10,7 +10,7 @@ void fn_1x5c604(void)
     options_rows_run();
     txt_set(0x352B);
     if (gate(2) == 0) {
-        func_8015A284();
+        fn_1x5a284();
         fn_1x55778();
         fn_1x583fc();
         cell_clear_bank(0x352B);

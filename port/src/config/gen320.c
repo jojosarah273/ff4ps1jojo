@@ -28,7 +28,7 @@ L1285D8:
     draw_pad(0x30);
 L128628:
     for (;;) {
-        func_801266C8();
+        fn_1x266c8();
         row_prep(0x20);
         cell_dec_cell(0x93);
         cell_dec_cell(0x99);

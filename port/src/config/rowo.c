@@ -7,7 +7,7 @@ void fn_1x39e34(void)
 {
     config_row_b600();
     draw_pad_cur();
-    func_8011FB74();
+    fn_1x1fb74();
     draw_pad_cur();
     battle_rows_sync();
     draw_pad_cur();
@@ -98,7 +98,7 @@ L0A0:
     ability_rows_x1ba9_x1ba8_x1baa_tex();
     page(0x45);
     label(0x16AA);
-    func_8012214C();
+    fn_1x2214c();
     latch(4);
     txt_draw(0x322);
     txt_draw(0x326);
@@ -131,8 +131,8 @@ L0A0:
     midrow_pad88_run();
     fn_1x26480();
     func_8013A8C4();
-    func_8013B7B8(0xFF);
-    func_8013B764();
+    fn_1x3b7b8(0xFF);
+    fn_1x3b764();
     battle_state_dc400();
     midrow_degen();
     row_page(1);

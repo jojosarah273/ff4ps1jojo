@@ -9,7 +9,7 @@ void fn_1x43908(void)
     battle_row_d548();
     latch(8);
     txt_draw(0xF326);
-    func_80148C6C();
+    fn_1x48c6c();
     sep();
     open_row_cur();
     open_row(2);
@@ -78,7 +78,7 @@ L3a18:
             sep_a();
             row_open_w(8);
             cell_draw(0xECBE);
-            func_80148FA0();
+            fn_1x48fa0();
             page_cur();
             cell_draw(0xEC76);
             cell_step();
@@ -111,7 +111,7 @@ L3a18:
         break;
     }
     cell_clear_bank(0xEF87);
-    func_80148C6C();
+    fn_1x48c6c();
     fn_1x452c8();
     return;
 }

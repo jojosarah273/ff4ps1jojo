@@ -156,10 +156,10 @@ La198:
     La5a0:
         fn_1x2b190();
         config_row_b600();
-        func_8012AAC0();
+        fn_1x2aac0();
         cell_clear_bank(0x1B19);
         fn_1x2b0b0();
-        func_80126458();
+        fn_1x26458();
         anim_noop();
         goto La658;
     La5f0:

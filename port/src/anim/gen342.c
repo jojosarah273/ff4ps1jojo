@@ -45,6 +45,6 @@ void shop_stat_icons_the_fixed_icon_cel(void)
     cell_put(0x31);
     cell_put(0x33);
     latch(0xE0);
-    func_8017EA90();
+    fn_1x7ea90();
     return;
 }

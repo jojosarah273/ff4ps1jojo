@@ -9,7 +9,7 @@ void config_banner_96(void)
        rows; gates 58BC(0xFF)/54D4(3C3C(0x96)); loop on 5574(0xFF). */
     row_prep_close();
     func_800F8D40(0x96);
-    func_800F58BC(0xFF);
+    cell_0xf58bc(0xFF);
     if (io_just() != 0)
         goto L152354;
     io_poll_cur();
@@ -17,19 +17,19 @@ void config_banner_96(void)
         goto L152354;
     if (io_press(cell_state(0x96)) != 0)
         goto L152354;
-    func_800F7248(0x97);
+    cell_0xf7248(0x97);
     sep_b();
     cell_tick_sub(cell_state(0x96));
     io_poll(0xFF);
     if (io_just() == 0)
         goto L1522D4;
-    func_800F6B38(0x1900);
+    cell_0xf6b38(0x1900);
     goto L152354;
 L1522D4:
     cell_set50_from40();
     txt_draw(0x3947);
     cell_clear_bank(0x3948);
-    func_800F6B38(0x1900);
+    cell_0xf6b38(0x1900);
     func_800F8CD4(0x3945);
     row_prep(0x10);
     options_b04_x2000_gates_v0_run_l15();

@@ -6,7 +6,7 @@
  *   bit  = col0*32 + (rec[2]<<2 & 0x3E0)      (source plane offset)
  * and copies 0x20 u16 cells per row from the pattern table into the
  * framebuffer row (dst stride 66 cells).
- * Ground truth: src/func_8017D7D8/D898/D980/DA64.
+ * Ground truth: src/battle_sprite_blit_copies_width_ro/D898/D980/DA64.
  */
 #include <stdint.h>
 

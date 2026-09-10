@@ -8,13 +8,13 @@ void battle_loop_f098_intro_x9a_window(void)
     /* battle loop: 8018F098 intro + 0x9A window; loops L169408
        (80194640/94394) and L16942C (62BC(0x9A)/6630(0x9A) gates);
        ends on 5574(0xF)/0x3303 text reads. */
-    func_8018F098();
-    func_8018F098();
+    register_only_stub_x2c_see_asm_for();
+    register_only_stub_x2c_see_asm_for();
     open_row(0x9A);
     battle_mode_dispatch();
     cb_slot15();
     event_spin_wait();
-    func_801942FC();
+    fn_1x942fc();
     cb_slot2();
     cb_slot15();
     cb_slot2();

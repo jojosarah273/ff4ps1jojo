@@ -42,13 +42,13 @@ L27080:
     return;
 L26F74:
     for (;;) {
-        func_80123FB4();
+        fn_1x23fb4();
         midrow_paint_c();
         anim_noop();
         txt_set(0x1A3C);
         rows_x46_x45_windows_x1000_x7ff_x7();
         /* v0/s0 gate -> L26FB4 (or L26F74 tail) */
-        func_8013836C(1);
+        fn_1x3836c(1);
     L26FB4:
         config_rows_e4();
         status_row_x30_xc1_x1d_x1e_x1a3c_x();
@@ -69,13 +69,13 @@ L26F74:
     L270E8:
         s2_branch();
         if (io_go() != 0) {
-            func_8013B04C();
+            fn_1x3b04c();
             fn_1x3aaa8();
-            func_80187C20();
+            fn_1x87c20();
             battle_row_88();
             return;
         }
-        func_80187C20();
+        fn_1x87c20();
         battle_row_88();
         /* v1/v0 latch -> L26F74 while unequal, else return */
         continue;

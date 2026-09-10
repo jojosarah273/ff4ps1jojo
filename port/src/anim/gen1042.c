@@ -14,7 +14,7 @@ L17E7D8:
         goto L17E90C;
     if (io_just() != 0)
         goto L17E84C;
-    func_80195120();
+    event_rows();
     if (io_just() == 0)
         goto L17E8F8;
 L17E8CC:
@@ -27,10 +27,10 @@ L17E84C:
         goto L17E898;
     goto L17E8AC;
 L17E898:
-    func_80195120();
+    event_rows();
     return;
 L17E8AC:
-    func_80195120();
+    event_rows();
     if (io_just() == 0)
         goto L17E8F8;
     tex_link_packets();

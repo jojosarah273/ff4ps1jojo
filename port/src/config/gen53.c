@@ -33,9 +33,9 @@ LCC78:
     txt_draw(0xF118);
     latch(0x9E);
 LCCC0:
-    func_8014D708();
+    fn_1x4d708();
     battle_row_wrap();
-    func_80148DE8();
+    fn_1x48de8();
     sep();
 LCCFC:
     for (;;) {
@@ -50,7 +50,7 @@ LCCFC:
             break;
     }
     sep();
-    func_80148E60();
+    fn_1x48e60();
     txt_set(0x48);
     row_sel_cell_cur();
     txt_cell(0xF053);
@@ -68,12 +68,12 @@ LCDD4:
     for (;;) {
         gpu_driver_run();
         battle_rows_d64_d14_d040_rows_loop();
-        func_8014D96C();
+        fn_1x4d96c();
         txt_set(0xF117);
         if (io_press(cell_state(0xF118)) != 0)
             goto LCE2C;
         txt_set(0xF117);
-        func_80148E60();
+        fn_1x48e60();
         page_paint2(0xF117);
     LCE2C:
         txt_set(0xF116);

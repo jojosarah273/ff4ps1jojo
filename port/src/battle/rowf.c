@@ -8,7 +8,7 @@ void func_8010A964(void)
     txt_set(0x1705);
     cell_put(8);
     row_sel_cell(0x202);
-    if (func_800F73E0() != 0)
+    if (cell_0xf73e0() != 0)
         goto La9e4;
     cell_push_c8_d58(0x6A4);
     row_read(0x20);

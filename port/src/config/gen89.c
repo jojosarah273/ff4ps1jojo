@@ -32,7 +32,7 @@ L361ac:
             goto L3628C;
         fn_1x36494();
         fn_1x240d0();
-        func_80126458();
+        fn_1x26458();
         fn_1x352f0();
         config_row_264e8();
     L3628C:
@@ -85,7 +85,7 @@ L361ac:
         row_read(1);
         txt_draw(0x1B7A);
         fn_1x378e0();
-        func_8013554C();
+        fn_1x3554c();
         anim_noop();
     L363EC:
         row_page_cur();
@@ -106,7 +106,7 @@ L361ac:
         txt_draw(0x1B7C);
         draw_pad(0x19A);
         rows_f360_prep_x29_x1d_x1e_window();
-        func_8013554C();
+        fn_1x3554c();
     }
     return;
 }

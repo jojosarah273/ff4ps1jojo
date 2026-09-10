@@ -73,7 +73,7 @@ L176450:
     for (;;) {
         cell_pull_c8_off();
         cell_step();
-        if (func_800F6180(0x202) != 0)
+        if (cell_0xf6180(0x202) != 0)
             continue;
         break;
     }
@@ -81,7 +81,7 @@ L176470:
     for (;;) {
         cell_pull_c8_off();
         cell_step();
-        if (func_800F6180(0x202) != 0)
+        if (cell_0xf6180(0x202) != 0)
             continue;
         break;
     }

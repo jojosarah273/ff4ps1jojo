@@ -10,8 +10,8 @@ void battle_class_rows_x1c_x22_x1e_wind(void)
     row_open();
     row_prep(0x20);
     cell_cursor_ret2();
-    func_800F8FD8(0x20);
-    func_800F8FD8(0x22);
+    cell_0xf8fd8(0x20);
+    cell_0xf8fd8(0x22);
     row_read2(0x1C);
     if (cell_flags_pos0(2) != 0)
         goto L13F474;

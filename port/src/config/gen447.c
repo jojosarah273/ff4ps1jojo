@@ -36,7 +36,7 @@ L12eac8:
         L12EB78:
             step2();
             step2();
-            if (func_800F5804(cell_state(0x25)) == 0)
+            if (cell_0xf5804(cell_state(0x25)) == 0)
                 continue;
             break;
         }

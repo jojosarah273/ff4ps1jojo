@@ -26,7 +26,7 @@ L144ca4:
             cell_put_hi9(4);
         L144d48:
             for (;;) {
-                func_800F5BE8(cell_state_of());
+                cell_0xf5be8(cell_state_of());
                 cell_dec_cell(4);
                 if (poll_go(0x202) != 0)
                     continue;

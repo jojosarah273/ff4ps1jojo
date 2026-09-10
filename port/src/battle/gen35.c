@@ -42,7 +42,7 @@ L004c:
         cell_cursor_ret2();
         cell_pos_mask(0x3FFF);
         row_arm_s_cur();
-        func_800F68A0(4);
+        cell_0xf68a0(4);
         cell_put_hi9();
         cell_cursor_adv2();
         cell_pos_mask(0x4000);
@@ -53,7 +53,7 @@ L004c:
             goto L01a0;
         draw_pad_cur();
         for (;;) {
-            func_800F6EDC();
+            cell_0xf6edc();
             rows_c3c_v0_spin_loop_l1503c0();
             cell_pull89_bank(8);
             cell_inc_cell();
@@ -63,7 +63,7 @@ L004c:
                 break;
         }
         for (;;) {
-            func_800F6EDC();
+            cell_0xf6edc();
             rows_c3c_v0_spin_loop_l1503c0();
             cell_pos_mask(0xFF);
             cell_pull89_bank(8);
@@ -76,7 +76,7 @@ L004c:
     L01a0:
         draw_pad(0xE);
         for (;;) {
-            func_800F6EDC();
+            cell_0xf6edc();
             rows_c3c_v0_spin_loop_l1503c0();
             cell_pull89_bank(8);
             cell_inc_cell();
@@ -87,7 +87,7 @@ L004c:
         }
         draw_pad(0x1E);
         for (;;) {
-            func_800F6EDC();
+            cell_0xf6edc();
             rows_c3c_v0_spin_loop_l1503c0();
             cell_pos_mask(0xFF);
             cell_pull89_bank(8);

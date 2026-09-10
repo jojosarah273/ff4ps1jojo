@@ -6,7 +6,7 @@
 extern u16 *D_80199230;
 void fn_1x37b18(void)
 {
-    func_80123FB4();
+    fn_1x23fb4();
     midrow_paint_c();
     rows_x100_x1c_x41_windows_f0_x89_c();
     anim_noop();

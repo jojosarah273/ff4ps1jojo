@@ -17,7 +17,7 @@ void options_banner_x2683_gate_ladder_x(void)
     latch(0x19);
     goto L162A28;
 L162960:
-    func_80153218();
+    fn_1x53218();
     io_poll(0xC0);
     if (io_go() == 0)
         goto L1629A0;

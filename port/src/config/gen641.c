@@ -20,7 +20,7 @@ void rows_x4e_x41_windows_x7fa_text_d0(void)
     sep_a();
 L1388b4:
     for (;;) {
-        cell_peek0(func_800F3AB4(0x4E));
+        cell_peek0(cell_0xf3ab4(0x4E));
         cell_peek_cur();
         cell_inc_cell(0x4E);
         poll_pair_cur();

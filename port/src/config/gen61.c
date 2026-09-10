@@ -50,11 +50,11 @@ void fn_1x23d3c(void)
     tail(0x22);
     battle_rows_2115();
     midrow_paint_c();
-    func_80123FB4();
+    fn_1x23fb4();
     config_row_q18();
     fn_1x76e98();
     row_prep(0x20);
-    func_8012214C();
+    fn_1x2214c();
     wnd_open(0x80C0);
     draw_pad(0xA100);
     row_sync2(0xF);
@@ -74,7 +74,7 @@ void fn_1x23d3c(void)
     wnd_open(0x8D2C);
     label(0x1CD);
     label(0x1D0);
-    func_8011F864();
+    fn_1x1f864();
     latch(0x63);
     cell_put(0xE3);
     latch(0x80);

@@ -30,6 +30,19 @@ static void segv_rip(int sig, siginfo_t *si, void *ctx)
     for (int i = 0; i < 15; i++)
         if (uc->uc_mcontext.gregs[i] && r2 == 0) r2 = uc->uc_mcontext.gregs[i];
     fprintf(stderr, "[port] SIGSEGV rip=%p addr=%p\n", (void *)rip, si->si_addr);
+    {
+        FILE *mf = fopen("/proc/self/maps", "r");
+        char line[256];
+        while (mf && fgets(line, sizeof(line), mf)) {
+            unsigned long a, b;
+            char path[200];
+            if (sscanf(line, "%lx-%lx %*s %*s %*s %*s %199s", &a, &b, path) == 3
+                && (unsigned long)rip >= a && (unsigned long)rip < b)
+                fprintf(stderr, "  in module %s +0x%lx (base %lx)\n", path,
+                        (unsigned long)rip - a, a);
+        }
+        if (mf) fclose(mf);
+    }
     fflush(stderr);
     exit(1);
 }

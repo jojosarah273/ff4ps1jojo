@@ -21,7 +21,7 @@ void ability_pick_x1bc6_x1b8b_texts_x43(void)
     if (sel(0x202) != 0)
         return;
     txt_set(0x1BC6);
-    func_80132178();
+    fn_1x32178();
     row_prep(0x20);
     cell_sink8_9(7);
     sep_a();

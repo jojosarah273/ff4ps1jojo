@@ -7,13 +7,13 @@ void event_e8_prep_t2_t1_latch_loop_f8(void)
 {
     /* event: 801976E8 prep; t2/t1 latch loop; 80197608/801976F8
        tail. */
-    func_801976E8();
+    psy_q_runtime_lock_enter_stub_sysc();
     for (;;) {
         /* t2/t1 latch */
         if (io_just() == 0)
             break;
     }
-    func_80197608();
-    func_801976F8();
+    register_only_stub_xc_see_asm_for_1976();
+    psy_q_runtime_lock_exit_stub_sysca();
     return;
 }

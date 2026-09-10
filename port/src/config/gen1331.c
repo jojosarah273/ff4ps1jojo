@@ -8,7 +8,7 @@ u32 fn_1x2ce54(void)
     txt_set(0x1A04);
     row_read(0x40);
     if (sel(2) == 0) {
-        func_8012CEA8();
+        fn_1x2cea8();
         return 1;
     }
     fn_1x2cc4c();

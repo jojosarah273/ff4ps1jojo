@@ -8,7 +8,7 @@ void ability_move_sub_screen_a3c_b47_te(void)
     /* ability-move sub-screen: 1A3C/1B47 texts, two browse loops
        (L127294 equip, L127354 detail) with 801282D4 row-commit; exits via
        80136148 or the 80135BE4/80136014 left-route. */
-    func_801360AC();
+    ability_when_the_panel_cell_is_run();
 L127178:
     for (;;) {
         txt_set(0x1A3C);
@@ -28,13 +28,13 @@ L127178:
         if (sel(2) != 0)
             goto L127210;
         sep_b();
-        func_80136148();
+        fn_1x36148();
         return;
     L127210:
         /* v1/v0 gate */
         ability_v1_v0_gates_pick_ee4_f0e8();
         sep_a();
-        func_80136014();
+        ability_x_a8_cell_rows_linear();
         return;
     L127264:
         row_page(1);
@@ -100,7 +100,7 @@ L127178:
         row_read(0x80);
         if (sel(2) == 0) {
             sep_a();
-            func_80136148();
+            fn_1x36148();
             return;
         }
         continue;

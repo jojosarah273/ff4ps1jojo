@@ -6,7 +6,7 @@
 void fn_1x3d720(void)
 {
     battle_row_wrap();
-    func_80148DE8();
+    fn_1x48de8();
     latch(0x10);
     txt_draw(0xF1B3);
     txt_draw(0xF1F3);
@@ -130,12 +130,12 @@ Lb18:
     label(0xF113);
     latch(0x10);
     txt_draw(0xF115);
-    func_801490AC();
+    fn_1x490ac();
 Lb48:
     for (;;) {
         gpu_driver_run();
         fn_1x3d690();
-        func_80149374();
+        fn_1x49374();
         if (io_go() != 0)
             break;
         open_row(1);

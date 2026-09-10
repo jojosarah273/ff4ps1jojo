@@ -13,9 +13,9 @@ L120be4:
         battle_rows_2115();
         if (poll_go(0x202) == 0)
             goto L120C2C;
-        func_8013B764();
+        fn_1x3b764();
         row_page(0x45);
-        func_8013B7B8();
+        fn_1x3b7b8();
     L120C2C:
         row_prep(0x20);
         row_read2(0x1D);

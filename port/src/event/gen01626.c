@@ -9,7 +9,7 @@ void event_b9a8_gate_s4_latch_a75c_rows(void)
        rows; returns at L18C5D8. */
     if (io_just() == 0)
         goto L18C4C0;
-    if (func_8018B9A8() == 0)
+    if (region_walk_shifted_like_b928_with() == 0)
         goto L18C4C8;
 L18C4C0:
     goto L18C5D8;
@@ -18,7 +18,7 @@ L18C4C8:
     event_drive();
     event_drive(1);
     event_drive(3);
-    func_80197678();
+    register_only_stub_xc_see_asm_for_1976();
     return;
 L18C5D8:
     return;

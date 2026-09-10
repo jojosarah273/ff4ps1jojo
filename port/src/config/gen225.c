@@ -8,7 +8,7 @@ void fn_1x23320(void)
     row_info(0x4B);
     tail(0x48);
     txt_cell(3);
-    func_800F52BC(0x80);
+    window_state_byte_variant_d50_a0_x(0x80);
     if (io_just() == 0)
         goto L3400;
     row_sel_cell_cur();
@@ -25,14 +25,14 @@ void fn_1x23320(void)
     if (ticker_reblend2(2) != 0)
         goto L3440;
     cell_cursor_dec();
-    func_80123AA8();
+    fn_1x23aa8();
     rows_u16_d44_d58_swap_with_c_prep();
     row_close2();
     poll_pair_cur();
     poll_pair_cur();
     goto L3488;
 L3400:
-    func_80123AA8();
+    fn_1x23aa8();
     draw_pad_cur();
     battle_rows_100();
     return;
@@ -43,7 +43,7 @@ L3440:
     cell_fmt2(0x48);
     cell_push_c8_d58(1);
     cell_cursor_dec();
-    func_80123AA8();
+    fn_1x23aa8();
     row_close2();
     goto L3640;
 L3488:
@@ -58,7 +58,7 @@ L3488:
 L34fc:
     for (;;) {
         row_page(0x45);
-        func_800F52BC(0x80);
+        window_state_byte_variant_d50_a0_x(0x80);
         if (io_just() != 0)
             goto L3574;
         row_page(0x46);

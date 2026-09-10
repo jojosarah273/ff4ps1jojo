@@ -124,8 +124,8 @@ L16cc:
     cell_push_c8();
     row_read(0xC0);
     txt_draw(0x1705);
-    func_800FD6B8();
-    func_800FEC74();
+    cell_0xfd6b8();
+    cell_0xfec74();
     key_page(0xCD);
     latch(3);
     txt_draw(0x1700);

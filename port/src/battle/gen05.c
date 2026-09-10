@@ -7,7 +7,7 @@ extern u32 D_8019ED40[8];
 extern u32 D_8019EE60[8];
 void fn_1x06d6c(void)
 {
-    func_800F92D8();
+    cell_0xf92d8();
     row_prep(0x20);
     cell_cursor_ret2();
     row_open();
@@ -30,7 +30,7 @@ void fn_1x06d6c(void)
     open_row(0xC4);
     goto Le2c;
 Le24:
-    func_8017668C();
+    fn_1x7668c();
 Le2c:
     fn_1x743e0();
     row_page(0x7E);
@@ -42,14 +42,14 @@ Le5c:
     row_page(0xD9);
     if (gate(2) != 0)
         goto Le84;
-    func_800FEB10();
+    shop_rows_x79_window_x6f_x6e_stamp();
     goto L03c;
 Le84:
     txt_set(0x1700);
     io_poll(3);
     if (io_just() != 0)
         goto Lf4c;
-    func_800FDB5C();
+    cell_0xfdb5c();
     row_page(0x7A);
     cell_tick_half();
     if (cell_flags_nz50(0x101) == 0)
@@ -106,7 +106,7 @@ Lfe4:
     goto L03c;
 L024:
     row_picker_xcc_window_x1003_gate_e();
-    func_800FCA08();
+    battle_item_xfd8_text_x2115_x4300();
     shop_sell_flow_x1700_header_x7a_x1();
 L03c:
     row_page(0xCA);
@@ -211,7 +211,7 @@ L300:
     latch(0x30);
     txt_draw(0x420C);
 L4c8:
-    func_8011EADC();
+    fn_1x1eadc();
     key_page(0x7A);
     page_paint2(0xFFF);
     open_row(0x7D);
@@ -221,6 +221,6 @@ L4c8:
     row_done();
     row_close();
     cell_cursor_adv2();
-    func_800F9538();
+    cell_0xf9538();
     return;
 }

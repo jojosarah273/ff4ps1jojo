@@ -11,10 +11,10 @@ void battle_anim_v1_v0_gate_tree_b8_row(void)
         goto L1939B8;
     goto L193C10;
 L1939B8:
-    func_801972B8();
+    fn_1x972b8();
     /* gate tree -> L193A50/L193AB8/L193B44/L193B5C */
     tex_link_packets();
-    func_801972B8();
+    fn_1x972b8();
     return;
 L193C10:
     return;

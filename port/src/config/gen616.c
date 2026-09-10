@@ -10,10 +10,10 @@ void ability_main_b9a_text_gate_be4_a5f(void)
        with 80128480/80128B3C/801793F8/80128264/8011F864 rows. */
     row_open2();
     row_open3();
-    func_80178BB4();
+    fn_1x78bb4();
 L126be4:
     for (;;) {
-        func_8016EA9C();
+        fn_1x6ea9c();
         latch(0x7E);
         cell_cursor_dec();
         row_pad();
@@ -24,7 +24,7 @@ L126be4:
         label(0x1A5F);
         cell_clear_bank(0x1A3C);
         fn_1x28264();
-        func_8011F864();
+        fn_1x1f864();
     L126C54:
         shop_status_x48_x49_windows_c_rows();
         battle_status_x_b9c_checks_on_x1be();
@@ -32,7 +32,7 @@ L126be4:
         /* v1/v0 gate -> L126C88 */
         cell_clear_bank(0x1A3C);
         /* v1/v0 gate -> L126CA4 */
-        func_800FF0AC();
+        cell_0xff0ac();
         shop_status_x48_x49_windows_c_rows();
         battle_status_x_b9c_checks_on_x1be();
         if (io_go() != 0)
@@ -40,7 +40,7 @@ L126be4:
         ability_status_screen_s0_cursor_v0();
         /* v1/v0 gate -> L126CF8 */
         battle_row_88();
-        func_80178BB4();
+        fn_1x78bb4();
         continue;
         rows_x48_window_row_loop_l126d58_x();
     L126D00:

@@ -26,7 +26,6 @@ extern uint8_t *D_800D0000;
 uint32_t catalog_dispatch(uint32_t a0);
 
 /* externs for the not-yet-interpreted 800F/801x dispatcher targets */
-extern void func_80177DAC(void);
 
 extern void func_800FE110(void);
 extern void func_800FDBBC(void);
@@ -51,14 +50,14 @@ void wnd_fx_7d(void)
 {
     latch(1);
     cell_put(0x7d);
-    func_80177DAC();
+    fn_1x77dac();
     key_page(0x7d);
 }
 
 /* 800FE7B0: tail + keypage 0x7d (b variant). */
 void wnd_fx_7d_b(void)
 {
-    func_80177DAC();
+    fn_1x77dac();
     key_page(0x7d);
 }
 

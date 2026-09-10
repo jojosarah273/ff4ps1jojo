@@ -28,14 +28,14 @@ L11f430:
     row_open();
     cell_cursor_read();
     row_prep_close();
-    func_8011F67C();
+    fn_1x1f67c();
     row_page(0x14);
     sep_a();
     row_open_w(0x80);
     cell_pull_c8_lo(0x15B);
     row_page(0x16);
     sep();
-    func_8011F67C();
+    fn_1x1f67c();
     row_page(0x14);
     sep_a();
     row_open_w(0x80);

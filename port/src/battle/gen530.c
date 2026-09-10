@@ -35,7 +35,7 @@ L113e84:
             continue;
         break;
     }
-    func_800FE8B4();
+    battle_c3c_b04_gates_loop_on_a0_v1();
     battle_wndfx_run();
     return;
 }

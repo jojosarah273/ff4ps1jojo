@@ -10,7 +10,7 @@ void battle_rows_row_loop_l140aec_on_a9(void)
     sep();
 L140aec:
     for (;;) {
-        func_80147414();
+        fn_1x47414();
         txt_cell(0x2001);
         row_read(0xF);
         io_poll(0xB);

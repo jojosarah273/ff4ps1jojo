@@ -9,9 +9,9 @@ void event_e8_x2_f0c8_fd8_rows_with_gat(void)
        gate at L1914E0. */
     event_spin_wait();
     event_spin_wait();
-    func_80191620();
+    register_only_stub_xc_see_asm_for_1916();
     anim_reg_stub();
-    func_80190FD8();
+    psy_q_runtime_lock_enter_stub_vari();
     if (io_just() != 0)
         goto L191510;
     if (io_just() == 0)

@@ -6,7 +6,7 @@
 void battle_rows_fe634_prep_x70_x22_x21(void)
 {
     /* battle rows: 800FE634 prep + 0x70/0x22/0x21 window cells. */
-    func_800FE634();
+    cell_0xfe634();
     row_prep(0x20);
     sep_a();
     cell_put_hi9(0x70);

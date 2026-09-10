@@ -4,14 +4,9 @@
  */
 #include "ff4_window.h"
 
-extern void func_8012202C(void);
-
-
-
-extern void func_80121BE4(void);
 void fn_1x21b5c(void) {
     if (io_go() == 0) {
-        func_8012202C();
+        fn_1x2202c();
         poll_pair(0x65);
     } else {
         fn_1x21fdc();
@@ -23,5 +18,5 @@ void fn_1x21b5c(void) {
     cell_put(0x1F);
     latch(0xFE);
     cell_put(0x20);
-    func_80121BE4();
+    fn_1x21be4();
 }

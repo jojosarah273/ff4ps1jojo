@@ -4,12 +4,6 @@
  */
 #include "ff4_window.h"
 
-
-
-
-
-extern int func_80148FA0();
-
 void fn_1x43d64(void)
 
 {
@@ -18,7 +12,7 @@ void fn_1x43d64(void)
   row_sel_cell_cur();
   cell_put(0x28);
   txt_cell(0xf173);
-  func_80148FA0();
+  fn_1x48fa0();
   row_close();
   return;
 }

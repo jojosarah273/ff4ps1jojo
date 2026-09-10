@@ -15,6 +15,6 @@ void event_v0_v1_a0_latch_loop_b1c8_tai(void)
         break;
     }
 L18B52C:
-    func_8018B1C8();
+    region_walker_x300_v0_t2_v1_a3_reg();
     return;
 }

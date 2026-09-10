@@ -10,7 +10,7 @@ void options_row_x354d_x3550_x2703_x354(void)
        L15F090/L15F110. */
     latch(1);
     txt_draw(0x354D);
-    func_801531CC();
+    fn_1x531cc();
     io_poll(0x32);
     if (io_go() == 0)
         goto L15F0D0;

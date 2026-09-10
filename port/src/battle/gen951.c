@@ -3,10 +3,9 @@
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-extern void func_800FC548(void);
 
 void fn_1x0e338(void) {
-    func_800FC548();
+    cell_0xfc548();
     battle_godtext_a();
     cell_flags_clr4();
     latch(0);

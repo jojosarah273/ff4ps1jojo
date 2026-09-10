@@ -1,0 +1,9 @@
+/* FF4 source-port — interpreted module for register_only_stub_xc_see_asm_for.
+ * Ground truth: src/register_only_stub_xc_see_asm_for.c (byte-verified).
+ * Primitives: port/include/ff4_window.h.
+ */
+#include "ff4_window.h"
+void register_only_stub_xc_see_asm_for(void)
+{
+    /* register-only stub (0xC); see asm for exact dataflow. */
+}

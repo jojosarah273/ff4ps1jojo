@@ -48,7 +48,7 @@ L1674DC:
     latch(0xFF);
     page(0x1C);
     cell_step();
-    func_800F6130();
+    cell_0xf6130();
     tail(0x1C);
     sep_a();
     return;

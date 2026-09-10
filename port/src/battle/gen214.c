@@ -111,7 +111,7 @@ L4778:
         if (io_just() != 0)
             break;
     }
-    func_80148DE8();
+    fn_1x48de8();
     sep();
     for (;;) {
         txt_cell(0x1900);

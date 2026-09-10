@@ -10,12 +10,10 @@ extern int func_800953F4();
 
 
 
-extern int func_80141FC4();
-
 void fn_1x4b36c(void)
 
 {
-  func_80141FC4();
+  fn_1x41fc4();
   cell_clear_bank(0xf2a0);
   open_row(0);
   latch(6);

@@ -76,7 +76,7 @@ void func_800FB430(void)
     cell_step();
     poll_t(0x200);
     io_just();
-    func_8017668C();
+    fn_1x7668c();
     wnd_open(0x60);
     label(0xA6D);
     wnd_open(0x68);

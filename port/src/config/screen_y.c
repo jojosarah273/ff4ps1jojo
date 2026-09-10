@@ -85,7 +85,7 @@ L13c55c:
             cell_dec_cell(0x9F);
             cell_dec_cell(0x9F);
             row_prep_close();
-            func_801266C8();
+            fn_1x266c8();
             poll_spin();
             if (poll_go(0x202) != 0)
                 continue;
@@ -119,7 +119,7 @@ L13c55c:
             cell_inc_cell(0x9F);
             cell_inc_cell(0x9F);
             row_prep_close();
-            func_801266C8();
+            fn_1x266c8();
             poll_spin();
             if (poll_go(0x202) != 0)
                 continue;

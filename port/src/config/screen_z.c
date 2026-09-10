@@ -18,7 +18,7 @@ L7ec:
         cell_push_c8_sel(0x86);
         if (gate(0x202) == 0)
             latch(0x60);
-        func_800F8674(0xAD);
+        cell_0xf8674(0xAD);
         step2();
         cell_step();
         poll_t(3);
@@ -27,7 +27,7 @@ L7ec:
     }
     for (;;) {
         cell_push_c8_sel(0x86);
-        func_800F8674(0xAD);
+        cell_0xf8674(0xAD);
         step2();
         cell_step();
         poll_t(7);
@@ -90,7 +90,7 @@ La0c:
     cell_tick_or(cell_state(0xB8));
     if (ticker_reblend2(2) != 0)
         goto La6c;
-    if (func_800F5F20(2) != 0)
+    if (cell_0xf5f20(2) != 0)
         goto La6c;
     open_row(0xB0);
     open_row(0xB1);

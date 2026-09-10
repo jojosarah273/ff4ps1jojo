@@ -15,7 +15,7 @@ void battle_item_flow_x48_x4_x49_window(void)
     row_close2();
     cell_clear_bank();
     cell_cursor_dec();
-    func_8014FE84();
+    fn_1x4fe84();
     row_close2();
     cell_cursor_dec();
     sep_a();
@@ -24,7 +24,7 @@ void battle_item_flow_x48_x4_x49_window(void)
     txt_draw_cur();
     func_800760D0();
     open_row_cur();
-    func_8014B248();
+    fn_1x4b248();
     open_row(2);
     row_close2();
     cell_put(4);

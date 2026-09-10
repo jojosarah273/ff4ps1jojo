@@ -50,7 +50,7 @@ L107D9C:
         goto L107DF4;
 L107db4:
     for (;;) {
-        func_80177DAC();
+        fn_1x77dac();
         if (cell_flags_cmp(cell_state(0x8F6)) == 0)
             continue;
         break;
@@ -66,8 +66,8 @@ L107DF4:
     row_page(0xCB);
     if (gate(0x202) != 0)
         goto L107E3C;
-    func_800FD9FC();
-    func_800FDA4C();
+    cell_0xfd9fc();
+    cell_0xfda4c();
 L107E3C:
     row_page(0xDE);
     if (gate(0x202) != 0)

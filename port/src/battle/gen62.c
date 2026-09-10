@@ -18,7 +18,7 @@ L1388c:
         row_read(0x1C);
         row_page(0x83);
         row_read(0xE0);
-        func_8017EA90();
+        fn_1x7ea90();
         row_page(0x7A);
         row_read(0xF);
         if (sel(0x202) != 0)

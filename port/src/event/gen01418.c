@@ -9,10 +9,10 @@ void battle_a0_v1_latch_v0_gate_c58_row(void)
     /* a0/v1 latch -> L1888A4 */
     if (io_just() == 0)
         goto L188850;
-    func_80191C58();
+    fn_1x91c58();
     goto L188884;
 L188850:
-    func_80191C58();
+    fn_1x91c58();
 L188884:
     if (io_just() != 0)
         goto L188898;

@@ -35,7 +35,7 @@ Ld64:
 Ldb4:
     key_page(0x88);
     key_page(0x86);
-    if (func_800F60A8(0x202) == 0) {
+    if (cell_0xf60a8(0x202) == 0) {
         txt_set(0x17EF);
         sep_a();
         row_open_w(0x11);

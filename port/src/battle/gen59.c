@@ -58,8 +58,8 @@ L1006C0:
     cell_clear_bank(0x180B);
     latch_cur();
     shop_rows2_run();
-    func_8011EB5C();
-    func_800FC548();
+    fn_1x1eb5c();
+    cell_0xfc548();
     wnd_open_cur();
 L100774:
     for (;;) {
@@ -72,7 +72,7 @@ L100774:
     battle_godtext_a();
     latch(1);
     cell_put(0xC5);
-    func_800FAD48();
+    cell_0xfad48();
     battle_rows_xae_x9d1_x9cf_texts_d6();
     cell_flags_clr4();
     latch(0x81);

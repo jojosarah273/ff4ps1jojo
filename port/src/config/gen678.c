@@ -10,11 +10,11 @@ void battle_rows_x64_x65_x63_x1d_window(void)
        on 5DA0/5B8C(0x202). */
     if (io_go() != 0)
         goto L12181C;
-    func_80121E6C();
+    fn_1x21e6c();
     poll_pair(0x64);
     goto L12182C;
 L12181C:
-    func_80121F64();
+    fn_1x21f64();
     key_page(0x64);
 L12182C:
     fn_1x21c0c();

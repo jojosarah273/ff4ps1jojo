@@ -4,14 +4,10 @@
  */
 #include "ff4_window.h"
 
-
-extern void func_8016EA9C(void);
-
-
 void fn_1x32490(void) {
     row_open2();
     row_open3();
-    func_8016EA9C();
+    fn_1x6ea9c();
     fn_1x324f8();
     fn_1x22114();
     sep();

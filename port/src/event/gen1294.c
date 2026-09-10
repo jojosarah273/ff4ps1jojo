@@ -13,7 +13,7 @@ L1813F8:
     if (io_just() == 0)
         goto L181480;
     do {
-        if (func_801808D8() == 0)
+        if (battle_anim_fp_regcmp_spin_loops_d() == 0)
             goto L181480;
     } while (io_just() != 0);
     return;

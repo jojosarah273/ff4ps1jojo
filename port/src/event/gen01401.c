@@ -11,8 +11,8 @@ void event_v0_v1_latch_loop_l192a88_on(void)
         goto L192AE8;
     for (;;) {
         /* v0/v1 latch -> L192AD0 */
-        func_80191620();
-        func_80197798(3);
+        register_only_stub_xc_see_asm_for_1916();
+        register_only_stub_xc_see_asm_for_1977(3);
         event_jr_t2_dispatch_f078_spin_loo();
         goto L192AE8;
     L192AD0:

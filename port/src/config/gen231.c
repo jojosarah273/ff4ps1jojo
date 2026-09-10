@@ -47,7 +47,7 @@ void fn_1x32cfc(void)
     wnd_open(0x824F);
     tail(0xCD);
     fn_1x20db4();
-    func_801228B4();
+    fn_1x228b4();
     config_row_26528();
     row_page(0xE7);
     row_sel_cell_cur();

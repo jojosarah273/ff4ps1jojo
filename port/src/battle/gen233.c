@@ -89,16 +89,16 @@ Lee34:
             row_read2(0x20);
             cell_put_hi9(0x22);
             cell_state_of();
-            func_800F7968();
+            cell_0xf7968();
             cell_peek_cur();
-            func_800F7968();
+            cell_0xf7968();
             cell_put_hi9(0x22);
             row_read2(0x22);
             cell_stamp8_9(0xCE1);
             row_sync2_cur();
             row_prep_close();
             key_page(0x20);
-            if (func_800F60A8(0x202) != 0)
+            if (cell_0xf60a8(0x202) != 0)
                 continue;
             break;
         }

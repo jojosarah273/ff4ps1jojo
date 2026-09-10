@@ -4,13 +4,9 @@
  */
 #include "ff4_window.h"
 
-extern void func_8016EA1C(void);
-
-
-
 void fn_1x1edf4(void) {
     cell_cursor_dec();
-    func_8016EA1C();
+    fn_1x6ea1c();
     latch(0);
     stat_sync();
     row_close2();;

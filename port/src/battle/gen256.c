@@ -21,7 +21,7 @@ L10A2E0:
     txt_set(0xFE6);
     if (gate_cur() == 0)
         goto L10A590;
-    if (func_800F73E0(2) != 0)
+    if (cell_0xf73e0(2) != 0)
         goto L10A384;
 L10A340:
     for (;;) {

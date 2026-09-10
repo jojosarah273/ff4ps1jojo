@@ -15,7 +15,7 @@ void ability_summary_x48c0_x1a71_x1a01(void)
     status_row_x16a8_x1a71_x1a73_texts();
     draw_pad_cur();
     battle_rows_sync();
-    func_80135298();
+    fn_1x35298();
     draw_pad_cur();
     battle_rows_sync();
     draw_pad_cur();

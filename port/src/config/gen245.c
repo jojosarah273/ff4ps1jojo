@@ -19,7 +19,7 @@ Ld78:
         cell_tick_xor(cell_state(0x16A8));
         txt_draw(0x16A8);
         config_rows_c_e2c_ef30_f1c_fb74_ro();
-        func_80122538();
+        fn_1x22538();
         config_row_26528();
         battle_state_dc400();
     }
@@ -105,7 +105,7 @@ Ldf70:
     fn_1x25a64();
     animation_row_310();
     config_rows_c_e2c_ef30_f1c_fb74_ro();
-    func_80122538();
+    fn_1x22538();
     config_row_26528();
     battle_state_dc400();
     battle_mode_dispatch();

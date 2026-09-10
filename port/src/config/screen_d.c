@@ -140,7 +140,7 @@ ae8:
     config_banner_96();
     if (io_press(cell_state(0x38D4)) == 0)
         key_page(0xA9);
-    func_801531CC();
+    fn_1x531cc();
     if (io_press(cell_state(0x38D5)) == 0)
         key_page(0xAA);
     row_page(0xA9);

@@ -79,7 +79,7 @@ L560:
     midrow_pad88_run();
     config_row_b600();
     draw_pad_cur();
-    func_8011FB74();
+    fn_1x1fb74();
     battle_row_45b();
     fn_1x2219c();
     fn_1x1ff40();
@@ -87,7 +87,7 @@ L560:
     label(0x1A71);
     status_row_x16a8_x1a71_x1a73_texts();
     fn_1x240d0();
-    func_80126458();
+    fn_1x26458();
     return;
 L758:
     latch_cur();
@@ -110,12 +110,12 @@ L758:
     cell_draw(0x1441);
     config_row_b600();
     draw_pad_cur();
-    func_8011FB74();
+    fn_1x1fb74();
     sub_menu_x1a73_x1a75_texts_row_loo();
     midrow_pad88_run();
     latch(0x2B);
     fn_1x2224c();
-    func_80126458();
+    fn_1x26458();
     fn_1x1ff40();
     for (;;) {
         midrow_pad88_run();
@@ -133,7 +133,7 @@ L890:
     midrow_pad88_run();
     config_row_b600();
     draw_pad_cur();
-    func_8011FB74();
+    fn_1x1fb74();
     battle_row_45b();
     fn_1x1ff40();
     return;

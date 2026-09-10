@@ -21,22 +21,22 @@ L1924cc:
 L1924F4:
     /* v1/v0 gates -> L192550 / L19255C */
 L192524:
-    func_80191838();
+    fn_1x91838();
     goto L1924F4;
 L192568:
-    func_80191838();
-    func_80191858();
-    func_80192858();
+    fn_1x91838();
+    fn_1x91858();
+    fn_1x92858();
 L1925bc:
     for (;;) {
         event_spin_wait();
-        func_80192718();
+        fn_1x92718();
         if (io_just() == 0)
             goto L1925E8;
         event_s3_fp_s0_s7_latch_loops_on(9);
         break;
     }
 L1925E8:
-    func_801920F0();
+    battle_command_maps_preps_with_beq();
     return;
 }

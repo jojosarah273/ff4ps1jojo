@@ -66,7 +66,7 @@ void battle_godtext_a(void)
     txt_draw(0x212E);
     cell_clear_bank(0x212F);
     latch(0xE0);
-    func_8017EA90();
+    fn_1x7ea90();
     cell_clear_bank(0x2133);
     latch(0xFF);
     txt_draw(0x4201);

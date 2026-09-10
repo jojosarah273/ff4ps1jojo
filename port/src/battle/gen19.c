@@ -158,8 +158,8 @@ Ld6c:
     cell_put(0xE);
     fn_1x04db4();
 Ld8c:
-    func_800FFB5C();
-    func_800FFCAC();
+    cell_0xffb5c();
+    cell_0xffcac();
     fn_1x1c768();
     return;
 }

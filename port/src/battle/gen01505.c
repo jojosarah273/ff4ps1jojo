@@ -3,4 +3,4 @@
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void fn_1x17628(void) { func_800FC5A8(); func_8011EB1C(); func_800FC5D8(); battle_wndfx_run(); }
+void fn_1x17628(void) { cell_0xfc5a8(); fn_1x1eb1c(); battle_confirm_dialog_x1700_test_b(); battle_wndfx_run(); }

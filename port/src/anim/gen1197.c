@@ -14,24 +14,24 @@ void battle_substate_router_early_v1_v0(void)
     cb_slot15();
     event_spin_wait();
     /* v1/v0 gates -> L77A9C / L77AB8 */
-    func_80184AF8();
+    battle_anim_chain_s2_s1_v0_registe();
 L77acc:
-    func_80194988();
-    func_8017841C();
+    fn_1x94988();
+    battle_anim_twin_v0_gate_ladders_l();
     status_table_init();
     battle_dispatch_v0_v1_v0_gates_pic();
-    func_800FEF7C();
+    shop_battle_v0_v1_v0_gates_pick_fe();
     /* L77B2C/L77B88 gates converge into the main chunk */
     battle_cutscene_b9c_gate_rows_with();
-    func_801949F8();
-    func_8017794C();
-    func_80177790();
+    fn_1x949f8();
+    battle_input_gate_locks_clears_the();
+    battle_anim_register_gates_route_f();
     battle_anim_v0_gates_returns_at_l1();
-    func_8017D078();
-    func_8017E220();
+    selection_screen_driver_register_g();
+    battle_anim_chain_x520_a0_v1_latch();
     battle_anim_v1_v0_v0_gates_rows();
-    func_8017E740();
-    func_80178D00();
+    fn_1x7e740();
+    battle_row_commit_seven_e794_write();
     /* L77BC8 (v1==v0) runs 80183A80; L77CB0 (v1!=v0) picks 80183244 or
        80183F40 (L77D0C/D20/D44 gates) or 80185380 (L77D6C). The register
        gates are not yet reconstructed: all routes merge at L77D54. */

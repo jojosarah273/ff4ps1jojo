@@ -4,9 +4,6 @@
  */
 #include "ff4_window.h"
 
-
-extern int func_800FE8B4();
-
 void fn_1x1356c(void)
 
 {
@@ -37,7 +34,7 @@ void fn_1x1356c(void)
     page_open(0xad2);
     iVar1 = cell_flags_pack(0x202);
   } while (iVar1 != 0);
-  func_800FE8B4();
+  battle_c3c_b04_gates_loop_on_a0_v1();
   return;
 }
 

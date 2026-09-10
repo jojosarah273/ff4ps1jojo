@@ -4,14 +4,12 @@
  */
 #include "ff4_window.h"
 
-extern int func_8016E99C();
-
 void fn_1x0e278(void)
 
 {
   wnd_fx_2100();
   cell_flags_set4();
-  func_8016E99C();
+  fn_1x6e99c();
   fn_1x0e338();
   battle_wndfx_run();
   return;

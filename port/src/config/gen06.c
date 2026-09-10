@@ -19,12 +19,12 @@ void fn_1x324f8(void)
     row_pad();
     page_paint2(0x1B49);
     config_row_d600b();
-    func_80123FB4();
+    fn_1x23fb4();
     midrow_paint_c();
     draw_pad_cur();
     battle_rows_sync();
     draw_pad_cur();
-    func_8011FB74();
+    fn_1x1fb74();
     wnd_open(0x188);
     draw_pad_cur();
     rows_x29_window_c_bc_fills_loop_l1();

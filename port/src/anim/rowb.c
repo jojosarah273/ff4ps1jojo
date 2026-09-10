@@ -65,7 +65,7 @@ L1b0:
         goto L240;
     txt_set(0x6FD);
     row_page(0x7A);
-    func_800F4960(0xBE37);
+    cell_0xf4960(0xBE37);
     if (sel(0x202) != 0)
         goto L240;
     latch(0x10);
@@ -142,7 +142,7 @@ L420:
         goto L4fc;
     txt_set(0x6FD);
     row_page(0x7A);
-    func_800F4960(0xBE37);
+    cell_0xf4960(0xBE37);
     if (sel(2) != 0)
         goto L4fc;
     latch(4);

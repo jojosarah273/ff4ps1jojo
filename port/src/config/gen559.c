@@ -16,7 +16,7 @@ void options_row_x8a_window_x29b5_x29cd(void)
     latch(0xFF);
     cell_draw(0x29B5);
     row_page(0xA9);
-    func_800F5B2C(cell_state_of());
+    cell_0xf5b2c(cell_state_of());
     cell_dec_bank(0x29CD);
     row_page(0x8A);
     cell_put(0xDF);

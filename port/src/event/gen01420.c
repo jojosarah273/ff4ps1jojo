@@ -7,7 +7,7 @@ void battle_ff0ac_row_loop_l187dc0(void)
 {
     /* battle: 800FF0AC row loop L187DC0. */
     do {
-        func_800FF0AC();
+        cell_0xff0ac();
     } while (io_just() != 0);
     return;
 }

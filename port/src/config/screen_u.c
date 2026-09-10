@@ -19,7 +19,7 @@ L288:
         row_prep_close();
     L2dc:
         draw_pad_cur();
-        func_8011FB74();
+        fn_1x1fb74();
         row_page(0xE8);
         cell_cur_save54_b();
         tail(0x60);
@@ -95,7 +95,7 @@ L288:
         config_row_b600();
         draw_pad_cur();
         battle_rows_sync();
-        func_80126458();
+        fn_1x26458();
         config_row_f320();
         page_paint2(0x1BAD);
         row_prep(0x20);

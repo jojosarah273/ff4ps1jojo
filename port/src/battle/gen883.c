@@ -14,7 +14,7 @@ void battle_rows_x26_x2b_windows_row_ga(void)
     func_80072720();
     row_page(0x2B);
     cell_set50_from40();
-    if (func_800F60A8() != 0)
+    if (cell_0xf60a8() != 0)
         goto L149094;
 L14905C:
     sep_b();

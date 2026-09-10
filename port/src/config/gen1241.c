@@ -9,10 +9,10 @@ u32 fn_1x322ac(void)
     row_read(0x40);
     if (sel(2) == 0) {
         latch(5);
-        func_80132310();
+        fn_1x32310();
         return 1;
     }
-    func_80131294();
+    fn_1x31294();
     fn_1x2219c();
     return 2;
 }

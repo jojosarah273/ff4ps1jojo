@@ -14,7 +14,7 @@ void config_rows_x1a02_text_x202_cell_g(void)
     return;
 L12CCA4:
     /* a0/v1 + a0/v0 latch tree -> L12CCD4/L12CCF0/L12CCF8 */
-    func_8012CEA8();
+    fn_1x2cea8();
     return;
 L12CD5C:
     return;

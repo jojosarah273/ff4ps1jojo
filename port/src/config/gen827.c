@@ -9,7 +9,7 @@ void options_rows_x353e_x353f_texts_c38(void)
        5F20(0x202)/5574(2)/6434(0x202). */
     txt_set(0x353E);
     txt_draw_cur();
-    if (func_800F5F20(0x202) != 0)
+    if (cell_0xf5f20(0x202) != 0)
         return;
     txt_set(0x353F);
     io_poll(2);

@@ -77,7 +77,7 @@ L2804:
 L284c:
     latch(0x10);
     txt_draw(0xF115);
-    func_801490AC();
+    fn_1x490ac();
     page_paint2(0xF428);
     txt_set(0x34C2);
     row_read(0x80);
@@ -89,7 +89,7 @@ L284c:
         return;
 L28b4:
     for (;;) {
-        func_80149374();
+        fn_1x49374();
         if (io_go() != 0)
             return;
         page_open(0xF118);

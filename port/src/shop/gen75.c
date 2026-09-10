@@ -13,7 +13,7 @@ void battle_stat_overlay_xa9_xab_xb5_xb(void)
     wnd_open(0xF);
 L16e688:
     for (;;) {
-        func_800F902C(0xA9);
+        cell_0xf902c(0xA9);
         cell_set50_from54();
         if (poll_go_cur() != 0)
             continue;

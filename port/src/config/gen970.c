@@ -16,7 +16,7 @@ void ability_rows_x16ae_x16b0_texts_wit(void)
     if (io_press(cell_state(0x16B0)) != 0)
         goto L13B034;
     row_close();
-    func_8013B04C();
+    fn_1x3b04c();
     return;
 L13B034:
     fn_1x2219c();

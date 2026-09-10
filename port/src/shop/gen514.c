@@ -18,7 +18,7 @@ void config_x1ff_ec_gates_x14_x20_windo(void)
     row_prep(0x20);
     row_read2(0x14);
     row_done2();
-    if (func_800F6180() != 0)
+    if (cell_0xf6180() != 0)
         goto L16DCB0;
 L16DC50:
     cell_put_hi9(0x14);

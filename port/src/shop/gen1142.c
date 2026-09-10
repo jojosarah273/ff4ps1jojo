@@ -13,7 +13,7 @@ void shop_b04_gate_loop_on_s0_v1_latch(void)
         if (io_just() != 0)
             goto L1670F8;
         sep_a();
-    } while (func_80197288() != 0);
+    } while (fn_1x97288() != 0);
     return;
 L1670F8:
     sep_a();

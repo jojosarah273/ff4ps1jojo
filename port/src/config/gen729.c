@@ -18,7 +18,7 @@ void rows_x100_x1c_x41_windows_f0_x89_c(void)
     page(0x41);
 L126740:
     for (;;) {
-        func_800F86F0(0x89);
+        cell_0xf86f0(0x89);
         poll_pair_cur();
         if (poll_go(0x202) != 0)
             continue;

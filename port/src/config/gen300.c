@@ -12,7 +12,7 @@ void config_confirm_screen_x7e_window_x(void)
     cell_cursor_dec();
     row_pad();
     fn_1x23cb4();
-    func_801386C8();
+    fn_1x386c8();
     cell_clear_bank(0x1A03);
     txt_set(0x16B7);
     if (gate(0x202) != 0)
@@ -29,7 +29,7 @@ L122620:
         latch(0xB0);
         cell_put(0x45);
         config_pad_300();
-        func_80122538();
+        fn_1x22538();
         midrow_pad88_run();
         fn_1x26550();
         battle_state_dc400();

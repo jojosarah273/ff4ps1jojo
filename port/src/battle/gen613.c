@@ -33,7 +33,7 @@ L14D620:
     txt_draw_cur();
     latch(2);
     txt_draw_cur();
-    func_80177DAC();
+    fn_1x77dac();
     row_done();
     row_close();
     return;

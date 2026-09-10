@@ -4,16 +4,6 @@
  */
 #include "ff4_window.h"
 
-
-
-
-
-
-
-
-
-extern int func_800F902C();
-
 void fn_1x51cd8(void)
 
 {
@@ -21,7 +11,7 @@ void fn_1x51cd8(void)
   
   wnd_open(0x7f);
   do {
-    func_800F902C(0x80);
+    cell_0xf902c(0x80);
     cell_set50_from54();
     iVar1 = poll_go(0x8080);
   } while (iVar1 != 0);

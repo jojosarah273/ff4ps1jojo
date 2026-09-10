@@ -1,9 +1,9 @@
 /* FF4 source-port — config/store.c
  *
- * Config store screen (func_8012F9D0, exact decode): the count-limit
+ * Config store screen (config_store_x43_x48_x5e_x5b_x5a_x, exact decode): the count-limit
  * row set with item-quantity value rows; two nested poll loops on
  * 800F5DA0/5B8C(0x202).
- * Ground truth: src/func_8012F9D0.c (byte-verified).
+ * Ground truth: src/config_store_x43_x48_x5e_x5b_x5a_x.c (byte-verified).
  */
 #include <stdint.h>
 

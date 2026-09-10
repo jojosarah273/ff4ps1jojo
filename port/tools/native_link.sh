@@ -29,12 +29,27 @@ OBJS=$(find build -path '*src*' -name '*.o' ! -path '*src/device*' | tr '\n' ' '
 UNDEF=$(nm -u $OBJS 2>/dev/null | awk '{print $2}' | sed 's/@.*//' | sort -u)
 DEF=$(nm $OBJS build/device.o build/${PLATDIR}/boot2.o build/main.o 2>/dev/null | awk '$2 ~ /^[TtDdBbRr]$/ {print $3}' | sort -u)
 python3 - "$UNDEF" "$DEF" << 'PY'
-import sys
+import sys, subprocess
 und = set(sys.argv[1].split())
 defl = set(sys.argv[2].split())
+prov = set()
+for lib in ("/lib/x86_64-linux-gnu/libc.so.6",
+            "/lib/x86_64-linux-gnu/libm.so.6",
+            "/lib/x86_64-linux-gnu/libSDL2-2.0.so.0",
+            "/lib/x86_64-linux-gnu/libpthread.so.0"):
+    try:
+        out = subprocess.run("nm -D %s" % lib, shell=True,
+                             capture_output=True, text=True).stdout
+        for tok in out.split():
+            prov.add(tok.split("@")[0])
+    except Exception:
+        pass
+keep = {"step"}   # deck primitive 800F6364; shadows glibc's weak step
 stub = sorted(u for u in und
-              if u not in defl and not u.startswith("__") and u != "main"
-              and not u.startswith("_GLOBAL"))
+              if (u in keep or
+                  (u not in defl and u not in prov
+                   and not u.startswith("__") and u != "main"
+                   and not u.startswith("_GLOBAL"))))
 lines = ["/* auto stubs (nm-driven, one shot; deck-only unresolved). */",
          "#include <stdint.h>", "",
          "static uint32_t g_vram_sim[4096];",

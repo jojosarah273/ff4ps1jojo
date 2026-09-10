@@ -9,7 +9,7 @@ void event_b9a8_gate_at_l18bab8_wide_a1(void)
        gate trees; returns at L18BE5C. */
     if (io_just() != 0)
         goto L18BBA0;
-    func_8018B9A8();
+    region_walk_shifted_like_b928_with();
     /* a1/a3 latch loop L18BB34; v1/v0 gates */
     return;
 L18BBA0:

@@ -9,17 +9,17 @@ void ability_status_details_screen_head(void)
        0x1BE4/0x17FE stat block, 0x1B47/0x1B46 detail rows with the
        s2/6434(2) gates, 0x46/0x45 windows. */
     battle_row_88();
-    func_801266A0();
-    func_80123FB4();
+    fn_1x266a0();
+    fn_1x23fb4();
     config_row_q18();
     midrow_paint_c();
     midrow_paint_b();
     fn_1x25a64();
-    func_80136014();
+    ability_x_a8_cell_rows_linear();
     wnd_open(0x1BE4);
     if (cell_flags_cmp(cell_state(0x17FE)) == 0)
         goto L127CFC;
-    func_8012281C();
+    fn_1x2281c();
     goto L127D38;
 L127CFC:
     midrow_paint_b();
@@ -57,7 +57,7 @@ L127D38:
     page_open(0x16A0);
     config_rows_163();
     config_row_q18();
-    func_8012214C();
+    fn_1x2214c();
     battle_state_dc400();
     /* s2/v0 gate -> L127E80 */
     txt_set(0x1B47);
@@ -65,7 +65,7 @@ L127D38:
         goto L127E80;
     status_panel_install_labels();
 L127E80:
-    func_80138664();
+    fn_1x38664();
     fn_1x26590();
     cell_clear_bank(0x1B46);
     txt_set(0x1B46);

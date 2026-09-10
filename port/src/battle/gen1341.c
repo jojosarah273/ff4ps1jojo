@@ -10,7 +10,7 @@ void ability_wrapper_ea9c_d3c_f8f8x3_in(void)
        latch back to L11EC58. */
 L11ec58:
     for (;;) {
-        func_8016EA9C();
+        fn_1x6ea9c();
         fn_1x23d3c();
         battle_mode_dispatch();
         battle_mode_dispatch();

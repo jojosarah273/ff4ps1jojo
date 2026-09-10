@@ -78,7 +78,7 @@ E00:
     latch(2);
     txt_draw(0x1B06);
     config_row_264e8();
-    func_80126458();
+    fn_1x26458();
     config_row_26528();
     latch(0x19);
     cell_pull_c8_lo(0x212C);
@@ -153,7 +153,7 @@ L208:
     goto ff4;
 L218:
     row_page(1);
-    func_800F52BC(8);
+    window_state_byte_variant_d50_a0_x(8);
     if (io_just() != 0)
         goto L298;
     for (;;) {
@@ -174,7 +174,7 @@ L218:
     }
 L298:
     row_page(1);
-    func_800F52BC(4);
+    window_state_byte_variant_d50_a0_x(4);
     if (io_just() != 0)
         goto L320;
     for (;;) {
@@ -196,7 +196,7 @@ L298:
     }
 L320:
     row_page(1);
-    func_800F52BC(2);
+    window_state_byte_variant_d50_a0_x(2);
     if (io_just() != 0)
         goto L3C0;
     cell_push_c8_lo(0x5D);
@@ -218,7 +218,7 @@ L320:
     }
 L3C0:
     row_page(1);
-    func_800F52BC(1);
+    window_state_byte_variant_d50_a0_x(1);
     if (io_just() != 0)
         goto L498;
     cell_push_c8_lo(0x5D);
@@ -250,7 +250,7 @@ L478:
     goto L408;
 L498:
     row_page_cur();
-    func_800F52BC(0x80);
+    window_state_byte_variant_d50_a0_x(0x80);
     if (io_just() != 0)
         goto L528;
     txt_set(0x1B08);
@@ -269,7 +269,7 @@ L498:
     cell_pull_c8(0x1B0A);
 L528:
     row_page(1);
-    func_800F52BC(0x80);
+    window_state_byte_variant_d50_a0_x(0x80);
     if (io_just() != 0)
         goto L10C;
     txt_set(0x1B08);
@@ -329,7 +329,7 @@ L6CC:
     goto L7DC;
 L6F4:
     row_page(1);
-    func_800F52BC(8);
+    window_state_byte_variant_d50_a0_x(8);
     if (io_just() != 0)
         goto L754;
     txt_set(0x1B06);
@@ -343,13 +343,13 @@ L744:
     func_80129808();
 L754:
     row_page(1);
-    func_800F52BC(4);
+    window_state_byte_variant_d50_a0_x(4);
     if (io_just() != 0)
         goto L77C;
     fn_1x29e94();
 L77C:
     row_page(1);
-    func_800F52BC(3);
+    window_state_byte_variant_d50_a0_x(3);
     if (io_just() != 0)
         goto L5C8;
     txt_set(0x1BBA);

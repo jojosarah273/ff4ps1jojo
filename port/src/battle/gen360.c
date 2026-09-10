@@ -43,7 +43,7 @@ L116180:
         cell_tick_or(cell_state(0xACE));
         cell_tick_or(cell_peek_cur());
         cell_pull_c8(0x303);
-        func_800FC0DC();
+        cell_0xfc0dc();
         row_read(0xF);
         if (sel(0x202) != 0)
             continue;

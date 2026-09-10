@@ -12,11 +12,11 @@ void event_f538_d8_a8_rows_spin_l1889b8(void)
     event_f538_d8_a8_rows_spin_l1889b8();
     return;
 L188968:
-    func_8018F538();
-    func_801917D8();
-    func_80191838();
-    func_801928A8();
-    func_80191858();
+    event_f5c8_v0_v1_s0_v0_latch_loop();
+    fn_1x917d8();
+    fn_1x91838();
+    fn_1x928a8();
+    fn_1x91858();
     for (;;) {
         if (io_just() != 0)
             continue;

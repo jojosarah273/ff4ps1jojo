@@ -5,7 +5,7 @@
 #include "ff4_window.h"
 void battle_window_24(void)
 {
-    func_800FE8B4();
+    battle_c3c_b04_gates_loop_on_a0_v1();
     fn_1x162f8();
     wnd_open_cur();
     tail(0x24);

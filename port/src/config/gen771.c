@@ -4,15 +4,12 @@
  */
 #include "ff4_window.h"
 
-extern void func_801220EC(void);
-
-extern void func_80121A74(void);
 void fn_1x219ec(void) {
     if (io_go() == 0) {
         fn_1x21f8c();
         poll_pair(99);
     } else {
-        func_801220EC();
+        fn_1x220ec();
         key_page(99);
     }
     latch(0xF7);
@@ -21,5 +18,5 @@ void fn_1x219ec(void) {
     cell_put(0x1F);
     latch(0xFC);
     cell_put(0x20);
-    func_80121A74();
+    fn_1x21a74();
 }

@@ -9,7 +9,7 @@ void shop_b04_x7000_x2_v1_t0_latch_loop(void)
     cell_state(0x7000);
     cell_state_of();
     for (;;) {
-        if (func_80197288() != 0)
+        if (fn_1x97288() != 0)
             continue;
         break;
     }

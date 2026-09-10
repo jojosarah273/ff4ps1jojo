@@ -32,14 +32,14 @@ L7d4:
         break;
     }
 L87c:
-    if (func_800FC1CC() != 0)
+    if (battle_rows_x3f_x212c_x79_windows() != 0)
         return;
     row_page(0xE4);
     if (gate(2) == 0)
         battle_rows_xe4_window_x1100_x1180();
     battle_godtext_a();
-    func_800FAD48();
-    func_800FED3C();
+    cell_0xfad48();
+    shop_banner_xd9_x7a_x79_xb1_window();
     fn_1x70c14();
     state_ok();
     latch(0x81);

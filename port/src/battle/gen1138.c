@@ -4,9 +4,6 @@
  */
 #include "ff4_window.h"
 
-
-extern int func_801111C4();
-
 void fn_1x1117c(void)
 
 {
@@ -14,7 +11,7 @@ void fn_1x1117c(void)
   tail(0x5e);
   wnd_open(0x1e0);
   tail(0x60);
-  func_801111C4();
+  fn_1x111c4();
   battle_wndfx_run();
   return;
 }

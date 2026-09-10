@@ -14,8 +14,8 @@ void battle_item_status_detail_xec_wind(void)
     txt_set(0xFD6);
     row_read(0x8F);
     txt_draw(0x1802);
-    func_800FC1CC();
-    func_800FD6E8();
+    battle_rows_x3f_x212c_x79_windows();
+    cell_0xfd6e8();
     battle_godtext_a();
     page_open(0x1706);
     row_open();
@@ -61,7 +61,7 @@ L1129c4:
         if (io_go() != 0)
             goto L112A18;
         txt_draw(0x2100);
-        func_800FD6E8();
+        cell_0xfd6e8();
     L112A18:
         page_open(0xAD2);
         if (cell_flags_pack(0x202) != 0)

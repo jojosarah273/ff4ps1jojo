@@ -8,11 +8,11 @@ void event_v0_gates_e8_v0_s4_latch_rows(void)
     /* event: v0 gates; 801982E8 + v0/s4 latch rows. */
     if (io_just() == 0)
         goto L19827C;
-    func_801982E8();
+    register_only_stub_x18_see_asm_for();
     /* v0/s4 latch -> L1982A0 / L1982C0 */
     return;
 L19827C:
-    func_801982E8();
+    register_only_stub_x18_see_asm_for();
     /* v0/s4 latch -> L1982A0 / L1982C0 */
     return;
 L1982A0:

@@ -27,7 +27,7 @@ void s2_branch_register(void)
             break;
     }
     latch_cur();
-    func_800FC07C();
+    cell_0xfc07c();
     latch(0x80);
     txt_draw(0x2115);
     draw_pad(0x2000);
@@ -71,8 +71,8 @@ void s2_branch_register(void)
     for (;;) {
         /* spin on v0 (register) */
     }
-    func_8017F9A8();
-    func_8017F9A8();
+    stack_swap_trick_sp_swapped_throug();
+    stack_swap_trick_sp_swapped_throug();
     battle_mode_dispatch();
     battle_mode_dispatch();
 L24d0:
@@ -118,7 +118,7 @@ L24d0:
     config_sub_screen();
     config_confirm_loop_a();
     open_row(0xCB);
-    func_800FD6E8();
+    cell_0xfd6e8();
     latch(7);
     shop_rows2_run();
     battle_wndfx_run();

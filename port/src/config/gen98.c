@@ -54,12 +54,12 @@ L13D264:
 L13D2B4:
     latch(8);
     txt_draw_cur();
-    func_801490AC();
+    fn_1x490ac();
 L13d2cc:
     for (;;) {
         gpu_driver_run();
         fn_1x3d428();
-        func_80149374();
+        fn_1x49374();
         if (io_go() != 0)
             goto L13D390;
         txt_set_cur();
@@ -80,7 +80,7 @@ L13d2cc:
         fn_1x3d3b0();
     }
 L13D390:
-    func_8014D728();
+    fn_1x4d728();
     cell_clear_bank();
     return;
 }

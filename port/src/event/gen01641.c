@@ -9,9 +9,9 @@ void battle_anim_s5_v0_s5_s6_latches_d8(void)
        801817EC then 801971A8/8017F9FC closes. */
     /* s5/v0 latch -> L181CBC */
     do {
-        func_801808D8();
+        battle_anim_fp_regcmp_spin_loops_d();
     } while (io_just() != 0);
-    func_801817EC();
+    battle_anim_t2_v0_regcmp_spin_loop();
     anim_pack_word(1);
     /* s5/s6 latch -> L181D40 */
     goto L181D74;

@@ -11,11 +11,11 @@ void battle_v1_v0_v0_gates_b8c_b4_rows(void)
         goto L187A58;
     if (io_just() != 0)
         goto L187A58;
-    func_80189B8C(1);
+    fn_1x89b8c(1);
     event_twin_b44_rows_on_s2_fp_s0(6);
     return;
 L187A58:
-    func_80189B8C(1);
+    fn_1x89b8c(1);
     event_twin_b44_rows_on_s2_fp_s0(6);
     return;
 L187A90:

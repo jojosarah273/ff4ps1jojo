@@ -11,7 +11,7 @@ void event_v0_gate_ae28_t0_v0_latch_c9b(void)
         goto L1899D8;
     event_v0_gate_tree_b1c8_spins_l18a();
     /* t0/v0 latch -> L189A24 */
-    func_8018C9B8();
+    fn_1x8c9b8();
     return;
 L1899D8:
     if (io_just() != 0)

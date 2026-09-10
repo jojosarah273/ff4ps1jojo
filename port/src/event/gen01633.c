@@ -8,9 +8,9 @@ void event_v0_gate_on_c3e8_ba38_b838_ro(void)
     /* event: v0 gate on 8018C3E8(1); 8018BA38/8018B838(1) rows. */
     if (io_just() != 0)
         goto L189CA8;
-    func_8018C3E8(1);
+    fn_1x8c3e8(1);
 L189CA8:
     event_b9a8_gate_at_l18bab8_wide_a1();
-    func_8018B838(1);
+    event_s0_v0_v0_s0_latches_b9a8_row(1);
     return;
 }

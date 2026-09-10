@@ -4,16 +4,13 @@
  */
 #include "ff4_window.h"
 
-
-extern int func_8014B93C();
-
 void fn_1x4c994(void)
 
 {
   fn_1x4c96c();
   page_paint2(0xf2a0);
   latch(1);
-  func_8014B93C();
+  fn_1x4b93c();
   return;
 }
 

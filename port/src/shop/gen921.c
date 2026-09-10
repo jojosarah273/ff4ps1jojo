@@ -16,7 +16,7 @@ void fn_1x606d4(void)
     latch(0);
     sep_b();
     do {
-        func_800F7EE8();
+        cell_0xf7ee8();
         cell_flags_pack3();
         poll_pair_cur();
     } while (poll_go(0x8080) != 0);

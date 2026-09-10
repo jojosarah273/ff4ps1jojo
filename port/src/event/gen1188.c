@@ -13,7 +13,7 @@ L1979A4:
     if (io_just() == 0)
         goto L197A28;
 L1979E8:
-    func_8018F078();
+    register_only_stub_x1c_see_asm_for();
     if (io_just() != 0)
         goto L197A14;
     goto L197A24;

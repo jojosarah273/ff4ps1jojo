@@ -9,11 +9,11 @@ void battle_rows_twin_variant_x66_x65_x(void)
        80121E94/80121D64/80121CE4 rows. */
     if (io_go() != 0)
         goto L12191C;
-    func_80121E94();
+    fn_1x21e94();
     poll_pair(0x66);
     goto L12192C;
 L12191C:
-    func_80121D64();
+    fn_1x21d64();
     key_page(0x66);
 L12192C:
     fn_1x21ce4();

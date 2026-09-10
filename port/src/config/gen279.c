@@ -10,7 +10,7 @@ void battle_magic_cast_flow_d12c_de8_pr(void)
        8013E200 cast helper loop L13E494, exit loop L13E510. */
     txt_draw_cur();
     battle_row_wrap();
-    func_80148DE8();
+    fn_1x48de8();
     sep();
 L13e340:
     for (;;) {

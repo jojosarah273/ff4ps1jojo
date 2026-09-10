@@ -8,7 +8,7 @@ void status_c_header_f0_b0_cells_x_b8(void)
     /* status: 8012214C header + 65F0/81B0(!=) cells + 4 x 801287B8
        blocks, then the 0x34 window save row (801210AC/8011EF30/
        8011EF0C); closes with 71DC(0x4000). */
-    func_8012214C();
+    fn_1x2214c();
     row_prep(0x20);
     cell_sink89_c();
     cell_pull9_hi();

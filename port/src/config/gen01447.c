@@ -3,5 +3,5 @@
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-extern void func_800F4A7C(u32 v);
-void fn_1x53074(void) { func_800F4A7C(0x13FEF6); }
+
+void fn_1x53074(void) { cell_0xf4a7c(0x13FEF6); }

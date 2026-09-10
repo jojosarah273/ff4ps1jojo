@@ -11,7 +11,7 @@ void fn_1x30c74(void)
     latch(0x20);
     cell_put(0xC1);
     config_row_b600();
-    func_80131294();
+    fn_1x31294();
     cell_clear_bank(0x1B88);
     txt_set(0x1B83);
     row_sel_cell_cur();

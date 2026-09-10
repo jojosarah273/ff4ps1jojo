@@ -9,10 +9,10 @@ void event_v0_gate_a9dc_ab08_rows(void)
     if (io_just() == 0)
         goto L18CA74;
     event_v0_gate_picks_a75c_vs_a438_r();
-    func_8018AB08();
+    event_cache_quantizes_a1_down_to_t();
     return;
 L18CA74:
     event_v0_gate_picks_a75c_vs_a438_r();
-    func_8018AB08();
+    event_cache_quantizes_a1_down_to_t();
     return;
 }

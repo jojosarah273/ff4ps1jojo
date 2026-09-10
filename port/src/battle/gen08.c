@@ -132,6 +132,6 @@ L340:
             continue;
         break;
     }
-    func_8017F9A8();
+    stack_swap_trick_sp_swapped_throug();
     return;
 }

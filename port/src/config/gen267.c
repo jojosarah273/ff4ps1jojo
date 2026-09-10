@@ -40,16 +40,16 @@ L1318d0:
     cell_put_hi9(0x57);
     row_prep_close();
     row_prep_close();
-    func_800F7248(0x41);
+    cell_0xf7248(0x41);
 L13193c:
     for (;;) {
-        func_800F6B38(0x1B8B);
+        cell_0xf6b38(0x1B8B);
         if (gate(2) != 0)
             goto L13195C;
-        func_800F6390();
+        cell_0xf6390();
     L13195C:
-        func_800F6338();
-        func_800F58BC(5);
+        cell_0xf6338();
+        cell_0xf58bc(5);
         if (io_just() == 0)
             continue;
         break;

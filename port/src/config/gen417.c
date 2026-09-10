@@ -11,7 +11,7 @@ void options_row_xa6_x90_windows_x2053(void)
     page(0xA6);
     page_paint(0x2053);
     page_paint(0x2054);
-    func_801531CC();
+    fn_1x531cc();
     io_poll(0x46);
     if (io_go() != 0)
         goto L15E0D0;

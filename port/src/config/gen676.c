@@ -32,7 +32,7 @@ L124238:
         break;
     }
     row_sync2_cur();
-    func_800F8210(0x500);
+    cell_0xf8210(0x500);
     row_prep_close();
     return;
 }

@@ -27,7 +27,7 @@ void main_menu_option_config_tab_x210c(void)
     v0_s0_branch();
     midrow_paint_a();
     draw_pad_cur();
-    func_8011FB74();
+    fn_1x1fb74();
     latch(3);
     fn_1x26920();
     config_row_f320();
@@ -38,8 +38,8 @@ void main_menu_option_config_tab_x210c(void)
     page_paint2(0x1BC9);
     wnd_open_cur();
     label(0x1B1D);
-    func_80120F94();
-    func_8012AAC0();
+    fn_1x20f94();
+    fn_1x2aac0();
     shop_row_kick_f0();
     battle_row_45b();
     fn_1x2a190();
@@ -48,7 +48,7 @@ void main_menu_option_config_tab_x210c(void)
     midrow_pad88_run();
     page(0x93);
     label(0x1BA5);
-    func_80120F94();
+    fn_1x20f94();
     fn_1x20ca4();
     config_row_a600();
     fn_1x26830();

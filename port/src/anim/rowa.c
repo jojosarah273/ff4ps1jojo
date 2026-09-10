@@ -65,7 +65,7 @@ Ld50:
         goto Lde0;
     txt_set(0x6FD);
     row_page(0x7A);
-    func_800F4960(0xBE37);
+    cell_0xf4960(0xBE37);
     if (sel(0x202) != 0)
         goto Lde0;
     latch(0x10);

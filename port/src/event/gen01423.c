@@ -9,14 +9,14 @@ void battle_v0_gates_c_row_at_l187590(void)
     if (io_just() != 0)
         goto L187590;
     goto L187560;
-    func_8018767C();
+    fn_1x8767c();
     return;
 L187590:
-    func_8018767C();
+    fn_1x8767c();
     return;
 L187560:
     if (io_just() != 0)
         goto L187590;
-    func_8018767C();
+    fn_1x8767c();
     return;
 }

@@ -10,7 +10,7 @@ void fn_1x2e160(void)
     txt_draw(5800);
     key_page(132);
     config_rows_c_e2c_ef30_f1c_fb74_ro();
-    func_80122538();
+    fn_1x22538();
     config_row_26528();
     battle_state_dc400();
 }

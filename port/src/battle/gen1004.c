@@ -22,7 +22,7 @@ L1451a0:
         battle_cast_flow_windows_e44_d14_r();
         battle_magic_confirm_x1813_x1901_t();
         cell_clear_bank();
-        func_8014D43C();
+        fn_1x4d43c();
         row_close();
         cell_set50_from54();
         if (poll_go(0x202) != 0)

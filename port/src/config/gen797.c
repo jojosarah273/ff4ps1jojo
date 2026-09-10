@@ -15,7 +15,7 @@ void ability_wrapper_x1a88_text_ea9c_a6(void)
     latch(0x7E);
     cell_cursor_dec();
     row_pad();
-    func_8016EA9C();
+    fn_1x6ea9c();
     cell_clear_bank(0x1A88);
     ability_status_wrapper_d3c_render();
     sep();

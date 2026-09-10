@@ -12,7 +12,7 @@ void ability_rows_e2c_fba4_e9c_aac0_ef3(void)
     battle_rows_29();
     config_row_26528();
     fn_1x20e9c();
-    func_8012AAC0();
+    fn_1x2aac0();
     latch(0x11);
     cell_put(0xE2);
     wnd_open_cur();

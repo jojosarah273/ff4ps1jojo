@@ -6,7 +6,7 @@
 void battle_anim_gate_a(void)
 {
     /* battle anim: 801943FC gates -> L1947A0 / L194758. */
-    if (func_801943FC() == 0)
+    if (battle_ui_phase_state_hit_box_gate() == 0)
         goto L1947A0;
     if (io_just() != 0)
         goto L194758;

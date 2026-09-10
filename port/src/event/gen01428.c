@@ -8,7 +8,7 @@ void battle_anim_d8_spin_loops_l181e04(void)
     /* battle anim: 801824D8 spin loops L181E04/L181FF4 with
        80194640 rows; returns at L1820CC. */
     for (;;) {
-        if (func_801824D8() != 0)
+        if (x_byte_bit_gather_rotates_four_inp() != 0)
             continue;
         break;
     }
@@ -19,7 +19,7 @@ L181F60:
     if (io_just() == 0)
         goto L1820CC;
     for (;;) {
-        if (func_801824D8() != 0)
+        if (x_byte_bit_gather_rotates_four_inp() != 0)
             continue;
         break;
     }

@@ -12,7 +12,7 @@ void shop_c3c_b04_x2000_b9c_gates_c_loo(void)
     sep();
     do {
         sep();
-    } while (func_80197288() != 0);
+    } while (fn_1x97288() != 0);
     sep();
     return;
 }

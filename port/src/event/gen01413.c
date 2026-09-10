@@ -6,11 +6,11 @@
 void event_v0_s0_s1_s0_latches_spin_row(void)
 {
     /* event: v0/s0 + s1/s0 latches; 80197688 spin rows. */
-    if (func_80197688() != 0)
+    if (register_only_stub_xc_see_asm_for() != 0)
         goto L18CB18;
     /* v0/s0 latch -> L18CB68 */
     for (;;) {
-        func_80197688();
+        register_only_stub_xc_see_asm_for();
         if (io_just() == 0)
             goto L18CB38;
         break;
@@ -18,15 +18,15 @@ void event_v0_s0_s1_s0_latches_spin_row(void)
     return;
 L18CB18:
     /* s1/s0 latch -> L18CB58 */
-    func_80197688();
+    register_only_stub_xc_see_asm_for();
     return;
 L18CB38:
     if (io_just() != 0)
         goto L18CB60;
-    func_80197688();
+    register_only_stub_xc_see_asm_for();
     return;
 L18CB58:
-    func_80197688();
+    register_only_stub_xc_see_asm_for();
     return;
 L18CB60:
     return;

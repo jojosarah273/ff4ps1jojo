@@ -40,7 +40,7 @@ L134bfc:
         row_arm_s_cur();
     }
 L134C24:
-    func_800F43A0(0x45);
+    cell_0xf43a0(0x45);
     if (cell_flags_pos0(0x202) != 0)
         goto L134C54;
     row_prep_close();

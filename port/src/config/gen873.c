@@ -10,7 +10,7 @@ void options_x2_x28a4_x28a3_texts_f70bc(void)
     wnd_open_cur();
     latch(2);
     config_banner_96();
-    if (func_800F70BC(0x202) != 0)
+    if (cell_0xf70bc(0x202) != 0)
         goto L15F758;
     latch(0x20);
     txt_draw(0x28A4);

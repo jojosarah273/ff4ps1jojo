@@ -30,7 +30,7 @@ void config_row_x30_x31_windows_x8d_x8a(void)
     battle_rows_2115();
     midrow_paint_c();
     anim_noop();
-    func_8011F864();
+    fn_1x1f864();
     battle_mode_dispatch();
     fn_1x39e34();
     battle_row_88();

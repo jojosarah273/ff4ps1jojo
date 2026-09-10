@@ -8,11 +8,11 @@ u32 fn_1x32248(void)
     txt_set(0x1A04);
     row_read(0x20);
     if (sel(2) != 0) {
-        func_80131294();
+        fn_1x31294();
         fn_1x2219c();
         return 2;
     }
     latch(4);
-    func_80132310();
+    fn_1x32310();
     return 1;
 }

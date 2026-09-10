@@ -12,7 +12,7 @@ void shop_rows_x2000_x2040_cells_via_dc(void)
     row_prep(0x20);
 L16bf0c:
     for (;;) {
-        func_800F9140(0x2000);
+        cell_0xf9140(0x2000);
         cell_stamp8_9(0x2040);
         cell_step();
         cell_step();

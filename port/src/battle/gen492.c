@@ -50,7 +50,7 @@ L119a00:
             goto L119A48;
     }
 L119A48:
-    if (func_800F5B2C(cell_state_of()) != 0)
+    if (cell_0xf5b2c(cell_state_of()) != 0)
         goto L119A80;
     page_paint(0x1440);
 L119A80:

@@ -40,7 +40,7 @@ L174d04:
         row_prep_close();
         row_open();
         cell_tick_half();
-        func_800F8674(0x34);
+        cell_0xf8674(0x34);
         row_close();
         cell_step();
         cell_step();

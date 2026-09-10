@@ -7,7 +7,7 @@ void battle_cast_rows_d4_b98_preps_fac(void)
 {
     /* battle cast rows: 801495D4/80074B98 preps, 4FAC(0x101) gate
        loop L14D0A0, 80073EB0/800744A0/800999A0/801495F4 close. */
-    func_801495D4();
+    fn_1x495d4();
     func_80074B98();
     wnd_open_cur();
 L14d0a0:
@@ -31,6 +31,6 @@ L14d0a0:
     }
     func_800744A0();
     func_800999A0();
-    func_801495F4();
+    fn_1x495f4();
     return;
 }

@@ -30,7 +30,7 @@ void ability_status_wrapper_d3c_render(void)
     cell_push_c8_cur(0x4211);
     cell_flags_clr4();
     page_paint2(0x1B49);
-    func_80123FB4();
+    fn_1x23fb4();
     midrow_paint_c();
     config_row_q18();
     rows_x48c0_x1a71_texts_xe0_window();
@@ -52,9 +52,9 @@ L138bdc:
         cell_flags_set4();
         row_prep(0x20);
         cell_cursor_adv2();
-        func_800F8210(0x206);
+        cell_0xf8210(0x206);
         cell_cursor_adv2();
-        func_800F8210(0x204);
+        cell_0xf8210(0x204);
         row_prep_close();
         return;
     }

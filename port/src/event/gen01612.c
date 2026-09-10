@@ -9,10 +9,10 @@ void event_v0_gates_x22_row_returns_l19(void)
     if (io_just() != 0)
         goto L198650;
     goto L198648;
-    func_80198990(0x22);
+    fn_1x98990(0x22);
     return;
 L198650:
-    func_80198990(0x22);
+    fn_1x98990(0x22);
     goto L1986C4;
 L198648:
     goto L1986C4;

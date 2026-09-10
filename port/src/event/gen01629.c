@@ -9,11 +9,11 @@ void event_v1_v0_gate_e8_acf8_a8_f8(void)
        801976F8 rows. */
     if (io_just() != 0)
         goto L18ADAC;
-    func_801976E8();
-    func_8018ACF8();
-    func_80197668();
-    func_801976A8();
-    func_801976F8();
+    psy_q_runtime_lock_enter_stub_sysc();
+    fn_1x8acf8();
+    register_only_stub_xc_see_asm_for_1976();
+    register_only_stub_xc_see_asm_for_1976();
+    psy_q_runtime_lock_exit_stub_sysca();
     return;
 L18ADAC:
     return;

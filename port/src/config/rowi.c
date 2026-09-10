@@ -38,7 +38,7 @@ void fn_1x2d23c(void)
     draw_pad_cur();
     wnd_open_cur();
     v0_s0_branch();
-    func_80126458();
+    fn_1x26458();
     latch(0x30);
     cell_put(0xC1);
     row_page(0xE8);

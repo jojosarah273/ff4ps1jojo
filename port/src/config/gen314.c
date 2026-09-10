@@ -4,8 +4,6 @@
  */
 #include "ff4_window.h"
 
-extern int func_8012214C();
-
 void fn_1x28c4c(void)
 
 {
@@ -21,7 +19,7 @@ void fn_1x28c4c(void)
   } while (iVar1 == 0);
   wnd_open(0x3000);
   label(0x16aa);
-  func_8012214C();
+  fn_1x2214c();
   row_prep(0x20);
   row_sync2(0x53);
   wnd_open(0xa710);

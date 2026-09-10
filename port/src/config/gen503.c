@@ -21,7 +21,7 @@ void ability_skill_screen_x34_window_xd(void)
     midrow_pad88_run();
     config_row_b600();
     draw_pad_cur();
-    func_8011FB74();
+    fn_1x1fb74();
     battle_row_45b();
     fn_1x1ff40();
     return;
@@ -30,7 +30,7 @@ L1353C4:
     config_row_d600b();
     draw_pad_cur();
     battle_rows_sync();
-    func_80135298();
+    fn_1x35298();
     draw_pad_cur();
     battle_rows_sync();
     draw_pad_cur();
@@ -57,7 +57,7 @@ L13546c:
         if (gate(2) != 0)
             goto L1354DC;
         cell_clear_bank(0x1BCB);
-        func_8013554C();
+        fn_1x3554c();
     L1354DC:
         row_page_cur();
         row_read(0x80);

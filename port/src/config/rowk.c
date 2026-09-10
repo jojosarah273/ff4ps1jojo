@@ -180,7 +180,7 @@ L8a8:
         goto L8e0;
     cell_clear_bank(0x1B87);
     cell_clear_bank(0x1B88);
-    func_80131294();
+    fn_1x31294();
 L8e0:
     row_page_cur();
     row_read(0x40);

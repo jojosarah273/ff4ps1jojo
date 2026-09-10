@@ -28,7 +28,7 @@ void shop_rows_alt_of_d4_x1706_x1708_x5(void)
     txt_draw(0x1701);
     page_open(0x170C);
     label(0x1706);
-    func_800FB224();
+    cell_0xfb224();
     latch(0x10);
     shop_buy_list();
     latch(0x81);

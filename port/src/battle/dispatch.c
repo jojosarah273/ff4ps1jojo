@@ -1,7 +1,7 @@
 /* FF4 source-port — battle/dispatch.c
  *
  * Small battle dispatchers (exact Phase A decodes).
- * Ground truth: src/func_800FEF7C, 80106CD4.
+ * Ground truth: src/shop_battle_v0_v1_v0_gates_pick_fe, 80106CD4.
  */
 #include <stdint.h>
 

@@ -4,14 +4,128 @@
 static uint32_t g_vram_sim[4096];
 static uint32_t g_slots[64];
 
+uint32_t *D_800D16B6 = g_slots;
+uint32_t *D_800D1A37 = g_slots;
+uint32_t *D_800D1A38 = g_slots;
+uint32_t *D_800D1A39 = g_slots;
 uint32_t *D_800D1E05 = g_slots;
+uint32_t *D_800F3910 = g_slots;
+uint32_t *D_800F391C = g_slots;
+uint32_t *D_800F3930 = g_slots;
+uint32_t *D_800F39B4 = g_slots;
 uint32_t *D_80199230 = g_slots;
+uint32_t *D_8019A068 = g_slots;
 uint32_t *D_8019A12C = g_slots;
+uint32_t *D_8019B0A0 = g_slots;
+uint32_t *D_8019B0A4 = g_slots;
+uint32_t *D_8019B0AC = g_slots;
+uint32_t *D_8019B0B0 = g_slots;
+uint32_t *D_8019B0C8 = g_slots;
+uint32_t *D_8019B0CC = g_slots;
+uint32_t *D_8019B100 = g_slots;
+uint32_t *D_8019B114 = g_slots;
+uint32_t *D_8019B124 = g_slots;
+uint32_t *D_8019B12C = g_slots;
+uint32_t *D_8019B130 = g_slots;
+uint32_t *D_8019B138 = g_slots;
+uint32_t *D_8019B13C = g_slots;
+uint32_t *D_8019B140 = g_slots;
+uint32_t *D_8019B144 = g_slots;
+uint32_t *D_8019B14C = g_slots;
+uint32_t *D_8019B150 = g_slots;
+uint32_t *D_8019B17C = g_slots;
+uint32_t *D_8019B584 = g_slots;
+uint32_t *D_8019B588 = g_slots;
+uint32_t *D_8019B58C = g_slots;
+uint32_t *D_8019B590 = g_slots;
+uint32_t *D_8019B594 = g_slots;
+uint32_t *D_8019B598 = g_slots;
+uint32_t *D_8019B59C = g_slots;
+uint32_t *D_8019B5A0 = g_slots;
+uint32_t *D_8019B5A4 = g_slots;
+uint32_t *D_8019B5A8 = g_slots;
+uint32_t *D_8019B9C4 = g_slots;
+uint32_t *D_8019B9EC = g_slots;
+uint32_t *D_8019B9F0 = g_slots;
+uint32_t *D_8019B9F4 = g_slots;
+uint32_t *D_8019C4C4 = g_slots;
+uint32_t *D_8019CF34 = g_slots;
+uint32_t *D_8019CF38 = g_slots;
+uint32_t *D_8019D4C4 = g_slots;
+uint32_t *D_8019DB56 = g_slots;
+uint32_t *D_8019DC58 = g_slots;
+uint32_t *D_8019DC5C = g_slots;
+uint32_t *D_8019DC60 = g_slots;
+uint32_t *D_8019DC64 = g_slots;
+uint32_t *D_8019DC68 = g_slots;
+uint32_t *D_8019DC90 = g_slots;
+uint32_t *D_8019DC94 = g_slots;
+uint32_t *D_8019DCC4 = g_slots;
+uint32_t *D_8019ECF4 = g_slots;
+uint32_t *D_8019ECF8 = g_slots;
+uint32_t *D_8019ECFE = g_slots;
 uint32_t *D_8019ED30 = g_slots;
+uint32_t *D_8019ED8E = g_slots;
+uint32_t *D_8019EDA0 = g_slots;
+uint32_t *D_8019EDA4 = g_slots;
+uint32_t *D_8019EDAA = g_slots;
+uint32_t *D_8019EDAC = g_slots;
+uint32_t *D_8019EDB4 = g_slots;
+uint32_t *D_8019EDBC = g_slots;
+uint32_t *D_8019EDC2 = g_slots;
+uint32_t *D_8019EDC4 = g_slots;
+uint32_t *D_8019EDD0 = g_slots;
+uint32_t *D_8019EDD4 = g_slots;
+uint32_t *D_8019EDD8 = g_slots;
+uint32_t *D_8019EDDC = g_slots;
+uint32_t *D_8019EE00 = g_slots;
+uint32_t *D_8019EE02 = g_slots;
+uint32_t *D_8019EE28 = g_slots;
+uint32_t *D_8019EE2C = g_slots;
+uint32_t *D_8019EE42 = g_slots;
+uint32_t *D_8019EE56 = g_slots;
 uint32_t *D_8019EE60 = g_slots;
+uint32_t *D_8019EE6A = g_slots;
+uint32_t *D_8019EE7A = g_slots;
+uint32_t *D_8019EE7C = g_slots;
+uint32_t *D_8019EE7E = g_slots;
+uint32_t *D_8019EE90 = g_slots;
 uint32_t *D_8019EF0C = g_slots;
+uint32_t *D_8019EF24 = g_slots;
+uint32_t *D_8019EF28 = g_slots;
+uint32_t *D_8019EF36 = g_slots;
+uint32_t *D_8019EF5C = g_slots;
 uint32_t *D_8019FFE8 = g_slots;
 uint32_t *D_801B57A0 = g_slots;
+uint32_t *D_801CF568 = g_slots;
+uint32_t *D_801CFD68 = g_slots;
+uint32_t *D_801D7D68 = g_slots;
+uint32_t *D_801F6678 = g_slots;
+uint32_t *D_801F6788 = g_slots;
+uint32_t *D_801F6790 = g_slots;
+uint32_t *D_801F6794 = g_slots;
+uint32_t *D_801F6798 = g_slots;
+uint32_t *D_801F67A4 = g_slots;
+uint32_t *D_801F67A8 = g_slots;
+uint32_t *D_801F67AC = g_slots;
+uint32_t *D_801F67B0 = g_slots;
+uint32_t *D_801F67B4 = g_slots;
+uint32_t *D_801F67B8 = g_slots;
+uint32_t *D_801F67BC = g_slots;
+uint32_t *D_801F67C0 = g_slots;
+uint32_t *D_801F67C4 = g_slots;
+uint32_t *D_801F67C8 = g_slots;
+uint32_t *D_801F67D0 = g_slots;
+uint32_t *D_801F67D4 = g_slots;
+uint32_t *D_801F67D8 = g_slots;
+uint32_t *D_801F6958 = g_slots;
+uint32_t *D_801F695C = g_slots;
+uint32_t *D_801F6960 = g_slots;
+uint32_t *D_801F6964 = g_slots;
+uint32_t *D_D_8019CEF4 = g_slots;
+uint32_t *D_D_8019DB4C = g_slots;
+uint32_t *D_D_8019DB50 = g_slots;
+uint32_t *D_D_8019DC68 = g_slots;
 
 __attribute__((constructor)) static void init_slots(void)
 { int i; for (i = 0; i < 64; i++)
@@ -33,6 +147,8 @@ uint32_t arm_sub() { return 0; }
 uint32_t aux_row() { return 0; }
 uint32_t bank_rows() { return 0; }
 uint32_t bank_rows2() { return 0; }
+uint32_t battle_anim_dispatch_a0_v0_v0_gate_cur() { return 0; }
+uint32_t battle_anim_spin_loop_l17e8cc_gate_cur() { return 0; }
 uint32_t battle_commands() { return 0; }
 uint32_t battle_row_wrap() { return 0; }
 uint32_t cancel_handler() { return 0; }
@@ -135,338 +251,107 @@ uint32_t func_8009A018() { return 0; }
 uint32_t func_8009A0A0() { return 0; }
 uint32_t func_8009A0E0() { return 0; }
 uint32_t func_8009B8E4() { return 0; }
-uint32_t func_800F3AB4() { return 0; }
-uint32_t func_800F43A0() { return 0; }
-uint32_t func_800F4960() { return 0; }
-uint32_t func_800F4A7C() { return 0; }
-uint32_t func_800F4B1C() { return 0; }
-uint32_t func_800F52BC() { return 0; }
-uint32_t func_800F5804() { return 0; }
-uint32_t func_800F58BC() { return 0; }
-uint32_t func_800F59F4() { return 0; }
-uint32_t func_800F5B2C() { return 0; }
 uint32_t func_800F5B4C() { return 0; }
-uint32_t func_800F5BE8() { return 0; }
 uint32_t func_800F5C14() { return 0; }
-uint32_t func_800F5F20() { return 0; }
-uint32_t func_800F5F70() { return 0; }
-uint32_t func_800F6068() { return 0; }
-uint32_t func_800F60A8() { return 0; }
 uint32_t func_800F6104() { return 0; }
-uint32_t func_800F6130() { return 0; }
-uint32_t func_800F6180() { return 0; }
-uint32_t func_800F6338() { return 0; }
-uint32_t func_800F6390() { return 0; }
-uint32_t func_800F64A8() { return 0; }
-uint32_t func_800F68A0() { return 0; }
-uint32_t func_800F6AF4() { return 0; }
-uint32_t func_800F6B38() { return 0; }
-uint32_t func_800F6D40() { return 0; }
-uint32_t func_800F6EDC() { return 0; }
-uint32_t func_800F70BC() { return 0; }
-uint32_t func_800F712C() { return 0; }
-uint32_t func_800F7248() { return 0; }
-uint32_t func_800F73E0() { return 0; }
-uint32_t func_800F7494() { return 0; }
-uint32_t func_800F756C() { return 0; }
-uint32_t func_800F77CC() { return 0; }
-uint32_t func_800F78E0() { return 0; }
 uint32_t func_800F7AC8() { return 0; }
-uint32_t func_800F7EE8() { return 0; }
-uint32_t func_800F8210() { return 0; }
-uint32_t func_800F8674() { return 0; }
-uint32_t func_800F86F0() { return 0; }
-uint32_t func_800F8930() { return 0; }
-uint32_t func_800F8A48() { return 0; }
-uint32_t func_800F8A8C() { return 0; }
 uint32_t func_800F8CD4() { return 0; }
 uint32_t func_800F8D40() { return 0; }
-uint32_t func_800F8FD8() { return 0; }
-uint32_t func_800F902C() { return 0; }
-uint32_t func_800F9140() { return 0; }
-uint32_t func_800F92D8() { return 0; }
-uint32_t func_800F9538() { return 0; }
-uint32_t func_800F9BD0() { return 0; }
+uint32_t func_800F9C98() { return 0; }
+uint32_t func_800F9CE8() { return 0; }
 uint32_t func_800FA460() { return 0; }
-uint32_t func_800FAA04() { return 0; }
-uint32_t func_800FAD48() { return 0; }
-uint32_t func_800FB160() { return 0; }
-uint32_t func_800FB224() { return 0; }
 uint32_t func_800FB2E8() { return 0; }
+uint32_t func_800FB3A0() { return 0; }
 uint32_t func_800FBE44() { return 0; }
 uint32_t func_800FBF50() { return 0; }
-uint32_t func_800FC07C() { return 0; }
-uint32_t func_800FC0DC() { return 0; }
-uint32_t func_800FC1CC() { return 0; }
-uint32_t func_800FC548() { return 0; }
-uint32_t func_800FC5A8() { return 0; }
-uint32_t func_800FC5D8() { return 0; }
-uint32_t func_800FCA08() { return 0; }
+uint32_t func_800FC2AC() { return 0; }
+uint32_t func_800FC8E8() { return 0; }
 uint32_t func_800FD37C() { return 0; }
 uint32_t func_800FD404() { return 0; }
 uint32_t func_800FD494() { return 0; }
-uint32_t func_800FD6B8() { return 0; }
-uint32_t func_800FD6E8() { return 0; }
-uint32_t func_800FD9FC() { return 0; }
-uint32_t func_800FDA4C() { return 0; }
-uint32_t func_800FDB5C() { return 0; }
 uint32_t func_800FDBBC() { return 0; }
+uint32_t func_800FDD28() { return 0; }
 uint32_t func_800FDD8C() { return 0; }
 uint32_t func_800FDF34() { return 0; }
 uint32_t func_800FE028() { return 0; }
 uint32_t func_800FE110() { return 0; }
-uint32_t func_800FE5D4() { return 0; }
-uint32_t func_800FE634() { return 0; }
-uint32_t func_800FE8B4() { return 0; }
 uint32_t func_800FE978() { return 0; }
-uint32_t func_800FEB10() { return 0; }
-uint32_t func_800FEC74() { return 0; }
-uint32_t func_800FED3C() { return 0; }
-uint32_t func_800FEF7C() { return 0; }
-uint32_t func_800FF0AC() { return 0; }
+uint32_t func_800FEE34() { return 0; }
 uint32_t func_800FFADC() { return 0; }
-uint32_t func_800FFB5C() { return 0; }
-uint32_t func_800FFCAC() { return 0; }
+uint32_t func_800FFB1C() { return 0; }
 uint32_t func_801031F0() { return 0; }
-uint32_t func_80105230() { return 0; }
-uint32_t func_80109D68() { return 0; }
-uint32_t func_801111C4() { return 0; }
-uint32_t func_8011EADC() { return 0; }
-uint32_t func_8011EB1C() { return 0; }
-uint32_t func_8011EB5C() { return 0; }
-uint32_t func_8011EB7C() { return 0; }
 uint32_t func_8011EB9C() { return 0; }
 uint32_t func_8011F300() { return 0; }
-uint32_t func_8011F67C() { return 0; }
-uint32_t func_8011F844() { return 0; }
-uint32_t func_8011F864() { return 0; }
-uint32_t func_8011FB74() { return 0; }
-uint32_t func_80120F94() { return 0; }
-uint32_t func_80121A74() { return 0; }
-uint32_t func_80121BE4() { return 0; }
-uint32_t func_80121D64() { return 0; }
-uint32_t func_80121E6C() { return 0; }
-uint32_t func_80121E94() { return 0; }
-uint32_t func_80121F64() { return 0; }
-uint32_t func_8012202C() { return 0; }
-uint32_t func_801220EC() { return 0; }
-uint32_t func_8012214C() { return 0; }
 uint32_t func_801222A4() { return 0; }
-uint32_t func_801224F8() { return 0; }
-uint32_t func_80122518() { return 0; }
-uint32_t func_80122538() { return 0; }
-uint32_t func_8012281C() { return 0; }
 uint32_t func_80122844() { return 0; }
-uint32_t func_801228B4() { return 0; }
-uint32_t func_80123AA8() { return 0; }
-uint32_t func_80123FB4() { return 0; }
-uint32_t func_801263C8() { return 0; }
-uint32_t func_80126458() { return 0; }
-uint32_t func_801266A0() { return 0; }
-uint32_t func_801266C8() { return 0; }
+uint32_t func_80123A70() { return 0; }
 uint32_t func_80129808() { return 0; }
 uint32_t func_80129AD4() { return 0; }
-uint32_t func_8012AAC0() { return 0; }
-uint32_t func_8012C2F8() { return 0; }
-uint32_t func_8012CEA8() { return 0; }
 uint32_t func_8012EBF8() { return 0; }
 uint32_t func_8012F9A0() { return 0; }
-uint32_t func_8012F9D0() { return 0; }
-uint32_t func_80131294() { return 0; }
-uint32_t func_80132178() { return 0; }
-uint32_t func_80132310() { return 0; }
-uint32_t func_80134FBC() { return 0; }
-uint32_t func_80135298() { return 0; }
-uint32_t func_8013554C() { return 0; }
-uint32_t func_80135B54() { return 0; }
-uint32_t func_80135EE4() { return 0; }
-uint32_t func_80136014() { return 0; }
-uint32_t func_801360AC() { return 0; }
-uint32_t func_801360EC() { return 0; }
-uint32_t func_80136148() { return 0; }
-uint32_t func_8013836C() { return 0; }
-uint32_t func_80138664() { return 0; }
-uint32_t func_801386C8() { return 0; }
-uint32_t func_801399EC() { return 0; }
+uint32_t func_80135F7C() { return 0; }
 uint32_t func_8013A8C4() { return 0; }
 uint32_t func_8013AAF0() { return 0; }
-uint32_t func_8013B04C() { return 0; }
 uint32_t func_8013B0C4() { return 0; }
-uint32_t func_8013B764() { return 0; }
-uint32_t func_8013B7B8() { return 0; }
-uint32_t func_8013C50C() { return 0; }
-uint32_t func_8013E588() { return 0; }
 uint32_t func_80141DA0() { return 0; }
-uint32_t func_80141F84() { return 0; }
-uint32_t func_80141FC4() { return 0; }
-uint32_t func_80142B4C() { return 0; }
-uint32_t func_801442B4() { return 0; }
 uint32_t func_80147000() { return 0; }
-uint32_t func_801473A4() { return 0; }
-uint32_t func_80147414() { return 0; }
-uint32_t func_80148C6C() { return 0; }
-uint32_t func_80148C8C() { return 0; }
-uint32_t func_80148DE8() { return 0; }
-uint32_t func_80148E60() { return 0; }
-uint32_t func_80148FA0() { return 0; }
-uint32_t func_801490AC() { return 0; }
-uint32_t func_80149374() { return 0; }
-uint32_t func_801495D4() { return 0; }
-uint32_t func_801495F4() { return 0; }
-uint32_t func_8014B248() { return 0; }
-uint32_t func_8014B914() { return 0; }
-uint32_t func_8014B93C() { return 0; }
-uint32_t func_8014D43C() { return 0; }
-uint32_t func_8014D500() { return 0; }
 uint32_t func_8014D548() { return 0; }
-uint32_t func_8014D708() { return 0; }
-uint32_t func_8014D728() { return 0; }
-uint32_t func_8014D96C() { return 0; }
-uint32_t func_8014E9C4() { return 0; }
-uint32_t func_8014FE84() { return 0; }
-uint32_t func_801506BC() { return 0; }
-uint32_t func_801531CC() { return 0; }
-uint32_t func_80153218() { return 0; }
-uint32_t func_8015A284() { return 0; }
-uint32_t func_80161368() { return 0; }
-uint32_t func_80167B48() { return 0; }
 uint32_t func_80169100() { return 0; }
-uint32_t func_8016E490() { return 0; }
-uint32_t func_8016E99C() { return 0; }
-uint32_t func_8016E9BC() { return 0; }
-uint32_t func_8016E9DC() { return 0; }
-uint32_t func_8016EA1C() { return 0; }
-uint32_t func_8016EA9C() { return 0; }
-uint32_t func_8017668C() { return 0; }
-uint32_t func_80177178() { return 0; }
-uint32_t func_801773FC() { return 0; }
-uint32_t func_801774B4() { return 0; }
-uint32_t func_80177790() { return 0; }
-uint32_t func_8017794C() { return 0; }
-uint32_t func_80177DAC() { return 0; }
-uint32_t func_80177DCC() { return 0; }
-uint32_t func_8017841C() { return 0; }
-uint32_t func_80178BB4() { return 0; }
-uint32_t func_80178D00() { return 0; }
-uint32_t func_801792D0() { return 0; }
-uint32_t func_8017D078() { return 0; }
-uint32_t func_8017D7D8() { return 0; }
-uint32_t func_8017D898() { return 0; }
-uint32_t func_8017DD08() { return 0; }
-uint32_t func_8017E220() { return 0; }
-uint32_t func_8017E740() { return 0; }
-uint32_t func_8017EA90() { return 0; }
-uint32_t func_8017F9A8() { return 0; }
-uint32_t func_801808D8() { return 0; }
-uint32_t func_801817EC() { return 0; }
-uint32_t func_801824D8() { return 0; }
-uint32_t func_80182DDC() { return 0; }
-uint32_t func_80182E18() { return 0; }
-uint32_t func_80184AF8() { return 0; }
-uint32_t func_80185764() { return 0; }
-uint32_t func_801875AC() { return 0; }
-uint32_t func_8018767C() { return 0; }
-uint32_t func_80187C20() { return 0; }
-uint32_t func_80187CD0() { return 0; }
-uint32_t func_801881AC() { return 0; }
-uint32_t func_80188240() { return 0; }
-uint32_t func_80188AE8() { return 0; }
-uint32_t func_80188C58() { return 0; }
-uint32_t func_801890E4() { return 0; }
-uint32_t func_80189B8C() { return 0; }
-uint32_t func_8018AAC4() { return 0; }
-uint32_t func_8018AB08() { return 0; }
-uint32_t func_8018ABE8() { return 0; }
-uint32_t func_8018ACF8() { return 0; }
-uint32_t func_8018B16C() { return 0; }
-uint32_t func_8018B1C8() { return 0; }
-uint32_t func_8018B838() { return 0; }
-uint32_t func_8018B9A8() { return 0; }
-uint32_t func_8018C3E8() { return 0; }
-uint32_t func_8018C608() { return 0; }
-uint32_t func_8018C9B8() { return 0; }
-uint32_t func_8018CA18() { return 0; }
-uint32_t func_8018CB88() { return 0; }
-uint32_t func_8018DCD8() { return 0; }
-uint32_t func_8018DFA0() { return 0; }
-uint32_t func_8018DFC4() { return 0; }
-uint32_t func_8018DFE8() { return 0; }
-uint32_t func_8018E0C8() { return 0; }
-uint32_t func_8018E408() { return 0; }
-uint32_t func_8018E448() { return 0; }
-uint32_t func_8018E4B8() { return 0; }
-uint32_t func_8018E4E8() { return 0; }
-uint32_t func_8018F078() { return 0; }
-uint32_t func_8018F098() { return 0; }
-uint32_t func_8018F0E8() { return 0; }
-uint32_t func_8018F538() { return 0; }
-uint32_t func_8018F688() { return 0; }
-uint32_t func_8018F9E0() { return 0; }
-uint32_t func_80190004() { return 0; }
-uint32_t func_80190078() { return 0; }
-uint32_t func_80190088() { return 0; }
-uint32_t func_801905FC() { return 0; }
-uint32_t func_80190B44() { return 0; }
-uint32_t func_80190FD8() { return 0; }
-uint32_t func_80191620() { return 0; }
-uint32_t func_80191638() { return 0; }
-uint32_t func_801917D8() { return 0; }
-uint32_t func_80191818() { return 0; }
-uint32_t func_80191838() { return 0; }
-uint32_t func_80191858() { return 0; }
-uint32_t func_80191C58() { return 0; }
-uint32_t func_801920F0() { return 0; }
-uint32_t func_80192858() { return 0; }
-uint32_t func_80192888() { return 0; }
-uint32_t func_801928A8() { return 0; }
-uint32_t func_801928C8() { return 0; }
-uint32_t func_80192BEC() { return 0; }
-uint32_t func_80193194() { return 0; }
-uint32_t func_801931B8() { return 0; }
-uint32_t func_801931C8() { return 0; }
-uint32_t func_801932E8() { return 0; }
-uint32_t func_80193C40() { return 0; }
-uint32_t func_801942FC() { return 0; }
-uint32_t func_801943FC() { return 0; }
-uint32_t func_80194518() { return 0; }
-uint32_t func_80194988() { return 0; }
-uint32_t func_801949F8() { return 0; }
-uint32_t func_80195120() { return 0; }
-uint32_t func_80196074() { return 0; }
-uint32_t func_801960BC() { return 0; }
-uint32_t func_801963C0() { return 0; }
-uint32_t func_80196898() { return 0; }
-uint32_t func_801968CC() { return 0; }
-uint32_t func_801970A8() { return 0; }
-uint32_t func_80197168() { return 0; }
-uint32_t func_801971E8() { return 0; }
-uint32_t func_80197248() { return 0; }
-uint32_t func_80197288() { return 0; }
-uint32_t func_801972B8() { return 0; }
-uint32_t func_801972D8() { return 0; }
-uint32_t func_80197308() { return 0; }
-uint32_t func_80197338() { return 0; }
-uint32_t func_80197358() { return 0; }
-uint32_t func_80197378() { return 0; }
-uint32_t func_80197398() { return 0; }
-uint32_t func_801975E8() { return 0; }
-uint32_t func_80197608() { return 0; }
-uint32_t func_80197630() { return 0; }
-uint32_t func_80197648() { return 0; }
-uint32_t func_80197668() { return 0; }
-uint32_t func_80197678() { return 0; }
-uint32_t func_80197688() { return 0; }
-uint32_t func_801976A8() { return 0; }
-uint32_t func_801976B8() { return 0; }
-uint32_t func_801976D8() { return 0; }
-uint32_t func_801976E8() { return 0; }
-uint32_t func_801976F8() { return 0; }
-uint32_t func_80197798() { return 0; }
-uint32_t func_80197A68() { return 0; }
-uint32_t func_80197FB8() { return 0; }
-uint32_t func_80198058() { return 0; }
-uint32_t func_801982E8() { return 0; }
-uint32_t func_80198990() { return 0; }
+uint32_t func_8016E9FC() { return 0; }
+uint32_t func_8016EA5C() { return 0; }
+uint32_t func_80178220() { return 0; }
+uint32_t func_801782C0() { return 0; }
+uint32_t func_8017835C() { return 0; }
+uint32_t func_80178890() { return 0; }
+uint32_t func_80178988() { return 0; }
+uint32_t func_80178A58() { return 0; }
+uint32_t func_80178DD0() { return 0; }
+uint32_t func_80178F20() { return 0; }
+uint32_t func_80179670() { return 0; }
+uint32_t func_80179930() { return 0; }
+uint32_t func_801799F0() { return 0; }
+uint32_t func_8017AAC4() { return 0; }
+uint32_t func_8017F954() { return 0; }
+uint32_t func_801805F8() { return 0; }
+uint32_t func_801847D8() { return 0; }
+uint32_t func_80185030() { return 0; }
+uint32_t func_80185634() { return 0; }
+uint32_t func_8018567C() { return 0; }
+uint32_t func_801856CC() { return 0; }
+uint32_t func_80185714() { return 0; }
+uint32_t func_8018600C() { return 0; }
+uint32_t func_80187B00() { return 0; }
+uint32_t func_80188D28() { return 0; }
+uint32_t func_80188EF8() { return 0; }
+uint32_t func_80189F94() { return 0; }
+uint32_t func_8018E488() { return 0; }
+uint32_t func_8018EAE8() { return 0; }
+uint32_t func_8018ECE8() { return 0; }
+uint32_t func_8018F148() { return 0; }
+uint32_t func_8018F158() { return 0; }
+uint32_t func_8018F5C8() { return 0; }
+uint32_t func_8019087C() { return 0; }
+uint32_t func_801917B8() { return 0; }
+uint32_t func_80191C78() { return 0; }
+uint32_t func_80192728() { return 0; }
+uint32_t func_80192738() { return 0; }
+uint32_t func_80192AF8() { return 0; }
+uint32_t func_80192B28() { return 0; }
+uint32_t func_80192B58() { return 0; }
+uint32_t func_80192C4C() { return 0; }
+uint32_t func_80192C74() { return 0; }
+uint32_t func_80194008() { return 0; }
+uint32_t func_80194018() { return 0; }
+uint32_t func_8019418C() { return 0; }
+uint32_t func_801946A0() { return 0; }
+uint32_t func_801951E0() { return 0; }
+uint32_t func_80195668() { return 0; }
+uint32_t func_80195700() { return 0; }
+uint32_t func_80196F2C() { return 0; }
+uint32_t func_80197708() { return 0; }
+uint32_t func_801977A8() { return 0; }
+uint32_t func_80197DF8() { return 0; }
+uint32_t func_80197EE8() { return 0; }
 uint32_t g_anim_pause[4096];
 uint32_t g_box[4096];
 uint32_t g_box_null[4096];

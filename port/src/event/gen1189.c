@@ -17,7 +17,7 @@ void event_jr_t2_dispatch_f078_spin_loo(void)
     }
 L197860:
     do {
-        func_8018F078();
+        register_only_stub_x1c_see_asm_for();
     } while (io_just() == 0);
     goto L197894;
 L197894:
@@ -27,6 +27,6 @@ L197948:
 L197820:
     if (io_just() == 0)
         goto L197894;
-    func_80197A68();
+    register_only_stub_xc_see_asm_for_197a();
     return;
 }

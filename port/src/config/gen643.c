@@ -17,7 +17,7 @@ void config_rows_x1b3b_xd5_x60_texts_wi(void)
     row_prep(0x20);
     cell_push89_sel(0x60);
     cell_put_hi9(0x45);
-    func_800F4B1C();
+    cell_0xf4b1c();
     cell_pull89_bank(0x60);
     cell_flags_cmp_pos(cell_state(0x45));
     if (io_just() != 0)
@@ -28,7 +28,7 @@ void config_rows_x1b3b_xd5_x60_texts_wi(void)
 L12C948:
     row_prep_close();
     draw_pad_cur();
-    func_8012C2F8();
+    fn_1x2c2f8();
     config_save_screen_x1b23_x1b1a_tex();
     return;
 }

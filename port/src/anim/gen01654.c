@@ -9,15 +9,15 @@ void battle_anim_e8_fc_preps_v1_v0_gate(void)
        8008CB5C/800888C0 rows; 801792D0 closes. */
     cb_slot15();
     event_spin_wait();
-    func_801942FC();
+    fn_1x942fc();
     /* v1/v0 latch -> L179438 */
-    if (func_801792D0() != 0)
+    if (battle_anim_a0x2_x2_pairs_linear() != 0)
         func_8008CB5C();
     else
         func_800888C0();
     if (io_press(1) != 0)
-        func_801942FC();
+        fn_1x942fc();
     cb_slot15();
-    func_801792D0();
+    battle_anim_a0x2_x2_pairs_linear();
     return;
 }

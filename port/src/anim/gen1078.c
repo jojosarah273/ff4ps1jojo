@@ -14,7 +14,7 @@ L17E974:
         goto L17EA6C;
     if (io_just() != 0)
         goto L17E9EC;
-    func_80195120();
+    event_rows();
     if (io_just() == 0)
         goto L17EA58;
 L17EA2C:
@@ -23,7 +23,7 @@ L17EA2C:
     } while (io_just() != 0);
     return;
 L17E9EC:
-    func_80195120();
+    event_rows();
     if (io_just() == 0)
         goto L17EA58;
     tex_link_packets();

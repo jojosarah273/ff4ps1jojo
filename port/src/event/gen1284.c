@@ -15,14 +15,14 @@ L1959C4:
         goto L1959EC;
     goto L195AC4;
 L1959EC:
-    func_801960BC(3);
-    func_801960BC(4);
-    func_801960BC(5);
+    fn_1x960bc(3);
+    fn_1x960bc(4);
+    fn_1x960bc(5);
     goto L195B34;
 L195AC4:
-    func_80196074();
+    fn_1x96074();
     return;
 L195B34:
-    func_80196074();
+    fn_1x96074();
     return;
 }
