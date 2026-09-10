@@ -33,7 +33,7 @@ void func_80124358(void)
     cell_put_hi9(0x1D);
     row_prep_close();
     midrow_pad88();
-    func_8011EE34();
+    battle_rows_2115();
     sep();
     stat_sync();
     row_page(0x5C);

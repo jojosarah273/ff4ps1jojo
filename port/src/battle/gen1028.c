@@ -16,7 +16,7 @@ L1158a4:
         if (sel(2) != 0)
             goto L115910;
         latch_cur();
-        func_801714C4();
+        shop_picker_7();
     L115910:
         row_read(0xF);
         if (sel(0x202) != 0)

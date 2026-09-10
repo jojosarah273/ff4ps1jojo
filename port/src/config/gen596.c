@@ -1,5 +1,5 @@
-/* FF4 source-port — interpreted module for func_80120FBC.
- * Ground truth: src/func_80120FBC.c (byte-verified).
+/* FF4 source-port — interpreted module for config_row_b600.
+ * Ground truth: src/config_row_b600.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
@@ -12,7 +12,7 @@
 
 
 
-void func_80120FBC(void)
+void config_row_b600(void)
 
 {
   cell_cursor_dec();

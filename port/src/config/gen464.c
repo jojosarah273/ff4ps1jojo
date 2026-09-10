@@ -12,7 +12,7 @@ void func_80129F54(void)
     cell_clear_bank(0x1B1F);
     func_801267A0();
     func_801266F0();
-    func_801240A8();
+    config_row_a600();
     config_row_d600b();
     latch(0x1C);
     cell_put(0xC2);
@@ -50,7 +50,7 @@ void func_80129F54(void)
     label(0x1BA5);
     func_80120F94();
     func_80120CA4();
-    func_801240A8();
+    config_row_a600();
     func_80126830();
     func_801263F0();
     battle_state_dc400();

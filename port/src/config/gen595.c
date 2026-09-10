@@ -4,15 +4,6 @@
  */
 #include "ff4_window.h"
 
-
-
-
-
-
-
-
-extern int func_801245B4();
-
 void func_8012371C(void)
 
 {
@@ -20,7 +11,7 @@ void func_8012371C(void)
   
   do {
     cell_push_c8(0xfa764);
-    func_801245B4();
+    battle_rows_42();
     cell_pull_c8(0);
     stat_sync();
     cell_pull_c8(0x40);

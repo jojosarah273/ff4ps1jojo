@@ -72,7 +72,7 @@ LE328:
     }
     row_page(0xAB);
     sep();
-    func_80153098();
+    option_mark_54();
     goto LE3B4;
 LE3AC:
     latch(0xFF);
@@ -94,7 +94,7 @@ LE3EC:
         break;
     }
     sep();
-    func_80153098();
+    option_mark_54();
     goto LE444;
 LE43C:
     latch(0xF8);

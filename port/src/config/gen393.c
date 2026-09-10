@@ -30,7 +30,7 @@ L129938:
                 cell_pull_c8(0x40);
                 goto L1299D8;
             L1299B8:
-                func_801245B4();
+                battle_rows_42();
                 cell_pull_c8();
                 stat_sync();
                 cell_pull_c8(0x40);

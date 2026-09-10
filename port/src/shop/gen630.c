@@ -4,14 +4,6 @@
  */
 #include "ff4_window.h"
 
-
-
-
-
-
-
-extern int func_80176F60();
-
 void func_8016C0A8(void)
 
 {
@@ -29,7 +21,7 @@ void func_8016C0A8(void)
     cell_put(0x4f);
     latch(0x18);
     cell_put(0x51);
-    func_80176F60();
+    shop_row_52();
   }
   return;
 }

@@ -9,7 +9,6 @@
 
 
 extern int func_8016BF64();
-extern int func_80176F60();
 
 void func_8016BFE8(void)
 
@@ -24,7 +23,7 @@ void func_8016BFE8(void)
     cell_put(0x4f);
     latch(4);
     cell_put(0x51);
-    func_80176F60();
+    shop_row_52();
   }
   else {
     func_8016BF64();
@@ -32,12 +31,12 @@ void func_8016BFE8(void)
     cell_put(0x4f);
     latch(0xf);
     cell_put(0x51);
-    func_80176F60();
+    shop_row_52();
     func_8016BF64();
     open_row(0x4f);
     latch(0x10);
     cell_put(0x51);
-    func_80176F60();
+    shop_row_52();
   }
   return;
 }

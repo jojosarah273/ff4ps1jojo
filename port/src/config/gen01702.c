@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801240A8.
- * Ground truth: src/func_801240A8.c (byte-verified).
+/* FF4 source-port — interpreted module for config_row_a600.
+ * Ground truth: src/config_row_a600.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801240A8(void)
+void config_row_a600(void)
 {
     wnd_open(42496);
     func_80124180();

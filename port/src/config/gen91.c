@@ -10,7 +10,7 @@ void func_80130F90(void)
        sub-renders, 5x 801312BC row commits, 0x31 window/212C end. */
     latch(0x20);
     cell_put(0xC1);
-    func_80120FBC();
+    config_row_b600();
     func_80131294();
     cell_clear_bank(0x1B88);
     txt_set(0x1B83);
@@ -32,7 +32,7 @@ void func_80130F90(void)
     battle_rows_sync();
     draw_pad_cur();
     battle_rows_sync();
-    func_80120FBC();
+    config_row_b600();
     txt_set(0x1B89);
     wnd_open(0x44);
     func_8012FBB0();

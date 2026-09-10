@@ -24,7 +24,7 @@ L13c55c:
         latch_cur();
     L13C5CC:
         cell_put(0x45);
-        func_8011F6D4();
+        config_pad_300();
         midrow_pad88_run();
         midrow_degen();
     L13C5EC:

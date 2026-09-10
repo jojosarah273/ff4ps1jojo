@@ -42,7 +42,7 @@ L171fe0:
             if (sel(2) != 0)
                 goto L1720E8;
             latch(0x60);
-            func_801714C4();
+            shop_picker_7();
         L1720E8:
             txt_cell_cur();
             sep_a();

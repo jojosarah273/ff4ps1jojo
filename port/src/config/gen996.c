@@ -14,7 +14,7 @@ void func_8015E6DC(void)
     page_paint_cur();
     D_8019ED54[0] = D_8019ED44[0];
     sep();
-    func_80153098();
+    option_mark_54();
     page(0xA6);
     cell_draw(0x2054);
     wnd_open(1);

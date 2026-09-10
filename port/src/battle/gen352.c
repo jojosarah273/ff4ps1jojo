@@ -28,7 +28,7 @@ L115A7C:
     if (sel(2) != 0)
         goto L115AF4;
     latch(0x14);
-    func_801714C4();
+    shop_picker_7();
 L115AF4:
     row_page(0xE);
     cell_pull_c8(0x351);
@@ -46,7 +46,7 @@ L115AF4:
     if (sel(2) != 0)
         goto L115B84;
     latch(0x15);
-    func_801714C4();
+    shop_picker_7();
 L115B84:
     row_page(0xE);
     cell_pull_c8(0x355);

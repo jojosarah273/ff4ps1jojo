@@ -17,7 +17,7 @@ La198:
         wnd_open(0x140);
         tail(0x22);
         midrow_pad88();
-        func_8011EE34();
+        battle_rows_2115();
         anim_noop();
         func_80126480();
         midrow_degen();
@@ -155,7 +155,7 @@ La198:
         goto La658;
     La5a0:
         func_8012B190();
-        func_80120FBC();
+        config_row_b600();
         func_8012AAC0();
         cell_clear_bank(0x1B19);
         func_8012B0B0();

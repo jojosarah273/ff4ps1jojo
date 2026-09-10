@@ -33,7 +33,7 @@ L135054:
         cell_put(0x45);
         latch(0x30);
         cell_put(0x46);
-        func_8011F6D4();
+        config_pad_300();
         func_80125934();
         midrow_pad88_run();
         config_row_7800();

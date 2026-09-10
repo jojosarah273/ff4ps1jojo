@@ -10,7 +10,7 @@ void func_801324F8(void)
     battle_mode_dispatch();
     battle_mode_dispatch();
     for (;;) {
-        func_80194700();
+        battle_anim_gate_a();
         if (cb_slot15() == 0)
             break;
     }

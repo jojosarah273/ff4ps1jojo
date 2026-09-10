@@ -173,7 +173,7 @@ Lc40:
         row_read(1);
         if (sel(2) == 0) {
             latch(0x49);
-            func_801714C4();
+            shop_picker_7();
         }
         txt_cell(0xBD98);
         sep_a();
@@ -208,7 +208,7 @@ Lc40:
         row_read(1);
         if (sel(2) == 0) {
             latch(0x68);
-            func_801714C4();
+            shop_picker_7();
         }
         txt_cell(0xBD98);
         sep_a();

@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801245B4.
- * Ground truth: src/func_801245B4.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_42.
+ * Ground truth: src/battle_rows_42.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801245B4(void)
+void battle_rows_42(void)
 {
     /* rows: 5574(0x42) gate fills via 3D48/95A0; else 0xFF/95A0. */
     row_open();

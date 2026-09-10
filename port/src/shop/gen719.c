@@ -23,7 +23,7 @@ L160864:
     row_page(0xA9);
     options_rows_run();
     latch(3);
-    func_8015310C();
+    option_value_copy();
     page_open(0x3598);
     latch(0xA);
     cell_draw(0x2A04);

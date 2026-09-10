@@ -20,7 +20,7 @@ void func_8015C604(void)
     if (ticker_reblend2(0x202) == 0) {
         row_page(0xD0);
         sep();
-        func_80153098();
+        option_mark_54();
         txt_draw(0x393B);
     }
     page(0xA6);

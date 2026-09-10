@@ -13,7 +13,7 @@ void func_80136A58(void)
     midrow_paint_c();
     func_801264C0();
     anim_noop();
-    func_80120FBC();
+    config_row_b600();
     draw_pad_cur();
     battle_rows_sync();
     draw_pad_cur();
@@ -24,7 +24,7 @@ void func_80136A58(void)
     func_8016EA7C();
     func_8012AAC0();
     config_row_26528();
-    func_80120FBC();
+    config_row_b600();
     midrow_pad88_run();
     func_80126480();
     func_80120B6C();
@@ -80,7 +80,7 @@ Lc0c:
         latch(8);
     Lc8c:
         cell_put(0x45);
-        func_8011F6D4();
+        config_pad_300();
         midrow_pad88_run();
         midrow_degen();
     Lcac:

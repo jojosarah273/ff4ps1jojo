@@ -4,11 +4,6 @@
  */
 #include "ff4_window.h"
 
-
-
-
-extern int func_8011F6D4();
-
 void func_8013C44C(void)
 
 {
@@ -25,7 +20,7 @@ void func_8013C44C(void)
   cell_put(0x45);
   latch(0xe);
   cell_put(0x46);
-  func_8011F6D4();
+  config_pad_300();
   return;
 }
 

@@ -21,7 +21,7 @@ Lf3f8:
 L470:
     func_8012FF9C();
 L478:
-    func_8011F6D4();
+    config_pad_300();
     config_row_d600b();
     func_8013095C();
     func_80130AA4();

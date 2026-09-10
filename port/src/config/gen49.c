@@ -31,7 +31,7 @@ L3064:
     cell_put(0x46);
     latch(2);
     cell_put(0x45);
-    func_8011F6D4();
+    config_pad_300();
     midrow_pad88_run();
     midrow_degen();
     row_page(1);

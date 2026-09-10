@@ -19,7 +19,7 @@ void func_80135330(void)
     func_80125934();
     func_8012B168();
     midrow_pad88_run();
-    func_80120FBC();
+    config_row_b600();
     draw_pad_cur();
     func_8011FB74();
     func_80120B6C();

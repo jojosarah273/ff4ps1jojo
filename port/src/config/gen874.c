@@ -17,7 +17,7 @@ void func_8015D1C8(void)
     row_sel_cell_cur();
     sep_a();
     cell_poke0(cell_state(0xAB));
-    func_8015310C();
+    option_value_copy();
     page_open(0x3598);
     label(0x3535);
     row_page(0xD3);

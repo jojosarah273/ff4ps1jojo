@@ -17,7 +17,7 @@ L361ac:
         cell_put(0x46);
         latch(0x10);
         cell_put(0x45);
-        func_8011F6D4();
+        config_pad_300();
         func_801368E8();
         func_80125934();
         midrow_pad88_run();

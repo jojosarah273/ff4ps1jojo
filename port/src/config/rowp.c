@@ -20,7 +20,7 @@ Lab24:
         func_8013B0C4();
         latch(0x4A);
         cell_put(0x46);
-        func_8011F6D4();
+        config_pad_300();
         txt_set(0x16AF);
         func_8013B0C4();
         latch(0x5A);

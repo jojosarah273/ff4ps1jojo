@@ -45,7 +45,7 @@ L15e4bc:
             continue;
         row_page(0xA9);
         sep();
-        func_80153098();
+        option_mark_54();
         page(0xA6);
         cell_draw(0x2054);
         break;
@@ -61,7 +61,7 @@ L15E5D0:
         goto L15E5D0;
     row_page(0xA9);
     sep();
-    func_80153098();
+    option_mark_54();
     page(0xA6);
     cell_draw(0x2053);
     return;

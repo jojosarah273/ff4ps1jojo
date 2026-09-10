@@ -34,7 +34,7 @@ void func_80123320(void)
 L3400:
     func_80123AA8();
     draw_pad_cur();
-    func_8011F8D4();
+    battle_rows_100();
     return;
 L3440:
     txt_set(0x1BC2);

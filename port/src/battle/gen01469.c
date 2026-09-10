@@ -4,13 +4,11 @@
  */
 #include "ff4_window.h"
 
-extern int func_801408E4();
-
 void func_801409E4(void)
 
 {
   latch(0xe0);
-  func_801408E4();
+  status_paint_a();
   return;
 }
 

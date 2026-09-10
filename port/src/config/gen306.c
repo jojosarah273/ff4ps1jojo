@@ -75,7 +75,7 @@ L12cf28:
         cell_clear_bank(0x1BC8);
         func_80120B6C();
         func_80169170();
-        func_801240A8();
+        config_row_a600();
         func_801263F0();
         row_prep(0x10);
         return;

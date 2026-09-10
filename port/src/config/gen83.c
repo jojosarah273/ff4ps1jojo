@@ -26,7 +26,7 @@ L78b8:
     battle_rows_sync();
     wnd_open(0x394);
     draw_pad_cur();
-    func_8011F8D4();
+    battle_rows_100();
 L78f4:
     anim_noop();
     battle_mode_dispatch();
@@ -53,12 +53,12 @@ L7998:
     func_80127538();
     draw_pad_cur();
     battle_rows_29();
-    func_80120FBC();
+    config_row_b600();
     draw_pad_cur();
     battle_rows_sync();
     draw_pad_cur();
     wnd_open(0x676);
-    func_8011F8D4();
+    battle_rows_100();
     draw_pad(0x62C);
     txt_set(0x16A2);
     page_open(0x16A0);
@@ -90,7 +90,7 @@ L7aec:
     cell_put(0x46);
     latch(0xB8);
     cell_put(0x45);
-    func_8011F6D4();
+    config_pad_300();
     midrow_pad88_run();
     midrow_degen();
     /* beqz -> L7b4c */

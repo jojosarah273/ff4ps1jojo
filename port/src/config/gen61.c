@@ -48,7 +48,7 @@ void func_80123D3C(void)
     cell_put(0x21);
     wnd_open(0x1000);
     tail(0x22);
-    func_8011EE34();
+    battle_rows_2115();
     midrow_paint_c();
     func_80123FB4();
     func_80126330();

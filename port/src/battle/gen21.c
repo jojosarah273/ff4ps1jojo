@@ -37,7 +37,7 @@ L87c:
     row_page(0xE4);
     if (gate(2) == 0)
         func_80117CB8();
-    func_80176060();
+    battle_godtext_a();
     func_800FAD48();
     func_800FED3C();
     func_80170C14();

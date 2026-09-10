@@ -59,7 +59,7 @@ void func_8016C280(void)
     label(0x20C0);
     goto L16C490;
 L16C488:
-    func_80176F60();
+    shop_row_52();
 L16C490:
     return;
 }

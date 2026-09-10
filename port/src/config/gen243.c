@@ -82,7 +82,7 @@ Lc408:
     }
     row_page(0xA9);
     sep();
-    func_80153098();
+    option_mark_54();
     cell_put(0xDA);
 Lc48c:
     latch(0x80);

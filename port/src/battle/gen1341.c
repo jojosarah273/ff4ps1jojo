@@ -17,7 +17,7 @@ L11ec58:
         battle_mode_dispatch();
     L11ecd0:
         for (;;) {
-            func_80194700();
+            battle_anim_gate_a();
             cb_slot15();
             cell_set50_from54();
             cell_set50_from54();

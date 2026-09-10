@@ -1,9 +1,9 @@
-/* FF4 source-port — interpreted module for func_801714C4.
- * Ground truth: src/func_801714C4.c (byte-verified).
+/* FF4 source-port — interpreted module for shop_picker_7.
+ * Ground truth: src/shop_picker_7.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_801714C4(void)
+void shop_picker_7(void)
 {
     /* shop picker: 0x7/0x500 windows; 3F38(3C3C(7)) + 78C4(3C3C(7))
        rows with the 0x500 count cell. */

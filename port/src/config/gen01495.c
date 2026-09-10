@@ -3,4 +3,4 @@
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80122114(void) { row_open2(); func_801703E8(); func_8011EE34(); row_pad(); }
+void func_80122114(void) { row_open2(); func_801703E8(); battle_rows_2115(); row_pad(); }

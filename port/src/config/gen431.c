@@ -24,7 +24,7 @@ L1581E0:
     cell_poke0(cell_state(0xD3));
     cell_put(0xA9);
     row_page(0xA9);
-    func_8015310C();
+    option_value_copy();
     page_open(0x3598);
     txt_cell(0x2A06);
     row_read(0x7E);

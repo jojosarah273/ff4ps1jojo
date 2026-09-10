@@ -10,7 +10,7 @@ void func_80120BDC(void)
 L120be4:
     for (;;) {
         midrow_pad88();
-        func_8011EE34();
+        battle_rows_2115();
         if (poll_go(0x202) == 0)
             goto L120C2C;
         func_8013B764();

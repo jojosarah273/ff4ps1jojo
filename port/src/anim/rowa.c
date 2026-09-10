@@ -87,7 +87,7 @@ Le20:
         row_read(1);
         if (sel(2) == 0) {
             latch(0x5B);
-            func_801714C4();
+            shop_picker_7();
         }
         txt_cell(0xBFB5);
         sep_a();

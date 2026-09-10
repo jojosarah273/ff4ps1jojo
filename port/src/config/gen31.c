@@ -90,7 +90,7 @@ L5634:
         cell_pos_back2(0x30);
         row_prep_close();
         draw_pad_cur();
-        func_8011F8D4();
+        battle_rows_100();
         row_done();
         row_page(0x5D);
         row_sync();

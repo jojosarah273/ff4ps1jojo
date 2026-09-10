@@ -16,7 +16,7 @@ void func_8011285C(void)
     txt_draw(0x1802);
     func_800FC1CC();
     func_800FD6E8();
-    func_80176060();
+    battle_godtext_a();
     page_open(0x1706);
     row_open();
     wnd_open(0x7763);

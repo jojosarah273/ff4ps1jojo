@@ -8,7 +8,7 @@ void func_801126A0(void)
     /* battle item-status (twin of 8011285C): 0x1706/0x1700 headers,
        0xACF-0xAD8 texts, 80115BCC/80115D2C sub-renders; loop L1127C0
        scrolls on 7170(0x202). */
-    func_80176060();
+    battle_godtext_a();
     page_open(0x1706);
     row_open();
     wnd_open_cur();

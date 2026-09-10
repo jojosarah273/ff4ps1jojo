@@ -14,7 +14,7 @@ void func_8015D310(void)
     page_open(0x3530);
     page_paint(0x2A06);
     latch(3);
-    func_8015310C();
+    option_value_copy();
     page_open(0x3598);
     txt_cell(0x2A06);
     if (gate_cur() != 0)

@@ -5,7 +5,7 @@
 #include "ff4_window.h"
 void func_8010EB14(void)
 {
-    func_80176060();
+    battle_godtext_a();
     latch(9);
     txt_draw(0x2105);
     wnd_open(0x2000);
@@ -52,7 +52,7 @@ Leba4:
     stat_sync();
     battle_mode_dispatch();
     for (;;) {
-        func_80194700();
+        battle_anim_gate_a();
         cb_slot15();
         /* spin on s1 (register) */
     }
@@ -118,7 +118,7 @@ Lee34:
     battle_wndfx_run();
     battle_mode_dispatch();
     for (;;) {
-        func_80194700();
+        battle_anim_gate_a();
         cb_slot15();
         /* spin on s1 (register) */
     }

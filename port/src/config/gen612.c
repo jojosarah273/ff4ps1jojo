@@ -17,7 +17,7 @@ void func_801580B0(void)
     cell_poke0(cell_state(0xAD));
     cell_put(0xAF);
     row_page(0xAF);
-    func_8015310C();
+    option_value_copy();
     page_open(0x3598);
     txt_cell(0x2A04);
     cell_tick_or(cell_state_of());

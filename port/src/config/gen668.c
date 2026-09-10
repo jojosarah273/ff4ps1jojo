@@ -37,7 +37,7 @@ L13CB0C:
     func_801263F0();
     func_8012219C();
     func_8011FF40();
-    func_801240A8();
+    config_row_a600();
     draw_pad_cur();
     battle_rows_sync();
     draw_pad_cur();

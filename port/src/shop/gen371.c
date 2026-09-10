@@ -46,7 +46,7 @@ L163e1c:
         cell_pos_back(5);
         cell_put(0xCE);
         sep();
-        func_80153098();
+        option_mark_54();
         goto L163F50;
     }
 L163F38:

@@ -87,7 +87,7 @@ L280:
         row_read(1);
         if (sel(2) == 0) {
             latch(0x56);
-            func_801714C4();
+            shop_picker_7();
         }
         txt_cell(0xBFB5);
         sep_a();
@@ -168,7 +168,7 @@ L504:
     row_read(1);
     if (sel(2) == 0) {
         latch(0x55);
-        func_801714C4();
+        shop_picker_7();
     }
     row_page(0xE);
     sep_a();

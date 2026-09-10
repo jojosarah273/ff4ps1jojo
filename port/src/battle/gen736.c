@@ -11,7 +11,7 @@ void func_80111B14(void)
     cell_put(44);
     latch(88);
     cell_put(46);
-    func_80176060();
+    battle_godtext_a();
     cell_clear_bank(5888);
     latch(7);
     txt_draw(5892);

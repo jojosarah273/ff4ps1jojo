@@ -34,7 +34,7 @@ void func_80124F60(void)
 L125068:
     for (;;) {
         cell_push_c8();
-        func_801245B4();
+        battle_rows_42();
         cell_pull_c8_bank(0x29);
         stat_sync();
         cell_pull_c8_bank(0x1D);

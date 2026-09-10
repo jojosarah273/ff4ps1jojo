@@ -3,4 +3,4 @@
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
-void func_80140944(void) { latch(0x60); func_801408E4(); }
+void func_80140944(void) { latch(0x60); status_paint_a(); }

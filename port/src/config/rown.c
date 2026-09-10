@@ -142,7 +142,7 @@ L478:
         latch(0x78);
     L4b8:
         cell_put(0x45);
-        func_8011F6D4();
+        config_pad_300();
         midrow_pad88_run();
         midrow_degen();
         row_page(1);

@@ -4,11 +4,10 @@
  */
 #include "ff4_window.h"
 extern void func_800FC548(void);
-extern void func_80176060(void);
 
 void func_8010E338(void) {
     func_800FC548();
-    func_80176060();
+    battle_godtext_a();
     cell_flags_clr4();
     latch(0);
     txt_draw(0x2100);

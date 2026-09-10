@@ -34,7 +34,7 @@ void func_80134E74(void)
     cell_pos_fwd(0x20);
     row_prep_close();
     wnd_open(0x46);
-    func_8011F8D4();
+    battle_rows_100();
     draw_pad_cur();
     battle_rows_29();
     return;

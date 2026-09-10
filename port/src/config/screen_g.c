@@ -297,7 +297,7 @@ L5C8:
     cell_put(0x46);
     latch(0xC);
     cell_put(0x45);
-    func_8011F6D4();
+    config_pad_300();
     func_80129D2C();
     midrow_pad88_run();
     midrow_degen();

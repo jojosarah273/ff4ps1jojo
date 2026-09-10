@@ -77,7 +77,7 @@ void func_801121C4(void)
     battle_mode_dispatch();
 L24d0:
     for (;;) {
-        func_80194700();
+        battle_anim_gate_a();
         if (cb_slot15() == 0)
             break;
     }

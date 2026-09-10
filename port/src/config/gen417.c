@@ -56,7 +56,7 @@ L15e0f0:
         break;
     }
     sep();
-    func_80153098();
+    option_mark_54();
     page(0xA6);
     cell_draw(0x2054);
     return;

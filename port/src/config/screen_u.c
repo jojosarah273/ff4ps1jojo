@@ -56,7 +56,7 @@ L288:
         cell_peek0(cell_state(0x45));
         row_prep_close();
         wnd_open(0x248);
-        func_8011F8D4();
+        battle_rows_100();
         open_row(0xDB);
         draw_pad(0x30);
         wnd_open(0x164);
@@ -92,7 +92,7 @@ L288:
         txt_set(0x1BAD);
         if (gate(0x202) != 0)
             goto L614;
-        func_80120FBC();
+        config_row_b600();
         draw_pad_cur();
         battle_rows_sync();
         func_80126458();
@@ -136,7 +136,7 @@ L288:
         cell_put(0x46);
         latch(0x60);
         cell_put(0x45);
-        func_8011F6D4();
+        config_pad_300();
         func_801263F0();
         anim_noop();
         midrow_degen();

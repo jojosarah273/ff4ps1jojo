@@ -74,7 +74,7 @@ void func_80132CFC(void)
     latch(0x79);
     cell_pull_c8_lo(0x210A);
     midrow_paint_b();
-    func_801240A8();
+    config_row_a600();
     func_801240D0();
     wnd_open(0xFFB0);
     tail(0x96);

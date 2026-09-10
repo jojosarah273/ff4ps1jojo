@@ -27,7 +27,7 @@ L127CFC:
     battle_rows_sync();
     wnd_open(0x394);
     draw_pad_cur();
-    func_8011F8D4();
+    battle_rows_100();
 L127D38:
     anim_noop();
     battle_mode_dispatch();
@@ -46,12 +46,12 @@ L127D38:
     func_80127538();
     draw_pad_cur();
     battle_rows_29();
-    func_80120FBC();
+    config_row_b600();
     draw_pad_cur();
     battle_rows_sync();
     draw_pad_cur();
     wnd_open(0x676);
-    func_8011F8D4();
+    battle_rows_100();
     draw_pad(0x62C);
     txt_set(0x16A2);
     page_open(0x16A0);
@@ -79,7 +79,7 @@ L127EC8:
     cell_put(0x46);
     latch(0xB8);
     cell_put(0x45);
-    func_8011F6D4();
+    config_pad_300();
     midrow_pad88_run();
     midrow_degen();
     cell_clear_bank(0x1B46);

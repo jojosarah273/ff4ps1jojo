@@ -30,7 +30,7 @@ L13b2cc:
         func_801224F8();
         func_80122518();
         draw_pad_cur();
-        func_8011F8D4();
+        battle_rows_100();
         row_done();
         func_80122334();
         func_80122334();
@@ -73,7 +73,7 @@ L13b458:
         cell_put(0x46);
         latch(0x38);
         cell_put(0x45);
-        func_8011F6D4();
+        config_pad_300();
         open_row(0x45);
         open_row(0x46);
     L13b4d0:

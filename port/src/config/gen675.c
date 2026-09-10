@@ -19,7 +19,7 @@ void func_80126E08(void)
     battle_mode_dispatch();
     battle_mode_dispatch();
 L26ef0:
-    func_80194700();
+    battle_anim_gate_a();
     cb_slot15();
     latch(0x30);
     cell_put(0xC1);

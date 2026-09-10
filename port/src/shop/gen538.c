@@ -24,5 +24,5 @@ void func_8016C624(void)
     row_prep_close();
     latch(4);
     cell_put(81);
-    func_80176F60();
+    shop_row_52();
 }

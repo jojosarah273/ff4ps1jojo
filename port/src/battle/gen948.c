@@ -4,12 +4,6 @@
  */
 #include "ff4_window.h"
 
-
-
-
-
-extern int func_801714C4();
-
 void func_80113C04(void)
 
 {
@@ -21,7 +15,7 @@ void func_80113C04(void)
   iVar1 = sel(2);
   if (iVar1 == 0) {
     latch(0);
-    func_801714C4();
+    shop_picker_7();
   }
   return;
 }

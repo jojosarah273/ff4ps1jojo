@@ -23,7 +23,7 @@ void func_80134C74(void)
     battle_mode_dispatch();
 L134d38:
     for (;;) {
-        func_80194700();
+        battle_anim_gate_a();
         cb_slot15();
         wnd_open_cur();
         label(0x1B1D);

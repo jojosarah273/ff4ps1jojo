@@ -4,20 +4,10 @@
  */
 #include "ff4_window.h"
 
-
-
-
-
-
-
-
-
-extern int func_801240A8();
-
 void func_8012102C(void)
 
 {
-  func_801240A8();
+  config_row_a600();
   cell_cursor_dec();
   row_open();
   wnd_open(0xa600);

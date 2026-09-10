@@ -124,7 +124,7 @@ Lfdc:
     draw_pad(0xB22C);
     battle_rows_29();
 L01c:
-    func_80120FBC();
+    config_row_b600();
     draw_pad_cur();
     battle_rows_sync();
 L03c:

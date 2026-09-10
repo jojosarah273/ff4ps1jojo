@@ -346,7 +346,7 @@ L36C:
     if (gate(2) != 0)
         goto ec;
     animation_row_310();
-    func_80120FBC();
+    config_row_b600();
     draw_pad_cur();
     func_8011FB74();
     func_80126458();

@@ -58,7 +58,7 @@ L1FC:
     return;
 L234:
     cell_clear_bank(0x1B87);
-    func_80120FBC();
+    config_row_b600();
     cell_clear_bank(0x1B88);
     txt_set(0x1B83);
     row_sel_cell_cur();
@@ -160,7 +160,7 @@ L50C:
     cell_put(0x46);
     latch(0x40);
     cell_put(0x45);
-    func_8011F6D4();
+    config_pad_300();
 L59C:
     draw_pad(0x310);
     func_80131358();
@@ -181,7 +181,7 @@ L5DC:
     cell_put(0xC1);
     animation_row_310();
     func_8012B168();
-    func_80120FBC();
+    config_row_b600();
     midrow_pad88_run();
     func_80126480();
     return;

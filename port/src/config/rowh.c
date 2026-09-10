@@ -138,7 +138,7 @@ L598:
     row_close2();
     cell_pull_c8(0x1440);
 L5F8:
-    func_80120FBC();
+    config_row_b600();
     func_8012AAC0();
     func_8012B0B0();
     midrow_paint_a();

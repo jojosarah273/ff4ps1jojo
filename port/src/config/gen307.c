@@ -4,8 +4,6 @@
  */
 #include "ff4_window.h"
 
-extern int func_8011EE34();
-
 void func_80120CA4(void)
 
 {
@@ -29,7 +27,7 @@ void func_80120CA4(void)
   tail(0x22);
   do {
     midrow_pad88();
-    func_8011EE34();
+    battle_rows_2115();
     row_prep(0x20);
     row_read2(0x1d);
     sep_b();

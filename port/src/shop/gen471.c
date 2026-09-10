@@ -30,7 +30,7 @@ L16c4dc:
         cell_put(0x4F);
         latch(1);
         cell_put(0x51);
-        func_80176F60();
+        shop_row_52();
         row_close();
         cell_step();
         cell_step();

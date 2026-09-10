@@ -27,7 +27,7 @@ void func_80139CF4(void)
     txt_draw(0x121);
     wnd_open(0x20);
     label(0x122);
-    func_8011EE34();
+    battle_rows_2115();
     midrow_paint_c();
     anim_noop();
     func_8011F864();
@@ -36,7 +36,7 @@ void func_80139CF4(void)
     battle_row_88();
     latch(0x1F);
     cell_pull_c8_lo(0x212C);
-    func_801240A8();
+    config_row_a600();
     func_801240D0();
     func_80126418();
     midrow_paint_c();

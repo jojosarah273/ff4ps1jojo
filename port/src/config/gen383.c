@@ -54,7 +54,7 @@ L12CACC:
     row_prep2_close();
     return;
 L12CB04:
-    func_801240A8();
+    config_row_a600();
     draw_pad_cur();
     func_8011FB74();
     return;

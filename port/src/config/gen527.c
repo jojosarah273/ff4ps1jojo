@@ -28,7 +28,7 @@ L120afc:
     for (;;) {
         txt_cell(0x1500);
         cell_step();
-        func_801245B4();
+        battle_rows_42();
         cell_pull_c8();
         stat_sync();
         cell_pull_c8(0x40);

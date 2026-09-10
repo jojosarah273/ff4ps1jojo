@@ -28,7 +28,7 @@ L122620:
         cell_put(0x46);
         latch(0xB0);
         cell_put(0x45);
-        func_8011F6D4();
+        config_pad_300();
         func_80122538();
         midrow_pad88_run();
         func_80126550();

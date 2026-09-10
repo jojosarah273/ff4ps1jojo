@@ -102,7 +102,7 @@ Lfd70:
     cell_put(0x45);
     for (;;) {
         cell_push_c8_d58();
-        func_801245B4();
+        battle_rows_42();
         cell_pull_c8_off();
         stat_sync();
         cell_pull_c8_off();

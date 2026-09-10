@@ -11,7 +11,7 @@ void func_8015BB9C(void)
     cell_state(0x2000);
     /* a0/v0 latch chain -> L15BC04/L15BC38 */
     options_rows_run();
-    func_8015310C();
+    option_value_copy();
     func_8015C54C();
     /* a0/v1 latch -> L15BD1C */
     return;

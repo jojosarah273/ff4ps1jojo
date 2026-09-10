@@ -16,7 +16,7 @@ void func_800FB430(void)
     latch(0x15);
     txt_draw(0x1E01);
     func_80169100();
-    func_80176060();
+    battle_godtext_a();
     latch(0x3);
     txt_draw(0x1700);
     latch(0x13);
@@ -44,9 +44,9 @@ void func_800FB430(void)
     wnd_open_cur();
     tail(0x3D);
     func_801766B0();
-    func_80194700();
+    battle_anim_gate_a();
     cb_slot15();
-    func_80194700();
+    battle_anim_gate_a();
     cb_slot15();
     wnd_open(0x300);
     cell_draw_cur();

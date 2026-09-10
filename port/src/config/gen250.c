@@ -26,7 +26,7 @@ L12882C:
     battle_rows_sync();
     draw_pad_cur();
     wnd_open(0x82);
-    func_8011F8D4();
+    battle_rows_100();
     row_page(0x4B);
     sep_a();
     row_open_w(0x81);

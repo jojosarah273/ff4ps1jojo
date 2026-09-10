@@ -69,7 +69,7 @@ L100774:
         if (io_just() != 0)
             break;
     }
-    func_80176060();
+    battle_godtext_a();
     latch(1);
     cell_put(0xC5);
     func_800FAD48();

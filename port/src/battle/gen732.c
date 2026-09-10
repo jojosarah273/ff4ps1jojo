@@ -17,7 +17,7 @@ L11fd3c:
         io_poll(1);
         if (io_just() != 0)
             goto L11FE24;
-        func_801245B4();
+        battle_rows_42();
         cell_pull_c8_off();
         stat_sync();
         cell_pull_c8_off();

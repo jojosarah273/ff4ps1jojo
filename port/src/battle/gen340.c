@@ -1,10 +1,10 @@
-/* FF4 source-port — interpreted module for func_8011EE34.
- * Ground truth: src/func_8011EE34.c (byte-verified).
+/* FF4 source-port — interpreted module for battle_rows_2115.
+ * Ground truth: src/battle_rows_2115.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 
-void func_8011EE34(void)
+void battle_rows_2115(void)
 
 {
   row_open2();

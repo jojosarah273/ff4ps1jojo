@@ -77,7 +77,7 @@ L560:
     cell_clear_bank(0x1A73);
     func_80125934();
     midrow_pad88_run();
-    func_80120FBC();
+    config_row_b600();
     draw_pad_cur();
     func_8011FB74();
     func_80120B6C();
@@ -108,7 +108,7 @@ L758:
     cell_draw(0x1440);
     txt_set(0x1B75);
     cell_draw(0x1441);
-    func_80120FBC();
+    config_row_b600();
     draw_pad_cur();
     func_8011FB74();
     func_80125934();
@@ -131,7 +131,7 @@ L890:
     func_80125934();
     func_8012B168();
     midrow_pad88_run();
-    func_80120FBC();
+    config_row_b600();
     draw_pad_cur();
     func_8011FB74();
     func_80120B6C();

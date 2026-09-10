@@ -12,7 +12,7 @@ void func_8015F1D0(void)
     row_page(0xCF);
     options_rows_run();
     latch(0x12);
-    func_8015310C();
+    option_value_copy();
     page_open(0x3598);
     txt_set(0x289D);
     cell_draw(0x2A04);

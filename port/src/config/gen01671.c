@@ -1,10 +1,10 @@
-/* FF4 source-port — interpreted module for func_8015310C.
- * Ground truth: src/func_8015310C.c (byte-verified).
+/* FF4 source-port — interpreted module for option_value_copy.
+ * Ground truth: src/option_value_copy.c (byte-verified).
  * Primitives: port/include/ff4_window.h.
  */
 #include "ff4_window.h"
 extern u8 *D_8019ED40;
-void func_8015310C(void)
+void option_value_copy(void)
 {
     /* rows: buffer[0x1530:31] s16 + D40[0] -> stored back at
        0x1598:99. */

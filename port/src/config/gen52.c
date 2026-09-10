@@ -66,7 +66,7 @@ LDCD4:
         if (gate(0x202) != 0)
             goto LDFA8;
         latch(3);
-        func_8015310C();
+        option_value_copy();
         page_open(0x3598);
         txt_cell(0x2A06);
         row_read(8);

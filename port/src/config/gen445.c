@@ -43,7 +43,7 @@ void func_80138A6C(void)
     battle_mode_dispatch();
 L138bdc:
     for (;;) {
-        func_80194700();
+        battle_anim_gate_a();
         cb_slot15();
         func_80126590();
         func_80138D24();

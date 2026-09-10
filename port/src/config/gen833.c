@@ -15,7 +15,7 @@ void func_8013BB0C(void)
     tail(0x9F);
     midrow_paint_a();
     func_8013CB94();
-    func_80120FBC();
+    config_row_b600();
     wnd_open_cur();
     label(0x1B1D);
     page_paint2(0x1BC6);
@@ -34,7 +34,7 @@ void func_8013BB0C(void)
     battle_mode_dispatch();
 L13bc38:
     for (;;) {
-        func_80194700();
+        battle_anim_gate_a();
         cb_slot15();
         func_80126590();
     L13bca4:
