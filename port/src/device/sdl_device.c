@@ -359,7 +359,7 @@ void device_poll_events(void)
             default: break;
             }
         }
-        if (ev.type == SDL_QUIT) { SDLTRACE("quit-ev"); g_in.keypress = 0xFF; }
+        if (ev.type == SDL_QUIT) { g_in.keypress = 0xFF; }
     }
     /* headless smoke (gated on g_autopress): confirm press every 300
        poll cycles so the menu can advance without real input. */
