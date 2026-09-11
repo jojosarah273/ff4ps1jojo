@@ -57,7 +57,7 @@ static FILE *open_asset(const char *rel)
 
 /* sandbox (playable dev battler) surface: text overlay + sprite slots */
 static uint32_t g_ov[640 * 480];          /* ARGB text overlay */
-typedef struct { const unsigned int *px; int w, h, x, y; } bslot_t;
+typedef struct { const unsigned int *px; int w, h, x, y, scale; } bslot_t;
 static bslot_t g_slots[8];
 static int g_nslot;
 static int g_sandbox;
@@ -492,7 +492,8 @@ void device_render(void)
             SDL_UpdateTexture(tex, NULL, g_slots[s].px, g_slots[s].w * 4);
             SDL_SetTextureBlendMode(tex, SDL_BLENDMODE_BLEND);
             SDL_Rect dst = { g_slots[s].x, g_slots[s].y,
-                             g_slots[s].w, g_slots[s].h };
+                             g_slots[s].w * g_slots[s].scale,
+                             g_slots[s].h * g_slots[s].scale };
             SDL_RenderCopy(g_ren, tex, NULL, &dst);
             SDL_DestroyTexture(tex);
         }
@@ -589,9 +590,30 @@ void device_sprite(const unsigned int *px, int w, int h, int x, int y)
     if (g_nslot < 8) {
         g_slots[g_nslot].px = px; g_slots[g_nslot].w = w;
         g_slots[g_nslot].h = h; g_slots[g_nslot].x = x;
-        g_slots[g_nslot].y = y;
+        g_slots[g_nslot].y = y; g_slots[g_nslot].scale = 1;
         g_nslot++;
     }
+}
+void device_sprite_scaled(const unsigned int *px, int w, int h, int x, int y,
+                           int scale)
+{
+    if (scale < 1) scale = 1;
+    if (g_nslot < 8) {
+        g_slots[g_nslot].px = px; g_slots[g_nslot].w = w;
+        g_slots[g_nslot].h = h; g_slots[g_nslot].x = x;
+        g_slots[g_nslot].y = y; g_slots[g_nslot].scale = scale;
+        g_nslot++;
+    }
+}
+void device_rect(int x0, int y0, int x1, int y1, uint32_t argb)
+{
+    if (x0 < 0) x0 = 0;
+    if (y0 < 0) y0 = 0;
+    if (x1 > 639) x1 = 639;
+    if (y1 > 479) y1 = 479;
+    for (int y = y0; y < y1; y++)
+        for (int x = x0; x < x1; x++)
+            g_ov[y * 640 + x] = argb;
 }
 void device_overlay_clear(void)   { memset(g_ov, 0, sizeof g_ov); }
 
@@ -606,7 +628,7 @@ void device_puts(int x, int y, uint32_t rgb, const char *s)
                game charset and lacks space/punctuation slots */
             g = font8x8[c - 0x20];
         } else
-            g = font8x8[0];
+            g = font8x8[0];      /* non-ASCII (UTF-8 … etc) -> blank */
         for (int r = 0; r < 8; r++) {
             unsigned char row = g[r];
             for (int k = 0; k < 8; k++) {
