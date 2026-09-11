@@ -114,6 +114,16 @@ int intro_run(void)
     }
     if (s_phase == 3)
         return 0;
+    if (getenv("FF4_GLYPH_TEST")) {
+        /* deterministic glyph test: paint one fixed line, then done so
+           the frame dump right after is a clean measurement target */
+        device_overlay_clear();
+        device_sprite_reset();
+        device_puts(80, 60, 0xFFFFFFFFu,
+                    "DPQR02AEC GHIJKLNS TUVZ WXY");
+        s_phase = 3;
+        return 1;
+    }
 
     s_frames++;
     /* input: real pad edge or auto-advance timer */
