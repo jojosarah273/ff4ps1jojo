@@ -102,3 +102,20 @@ When an ISO is dropped in (any .bin/.img path):
 - Refresh `port/docs/coverage.md`, `expected/callgraph.json`, CHATLOG
   ledger lines at leg boundaries.
 - Keep src/ untouched after Phase A (port is a derived work).
+### 2025-09-10 session snapshot (playable build)
+- ./port/build/ff4-native play  = persistent dev battler: 4 waves vs
+  FE-pipeline monsters, party of 5 acts in rotation (dead skipped),
+  FIGHT/MAGIC/ITEM/RUN, real pad input (esc quits), headless self-play
+  beats all waves -> exit 0. State machine: port/src/battle/game.c.
+- Bug fixes this session: (1) NULL FILE* read/close in the font loader
+  from some CWDs (open_asset() now searches "", "../", "../../" so it
+  works from /repo, /repo/port, /repo/port/build); (2) infinite
+  wait-for-input hang + per-frame texture churn (io_just auto-advances
+  after ~60s; bg/party/overlay textures cached).
+- Asset pipeline locked: character battle poses (17 chars x 14 poses) =
+  16x24 frames, pairs (RIGHT,LEFT), poses 12/13 = 24x24 (DARKNESS);
+  pages @0xD0000, palettes @0xE7D00, pose tilemaps @0x6FD6D (decomp
+  asm-verified). DEFERRED blemishes: Golbez/Anna pages, pose 13 final
+  check (see ASSETS.md).
+- Deck: 1,859/2,516 interpreted (73.9%); register-ABI leaves = banded
+  stubs by design. All three modes exit 0 from every CWD.
