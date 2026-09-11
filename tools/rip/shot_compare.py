@@ -119,12 +119,13 @@ def main():
         print("   %6.1f  (%3d,%3d)  %-14s %s" %
               (w[0], w[1], w[2], w[3], w[4]))
     # heatmap
+    dmap = {(w[1], w[2]): w[0] for w in worst}
     print("diff heatmap (16px rows, '#'=big diff):")
     for ty in range(0, th, t):
-        line = "".join(" " if w[0] < 24 else ("+" if w[0] < 64 else "#")
-                       for tx in range(0, tw, t)
-                       for w in [next((x for x in worst if x[1] == tx and x[2] == ty),
-                                      (0, tx, ty, 0, 0))])
+        line = ""
+        for tx in range(0, tw, t):
+            d = dmap.get((tx, ty), 0)
+            line += " " if d < 24 else ("+" if d < 64 else "#")
         print("  " + line)
     # palettes
     h1, h2 = hist(ref), hist(mine)
