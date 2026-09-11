@@ -50,8 +50,17 @@ asset pipeline (battle_chars.rgba, enemy canvases, TTF font).
 5. BATTLE: the SNES battle asm -> full engine (we already analyzed
    monster/char display + pose pipelines); tie encounters in.
 
-## Proof artifacts this session
-- Intro dialogue decoded: d1:32-45 = the opening script's lines verbatim.
-- title_32x28_firstpass.png = the title screen composed from
-  splashGraphics + splashTilemap (palette provisional).
-- All gameplay data declared in ff4-en-data.json.
+## Content pack (DONE, v1)
+tools/rip/content_pack.py -> port/data/*.json (~2.1MB):
+dialogue, world (383 maps + layouts + triggers + world map),
+monsters (224 + stats/AI/items), battles (512 formations + groups),
+items/shops (256 w/ real names: FireClaw...), spells+attacks (256 +
+animation data), characters + level curves, scripts (event/trigger/
+npc/monster = raw opcode bytecode), cinematics (title/prologue/ending/
+telescope/world gfx + palettes). Runtime ingestion = reading the pack.
+
+## Proof artifacts
+- Intro dialogue decoded: d1:32-45 = the opening script verbatim.
+- Palette-correct intro renders: title_32x28.png (real splashPalette),
+  prologue_1/2.png (3bpp + real prologuePalette), solar_big_moon.png.
+- All gameplay data now in port/data/ (host-usable).

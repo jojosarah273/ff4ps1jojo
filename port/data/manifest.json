@@ -1,0 +1,86 @@
+{
+ "game": "Final Fantasy IV (SNES, FF2us 1.1)",
+ "source": "FF4_FROM_SOURCE/ff4/ff4-en-data.json",
+ "rom": "vanilla/ff2.smc (crc32 0x23084FCD)",
+ "packs": {
+  "dialogue.json": {
+   "keys": 7,
+   "bytes": 86945
+  },
+  "world.json": {
+   "keys": 22,
+   "bytes": 1145229
+  },
+  "monsters.json": {
+   "keys": 15,
+   "bytes": 235980
+  },
+  "battles.json": {
+   "keys": 9,
+   "bytes": 229247
+  },
+  "items.json": {
+   "keys": 7,
+   "bytes": 38373
+  },
+  "spells_attacks.json": {
+   "keys": 16,
+   "bytes": 137999
+  },
+  "characters.json": {
+   "keys": 9,
+   "bytes": 71130
+  },
+  "scripts.json": {
+   "keys": 9,
+   "bytes": 51636
+  },
+  "cinematics.json": {
+   "keys": 23,
+   "bytes": 134892
+  }
+ },
+ "raw_art_sound_feeds": [
+  "attackGraphics",
+  "attackTilemap",
+  "mapAnimationGraphics",
+  "mapGraphics0",
+  "mapGraphics1",
+  "mapGraphics13",
+  "mapGraphics14",
+  "mapGraphics2",
+  "mapGraphics3",
+  "mapGraphics4",
+  "mapGraphics5",
+  "mapGraphics6",
+  "mapGraphics7",
+  "mapGraphics8",
+  "mapGraphics9",
+  "miscBattleGfx",
+  "prologueGraphics",
+  "prologueTilemap1",
+  "prologueTilemap2",
+  "solarSystemBigMoon",
+  "solarSystemGraphics",
+  "spcData",
+  "splashGraphics",
+  "splashTilemap",
+  "theEndGraphics",
+  "vehicleGraphics",
+  "weaponGraphics",
+  "windowGraphics",
+  "worldSpriteGraphics"
+ ],
+ "totals": {
+  "maps": 383,
+  "dialogue_strings": 954,
+  "monsters": 224,
+  "battles": 512,
+  "items": 256,
+  "attacks": 256,
+  "shops": 48,
+  "event_scripts": 256,
+  "npc_scripts": 512,
+  "trigger_scripts": 256
+ }
+}

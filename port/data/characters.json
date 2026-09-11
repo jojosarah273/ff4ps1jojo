@@ -1,0 +1,7092 @@
+{
+ "CharProp": [
+  {
+   "initEquip": 1,
+   "class": 0,
+   "rightHanded": true,
+   "leftHanded": false,
+   "unknown0_5": false,
+   "level": 10,
+   "currentHP": 200,
+   "hp": 200,
+   "currentMP": 0,
+   "mp": 0,
+   "strength": 13,
+   "agility": 10,
+   "stamina": 11,
+   "intellect": 6,
+   "spirit": 3,
+   "critPct": 2,
+   "critBonus": 20,
+   "unknown22": 10,
+   "experience": 3000,
+   "expLastLevel": 2403,
+   "unknown26": 0,
+   "speedMod": 16,
+   "unknown28": 0,
+   "status": 0
+  },
+  {
+   "initEquip": 2,
+   "class": 1,
+   "rightHanded": false,
+   "leftHanded": true,
+   "unknown0_5": false,
+   "level": 10,
+   "currentHP": 190,
+   "hp": 190,
+   "currentMP": 0,
+   "mp": 0,
+   "strength": 9,
+   "agility": 11,
+   "stamina": 9,
+   "intellect": 6,
+   "spirit": 12,
+   "critPct": 2,
+   "critBonus": 20,
+   "unknown22": 10,
+   "experience": 2300,
+   "expLastLevel": 2256,
+   "unknown26": 0,
+   "speedMod": 16,
+   "unknown28": 0,
+   "status": 0
+  },
+  {
+   "initEquip": 3,
+   "class": 2,
+   "rightHanded": true,
+   "leftHanded": false,
+   "unknown0_5": false,
+   "level": 1,
+   "currentHP": 30,
+   "hp": 30,
+   "currentMP": 10,
+   "mp": 10,
+   "strength": 3,
+   "agility": 4,
+   "stamina": 2,
+   "intellect": 8,
+   "spirit": 5,
+   "critPct": 1,
+   "critBonus": 40,
+   "unknown22": 10,
+   "experience": 0,
+   "expLastLevel": 0,
+   "unknown26": 0,
+   "speedMod": 16,
+   "unknown28": 0,
+   "status": 0
+  },
+  {
+   "initEquip": 4,
+   "class": 3,
+   "rightHanded": true,
+   "leftHanded": false,
+   "unknown0_5": false,
+   "level": 20,
+   "currentHP": 340,
+   "hp": 340,
+   "currentMP": 90,
+   "mp": 90,
+   "strength": 5,
+   "agility": 8,
+   "stamina": 7,
+   "intellect": 16,
+   "spirit": 16,
+   "critPct": 1,
+   "critBonus": 30,
+   "unknown22": 10,
+   "experience": 54873,
+   "expLastLevel": 54873,
+   "unknown26": 0,
+   "speedMod": 16,
+   "unknown28": 0,
+   "status": 0
+  },
+  {
+   "initEquip": 5,
+   "class": 4,
+   "rightHanded": true,
+   "leftHanded": false,
+   "unknown0_5": false,
+   "level": 5,
+   "currentHP": 60,
+   "hp": 60,
+   "currentMP": 0,
+   "mp": 0,
+   "strength": 6,
+   "agility": 9,
+   "stamina": 2,
+   "intellect": 7,
+   "spirit": 7,
+   "critPct": 2,
+   "critBonus": 30,
+   "unknown22": 10,
+   "experience": 388,
+   "expLastLevel": 400,
+   "unknown26": 0,
+   "speedMod": 16,
+   "unknown28": 0,
+   "status": 0
+  },
+  {
+   "initEquip": 6,
+   "class": 5,
+   "rightHanded": true,
+   "leftHanded": false,
+   "unknown0_5": false,
+   "level": 10,
+   "currentHP": 150,
+   "hp": 150,
+   "currentMP": 80,
+   "mp": 80,
+   "strength": 8,
+   "agility": 8,
+   "stamina": 6,
+   "intellect": 10,
+   "spirit": 18,
+   "critPct": 2,
+   "critBonus": 60,
+   "unknown22": 10,
+   "experience": 2139,
+   "expLastLevel": 2139,
+   "unknown26": 0,
+   "speedMod": 16,
+   "unknown28": 0,
+   "status": 0
+  },
+  {
+   "initEquip": 7,
+   "class": 6,
+   "rightHanded": true,
+   "leftHanded": true,
+   "unknown0_5": false,
+   "level": 10,
+   "currentHP": 300,
+   "hp": 300,
+   "currentMP": 0,
+   "mp": 0,
+   "strength": 12,
+   "agility": 8,
+   "stamina": 15,
+   "intellect": 2,
+   "spirit": 3,
+   "critPct": 1,
+   "critBonus": 50,
+   "unknown22": 10,
+   "experience": 2061,
+   "expLastLevel": 2061,
+   "unknown26": 0,
+   "speedMod": 16,
+   "unknown28": 0,
+   "status": 0
+  },
+  {
+   "initEquip": 8,
+   "class": 7,
+   "rightHanded": false,
+   "leftHanded": true,
+   "unknown0_5": false,
+   "level": 10,
+   "currentHP": 100,
+   "hp": 100,
+   "currentMP": 50,
+   "mp": 50,
+   "strength": 7,
+   "agility": 8,
+   "stamina": 5,
+   "intellect": 15,
+   "spirit": 10,
+   "critPct": 1,
+   "critBonus": 30,
+   "unknown22": 10,
+   "experience": 1957,
+   "expLastLevel": 1957,
+   "unknown26": 0,
+   "speedMod": 16,
+   "unknown28": 0,
+   "status": 0
+  },
+  {
+   "initEquip": 9,
+   "class": 8,
+   "rightHanded": true,
+   "leftHanded": false,
+   "unknown0_5": false,
+   "level": 10,
+   "currentHP": 110,
+   "hp": 110,
+   "currentMP": 50,
+   "mp": 50,
+   "strength": 8,
+   "agility": 7,
+   "stamina": 6,
+   "intellect": 10,
+   "spirit": 15,
+   "critPct": 1,
+   "critBonus": 30,
+   "unknown22": 10,
+   "experience": 1957,
+   "expLastLevel": 1957,
+   "unknown26": 0,
+   "speedMod": 16,
+   "unknown28": 0,
+   "status": 0
+  },
+  {
+   "initEquip": 11,
+   "class": 9,
+   "rightHanded": true,
+   "leftHanded": false,
+   "unknown0_5": false,
+   "level": 1,
+   "currentHP": 600,
+   "hp": 600,
+   "currentMP": 10,
+   "mp": 10,
+   "strength": 10,
+   "agility": 13,
+   "stamina": 10,
+   "intellect": 5,
+   "spirit": 8,
+   "critPct": 3,
+   "critBonus": 30,
+   "unknown22": 1,
+   "experience": 0,
+   "expLastLevel": 0,
+   "unknown26": 0,
+   "speedMod": 16,
+   "unknown28": 0,
+   "status": 0
+  },
+  {
+   "initEquip": 14,
+   "class": 10,
+   "rightHanded": true,
+   "leftHanded": false,
+   "unknown0_5": false,
+   "level": 20,
+   "currentHP": 788,
+   "hp": 788,
+   "currentMP": 0,
+   "mp": 0,
+   "strength": 21,
+   "agility": 9,
+   "stamina": 24,
+   "intellect": 5,
+   "spirit": 5,
+   "critPct": 5,
+   "critBonus": 35,
+   "unknown22": 20,
+   "experience": 26754,
+   "expLastLevel": 26754,
+   "unknown26": 0,
+   "speedMod": 16,
+   "unknown28": 0,
+   "status": 0
+  },
+  {
+   "initEquip": 18,
+   "class": 12,
+   "rightHanded": true,
+   "leftHanded": true,
+   "unknown0_5": false,
+   "level": 25,
+   "currentHP": 790,
+   "hp": 790,
+   "currentMP": 60,
+   "mp": 60,
+   "strength": 20,
+   "agility": 23,
+   "stamina": 17,
+   "intellect": 12,
+   "spirit": 12,
+   "critPct": 8,
+   "critBonus": 25,
+   "unknown22": 25,
+   "experience": 64777,
+   "expLastLevel": 64777,
+   "unknown26": 0,
+   "speedMod": 16,
+   "unknown28": 0,
+   "status": 0
+  },
+  {
+   "initEquip": 19,
+   "class": 13,
+   "rightHanded": true,
+   "leftHanded": false,
+   "unknown0_5": false,
+   "level": 50,
+   "currentHP": 1900,
+   "hp": 1900,
+   "currentMP": 190,
+   "mp": 190,
+   "strength": 10,
+   "agility": 20,
+   "stamina": 10,
+   "intellect": 40,
+   "spirit": 40,
+   "critPct": 0,
+   "critBonus": 0,
+   "unknown22": 50,
+   "experience": 1007865,
+   "expLastLevel": 1007865,
+   "unknown26": 0,
+   "speedMod": 16,
+   "unknown28": 0,
+   "status": 0
+  },
+  {
+   "initEquip": 21,
+   "class": 15,
+   "rightHanded": true,
+   "leftHanded": false,
+   "unknown0_5": false,
+   "level": 50,
+   "currentHP": 2943,
+   "hp": 2943,
+   "currentMP": 180,
+   "mp": 180,
+   "strength": 10,
+   "agility": 30,
+   "stamina": 20,
+   "intellect": 40,
+   "spirit": 10,
+   "critPct": 0,
+   "critBonus": 0,
+   "unknown22": 0,
+   "experience": 1007865,
+   "expLastLevel": 1007865,
+   "unknown26": 0,
+   "speedMod": 16,
+   "unknown28": 0,
+   "status": 0
+  }
+ ],
+ "CharInitEquip": [
+  {
+   "rightHand": 22,
+   "rightHandQty": 1,
+   "leftHand": 98,
+   "leftHandQty": 1,
+   "helmet": 110,
+   "armor": 130,
+   "shield": 157
+  },
+  {
+   "rightHand": 97,
+   "rightHandQty": 1,
+   "leftHand": 35,
+   "leftHandQty": 1,
+   "helmet": 109,
+   "armor": 129,
+   "shield": 156
+  },
+  {
+   "rightHand": 7,
+   "rightHandQty": 1,
+   "leftHand": 0,
+   "leftHandQty": 0,
+   "helmet": 119,
+   "armor": 142,
+   "shield": 167
+  },
+  {
+   "rightHand": 15,
+   "rightHandQty": 1,
+   "leftHand": 0,
+   "leftHandQty": 0,
+   "helmet": 0,
+   "armor": 142,
+   "shield": 0
+  },
+  {
+   "rightHand": 68,
+   "rightHandQty": 1,
+   "leftHand": 0,
+   "leftHandQty": 0,
+   "helmet": 120,
+   "armor": 151,
+   "shield": 168
+  },
+  {
+   "rightHand": 84,
+   "rightHandQty": 50,
+   "leftHand": 77,
+   "leftHandQty": 1,
+   "helmet": 119,
+   "armor": 142,
+   "shield": 167
+  },
+  {
+   "rightHand": 1,
+   "rightHandQty": 1,
+   "leftHand": 0,
+   "leftHandQty": 0,
+   "helmet": 0,
+   "armor": 142,
+   "shield": 0
+  },
+  {
+   "rightHand": 0,
+   "rightHandQty": 0,
+   "leftHand": 7,
+   "leftHandQty": 1,
+   "helmet": 120,
+   "armor": 142,
+   "shield": 167
+  },
+  {
+   "rightHand": 15,
+   "rightHandQty": 1,
+   "leftHand": 0,
+   "leftHandQty": 0,
+   "helmet": 120,
+   "armor": 142,
+   "shield": 167
+  },
+  {
+   "rightHand": 15,
+   "rightHandQty": 1,
+   "leftHand": 0,
+   "leftHandQty": 0,
+   "helmet": 0,
+   "armor": 143,
+   "shield": 167
+  },
+  {
+   "rightHand": 25,
+   "rightHandQty": 1,
+   "leftHand": 0,
+   "leftHandQty": 0,
+   "helmet": 0,
+   "armor": 141,
+   "shield": 0
+  },
+  {
+   "rightHand": 0,
+   "rightHandQty": 0,
+   "leftHand": 0,
+   "leftHandQty": 0,
+   "helmet": 0,
+   "armor": 0,
+   "shield": 0
+  },
+  {
+   "rightHand": 0,
+   "rightHandQty": 0,
+   "leftHand": 0,
+   "leftHandQty": 0,
+   "helmet": 0,
+   "armor": 142,
+   "shield": 0
+  },
+  {
+   "rightHand": 75,
+   "rightHandQty": 1,
+   "leftHand": 0,
+   "leftHandQty": 0,
+   "helmet": 0,
+   "armor": 150,
+   "shield": 0
+  },
+  {
+   "rightHand": 101,
+   "rightHandQty": 1,
+   "leftHand": 36,
+   "leftHandQty": 1,
+   "helmet": 114,
+   "armor": 134,
+   "shield": 161
+  },
+  {
+   "rightHand": 0,
+   "rightHandQty": 0,
+   "leftHand": 0,
+   "leftHandQty": 0,
+   "helmet": 0,
+   "armor": 150,
+   "shield": 0
+  },
+  {
+   "rightHand": 51,
+   "rightHandQty": 1,
+   "leftHand": 0,
+   "leftHandQty": 0,
+   "helmet": 0,
+   "armor": 143,
+   "shield": 169
+  },
+  {
+   "rightHand": 43,
+   "rightHandQty": 1,
+   "leftHand": 43,
+   "leftHandQty": 1,
+   "helmet": 126,
+   "armor": 153,
+   "shield": 161
+  },
+  {
+   "rightHand": 19,
+   "rightHandQty": 1,
+   "leftHand": 0,
+   "leftHandQty": 0,
+   "helmet": 122,
+   "armor": 146,
+   "shield": 173
+  },
+  {
+   "rightHand": 106,
+   "rightHandQty": 1,
+   "leftHand": 42,
+   "leftHandQty": 1,
+   "helmet": 116,
+   "armor": 138,
+   "shield": 164
+  },
+  {
+   "rightHand": 19,
+   "rightHandQty": 1,
+   "leftHand": 0,
+   "leftHandQty": 0,
+   "helmet": 122,
+   "armor": 146,
+   "shield": 173
+  }
+ ],
+ "characterNames": [
+  "Cecil",
+  "Kain",
+  "Rydia",
+  "Tellah",
+  "Edward",
+  "Rosa",
+  "Yang",
+  "Palom",
+  "Porom",
+  "Cid",
+  "Edge",
+  "FuSoYa",
+  "Golbez",
+  "Anna"
+ ],
+ "className": [
+  "DKnight",
+  "Dragoon",
+  "Caller",
+  "Sage",
+  "Bard",
+  "Wh.Wiz",
+  "Karate",
+  "Bl.Wiz",
+  "Wh.Wiz",
+  "Paladin",
+  "Chief",
+  "Caller",
+  "Ninja",
+  "Lunar"
+ ],
+ "characterBattleCommands": [
+  [
+   0,
+   1,
+   255,
+   255,
+   255
+  ],
+  [
+   0,
+   6,
+   1,
+   255,
+   255
+  ],
+  [
+   0,
+   2,
+   3,
+   4,
+   1
+  ],
+  [
+   0,
+   2,
+   3,
+   1,
+   255
+  ],
+  [
+   0,
+   8,
+   9,
+   1,
+   255
+  ],
+  [
+   0,
+   2,
+   12,
+   1,
+   255
+  ],
+  [
+   0,
+   14,
+   1,
+   255,
+   255
+  ],
+  [
+   0,
+   3,
+   16,
+   1,
+   255
+  ],
+  [
+   0,
+   2,
+   16,
+   1,
+   255
+  ],
+  [
+   0,
+   2,
+   3,
+   1,
+   255
+  ],
+  [
+   0,
+   2,
+   19,
+   1,
+   255
+  ],
+  [
+   0,
+   2,
+   3,
+   1,
+   255
+  ],
+  [
+   0,
+   14,
+   1,
+   255,
+   255
+  ],
+  [
+   0,
+   20,
+   1,
+   255,
+   255
+  ],
+  [
+   0,
+   6,
+   1,
+   255,
+   255
+  ],
+  [
+   0,
+   2,
+   12,
+   1,
+   255
+  ],
+  [
+   0,
+   3,
+   4,
+   1,
+   255
+  ],
+  [
+   0,
+   22,
+   23,
+   24,
+   1
+  ],
+  [
+   0,
+   2,
+   3,
+   1,
+   255
+  ],
+  [
+   0,
+   6,
+   1,
+   255,
+   255
+  ],
+  [
+   0,
+   255,
+   255,
+   255,
+   255
+  ],
+  [
+   0,
+   255,
+   255,
+   255,
+   255
+  ]
+ ],
+ "LevelUpProp": [
+  "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"
+ ],
+ "LevelUpPropHigh": [
+  [
+   {
+    "statMod": 7,
+    "stats": 4
+   },
+   {
+    "statMod": 7,
+    "stats": 22
+   },
+   {
+    "statMod": 7,
+    "stats": 14
+   },
+   {
+    "statMod": 1,
+    "stats": 30
+   },
+   {
+    "statMod": 1,
+    "stats": 30
+   },
+   {
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "statMod": 2,
+    "stats": 28
+   },
+   {
+    "statMod": 3,
+    "stats": 16
+   }
+  ],
+  [
+   {
+    "statMod": 7,
+    "stats": 31
+   },
+   {
+    "statMod": 7,
+    "stats": 9
+   },
+   {
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "statMod": 1,
+    "stats": 21
+   },
+   {
+    "statMod": 1,
+    "stats": 22
+   },
+   {
+    "statMod": 2,
+    "stats": 23
+   },
+   {
+    "statMod": 2,
+    "stats": 12
+   },
+   {
+    "statMod": 3,
+    "stats": 25
+   }
+  ],
+  [
+   {
+    "statMod": 7,
+    "stats": 19
+   },
+   {
+    "statMod": 7,
+    "stats": 25
+   },
+   {
+    "statMod": 7,
+    "stats": 21
+   },
+   {
+    "statMod": 1,
+    "stats": 31
+   },
+   {
+    "statMod": 1,
+    "stats": 31
+   },
+   {
+    "statMod": 2,
+    "stats": 23
+   },
+   {
+    "statMod": 3,
+    "stats": 27
+   },
+   {
+    "statMod": 3,
+    "stats": 3
+   }
+  ],
+  [
+   {
+    "statMod": 7,
+    "stats": 31
+   },
+   {
+    "statMod": 0,
+    "stats": 0
+   },
+   {
+    "statMod": 0,
+    "stats": 0
+   },
+   {
+    "statMod": 0,
+    "stats": 0
+   },
+   {
+    "statMod": 1,
+    "stats": 24
+   },
+   {
+    "statMod": 1,
+    "stats": 15
+   },
+   {
+    "statMod": 1,
+    "stats": 10
+   },
+   {
+    "statMod": 1,
+    "stats": 9
+   }
+  ],
+  [
+   {
+    "statMod": 7,
+    "stats": 31
+   },
+   {
+    "statMod": 7,
+    "stats": 31
+   },
+   {
+    "statMod": 7,
+    "stats": 23
+   },
+   {
+    "statMod": 7,
+    "stats": 23
+   },
+   {
+    "statMod": 1,
+    "stats": 27
+   },
+   {
+    "statMod": 2,
+    "stats": 14
+   },
+   {
+    "statMod": 3,
+    "stats": 25
+   },
+   {
+    "statMod": 4,
+    "stats": 23
+   }
+  ],
+  [
+   {
+    "statMod": 7,
+    "stats": 20
+   },
+   {
+    "statMod": 7,
+    "stats": 6
+   },
+   {
+    "statMod": 1,
+    "stats": 21
+   },
+   {
+    "statMod": 1,
+    "stats": 29
+   },
+   {
+    "statMod": 1,
+    "stats": 15
+   },
+   {
+    "statMod": 1,
+    "stats": 15
+   },
+   {
+    "statMod": 1,
+    "stats": 31
+   },
+   {
+    "statMod": 2,
+    "stats": 17
+   }
+  ],
+  [
+   {
+    "statMod": 7,
+    "stats": 27
+   },
+   {
+    "statMod": 1,
+    "stats": 30
+   },
+   {
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "statMod": 1,
+    "stats": 21
+   },
+   {
+    "statMod": 2,
+    "stats": 28
+   },
+   {
+    "statMod": 2,
+    "stats": 20
+   },
+   {
+    "statMod": 2,
+    "stats": 20
+   }
+  ],
+  [
+   {
+    "statMod": 7,
+    "stats": 17
+   },
+   {
+    "statMod": 7,
+    "stats": 21
+   },
+   {
+    "statMod": 1,
+    "stats": 26
+   },
+   {
+    "statMod": 1,
+    "stats": 31
+   },
+   {
+    "statMod": 1,
+    "stats": 11
+   },
+   {
+    "statMod": 1,
+    "stats": 6
+   },
+   {
+    "statMod": 2,
+    "stats": 7
+   },
+   {
+    "statMod": 3,
+    "stats": 18
+   }
+  ],
+  [
+   {
+    "statMod": 7,
+    "stats": 18
+   },
+   {
+    "statMod": 7,
+    "stats": 22
+   },
+   {
+    "statMod": 1,
+    "stats": 25
+   },
+   {
+    "statMod": 1,
+    "stats": 31
+   },
+   {
+    "statMod": 1,
+    "stats": 15
+   },
+   {
+    "statMod": 1,
+    "stats": 13
+   },
+   {
+    "statMod": 2,
+    "stats": 19
+   },
+   {
+    "statMod": 3,
+    "stats": 1
+   }
+  ],
+  [
+   {
+    "statMod": 7,
+    "stats": 27
+   },
+   {
+    "statMod": 1,
+    "stats": 15
+   },
+   {
+    "statMod": 1,
+    "stats": 30
+   },
+   {
+    "statMod": 1,
+    "stats": 29
+   },
+   {
+    "statMod": 1,
+    "stats": 6
+   },
+   {
+    "statMod": 1,
+    "stats": 21
+   },
+   {
+    "statMod": 2,
+    "stats": 29
+   },
+   {
+    "statMod": 3,
+    "stats": 16
+   }
+  ],
+  [
+   {
+    "statMod": 7,
+    "stats": 25
+   },
+   {
+    "statMod": 7,
+    "stats": 17
+   },
+   {
+    "statMod": 7,
+    "stats": 10
+   },
+   {
+    "statMod": 1,
+    "stats": 30
+   },
+   {
+    "statMod": 2,
+    "stats": 28
+   },
+   {
+    "statMod": 2,
+    "stats": 25
+   },
+   {
+    "statMod": 2,
+    "stats": 20
+   },
+   {
+    "statMod": 3,
+    "stats": 20
+   }
+  ],
+  [
+   {
+    "statMod": 7,
+    "stats": 26
+   },
+   {
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "statMod": 1,
+    "stats": 16
+   },
+   {
+    "statMod": 1,
+    "stats": 8
+   },
+   {
+    "statMod": 1,
+    "stats": 26
+   },
+   {
+    "statMod": 1,
+    "stats": 26
+   },
+   {
+    "statMod": 2,
+    "stats": 20
+   },
+   {
+    "statMod": 3,
+    "stats": 10
+   }
+  ],
+  [
+   {
+    "statMod": 7,
+    "stats": 20
+   },
+   {
+    "statMod": 7,
+    "stats": 2
+   },
+   {
+    "statMod": 7,
+    "stats": 1
+   },
+   {
+    "statMod": 1,
+    "stats": 0
+   },
+   {
+    "statMod": 1,
+    "stats": 11
+   },
+   {
+    "statMod": 1,
+    "stats": 10
+   },
+   {
+    "statMod": 1,
+    "stats": 9
+   },
+   {
+    "statMod": 1,
+    "stats": 20
+   }
+  ]
+ ],
+ "LevelUpPropLow": [
+  [
+   {
+    "exp": 931,
+    "expMSB": 0,
+    "hp": 20,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 1186,
+    "expMSB": 0,
+    "hp": 20,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 24
+   },
+   {
+    "exp": 1486,
+    "expMSB": 0,
+    "hp": 20,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 22
+   },
+   {
+    "exp": 1834,
+    "expMSB": 0,
+    "hp": 20,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 2233,
+    "expMSB": 0,
+    "hp": 20,
+    "mp": 0,
+    "statMod": 7,
+    "stats": 1
+   },
+   {
+    "exp": 2688,
+    "expMSB": 0,
+    "hp": 20,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 30
+   },
+   {
+    "exp": 3203,
+    "expMSB": 0,
+    "hp": 20,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 16
+   },
+   {
+    "exp": 3780,
+    "expMSB": 0,
+    "hp": 20,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 24
+   },
+   {
+    "exp": 4424,
+    "expMSB": 0,
+    "hp": 20,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 30
+   },
+   {
+    "exp": 5139,
+    "expMSB": 0,
+    "hp": 20,
+    "mp": 0,
+    "statMod": 7,
+    "stats": 1
+   },
+   {
+    "exp": 5927,
+    "expMSB": 0,
+    "hp": 30,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 6794,
+    "expMSB": 0,
+    "hp": 30,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 18
+   },
+   {
+    "exp": 7741,
+    "expMSB": 0,
+    "hp": 30,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 8774,
+    "expMSB": 0,
+    "hp": 30,
+    "mp": 0,
+    "statMod": 0,
+    "stats": 0
+   },
+   {
+    "exp": 9896,
+    "expMSB": 0,
+    "hp": 30,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 11111,
+    "expMSB": 0,
+    "hp": 30,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 18
+   },
+   {
+    "exp": 12422,
+    "expMSB": 0,
+    "hp": 30,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 13833,
+    "expMSB": 0,
+    "hp": 30,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 2
+   },
+   {
+    "exp": 15347,
+    "expMSB": 0,
+    "hp": 30,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 16969,
+    "expMSB": 0,
+    "hp": 30,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 16
+   },
+   {
+    "exp": 18702,
+    "expMSB": 0,
+    "hp": 40,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 20550,
+    "expMSB": 0,
+    "hp": 40,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 18
+   },
+   {
+    "exp": 22517,
+    "expMSB": 0,
+    "hp": 40,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 12
+   },
+   {
+    "exp": 24606,
+    "expMSB": 0,
+    "hp": 40,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 16
+   },
+   {
+    "exp": 26821,
+    "expMSB": 0,
+    "hp": 40,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 29165,
+    "expMSB": 0,
+    "hp": 40,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 18
+   },
+   {
+    "exp": 31643,
+    "expMSB": 0,
+    "hp": 40,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 12
+   },
+   {
+    "exp": 34257,
+    "expMSB": 0,
+    "hp": 40,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 16
+   },
+   {
+    "exp": 37013,
+    "expMSB": 0,
+    "hp": 40,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 39913,
+    "expMSB": 0,
+    "hp": 40,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 18
+   },
+   {
+    "exp": 42916,
+    "expMSB": 0,
+    "hp": 50,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 46161,
+    "expMSB": 0,
+    "hp": 50,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 16
+   },
+   {
+    "exp": 49517,
+    "expMSB": 0,
+    "hp": 50,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 12
+   },
+   {
+    "exp": 53032,
+    "expMSB": 0,
+    "hp": 50,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 18
+   },
+   {
+    "exp": 56710,
+    "expMSB": 0,
+    "hp": 50,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 60555,
+    "expMSB": 0,
+    "hp": 50,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 16
+   },
+   {
+    "exp": 64570,
+    "expMSB": 0,
+    "hp": 50,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 3223,
+    "expMSB": 1,
+    "hp": 50,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 18
+   },
+   {
+    "exp": 7590,
+    "expMSB": 1,
+    "hp": 50,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 12
+   },
+   {
+    "exp": 12139,
+    "expMSB": 1,
+    "hp": 50,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 18
+   },
+   {
+    "exp": 16872,
+    "expMSB": 1,
+    "hp": 60,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 21795,
+    "expMSB": 1,
+    "hp": 60,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 16
+   },
+   {
+    "exp": 26910,
+    "expMSB": 1,
+    "hp": 60,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 14
+   },
+   {
+    "exp": 32222,
+    "expMSB": 1,
+    "hp": 60,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 16
+   },
+   {
+    "exp": 37733,
+    "expMSB": 1,
+    "hp": 60,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 43449,
+    "expMSB": 1,
+    "hp": 60,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 16
+   },
+   {
+    "exp": 49372,
+    "expMSB": 1,
+    "hp": 60,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 14
+   },
+   {
+    "exp": 55506,
+    "expMSB": 1,
+    "hp": 60,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 16
+   },
+   {
+    "exp": 61854,
+    "expMSB": 1,
+    "hp": 60,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 2886,
+    "expMSB": 2,
+    "hp": 60,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 18
+   },
+   {
+    "exp": 9676,
+    "expMSB": 2,
+    "hp": 70,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 16691,
+    "expMSB": 2,
+    "hp": 70,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 16
+   },
+   {
+    "exp": 23937,
+    "expMSB": 2,
+    "hp": 70,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 14
+   },
+   {
+    "exp": 31415,
+    "expMSB": 2,
+    "hp": 70,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 16
+   },
+   {
+    "exp": 39131,
+    "expMSB": 2,
+    "hp": 70,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 47088,
+    "expMSB": 2,
+    "hp": 70,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 16
+   },
+   {
+    "exp": 55289,
+    "expMSB": 2,
+    "hp": 70,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 14
+   },
+   {
+    "exp": 63738,
+    "expMSB": 2,
+    "hp": 70,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 16
+   },
+   {
+    "exp": 6903,
+    "expMSB": 3,
+    "hp": 70,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 15860,
+    "expMSB": 3,
+    "hp": 70,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 18
+   }
+  ],
+  [
+   {
+    "exp": 803,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 1009,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 21
+   },
+   {
+    "exp": 1249,
+    "expMSB": 0,
+    "hp": 32,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 1527,
+    "expMSB": 0,
+    "hp": 32,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 1845,
+    "expMSB": 0,
+    "hp": 32,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 9
+   },
+   {
+    "exp": 2206,
+    "expMSB": 0,
+    "hp": 40,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 2613,
+    "expMSB": 0,
+    "hp": 40,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 29
+   },
+   {
+    "exp": 3069,
+    "expMSB": 0,
+    "hp": 40,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 22
+   },
+   {
+    "exp": 3577,
+    "expMSB": 0,
+    "hp": 48,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 4140,
+    "expMSB": 0,
+    "hp": 48,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 29
+   },
+   {
+    "exp": 4760,
+    "expMSB": 0,
+    "hp": 48,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 5441,
+    "expMSB": 0,
+    "hp": 48,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 6185,
+    "expMSB": 0,
+    "hp": 48,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 21
+   },
+   {
+    "exp": 6995,
+    "expMSB": 0,
+    "hp": 56,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 7875,
+    "expMSB": 0,
+    "hp": 56,
+    "mp": 0,
+    "statMod": 2,
+    "stats": 24
+   },
+   {
+    "exp": 8826,
+    "expMSB": 0,
+    "hp": 56,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 21
+   },
+   {
+    "exp": 9852,
+    "expMSB": 0,
+    "hp": 56,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 10956,
+    "expMSB": 0,
+    "hp": 56,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 23
+   },
+   {
+    "exp": 12141,
+    "expMSB": 0,
+    "hp": 64,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 13410,
+    "expMSB": 0,
+    "hp": 64,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 21
+   },
+   {
+    "exp": 14764,
+    "expMSB": 0,
+    "hp": 64,
+    "mp": 0,
+    "statMod": 2,
+    "stats": 24
+   },
+   {
+    "exp": 16208,
+    "expMSB": 0,
+    "hp": 64,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 21
+   },
+   {
+    "exp": 17744,
+    "expMSB": 0,
+    "hp": 72,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 19375,
+    "expMSB": 0,
+    "hp": 72,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 21105,
+    "expMSB": 0,
+    "hp": 72,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 25
+   },
+   {
+    "exp": 22934,
+    "expMSB": 0,
+    "hp": 72,
+    "mp": 0,
+    "statMod": 2,
+    "stats": 20
+   },
+   {
+    "exp": 24868,
+    "expMSB": 0,
+    "hp": 72,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 26908,
+    "expMSB": 0,
+    "hp": 72,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 23
+   },
+   {
+    "exp": 29058,
+    "expMSB": 0,
+    "hp": 72,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 31320,
+    "expMSB": 0,
+    "hp": 72,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 21
+   },
+   {
+    "exp": 33697,
+    "expMSB": 0,
+    "hp": 96,
+    "mp": 0,
+    "statMod": 2,
+    "stats": 24
+   },
+   {
+    "exp": 36192,
+    "expMSB": 0,
+    "hp": 96,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 21
+   },
+   {
+    "exp": 38808,
+    "expMSB": 0,
+    "hp": 96,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 24
+   },
+   {
+    "exp": 41548,
+    "expMSB": 0,
+    "hp": 96,
+    "mp": 0,
+    "statMod": 2,
+    "stats": 21
+   },
+   {
+    "exp": 44415,
+    "expMSB": 0,
+    "hp": 96,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 47411,
+    "expMSB": 0,
+    "hp": 96,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 21
+   },
+   {
+    "exp": 50540,
+    "expMSB": 0,
+    "hp": 104,
+    "mp": 0,
+    "statMod": 2,
+    "stats": 24
+   },
+   {
+    "exp": 53804,
+    "expMSB": 0,
+    "hp": 104,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 23
+   },
+   {
+    "exp": 57206,
+    "expMSB": 0,
+    "hp": 104,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 60750,
+    "expMSB": 0,
+    "hp": 104,
+    "mp": 0,
+    "statMod": 2,
+    "stats": 21
+   },
+   {
+    "exp": 64437,
+    "expMSB": 0,
+    "hp": 104,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 24
+   },
+   {
+    "exp": 2735,
+    "expMSB": 1,
+    "hp": 104,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 6719,
+    "expMSB": 1,
+    "hp": 104,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 21
+   },
+   {
+    "exp": 10856,
+    "expMSB": 1,
+    "hp": 104,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 15149,
+    "expMSB": 1,
+    "hp": 104,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 5
+   },
+   {
+    "exp": 19599,
+    "expMSB": 1,
+    "hp": 104,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 24211,
+    "expMSB": 1,
+    "hp": 104,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 28987,
+    "expMSB": 1,
+    "hp": 104,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 21
+   },
+   {
+    "exp": 33930,
+    "expMSB": 1,
+    "hp": 104,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 30
+   },
+   {
+    "exp": 39044,
+    "expMSB": 1,
+    "hp": 104,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 21
+   },
+   {
+    "exp": 44329,
+    "expMSB": 1,
+    "hp": 104,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 8
+   },
+   {
+    "exp": 49791,
+    "expMSB": 1,
+    "hp": 104,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 55431,
+    "expMSB": 1,
+    "hp": 104,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 21
+   },
+   {
+    "exp": 61253,
+    "expMSB": 1,
+    "hp": 104,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 1723,
+    "expMSB": 2,
+    "hp": 104,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 21
+   },
+   {
+    "exp": 7916,
+    "expMSB": 2,
+    "hp": 104,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 14299,
+    "expMSB": 2,
+    "hp": 104,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 20875,
+    "expMSB": 2,
+    "hp": 104,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 21
+   },
+   {
+    "exp": 27647,
+    "expMSB": 2,
+    "hp": 104,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 30
+   },
+   {
+    "exp": 34618,
+    "expMSB": 2,
+    "hp": 120,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 21
+   }
+  ],
+  [
+   {
+    "exp": 44,
+    "expMSB": 0,
+    "hp": 8,
+    "mp": 5,
+    "statMod": 1,
+    "stats": 10
+   },
+   {
+    "exp": 76,
+    "expMSB": 0,
+    "hp": 8,
+    "mp": 5,
+    "statMod": 1,
+    "stats": 5
+   },
+   {
+    "exp": 118,
+    "expMSB": 0,
+    "hp": 8,
+    "mp": 5,
+    "statMod": 1,
+    "stats": 26
+   },
+   {
+    "exp": 175,
+    "expMSB": 0,
+    "hp": 8,
+    "mp": 5,
+    "statMod": 1,
+    "stats": 1
+   },
+   {
+    "exp": 249,
+    "expMSB": 0,
+    "hp": 8,
+    "mp": 5,
+    "statMod": 1,
+    "stats": 14
+   },
+   {
+    "exp": 345,
+    "expMSB": 0,
+    "hp": 8,
+    "mp": 5,
+    "statMod": 1,
+    "stats": 19
+   },
+   {
+    "exp": 467,
+    "expMSB": 0,
+    "hp": 8,
+    "mp": 5,
+    "statMod": 1,
+    "stats": 10
+   },
+   {
+    "exp": 617,
+    "expMSB": 0,
+    "hp": 8,
+    "mp": 5,
+    "statMod": 1,
+    "stats": 7
+   },
+   {
+    "exp": 800,
+    "expMSB": 0,
+    "hp": 16,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 26
+   },
+   {
+    "exp": 1018,
+    "expMSB": 0,
+    "hp": 16,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 1
+   },
+   {
+    "exp": 1276,
+    "expMSB": 0,
+    "hp": 16,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 23
+   },
+   {
+    "exp": 1578,
+    "expMSB": 0,
+    "hp": 16,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 11
+   },
+   {
+    "exp": 1926,
+    "expMSB": 0,
+    "hp": 16,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 23
+   },
+   {
+    "exp": 2325,
+    "expMSB": 0,
+    "hp": 16,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 11
+   },
+   {
+    "exp": 2777,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 21
+   },
+   {
+    "exp": 3287,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 2
+   },
+   {
+    "exp": 3859,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 31
+   },
+   {
+    "exp": 4495,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 3
+   },
+   {
+    "exp": 5200,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 31
+   },
+   {
+    "exp": 5976,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 1
+   },
+   {
+    "exp": 6828,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 23
+   },
+   {
+    "exp": 7760,
+    "expMSB": 0,
+    "hp": 32,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 27
+   },
+   {
+    "exp": 8774,
+    "expMSB": 0,
+    "hp": 32,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 7
+   },
+   {
+    "exp": 9875,
+    "expMSB": 0,
+    "hp": 32,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 27
+   },
+   {
+    "exp": 11065,
+    "expMSB": 0,
+    "hp": 32,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 5
+   },
+   {
+    "exp": 12349,
+    "expMSB": 0,
+    "hp": 32,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 18
+   },
+   {
+    "exp": 13731,
+    "expMSB": 0,
+    "hp": 32,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 15
+   },
+   {
+    "exp": 15213,
+    "expMSB": 0,
+    "hp": 32,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 19
+   },
+   {
+    "exp": 16800,
+    "expMSB": 0,
+    "hp": 32,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 15
+   },
+   {
+    "exp": 18494,
+    "expMSB": 0,
+    "hp": 40,
+    "mp": 10,
+    "statMod": 1,
+    "stats": 17
+   },
+   {
+    "exp": 20300,
+    "expMSB": 0,
+    "hp": 40,
+    "mp": 10,
+    "statMod": 1,
+    "stats": 7
+   },
+   {
+    "exp": 22222,
+    "expMSB": 0,
+    "hp": 40,
+    "mp": 10,
+    "statMod": 1,
+    "stats": 27
+   },
+   {
+    "exp": 24262,
+    "expMSB": 0,
+    "hp": 40,
+    "mp": 10,
+    "statMod": 1,
+    "stats": 7
+   },
+   {
+    "exp": 26425,
+    "expMSB": 0,
+    "hp": 40,
+    "mp": 10,
+    "statMod": 1,
+    "stats": 27
+   },
+   {
+    "exp": 28713,
+    "expMSB": 0,
+    "hp": 40,
+    "mp": 10,
+    "statMod": 1,
+    "stats": 5
+   },
+   {
+    "exp": 31131,
+    "expMSB": 0,
+    "hp": 40,
+    "mp": 10,
+    "statMod": 1,
+    "stats": 18
+   },
+   {
+    "exp": 33683,
+    "expMSB": 0,
+    "hp": 40,
+    "mp": 10,
+    "statMod": 1,
+    "stats": 15
+   },
+   {
+    "exp": 36371,
+    "expMSB": 0,
+    "hp": 40,
+    "mp": 10,
+    "statMod": 1,
+    "stats": 19
+   },
+   {
+    "exp": 39200,
+    "expMSB": 0,
+    "hp": 40,
+    "mp": 10,
+    "statMod": 1,
+    "stats": 15
+   },
+   {
+    "exp": 42172,
+    "expMSB": 0,
+    "hp": 48,
+    "mp": 10,
+    "statMod": 1,
+    "stats": 17
+   },
+   {
+    "exp": 45292,
+    "expMSB": 0,
+    "hp": 48,
+    "mp": 10,
+    "statMod": 1,
+    "stats": 7
+   },
+   {
+    "exp": 48564,
+    "expMSB": 0,
+    "hp": 48,
+    "mp": 10,
+    "statMod": 1,
+    "stats": 27
+   },
+   {
+    "exp": 51990,
+    "expMSB": 0,
+    "hp": 48,
+    "mp": 10,
+    "statMod": 1,
+    "stats": 7
+   },
+   {
+    "exp": 55575,
+    "expMSB": 0,
+    "hp": 56,
+    "mp": 10,
+    "statMod": 1,
+    "stats": 27
+   },
+   {
+    "exp": 59321,
+    "expMSB": 0,
+    "hp": 56,
+    "mp": 10,
+    "statMod": 1,
+    "stats": 5
+   },
+   {
+    "exp": 63233,
+    "expMSB": 0,
+    "hp": 56,
+    "mp": 10,
+    "statMod": 1,
+    "stats": 18
+   },
+   {
+    "exp": 1779,
+    "expMSB": 1,
+    "hp": 56,
+    "mp": 10,
+    "statMod": 1,
+    "stats": 15
+   },
+   {
+    "exp": 6033,
+    "expMSB": 1,
+    "hp": 56,
+    "mp": 10,
+    "statMod": 1,
+    "stats": 19
+   },
+   {
+    "exp": 10464,
+    "expMSB": 1,
+    "hp": 56,
+    "mp": 10,
+    "statMod": 1,
+    "stats": 15
+   },
+   {
+    "exp": 15074,
+    "expMSB": 1,
+    "hp": 64,
+    "mp": 10,
+    "statMod": 1,
+    "stats": 1
+   },
+   {
+    "exp": 19868,
+    "expMSB": 1,
+    "hp": 64,
+    "mp": 10,
+    "statMod": 1,
+    "stats": 19
+   },
+   {
+    "exp": 24850,
+    "expMSB": 1,
+    "hp": 64,
+    "mp": 10,
+    "statMod": 1,
+    "stats": 14
+   },
+   {
+    "exp": 30022,
+    "expMSB": 1,
+    "hp": 64,
+    "mp": 10,
+    "statMod": 1,
+    "stats": 19
+   },
+   {
+    "exp": 35389,
+    "expMSB": 1,
+    "hp": 64,
+    "mp": 10,
+    "statMod": 1,
+    "stats": 14
+   },
+   {
+    "exp": 40953,
+    "expMSB": 1,
+    "hp": 64,
+    "mp": 10,
+    "statMod": 1,
+    "stats": 17
+   },
+   {
+    "exp": 46719,
+    "expMSB": 1,
+    "hp": 64,
+    "mp": 10,
+    "statMod": 1,
+    "stats": 6
+   },
+   {
+    "exp": 52691,
+    "expMSB": 1,
+    "hp": 64,
+    "mp": 10,
+    "statMod": 1,
+    "stats": 26
+   },
+   {
+    "exp": 58871,
+    "expMSB": 1,
+    "hp": 64,
+    "mp": 10,
+    "statMod": 1,
+    "stats": 7
+   },
+   {
+    "exp": 65264,
+    "expMSB": 1,
+    "hp": 64,
+    "mp": 10,
+    "statMod": 1,
+    "stats": 26
+   },
+   {
+    "exp": 6336,
+    "expMSB": 2,
+    "hp": 72,
+    "mp": 10,
+    "statMod": 1,
+    "stats": 5
+   },
+   {
+    "exp": 13164,
+    "expMSB": 2,
+    "hp": 72,
+    "mp": 10,
+    "statMod": 1,
+    "stats": 18
+   },
+   {
+    "exp": 20216,
+    "expMSB": 2,
+    "hp": 72,
+    "mp": 10,
+    "statMod": 1,
+    "stats": 14
+   },
+   {
+    "exp": 27494,
+    "expMSB": 2,
+    "hp": 72,
+    "mp": 10,
+    "statMod": 1,
+    "stats": 19
+   },
+   {
+    "exp": 35003,
+    "expMSB": 2,
+    "hp": 72,
+    "mp": 10,
+    "statMod": 1,
+    "stats": 14
+   },
+   {
+    "exp": 42745,
+    "expMSB": 2,
+    "hp": 72,
+    "mp": 10,
+    "statMod": 1,
+    "stats": 17
+   },
+   {
+    "exp": 50725,
+    "expMSB": 2,
+    "hp": 72,
+    "mp": 10,
+    "statMod": 1,
+    "stats": 6
+   },
+   {
+    "exp": 58947,
+    "expMSB": 2,
+    "hp": 72,
+    "mp": 10,
+    "statMod": 1,
+    "stats": 26
+   },
+   {
+    "exp": 1877,
+    "expMSB": 3,
+    "hp": 72,
+    "mp": 10,
+    "statMod": 1,
+    "stats": 7
+   },
+   {
+    "exp": 10592,
+    "expMSB": 3,
+    "hp": 80,
+    "mp": 10,
+    "statMod": 1,
+    "stats": 26
+   }
+  ],
+  [
+   {
+    "exp": 8320,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 7,
+    "stats": 20
+   },
+   {
+    "exp": 9266,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 8
+   },
+   {
+    "exp": 10289,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 7,
+    "stats": 20
+   },
+   {
+    "exp": 11391,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 0
+   },
+   {
+    "exp": 12578,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 7,
+    "stats": 20
+   },
+   {
+    "exp": 13851,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 7,
+    "stats": 20
+   },
+   {
+    "exp": 15215,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 8
+   },
+   {
+    "exp": 16647,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 7,
+    "stats": 4
+   },
+   {
+    "exp": 18230,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 7,
+    "stats": 4
+   },
+   {
+    "exp": 19887,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 8
+   },
+   {
+    "exp": 21648,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 7,
+    "stats": 0
+   },
+   {
+    "exp": 23518,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 8
+   },
+   {
+    "exp": 25499,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 7,
+    "stats": 0
+   },
+   {
+    "exp": 27595,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 8
+   },
+   {
+    "exp": 29810,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 0,
+    "stats": 0
+   },
+   {
+    "exp": 32147,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 8
+   },
+   {
+    "exp": 34609,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 7,
+    "stats": 0
+   },
+   {
+    "exp": 37200,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 8
+   },
+   {
+    "exp": 39924,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 0,
+    "stats": 0
+   },
+   {
+    "exp": 42784,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 8
+   },
+   {
+    "exp": 45783,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 0,
+    "stats": 0
+   },
+   {
+    "exp": 48925,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 8
+   },
+   {
+    "exp": 52213,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 3
+   },
+   {
+    "exp": 55651,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 8
+   },
+   {
+    "exp": 59243,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 3
+   },
+   {
+    "exp": 62992,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 8
+   },
+   {
+    "exp": 1365,
+    "expMSB": 1,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 3
+   },
+   {
+    "exp": 5437,
+    "expMSB": 1,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 8
+   },
+   {
+    "exp": 9678,
+    "expMSB": 1,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 0,
+    "stats": 0
+   },
+   {
+    "exp": 14089,
+    "expMSB": 1,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 11
+   },
+   {
+    "exp": 18674,
+    "expMSB": 1,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 0,
+    "stats": 0
+   },
+   {
+    "exp": 23437,
+    "expMSB": 1,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 8
+   },
+   {
+    "exp": 28381,
+    "expMSB": 1,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 0,
+    "stats": 0
+   },
+   {
+    "exp": 33510,
+    "expMSB": 1,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 3
+   },
+   {
+    "exp": 38827,
+    "expMSB": 1,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 0,
+    "stats": 0
+   },
+   {
+    "exp": 44336,
+    "expMSB": 1,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 8
+   },
+   {
+    "exp": 50041,
+    "expMSB": 1,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 0,
+    "stats": 0
+   },
+   {
+    "exp": 55944,
+    "expMSB": 1,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 3
+   },
+   {
+    "exp": 62049,
+    "expMSB": 1,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 0,
+    "stats": 0
+   },
+   {
+    "exp": 2824,
+    "expMSB": 2,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 8
+   },
+   {
+    "exp": 9343,
+    "expMSB": 2,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 0,
+    "stats": 0
+   },
+   {
+    "exp": 16076,
+    "expMSB": 2,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 3
+   },
+   {
+    "exp": 23025,
+    "expMSB": 2,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 0,
+    "stats": 0
+   },
+   {
+    "exp": 30193,
+    "expMSB": 2,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 8
+   },
+   {
+    "exp": 37585,
+    "expMSB": 2,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 0,
+    "stats": 0
+   },
+   {
+    "exp": 45203,
+    "expMSB": 2,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 3
+   },
+   {
+    "exp": 53051,
+    "expMSB": 2,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 0,
+    "stats": 0
+   },
+   {
+    "exp": 61132,
+    "expMSB": 2,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 8
+   },
+   {
+    "exp": 3915,
+    "expMSB": 3,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 0,
+    "stats": 0
+   },
+   {
+    "exp": 12475,
+    "expMSB": 3,
+    "hp": 24,
+    "mp": 0,
+    "statMod": 0,
+    "stats": 0
+   }
+  ],
+  [
+   {
+    "exp": 225,
+    "expMSB": 0,
+    "hp": 10,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 8
+   },
+   {
+    "exp": 308,
+    "expMSB": 0,
+    "hp": 10,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 7
+   },
+   {
+    "exp": 410,
+    "expMSB": 0,
+    "hp": 10,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 24
+   },
+   {
+    "exp": 537,
+    "expMSB": 0,
+    "hp": 10,
+    "mp": 0,
+    "statMod": 0,
+    "stats": 0
+   },
+   {
+    "exp": 690,
+    "expMSB": 0,
+    "hp": 10,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 31
+   },
+   {
+    "exp": 872,
+    "expMSB": 0,
+    "hp": 15,
+    "mp": 0,
+    "statMod": 0,
+    "stats": 0
+   },
+   {
+    "exp": 1086,
+    "expMSB": 0,
+    "hp": 15,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 1336,
+    "expMSB": 0,
+    "hp": 15,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 19
+   },
+   {
+    "exp": 1624,
+    "expMSB": 0,
+    "hp": 15,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 8
+   },
+   {
+    "exp": 1953,
+    "expMSB": 0,
+    "hp": 15,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 2327,
+    "expMSB": 0,
+    "hp": 15,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 11
+   },
+   {
+    "exp": 2747,
+    "expMSB": 0,
+    "hp": 15,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 3217,
+    "expMSB": 0,
+    "hp": 15,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 24
+   },
+   {
+    "exp": 3740,
+    "expMSB": 0,
+    "hp": 15,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 3
+   },
+   {
+    "exp": 4320,
+    "expMSB": 0,
+    "hp": 20,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 4957,
+    "expMSB": 0,
+    "hp": 20,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 16
+   },
+   {
+    "exp": 5657,
+    "expMSB": 0,
+    "hp": 20,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 15
+   },
+   {
+    "exp": 6421,
+    "expMSB": 0,
+    "hp": 20,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 16
+   },
+   {
+    "exp": 7253,
+    "expMSB": 0,
+    "hp": 20,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 24
+   },
+   {
+    "exp": 8156,
+    "expMSB": 0,
+    "hp": 20,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 7
+   },
+   {
+    "exp": 9132,
+    "expMSB": 0,
+    "hp": 20,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 24
+   },
+   {
+    "exp": 10184,
+    "expMSB": 0,
+    "hp": 20,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 11316,
+    "expMSB": 0,
+    "hp": 20,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 11
+   },
+   {
+    "exp": 12530,
+    "expMSB": 0,
+    "hp": 20,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 16
+   },
+   {
+    "exp": 13830,
+    "expMSB": 0,
+    "hp": 25,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 15217,
+    "expMSB": 0,
+    "hp": 25,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 19
+   },
+   {
+    "exp": 16696,
+    "expMSB": 0,
+    "hp": 25,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 12
+   },
+   {
+    "exp": 18269,
+    "expMSB": 0,
+    "hp": 25,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 16
+   },
+   {
+    "exp": 19938,
+    "expMSB": 0,
+    "hp": 25,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 27
+   },
+   {
+    "exp": 21708,
+    "expMSB": 0,
+    "hp": 25,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 23581,
+    "expMSB": 0,
+    "hp": 25,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 24
+   },
+   {
+    "exp": 25559,
+    "expMSB": 0,
+    "hp": 25,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 7
+   },
+   {
+    "exp": 27647,
+    "expMSB": 0,
+    "hp": 25,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 24
+   },
+   {
+    "exp": 29846,
+    "expMSB": 0,
+    "hp": 25,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 16
+   },
+   {
+    "exp": 32160,
+    "expMSB": 0,
+    "hp": 30,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 31
+   },
+   {
+    "exp": 34591,
+    "expMSB": 0,
+    "hp": 30,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 16
+   },
+   {
+    "exp": 37143,
+    "expMSB": 0,
+    "hp": 30,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 39818,
+    "expMSB": 0,
+    "hp": 30,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 3
+   },
+   {
+    "exp": 42620,
+    "expMSB": 0,
+    "hp": 30,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 24
+   },
+   {
+    "exp": 45551,
+    "expMSB": 0,
+    "hp": 30,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 48614,
+    "expMSB": 0,
+    "hp": 30,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 27
+   },
+   {
+    "exp": 51813,
+    "expMSB": 0,
+    "hp": 30,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 55150,
+    "expMSB": 0,
+    "hp": 30,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 24
+   },
+   {
+    "exp": 58628,
+    "expMSB": 0,
+    "hp": 30,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 19
+   },
+   {
+    "exp": 62250,
+    "expMSB": 0,
+    "hp": 35,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 482,
+    "expMSB": 1,
+    "hp": 80,
+    "mp": 0,
+    "statMod": 0,
+    "stats": 0
+   },
+   {
+    "exp": 4401,
+    "expMSB": 1,
+    "hp": 80,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 15
+   },
+   {
+    "exp": 8473,
+    "expMSB": 1,
+    "hp": 80,
+    "mp": 0,
+    "statMod": 0,
+    "stats": 0
+   },
+   {
+    "exp": 12701,
+    "expMSB": 1,
+    "hp": 80,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 24
+   },
+   {
+    "exp": 17087,
+    "expMSB": 1,
+    "hp": 80,
+    "mp": 0,
+    "statMod": 0,
+    "stats": 7
+   },
+   {
+    "exp": 21635,
+    "expMSB": 1,
+    "hp": 80,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 8
+   },
+   {
+    "exp": 26348,
+    "expMSB": 1,
+    "hp": 80,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 4
+   },
+   {
+    "exp": 31228,
+    "expMSB": 1,
+    "hp": 80,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 11
+   },
+   {
+    "exp": 36279,
+    "expMSB": 1,
+    "hp": 80,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 16
+   },
+   {
+    "exp": 41504,
+    "expMSB": 1,
+    "hp": 80,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 12
+   },
+   {
+    "exp": 46904,
+    "expMSB": 1,
+    "hp": 88,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 3
+   },
+   {
+    "exp": 52484,
+    "expMSB": 1,
+    "hp": 88,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 12
+   },
+   {
+    "exp": 58247,
+    "expMSB": 1,
+    "hp": 88,
+    "mp": 0,
+    "statMod": 0,
+    "stats": 0
+   },
+   {
+    "exp": 64194,
+    "expMSB": 1,
+    "hp": 88,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 27
+   },
+   {
+    "exp": 4794,
+    "expMSB": 2,
+    "hp": 88,
+    "mp": 0,
+    "statMod": 0,
+    "stats": 4
+   },
+   {
+    "exp": 11121,
+    "expMSB": 2,
+    "hp": 88,
+    "mp": 0,
+    "statMod": 0,
+    "stats": 8
+   },
+   {
+    "exp": 17641,
+    "expMSB": 2,
+    "hp": 88,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 7
+   },
+   {
+    "exp": 24359,
+    "expMSB": 2,
+    "hp": 88,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 8
+   },
+   {
+    "exp": 31277,
+    "expMSB": 2,
+    "hp": 88,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 16
+   },
+   {
+    "exp": 38398,
+    "expMSB": 2,
+    "hp": 88,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 15
+   }
+  ],
+  [
+   {
+    "exp": 815,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 29
+   },
+   {
+    "exp": 1035,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 21
+   },
+   {
+    "exp": 1294,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 25
+   },
+   {
+    "exp": 1594,
+    "expMSB": 0,
+    "hp": 32,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 7
+   },
+   {
+    "exp": 1938,
+    "expMSB": 0,
+    "hp": 32,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 24
+   },
+   {
+    "exp": 2330,
+    "expMSB": 0,
+    "hp": 32,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 21
+   },
+   {
+    "exp": 2773,
+    "expMSB": 0,
+    "hp": 32,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 21
+   },
+   {
+    "exp": 3270,
+    "expMSB": 0,
+    "hp": 32,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 25
+   },
+   {
+    "exp": 3825,
+    "expMSB": 0,
+    "hp": 32,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 7
+   },
+   {
+    "exp": 4440,
+    "expMSB": 0,
+    "hp": 40,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 25
+   },
+   {
+    "exp": 5118,
+    "expMSB": 0,
+    "hp": 40,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 21
+   },
+   {
+    "exp": 5863,
+    "expMSB": 0,
+    "hp": 40,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 21
+   },
+   {
+    "exp": 6678,
+    "expMSB": 0,
+    "hp": 40,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 25
+   },
+   {
+    "exp": 7566,
+    "expMSB": 0,
+    "hp": 40,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 7
+   },
+   {
+    "exp": 8531,
+    "expMSB": 0,
+    "hp": 48,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 25
+   },
+   {
+    "exp": 9575,
+    "expMSB": 0,
+    "hp": 48,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 21
+   },
+   {
+    "exp": 10701,
+    "expMSB": 0,
+    "hp": 48,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 21
+   },
+   {
+    "exp": 11914,
+    "expMSB": 0,
+    "hp": 48,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 25
+   },
+   {
+    "exp": 13216,
+    "expMSB": 0,
+    "hp": 48,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 7
+   },
+   {
+    "exp": 14610,
+    "expMSB": 0,
+    "hp": 48,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 25
+   },
+   {
+    "exp": 16099,
+    "expMSB": 0,
+    "hp": 48,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 21
+   },
+   {
+    "exp": 17687,
+    "expMSB": 0,
+    "hp": 48,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 21
+   },
+   {
+    "exp": 19376,
+    "expMSB": 0,
+    "hp": 56,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 25
+   },
+   {
+    "exp": 21171,
+    "expMSB": 0,
+    "hp": 56,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 7
+   },
+   {
+    "exp": 23073,
+    "expMSB": 0,
+    "hp": 56,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 25
+   },
+   {
+    "exp": 25087,
+    "expMSB": 0,
+    "hp": 64,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 21
+   },
+   {
+    "exp": 27216,
+    "expMSB": 0,
+    "hp": 64,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 21
+   },
+   {
+    "exp": 29462,
+    "expMSB": 0,
+    "hp": 64,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 25
+   },
+   {
+    "exp": 31829,
+    "expMSB": 0,
+    "hp": 72,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 23
+   },
+   {
+    "exp": 34320,
+    "expMSB": 0,
+    "hp": 72,
+    "mp": 8,
+    "statMod": 2,
+    "stats": 1
+   },
+   {
+    "exp": 36938,
+    "expMSB": 0,
+    "hp": 72,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 29
+   },
+   {
+    "exp": 39686,
+    "expMSB": 0,
+    "hp": 72,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 21
+   },
+   {
+    "exp": 42568,
+    "expMSB": 0,
+    "hp": 72,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 25
+   },
+   {
+    "exp": 45587,
+    "expMSB": 0,
+    "hp": 72,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 23
+   },
+   {
+    "exp": 48746,
+    "expMSB": 0,
+    "hp": 72,
+    "mp": 8,
+    "statMod": 2,
+    "stats": 1
+   },
+   {
+    "exp": 52048,
+    "expMSB": 0,
+    "hp": 72,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 29
+   },
+   {
+    "exp": 55496,
+    "expMSB": 0,
+    "hp": 80,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 21
+   },
+   {
+    "exp": 59093,
+    "expMSB": 0,
+    "hp": 80,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 25
+   },
+   {
+    "exp": 62843,
+    "expMSB": 0,
+    "hp": 80,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 23
+   },
+   {
+    "exp": 1214,
+    "expMSB": 1,
+    "hp": 80,
+    "mp": 8,
+    "statMod": 2,
+    "stats": 1
+   },
+   {
+    "exp": 5279,
+    "expMSB": 1,
+    "hp": 80,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 13
+   },
+   {
+    "exp": 9506,
+    "expMSB": 1,
+    "hp": 80,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 13898,
+    "expMSB": 1,
+    "hp": 80,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 9
+   },
+   {
+    "exp": 18459,
+    "expMSB": 1,
+    "hp": 80,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 23
+   },
+   {
+    "exp": 23192,
+    "expMSB": 1,
+    "hp": 80,
+    "mp": 8,
+    "statMod": 0,
+    "stats": 0
+   },
+   {
+    "exp": 28100,
+    "expMSB": 1,
+    "hp": 80,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 13
+   },
+   {
+    "exp": 33186,
+    "expMSB": 1,
+    "hp": 80,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 38453,
+    "expMSB": 1,
+    "hp": 80,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 9
+   },
+   {
+    "exp": 43904,
+    "expMSB": 1,
+    "hp": 80,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 22
+   },
+   {
+    "exp": 49544,
+    "expMSB": 1,
+    "hp": 88,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 1
+   },
+   {
+    "exp": 55373,
+    "expMSB": 1,
+    "hp": 88,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 12
+   },
+   {
+    "exp": 61397,
+    "expMSB": 1,
+    "hp": 88,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 21
+   },
+   {
+    "exp": 2082,
+    "expMSB": 2,
+    "hp": 88,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 8
+   },
+   {
+    "exp": 8504,
+    "expMSB": 2,
+    "hp": 88,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 23
+   },
+   {
+    "exp": 15129,
+    "expMSB": 2,
+    "hp": 88,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 0
+   },
+   {
+    "exp": 21960,
+    "expMSB": 2,
+    "hp": 88,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 13
+   },
+   {
+    "exp": 29002,
+    "expMSB": 2,
+    "hp": 88,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 36256,
+    "expMSB": 2,
+    "hp": 88,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 9
+   },
+   {
+    "exp": 43727,
+    "expMSB": 2,
+    "hp": 88,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 6
+   },
+   {
+    "exp": 51418,
+    "expMSB": 2,
+    "hp": 96,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 17
+   }
+  ],
+  [
+   {
+    "exp": 806,
+    "expMSB": 0,
+    "hp": 40,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 1029,
+    "expMSB": 0,
+    "hp": 40,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 1290,
+    "expMSB": 0,
+    "hp": 48,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 1593,
+    "expMSB": 0,
+    "hp": 48,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 1942,
+    "expMSB": 0,
+    "hp": 56,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 2339,
+    "expMSB": 0,
+    "hp": 56,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 2789,
+    "expMSB": 0,
+    "hp": 64,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 3293,
+    "expMSB": 0,
+    "hp": 64,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 3855,
+    "expMSB": 0,
+    "hp": 72,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 4480,
+    "expMSB": 0,
+    "hp": 72,
+    "mp": 0,
+    "statMod": 2,
+    "stats": 20
+   },
+   {
+    "exp": 5168,
+    "expMSB": 0,
+    "hp": 72,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 24
+   },
+   {
+    "exp": 5925,
+    "expMSB": 0,
+    "hp": 80,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 6754,
+    "expMSB": 0,
+    "hp": 80,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 7656,
+    "expMSB": 0,
+    "hp": 80,
+    "mp": 0,
+    "statMod": 2,
+    "stats": 20
+   },
+   {
+    "exp": 8637,
+    "expMSB": 0,
+    "hp": 88,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 24
+   },
+   {
+    "exp": 9699,
+    "expMSB": 0,
+    "hp": 88,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 10844,
+    "expMSB": 0,
+    "hp": 88,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 12078,
+    "expMSB": 0,
+    "hp": 88,
+    "mp": 0,
+    "statMod": 2,
+    "stats": 20
+   },
+   {
+    "exp": 13402,
+    "expMSB": 0,
+    "hp": 88,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 24
+   },
+   {
+    "exp": 14820,
+    "expMSB": 0,
+    "hp": 88,
+    "mp": 0,
+    "statMod": 2,
+    "stats": 20
+   },
+   {
+    "exp": 16335,
+    "expMSB": 0,
+    "hp": 96,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 24
+   },
+   {
+    "exp": 17950,
+    "expMSB": 0,
+    "hp": 96,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 19669,
+    "expMSB": 0,
+    "hp": 104,
+    "mp": 0,
+    "statMod": 2,
+    "stats": 20
+   },
+   {
+    "exp": 21496,
+    "expMSB": 0,
+    "hp": 104,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 24
+   },
+   {
+    "exp": 23432,
+    "expMSB": 0,
+    "hp": 112,
+    "mp": 0,
+    "statMod": 2,
+    "stats": 20
+   },
+   {
+    "exp": 25482,
+    "expMSB": 0,
+    "hp": 112,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 24
+   },
+   {
+    "exp": 27648,
+    "expMSB": 0,
+    "hp": 120,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 29934,
+    "expMSB": 0,
+    "hp": 120,
+    "mp": 0,
+    "statMod": 2,
+    "stats": 20
+   },
+   {
+    "exp": 32344,
+    "expMSB": 0,
+    "hp": 128,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 24
+   },
+   {
+    "exp": 34880,
+    "expMSB": 0,
+    "hp": 128,
+    "mp": 0,
+    "statMod": 2,
+    "stats": 20
+   },
+   {
+    "exp": 37545,
+    "expMSB": 0,
+    "hp": 128,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 24
+   },
+   {
+    "exp": 40343,
+    "expMSB": 0,
+    "hp": 136,
+    "mp": 0,
+    "statMod": 2,
+    "stats": 20
+   },
+   {
+    "exp": 43277,
+    "expMSB": 0,
+    "hp": 136,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 24
+   },
+   {
+    "exp": 46351,
+    "expMSB": 0,
+    "hp": 136,
+    "mp": 0,
+    "statMod": 2,
+    "stats": 20
+   },
+   {
+    "exp": 49567,
+    "expMSB": 0,
+    "hp": 144,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 24
+   },
+   {
+    "exp": 52929,
+    "expMSB": 0,
+    "hp": 144,
+    "mp": 0,
+    "statMod": 2,
+    "stats": 20
+   },
+   {
+    "exp": 56440,
+    "expMSB": 0,
+    "hp": 144,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 24
+   },
+   {
+    "exp": 60103,
+    "expMSB": 0,
+    "hp": 144,
+    "mp": 0,
+    "statMod": 2,
+    "stats": 20
+   },
+   {
+    "exp": 63922,
+    "expMSB": 0,
+    "hp": 144,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 24
+   },
+   {
+    "exp": 2364,
+    "expMSB": 1,
+    "hp": 144,
+    "mp": 0,
+    "statMod": 2,
+    "stats": 20
+   },
+   {
+    "exp": 6503,
+    "expMSB": 1,
+    "hp": 144,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 24
+   },
+   {
+    "exp": 10808,
+    "expMSB": 1,
+    "hp": 144,
+    "mp": 0,
+    "statMod": 2,
+    "stats": 20
+   },
+   {
+    "exp": 15281,
+    "expMSB": 1,
+    "hp": 144,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 24
+   },
+   {
+    "exp": 19926,
+    "expMSB": 1,
+    "hp": 144,
+    "mp": 0,
+    "statMod": 2,
+    "stats": 20
+   },
+   {
+    "exp": 24746,
+    "expMSB": 1,
+    "hp": 144,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 24
+   },
+   {
+    "exp": 29744,
+    "expMSB": 1,
+    "hp": 144,
+    "mp": 0,
+    "statMod": 2,
+    "stats": 20
+   },
+   {
+    "exp": 34924,
+    "expMSB": 1,
+    "hp": 144,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 24
+   },
+   {
+    "exp": 40288,
+    "expMSB": 1,
+    "hp": 144,
+    "mp": 0,
+    "statMod": 2,
+    "stats": 20
+   },
+   {
+    "exp": 45840,
+    "expMSB": 1,
+    "hp": 144,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 24
+   },
+   {
+    "exp": 51584,
+    "expMSB": 1,
+    "hp": 152,
+    "mp": 0,
+    "statMod": 2,
+    "stats": 20
+   },
+   {
+    "exp": 57521,
+    "expMSB": 1,
+    "hp": 0,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 63657,
+    "expMSB": 1,
+    "hp": 0,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 4457,
+    "expMSB": 2,
+    "hp": 0,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 10997,
+    "expMSB": 2,
+    "hp": 0,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 17745,
+    "expMSB": 2,
+    "hp": 0,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 24703,
+    "expMSB": 2,
+    "hp": 0,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 31876,
+    "expMSB": 2,
+    "hp": 0,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 39265,
+    "expMSB": 2,
+    "hp": 0,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 46875,
+    "expMSB": 2,
+    "hp": 0,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 54708,
+    "expMSB": 2,
+    "hp": 0,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 20
+   }
+  ],
+  [
+   {
+    "exp": 735,
+    "expMSB": 0,
+    "hp": 16,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 22
+   },
+   {
+    "exp": 932,
+    "expMSB": 0,
+    "hp": 16,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 22
+   },
+   {
+    "exp": 1162,
+    "expMSB": 0,
+    "hp": 16,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 26
+   },
+   {
+    "exp": 1429,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 22
+   },
+   {
+    "exp": 1736,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 3
+   },
+   {
+    "exp": 2085,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 22
+   },
+   {
+    "exp": 2479,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 30
+   },
+   {
+    "exp": 2921,
+    "expMSB": 0,
+    "hp": 32,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 18
+   },
+   {
+    "exp": 3413,
+    "expMSB": 0,
+    "hp": 32,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 22
+   },
+   {
+    "exp": 3960,
+    "expMSB": 0,
+    "hp": 32,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 11
+   },
+   {
+    "exp": 4562,
+    "expMSB": 0,
+    "hp": 32,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 22
+   },
+   {
+    "exp": 5224,
+    "expMSB": 0,
+    "hp": 32,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 6
+   },
+   {
+    "exp": 5948,
+    "expMSB": 0,
+    "hp": 32,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 26
+   },
+   {
+    "exp": 6737,
+    "expMSB": 0,
+    "hp": 32,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 6
+   },
+   {
+    "exp": 7593,
+    "expMSB": 0,
+    "hp": 32,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 19
+   },
+   {
+    "exp": 8520,
+    "expMSB": 0,
+    "hp": 32,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 14
+   },
+   {
+    "exp": 9521,
+    "expMSB": 0,
+    "hp": 32,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 22
+   },
+   {
+    "exp": 10597,
+    "expMSB": 0,
+    "hp": 32,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 2
+   },
+   {
+    "exp": 11752,
+    "expMSB": 0,
+    "hp": 32,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 30
+   },
+   {
+    "exp": 12990,
+    "expMSB": 0,
+    "hp": 40,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 3
+   },
+   {
+    "exp": 14331,
+    "expMSB": 0,
+    "hp": 40,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 6
+   },
+   {
+    "exp": 15720,
+    "expMSB": 0,
+    "hp": 40,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 14
+   },
+   {
+    "exp": 17220,
+    "expMSB": 0,
+    "hp": 40,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 2
+   },
+   {
+    "exp": 18812,
+    "expMSB": 0,
+    "hp": 40,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 22
+   },
+   {
+    "exp": 20501,
+    "expMSB": 0,
+    "hp": 48,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 11
+   },
+   {
+    "exp": 22288,
+    "expMSB": 0,
+    "hp": 48,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 6
+   },
+   {
+    "exp": 24176,
+    "expMSB": 0,
+    "hp": 48,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 6
+   },
+   {
+    "exp": 26169,
+    "expMSB": 0,
+    "hp": 48,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 10
+   },
+   {
+    "exp": 28269,
+    "expMSB": 0,
+    "hp": 48,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 22
+   },
+   {
+    "exp": 30480,
+    "expMSB": 0,
+    "hp": 48,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 3
+   },
+   {
+    "exp": 32802,
+    "expMSB": 0,
+    "hp": 48,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 14
+   },
+   {
+    "exp": 35241,
+    "expMSB": 0,
+    "hp": 48,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 6
+   },
+   {
+    "exp": 37798,
+    "expMSB": 0,
+    "hp": 56,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 2
+   },
+   {
+    "exp": 40476,
+    "expMSB": 0,
+    "hp": 56,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 30
+   },
+   {
+    "exp": 43278,
+    "expMSB": 0,
+    "hp": 56,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 3
+   },
+   {
+    "exp": 46207,
+    "expMSB": 0,
+    "hp": 56,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 6
+   },
+   {
+    "exp": 49266,
+    "expMSB": 0,
+    "hp": 56,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 14
+   },
+   {
+    "exp": 52458,
+    "expMSB": 0,
+    "hp": 56,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 2
+   },
+   {
+    "exp": 55785,
+    "expMSB": 0,
+    "hp": 56,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 22
+   },
+   {
+    "exp": 59250,
+    "expMSB": 0,
+    "hp": 56,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 11
+   },
+   {
+    "exp": 62855,
+    "expMSB": 0,
+    "hp": 56,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 11
+   },
+   {
+    "exp": 1069,
+    "expMSB": 1,
+    "hp": 56,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 14
+   },
+   {
+    "exp": 4966,
+    "expMSB": 1,
+    "hp": 56,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 18
+   },
+   {
+    "exp": 9012,
+    "expMSB": 1,
+    "hp": 56,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 6
+   },
+   {
+    "exp": 13210,
+    "expMSB": 1,
+    "hp": 64,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 27
+   },
+   {
+    "exp": 17563,
+    "expMSB": 1,
+    "hp": 64,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 6
+   },
+   {
+    "exp": 22074,
+    "expMSB": 1,
+    "hp": 64,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 30
+   },
+   {
+    "exp": 26746,
+    "expMSB": 1,
+    "hp": 64,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 2
+   },
+   {
+    "exp": 31582,
+    "expMSB": 1,
+    "hp": 64,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 22
+   },
+   {
+    "exp": 36584,
+    "expMSB": 1,
+    "hp": 64,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 11
+   },
+   {
+    "exp": 41755,
+    "expMSB": 1,
+    "hp": 64,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 22
+   },
+   {
+    "exp": 47098,
+    "expMSB": 1,
+    "hp": 64,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 14
+   },
+   {
+    "exp": 52616,
+    "expMSB": 1,
+    "hp": 64,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 18
+   },
+   {
+    "exp": 58311,
+    "expMSB": 1,
+    "hp": 64,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 6
+   },
+   {
+    "exp": 64187,
+    "expMSB": 1,
+    "hp": 64,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 27
+   },
+   {
+    "exp": 4711,
+    "expMSB": 2,
+    "hp": 64,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 6
+   },
+   {
+    "exp": 10956,
+    "expMSB": 2,
+    "hp": 64,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 30
+   },
+   {
+    "exp": 17391,
+    "expMSB": 2,
+    "hp": 64,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 2
+   },
+   {
+    "exp": 24017,
+    "expMSB": 2,
+    "hp": 64,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 22
+   },
+   {
+    "exp": 30838,
+    "expMSB": 2,
+    "hp": 72,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 11
+   }
+  ],
+  [
+   {
+    "exp": 735,
+    "expMSB": 0,
+    "hp": 16,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 9
+   },
+   {
+    "exp": 932,
+    "expMSB": 0,
+    "hp": 16,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 21
+   },
+   {
+    "exp": 1162,
+    "expMSB": 0,
+    "hp": 16,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 9
+   },
+   {
+    "exp": 1429,
+    "expMSB": 0,
+    "hp": 16,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 1
+   },
+   {
+    "exp": 1736,
+    "expMSB": 0,
+    "hp": 16,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 31
+   },
+   {
+    "exp": 2085,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 1
+   },
+   {
+    "exp": 2479,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 29
+   },
+   {
+    "exp": 2921,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 1
+   },
+   {
+    "exp": 3413,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 9
+   },
+   {
+    "exp": 3960,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 23
+   },
+   {
+    "exp": 4562,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 9
+   },
+   {
+    "exp": 5224,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 21
+   },
+   {
+    "exp": 5948,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 9
+   },
+   {
+    "exp": 6737,
+    "expMSB": 0,
+    "hp": 32,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 1
+   },
+   {
+    "exp": 7593,
+    "expMSB": 0,
+    "hp": 32,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 31
+   },
+   {
+    "exp": 8520,
+    "expMSB": 0,
+    "hp": 32,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 1
+   },
+   {
+    "exp": 9521,
+    "expMSB": 0,
+    "hp": 32,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 13
+   },
+   {
+    "exp": 10597,
+    "expMSB": 0,
+    "hp": 32,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 17
+   },
+   {
+    "exp": 11752,
+    "expMSB": 0,
+    "hp": 32,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 9
+   },
+   {
+    "exp": 12990,
+    "expMSB": 0,
+    "hp": 32,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 7
+   },
+   {
+    "exp": 14311,
+    "expMSB": 0,
+    "hp": 32,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 9
+   },
+   {
+    "exp": 15720,
+    "expMSB": 0,
+    "hp": 40,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 21
+   },
+   {
+    "exp": 17220,
+    "expMSB": 0,
+    "hp": 40,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 1
+   },
+   {
+    "exp": 18812,
+    "expMSB": 0,
+    "hp": 40,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 9
+   },
+   {
+    "exp": 20501,
+    "expMSB": 0,
+    "hp": 40,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 7
+   },
+   {
+    "exp": 22288,
+    "expMSB": 0,
+    "hp": 40,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 1
+   },
+   {
+    "exp": 24176,
+    "expMSB": 0,
+    "hp": 40,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 29
+   },
+   {
+    "exp": 26169,
+    "expMSB": 0,
+    "hp": 40,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 1
+   },
+   {
+    "exp": 28269,
+    "expMSB": 0,
+    "hp": 40,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 1
+   },
+   {
+    "exp": 30480,
+    "expMSB": 0,
+    "hp": 48,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 15
+   },
+   {
+    "exp": 32802,
+    "expMSB": 0,
+    "hp": 48,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 1
+   },
+   {
+    "exp": 35241,
+    "expMSB": 0,
+    "hp": 48,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 13
+   },
+   {
+    "exp": 37798,
+    "expMSB": 0,
+    "hp": 48,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 1
+   },
+   {
+    "exp": 40476,
+    "expMSB": 0,
+    "hp": 48,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 17
+   },
+   {
+    "exp": 43278,
+    "expMSB": 0,
+    "hp": 48,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 15
+   },
+   {
+    "exp": 46207,
+    "expMSB": 0,
+    "hp": 48,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 1
+   },
+   {
+    "exp": 49266,
+    "expMSB": 0,
+    "hp": 48,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 13
+   },
+   {
+    "exp": 52458,
+    "expMSB": 0,
+    "hp": 56,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 1
+   },
+   {
+    "exp": 55785,
+    "expMSB": 0,
+    "hp": 56,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 1
+   },
+   {
+    "exp": 59250,
+    "expMSB": 0,
+    "hp": 56,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 31
+   },
+   {
+    "exp": 62855,
+    "expMSB": 0,
+    "hp": 56,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 1
+   },
+   {
+    "exp": 1069,
+    "expMSB": 1,
+    "hp": 56,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 9
+   },
+   {
+    "exp": 4966,
+    "expMSB": 1,
+    "hp": 56,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 5
+   },
+   {
+    "exp": 9012,
+    "expMSB": 1,
+    "hp": 56,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 1
+   },
+   {
+    "exp": 13210,
+    "expMSB": 1,
+    "hp": 56,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 27
+   },
+   {
+    "exp": 17563,
+    "expMSB": 1,
+    "hp": 56,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 5
+   },
+   {
+    "exp": 17563,
+    "expMSB": 1,
+    "hp": 56,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 9
+   },
+   {
+    "exp": 26746,
+    "expMSB": 1,
+    "hp": 56,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 1
+   },
+   {
+    "exp": 31582,
+    "expMSB": 1,
+    "hp": 56,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 5
+   },
+   {
+    "exp": 36584,
+    "expMSB": 1,
+    "hp": 56,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 27
+   },
+   {
+    "exp": 41755,
+    "expMSB": 1,
+    "hp": 56,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 1
+   },
+   {
+    "exp": 47098,
+    "expMSB": 1,
+    "hp": 56,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 13
+   },
+   {
+    "exp": 52616,
+    "expMSB": 1,
+    "hp": 56,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 1
+   },
+   {
+    "exp": 58311,
+    "expMSB": 1,
+    "hp": 56,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 1
+   },
+   {
+    "exp": 64187,
+    "expMSB": 1,
+    "hp": 64,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 31
+   },
+   {
+    "exp": 4711,
+    "expMSB": 2,
+    "hp": 64,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 1
+   },
+   {
+    "exp": 10956,
+    "expMSB": 2,
+    "hp": 64,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 9
+   },
+   {
+    "exp": 17391,
+    "expMSB": 2,
+    "hp": 64,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 5
+   },
+   {
+    "exp": 24017,
+    "expMSB": 2,
+    "hp": 64,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 1
+   },
+   {
+    "exp": 30838,
+    "expMSB": 2,
+    "hp": 64,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 27
+   }
+  ],
+  [
+   {
+    "exp": 23,
+    "expMSB": 0,
+    "hp": 16,
+    "mp": 4,
+    "statMod": 0,
+    "stats": 1
+   },
+   {
+    "exp": 42,
+    "expMSB": 0,
+    "hp": 16,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 2
+   },
+   {
+    "exp": 70,
+    "expMSB": 0,
+    "hp": 16,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 21
+   },
+   {
+    "exp": 109,
+    "expMSB": 0,
+    "hp": 16,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 8
+   },
+   {
+    "exp": 163,
+    "expMSB": 0,
+    "hp": 16,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 3
+   },
+   {
+    "exp": 233,
+    "expMSB": 0,
+    "hp": 16,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 21
+   },
+   {
+    "exp": 324,
+    "expMSB": 0,
+    "hp": 16,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 3
+   },
+   {
+    "exp": 438,
+    "expMSB": 0,
+    "hp": 16,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 578,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 11
+   },
+   {
+    "exp": 746,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 945,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 1
+   },
+   {
+    "exp": 1180,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 22
+   },
+   {
+    "exp": 1451,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 4,
+    "statMod": 0,
+    "stats": 0
+   },
+   {
+    "exp": 1763,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 21
+   },
+   {
+    "exp": 2117,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 4,
+    "statMod": 0,
+    "stats": 2
+   },
+   {
+    "exp": 2518,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 21
+   },
+   {
+    "exp": 2967,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 22
+   },
+   {
+    "exp": 3468,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 4024,
+    "expMSB": 0,
+    "hp": 24,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 31
+   },
+   {
+    "exp": 4636,
+    "expMSB": 0,
+    "hp": 32,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 5309,
+    "expMSB": 0,
+    "hp": 32,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 27
+   },
+   {
+    "exp": 6045,
+    "expMSB": 0,
+    "hp": 32,
+    "mp": 4,
+    "statMod": 2,
+    "stats": 20
+   },
+   {
+    "exp": 6847,
+    "expMSB": 0,
+    "hp": 32,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 30
+   },
+   {
+    "exp": 7718,
+    "expMSB": 0,
+    "hp": 32,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 21
+   },
+   {
+    "exp": 8661,
+    "expMSB": 0,
+    "hp": 32,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 30
+   },
+   {
+    "exp": 9678,
+    "expMSB": 0,
+    "hp": 32,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 21
+   },
+   {
+    "exp": 10773,
+    "expMSB": 0,
+    "hp": 32,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 26
+   },
+   {
+    "exp": 11947,
+    "expMSB": 0,
+    "hp": 32,
+    "mp": 4,
+    "statMod": 2,
+    "stats": 20
+   },
+   {
+    "exp": 13206,
+    "expMSB": 0,
+    "hp": 32,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 31
+   },
+   {
+    "exp": 14550,
+    "expMSB": 0,
+    "hp": 40,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 15983,
+    "expMSB": 0,
+    "hp": 48,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 27
+   },
+   {
+    "exp": 17507,
+    "expMSB": 0,
+    "hp": 56,
+    "mp": 4,
+    "statMod": 2,
+    "stats": 20
+   },
+   {
+    "exp": 19127,
+    "expMSB": 0,
+    "hp": 64,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 27
+   },
+   {
+    "exp": 20844,
+    "expMSB": 0,
+    "hp": 72,
+    "mp": 4,
+    "statMod": 2,
+    "stats": 20
+   },
+   {
+    "exp": 22661,
+    "expMSB": 0,
+    "hp": 72,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 31
+   },
+   {
+    "exp": 24582,
+    "expMSB": 0,
+    "hp": 80,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 26608,
+    "expMSB": 0,
+    "hp": 80,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 27
+   },
+   {
+    "exp": 28744,
+    "expMSB": 0,
+    "hp": 88,
+    "mp": 4,
+    "statMod": 2,
+    "stats": 20
+   },
+   {
+    "exp": 30992,
+    "expMSB": 0,
+    "hp": 88,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 27
+   },
+   {
+    "exp": 33354,
+    "expMSB": 0,
+    "hp": 96,
+    "mp": 4,
+    "statMod": 2,
+    "stats": 20
+   },
+   {
+    "exp": 35834,
+    "expMSB": 0,
+    "hp": 96,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 27
+   },
+   {
+    "exp": 38434,
+    "expMSB": 0,
+    "hp": 96,
+    "mp": 4,
+    "statMod": 2,
+    "stats": 20
+   },
+   {
+    "exp": 41157,
+    "expMSB": 0,
+    "hp": 96,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 27
+   },
+   {
+    "exp": 44007,
+    "expMSB": 0,
+    "hp": 96,
+    "mp": 4,
+    "statMod": 2,
+    "stats": 20
+   },
+   {
+    "exp": 46986,
+    "expMSB": 0,
+    "hp": 104,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 27
+   },
+   {
+    "exp": 50097,
+    "expMSB": 0,
+    "hp": 104,
+    "mp": 4,
+    "statMod": 2,
+    "stats": 20
+   },
+   {
+    "exp": 53342,
+    "expMSB": 0,
+    "hp": 104,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 27
+   },
+   {
+    "exp": 56726,
+    "expMSB": 0,
+    "hp": 104,
+    "mp": 4,
+    "statMod": 2,
+    "stats": 20
+   },
+   {
+    "exp": 60250,
+    "expMSB": 0,
+    "hp": 104,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 27
+   },
+   {
+    "exp": 63917,
+    "expMSB": 0,
+    "hp": 104,
+    "mp": 4,
+    "statMod": 2,
+    "stats": 20
+   },
+   {
+    "exp": 2194,
+    "expMSB": 1,
+    "hp": 104,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 27
+   },
+   {
+    "exp": 6157,
+    "expMSB": 1,
+    "hp": 104,
+    "mp": 4,
+    "statMod": 2,
+    "stats": 20
+   },
+   {
+    "exp": 10271,
+    "expMSB": 1,
+    "hp": 104,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 27
+   },
+   {
+    "exp": 14541,
+    "expMSB": 1,
+    "hp": 104,
+    "mp": 4,
+    "statMod": 2,
+    "stats": 20
+   },
+   {
+    "exp": 18968,
+    "expMSB": 1,
+    "hp": 104,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 27
+   },
+   {
+    "exp": 23556,
+    "expMSB": 1,
+    "hp": 104,
+    "mp": 4,
+    "statMod": 2,
+    "stats": 20
+   },
+   {
+    "exp": 28307,
+    "expMSB": 1,
+    "hp": 104,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 27
+   },
+   {
+    "exp": 33225,
+    "expMSB": 1,
+    "hp": 104,
+    "mp": 4,
+    "statMod": 2,
+    "stats": 20
+   },
+   {
+    "exp": 38312,
+    "expMSB": 1,
+    "hp": 104,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 31
+   },
+   {
+    "exp": 43570,
+    "expMSB": 1,
+    "hp": 112,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 49004,
+    "expMSB": 1,
+    "hp": 112,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 29
+   },
+   {
+    "exp": 54616,
+    "expMSB": 1,
+    "hp": 112,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 22
+   },
+   {
+    "exp": 60408,
+    "expMSB": 1,
+    "hp": 112,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 29
+   },
+   {
+    "exp": 848,
+    "expMSB": 2,
+    "hp": 112,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 22
+   },
+   {
+    "exp": 7011,
+    "expMSB": 2,
+    "hp": 112,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 29
+   },
+   {
+    "exp": 13362,
+    "expMSB": 2,
+    "hp": 112,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 22
+   },
+   {
+    "exp": 19906,
+    "expMSB": 2,
+    "hp": 112,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 29
+   },
+   {
+    "exp": 26645,
+    "expMSB": 2,
+    "hp": 112,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 22
+   },
+   {
+    "exp": 33582,
+    "expMSB": 2,
+    "hp": 128,
+    "mp": 8,
+    "statMod": 1,
+    "stats": 29
+   }
+  ],
+  [
+   {
+    "exp": 5345,
+    "expMSB": 0,
+    "hp": 64,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 6120,
+    "expMSB": 0,
+    "hp": 64,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 6967,
+    "expMSB": 0,
+    "hp": 72,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 7891,
+    "expMSB": 0,
+    "hp": 72,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 8893,
+    "expMSB": 0,
+    "hp": 72,
+    "mp": 0,
+    "statMod": 2,
+    "stats": 20
+   },
+   {
+    "exp": 9978,
+    "expMSB": 0,
+    "hp": 80,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 24
+   },
+   {
+    "exp": 11149,
+    "expMSB": 0,
+    "hp": 80,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 12409,
+    "expMSB": 0,
+    "hp": 80,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 13761,
+    "expMSB": 0,
+    "hp": 80,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 15210,
+    "expMSB": 0,
+    "hp": 88,
+    "mp": 0,
+    "statMod": 2,
+    "stats": 20
+   },
+   {
+    "exp": 16757,
+    "expMSB": 0,
+    "hp": 88,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 16
+   },
+   {
+    "exp": 18406,
+    "expMSB": 0,
+    "hp": 88,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 20161,
+    "expMSB": 0,
+    "hp": 96,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 22025,
+    "expMSB": 0,
+    "hp": 96,
+    "mp": 0,
+    "statMod": 2,
+    "stats": 20
+   },
+   {
+    "exp": 24001,
+    "expMSB": 0,
+    "hp": 96,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 24
+   },
+   {
+    "exp": 26092,
+    "expMSB": 0,
+    "hp": 104,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 28303,
+    "expMSB": 0,
+    "hp": 104,
+    "mp": 0,
+    "statMod": 2,
+    "stats": 20
+   },
+   {
+    "exp": 30635,
+    "expMSB": 0,
+    "hp": 104,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 24
+   },
+   {
+    "exp": 33093,
+    "expMSB": 0,
+    "hp": 112,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 35680,
+    "expMSB": 0,
+    "hp": 112,
+    "mp": 0,
+    "statMod": 2,
+    "stats": 20
+   },
+   {
+    "exp": 38398,
+    "expMSB": 0,
+    "hp": 112,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 24
+   },
+   {
+    "exp": 41252,
+    "expMSB": 0,
+    "hp": 120,
+    "mp": 0,
+    "statMod": 2,
+    "stats": 20
+   },
+   {
+    "exp": 44244,
+    "expMSB": 0,
+    "hp": 120,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 24
+   },
+   {
+    "exp": 47379,
+    "expMSB": 0,
+    "hp": 120,
+    "mp": 0,
+    "statMod": 2,
+    "stats": 20
+   },
+   {
+    "exp": 50658,
+    "expMSB": 0,
+    "hp": 120,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 24
+   },
+   {
+    "exp": 54086,
+    "expMSB": 0,
+    "hp": 128,
+    "mp": 0,
+    "statMod": 2,
+    "stats": 20
+   },
+   {
+    "exp": 57666,
+    "expMSB": 0,
+    "hp": 128,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 24
+   },
+   {
+    "exp": 61401,
+    "expMSB": 0,
+    "hp": 128,
+    "mp": 0,
+    "statMod": 2,
+    "stats": 20
+   },
+   {
+    "exp": 65294,
+    "expMSB": 0,
+    "hp": 136,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 24
+   },
+   {
+    "exp": 3814,
+    "expMSB": 1,
+    "hp": 136,
+    "mp": 0,
+    "statMod": 2,
+    "stats": 20
+   },
+   {
+    "exp": 8034,
+    "expMSB": 1,
+    "hp": 136,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 12422,
+    "expMSB": 1,
+    "hp": 136,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 16982,
+    "expMSB": 1,
+    "hp": 136,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 21717,
+    "expMSB": 1,
+    "hp": 136,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 26630,
+    "expMSB": 1,
+    "hp": 136,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 31724,
+    "expMSB": 1,
+    "hp": 136,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 37004,
+    "expMSB": 1,
+    "hp": 136,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 42471,
+    "expMSB": 1,
+    "hp": 136,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 48130,
+    "expMSB": 1,
+    "hp": 136,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 53984,
+    "expMSB": 1,
+    "hp": 144,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 60035,
+    "expMSB": 1,
+    "hp": 144,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 4
+   },
+   {
+    "exp": 752,
+    "expMSB": 2,
+    "hp": 144,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 7209,
+    "expMSB": 2,
+    "hp": 144,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 13875,
+    "expMSB": 2,
+    "hp": 144,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 12
+   },
+   {
+    "exp": 20751,
+    "expMSB": 2,
+    "hp": 144,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 27842,
+    "expMSB": 2,
+    "hp": 144,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 4
+   },
+   {
+    "exp": 35151,
+    "expMSB": 2,
+    "hp": 144,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 42681,
+    "expMSB": 2,
+    "hp": 144,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 50435,
+    "expMSB": 2,
+    "hp": 144,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 12
+   },
+   {
+    "exp": 58418,
+    "expMSB": 2,
+    "hp": 152,
+    "mp": 0,
+    "statMod": 1,
+    "stats": 20
+   }
+  ],
+  [
+   {
+    "exp": 9384,
+    "expMSB": 0,
+    "hp": 50,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 29
+   },
+   {
+    "exp": 10404,
+    "expMSB": 0,
+    "hp": 50,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 30
+   },
+   {
+    "exp": 11497,
+    "expMSB": 0,
+    "hp": 58,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 16
+   },
+   {
+    "exp": 12668,
+    "expMSB": 0,
+    "hp": 58,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 30
+   },
+   {
+    "exp": 13920,
+    "expMSB": 0,
+    "hp": 58,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 29
+   },
+   {
+    "exp": 15253,
+    "expMSB": 0,
+    "hp": 58,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 18
+   },
+   {
+    "exp": 16673,
+    "expMSB": 0,
+    "hp": 58,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 18181,
+    "expMSB": 0,
+    "hp": 58,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 31
+   },
+   {
+    "exp": 19779,
+    "expMSB": 0,
+    "hp": 58,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 24
+   },
+   {
+    "exp": 21472,
+    "expMSB": 0,
+    "hp": 58,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 22
+   },
+   {
+    "exp": 23261,
+    "expMSB": 0,
+    "hp": 58,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 29
+   },
+   {
+    "exp": 25150,
+    "expMSB": 0,
+    "hp": 58,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 26
+   },
+   {
+    "exp": 27141,
+    "expMSB": 0,
+    "hp": 58,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 29236,
+    "expMSB": 0,
+    "hp": 66,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 30
+   },
+   {
+    "exp": 31440,
+    "expMSB": 0,
+    "hp": 66,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 25
+   },
+   {
+    "exp": 33753,
+    "expMSB": 0,
+    "hp": 66,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 22
+   },
+   {
+    "exp": 36180,
+    "expMSB": 0,
+    "hp": 66,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 38723,
+    "expMSB": 0,
+    "hp": 66,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 27
+   },
+   {
+    "exp": 41384,
+    "expMSB": 0,
+    "hp": 66,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 44167,
+    "expMSB": 0,
+    "hp": 66,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 30
+   },
+   {
+    "exp": 47074,
+    "expMSB": 0,
+    "hp": 74,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 25
+   },
+   {
+    "exp": 50108,
+    "expMSB": 0,
+    "hp": 74,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 22
+   },
+   {
+    "exp": 53272,
+    "expMSB": 0,
+    "hp": 74,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 28
+   },
+   {
+    "exp": 56568,
+    "expMSB": 0,
+    "hp": 74,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 26
+   },
+   {
+    "exp": 60000,
+    "expMSB": 0,
+    "hp": 74,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 29
+   },
+   {
+    "exp": 63569,
+    "expMSB": 0,
+    "hp": 74,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 22
+   },
+   {
+    "exp": 1743,
+    "expMSB": 1,
+    "hp": 74,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 24
+   },
+   {
+    "exp": 5597,
+    "expMSB": 1,
+    "hp": 74,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 14
+   },
+   {
+    "exp": 9597,
+    "expMSB": 1,
+    "hp": 74,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 21
+   },
+   {
+    "exp": 13746,
+    "expMSB": 1,
+    "hp": 82,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 26
+   },
+   {
+    "exp": 18047,
+    "expMSB": 1,
+    "hp": 82,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 12
+   },
+   {
+    "exp": 22502,
+    "expMSB": 1,
+    "hp": 82,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 22
+   },
+   {
+    "exp": 27115,
+    "expMSB": 1,
+    "hp": 82,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 25
+   },
+   {
+    "exp": 31888,
+    "expMSB": 1,
+    "hp": 82,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 14
+   },
+   {
+    "exp": 36824,
+    "expMSB": 1,
+    "hp": 90,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 20
+   },
+   {
+    "exp": 41925,
+    "expMSB": 1,
+    "hp": 90,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 26
+   },
+   {
+    "exp": 47194,
+    "expMSB": 1,
+    "hp": 90,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 13
+   },
+   {
+    "exp": 52635,
+    "expMSB": 1,
+    "hp": 90,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 22
+   },
+   {
+    "exp": 58250,
+    "expMSB": 1,
+    "hp": 90,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 24
+   },
+   {
+    "exp": 64041,
+    "expMSB": 1,
+    "hp": 90,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 14
+   },
+   {
+    "exp": 4476,
+    "expMSB": 2,
+    "hp": 98,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 21
+   },
+   {
+    "exp": 10628,
+    "expMSB": 2,
+    "hp": 98,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 26
+   },
+   {
+    "exp": 16966,
+    "expMSB": 2,
+    "hp": 98,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 12
+   },
+   {
+    "exp": 23492,
+    "expMSB": 2,
+    "hp": 98,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 22
+   },
+   {
+    "exp": 30208,
+    "expMSB": 2,
+    "hp": 98,
+    "mp": 4,
+    "statMod": 1,
+    "stats": 25
+   }
+  ],
+  [
+   {
+    "exp": 16707,
+    "expMSB": 1,
+    "hp": 20,
+    "mp": 0,
+    "statMod": 0,
+    "stats": 0
+   },
+   {
+    "exp": 21640,
+    "expMSB": 1,
+    "hp": 20,
+    "mp": 0,
+    "statMod": 0,
+    "stats": 0
+   },
+   {
+    "exp": 26767,
+    "expMSB": 1,
+    "hp": 20,
+    "mp": 0,
+    "statMod": 0,
+    "stats": 0
+   },
+   {
+    "exp": 32091,
+    "expMSB": 1,
+    "hp": 20,
+    "mp": 0,
+    "statMod": 0,
+    "stats": 0
+   },
+   {
+    "exp": 37616,
+    "expMSB": 1,
+    "hp": 20,
+    "mp": 0,
+    "statMod": 0,
+    "stats": 0
+   },
+   {
+    "exp": 43345,
+    "expMSB": 1,
+    "hp": 20,
+    "mp": 0,
+    "statMod": 0,
+    "stats": 0
+   },
+   {
+    "exp": 49283,
+    "expMSB": 1,
+    "hp": 20,
+    "mp": 0,
+    "statMod": 0,
+    "stats": 0
+   },
+   {
+    "exp": 55433,
+    "expMSB": 1,
+    "hp": 20,
+    "mp": 0,
+    "statMod": 0,
+    "stats": 0
+   },
+   {
+    "exp": 61798,
+    "expMSB": 1,
+    "hp": 20,
+    "mp": 0,
+    "statMod": 0,
+    "stats": 0
+   },
+   {
+    "exp": 2848,
+    "expMSB": 2,
+    "hp": 20,
+    "mp": 0,
+    "statMod": 0,
+    "stats": 0
+   },
+   {
+    "exp": 9656,
+    "expMSB": 2,
+    "hp": 20,
+    "mp": 0,
+    "statMod": 0,
+    "stats": 0
+   },
+   {
+    "exp": 16691,
+    "expMSB": 2,
+    "hp": 20,
+    "mp": 0,
+    "statMod": 0,
+    "stats": 0
+   },
+   {
+    "exp": 23957,
+    "expMSB": 2,
+    "hp": 20,
+    "mp": 0,
+    "statMod": 0,
+    "stats": 0
+   },
+   {
+    "exp": 31457,
+    "expMSB": 2,
+    "hp": 20,
+    "mp": 0,
+    "statMod": 0,
+    "stats": 0
+   },
+   {
+    "exp": 39195,
+    "expMSB": 2,
+    "hp": 20,
+    "mp": 0,
+    "statMod": 0,
+    "stats": 0
+   },
+   {
+    "exp": 47175,
+    "expMSB": 2,
+    "hp": 20,
+    "mp": 0,
+    "statMod": 0,
+    "stats": 0
+   },
+   {
+    "exp": 55401,
+    "expMSB": 2,
+    "hp": 20,
+    "mp": 0,
+    "statMod": 0,
+    "stats": 0
+   },
+   {
+    "exp": 63875,
+    "expMSB": 2,
+    "hp": 20,
+    "mp": 0,
+    "statMod": 0,
+    "stats": 0
+   },
+   {
+    "exp": 7067,
+    "expMSB": 3,
+    "hp": 20,
+    "mp": 0,
+    "statMod": 0,
+    "stats": 0
+   },
+   {
+    "exp": 16052,
+    "expMSB": 3,
+    "hp": 20,
+    "mp": 8,
+    "statMod": 0,
+    "stats": 0
+   }
+  ]
+ ],
+ "statusName": [
+  "Swoon",
+  "Stone",
+  "Toad",
+  "Small",
+  "Pig",
+  "Mute",
+  "Darkness",
+  "Poison",
+  "Curse",
+  "Float",
+  "Paralyze",
+  "Sleep",
+  "Charm",
+  "Berserk",
+  "Petrify",
+  "D",
+  "D",
+  "Stop",
+  "D",
+  "D",
+  "D",
+  "D",
+  "D",
+  "Count",
+  "D",
+  "D",
+  "Wall",
+  "Barrier",
+  "D",
+  "D",
+  "D",
+  "D"
+ ]
+}
