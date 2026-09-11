@@ -331,9 +331,10 @@ static int g_autopress;      /* headless smoke: self-press        */
 
 uint32_t io_just(void)
 {
-    /* headless smoke: auto-press after many polls so the menu cannot
-       block forever without real input (only when g_autopress, i.e.
-       SDL dummy driver or FF4_AUTOPRESS=1; real displays stay manual). */
+    /* auto-press paths: headless (dummy driver / FF4_AUTOPRESS=1) presses
+       on a cadence so menus cannot block a smoke run; real displays
+       auto-advance after ~60s of no input so a session can never hang
+       (a real key press always wins first). */
     static int jc;
     static int hold;
     if (g_autopress) {
@@ -348,7 +349,20 @@ uint32_t io_just(void)
             return 1;
         }
     }
-    return g_in.keypress;
+    if (g_in.keypress) {
+        jc = 0;
+        return 1;
+    }
+    if (jc++ > 3600) {             /* ~60s at 60fps with no input      */
+        jc = 0;
+        static int warned;
+        if (!warned) {
+            warned = 1;
+            fprintf(stderr, "[port] no input for ~60s; auto-advancing\n");
+        }
+        return 1;
+    }
+    return 0;
 }
 uint32_t io_go(void)              { return io_just(); }
 uint32_t gate(uint32_t id)        { (void)id; return io_just(); }
@@ -403,6 +417,14 @@ void device_poll_events(void)
     g_in.keypress = (g_in.pressed || g_in.pad) ? 1 : g_in.keypress;
 }
 
+void device_render(void);
+void device_puts(int x, int y, uint32_t rgb, const char *s);
+void device_overlay_clear(void);
+
+static SDL_Texture *g_bgtex;   /* cached: created once, reused per frame */
+static SDL_Texture *g_chtex;
+static SDL_Texture *g_ovtex;
+
 void device_render(void)
 {
     int x, y;
@@ -411,32 +433,42 @@ void device_render(void)
     SDL_RenderClear(g_ren);
     /* backdrop: the real SNES battle art, 2x into the 640x480 window */
     if (g_bg_loaded && g_battle) {
-        SDL_Texture *tex = SDL_CreateTexture(g_ren, SDL_PIXELFORMAT_ABGR8888,
-                                             SDL_TEXTUREACCESS_STATIC, 256, 192);
-        if (tex) {
-            SDL_UpdateTexture(tex, NULL, g_bg, 256 * 4);
+        if (!g_bgtex) {
+            g_bgtex = SDL_CreateTexture(g_ren, SDL_PIXELFORMAT_ABGR8888,
+                                        SDL_TEXTUREACCESS_STATIC, 256, 192);
+            if (g_bgtex)
+                SDL_UpdateTexture(g_bgtex, NULL, g_bg, 256 * 4);
+        }
+        if (g_bgtex) {
             SDL_Rect dst = { 64, 48, 512, 384 };
-            SDL_RenderCopy(g_ren, tex, NULL, &dst);
-            SDL_DestroyTexture(tex);
+            SDL_RenderCopy(g_ren, g_bgtex, NULL, &dst);
         }
     }
     /* blit the 5 party characters over the backdrop (battle only) */
     if (g_chars_loaded && g_battle) {
         static const int px[5] = { 30, 78, 126, 174, 222 };
         static const int py = 335;
-        SDL_Texture *tex = SDL_CreateTexture(g_ren, SDL_PIXELFORMAT_ABGR8888,
-                                             SDL_TEXTUREACCESS_STATIC,
-                                             240, 72);
-        if (tex) {
-            SDL_UpdateTexture(tex, NULL, g_chars, 240 * 4);
+        if (!g_chtex) {
+            g_chtex = SDL_CreateTexture(g_ren, SDL_PIXELFORMAT_ABGR8888,
+                                        SDL_TEXTUREACCESS_STATIC, 240, 72);
+            if (g_chtex)
+                SDL_UpdateTexture(g_chtex, NULL, g_chars, 240 * 4);
+        }
+        if (g_chtex) {
             for (int c = 0; c < 5; c++) {
                 SDL_Rect src = { c * 48, 0, 48, 72 };
                 SDL_Rect dst = { 64 + px[c], py, 48, 72 };
-                SDL_RenderCopy(g_ren, tex, &src, &dst);
+                SDL_RenderCopy(g_ren, g_chtex, &src, &dst);
             }
-            SDL_DestroyTexture(tex);
         }
     }
+    /* config mode silently idles until a key; put a hint on screen */
+    if (!g_battle && !g_sandbox) {
+        static const char *hint =
+            "FF4 NATIVE  config: press any key  |  'play' = battler";
+        device_puts(8, 448, 0xFFB0B0FFu, hint);
+    }
+
     /* blit the cell screen (the hex-glyph ids written by cell_put);
        skipped in sandbox mode (the dev battler paints its own UI) */
     if (!g_sandbox) {
@@ -465,17 +497,16 @@ void device_render(void)
             SDL_DestroyTexture(tex);
         }
     }
-    /* text overlay (ARGB) */
-    {
-        SDL_Texture *tex = SDL_CreateTexture(g_ren, SDL_PIXELFORMAT_ARGB8888,
-                                             SDL_TEXTUREACCESS_STATIC,
-                                             640, 480);
-        if (tex) {
-            SDL_UpdateTexture(tex, NULL, g_ov, 640 * 4);
-            SDL_SetTextureBlendMode(tex, SDL_BLENDMODE_BLEND);
-            SDL_RenderCopy(g_ren, tex, NULL, NULL);
-            SDL_DestroyTexture(tex);
-        }
+    /* text overlay (ARGB, streaming: rewritten every frame) */
+    if (!g_ovtex) {
+        g_ovtex = SDL_CreateTexture(g_ren, SDL_PIXELFORMAT_ARGB8888,
+                                    SDL_TEXTUREACCESS_STREAMING, 640, 480);
+        if (g_ovtex)
+            SDL_SetTextureBlendMode(g_ovtex, SDL_BLENDMODE_BLEND);
+    }
+    if (g_ovtex) {
+        SDL_UpdateTexture(g_ovtex, NULL, g_ov, 640 * 4);
+        SDL_RenderCopy(g_ren, g_ovtex, NULL, NULL);
     }
     SDL_RenderPresent(g_ren);
 }
@@ -541,6 +572,9 @@ void device_close(void)
             fclose(f);
         }
     }
+    if (g_bgtex) SDL_DestroyTexture(g_bgtex);
+    if (g_chtex) SDL_DestroyTexture(g_chtex);
+    if (g_ovtex) SDL_DestroyTexture(g_ovtex);
     if (g_ren) SDL_DestroyRenderer(g_ren);
     if (g_win) SDL_DestroyWindow(g_win);
     SDL_Quit();
