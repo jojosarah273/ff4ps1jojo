@@ -170,23 +170,27 @@ static void enemy_turn(void)
     s_phase = 2; s_msg = 40;
 }
 
+static int s_attacker;   /* cycles through alive party members */
+
 static void do_player_action(int sel)
 {
     if (sel == 0) {                       /* FIGHT */
         int d = 1;
-        int i = 0;
-        /* the attacker: first alive non-dead */
-        while (party[i].dead) i++;
+        int i = s_attacker;               /* next alive party member */
+        int guard = 5;
+        while (party[i].dead && guard-- > 0)
+            i = (i + 1) % 5;
+        s_attacker = (i + 1) % 5;
         d = party[i].atk * 2 + (int)(rnd() % (unsigned)party[i].atk) - s_enemy.def * 2;
         if (d < 1) d = 1;
         s_enemy.hp -= d;
         if (s_enemy.hp <= 0) {
             s_enemy.hp = 0;
-            snprintf(s_msgtext, sizeof s_msgtext, "VICTORY over %s!", s_enemyname);
+            snprintf(s_msgtext, sizeof s_msgtext, "%s defeats %s!", party[i].name, s_enemyname);
             s_phase = 2; s_msg = 70;
             s_done = 1;                    /* wave cleared */
         } else {
-            snprintf(s_msgtext, sizeof s_msgtext, "HIT! %s: %d", s_enemyname, d);
+            snprintf(s_msgtext, sizeof s_msgtext, "%s hits %s for %d!", party[i].name, s_enemyname, d);
             s_phase = 2; s_msg = 40;
         }
         return;
