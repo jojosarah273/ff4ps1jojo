@@ -115,13 +115,25 @@ int intro_run(void)
     if (s_phase == 3)
         return 0;
     if (getenv("FF4_GLYPH_TEST")) {
-        /* deterministic glyph test: paint one fixed line, then done so
-           the frame dump right after is a clean measurement target */
+        /* deterministic glyph test: paint one fixed line and HOLD it so
+           it is actually visible; a real key exits, headless holds a
+           bounded time (the frame dump then captures the test frame) */
+        static int hold;
         device_overlay_clear();
         device_sprite_reset();
         device_puts(80, 60, 0xFFFFFFFFu,
                     "DPQR02AEC GHIJKLNS TUVZ WXY");
-        s_phase = 3;
+        device_puts(80, 80, 0xFF20C0FFu,
+                    "normal order: D P Q R 0 2 A E C (any key exits)");
+        if (device_autopress())
+            return (++hold < 90) ? 1 : 0;
+        {
+            uint32_t p = device_pad();
+            uint32_t e = p & ~s_prevpad;
+            s_prevpad = p;
+            if (e)
+                return 0;                    /* any key: close */
+        }
         return 1;
     }
 
