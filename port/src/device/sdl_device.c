@@ -61,6 +61,11 @@ typedef struct { const unsigned int *px; int w, h, x, y, scale; } bslot_t;
 static bslot_t g_slots[8];
 static int g_nslot;
 static int g_sandbox;
+static int glyph_flip(void)
+{
+    const char *e = getenv("FF4_GLYPHS");
+    return e && e[0] == 'f';   /* 'flip' = mirror the glyph rows */
+}
 
 static void ch_load_asset(void)
 {
@@ -251,9 +256,11 @@ static void put_text(int x, int y, char c)
             g = font8x8[(unsigned char)c - 0x20];
     }
     for (j = 0; j < 8; j++) {
+        int flip = glyph_flip();
         for (i = 0; i < 8; i++) {
+            int bl = flip ? (0x01 << i) : (0x80 >> i);
             SDL_Rect rr = { x * 8 + i, y * 16 + j * 2, 1, 2 };
-                    if (g[j] & (0x80 >> i))
+                    if (g[j] & bl)
                 SDL_SetRenderDrawColor(g_ren, g_cell[y][x][0], g_cell[y][x][1], g_cell[y][x][2], 255);
             else
                 SDL_SetRenderDrawColor(g_ren, 30, 60, 90, 255);
@@ -648,8 +655,10 @@ void device_puts(int x, int y, uint32_t rgb, const char *s)
             g = font8x8[0];      /* non-ASCII (UTF-8 … etc) -> blank */
         for (int r = 0; r < 8; r++) {
             unsigned char row = g[r];
+            int flip = glyph_flip();
             for (int k = 0; k < 8; k++) {
-                if (!(row & (0x80 >> k)))
+                int bl = flip ? (0x01 << k) : (0x80 >> k);
+                if (!(row & bl))
                     continue;
                 int xx = x + k * 2, yy = y + r * 2;
                 if (xx >= 0 && yy >= 0 && xx + 1 < 640 && yy + 1 < 480) {
