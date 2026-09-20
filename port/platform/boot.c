@@ -18,6 +18,7 @@ void config_menu_run(void);
 void battle_menu_run(void);
 int  battle_game_run(void);
 int  intro_run(void);
+int  gallery_run(void);
 
 #include <stdio.h>
 
@@ -61,24 +62,34 @@ int ff4_native_main(int argc, char **argv)
     int battle = 0;
     int play = 0;
     int intro = 0;
+    int gallery = 0;
     if (argc > 1 && argv[1][0] == 'b')
         battle = 1;
     if (argc > 1 && argv[1][0] == 'p')
         play = 1;
     if (argc > 1 && argv[1][0] == 'i')
         intro = 1;
-    if (play || intro)
-        max = 30000;   /* these modes own the loop; hard cap as a guard */
+    if (argc > 1 && argv[1][0] == 'g')
+        gallery = 1;
+    if (play || intro || gallery)
+        max = 100000;   /* these modes own the loop; hard cap as a guard */
     if (argc > 1 && argv[1][0] >= '0' && argv[1][0] <= '9')
         battle = 0;   /* legacy numeric arg: config */
-    device_set_mode(battle || play || intro);
-    device_set_sandbox(play || intro);
+    device_set_mode(battle || play || intro || gallery);
+    device_set_sandbox(play || intro || gallery);
     if (device_open_window("FF4 native", 640, 480) != 0)
         return 1;
 
     /* interpreted menu state, a few frames per pass; the playable
        battler runs on its own frame loop (until quit / all waves) */
     for (frames = 0; frames < max; frames++) {
+        if (gallery) {
+            if (!gallery_run())
+                break;              /* esc quit */
+            device_poll_events();
+            device_render();
+            continue;
+        }
         if (intro) {
             if (!intro_run())
                 break;
@@ -105,8 +116,9 @@ int ff4_native_main(int argc, char **argv)
             break;
     }
 
-    if (play || intro)
-        fprintf(stderr, "[%s] ran %d frames\n", intro ? "intro" : "play", frames);
+    if (play || intro || gallery)
+        fprintf(stderr, "[%s] ran %d frames\n",
+                gallery ? "gallery" : (intro ? "intro" : "play"), frames);
     device_close();
     return 0;
 }

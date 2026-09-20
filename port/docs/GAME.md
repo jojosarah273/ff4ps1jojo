@@ -59,6 +59,33 @@ animation data), characters + level curves, scripts (event/trigger/
 npc/monster = raw opcode bytecode), cinematics (title/prologue/ending/
 telescope/world gfx + palettes). Runtime ingestion = reading the pack.
 
+
+## Remaining scope vs the game (the "more than just the code")
+
+| Track | What it is | Effort | Status |
+|---|---|---|---|
+| Device/render layer | window API, direct draw, SDL, fonts, blits, CWD asset load | S | DONE |
+| Content pack | text/maps/monsters/items/scripts/cinematics from the decomp | S | DONE |
+| Intro storyboard | title + prologue + real opening dialogue | S | DONE (v0) |
+| Character/battle art | poses, scenes, monster canvases, palettes | S | DONE (blemishes deferred) |
+| **Event/dialogue engine** | opcode scripts -> scene/map/line sequencing (the story machine) | **L** | next big build |
+| **Field engine** | maps/tilesets/RLE layouts + walk sprites + triggers | **M-L** | formats proven (FF4KSTER) |
+| **Battle engine** | tie the deck's battle logic + formations (512) + AI scripts | **M-L** | art + menus done; logic pending |
+| **Text decode** | menu/window codes -> the game's real strings | **M** | SNES corpus in hand |
+| **Audio** | BRR samples -> host playback | **M** | samples extracted; player missing |
+| **Saves/state** | memcard-style save + state persistence | S-M | |
+| Widescreen/randomizer | Phase C mods | M | deferred |
+
+Playbook (SoH/LTTP-style): original logic from the decomp (~70-80%),
+platform layer (~15%), assets (~5%), enhancements (~5%). Our platform
+layer + assets are already done; the real build = event/field/battle
+engines, then audio/saves, finished by text decode + the register band.
+
+## Testable: ./ff4-native gallery
+A stable exhibit window - never auto-advances, never auto-presses;
+left/right = exhibits, enter = next dialogue card (in opener exhibit),
+esc = quit. Headless: 'gallery smoke' = bounded run -> exit 0.
+
 ## Proof artifacts
 - Intro dialogue decoded: d1:32-45 = the opening script verbatim.
 - Palette-correct intro renders: title_32x28.png (real splashPalette),

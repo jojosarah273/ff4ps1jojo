@@ -573,6 +573,23 @@ void device_close(void)
             fclose(f);
         }
     }
+    /* debug: full-frame readback (what the user actually sees) */
+    if (g_ren) {
+        void *fb = malloc(640 * 480 * 4);
+        if (fb && SDL_RenderReadPixels(g_ren, NULL,
+                                       SDL_PIXELFORMAT_ABGR8888,
+                                       fb, 640 * 4) == 0) {
+            FILE *f = fopen("/tmp/ff4_frame.ppm", "wb");
+            if (f) {
+                fprintf(f, "P6\n640 480 255\n");
+                unsigned char *b = fb;
+                for (int y = 0; y < 480; y++)
+                    fwrite(b + y * 640 * 4, 3, 640, f); /* rgb of abgr */
+                fclose(f);
+            }
+        }
+        free(fb);
+    }
     if (g_bgtex) SDL_DestroyTexture(g_bgtex);
     if (g_chtex) SDL_DestroyTexture(g_chtex);
     if (g_ovtex) SDL_DestroyTexture(g_ovtex);
