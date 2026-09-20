@@ -22,9 +22,10 @@ port/assets/
       scene_v2_00..02        alternate scene compositions
       characters/
         <Char>_poses.png     17 chars x 14 battle poses FINAL (signed off)
-  scratch/                   ALL rejected/diagnostic attempts, preserved
-                             for reference only (not for the build)
 ```
+
+Failed/diagnostic attempts were removed from the tree in Sep 2025
+(still available in git history if ever needed).
 
 ## The character battle pose pipeline (FINAL, user-verified)
 
