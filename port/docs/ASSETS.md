@@ -24,8 +24,14 @@ port/assets/
         <Char>_poses.png     17 chars x 14 battle poses FINAL (signed off)
 ```
 
-Failed/diagnostic attempts were removed from the tree in Sep 2025
-(still available in git history if ever needed).
+Pruned from the tree (Sep 2025 cleanup; still in git history):
+- the 322-file scratch/ dump of rejected attempts
+- the 771-file 'sprite ips patches/' collection (research output is
+  ARTSRC.md; artmap.py re-runs need the user's own patches locally)
+- PS1 disc leftovers (battle.bin/ff4.bin/slus_013.60/move.exe/sqea.tim/
+  memo.bin/system.cnf) - the SNES decomp is the content source
+- raw font scans (font_src_*, font_sheets/, redundant bank renders)
+- regenerable .rgba exports (battle_bg_*, battle_scene_01-06)
 
 ## The character battle pose pipeline (FINAL, user-verified)
 
